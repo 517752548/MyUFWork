@@ -18,8 +18,8 @@ public class FrameWorkConst
     public const string assetsManifesttxtFolder = "Assets/AssetsPackage/UFConfig";
     
     
-    public const string addressAssetsManifesttxt = "Assets/AssetsPackage/AnsycLoad/UFConfig/addressAssetsConfig.txt";
-    public const string addreesablesAssetsRuletxt = "Assets/AssetsPackage/AnsycLoad/UFConfig/AddressablesRules.txt";
+    public const string addressAssetsManifesttxt = "Assets/AssetsPackage/UFConfig/addressAssetsConfig.txt";
+    public const string addreesablesAssetsRuletxt = "Assets/AssetsPackage/UFConfig/AddressablesRules.txt";
     
 
 
