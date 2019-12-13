@@ -1,0 +1,26 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/AnimatorStopRecording.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Stops the animator record mode. It will lock the recording buffer's contents in its current state. The data get saved for subsequent playback with StartPlayback.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The target. An Animator component and a PlayMakerAnimatorProxy component are required</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Recorder Start Time</div>
+	<div id="paramDesc">
+The recorder StartTime</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Recorder Stop Time</div>
+	<div id="paramDesc">
+The recorder StopTime</div>
+</div>
+

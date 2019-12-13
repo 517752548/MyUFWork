@@ -1,0 +1,103 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetAnimatorCurrentStateInfo.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the current State information on a specified layer</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Layer Index</div>
+	<div id="paramDesc">
+The layer's index</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Name</div>
+	<div id="paramDesc">
+The layer's name.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Name Hash</div>
+	<div id="paramDesc">
+The layer's name Hash. Obsolete in Unity 5, use fullPathHash or shortPathHash instead, nameHash will be the same as shortNameHash for legacy</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Full Path Hash</div>
+	<div id="paramDesc">
+The full path hash for this state.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Short Path Hash</div>
+	<div id="paramDesc">
+The name Hash. Doest not include the parent layer's name</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Tag Hash</div>
+	<div id="paramDesc">
+The layer's tag hash</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is State Looping</div>
+	<div id="paramDesc">
+Is the state looping. All animations in the state must be looping</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Length</div>
+	<div id="paramDesc">
+The Current duration of the state. In seconds, can vary when the State contains a Blend Tree </div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normalized Time</div>
+	<div id="paramDesc">
+The integer part is the number of time a state has been looped. The fractional part is the % (0-1) of progress in the current loop</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Loop Count</div>
+	<div id="paramDesc">
+The integer part is the number of time a state has been looped. This is extracted from the normalizedTime</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Current Loop Progress</div>
+	<div id="paramDesc">
+The progress in the current loop. This is extracted from the normalizedTime</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame Option</div>
+	<div id="paramDesc">
+Select when to perform the action, during OnUpdate, OnAnimatorMove, OnAnimatorIK</div>
+</div>
+

@@ -1,0 +1,34 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/BroadcastEvent.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sends an Event to all FSMs in the scene or to all FSMs on a Game Object.
+NOTE: This action won't work on the very first frame of the game...</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Broadcast Event</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+Optionally specify a game object to broadcast the event to all FSMs on that game object.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Send To Children</div>
+	<div id="paramDesc">
+Broadcast to all FSMs on the game object's children.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Exclude Self</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+

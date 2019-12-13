@@ -1,0 +1,69 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/RectTransformContainsScreenPoint.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Check if a RectTransform contains the screen point as seen from the given camera.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Screen Point Vector 2</div>
+	<div id="paramDesc">
+The screenPoint as a Vector2. Leave to none if you want to use the Vector3 alternative</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Or Screen Point Vector 3</div>
+	<div id="paramDesc">
+The screenPoint as a Vector3. Leave to none if you want to use the Vector2 alternative</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normalized Screen Point</div>
+	<div id="paramDesc">
+Define if screenPoint are expressed as normalized screen coordinates (0-1). Otherwise coordinates are in pixels.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Camera</div>
+	<div id="paramDesc">
+The Camera. For a RectTransform in a Canvas set to Screen Space - Overlay mode, the cam parameter should be set to null explicitly (default).
+Leave to none and the camera will be the one from EventSystem.current.camera</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Contained</div>
+	<div id="paramDesc">
+Store the result.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Contained Event</div>
+	<div id="paramDesc">
+Event sent if screenPoint is contained in RectTransform.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Not Contained Event</div>
+	<div id="paramDesc">
+Event sent if screenPoint is NOT contained in RectTransform.</div>
+</div>
+

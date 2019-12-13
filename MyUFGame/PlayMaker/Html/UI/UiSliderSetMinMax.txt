@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiSliderSetMinMax.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets the minimum and maximum limits for the value of a UI Slider component. Optionally resets on exit</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI Slider component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Min Value</div>
+	<div id="paramDesc">
+The minimum value of the UI Slider component. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Max Value</div>
+	<div id="paramDesc">
+The maximum value of the UI Slider component. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset On Exit</div>
+	<div id="paramDesc">
+Reset when exiting this state.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeats every frame</div>
+</div>
+

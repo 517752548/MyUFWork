@@ -1,0 +1,35 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiInputFieldOnSubmitEvent.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Fires an event when user submits from a UI InputField component. 
+This only fires if the user press Enter, not when field looses focus or user escaped the field.
+Event string data will contain the text value.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Event Target</div>
+	<div id="paramDesc">
+Where to send the event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Send Event</div>
+	<div id="paramDesc">
+Send this event when editing ended.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Text</div>
+	<div id="paramDesc">
+The content of the InputField when submitting</div>
+</div>
+

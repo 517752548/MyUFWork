@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/AudioPlay.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Plays the Audio Clip set with Set Audio Clip or in the Audio Source inspector on a Game Object. Optionally plays a one shot Audio Clip.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with an AudioSource component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Volume</div>
+	<div id="paramDesc">
+Set the volume.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+One Shot Clip</div>
+	<div id="paramDesc">
+Optionally play a 'one shot' AudioClip. NOTE: Volume cannot be adjusted while playing a 'one shot' AudioClip.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Wait For End Of Clip</div>
+	<div id="paramDesc">
+Wait until the end of the clip to send the Finish Event. Set to false to send the finish event immediately.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finished Event</div>
+	<div id="paramDesc">
+Event to send when the action finishes.</div>
+</div>
+

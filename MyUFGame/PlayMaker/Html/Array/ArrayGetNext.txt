@@ -1,0 +1,62 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/ArrayGetNext.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Each time this action is called it gets the next item from a Array. 
+This lets you quickly loop through all the items of an array to perform actions on them.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Array</div>
+	<div id="paramDesc">
+The Array Variable to use.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Start Index</div>
+	<div id="paramDesc">
+From where to start iteration, leave as 0 to start from the beginning</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+End Index</div>
+	<div id="paramDesc">
+When to end iteration, leave as 0 to iterate until the end</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Loop Event</div>
+	<div id="paramDesc">
+Event to send to get the next item.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset Flag</div>
+	<div id="paramDesc">
+If you want to reset the iteration, raise this flag to true when you enter the state, it will indicate you want to start from the beginning again</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finished Event</div>
+	<div id="paramDesc">
+Event to send when there are no more items.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Result</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Current Index</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+

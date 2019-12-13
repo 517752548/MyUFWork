@@ -1,0 +1,33 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetAnimatorTarget.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets an AvatarTarget and a targetNormalizedTime for the current state</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Avatar Target</div>
+	<div id="paramDesc">
+The avatar target</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Normalized Time</div>
+	<div id="paramDesc">
+The current state Time that is queried</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame during OnAnimatorMove. Useful when changing over time.</div>
+</div>
+

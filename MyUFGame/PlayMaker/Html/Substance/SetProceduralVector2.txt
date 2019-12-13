@@ -1,0 +1,34 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetProceduralVector2.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Set a named Vector2 property in a Substance material. NOTE: Use Rebuild Textures after setting Substance properties.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Substance Material</div>
+	<div id="paramDesc">
+The Substance Material.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector 2 Property</div>
+	<div id="paramDesc">
+The named vector property in the material.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector 2 Value</div>
+	<div id="paramDesc">
+The Vector3 value to set the property to.
+NOTE: Use Set Procedural Vector2 for Vector3 values.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+NOTE: Updating procedural materials every frame can be very slow!</div>
+</div>
+

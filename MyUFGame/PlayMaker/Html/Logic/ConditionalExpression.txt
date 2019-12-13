@@ -1,0 +1,50 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/ConditionalExpression.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Evaluates a conditional expression and stores the result and/or sends an event upon evaluating true or false.
+Special thanks to Lea Hayes!</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Expression</div>
+	<div id="paramDesc">
+Enter an expression to evaluate.
+Example: (a < b) && c
+$(variable name with spaces)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is True Event</div>
+	<div id="paramDesc">
+Event to send if the result is True.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is False Event</div>
+	<div id="paramDesc">
+Event to send if the result is False.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame while the state is active.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Raw Result</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Result</div>
+	<div id="paramDesc">
+Store the result in a Bool Variable.</div>
+</div>
+

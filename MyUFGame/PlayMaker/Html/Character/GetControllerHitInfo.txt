@@ -1,0 +1,47 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetControllerHitInfo.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets info on the last Character Controller collision and store in variables.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object Hit</div>
+	<div id="paramDesc">
+Store the GameObject hit in the last collision.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Contact Point</div>
+	<div id="paramDesc">
+Store the contact point of the last collision in world coordinates.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Contact Normal</div>
+	<div id="paramDesc">
+Store the normal of the last collision.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Move Direction</div>
+	<div id="paramDesc">
+Store the direction of the last move before the collision.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Move Length</div>
+	<div id="paramDesc">
+Store the distance of the last move before the collision.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Physics Material Name</div>
+	<div id="paramDesc">
+Store the physics material of the Game Object Hit. Useful for triggering different effects. Audio, particles...</div>
+</div>
+

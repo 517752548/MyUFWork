@@ -1,0 +1,48 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetAnimatorRoot.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the avatar body mass center position and rotation.Optionally accept a GameObject to get the body transform. 
+The position and rotation are local to the gameobject</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Root Position</div>
+	<div id="paramDesc">
+The avatar body mass center</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Root Rotation</div>
+	<div id="paramDesc">
+The avatar body mass center</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Body Game Object</div>
+	<div id="paramDesc">
+If set, apply the body mass center position and rotation to this gameObject</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame Option</div>
+	<div id="paramDesc">
+Select when to perform the action, during OnUpdate, OnAnimatorMove, OnAnimatorIK</div>
+</div>
+

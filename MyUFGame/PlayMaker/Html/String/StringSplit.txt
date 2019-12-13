@@ -1,0 +1,42 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/StringSplit.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Splits a string into substrings using separator characters.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+String To Split</div>
+	<div id="paramDesc">
+String to split.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Separators</div>
+	<div id="paramDesc">
+Characters used to split the string.
+Use '\n' for newline
+Use '\t' for tab</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Trim Strings</div>
+	<div id="paramDesc">
+Remove all leading and trailing white-space characters from each separated string.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Trim Chars</div>
+	<div id="paramDesc">
+Optional characters used to trim each separated string.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+String Array</div>
+	<div id="paramDesc">
+Store the split strings in a String Array.</div>
+</div>
+

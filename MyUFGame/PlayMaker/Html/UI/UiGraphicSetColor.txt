@@ -1,0 +1,61 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiGraphicSetColor.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Set Graphic Color. E.g. to set Sprite Color.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with a UI component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Color</div>
+	<div id="paramDesc">
+The Color of the UI component. Leave to none and set the individual color values, for example to affect just the alpha channel</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Red</div>
+	<div id="paramDesc">
+The red channel Color of the UI component. Leave to none for no effect, else it overrides the color property</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Green</div>
+	<div id="paramDesc">
+The green channel Color of the UI component. Leave to none for no effect, else it overrides the color property</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Blue</div>
+	<div id="paramDesc">
+The blue channel Color of the UI component. Leave to none for no effect, else it overrides the color property</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Alpha</div>
+	<div id="paramDesc">
+The alpha channel Color of the UI component. Leave to none for no effect, else it overrides the color property</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset On Exit</div>
+	<div id="paramDesc">
+Reset when exiting this state.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeats every frame, useful for animation</div>
+</div>
+

@@ -1,0 +1,68 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/MousePick.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Perform a Mouse Pick on the scene from the Main Camera and stores the results. Use Ray Distance to set how close the camera must be to pick the object.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Ray Distance</div>
+	<div id="paramDesc">
+Set the length of the ray to cast from the Main Camera.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Did Pick Object</div>
+	<div id="paramDesc">
+Set Bool variable true if an object was picked, false if not.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Game Object</div>
+	<div id="paramDesc">
+Store the picked GameObject.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Point</div>
+	<div id="paramDesc">
+Store the point of contact.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Normal</div>
+	<div id="paramDesc">
+Store the normal at the point of contact.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Distance</div>
+	<div id="paramDesc">
+Store the distance to the point of contact.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Layer Mask</div>
+	<div id="paramDesc">
+Pick only from these layers.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Invert Mask</div>
+	<div id="paramDesc">
+Invert the mask, so you pick from all layers except those defined above.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+

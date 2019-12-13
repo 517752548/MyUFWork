@@ -1,0 +1,47 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/ColorCompare.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sends Events based on the comparison of 2 Colors.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Color 1</div>
+	<div id="paramDesc">
+The first Color.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Color 2</div>
+	<div id="paramDesc">
+The second Color.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Tolerance</div>
+	<div id="paramDesc">
+Tolerance of test, to test for 'almost equals' or to ignore small floating point rounding differences.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Equal</div>
+	<div id="paramDesc">
+Event sent if Color 1 equals Color 2 (within Tolerance)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Not Equal</div>
+	<div id="paramDesc">
+Event sent if Color 1 does not equal Color 2 (within Tolerance)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame. Useful if the variables are changing and you're waiting for a particular result.</div>
+</div>
+

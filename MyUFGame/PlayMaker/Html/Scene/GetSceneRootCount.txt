@@ -1,0 +1,75 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetSceneRootCount.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Get a scene RootCount, the number of root transforms of this scene.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Root Count</div>
+	<div id="paramDesc">
+The scene RootCount</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Reference</div>
+	<div id="paramDesc">
+The reference option of the Scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene At Index</div>
+	<div id="paramDesc">
+The scene Index.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene By Name</div>
+	<div id="paramDesc">
+The scene Name.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene By Path</div>
+	<div id="paramDesc">
+The scene Path.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene By Game Object</div>
+	<div id="paramDesc">
+The Scene of GameObject</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Found</div>
+	<div id="paramDesc">
+True if SceneReference resolves to a scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Found Event</div>
+	<div id="paramDesc">
+Event sent if SceneReference resolves to a scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Not Found Event</div>
+	<div id="paramDesc">
+Event sent if SceneReference do not resolve to a scene</div>
+</div>
+

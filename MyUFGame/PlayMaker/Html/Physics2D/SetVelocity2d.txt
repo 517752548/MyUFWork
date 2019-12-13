@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetVelocity2d.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets the 2d Velocity of a Game Object. To leave any axis unchanged, set variable to 'None'. NOTE: Game object must have a rigidbody 2D.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the Rigidbody2D attached</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector</div>
+	<div id="paramDesc">
+A Vector2 value for the velocity</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+X</div>
+	<div id="paramDesc">
+The y value of the velocity. Overrides 'Vector' x value if set</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Y</div>
+	<div id="paramDesc">
+The y value of the velocity. Overrides 'Vector' y value if set</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+

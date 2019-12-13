@@ -1,0 +1,68 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SmoothLookAt2d.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Smoothly Rotates a 2d Game Object so its right vector points at a Target. The target can be defined as a 2d Game Object or a 2d/3d world Position. If you specify both, then the position will be used as a local offset from the object's position.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject to rotate to face a target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Object</div>
+	<div id="paramDesc">
+A target GameObject.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Position 2d</div>
+	<div id="paramDesc">
+A target position. If a Target Object is defined, this is used as a local offset.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Position</div>
+	<div id="paramDesc">
+A target position. If a Target Object is defined, this is used as a local offset.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Rotation Offset</div>
+	<div id="paramDesc">
+Set the GameObject starting offset. In degrees. 0 if your object is facing right, 180 if facing left etc...</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Speed</div>
+	<div id="paramDesc">
+How fast the look at moves.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Debug</div>
+	<div id="paramDesc">
+Draw a line in the Scene View to the look at position.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finish Tolerance</div>
+	<div id="paramDesc">
+If the angle to the target is less than this, send the Finish Event below. Measured in degrees.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finish Event</div>
+	<div id="paramDesc">
+Event to send if the angle to target is less than the Finish Tolerance.</div>
+</div>
+

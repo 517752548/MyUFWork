@@ -1,0 +1,61 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetHingeJoint2dProperties.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets the various properties of a HingeJoint2d component</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The HingeJoint2d target</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Use Limits</div>
+	<div id="paramDesc">
+Should limits be placed on the range of rotation?</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Min</div>
+	<div id="paramDesc">
+Lower angular limit of rotation.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Max</div>
+	<div id="paramDesc">
+Upper angular limit of rotation</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Use Motor</div>
+	<div id="paramDesc">
+Should a motor force be applied automatically to the Rigidbody2D?</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Motor Speed</div>
+	<div id="paramDesc">
+The desired speed for the Rigidbody2D to reach as it moves with the joint.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Max Motor Torque</div>
+	<div id="paramDesc">
+The maximum force that can be applied to the Rigidbody2D at the joint to attain the target speed.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame while the state is active.</div>
+</div>
+

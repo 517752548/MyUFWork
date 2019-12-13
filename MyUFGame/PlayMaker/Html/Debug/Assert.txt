@@ -1,0 +1,30 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/Assert.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Checks if the conditional expression Is True or Is False. Breaks the execution of the game if the assertion fails.
+This is a useful way to check your assumptions. If you expect a certain value use an Assert to make sure!
+Only runs in Editor.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Expression</div>
+	<div id="paramDesc">
+Enter an expression to evaluate.
+Example: (a < b) && c
+$(variable name with spaces)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Assert</div>
+	<div id="paramDesc">
+Expected result of the expression.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame while the state is active.</div>
+</div>
+

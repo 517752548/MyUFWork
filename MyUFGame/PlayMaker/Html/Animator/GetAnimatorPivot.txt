@@ -1,0 +1,43 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetAnimatorPivot.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Returns the pivot weight and/or position. The pivot is the most stable point between the avatar's left and right foot.
+ For a weight value of 0, the left foot is the most stable point For a value of 1, the right foot is the most stable point</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The target. An Animator component is required</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pivot Weight</div>
+	<div id="paramDesc">
+The pivot is the most stable point between the avatar's left and right foot.
+ For a value of 0, the left foot is the most stable point For a value of 1, the right foot is the most stable point</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pivot Position</div>
+	<div id="paramDesc">
+The pivot is the most stable point between the avatar's left and right foot.
+ For a value of 0, the left foot is the most stable point For a value of 1, the right foot is the most stable point</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame Option</div>
+	<div id="paramDesc">
+Select when to perform the action, during OnUpdate, OnAnimatorMove, OnAnimatorIK</div>
+</div>
+

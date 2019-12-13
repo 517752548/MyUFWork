@@ -1,0 +1,33 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiToggleOnValueChangedEvent.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Catches onValueChanged event in a UI Toggle component. Store the new value and/or send events. Event bool data will contain the new Toggle value</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI Toggle component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Event Target</div>
+	<div id="paramDesc">
+Where to send the event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Send Event</div>
+	<div id="paramDesc">
+Send this event when the value changes.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Value</div>
+	<div id="paramDesc">
+Store the new value in bool variable.</div>
+</div>
+

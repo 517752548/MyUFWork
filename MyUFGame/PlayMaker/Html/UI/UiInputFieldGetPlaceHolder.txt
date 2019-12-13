@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiInputFieldGetPlaceHolder.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the placeHolder GameObject of a UI InputField component.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Place Holder</div>
+	<div id="paramDesc">
+Store the placeholder for the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Place Holder Defined</div>
+	<div id="paramDesc">
+true if placeholder is found</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Found Event</div>
+	<div id="paramDesc">
+Event sent if no placeholder is defined</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Not Found Event</div>
+	<div id="paramDesc">
+Event sent if a placeholder is defined</div>
+</div>
+

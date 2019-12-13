@@ -1,0 +1,75 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/AnimatorMatchTarget.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Automatically adjust the gameobject position and rotation so that the AvatarTarget reaches the matchPosition when the current state is at the specified progress</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The Target. An Animator component is required</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Body Part</div>
+	<div id="paramDesc">
+The body part that is involved in the match</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target</div>
+	<div id="paramDesc">
+The gameObject target to match</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Position</div>
+	<div id="paramDesc">
+The position of the ik goal. If Goal GameObject set, position is used as an offset from Goal</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Rotation</div>
+	<div id="paramDesc">
+The rotation of the ik goal.If Goal GameObject set, rotation is used as an offset from Goal</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Position Weight</div>
+	<div id="paramDesc">
+The MatchTargetWeightMask Position XYZ weight</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Rotation Weight</div>
+	<div id="paramDesc">
+The MatchTargetWeightMask Rotation weight</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Start Normalized Time</div>
+	<div id="paramDesc">
+Start time within the animation clip (0 - beginning of clip, 1 - end of clip)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Target Normalized Time</div>
+	<div id="paramDesc">
+End time within the animation clip (0 - beginning of clip, 1 - end of clip), values greater than 1 can be set to trigger a match after a certain number of loops. Ex: 2.3 means at 30% of 2nd loop</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Should always be true</div>
+</div>
+

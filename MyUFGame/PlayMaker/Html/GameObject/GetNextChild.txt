@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetNextChild.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Each time this action is called it gets the next child of a GameObject. This lets you quickly loop through all the children of an object to perform actions on them. NOTE: To find a specific child use Find Child.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The parent GameObject. Note, if GameObject changes, this action will reset and start again at the first child.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Next Child</div>
+	<div id="paramDesc">
+Store the next child in a GameObject variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Loop Event</div>
+	<div id="paramDesc">
+Event to send to get the next child.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finished Event</div>
+	<div id="paramDesc">
+Event to send when there are no more children.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset Flag</div>
+	<div id="paramDesc">
+If you want to reset the iteration, raise this flag to true when you enter the state, it will indicate you want to start from the beginning again</div>
+</div>
+

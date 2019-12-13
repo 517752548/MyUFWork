@@ -1,0 +1,54 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/AddRelativeForce2d.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Adds a relative 2d force to a Game Object. Use Vector2 variable and/or Float variables for each axis.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject to apply the force to.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Force Mode</div>
+	<div id="paramDesc">
+Option for applying the force</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector</div>
+	<div id="paramDesc">
+A Vector2 force to add. Optionally override any axis with the X, Y parameters.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+X</div>
+	<div id="paramDesc">
+Force along the X axis. To leave unchanged, set to 'None'.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Y</div>
+	<div id="paramDesc">
+Force along the Y axis. To leave unchanged, set to 'None'.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector 3</div>
+	<div id="paramDesc">
+A Vector3 force to add. z is ignored</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame while the state is active.</div>
+</div>
+

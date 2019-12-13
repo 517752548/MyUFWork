@@ -1,0 +1,68 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetFsmArrayItem.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Set an item in an Array Variable in another FSM.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject that owns the FSM.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Fsm Name</div>
+	<div id="paramDesc">
+Optional name of FSM on Game Object.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Variable Name</div>
+	<div id="paramDesc">
+The name of the FSM variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Index</div>
+	<div id="paramDesc">
+The index into the array.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Value</div>
+	<div id="paramDesc">
+Set the value of the array at the specified index.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame. Useful if the value is changing.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Index Out Of Range</div>
+	<div id="paramDesc">
+The event to trigger if the index is out of range</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Fsm Not Found</div>
+	<div id="paramDesc">
+The event to send if the FSM is not found.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Variable Not Found</div>
+	<div id="paramDesc">
+The event to send if the Variable is not found.</div>
+</div>
+

@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/IsKinematic2d.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Tests if a Game Object's Rigid Body 2D is Kinematic.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+the GameObject with a Rigidbody2D attached</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+True Event</div>
+	<div id="paramDesc">
+Event Sent if Kinematic</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+False Event</div>
+	<div id="paramDesc">
+Event sent if not Kinematic</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store</div>
+	<div id="paramDesc">
+Store the Kinematic state</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame</div>
+</div>
+

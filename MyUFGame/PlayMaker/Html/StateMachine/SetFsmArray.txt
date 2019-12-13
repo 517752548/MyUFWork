@@ -1,0 +1,54 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetFsmArray.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Copy an Array Variable in another FSM.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject that owns the FSM.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Fsm Name</div>
+	<div id="paramDesc">
+Optional name of FSM on Game Object.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Variable Name</div>
+	<div id="paramDesc">
+The name of the FSM variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Set Value</div>
+	<div id="paramDesc">
+Set the content of the array variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Copy Values</div>
+	<div id="paramDesc">
+If true, makes copies. if false, values share the same reference and editing one array item value will affect the source and vice versa. Warning, this only affect the current items of the source array. Adding or removing items doesn't affect other FsmArrays.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Fsm Not Found</div>
+	<div id="paramDesc">
+The event to send if the FSM is not found.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Variable Not Found</div>
+	<div id="paramDesc">
+The event to send if the Variable is not found.</div>
+</div>
+

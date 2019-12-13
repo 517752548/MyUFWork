@@ -1,0 +1,47 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiSetAnimationTriggers.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets the Animation Triggers of a UI Selectable component. Modifications will not be visible if transition is not Animation</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI Selectable component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normal Trigger</div>
+	<div id="paramDesc">
+The normal trigger value. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Highlighted Trigger</div>
+	<div id="paramDesc">
+The highlighted trigger value. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pressed Trigger</div>
+	<div id="paramDesc">
+The pressed trigger value. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Disabled Trigger</div>
+	<div id="paramDesc">
+The disabled trigger value. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset On Exit</div>
+	<div id="paramDesc">
+Reset when exiting this state.</div>
+</div>
+

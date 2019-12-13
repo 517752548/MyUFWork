@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetVector2XY.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets the XY channels of a Vector2 Variable. To leave any channel unchanged, set variable to 'None'.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Vector 2 Variable</div>
+	<div id="paramDesc">
+The vector2 target</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector 2 Value</div>
+	<div id="paramDesc">
+The vector2 source</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+X</div>
+	<div id="paramDesc">
+The x component. Override vector2Value if set</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Y</div>
+	<div id="paramDesc">
+The y component.Override vector2Value if set</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame</div>
+</div>
+

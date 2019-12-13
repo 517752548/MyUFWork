@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/TriggerEvent.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Detect trigger collisions between GameObjects that have RigidBody/Collider components.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject to detect trigger events on.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Trigger</div>
+	<div id="paramDesc">
+The type of trigger event to detect.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Collide Tag</div>
+	<div id="paramDesc">
+Filter by Tag.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Send Event</div>
+	<div id="paramDesc">
+Event to send if the trigger event is detected.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Collider</div>
+	<div id="paramDesc">
+Store the GameObject that collided with the Owner of this FSM.</div>
+</div>
+

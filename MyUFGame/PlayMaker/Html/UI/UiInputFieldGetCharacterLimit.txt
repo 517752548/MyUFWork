@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiInputFieldGetCharacterLimit.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the Character Limit value of a UI InputField component. This is the maximum number of characters that the user can type into the field.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Character Limit</div>
+	<div id="paramDesc">
+The maximum number of characters that the user can type into the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Has No Limit Event</div>
+	<div id="paramDesc">
+Event sent if limit is infinite (equal to 0)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Limited Event</div>
+	<div id="paramDesc">
+Event sent if limit is more than 0</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeats every frame, useful for animation</div>
+</div>
+

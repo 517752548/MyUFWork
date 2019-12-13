@@ -1,0 +1,82 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetActiveScene.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Set the scene to be active.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Scene Reference</div>
+	<div id="paramDesc">
+The reference options of the Scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene By Name</div>
+	<div id="paramDesc">
+The name of the scene to activate. The given sceneName can either be the last part of the path, without .unity extension or the full path still without the .unity extension</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene At Build Index</div>
+	<div id="paramDesc">
+The build index of the scene to activate.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene At Index</div>
+	<div id="paramDesc">
+The index of the scene to activate.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene By Path</div>
+	<div id="paramDesc">
+The scene Path.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene By Game Object</div>
+	<div id="paramDesc">
+The GameObject scene to activate</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Success</div>
+	<div id="paramDesc">
+True if set active succeeded</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Success Event</div>
+	<div id="paramDesc">
+Event sent if setActive succeeded </div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Found</div>
+	<div id="paramDesc">
+True if SceneReference resolves to a scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Not Activated Event</div>
+	<div id="paramDesc">
+Event sent if scene not activated yet</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scene Not Found Event</div>
+	<div id="paramDesc">
+Event sent if SceneReference do not resolve to a scene</div>
+</div>
+

@@ -1,0 +1,96 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/MergeScenes.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+This will merge the source scene into the destinationScene. This function merges the contents of the source scene into the destination scene, and deletes the source scene. All GameObjects at the root of the source scene are moved to the root of the destination scene. NOTE: This function is destructive: The source scene will be destroyed once the merge has been completed.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Source Reference</div>
+	<div id="paramDesc">
+The reference options of the source Scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Source At Index</div>
+	<div id="paramDesc">
+The source scene Index.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Source By Name</div>
+	<div id="paramDesc">
+The source scene Name.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Source By Path</div>
+	<div id="paramDesc">
+The source scene Path.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Source By Game Object</div>
+	<div id="paramDesc">
+The source scene from GameObject</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Destination Reference</div>
+	<div id="paramDesc">
+The reference options of the destination Scene</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Destination At Index</div>
+	<div id="paramDesc">
+The destination scene Index.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Destination By Name</div>
+	<div id="paramDesc">
+The destination scene Name.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Destination By Path</div>
+	<div id="paramDesc">
+The destination scene Path.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Destination By Game Object</div>
+	<div id="paramDesc">
+The destination scene from GameObject</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Success</div>
+	<div id="paramDesc">
+True if the merge succeeded</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Success Event</div>
+	<div id="paramDesc">
+Event sent if merge succeeded</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Failure Event</div>
+	<div id="paramDesc">
+Event sent if merge failed</div>
+</div>
+

@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiToggleGetIsOn.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the isOn value of a UI Toggle component. Optionally send events</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI Toggle component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Value</div>
+	<div id="paramDesc">
+The isOn Value of the UI Toggle component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is On Event</div>
+	<div id="paramDesc">
+Event sent when isOn Value is true.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Off Event</div>
+	<div id="paramDesc">
+Event sent when isOn Value is false.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeats every frame</div>
+</div>
+

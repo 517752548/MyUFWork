@@ -1,0 +1,26 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/CutToCamera.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Activates a Camera in the scene.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Camera</div>
+	<div id="paramDesc">
+The Camera to activate.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Make Main Camera</div>
+	<div id="paramDesc">
+Makes the camera the new MainCamera. The old MainCamera will be untagged.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Cut Back On Exit</div>
+	<div id="paramDesc">
+Cut back to the original MainCamera when exiting this state.</div>
+</div>
+

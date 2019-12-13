@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiInputFieldOnEndEditEvent.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Fires an event when editing ended in a UI InputField component. Event string data will contain the text value, and the boolean will be true is it was a cancel action</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Event Target</div>
+	<div id="paramDesc">
+Where to send the event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Send Event</div>
+	<div id="paramDesc">
+Send this event when editing ended.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Text</div>
+	<div id="paramDesc">
+The content of the InputField when edited ended</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Was Canceled</div>
+	<div id="paramDesc">
+The canceled state of the InputField when edited ended</div>
+</div>
+

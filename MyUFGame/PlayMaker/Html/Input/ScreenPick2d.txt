@@ -1,0 +1,75 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/ScreenPick2d.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Perform a raycast into the 2d scene using screen coordinates and stores the results. Use Ray Distance to set how close the camera must be to pick the 2d object. NOTE: Uses the MainCamera!</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Screen Vector</div>
+	<div id="paramDesc">
+A Vector3 screen position. Commonly stored by other actions.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Screen X</div>
+	<div id="paramDesc">
+X position on screen.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Screen Y</div>
+	<div id="paramDesc">
+Y position on screen.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normalized</div>
+	<div id="paramDesc">
+Are the supplied screen coordinates normalized (0-1), or in pixels.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Did Pick Object</div>
+	<div id="paramDesc">
+Store whether the Screen pick did pick a GameObject</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Game Object</div>
+	<div id="paramDesc">
+Store the picked GameObject</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Point</div>
+	<div id="paramDesc">
+Store the picked position in world Space</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Layer Mask</div>
+	<div id="paramDesc">
+Pick only from these layers.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Invert Mask</div>
+	<div id="paramDesc">
+Invert the mask, so you pick from all layers except those defined above.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+

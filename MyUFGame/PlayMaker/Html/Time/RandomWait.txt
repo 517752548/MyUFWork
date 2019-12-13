@@ -1,0 +1,33 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/RandomWait.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Delays a State from finishing by a random time. NOTE: Other actions continue, but FINISHED can't happen before Time.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Min</div>
+	<div id="paramDesc">
+Minimum amount of time to wait.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Max</div>
+	<div id="paramDesc">
+Maximum amount of time to wait.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finish Event</div>
+	<div id="paramDesc">
+Event to send when timer is finished.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Real Time</div>
+	<div id="paramDesc">
+Ignore time scale.</div>
+</div>
+

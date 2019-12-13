@@ -1,0 +1,91 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetNextOverlapCircle2d.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Iterate through a list of all colliders that fall within a circular area.The colliders iterated are sorted in order of increasing Z coordinate. No iteration will take place if there are no colliders within the area.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+From Game Object</div>
+	<div id="paramDesc">
+Center of the circle area. 
+Or use From Position parameter.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+From Position</div>
+	<div id="paramDesc">
+CEnter of the circle area as a world position. 
+Or use fromGameObject parameter. If both define, will add fromPosition to the fromGameObject position</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Radius</div>
+	<div id="paramDesc">
+The circle radius</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Min Depth</div>
+	<div id="paramDesc">
+Only include objects with a Z coordinate (depth) greater than this value. leave to none for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Max Depth</div>
+	<div id="paramDesc">
+Only include objects with a Z coordinate (depth) less than this value. leave to none</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset Flag</div>
+	<div id="paramDesc">
+If you want to reset the iteration, raise this flag to true when you enter the state, it will indicate you want to start from the beginning again</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Layer Mask</div>
+	<div id="paramDesc">
+Pick only from these layers.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Invert Mask</div>
+	<div id="paramDesc">
+Invert the mask, so you pick from all layers except those defined above.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Colliders Count</div>
+	<div id="paramDesc">
+Store the number of colliders found for this overlap.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Next Collider</div>
+	<div id="paramDesc">
+Store the next collider in a GameObject variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Loop Event</div>
+	<div id="paramDesc">
+Event to send to get the next collider.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finished Event</div>
+	<div id="paramDesc">
+Event to send when there are no more colliders to iterate.</div>
+</div>
+

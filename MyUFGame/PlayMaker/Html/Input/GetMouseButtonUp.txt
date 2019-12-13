@@ -1,0 +1,33 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetMouseButtonUp.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sends an Event when the specified Mouse Button is released. Optionally store the button state in a bool variable.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Button</div>
+	<div id="paramDesc">
+The mouse button to test.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Send Event</div>
+	<div id="paramDesc">
+Event to send if the mouse button is down.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Result</div>
+	<div id="paramDesc">
+Store the pressed state in a Bool Variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+In Update Only</div>
+	<div id="paramDesc">
+Uncheck to run when entering the state.</div>
+</div>
+

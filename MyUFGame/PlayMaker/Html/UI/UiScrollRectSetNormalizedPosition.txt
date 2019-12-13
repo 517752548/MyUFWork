@@ -1,0 +1,47 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiScrollRectSetNormalizedPosition.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+The normalized scroll position as a Vector2 between (0,0) and (1,1) with (0,0) being the lower left corner.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI ScrollRect component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normalized Position</div>
+	<div id="paramDesc">
+The position's value of the UI ScrollRect component. Ranges from 0.0 to 1.0.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Horizontal Position</div>
+	<div id="paramDesc">
+The horizontal position's value of the UI ScrollRect component. Ranges from 0.0 to 1.0.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vertical Position</div>
+	<div id="paramDesc">
+The vertical position's value of the UI ScrollRect component. Ranges from 0.0 to 1.0.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset On Exit</div>
+	<div id="paramDesc">
+Reset when exiting this state.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeats every frame</div>
+</div>
+

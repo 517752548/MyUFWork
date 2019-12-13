@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetRayCastHit2dInfo.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets info on the last 2d Raycast or LineCast and store in variables.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object Hit</div>
+	<div id="paramDesc">
+Get the GameObject hit by the last Raycast and store it in a variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Point</div>
+	<div id="paramDesc">
+Get the world position of the ray hit point and store it in a variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normal</div>
+	<div id="paramDesc">
+Get the normal at the hit point and store it in a variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Distance</div>
+	<div id="paramDesc">
+Get the distance along the ray to the hit point and store it in a variable.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+

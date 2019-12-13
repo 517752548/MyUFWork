@@ -1,0 +1,26 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetTrigger2dInfo.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets info on the last Trigger 2d event and store in variables.  See Unity and PlayMaker docs on Unity 2D physics.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object Hit</div>
+	<div id="paramDesc">
+Get the GameObject hit.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Shape Count</div>
+	<div id="paramDesc">
+The number of separate shaped regions in the collider.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Physics 2d Material Name</div>
+	<div id="paramDesc">
+Useful for triggering different effects. Audio, particles...</div>
+</div>
+

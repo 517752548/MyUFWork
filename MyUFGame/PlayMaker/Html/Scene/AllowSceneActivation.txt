@@ -1,0 +1,47 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/AllowSceneActivation.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Allow scenes to be activated. Use this after LoadSceneAsynch where you did not activated the scene upon loading</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+A Synch Operation Hash Code</div>
+	<div id="paramDesc">
+The name of the new scene. It cannot be empty or null, or same as the name of the existing scenes.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Allow Scene Activation</div>
+	<div id="paramDesc">
+Allow the scene to be activated</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Progress</div>
+	<div id="paramDesc">
+The loading's progress.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Done</div>
+	<div id="paramDesc">
+True when loading is done</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Done Event</div>
+	<div id="paramDesc">
+Event sent when scene loading is done</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Failure Event</div>
+	<div id="paramDesc">
+Event sent when action could not be performed. Check Log for more information</div>
+</div>
+

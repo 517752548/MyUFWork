@@ -1,0 +1,75 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/Rotate.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Rotates a Game Object around each Axis. Use a Vector3 Variable and/or XYZ components. To leave any axis unchanged, set variable to 'None'.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The game object to rotate.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Vector</div>
+	<div id="paramDesc">
+A rotation vector specifying rotation around x, y, and z axis. NOTE: You can override individual axis below.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+X Angle</div>
+	<div id="paramDesc">
+Rotation around x axis.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Y Angle</div>
+	<div id="paramDesc">
+Rotation around y axis.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Z Angle</div>
+	<div id="paramDesc">
+Rotation around z axis.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Space</div>
+	<div id="paramDesc">
+Rotate in local or world space.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Per Second</div>
+	<div id="paramDesc">
+Rotation is specified in degrees per second. In other words, the amount to rotate in over one second. This allows rotations to be frame rate independent. It is the same as multiplying the rotation by Time.deltaTime.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Late Update</div>
+	<div id="paramDesc">
+Perform the rotation in LateUpdate. This is useful if you want to override the rotation of objects that are animated or otherwise rotated in Update.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Fixed Update</div>
+	<div id="paramDesc">
+Perform the rotation in FixedUpdate. This is useful when working with rigid bodies and physics.</div>
+</div>
+

@@ -1,0 +1,166 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiGetLastPointerDataInfo.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets pointer data on the last System event.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Click Count</div>
+	<div id="paramDesc">
+Number of clicks in a row.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Click Time</div>
+	<div id="paramDesc">
+The last time a click event was sent.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Delta</div>
+	<div id="paramDesc">
+Pointer delta since last update.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Dragging</div>
+	<div id="paramDesc">
+Is a drag operation currently occuring.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Input Button</div>
+	<div id="paramDesc">
+The InputButton for this event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Eligible For Click</div>
+	<div id="paramDesc">
+Is the pointer being pressed? (Not documented by Unity)</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Enter Event Camera</div>
+	<div id="paramDesc">
+The camera associated with the last OnPointerEnter event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Press Event Camera</div>
+	<div id="paramDesc">
+The camera associated with the last OnPointerPress event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Pointer Moving</div>
+	<div id="paramDesc">
+Is the pointer moving.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Scrolling</div>
+	<div id="paramDesc">
+Is scroll being used on the input device.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Last Press</div>
+	<div id="paramDesc">
+The GameObject for the last press event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pointer Drag</div>
+	<div id="paramDesc">
+The object that is receiving OnDrag.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pointer Enter</div>
+	<div id="paramDesc">
+The object that received 'OnPointerEnter'.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pointer Id</div>
+	<div id="paramDesc">
+Id of the pointer (touch id).</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pointer Press</div>
+	<div id="paramDesc">
+The GameObject that received the OnPointerDown.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Position</div>
+	<div id="paramDesc">
+Current pointer position.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Press Position</div>
+	<div id="paramDesc">
+Position of the press.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Raw Pointer Press</div>
+	<div id="paramDesc">
+The object that the press happened on even if it can not handle the press event.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Scroll Delta</div>
+	<div id="paramDesc">
+The amount of scroll since the last update.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Used</div>
+	<div id="paramDesc">
+Is the event used?</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Use Drag Threshold</div>
+	<div id="paramDesc">
+Should a drag threshold be used?</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+World Normal</div>
+	<div id="paramDesc">
+The normal of the last raycast in world coordinates.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+World Position</div>
+	<div id="paramDesc">
+The world position of the last raycast.</div>
+</div>
+

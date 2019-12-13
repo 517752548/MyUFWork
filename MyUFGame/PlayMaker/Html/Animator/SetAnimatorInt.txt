@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/SetAnimatorInt.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets the value of a int parameter</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Parameter</div>
+	<div id="paramDesc">
+The animator parameter</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Value</div>
+	<div id="paramDesc">
+The Int value to assign to the animator parameter</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame Option</div>
+	<div id="paramDesc">
+Select when to perform the action, during OnUpdate, OnAnimatorMove, OnAnimatorIK</div>
+</div>
+

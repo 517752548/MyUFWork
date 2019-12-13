@@ -1,0 +1,33 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/ArrayForEach.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Iterate through the items in an Array and run an FSM on each item. NOTE: The FSM has to Finish before being run on the next item.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Array</div>
+	<div id="paramDesc">
+Array to iterate through.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Item</div>
+	<div id="paramDesc">
+Store the item in a variable</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Fsm Template Control</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Finish Event</div>
+	<div id="paramDesc">
+Event to send after iterating through all items in the Array.</div>
+</div>
+

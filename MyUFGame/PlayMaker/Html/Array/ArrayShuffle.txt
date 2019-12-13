@@ -1,0 +1,26 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/ArrayShuffle.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Shuffle values in an array. Optionally set a start index and range to shuffle only part of the array.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Array</div>
+	<div id="paramDesc">
+The Array to shuffle.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Start Index</div>
+	<div id="paramDesc">
+Optional start Index for the shuffling. Leave it to none or 0 for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Shuffling Range</div>
+	<div id="paramDesc">
+Optional range for the shuffling, starting at the start index if greater than 0. Leave it to none or 0 for no effect, it will shuffle the whole array</div>
+</div>
+

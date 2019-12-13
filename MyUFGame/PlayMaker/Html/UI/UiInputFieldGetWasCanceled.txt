@@ -1,0 +1,33 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiInputFieldGetWasCanceled.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the cancel state of a UI InputField component. This relates to the last onEndEdit Event</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Was Canceled</div>
+	<div id="paramDesc">
+The was canceled flag value of the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Was Canceled Event</div>
+	<div id="paramDesc">
+Event sent if inputField was canceled</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Was Not Canceled Event</div>
+	<div id="paramDesc">
+Event sent if inputField was not canceled</div>
+</div>
+

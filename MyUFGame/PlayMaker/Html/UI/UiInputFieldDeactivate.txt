@@ -1,0 +1,19 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiInputFieldDeactivate.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Deactivate a UI InputField to stop the processing of Events and send OnSubmit if not canceled. Optionally Activate on state exit</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI InputField component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Activate On Exit</div>
+	<div id="paramDesc">
+Activate when exiting this state.</div>
+</div>
+

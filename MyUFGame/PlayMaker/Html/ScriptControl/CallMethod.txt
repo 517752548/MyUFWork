@@ -1,0 +1,49 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/CallMethod.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Call a method in a component on a GameObject.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Behaviour</div>
+	<div id="paramDesc">
+The behaviour on a GameObject that has the method you want to call. Drag the script component from the Unity inspector into this slot. HINT: Use Lock if the script is on another GameObject.
+
+NOTE: Unity Object fields only show the GameObject name, so for clarity we show the Behaviour name in a readonly field below.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Method Name</div>
+	<div id="paramDesc">
+Name of the method to call on the component</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Parameters</div>
+	<div id="paramDesc">
+Method parameters. NOTE: these must match the method's signature!</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Store Result</div>
+	<div id="paramDesc">
+Store the result of the method call.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Manual UI</div>
+	<div id="paramDesc">
+Use the old manual editor UI.</div>
+</div>
+

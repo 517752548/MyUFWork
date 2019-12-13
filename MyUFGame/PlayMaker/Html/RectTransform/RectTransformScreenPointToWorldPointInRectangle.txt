@@ -1,0 +1,76 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/RectTransformScreenPointToWorldPointInRectangle.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Transform a screen space point to a world position that is on the plane of the given RectTransform. Also check if the plane of the RectTransform is hit, regardless of whether the point is inside the rectangle.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject target.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Screen Point Vector 2</div>
+	<div id="paramDesc">
+The screenPoint as a Vector2. Leave to none if you want to use the Vector3 alternative</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Or Screen Point Vector 3</div>
+	<div id="paramDesc">
+The screenPoint as a Vector3. Leave to none if you want to use the Vector2 alternative</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Normalized Screen Point</div>
+	<div id="paramDesc">
+Define if screenPoint are expressed as normalized screen coordinates (0-1). Otherwise coordinates are in pixels.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Camera</div>
+	<div id="paramDesc">
+The Camera. For a RectTransform in a Canvas set to Screen Space - Overlay mode, the cam parameter should be set to null explicitly (default).
+Leave to none and the camera will be the one from EventSystem.current.camera</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+World Position</div>
+	<div id="paramDesc">
+Store the world Position of the screenPoint on the RectTransform Plane.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Hit</div>
+	<div id="paramDesc">
+True if the plane of the RectTransform is hit, regardless of whether the point is inside the rectangle.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Hit Event</div>
+	<div id="paramDesc">
+Event sent if the plane of the RectTransform is hit, regardless of whether the point is inside the rectangle.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+No Hit Event</div>
+	<div id="paramDesc">
+Event sent if the plane of the RectTransform is NOT hit, regardless of whether the point is inside the rectangle.</div>
+</div>
+

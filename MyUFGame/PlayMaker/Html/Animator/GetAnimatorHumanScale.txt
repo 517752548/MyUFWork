@@ -1,0 +1,20 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/GetAnimatorHumanScale.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Returns the scale of the current Avatar for a humanoid rig, (1 by default if the rig is generic).
+ The scale is relative to Unity's Default Avatar</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The Target. An Animator component is required</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Human Scale</div>
+	<div id="paramDesc">
+the scale of the current Avatar</div>
+</div>
+

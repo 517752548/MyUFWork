@@ -1,0 +1,47 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiTransitionGetType.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Gets the transition type of a UI Selectable component.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI Selectable component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Transition</div>
+	<div id="paramDesc">
+The transition value</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Color Tint Event</div>
+	<div id="paramDesc">
+Event sent if transition is ColorTint</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Sprite Swap Event</div>
+	<div id="paramDesc">
+Event sent if transition is SpriteSwap</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Animation Event</div>
+	<div id="paramDesc">
+Event sent if transition is Animation</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+No Transition Event</div>
+	<div id="paramDesc">
+Event sent if transition is none</div>
+</div>
+

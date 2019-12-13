@@ -1,0 +1,54 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/QuaternionCompare.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Check if two quaternions are equals or not. Takes in account inversed representations of quaternions</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Quaternion 1</div>
+	<div id="paramDesc">
+First Quaternion</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Quaternion 2</div>
+	<div id="paramDesc">
+Second Quaternion</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Equal</div>
+	<div id="paramDesc">
+true if Quaternions are equal</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Equal Event</div>
+	<div id="paramDesc">
+Event sent if Quaternions are equal</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Not Equal Event</div>
+	<div id="paramDesc">
+Event sent if Quaternions are not equal</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame. Useful if any of the values are changing.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame Option</div>
+	<div id="paramDesc">
+Defines how to perform the action when 'every Frame' is enabled.</div>
+</div>
+

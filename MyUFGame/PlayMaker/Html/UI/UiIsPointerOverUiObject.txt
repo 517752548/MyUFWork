@@ -1,0 +1,40 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiIsPointerOverUiObject.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Checks if Pointer is over a UI object, optionally takes a pointer ID, otherwise uses the current event.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Pointer Id</div>
+	<div id="paramDesc">
+Optional PointerId. Leave to none to use the current event</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pointer Over UI</div>
+	<div id="paramDesc">
+Event to send when the Pointer is over an UI object.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Pointer Not Over UI</div>
+	<div id="paramDesc">
+Event to send when the Pointer is NOT over an UI object.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Is Pointer Over UI</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+Repeat every frame.</div>
+</div>
+

@@ -1,0 +1,54 @@
+<div id="actionImg"><p><img src="http://mywebsite.com/docs/img/UiCanvasGroupSetProperties.png" title="" width="350" /></p></div>
+<div id="actionDesc">
+<p>
+Sets properties of a UI CanvasGroup component.</p>
+</div>
+<div id="paramRow">
+	<div id="paramName">
+Game Object</div>
+	<div id="paramDesc">
+The GameObject with the UI CanvasGroup component.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Alpha</div>
+	<div id="paramDesc">
+Canvas group alpha. Ranges from 0.0 to 1.0.</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Interactable</div>
+	<div id="paramDesc">
+Is the group interactable (are the elements beneath the group enabled). Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Blocks Raycasts</div>
+	<div id="paramDesc">
+Does this group block raycasting (allow collision). Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Ignore Parent Group</div>
+	<div id="paramDesc">
+Should the group ignore parent groups? Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Reset On Exit</div>
+	<div id="paramDesc">
+Reset when exiting this state. Leave as None for no effect</div>
+</div>
+
+<div id="paramRow">
+	<div id="paramName">
+Every Frame</div>
+	<div id="paramDesc">
+TODO</div>
+</div>
+
