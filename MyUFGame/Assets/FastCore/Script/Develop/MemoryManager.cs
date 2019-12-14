@@ -77,9 +77,7 @@ public class MemoryManager
     public static void FreeHeapMemory()
     {
         GlobalEvent.DispatchEvent(MemoryEvent.FreeHeapMemory);
-
-        DataManager.CleanCache();
-        ConfigManager.CleanCache();
+        
         //RecordManager.CleanCache();
     }
 
