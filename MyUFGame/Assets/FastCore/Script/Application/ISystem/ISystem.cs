@@ -40,4 +40,19 @@ public class ISystem
     {
         return InitAsyncFinished;
     }
+    
+    public virtual void Update()
+    {
+        
+    }
+
+    public virtual void GamePause(bool pause)
+    {
+        
+    }
+
+    public virtual void ExitGame()
+    {
+        
+    }
 }

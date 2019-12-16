@@ -55,4 +55,22 @@ public class GameFacade : MonoBehaviour
     {
         GameStarted?.Invoke();
     }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        _gameManagers.GamePause(pauseStatus);
+        _gameSystems.GamePause(pauseStatus);
+    }
+
+    private void OnApplicationQuit()
+    {
+        _gameManagers.ExitGame();
+        _gameSystems.ExitGame();
+    }
+
+    private void Update()
+    {
+        _gameManagers.Update();
+        _gameSystems.Update();
+    }
 }

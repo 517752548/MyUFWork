@@ -35,4 +35,28 @@ public class GameSystems
             IninFinished?.Invoke();
         }
     }
+    
+    public void Update()
+    {
+        for (int i = 0; i < _baseManagers.Count; i++)
+        {
+            _baseManagers[i].Update();
+        }
+    }
+
+    public void GamePause(bool pause)
+    {
+        for (int i = 0; i < _baseManagers.Count; i++)
+        {
+            _baseManagers[i].GamePause(pause);
+        }
+    }
+
+    public void ExitGame()
+    {
+        for (int i = 0; i < _baseManagers.Count; i++)
+        {
+            _baseManagers[i].ExitGame();
+        }
+    }
 }
