@@ -8,7 +8,7 @@ using UnityEngine.Profiling;
 #endif
 
 #pragma warning disable
-public class MemoryManager
+public class MemoryManager:BaseManager
 {
     /// <summary>
     /// 是否允许动态加载
@@ -25,12 +25,9 @@ public class MemoryManager
     /// </summary>
     public static int s_MaxHeapMemoryUse = 50;
 
-    public static void Init()
-    {
-        ApplicationManager.s_OnApplicationUpdate += Update;
-    }
 
-    static void Update()
+
+   public override void Update()
     {
         //资源加载
         LoadResources();

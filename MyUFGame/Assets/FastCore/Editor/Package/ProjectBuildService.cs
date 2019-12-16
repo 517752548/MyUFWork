@@ -47,31 +47,15 @@ class ProjectBuildService : Editor
                 }
             }
 
-#if UNITY_WEBGL
-            return path + "/" + ApplicationMode;
-#elif UNITY_IOS
-            return path += "/" + ChannelName + "/" + ApplicationMode;
+
+#if UNITY_IOS
+            return path += "/" + ChannelName;
 #else
-            return path += "/" + ChannelName + "/" + ApplicationMode + "/";
+            return path += "/" + ChannelName  + "/";
 #endif
         }
     }
-
-    public static AppMode ApplicationMode
-    {
-        get
-        {
-            //这里遍历所有参数，找到 AppMpde 开头的参数， 然后把-符号 后面的字符串返回，
-            foreach (string arg in Environment.GetCommandLineArgs())
-            {
-                if (arg.StartsWith("AppMode"))
-                {
-                    return (AppMode)Enum.Parse(typeof(AppMode), arg.Split("-"[0])[1]);
-                }
-            }
-            return AppMode.Developing;
-        }
-    }
+    
 
     public static bool IsUseAssetsBundle
     {
@@ -135,27 +119,12 @@ class ProjectBuildService : Editor
         debugString += "是否使用 Bundle 打包: " + IsUseAssetsBundle + "\n";
         debugString += "是否使用 Lua : " + IsUseLua + "\n";
         debugString += "渠道名: " + ChannelName + "\n";
-        debugString += "发布模式: " + ApplicationMode + "\n";
         debugString += "导出路径: " + ExportPath + "\n";
         debugString += ">>>====================================================================================================================================<<<\n";
 
         Debug.Log(debugString);
     }
-
-    static void SetApplicationMode(AppMode mode)
-    {
-        string appModeDefine = "";
-
-        switch (mode)
-        {
-            case AppMode.Developing:
-                appModeDefine = "APPMODE_DEV"; break;
-            case AppMode.Release:
-                appModeDefine = "APPMODE_REL"; break;
-        }
-
-        AddScriptDefine(appModeDefine);
-    }
+    
 
     static void SetLua(bool useLua)
     {
@@ -219,19 +188,15 @@ class ProjectBuildService : Editor
 
     #region Android
 
-    [MenuItem(@"BuildScript/BuildAndroid")]
+    [MenuItem("Fast/BuildScript/BuildAndroid")]
     static void BuildForAndroid()
     {
         SwitchPlatform(BuildTarget.Android);
 
         //输出日志
         PrintDebug();
-
-        //使用Lua
-        SetLua(IsUseLua);
-
-        //发布模式
-        SetApplicationMode(ApplicationMode);
+        
+        
 
         //使用Resource或者使用Bundle
         UseResourcesOrBundle(IsUseAssetsBundle);
@@ -273,7 +238,7 @@ class ProjectBuildService : Editor
 
     #region IOS
 
-    [MenuItem(@"BuildScript/BuildIOS")]
+    [MenuItem("Fast/BuildScript/BuildIOS")]
     static void BuildForIOS()
     {
         SwitchPlatform(BuildTarget.iOS);
@@ -283,9 +248,6 @@ class ProjectBuildService : Editor
 
         //使用Lua
         SetLua(IsUseLua);
-
-        //发布模式
-        SetApplicationMode(ApplicationMode);
 
         //使用Resource或者使用Bundle
         UseResourcesOrBundle(IsUseAssetsBundle);
@@ -336,7 +298,7 @@ class ProjectBuildService : Editor
 #if UNITY_WEBGL
         return Application.productName;
 #else
-        return Application.productName + "_" + Version + "_"+ ChannelName + "_" + GetModeName(ApplicationMode) +"_"+ GetTimeString();
+        return Application.productName + "_" + Version + "_"+ ChannelName  + "_"+ GetTimeString();
 #endif
     }
 
@@ -346,18 +308,7 @@ class ProjectBuildService : Editor
 
         return date.Year + string.Format("{0:d2}", date.Month) + string.Format("{0:d2}", date.Day) + "_" + string.Format("{0:d2}", date.Hour) + string.Format("{0:d2}", date.Minute);
     }
-
-    static string GetModeName(AppMode mode)
-    {
-        switch (mode)
-        {
-            case AppMode.Developing:
-                return "Dev";
-            case AppMode.Release:
-                return "Rel"; ;
-            default: return "unknow";
-        }
-    }
+    
 
     public static void SetScriptDefine(string symbols)
     {

@@ -73,7 +73,7 @@ public class GUIUtil
     {
         if(tiplist.Count == 0)
         {
-            ApplicationManager.s_OnApplicationOnGUI += TipsGUI;
+            //ApplicationManager.s_OnApplicationOnGUI += TipsGUI;
         }
 
         tiplist.Add(content);
@@ -127,7 +127,7 @@ public class GUIUtil
             tiplist.RemoveAt(windowID - tipWindowStartID);
             if(tiplist.Count == 0)
             {
-                ApplicationManager.s_OnApplicationOnGUI -= TipsGUI;
+                //ApplicationManager.s_OnApplicationOnGUI -= TipsGUI;
             }
         }
     }

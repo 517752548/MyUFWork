@@ -4,20 +4,13 @@ using System.Collections.Generic;
 
 namespace FastFrameWork
 {
-    public class Timer
+    public class Timer : BaseManager
     {
         public static List<TimerEvent> m_timers = new List<TimerEvent>();
 
         public static TimerEvent test;
 
-        //public static List<TimerEvent> m_removeList = new List<TimerEvent>();
-
-        public static void Init()
-        {
-            ApplicationManager.s_OnApplicationUpdate += Update;
-        }
-
-        static void Update()
+        public override void Update()
         {
             for (int i = 0; i < m_timers.Count; i++)
             {
