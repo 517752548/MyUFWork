@@ -126,14 +126,6 @@ class ProjectBuildService : Editor
     }
     
 
-    static void SetLua(bool useLua)
-    {
-        if (useLua)
-        {
-            AddScriptDefine("USE_LUA");
-        }
-    }
-
     /// <summary>
     /// 切换渠道
     /// </summary>
@@ -143,34 +135,7 @@ class ProjectBuildService : Editor
         //SchemeDataService.ChangeScheme(channelName);
 #endif
     }
-
-    /// <summary>
-    ///打包或者使用Bundle流程
-    /// </summary>
-    static void UseResourcesOrBundle(bool useBundle)
-    {
-        return;
-        if (useBundle)
-        {
-            AddScriptDefine("USE_BUNDLE");
-            BundlePackage();
-
-#if UNITY_IOS
-            //删除_Res和_Doc
-            FileTool.SafeDeleteDirectory(Application.dataPath + "/_Res");
-            FileTool.SafeDeleteDirectory(Application.dataPath + "/_Doc");
-#endif
-        }
-        else
-        {
-            if (Directory.Exists(Application.dataPath + "/StreamingAssets"))
-            {
-                //不使用 Bundle 则删除 StreamingAssets 文件夹
-                FileTool.SafeDeleteDirectory(Application.dataPath + "/StreamingAssets");
-            }
-        }
-    }
-
+    
     static void BundlePackage()
     {
         //自动增加小版本号
@@ -196,11 +161,6 @@ class ProjectBuildService : Editor
         //输出日志
         PrintDebug();
         
-        
-
-        //使用Resource或者使用Bundle
-        UseResourcesOrBundle(IsUseAssetsBundle);
-
         //切换渠道
         ChangeChannel(ChannelName);
 
@@ -245,12 +205,6 @@ class ProjectBuildService : Editor
 
         //输出日志
         PrintDebug();
-
-        //使用Lua
-        SetLua(IsUseLua);
-
-        //使用Resource或者使用Bundle
-        UseResourcesOrBundle(IsUseAssetsBundle);
 
         //切换渠道
         ChangeChannel(ChannelName);
