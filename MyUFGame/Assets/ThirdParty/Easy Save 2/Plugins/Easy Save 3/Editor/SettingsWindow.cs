@@ -76,7 +76,8 @@ namespace ES3Editor
 		public void Init()
 		{
 			#if UNITY_2018_3_OR_NEWER
-			defaultSettingsGo = (GameObject)AssetDatabase.LoadMainAssetAtPath("Assets/Plugins/Easy Save 3/Resources/ES3/ES3 Default Settings.prefab");
+			defaultSettingsGo = Resources.Load<GameObject>("ES3/ES3 Default Settings");
+			//defaultSettingsGo = (GameObject)AssetDatabase.LoadMainAssetAtPath("Assets/ThirdParty/Easy Save 2/Plugins/Easy Save 3/Resources/ES3/ES3 Default Settings.prefab");
 			editorSettings = defaultSettingsGo.GetComponent<ES3DefaultSettings>();
 			#else
 			editorSettings = ES3Settings.GetDefaultSettings();
