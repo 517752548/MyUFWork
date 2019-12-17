@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FrameWorkConst
 {
+    public const string BuildOutPutPath = "";
     public const string c_ResourceFolder = "AssetsPackage";
     public const string c_ConfigFolder = "UFConfig";
     //assets目录下的这个文件夹定义为bundle文件夹
