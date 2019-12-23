@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaseUI : MonoBehaviour
 {
+    public int UIID;
     private UiLayerController m_controller;
     public UiState type = UiState.Waiting;
     public bool CanReuse = true;

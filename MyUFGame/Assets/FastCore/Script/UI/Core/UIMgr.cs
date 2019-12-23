@@ -79,8 +79,17 @@ public class UIMgr : MonoBehaviour
                 m_HighController.ShowWindow(baseUi);
                 break;
         }
-        
+    }
 
+    /// <summary>
+    /// 关闭ui
+    /// </summary>
+    /// <param name="baseui"></param>
+    public void CloseUIWindow(BaseUI baseui)
+    {
+        m_NormalController.CloseWindow(baseui);
+        m_MiddleController.CloseWindow(baseui);
+        m_HighController.CloseWindow(baseui);
     }
     
 }
