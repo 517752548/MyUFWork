@@ -7,9 +7,9 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class UIMgr : MonoBehaviour
 {
-    private UiLayerController m_NormalController;
-    private UiLayerController m_MiddleController;
-    private UiLayerController m_HighController;
+    private NormalUiController m_NormalController;
+    private NormalUiController m_MiddleController;
+    private NormalUiController m_HighController;
     public Transform Normal;
     public Transform Middle;
     public Transform High;
@@ -19,9 +19,9 @@ public class UIMgr : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        m_NormalController = new UiLayerController(Normal);
-        m_MiddleController = new UiLayerController(Middle);
-        m_HighController = new UiLayerController(High);
+        m_NormalController = new NormalUiController(Normal);
+        m_MiddleController = new NormalUiController(Middle);
+        m_HighController = new NormalUiController(High);
     }
 
     /// <summary>
@@ -42,12 +42,12 @@ public class UIMgr : MonoBehaviour
 
         return null;
     }
-    
+
     /// <summary>
     /// 打开一个window
     /// </summary>
     /// <param name="prefabName"></param>
-    public async void OpenWindow(string prefabName,UILayer layer = UILayer.Normal,OpenUiType type = OpenUiType.First)
+    public async void OpenWindow(string prefabName,UILayer layer = UILayer.Normal,OpenUiType type = OpenUiType.First,params object[] obj)
     {
         GameObject prefab = GetUiPrefab(prefabName);
         if (prefab == null)
@@ -66,7 +66,8 @@ public class UIMgr : MonoBehaviour
         }
 
         BaseUI baseUi = prefab.GetComponent<BaseUI>();
-
+        baseUi.openType = type;
+        baseUi.obj = obj;
         switch (layer)
         {
             case UILayer.Normal:

@@ -35,6 +35,7 @@ public enum UiState
     Waiting,
     Opening,
     Idle,
+    Hidden,
     Closing,
     Closed
 }

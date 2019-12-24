@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class BaseUI : MonoBehaviour
 {
-    public int UIID;
-    private UiLayerController m_controller;
-    public UiState type = UiState.Waiting;
+    private NormalUiController m_controller;
+    public string UIID;
+    public object[] obj;
+    public OpenUiType openType;
+    public UiState states = UiState.Waiting;
     public bool CanReuse = true;
 
-    public void SetController(UiLayerController m_controller)
+    public void SetController(NormalUiController m_controller)
     {
         this.m_controller = m_controller;
     }
@@ -18,16 +20,16 @@ public class BaseUI : MonoBehaviour
     /// </summary>
     public virtual void OnOpen()
     {
-        type = UiState.Waiting;
+        states = UiState.Waiting;
     }
 
     /// <summary>
     /// 打开动画
     /// </summary>
-    public virtual void OpenAnim()
+    public virtual IEnumerator OpenAnim()
     {
-        type = UiState.Opening;
-        OpenCompleted();
+        states = UiState.Opening;
+        yield return 0;
     }
 
     /// <summary>
@@ -35,7 +37,7 @@ public class BaseUI : MonoBehaviour
     /// </summary>
     public virtual void OpenCompleted()
     {
-        type = UiState.Idle;
+        states = UiState.Idle;
     }
     
     //在栈中再次弹出的时候调用
@@ -53,10 +55,10 @@ public class BaseUI : MonoBehaviour
     /// <summary>
     /// 关闭动画
     /// </summary>
-    public virtual void ClosingAnim()
+    public virtual IEnumerator ClosingAnim()
     {
-        type = UiState.Closing;
-        CloseCompleted();
+        states = UiState.Closing;
+        yield return 0;
     }
 
     /// <summary>
@@ -64,7 +66,7 @@ public class BaseUI : MonoBehaviour
     /// </summary>
     public virtual void CloseCompleted()
     {
-        type = UiState.Closed;
+        states = UiState.Closed;
     }
     
     //被关闭
