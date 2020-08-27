@@ -1,0 +1,3661 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f937d68337a68e4e99c192231ed3b56, type: 3}
+  m_Name: RewardAB_Android_Reward_A
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114758870148944048}
+  - {fileID: 114531808891096540}
+  - {fileID: 114952163820728762}
+  - {fileID: 114981878563615574}
+  - {fileID: 114972994050480506}
+  - {fileID: 114833692647525224}
+  - {fileID: 114976730636861634}
+  - {fileID: 114534201483227320}
+  - {fileID: 114263267091516004}
+  - {fileID: 114103488671893288}
+  - {fileID: 114073946515585722}
+  - {fileID: 114510995660256730}
+  - {fileID: 114237338524682590}
+  - {fileID: 114483039466651768}
+  - {fileID: 114979781019275608}
+  - {fileID: 114399004086004448}
+  - {fileID: 114381596044393364}
+  - {fileID: 114267193196741378}
+  - {fileID: 114705482524512486}
+  - {fileID: 114497202831924268}
+  - {fileID: 114473526527116780}
+  - {fileID: 114995521198279252}
+  - {fileID: 114703058266876970}
+  - {fileID: 114761204680006172}
+  - {fileID: 114371120621402152}
+  - {fileID: 114974438856385720}
+  - {fileID: 114068815458787362}
+  - {fileID: 114748264777932192}
+  - {fileID: 114977976059304844}
+  - {fileID: 114703892405356216}
+  - {fileID: 114833629898017718}
+  - {fileID: 114222586403553368}
+  - {fileID: 114123147274278138}
+  - {fileID: 114481533919763506}
+  - {fileID: 114392885829449414}
+  - {fileID: 114720240791888494}
+  - {fileID: 114498827080671940}
+  - {fileID: 114078465294928686}
+  - {fileID: 114755727412365652}
+  - {fileID: 114137913634877848}
+  - {fileID: 114783524361382166}
+  - {fileID: 114200216162443828}
+  - {fileID: 114231995399182952}
+  - {fileID: 114120666709571248}
+  - {fileID: 114460488741223912}
+  - {fileID: 114504267526767984}
+  - {fileID: 114686925899598308}
+  - {fileID: 114252031825476682}
+  - {fileID: 114018926396753914}
+  - {fileID: 114713899884423598}
+  - {fileID: 114759741755459794}
+  - {fileID: 114737519468098998}
+  - {fileID: 114821814691012952}
+  - {fileID: 114557895532351158}
+  - {fileID: 114185293839134704}
+  - {fileID: 114343906702311982}
+  - {fileID: 114951029815094648}
+  - {fileID: 114666097165599418}
+  - {fileID: 114220853887687494}
+  - {fileID: 114933590467212284}
+  - {fileID: 114042563054814216}
+  - {fileID: 114475475909830124}
+  - {fileID: 114290874497461102}
+  - {fileID: 114685880974694188}
+  - {fileID: 114441463965100630}
+  - {fileID: 114798549504998720}
+  - {fileID: 114205900711099550}
+  - {fileID: 114583553529487866}
+  - {fileID: 114345969311497762}
+  - {fileID: 114890987464016632}
+  - {fileID: 114305134590208454}
+  - {fileID: 114576883717486848}
+  - {fileID: 114803951189351828}
+  - {fileID: 114222768841965666}
+  - {fileID: 114717950684620984}
+  - {fileID: 114092403068173960}
+  - {fileID: 114510879284628988}
+  - {fileID: 114372284667710718}
+  - {fileID: 114422567096462870}
+  - {fileID: 114359081138956412}
+  - {fileID: 114258429191772720}
+  - {fileID: 114110207664797448}
+  - {fileID: 114051660102252366}
+  - {fileID: 114017221886646614}
+  - {fileID: 114888152334156798}
+  - {fileID: 114116410953656966}
+  - {fileID: 114025670956493996}
+  - {fileID: 114779684980592466}
+  - {fileID: 114267975760309518}
+  - {fileID: 114486173796594016}
+  - {fileID: 114702562812001906}
+  - {fileID: 114382909637945616}
+  - {fileID: 114310059475169610}
+  - {fileID: 114360183309905162}
+  - {fileID: 114243856036845620}
+  - {fileID: 114008708555844498}
+  - {fileID: 114318524915023146}
+  - {fileID: 114000997021094454}
+  - {fileID: 114144254090758760}
+  - {fileID: 114906717095153666}
+  - {fileID: 114353348234202720}
+  - {fileID: 114336309888859316}
+  - {fileID: 114400890039702678}
+  - {fileID: 114077932283365678}
+  - {fileID: 114127427030469618}
+  - {fileID: 114052433165082368}
+  - {fileID: 114987750796773770}
+  - {fileID: 114281662977450946}
+  - {fileID: 114503132656030398}
+  - {fileID: 114818716738675870}
+  - {fileID: 114672265543869666}
+  - {fileID: 114599976283119034}
+  - {fileID: 114441634336396700}
+  - {fileID: 114287474360250990}
+  - {fileID: 114865499411144138}
+  - {fileID: 114113105072423424}
+  - {fileID: 114078735299420110}
+  - {fileID: 114372375078197950}
+  - {fileID: 114505236273506420}
+  - {fileID: 114921888101001582}
+  - {fileID: 114927926827859578}
+  - {fileID: 114334992079499826}
+  - {fileID: 114062120969323686}
+  - {fileID: 114263120315156188}
+  - {fileID: 114547760492795834}
+  - {fileID: 114610191529109234}
+  - {fileID: 114010332913279460}
+  - {fileID: 114099812387139212}
+  - {fileID: 114297971621742838}
+  - {fileID: 114911213141532282}
+  - {fileID: 114677448772099564}
+  - {fileID: 114711807969239586}
+  - {fileID: 114319825157810392}
+  - {fileID: 114176677294075540}
+  - {fileID: 114244785950260580}
+  reportStr: V20200820
+--- !u!114 &114000997021094454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20110
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114008708555844498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20108
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114010332913279460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30028
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114017221886646614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20005
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114018926396753914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 49
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114025670956493996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20008
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114042563054814216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 61
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114051660102252366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20004
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 25
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114052433165082368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30007
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114062120969323686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30024
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114068815458787362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 27
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114073946515585722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 11
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114077932283365678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30005
+  Des: "\u5FAE\u535A"
+  ITEMID1: 13
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114078465294928686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 38
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114078735299420110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30018
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114092403068173960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10014
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 10
+  Quantity1: 50
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114099812387139212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30029
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114103488671893288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114110207664797448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20003
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 35
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114113105072423424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30017
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114116410953656966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20007
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 25
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114120666709571248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 44
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114123147274278138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 33
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114127427030469618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30006
+  Des: "\u5FAE\u535A"
+  ITEMID1: 22
+  Quantity1: 16
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114137913634877848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 40
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114144254090758760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20111
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 12
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114176677294075540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30035
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114185293839134704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 55
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114200216162443828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 42
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114205900711099550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10002
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114220853887687494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 59
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114222586403553368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 32
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114222768841965666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10012
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114231995399182952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 43
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114237338524682590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 13
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114243856036845620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20107
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 25
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114244785950260580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30036
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114252031825476682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 48
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114258429191772720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20002
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114263120315156188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30025
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114263267091516004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 9
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114267193196741378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 18
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114267975760309518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20101
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 25
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114281662977450946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30009
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114287474360250990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30015
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114290874497461102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 63
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114297971621742838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30030
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114305134590208454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10006
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: 12
+  Quantity2: 1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 14
+  VIDEOQuantity: 1
+--- !u!114 &114310059475169610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20105
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114318524915023146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20109
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 35
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114319825157810392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30034
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114334992079499826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30023
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114336309888859316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30003
+  Des: "\u5FAE\u535A"
+  ITEMID1: 12
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114343906702311982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 56
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114345969311497762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10004
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 10
+  Quantity1: 75
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114353348234202720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30002
+  Des: "\u5FAE\u535A"
+  ITEMID1: 22
+  Quantity1: 16
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114359081138956412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20001
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 25
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114360183309905162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20106
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 35
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114371120621402152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 25
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114372284667710718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10016
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 12
+  Quantity1: 1
+  ITEMID2: 22
+  Quantity2: 3
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 14
+  VIDEOQuantity: 1
+--- !u!114 &114372375078197950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30019
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114381596044393364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 17
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114382909637945616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20104
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 25
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114392885829449414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 35
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114399004086004448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 16
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114400890039702678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30004
+  Des: "\u5FAE\u535A"
+  ITEMID1: 22
+  Quantity1: 16
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114422567096462870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10017
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 10
+  Quantity1: 75
+  ITEMID2: 13
+  Quantity2: 1
+  ITEMID3: 22
+  Quantity3: 3
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 14
+  VIDEOQuantity: 1
+--- !u!114 &114441463965100630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 65
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114441634336396700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30014
+  Des: "\u5FAE\u535A"
+  ITEMID1: 22
+  Quantity1: 12
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114460488741223912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 45
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114473526527116780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 21
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114475475909830124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 62
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114481533919763506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 34
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114483039466651768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 14
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114486173796594016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20102
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114497202831924268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114498827080671940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 37
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114503132656030398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30010
+  Des: "\u5FAE\u535A"
+  ITEMID1: 22
+  Quantity1: 12
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114504267526767984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 46
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114505236273506420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30020
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114510879284628988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10015
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: 22
+  Quantity2: 3
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114510995660256730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 12
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114531808891096540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 2
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114534201483227320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 8
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114547760492795834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30026
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114557895532351158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 54
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114576883717486848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10007
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 10
+  Quantity1: 100
+  ITEMID2: 14
+  Quantity2: 1
+  ITEMID3: 22
+  Quantity3: 3
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 14
+  VIDEOQuantity: 2
+--- !u!114 &114583553529487866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10003
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 13
+  Quantity1: 1
+  ITEMID2: 22
+  Quantity2: 3
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 14
+  VIDEOQuantity: 1
+--- !u!114 &114599976283119034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30013
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114610191529109234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30027
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114666097165599418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 58
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114672265543869666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30012
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114677448772099564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30032
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114685880974694188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 64
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114686925899598308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 47
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114702562812001906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20103
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 35
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114703058266876970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 23
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114703892405356216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114705482524512486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 19
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114711807969239586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30033
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114713899884423598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 50
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114717950684620984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10013
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 12
+  Quantity1: 1
+  ITEMID2: 22
+  Quantity2: 3
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114720240791888494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 36
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114737519468098998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 52
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114748264777932192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 28
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114755727412365652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 39
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114758870148944048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 1
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114759741755459794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 51
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114761204680006172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 24
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114779684980592466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20100
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 35
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114783524361382166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 41
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114798549504998720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10001
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 10
+  Quantity1: 50
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114803951189351828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10011
+  Des: "\u7B7E\u5230\u5956\u52B1\u7B2C2\u8F6E"
+  ITEMID1: 10
+  Quantity1: 50
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114818716738675870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30011
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114821814691012952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 53
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114833629898017718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 31
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114833692647525224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 6
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114865499411144138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30016
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114888152334156798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20006
+  Des: "\u6BCF\u65E5\u4E00\u8BCD"
+  ITEMID1: 10
+  Quantity1: 35
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: -1
+  VIDEOQuantity: -1
+--- !u!114 &114890987464016632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10005
+  Des: "\u7B7E\u5230\u5956\u52B1"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: 22
+  Quantity2: 3
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 14
+  VIDEOQuantity: 1
+--- !u!114 &114906717095153666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30001
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: 22
+  Quantity2: 4
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114911213141532282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30031
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114921888101001582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30021
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114927926827859578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30022
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 100
+--- !u!114 &114933590467212284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 60
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114951029815094648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 57
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114952163820728762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 3
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 12
+  VIDEOQuantity: 1
+--- !u!114 &114972994050480506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 5
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114974438856385720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 26
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 50
+--- !u!114 &114976730636861634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 7
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114977976059304844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 29
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114979781019275608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 15
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 13
+  VIDEOQuantity: 1
+--- !u!114 &114981878563615574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 4
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: 22
+  Quantity2: 10
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1
+--- !u!114 &114987750796773770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 30008
+  Des: "\u5FAE\u535A"
+  ITEMID1: 11
+  Quantity1: 1
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 10
+  VIDEOQuantity: 60
+--- !u!114 &114995521198279252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b48edc4fae1ef4290578b9d5ba5905, type: 3}
+  m_Name: RewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 22
+  Des: "level\u5B9D\u7BB1"
+  ITEMID1: 10
+  Quantity1: 30
+  ITEMID2: -1
+  Quantity2: -1
+  ITEMID3: -1
+  Quantity3: -1
+  ITEMID4: -1
+  Quantity4: -1
+  ITEMID5: -1
+  Quantity5: -1
+  VIDEOITEM: 11
+  VIDEOQuantity: 1

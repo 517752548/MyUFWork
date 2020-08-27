@@ -1,0 +1,687 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b735d30d790ba1458f9ec844527befd, type: 3}
+  m_Name: DailyRewardAB_Android_ItemReward_A
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114350605541056076}
+  - {fileID: 114349272135449880}
+  - {fileID: 114819712164492832}
+  - {fileID: 114952453876132240}
+  - {fileID: 114227484476096936}
+  - {fileID: 114234368509051094}
+  - {fileID: 114465737114954774}
+  - {fileID: 114261531763787316}
+  - {fileID: 114477834718754174}
+  - {fileID: 114499429007153760}
+  - {fileID: 114842212104583294}
+  - {fileID: 114467021016889988}
+  - {fileID: 114756020534551788}
+  - {fileID: 114569399747813612}
+  - {fileID: 114139838618195006}
+  - {fileID: 114889897616203728}
+  - {fileID: 114077703210870290}
+  - {fileID: 114846912619509084}
+  - {fileID: 114797111754593978}
+  - {fileID: 114748704614039080}
+  - {fileID: 114737317339826086}
+  - {fileID: 114022676655863176}
+  - {fileID: 114201466057756350}
+  - {fileID: 114453620190534034}
+--- !u!114 &114022676655863176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 22
+  Year: 2021
+  Month: 10
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114077703210870290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 17
+  Year: 2021
+  Month: 5
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114139838618195006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 15
+  Year: 2021
+  Month: 3
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114201466057756350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 23
+  Year: 2021
+  Month: 11
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114227484476096936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 5
+  Year: 2020
+  Month: 5
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114234368509051094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 6
+  Year: 2020
+  Month: 6
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114261531763787316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 8
+  Year: 2020
+  Month: 8
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114349272135449880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 2
+  Year: 2020
+  Month: 2
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114350605541056076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 1
+  Year: 2020
+  Month: 1
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114453620190534034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 24
+  Year: 2021
+  Month: 12
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114465737114954774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 7
+  Year: 2020
+  Month: 7
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114467021016889988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 12
+  Year: 2020
+  Month: 12
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114477834718754174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 9
+  Year: 2020
+  Month: 9
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114499429007153760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 10
+  Year: 2020
+  Month: 10
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114569399747813612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 14
+  Year: 2021
+  Month: 2
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114737317339826086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 21
+  Year: 2021
+  Month: 9
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114748704614039080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 20
+  Year: 2021
+  Month: 8
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114756020534551788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 13
+  Year: 2021
+  Month: 1
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114797111754593978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 19
+  Year: 2021
+  Month: 7
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114819712164492832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 3
+  Year: 2020
+  Month: 3
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114842212104583294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 11
+  Year: 2020
+  Month: 11
+  Pet1: 1000011
+  Pet2: 1000012
+  Pet3: 1000013
+  Pet4: 1000014
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114846912619509084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 18
+  Year: 2021
+  Month: 6
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114889897616203728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 16
+  Year: 2021
+  Month: 4
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9
+--- !u!114 &114952453876132240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462331c7bfc81214d87448a3f98b0d7b, type: 3}
+  m_Name: DailyRewardAB_Data
+  m_EditorClassIdentifier: 
+  ID: 4
+  Year: 2020
+  Month: 4
+  Pet1: 1000002
+  Pet2: 1000003
+  Pet3: 1000004
+  Pet4: 1000005
+  Coin1: 100
+  Coin2: 200
+  Coin3: 400
+  Coin4: 600
+  Star1: 2
+  Star2: 3
+  Star3: 6
+  Star4: 9

@@ -1,0 +1,214 @@
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using Bag;
+
+public class GameAnalyze
+{
+
+    /// <summary>
+    /// 初始化
+    /// </summary>
+public static void Init()
+{
+#if UNITY_IOS
+FTDSdk.init(SdkConst.FtdAppId, SdkConst.FtdIosKey, SdkConst.FtdsignWay);
+#elif UNITY_ANDROID
+FTDSdk.init(SdkConst.FtdAppId, SdkConst.FtdIosKey, SdkConst.FtdsignWay);
+#endif
+}
+ public static void LogusersActive()
+    {
+        Dictionary<string, string> data = new Dictionary<string, string>()
+        {
+            {"wordVersion", AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().wordVersion},
+            {"classicLevelSeq", AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value.ToString()},
+            {"userType", XUtils.GetUserType()},
+            {"LevelABTestAB", AppEngine.SSystemManager.GetSystem<TestABWordLibSystem>().GetUserTestLib()},
+            {"LevelABTest", AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().GetAbTestSpecialId()},
+            {"RewardAB", AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib()},
+            {"CellTipAB",AppEngine.SSystemManager.GetSystem<CellTipABSystem>().GetUserRewardLib()}
+        };
+        FTDSdk.getInstance().setOnlineTimeParams(data);
+    }
+  /// <summary>
+     /// 用户购买表
+     /// 上报条件：玩家充值时，实时上报
+     /// <summary>
+     /// <param name="userTypeBefore">玩家分层支付前</param>
+     /// <param name="userTypeAfter">玩家分层支付后</param>
+     /// <param name="levelSeq">关卡序数</param>
+     /// <param name="buyItemId">购买项</param>
+     /// <param name="moneyCost">消费金额，内购id对应的美元数额</param>
+     /// <param name="leftHint1"> 剩余hint1数量（付费前）</param>
+     /// <param name="leftHint2"> 剩余hint2数量（付费前）</param>
+     /// <param name="leftHint3"> 剩余hint3数量（付费前）</param>
+     /// <param name="leftHint4"> 剩余hint4数量（付费前）</param>
+     /// <param name="leftCoin">付费前金币数（付费前）</param>
+     /// <param name="buyLeftHint1">付费后剩余hint1数（拿到订单为主）</param>
+     /// <param name="buyLeftHint2">付费后剩余hint2数（拿到订单为主）</param>
+     /// <param name="buyLeftHint3">付费后剩余hint3数（拿到订单为主）</param>
+     /// <param name="buyLeftHint4">付费后剩余hint4数（拿到订单为主）</param>
+     /// <param name="buyLeftCoin">付费后剩余金币数</param>
+     /// <param name="installDays">付费距离安装天数（卸载重装后，玩家同步进度后，此数据需要更新）</param>
+     /// <param name="payDay">付费距离上次付费天数（当天付2次天数为0拉取时间使用UTC时）</param>
+     /// <param name="totalPayTimes">付费总次数</param>
+     /// <param name="payType">购买来源1普通计费点商城:normal</param>
+     /// <param name="orderId">订单号</param>
+     public static void LogusersBuy(int money, string currency, string itemName, string p_userTypeBefore,
+         string p_userTypeAfter, string p_buyItemId, int p_moneyCost, int coinreward,int beforecoin, int beforehint1, int beforehint2, int beforehint3,
+         int beforehint4,int beforehint5,int afterhint1,int afterhint2,int afterhint3,int afterhint4,int afterhint5, string p_orderId,bool Verify)
+     {
+         string level = AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value.ToString();
+         int installdays = AppEngine.SSystemManager.GetSystem<PlayerInfoSystem>().GetPlayerInstallDays();
+         int payDays = AppEngine.SSystemManager.GetSystem<PlayerInfoSystem>().GetPayDays();
+         int totalPayTimes = AppEngine.SSystemManager.GetSystem<PlayerInfoSystem>().GetTotalPayTimes();
+         Dictionary<string, string> data = new Dictionary<string, string>()
+         {
+             {"userTypeBefore", p_userTypeBefore},
+             {"userTypeAfter", p_userTypeAfter},
+             {"levelSeq", level},
+             {"buyItemId", p_buyItemId},
+             {"moneyCost", p_moneyCost.ToString()},
+             {"leftHint1", beforehint1.ToString()},
+             {"leftHint2", (beforehint2).ToString()},
+             {"leftHint3", (beforehint3).ToString()},
+             {"leftHint4", (beforehint4).ToString()},
+             {"leftHint5", beforehint5.ToString()},
+             {"leftCoin", beforecoin.ToString()},
+             {"buyLeftHint1", afterhint1.ToString()},
+             {"buyLeftHint2", afterhint2.ToString()},
+             {"buyLeftHint3", afterhint3.ToString()},
+             {"buyLeftHint4", afterhint4.ToString()},
+             {"buyLeftHint5", afterhint5.ToString()},
+             {"buyLeftCoin", (beforecoin + coinreward).ToString()},
+             {"installDays", installdays.ToString()},
+             {"payDay", payDays.ToString()},
+             {"totalPayTimes", totalPayTimes.ToString()},
+             {"payType", "normal"},
+             {"orderId", p_orderId},
+             {"Verify", Verify.ToString()},
+             {"RewardAB",AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib()}
+         };
+         string channel = "ios";
+ #if UNITY_ANDROID
+ channel = "google";
+ #endif
+         FTDSdk.getInstance().logEventPurchase(channel, p_buyItemId, itemName, p_moneyCost, money, currency,!Verify,false, data);
+                 if (FB.IsInitialized)
+                 {
+                     FB.LogAppEvent("usersBuy", null, null);
+                 }
+     }
+         public static void LogEvent(string name,string value)
+         {
+             LogEvent(name,new Dictionary<string, string>(){{name,value}});
+         }
+/// <summary>
+/// 可传 Dictionary<string,string>参数
+/// </summary>
+/// <param name="name">Name.</param>
+/// <param name="values">Valus.</param>
+public static void LogEvent(string name, Dictionary<string, string> eventParams)
+{
+if (!string.IsNullOrEmpty(name) && eventParams != null) {
+FTDSdk.getInstance().logCustomEvent(name,name,eventParams);
+}
+if (FB.IsInitialized)
+        {
+            Dictionary<string, object> fbParas = new Dictionary<string, object>();
+            foreach (string eventParamsKey in eventParams.Keys)
+            {
+                fbParas.Add(eventParamsKey, eventParams[eventParamsKey]);
+            }
+
+            FB.LogAppEvent(name, null, fbParas);
+        }
+}
+
+	public static void LogException(string condition,string trace)
+	{
+		Dictionary<string, string> data = new Dictionary<string, string>()
+		{
+			{ "condition" , condition },
+			{ "trace" , trace },
+		};
+		LogEvent("LogException" , data);
+	}
+
+
+
+
+	/// <summary>
+	/// 推送
+	/// 上报条件：根据关卡不同阶段打点
+	/// <summary>
+	/// <param name="LevelSeq">关卡序数</param>
+	/// <param name="Step">step</param>
+	public static void LogNotificationState(string p_LevelSeq,string p_Step)
+	{
+		Dictionary<string, string> data = new Dictionary<string, string>()
+		{
+			{ "LevelSeq" , p_LevelSeq },
+			{ "Step" , p_Step }
+		};
+		LogEvent("NotificationState" , data);
+	}
+
+	/// <summary>
+	/// 推送
+	/// 上报条件：根据关卡不同阶段打点
+	/// <summary>
+	/// <param name="LevelSeq">关卡序数</param>
+	/// <param name="Step">step</param>
+	public static void LogSendNotification(string p_LevelSeq,string p_Step)
+	{
+		Dictionary<string, string> data = new Dictionary<string, string>()
+		{
+			{ "LevelSeq" , p_LevelSeq },
+			{ "Step" , p_Step }
+		};
+		LogEvent("SendNotification" , data);
+	}
+	
+	/// <summary>
+	/// 玩家点击推送过来的
+	/// 上报条件：根据关卡不同阶段打点
+	/// <summary>
+	/// <param name="LevelSeq">关卡序数</param>
+	/// <param name="Step">step</param>
+	public static void LogPlayerClickNotification(string p_LevelSeq,string p_Step)
+	{
+		Dictionary<string, string> data = new Dictionary<string, string>()
+		{
+			{ "LevelSeq" , p_LevelSeq },
+			{ "Step" , p_Step }
+		};
+		LogEvent("PlayerClickNotification" , data);
+	}
+	
+		/// <summary>
+    	/// 问题反馈打点
+    	/// 上报条件：玩家点击反馈时打点
+    	/// <summary>
+    	/// <param name="levelSeq">主线关卡序数</param>
+    	/// <param name="queId">问题Id</param>
+    	/// <param name="feedbackType">回馈：1：fun，0：boring</param>
+    	public static void LogqueFeedback(string p_levelSeq,string p_queId,string p_feedbackType,string p_Question,string p_Answer,string p_LevelABTestAB,string p_LevelABTest)
+    	{
+    		Dictionary<string, string> data = new Dictionary<string, string>()
+    		{
+    			{ "levelSeq" , p_levelSeq },
+    			{ "queId" , p_queId },
+    			{ "feedbackType" , p_feedbackType },
+    			{ "Question" , p_Question },
+    			{ "Answer" , p_Answer },
+    			{ "LevelABTestAB" , p_LevelABTestAB },
+    			{ "LevelABTest" , p_LevelABTest },
+    		};
+    		LogEvent("queFeedback" , data);
+    	}
+
+
+<|||>0<|||>
+}

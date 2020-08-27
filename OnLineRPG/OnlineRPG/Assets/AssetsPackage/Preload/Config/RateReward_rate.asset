@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353da433c0d0ad24b809c31f5efc4e45, type: 3}
+  m_Name: RateReward_rate
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114079222476999576}
+--- !u!114 &114079222476999576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eef0701b7ca224aa52b3115795bd3f, type: 3}
+  m_Name: RateReward_Data
+  m_EditorClassIdentifier: 
+  ID: 1
+  StartLevel: 4
+  EndLevel: 1000000

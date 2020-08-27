@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: A_loading
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+    - serializedVersion: 2
+      m_BuildTarget: iPhone
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 55
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 607d3eb89d026c849861c8d9506d5f4a, type: 3}
+    totalSpriteSurfaceArea: 1282212
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8db33c00acd9dc04393e6a22b4a6aad8, type: 3}
+  - {fileID: 21300000, guid: c0ac550297661c048b441999347542e1, type: 3}
+  - {fileID: 21300000, guid: 3bf6ddb3a4777b44e886b96802535d89, type: 3}
+  - {fileID: 21300000, guid: 8d34d354f34ff424c90334fa20480aad, type: 3}
+  - {fileID: 21300000, guid: a12ecc74cb4ded44084f8f53d44b7cd8, type: 3}
+  - {fileID: 21300000, guid: 4190b6a766eb78647b43b22be861565c, type: 3}
+  - {fileID: 21300000, guid: 32c193b98dcd69747b90555c89a09a85, type: 3}
+  - {fileID: 21300000, guid: f0c9cde93282ad947b1a4767b9447ada, type: 3}
+  - {fileID: 21300000, guid: 9f13911a17d70e542a4c26573700dd38, type: 3}
+  - {fileID: 21300000, guid: 0e3fc57a17ff17c4cab0afc111f73a40, type: 3}
+  - {fileID: 21300000, guid: bd92ed4eb5b3f1340a876ce15dbac41d, type: 3}
+  - {fileID: 21300000, guid: d05772bff18cad942bc41824c5111b95, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - cloud_1
+  - aircraft_icon
+  - loading_Circle_4
+  - loading_dan_huang
+  - loading_Circle_3
+  - Loading_bg
+  - loading_Circle_dan
+  - loading_Circle_1
+  - loading_Circle_2
+  - Loading_dan
+  - loading_Circle_5
+  - Loading_guangci
+  m_Tag: A_loading
+  m_IsVariant: 0

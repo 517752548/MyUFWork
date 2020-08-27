@@ -1,0 +1,535 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35c766b12aaf124193e40dedaa94bd5, type: 3}
+  m_Name: Android_StoryConfigB
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114979253211579804}
+  - {fileID: 114244842958239278}
+  - {fileID: 114744940636895940}
+  - {fileID: 114834586345192064}
+  - {fileID: 114063802822554624}
+  - {fileID: 114273766450220222}
+  - {fileID: 114515154427503992}
+  - {fileID: 114161162079509554}
+  - {fileID: 114830357477381700}
+  - {fileID: 114268859588707474}
+  - {fileID: 114641250427229596}
+  - {fileID: 114491333934961070}
+  - {fileID: 114556004951189232}
+  - {fileID: 114300889024230226}
+  - {fileID: 114302597883821586}
+  - {fileID: 114831204458750384}
+  - {fileID: 114774769050761234}
+  ABTestBISymbel: V20200820
+--- !u!114 &114063802822554624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World5
+  m_EditorClassIdentifier: 
+  ID: 5
+  Name: Japan
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":26,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_96","CardLevelID":2000088,"LevelIDs":[2000085,2000086,2000087],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":27,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_100","CardLevelID":2000092,"LevelIDs":[2000089,2000090,2000091],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":28,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_104","CardLevelID":2000096,"LevelIDs":[2000093,2000094,2000095],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":29,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_108","CardLevelID":2000100,"LevelIDs":[2000097,2000098,2000099],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":30,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_112","CardLevelID":2000104,"LevelIDs":[2000101,2000102,2000103],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":31,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_116","CardLevelID":2000108,"LevelIDs":[2000105,2000106,2000107],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":32,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_120","CardLevelID":2000112,"LevelIDs":[2000109,2000110,2000111],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":33,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_124","CardLevelID":2000116,"LevelIDs":[2000113,2000114,2000115],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":34,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_128","CardLevelID":2000120,"LevelIDs":[2000117,2000118,2000119],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":35,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_132","CardLevelID":2000124,"LevelIDs":[2000121,2000122,2000123],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: japan_home.jpg
+  HomeSmall: japan_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114161162079509554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World8
+  m_EditorClassIdentifier: 
+  ID: 8
+  Name: France
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":56,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_216","CardLevelID":2000208,"LevelIDs":[2000205,2000206,2000207],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":57,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_220","CardLevelID":2000212,"LevelIDs":[2000209,2000210,2000211],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":58,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_224","CardLevelID":2000216,"LevelIDs":[2000213,2000214,2000215],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":59,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_228","CardLevelID":2000220,"LevelIDs":[2000217,2000218,2000219],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":60,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_232","CardLevelID":2000224,"LevelIDs":[2000221,2000222,2000223],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":61,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_236","CardLevelID":2000228,"LevelIDs":[2000225,2000226,2000227],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":62,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_240","CardLevelID":2000232,"LevelIDs":[2000229,2000230,2000231],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":63,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_244","CardLevelID":2000236,"LevelIDs":[2000233,2000234,2000235],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":64,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_248","CardLevelID":2000240,"LevelIDs":[2000237,2000238,2000239],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":65,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_252","CardLevelID":2000244,"LevelIDs":[2000241,2000242,2000243],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: france_home.jpg
+  HomeSmall: france_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114244842958239278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World2
+  m_EditorClassIdentifier: 
+  ID: 2
+  Name: Egypt
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":4,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":200,"CardID":"208072020_16","CardLevelID":2000008,"LevelIDs":[2000007],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":2},{"ID":5,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":200,"CardID":"208072020_18","CardLevelID":2000010,"LevelIDs":[2000009],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":2},{"ID":6,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":300,"CardID":"208072020_21","CardLevelID":2000013,"LevelIDs":[2000011,2000012],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":3},{"ID":7,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":300,"CardID":"208072020_24","CardLevelID":2000016,"LevelIDs":[2000014,2000015],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":3}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: egypt_home.jpg
+  HomeSmall: egypt_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114268859588707474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World10
+  m_EditorClassIdentifier: 
+  ID: 10
+  Name: Thailand
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":76,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_296","CardLevelID":2000288,"LevelIDs":[2000285,2000286,2000287],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":77,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_300","CardLevelID":2000292,"LevelIDs":[2000289,2000290,2000291],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":78,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_304","CardLevelID":2000296,"LevelIDs":[2000293,2000294,2000295],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":79,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_308","CardLevelID":2000300,"LevelIDs":[2000297,2000298,2000299],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":80,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_312","CardLevelID":2000304,"LevelIDs":[2000301,2000302,2000303],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":81,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_316","CardLevelID":2000308,"LevelIDs":[2000305,2000306,2000307],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":82,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_320","CardLevelID":2000312,"LevelIDs":[2000309,2000310,2000311],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":83,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_324","CardLevelID":2000316,"LevelIDs":[2000313,2000314,2000315],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":84,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_328","CardLevelID":2000320,"LevelIDs":[2000317,2000318,2000319],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":85,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_332","CardLevelID":2000324,"LevelIDs":[2000321,2000322,2000323],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: thailand_home.jpg
+  HomeSmall: thailand_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114273766450220222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World6
+  m_EditorClassIdentifier: 
+  ID: 6
+  Name: Australia
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":36,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_136","CardLevelID":2000128,"LevelIDs":[2000125,2000126,2000127],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":37,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_140","CardLevelID":2000132,"LevelIDs":[2000129,2000130,2000131],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":38,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_144","CardLevelID":2000136,"LevelIDs":[2000133,2000134,2000135],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":39,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_148","CardLevelID":2000140,"LevelIDs":[2000137,2000138,2000139],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":40,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_152","CardLevelID":2000144,"LevelIDs":[2000141,2000142,2000143],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":41,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_156","CardLevelID":2000148,"LevelIDs":[2000145,2000146,2000147],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":42,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_160","CardLevelID":2000152,"LevelIDs":[2000149,2000150,2000151],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":43,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_164","CardLevelID":2000156,"LevelIDs":[2000153,2000154,2000155],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":44,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_168","CardLevelID":2000160,"LevelIDs":[2000157,2000158,2000159],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":45,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_172","CardLevelID":2000164,"LevelIDs":[2000161,2000162,2000163],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: australia_home.jpg
+  HomeSmall: australia_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114300889024230226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World14
+  m_EditorClassIdentifier: 
+  ID: 14
+  Name: Korea
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":116,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_456","CardLevelID":2000448,"LevelIDs":[2000445,2000446,2000447],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":117,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_460","CardLevelID":2000452,"LevelIDs":[2000449,2000450,2000451],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":118,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_464","CardLevelID":2000456,"LevelIDs":[2000453,2000454,2000455],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":119,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_468","CardLevelID":2000460,"LevelIDs":[2000457,2000458,2000459],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":120,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_472","CardLevelID":2000464,"LevelIDs":[2000461,2000462,2000463],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":121,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_476","CardLevelID":2000468,"LevelIDs":[2000465,2000466,2000467],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":122,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_480","CardLevelID":2000472,"LevelIDs":[2000469,2000470,2000471],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":123,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_484","CardLevelID":2000476,"LevelIDs":[2000473,2000474,2000475],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":124,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_488","CardLevelID":2000480,"LevelIDs":[2000477,2000478,2000479],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":125,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_492","CardLevelID":2000484,"LevelIDs":[2000481,2000482,2000483],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: korea_home.jpg
+  HomeSmall: korea_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114302597883821586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World15
+  m_EditorClassIdentifier: 
+  ID: 15
+  Name: Canada
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":126,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_496","CardLevelID":2000488,"LevelIDs":[2000485,2000486,2000487],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":127,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_500","CardLevelID":2000492,"LevelIDs":[2000489,2000490,2000491],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":128,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_504","CardLevelID":2000496,"LevelIDs":[2000493,2000494,2000495],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":129,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_508","CardLevelID":2000500,"LevelIDs":[2000497,2000498,2000499],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":130,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_512","CardLevelID":2000504,"LevelIDs":[2000501,2000502,2000503],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":131,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_516","CardLevelID":2000508,"LevelIDs":[2000505,2000506,2000507],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":132,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_520","CardLevelID":2000512,"LevelIDs":[2000509,2000510,2000511],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":133,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_524","CardLevelID":2000516,"LevelIDs":[2000513,2000514,2000515],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":134,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_528","CardLevelID":2000520,"LevelIDs":[2000517,2000518,2000519],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":135,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_532","CardLevelID":2000524,"LevelIDs":[2000521,2000522,2000523],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: canada_home.jpg
+  HomeSmall: canada_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114491333934961070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World12
+  m_EditorClassIdentifier: 
+  ID: 12
+  Name: Russia
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":96,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_376","CardLevelID":2000368,"LevelIDs":[2000365,2000366,2000367],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":97,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_380","CardLevelID":2000372,"LevelIDs":[2000369,2000370,2000371],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":98,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_384","CardLevelID":2000376,"LevelIDs":[2000373,2000374,2000375],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":99,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_388","CardLevelID":2000380,"LevelIDs":[2000377,2000378,2000379],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":100,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_392","CardLevelID":2000384,"LevelIDs":[2000381,2000382,2000383],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":101,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_396","CardLevelID":2000388,"LevelIDs":[2000385,2000386,2000387],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":102,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_400","CardLevelID":2000392,"LevelIDs":[2000389,2000390,2000391],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":103,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_404","CardLevelID":2000396,"LevelIDs":[2000393,2000394,2000395],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":104,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_408","CardLevelID":2000400,"LevelIDs":[2000397,2000398,2000399],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":105,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_412","CardLevelID":2000404,"LevelIDs":[2000401,2000402,2000403],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: russia_home.jpg
+  HomeSmall: russia_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114515154427503992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World7
+  m_EditorClassIdentifier: 
+  ID: 7
+  Name: Brazil
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":46,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_176","CardLevelID":2000168,"LevelIDs":[2000165,2000166,2000167],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":47,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_180","CardLevelID":2000172,"LevelIDs":[2000169,2000170,2000171],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":48,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_184","CardLevelID":2000176,"LevelIDs":[2000173,2000174,2000175],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":49,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_188","CardLevelID":2000180,"LevelIDs":[2000177,2000178,2000179],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":50,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_192","CardLevelID":2000184,"LevelIDs":[2000181,2000182,2000183],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":51,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_196","CardLevelID":2000188,"LevelIDs":[2000185,2000186,2000187],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":52,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_200","CardLevelID":2000192,"LevelIDs":[2000189,2000190,2000191],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":53,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_204","CardLevelID":2000196,"LevelIDs":[2000193,2000194,2000195],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":54,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_208","CardLevelID":2000200,"LevelIDs":[2000197,2000198,2000199],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":55,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_212","CardLevelID":2000204,"LevelIDs":[2000201,2000202,2000203],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: brazil_home.jpg
+  HomeSmall: brazil_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114556004951189232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World13
+  m_EditorClassIdentifier: 
+  ID: 13
+  Name: England
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":106,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_416","CardLevelID":2000408,"LevelIDs":[2000405,2000406,2000407],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":107,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_420","CardLevelID":2000412,"LevelIDs":[2000409,2000410,2000411],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":108,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_424","CardLevelID":2000416,"LevelIDs":[2000413,2000414,2000415],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":109,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_428","CardLevelID":2000420,"LevelIDs":[2000417,2000418,2000419],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":110,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_432","CardLevelID":2000424,"LevelIDs":[2000421,2000422,2000423],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":111,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_436","CardLevelID":2000428,"LevelIDs":[2000425,2000426,2000427],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":112,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_440","CardLevelID":2000432,"LevelIDs":[2000429,2000430,2000431],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":113,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_444","CardLevelID":2000436,"LevelIDs":[2000433,2000434,2000435],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":114,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_448","CardLevelID":2000440,"LevelIDs":[2000437,2000438,2000439],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":115,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_452","CardLevelID":2000444,"LevelIDs":[2000441,2000442,2000443],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: england_home.jpg
+  HomeSmall: england_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114641250427229596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World11
+  m_EditorClassIdentifier: 
+  ID: 11
+  Name: Sweden
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":86,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_336","CardLevelID":2000328,"LevelIDs":[2000325,2000326,2000327],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":87,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_340","CardLevelID":2000332,"LevelIDs":[2000329,2000330,2000331],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":88,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_344","CardLevelID":2000336,"LevelIDs":[2000333,2000334,2000335],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":89,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_348","CardLevelID":2000340,"LevelIDs":[2000337,2000338,2000339],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":90,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_352","CardLevelID":2000344,"LevelIDs":[2000341,2000342,2000343],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":91,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_356","CardLevelID":2000348,"LevelIDs":[2000345,2000346,2000347],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":92,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_360","CardLevelID":2000352,"LevelIDs":[2000349,2000350,2000351],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":93,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_364","CardLevelID":2000356,"LevelIDs":[2000353,2000354,2000355],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":94,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_368","CardLevelID":2000360,"LevelIDs":[2000357,2000358,2000359],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":95,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_372","CardLevelID":2000364,"LevelIDs":[2000361,2000362,2000363],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: sweden_home.jpg
+  HomeSmall: sweden_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114744940636895940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World3
+  m_EditorClassIdentifier: 
+  ID: 3
+  Name: Morocco
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":8,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":300,"CardID":"208072020_27","CardLevelID":2000019,"LevelIDs":[2000017,2000018],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":3},{"ID":9,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":300,"CardID":"208072020_30","CardLevelID":2000022,"LevelIDs":[2000020,2000021],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":3},{"ID":10,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":300,"CardID":"208072020_33","CardLevelID":2000025,"LevelIDs":[2000023,2000024],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":3},{"ID":11,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":300,"CardID":"208072020_36","CardLevelID":2000028,"LevelIDs":[2000026,2000027],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":3},{"ID":12,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_40","CardLevelID":2000032,"LevelIDs":[2000029,2000030,2000031],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":13,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_44","CardLevelID":2000036,"LevelIDs":[2000033,2000034,2000035],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":14,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_48","CardLevelID":2000040,"LevelIDs":[2000037,2000038,2000039],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":15,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_52","CardLevelID":2000044,"LevelIDs":[2000041,2000042,2000043],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: morocco_home.jpg
+  HomeSmall: morocco_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114774769050761234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World17
+  m_EditorClassIdentifier: 
+  ID: 17
+  Name: India
+  WorldState: 0
+  StoryEnd: 
+  SubWorldListString: '[{"ID":0,"Name":"","RewardID":0,"Packages":[],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: india_home.jpg
+  HomeSmall: india_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114830357477381700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World9
+  m_EditorClassIdentifier: 
+  ID: 9
+  Name: Mexico
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":66,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_256","CardLevelID":2000248,"LevelIDs":[2000245,2000246,2000247],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":67,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_260","CardLevelID":2000252,"LevelIDs":[2000249,2000250,2000251],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":68,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_264","CardLevelID":2000256,"LevelIDs":[2000253,2000254,2000255],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":69,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_268","CardLevelID":2000260,"LevelIDs":[2000257,2000258,2000259],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":70,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_272","CardLevelID":2000264,"LevelIDs":[2000261,2000262,2000263],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":71,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_276","CardLevelID":2000268,"LevelIDs":[2000265,2000266,2000267],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":72,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_280","CardLevelID":2000272,"LevelIDs":[2000269,2000270,2000271],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":73,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_284","CardLevelID":2000276,"LevelIDs":[2000273,2000274,2000275],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":74,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_288","CardLevelID":2000280,"LevelIDs":[2000277,2000278,2000279],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":75,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_292","CardLevelID":2000284,"LevelIDs":[2000281,2000282,2000283],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: mexico_home.jpg
+  HomeSmall: mexico_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114831204458750384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World16
+  m_EditorClassIdentifier: 
+  ID: 16
+  Name: Germany
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":136,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_536","CardLevelID":2000528,"LevelIDs":[2000525,2000526,2000527],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":137,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_540","CardLevelID":2000532,"LevelIDs":[2000529,2000530,2000531],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":138,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_544","CardLevelID":2000536,"LevelIDs":[2000533,2000534,2000535],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":139,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_548","CardLevelID":2000540,"LevelIDs":[2000537,2000538,2000539],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":140,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_552","CardLevelID":2000544,"LevelIDs":[2000541,2000542,2000543],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":141,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_556","CardLevelID":2000548,"LevelIDs":[2000545,2000546,2000547],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":142,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_560","CardLevelID":2000552,"LevelIDs":[2000549,2000550,2000551],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":143,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_564","CardLevelID":2000556,"LevelIDs":[2000553,2000554,2000555],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":144,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_568","CardLevelID":2000560,"LevelIDs":[2000557,2000558,2000559],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":145,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_572","CardLevelID":2000564,"LevelIDs":[2000561,2000562,2000563],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: germany_home.jpg
+  HomeSmall: germany_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114834586345192064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World4
+  m_EditorClassIdentifier: 
+  ID: 4
+  Name: Greece
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":16,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_56","CardLevelID":2000048,"LevelIDs":[2000045,2000046,2000047],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":17,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_60","CardLevelID":2000052,"LevelIDs":[2000049,2000050,2000051],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":18,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_64","CardLevelID":2000056,"LevelIDs":[2000053,2000054,2000055],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":19,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_68","CardLevelID":2000060,"LevelIDs":[2000057,2000058,2000059],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":20,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_72","CardLevelID":2000064,"LevelIDs":[2000061,2000062,2000063],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":21,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_76","CardLevelID":2000068,"LevelIDs":[2000065,2000066,2000067],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":22,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_80","CardLevelID":2000072,"LevelIDs":[2000069,2000070,2000071],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":23,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_84","CardLevelID":2000076,"LevelIDs":[2000073,2000074,2000075],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":24,"Des1":"when
+    is it?","Des2":null,"CardPieceMode":400,"CardID":"208072020_88","CardLevelID":2000080,"LevelIDs":[2000077,2000078,2000079],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4},{"ID":25,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":401,"CardID":"208072020_92","CardLevelID":2000084,"LevelIDs":[2000081,2000082,2000083],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":4}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: greece_home.jpg
+  HomeSmall: greece_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3
+--- !u!114 &114979253211579804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b20ce2d65d6014eaabe834ceffb791, type: 3}
+  m_Name: World1
+  m_EditorClassIdentifier: 
+  ID: 1
+  Name: Departures
+  WorldState: 1
+  StoryEnd: 
+  SubWorldListString: '[{"ID":1,"Name":"","RewardID":0,"Packages":[{"ID":1,"Des1":"where
+    is it?","Des2":null,"CardPieceMode":200,"CardID":"208072020_2","CardLevelID":2000002,"LevelIDs":[2000001],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":2},{"ID":2,"Des1":"Who
+    is it?","Des2":null,"CardPieceMode":200,"CardID":"208072020_4","CardLevelID":2000004,"LevelIDs":[2000003],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":2},{"ID":3,"Des1":"what
+    is it?","Des2":null,"CardPieceMode":200,"CardID":"208072020_6","CardLevelID":2000006,"LevelIDs":[2000005],"StartLevelIndex":0,"EndLevelIndex":0,"_CardEntity":null,"PieceCount":2}],"StartLevelIndex":0,"EndLevelIndex":0}]'
+  HomeImage: departures_home.jpg
+  HomeSmall: departures_map{0}.jpg
+  HomeMusic: common_hm.mp3
+  BGMusic: common_gm.mp3

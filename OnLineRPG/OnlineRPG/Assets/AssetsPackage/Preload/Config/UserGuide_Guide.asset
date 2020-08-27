@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6a7864cce08b741acd36ceb538d8f6, type: 3}
+  m_Name: UserGuide_Guide
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114287275080813688}
+  - {fileID: 114966615534994608}
+  - {fileID: 114902146341364418}
+  - {fileID: 114866232690738036}
+  - {fileID: 114459846114854094}
+--- !u!114 &114287275080813688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171a4930d261be47b052d1b432dfba2, type: 3}
+  m_Name: UserGuide_Data
+  m_EditorClassIdentifier: 
+  ID: PlayGuide
+  GuideLevel: 1
+--- !u!114 &114459846114854094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171a4930d261be47b052d1b432dfba2, type: 3}
+  m_Name: UserGuide_Data
+  m_EditorClassIdentifier: 
+  ID: Hint4Guide
+  GuideLevel: 5
+--- !u!114 &114866232690738036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171a4930d261be47b052d1b432dfba2, type: 3}
+  m_Name: UserGuide_Data
+  m_EditorClassIdentifier: 
+  ID: Hint3Guide
+  GuideLevel: 4
+--- !u!114 &114902146341364418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171a4930d261be47b052d1b432dfba2, type: 3}
+  m_Name: UserGuide_Data
+  m_EditorClassIdentifier: 
+  ID: Hint2Guide
+  GuideLevel: 3
+--- !u!114 &114966615534994608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171a4930d261be47b052d1b432dfba2, type: 3}
+  m_Name: UserGuide_Data
+  m_EditorClassIdentifier: 
+  ID: Hint1Guide
+  GuideLevel: 2

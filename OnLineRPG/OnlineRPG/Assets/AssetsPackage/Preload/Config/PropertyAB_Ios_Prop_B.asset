@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1c0c69eac0b6144b7a80b15213c944, type: 3}
+  m_Name: PropertyAB_Ios_Prop_B
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114329359839002442}
+  - {fileID: 114864920964508622}
+  - {fileID: 114927082489956550}
+  - {fileID: 114077010619713978}
+  - {fileID: 114878879167552296}
+  - {fileID: 114437975118353042}
+--- !u!114 &114077010619713978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175678bf9a77de84281e02d24e266d24, type: 3}
+  m_Name: PropertyAB_Data
+  m_EditorClassIdentifier: 
+  ID: Hint4
+  Coast: 350
+  StartLevel: 36
+  DefaultCount: 0
+--- !u!114 &114329359839002442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175678bf9a77de84281e02d24e266d24, type: 3}
+  m_Name: PropertyAB_Data
+  m_EditorClassIdentifier: 
+  ID: Hint1
+  Coast: 100
+  StartLevel: 2
+  DefaultCount: 0
+--- !u!114 &114437975118353042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175678bf9a77de84281e02d24e266d24, type: 3}
+  m_Name: PropertyAB_Data
+  m_EditorClassIdentifier: 
+  ID: Daily
+  Coast: 1
+  StartLevel: 1
+  DefaultCount: 10
+--- !u!114 &114864920964508622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175678bf9a77de84281e02d24e266d24, type: 3}
+  m_Name: PropertyAB_Data
+  m_EditorClassIdentifier: 
+  ID: Hint2
+  Coast: 200
+  StartLevel: 10
+  DefaultCount: 0
+--- !u!114 &114878879167552296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175678bf9a77de84281e02d24e266d24, type: 3}
+  m_Name: PropertyAB_Data
+  m_EditorClassIdentifier: 
+  ID: Coin
+  Coast: 300
+  StartLevel: 1
+  DefaultCount: 100
+--- !u!114 &114927082489956550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175678bf9a77de84281e02d24e266d24, type: 3}
+  m_Name: PropertyAB_Data
+  m_EditorClassIdentifier: 
+  ID: Hint3
+  Coast: 300
+  StartLevel: 22
+  DefaultCount: 0

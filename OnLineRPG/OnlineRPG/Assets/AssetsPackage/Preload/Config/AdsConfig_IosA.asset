@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20a78b2e1b575e4eb9c132a86419114, type: 3}
+  m_Name: AdsConfig_IosA
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114618301423135656}
+--- !u!114 &114618301423135656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0e7ca23d0200c4ba9b766918e6689f, type: 3}
+  m_Name: AdsConfig_Data
+  m_EditorClassIdentifier: 
+  ID: 1
+  RV_CD: 0
+  RV_RewardCoin: 50
+  RV_MaxCount: 30
+  GP_RV_BeginLevel: 3
+  GP_RV_IsShown: 1
+  CS_RV_BeginLevel: 3
+  CS_RV_IsShown: 1
+  SP_RV_BeginLevel: 3
+  SP_RV_IsShown: 1
+  tcRvSwitch: 1
+  flashRvSwitch: 1
+  signRvSwitch: 1
+  blogRvSwitch: 1
+  inSwitch: 1
+  IN_BeginLevel: 6
+  inCD: 0
+  inMaxCount: 1000
+  inShopOpenTimes: 999
+  inEarlyBL: 6
+  inEarlyEL: 14
+  inEarlyCD: 3
+  inMidBL: 15
+  inMidEL: 18
+  inMidCD: 2
+  inLateBL: 19
+  inLateEL: 9999
+  inLateCD: 1
+  inDFirstSwitch: 1
+  inDailySwitch: 0
+  inDailyCD: -1
+  inFlashSwitch: 0
+  inFlashCD: -1

@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736ffbe1eabd15b4ca07032b11e27d6c, type: 3}
+  m_Name: Pets_Pet
+  m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 114760321637722694}
+  - {fileID: 114141621049359456}
+  - {fileID: 114732714715082246}
+  - {fileID: 114109856349716176}
+  - {fileID: 114929341523091946}
+  - {fileID: 114467076904847518}
+  - {fileID: 114722180916346556}
+  - {fileID: 114219316193645132}
+  - {fileID: 114449363365451102}
+--- !u!114 &114109856349716176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000004
+  prefab: wm_suf_egy
+  name: 'Suffinx '
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: This isn't the type of Sphinx to tell riddles - he's just too stone-faced for
+    that!
+  SiereName: EGYPT
+--- !u!114 &114141621049359456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000002
+  prefab: wm_cla_egy
+  name: Clause for Alarm!
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: What's that eerie green glow? Do his bandages need changing?
+  SiereName: EGYPT
+--- !u!114 &114219316193645132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000013
+  prefab: wm_lex_wil
+  name: Lexicon Man
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: This bandito sure looks tough and talks a good game, but he's actually quite
+    a sweetheart!
+  SiereName: WILD WEST
+--- !u!114 &114449363365451102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000014
+  prefab: wm_let_wil
+  name: Letter of the Law
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: Look sharp! The sheriff is in town, looking to stop any bad words in their
+    tracks!
+  SiereName: WILD WEST
+--- !u!114 &114467076904847518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000011
+  prefab: wm_ind_wil
+  name: Indiomatic
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: Don't judge this book by her cover, she never gets bent out of shape!
+  SiereName: WILD WEST
+--- !u!114 &114722180916346556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000012
+  prefab: wm_wor_wil
+  name: Wordbank Robber
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: Sneaky and sly - no noun, verb, or adjective is safe with this villain on the
+    prowl!
+  SiereName: WILD WEST
+--- !u!114 &114732714715082246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000003
+  prefab: wm_bas_egy
+  name: Bast Tense
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: The God of cats and therefore a solid 95% of the Internet.
+  SiereName: EGYPT
+--- !u!114 &114760321637722694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000001
+  prefab: wm_chi_pet
+  name: Beowoof
+  bgSprite: pet_Popup_up_theme2_bg.png
+  theme: pet_Popup_up_theme2_logo.png
+  des: A recent graduate of Word U, this Book Buddy is always available to lend a
+    helping hand, er, paw!
+  SiereName: PET HOUSE
+--- !u!114 &114929341523091946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a7c07cc5678a847993f89601ee7ebc, type: 3}
+  m_Name: Pets_Data
+  m_EditorClassIdentifier: 
+  ID: 1000005
+  prefab: wm_com_egy
+  name: Commapatra
+  bgSprite: pet_Popup_up_theme1_bg.png
+  theme: pet_Popup_up_theme1_logo.png
+  des: The "Queen of the Si-mile"! She's as wise as an owl!
+  SiereName: EGYPT
