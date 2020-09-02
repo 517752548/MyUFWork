@@ -21,7 +21,12 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             {
                 return false;
             }
-            
+
+            if (DataManager.businessGiftData.LevelStart())
+            {
+                msg = GameMsg.BusGiftPanel;
+                return true;
+            }
 
             return base.CheckCondition();
         }
@@ -39,6 +44,15 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             {
                 case GameMsg.BusGiftPanel:
                     UICallBack closeback = OnUiClose;
+                    if (DataManager.businessGiftData.shopItem.Length == 1)
+                    {
+                        UIManager.OpenUIAsync(ViewConst.prefab_ShopLimitBagOneDialog, closeback);
+                    }
+                    else
+                    {
+                        UIManager.OpenUIAsync(ViewConst.prefab_ShopLimitBagTwoDialog, closeback);
+                    }
+
                     break;
             }
         }

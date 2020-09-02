@@ -11,6 +11,7 @@ public class HomeRoot : BaseRoot
     [SerializeField] private List<BaseHomeUI> _baseHomeUis;
     private Transform headUI;
     private PageView centerPageView;
+    private Transform CenterObj;//屏蔽特效
     private Transform bottomUI;
     private Transform bottomSlideUI;
     private Transform bottomHome;//为了匹配slide宽度
@@ -30,14 +31,15 @@ public class HomeRoot : BaseRoot
     private float startTime;
     void Awake()
     {
+        CenterObj = transform.Find("Theme");
         _HomeGraphicRaycaster = GetComponent<GraphicRaycaster>();
         headUI = transform.Find("Theme_HeadUI");
         centerPageView = transform.Find("Theme/Scroll View").GetComponent<PageView>();
-        centerPageView.GetComponent<ScrollRect>().onValueChanged.AddListener(ListenerMethod);
         bottomUI = transform.Find("Theme_BottomUI");
         bottomSlideUI = bottomUI.Find("Slide");
         bottomHome = bottomUI.Find("Home");
         bottomAni = bottomUI.GetComponent<Animator>();
+        bottomUI.GetComponent<ToggleGroup>().SetAllTogglesOff();
         toggles = new List<Toggle>();
         toggles.Add(bottomUI.transform.Find("Shop").GetComponentInChildren<Toggle>());
         toggles.Add(bottomUI.transform.Find("Decoration").GetComponentInChildren<Toggle>());
@@ -56,28 +58,30 @@ public class HomeRoot : BaseRoot
             rootFsmManager = gameObject.AddComponent<HomeRootFsmManager>();
             rootFsmManager.Init(this);
         }
-    }
-
-    public void ListenerMethod(Vector2 value)
-    {
-        // //Debug.LogError("ListenerMethod: " + value);
+        
+        for (int i = 0; i < _baseHomeUis.Count; i++)
+        {
+            _baseHomeUis[i].Init(this);
+        }
     }
 
     void Start()
     {
         //匹配slide宽度
-        DOTween.Sequence().InsertCallback(0.05f, () =>
-        {
-            (bottomSlideUI as RectTransform).sizeDelta = new Vector2((bottomHome as RectTransform).sizeDelta.x, (bottomSlideUI as RectTransform).sizeDelta.y);
-        });
+        float homeFlexible = bottomHome.GetComponent<LayoutElement>().flexibleWidth;
+        (bottomSlideUI as RectTransform).sizeDelta = new Vector2((this.transform as RectTransform).sizeDelta.x * homeFlexible / (homeFlexible + 1 * 4), (bottomSlideUI as RectTransform).sizeDelta.y);
+
+        //匹配scroll item 宽高
+        foreach(RectTransform scrollItem in centerPageView.GetComponent<ScrollRect>().content) {
+            scrollItem.sizeDelta = (this.transform as RectTransform).sizeDelta;
+        }
 
         ani = false;//第一次不要动画
         centerPageView.OnPageChanged = (index) =>
         {
             toggles[index].isOn = true;
-        };
-        toggles[(int)HomeRootTab.home].isOn = false;//确保可以进入home
-        rootFsmManager.Enter();
+        };        
+        toggles[(int)HomeRootTab.home].isOn = true;//确保可以进入home
     }
 
     public BaseThemeRoot GetCurrentShowRoot()
@@ -103,6 +107,7 @@ public class HomeRoot : BaseRoot
         bottomAni.ResetTrigger(trigger);
         bottomAni.SetTrigger(trigger);
     }
+    
     private void ResetSlideAni()
     {
         stopMove = false;
@@ -149,7 +154,6 @@ public class HomeRoot : BaseRoot
 
     private void ClickHome(bool arg0)
     {
-        //Debug.LogError($"click home {arg0}");
         if (arg0)
         {
             centerPageView.PageToAnimation(2, ani ? scrollAniPerPage : 0);
@@ -209,11 +213,12 @@ public class HomeRoot : BaseRoot
     public override void Show(Action<bool> callback)
     {
         base.Show(callback);
-        // _home.SetActive(true);
+        CenterObj.SetActive(true);
+        _baseHomeUis.ForEach(ui => ui.OnShow());
         rootFsmManager.Enter();
         GetComponent<Canvas>().enabled = true;
         GetComponentInChildren<Camera>().enabled = true;
-        _baseHomeUis.ForEach(ui => ui.OnShow());
+        toggles[(int)currentTab].isOn = false;//重新进入当前状态机
         PlayBackgroundMusic();
         EventDispatcher.AddEventListener<BanRegion, bool>(GlobalEvents.HomeRootBanClick, BanClk);
     }
@@ -240,7 +245,7 @@ public class HomeRoot : BaseRoot
         GetComponentInChildren<Camera>().enabled = false;
         _baseHomeUis.ForEach(ui => ui.OnHidden());
         rootFsmManager.Leave();
-        // _home.SetActive(false);
+        CenterObj.SetActive(false);
         EventDispatcher.RemoveEventListener<BanRegion, bool>(GlobalEvents.HomeRootBanClick, BanClk);
     }
 
@@ -308,6 +313,7 @@ public enum HomeRootTab
     home = 2,
     activity = 3,
     rank = 4,
+    stay = 999,
     root = 1000//homeroot
 }
 

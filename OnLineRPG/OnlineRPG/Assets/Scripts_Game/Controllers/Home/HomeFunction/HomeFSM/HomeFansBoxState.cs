@@ -16,14 +16,7 @@ public class HomeFansBoxState : HomeState
             OnCompleted();
             return;
         }
-        if (AppEngine.SyncManager.Data.fansNumber.IsChanged)
-        {
-            HomeRoot.GetHomeUi<HomeThemeRoot>()._HomeAnimatorController.FlyWeb(() =>
-            {
-                HomeRoot.GetHomeUi<WebController>().DoIncreaseAnimator(OnCompleted);
-            });
-        }
-        else
-            OnCompleted();
+        HomeRoot.GetHomeUi<WebController>().OnShow();
+        OnCompleted();
     }
 }

@@ -109,6 +109,7 @@ public class ClassicCell : BaseCell
         base.SetFilled();
         if (beeCoinImg.gameObject.activeSelf)
         {
+            int delay = FlyRewardView.instance.AddSingleCoinToMultiFly(transform.position);
 
             //StartCoroutine(SingleCoinFly.FlySingleCommonTypeGolds(transform.position, 0.3f + ColIndex * 0.15f, false,
             //   ColIndex * 0.15f));
@@ -117,6 +118,7 @@ public class ClassicCell : BaseCell
                 RewardMgr.RewardInventory(InventoryType.Coin, 1, RewardSource.BeeCoin);
             }
 
+            TimersManager.SetTimer(0.1f * delay, () => { SetBeeCoin(false); });
         }
     }
 

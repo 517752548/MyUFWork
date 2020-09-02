@@ -61,7 +61,7 @@ public abstract class WebConfig<T> : WebConfig
     {
         online = true;
         var vData = JsonConvert.DeserializeObject<VersionData>(json);
-        if (vData.data != null)
+        if (versionData == null || vData.version == 0 || vData.version != versionData.version)
         {
             versionData = vData;
             SaveLocalData();

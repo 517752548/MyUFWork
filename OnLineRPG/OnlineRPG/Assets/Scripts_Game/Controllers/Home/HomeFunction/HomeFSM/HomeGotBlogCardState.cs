@@ -21,7 +21,7 @@ public class HomeGotBlogCardState : HomeState
         {
             var pack = AppEngine.SSystemManager.GetSystem<ClassicGameSystem>()
                 .GetClassicPackage(AppEngine.SyncManager.Data.ClassicLevel.LastValue);
-            HomeRoot.GetHomeUi<HomeThemeRoot>()._HomeAnimatorController.FlyBlogCard(pack._CardEntity.Image, () =>
+            HomeRoot._HomeAnimatorController.FlyBlogCard(pack._CardEntity.Image, () =>
             {
                 DataManager.PlayerData.KnowledgeCards.ResetLastValue();
                 HomeRoot.GetHomeUi<BlogEnter>().PlayHitAni(OnCompleted);

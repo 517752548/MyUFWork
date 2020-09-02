@@ -16,31 +16,44 @@ public class DecorationDialog : BaseHomeUI
     public RectTransform petContent;
     public RectTransform titleContent;
     private Dictionary<string, int> petDictionary;
-    private Dictionary<int, int> titleDictionary;
+    private Dictionary<int, TitleReceiveData> titleDictionary;
     private List<PetItemView> _petItemViews = new List<PetItemView>();
-    private List<TitleItem> titleItemView = new List<TitleItem>();
+    private List<TitlesViewItem> titleItemView = new List<TitlesViewItem>();
     private List<Pets_Data> _dataList = new List<Pets_Data>();
     private float waitTime = 0.0f;
 
-    private TitleConfig title_data = WebConfigMgr.Get<TitleConfig>();
+    private List<TitleReceiveData> title_data_list;
 
     public void Awake()
     {
-
+        
     }
     private void Start()
     {
         completerContentCellSize();
         //CompleterContentCellSize();
-        //ShowTitlePanel();
-        ShowPetPanel();
-        titleToggle.IsOn = true;
+        
+        titleToggle.IsOn = false;
     }
 
+
+    public override void OnEnter()
+    {
+        base.OnEnter();
+        
+    }
+    public override void OnLeave()
+    {
+        base.OnLeave();
+
+    }
     public override void OnShow()
     {
         base.OnShow();
         OnOpen();
+        TitleData.GetWebTitle();
+        ShowTitlePanel();
+        ShowPetPanel();
     }
     public override void OnHidden()
     {
@@ -53,6 +66,7 @@ public class DecorationDialog : BaseHomeUI
     {
         EventDispatcher.AddEventListener(GlobalEvents.RefreshPetsDialog, refreshDialog);
         EventDispatcher.AddEventListener(GlobalEvents.RefreshTitleDialog, RefreshTitleDialog);
+        GameAnalyze.LogCrazeFriendsUI();
     }
     //适配layout
     private void completerContentCellSize()
@@ -87,16 +101,48 @@ public class DecorationDialog : BaseHomeUI
 
     private void ShowTitlePanel()
     {
-        titleDictionary = AppEngine.SyncManager.Data.Titles.Value.titleDic;
-        Addressables.LoadAssetAsync<GameObject>(ViewConst.prefab_TitleItem).Completed += op =>
+        title_data_list = TitleData.configList;
+        titleDictionary = TitleData.titleDic;
+        Addressables.LoadAssetAsync<GameObject>(ViewConst.prefab_TitlesViewItem).Completed += op =>
         {
             try
             {
-                if (title_data!=null)
+                if (title_data_list != null)
                 {
-                    List<TitleReceiveData> list = new List<TitleReceiveData>();
+                    //按稀有度排序
+                    for (int i = 0; i < title_data_list.Count; i++)
+                    {
+                        for (int j = i + 1; j < title_data_list.Count; j++)
+                        {
+                            if (title_data_list[i].scarcity < title_data_list[j].scarcity)
+                            {
+                                var t = title_data_list[i];
+                                title_data_list[i] = title_data_list[j];
+                                title_data_list[j] = t;
+                            }
+                        }
+                    }
+                    //按限时排序
+                    for (int i = 0; i < title_data_list.Count; i++)
+                    {
+                        for (int j = i + 1; j < title_data_list.Count; j++)
+                        {
+                            if (title_data_list[i].scarcity == title_data_list[i].scarcity)
+                            {
+                                if (title_data_list[i].limit > title_data_list[j].limit)
+                                {
+                                    var t = title_data_list[i];
+                                    title_data_list[i] = title_data_list[j];
+                                    title_data_list[j] = t;
+                                }
+                            }
+                            
+                        }
+                    }
+
+                    List<TitleReceiveData> no_have_list = new List<TitleReceiveData>();
                     int index = 0;
-                    foreach (var titleItem in title_data.data)
+                    foreach (var titleItem in title_data_list)
                     {
                         if (titleDictionary.Count > 0)
                         {
@@ -110,14 +156,18 @@ public class DecorationDialog : BaseHomeUI
                                     index++;
                                 }
                                 else
-                                    list.Add(titleItem);
+                                    no_have_list.Add(titleItem);
                             }
-                        }else
-                        LoadTitle(titleItem, op, index, true);
+                        }
+                        else {
+                            
+                            LoadTitle(titleItem, op, index, true);
+                            index++;
+                        }
 
                     }
 
-                    foreach (var item in list)
+                    foreach (var item in no_have_list)
                     {
                         LoadTitle(item, op, index, true);
                         index++;
@@ -188,9 +238,8 @@ public class DecorationDialog : BaseHomeUI
         var item = Instantiate(op.Result);
         item.transform.SetParent(titleContent, false);
         item.transform.SetSiblingIndex(index);
-        var titleItem = item.GetComponent<TitleItem>();
+        var titleItem = item.GetComponent<TitlesViewItem>();
         titleItem.SetData(datas, isLock);
-        titleItem.ShowItem();
         titleItemView.Add(titleItem);
        
     }
@@ -230,11 +279,11 @@ public class DecorationDialog : BaseHomeUI
     //↓↓↓↓↓↓↓↓点击事件 ↓↓↓↓↓↓↓↓
 
     public void ClickTitleToggle(bool isOn)
-    {
+    {        
         titleToggle.IsOn = isOn;
     }
     public void ClickPetToggle(bool isOn)
-    {
+    {       
         petToggle.IsOn = isOn;
     }
 

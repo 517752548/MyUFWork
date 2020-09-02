@@ -49,7 +49,7 @@ public class HomeUnlockWorldState : HomeState
 
     private void OnWorldUnlock()
     {
-        HomeRoot.GetHomeUi<HomeThemeRoot>()._bgcontroller.ChangeBG(HomeRoot.CurrentWorld.HomeImage);
+        HomeRoot._bgcontroller.ChangeBG(HomeRoot.CurrentWorld.HomeImage);
         OnCompleted();
     }
 }

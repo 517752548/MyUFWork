@@ -27,7 +27,7 @@ public class PlayerSyncData
     public string monKey;
     public bool toadyFinished;
     public PetData pets;
-    public TitleData titles;
+  
     //public KnowledgeCardData cards;
 
     public int fansNumber;
@@ -65,6 +65,9 @@ public class PlayerSyncData
     public EliteData elidate;
     public int cup;
     public int eliteTicket;
+    public int rewardCup;
+    public int rewardLevel;
+    public int currentTitleId;
 }
 
 public class BaseSyncHandData

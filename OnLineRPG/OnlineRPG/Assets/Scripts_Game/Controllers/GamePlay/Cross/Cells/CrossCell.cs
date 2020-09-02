@@ -96,6 +96,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             base.SetFilled();
             if (beeCoinImg.gameObject.activeSelf)
             {
+                int delay = FlyRewardView.instance.AddSingleCoinToMultiFly(transform.position);
 
                 //StartCoroutine(SingleCoinFly.FlySingleCommonTypeGolds(transform.position, 0.3f + ColIndex * 0.15f, false,
                 //   ColIndex * 0.15f));
@@ -104,6 +105,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
                     RewardMgr.RewardInventory(InventoryType.Coin, 1, RewardSource.BeeCoin);
                 }
 
+                TimersManager.SetTimer(0.1f * delay, () => { SetBeeCoin(false); });
             }
         }
 
@@ -206,6 +208,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             {
                 curSelectedWord.CheckAnswer(false);
             }
+            cellManager.CheckMultiWord();
         }
 
         public override void CheckAnswer()
@@ -220,6 +223,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
                 _checkAnswerResult =
                     curSelectedWord.CheckAnswer(curSelectedWord.GetLastInputedCell() == this);
             }
+            cellManager.CheckMultiWord();
         }
 
         public override void FocusToNextCell(bool ignoreSwitch = false)
@@ -337,10 +341,13 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
     public class CrossNormalWord : BaseNormalWord
     {
         public int BeeRewardCoin { get; private set; }
+        public bool Display { get; private set; }
 
         public CrossNormalWord(BaseCellManager cellManager, BaseQuestionEntity answerInfo) : base(cellManager,
             answerInfo)
         {
+            checkAnswerToCompleteWord = false;
+            Display = false;
             NumTag = Question.Number + (Question.Horizontal ? "a" : "d");
             question.Question = $"<color=#3C0B10>{NumTag}.</color>" + question.Question;
         }
@@ -404,13 +411,20 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
         public override void HintComplete(Action aniOver = null)
         {
             CheckDelayRewardBeeCoin();
-            base.HintComplete(aniOver);
+            base.HintComplete(() =>
+            {
+                aniOver?.Invoke();
+                CellManager.CheckMultiWord();
+            });
+            
         }
 
         public override void OnVoiceRight()
         {
             CheckDelayRewardBeeCoin();
             base.OnVoiceRight();
+            IsComplete = false;
+            CellManager.CheckMultiWord();
         }
 
         protected override void OnInputCompleteWord()
@@ -430,6 +444,23 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             }
 
             return false;
+        }
+
+        public void SetComplete()
+        {
+            IsComplete = true;
+            Display = true;
+        }
+
+        public override CheckAnswerResult CheckAnswer(bool lastInputedCell)
+        {
+            CheckAnswerResult result = base.CheckAnswer(lastInputedCell);
+            if (result == CheckAnswerResult.right)
+            {
+                IsComplete = false;
+            }
+
+            return result;
         }
     }
 }

@@ -22,6 +22,9 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
             {
                 p_type = "2";
             }
+            GameAnalyze.LogflashCrazePass(level.StartTimeStamp.ToString(), level.QuestionId, level.Order.ToString(), 
+                hint1num.ToString(), hint2num.ToString(), hint3num.ToString(), 
+                hint4num.ToString(), "1",p_type, ClassicVoiceKeyboard.VoiceProportion.ToString());
         }
         
         public override void ReportOutLevel()
@@ -42,6 +45,9 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
             {
                 p_type = "2";
             }
+            GameAnalyze.LogflashCrazePass(level.StartTimeStamp.ToString(), level.QuestionId, level.Order.ToString(),
+                hint1num.ToString(), hint2num.ToString(), hint3num.ToString(),
+                hint4num.ToString(), p_statue, p_type, ClassicVoiceKeyboard.VoiceProportion.ToString());
         }
     }
 }

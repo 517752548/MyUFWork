@@ -10,7 +10,7 @@ public class WordCategorySystem : ISystem
     public override void InitSystem()
     {
         cateList = new List<WordCategoryEntity>();
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_DailyQuestionDisplay, ( prefab) =>
+        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_DailyQuestionDisplay, ( prefab) =>
         {
             if (prefab != null)
             {

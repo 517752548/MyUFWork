@@ -9,10 +9,7 @@ public class ProcessData
     public void Initilize()
     {
         isRestore = true;
-        TimersManager.SetTimer(3, () =>
-        {
-            isRestore = false;
-        });
+        TimersManager.SetTimer(3, () => { isRestore = false; });
     }
 
     public bool firstGoToGameScene = false;
@@ -21,10 +18,12 @@ public class ProcessData
     public string tempFBInfo = "";
     public bool showDailyGuide = false;
     public bool voiceMicPressDown = false;
+    public bool showEliteSystem = false;
 	/// <summary>
 	/// 等待授权期间使用
 	/// </summary>
     public bool GuideShown_GuideVoice2NotShow = false;
+
     //上线5s之内的购买都应该是restore
     public bool isRestore = false;
 
@@ -34,13 +33,24 @@ public class ProcessData
     public bool CanShowRateRewardStep2 = false;
     public bool IgnoreBackInterstitial = false;
     public bool playDailyOpenAnim = true;
+
+    public bool IsAOE {
+        get
+        {
+            if (Record.GetInt("AFBack", 0) == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+}
 #if UNITY_EDITOR
-    public int oldRank = -1;
+public int oldRank = -1;
 #else
     public int oldRank = -1;
 #endif
-    
-    public bool NotShowWorldUnlock = false;
-    public RewardSource advideosource = RewardSource.closeShopAD;
+
+public bool NotShowWorldUnlock = false;
+public RewardSource advideosource = RewardSource.closeShopAD;
 
 }

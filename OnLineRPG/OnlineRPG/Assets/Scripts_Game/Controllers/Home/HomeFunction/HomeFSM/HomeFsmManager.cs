@@ -8,8 +8,7 @@ public class HomeFsmManager : BaseThemeFsmManager
 {   
     public HomeThemeRoot homeRoot;
 
-    private HomeState start, guide, idle, unlockWorld, sign, message;
-    private HomePopupState popup;
+    private HomeState unlockWorld, sign;
     private HomeState subworld, fans, refresh, champion, blogCard,fastrace;
     
     public void Init (HomeThemeRoot homeRoot)
@@ -20,7 +19,6 @@ public class HomeFsmManager : BaseThemeFsmManager
         idle = CreateState<HomeIdleState>();
         unlockWorld = CreateState<HomeUnlockWorldState>();
         sign = CreateState<HomeSignState>();
-        popup = CreateState<HomePopupState>();
         message = CreateState<HomeMessageState>();
         
         subworld = CreateState<HomeSubWorldBoxState>();
@@ -35,9 +33,7 @@ public class HomeFsmManager : BaseThemeFsmManager
     protected override void OnInit()
     {
         base.OnInit();
-        
-        AddHeadState(start);
-        
+        BreakLinkState(start, idle);
         LinkState(start, subworld);
         LinkState(subworld, fans);
         LinkState(fans, blogCard);
@@ -46,28 +42,19 @@ public class HomeFsmManager : BaseThemeFsmManager
         LinkState(fastrace,refresh);
         LinkState(refresh, champion);
         LinkState(champion, idle);
-        LinkState(idle, guide);
-        LinkState(guide, popup);
-        LinkState(guide, idle);
         LinkState(idle, sign);
         LinkState(sign, idle);
-        LinkState(idle, message);
-        LinkState(message, idle);
-        LinkState(idle, popup);
-        LinkState(popup, idle);
 
         autoStart = false;
     }
 
-    public void EnterHome()
+    public override void OnEnter()
     {
         EventUtil.EventDispatcher.AddEventListener<string>(GlobalEvents.OpenUI, OnOpenUI);
         EventUtil.EventDispatcher.AddEventListener<string>(GlobalEvents.CloseUI, OnCloseUI);
-        currentState = null;
-        StartRun();
     }
     
-    public void LeaveHome()
+    public override void OnLeave()
     {
         EventUtil.EventDispatcher.RemoveEventListener<string>(GlobalEvents.OpenUI, OnOpenUI);
         EventUtil.EventDispatcher.RemoveEventListener<string>(GlobalEvents.CloseUI, OnCloseUI);
@@ -77,6 +64,7 @@ public class HomeFsmManager : BaseThemeFsmManager
     {
         TriggerEvent(Event_CheckRefresh);
     }
+    
     private void OnOpenUI(string uiname)
     {
         if (uiname == ViewConst.prefab_KnowledgeCardDialog)
@@ -101,33 +89,8 @@ public class HomeFsmManager : BaseThemeFsmManager
     public override void TriggerEvent(string eventName)
     {
         base.TriggerEvent(eventName);
-        switch(eventName)
-        {
-            case Event_CheckRefresh:
-                idle.Complete();
-                break;
-            case Event_Popup:
-                if (currentState == popup)
-                {
-                    popup.AddCount();
-                }
-                else if (CurNextContain(popup))
-                {
-                    currentState.Finish();
-                    SetState(popup);
-                }
-                break;
-            case Event_PopupClose:
-                if (currentState == popup)
-                {
-                    popup.ReduceCount();
-                }
-                break;
-        }
     }
-    public override bool IsIdle() {
-        return currentState == idle;
-    }
+    
 }
 
 public class HomeState : BaseState

@@ -26,7 +26,6 @@ public class UIManager : IModule
 
     private static int LoadingCount = 0;
     private static GameObject LoadingGameObject;
-    private static ResourcesManager m_ResourceManager;
 
 
     //toast面板队列
@@ -35,11 +34,6 @@ public class UIManager : IModule
     #region 初始化
 
     private static bool isInit;
-
-    public static void SetResourceManager(ResourcesManager resourceManager)
-    {
-        m_ResourceManager = resourceManager;
-    }
 
     private static void CreatUiManager()
     {
@@ -287,7 +281,7 @@ public class UIManager : IModule
         {
             LoggerHelper.Error(UI.UIName + " OnClose Exception: " + e.ToString());
         }
-        
+
         UIStackManager.OnUIClose(UI);
         if (GetIsExits(UI))
         {
@@ -299,7 +293,7 @@ public class UIManager : IModule
             AddHideUI(UI);
         }
     }
-    
+
     public static void CloseAll()
     {
         foreach (var list in s_UIs.Values)
@@ -317,7 +311,7 @@ public class UIManager : IModule
                 }
 
                 Object.Destroy(w.gameObject);
-            }); 
+            });
         }
         s_UIs.Clear();
     }
@@ -328,8 +322,8 @@ public class UIManager : IModule
 
     public static void OpenUIAsync(string UIName, UICallBack callback = null, params object[] objs)
     {
-        Debug.Log("OpenUIAsync "+UIName);
-        m_ResourceManager.LoadAssetAsync<GameObject>(UIName, ( obj) =>
+        Debug.Log("OpenUIAsync " + UIName);
+        ResourceManager.LoadAsync<GameObject>(UIName, (obj) =>
         {
             if (obj == null)
             {
@@ -342,12 +336,12 @@ public class UIManager : IModule
             }
         });
     }
-    
+
     public static void OpenUIAsync(string UIName, OpenType type, UICallBack callback = null, params object[] objs)
     {
         Debug.Log("OpenUIAsync " + UIName);
-        m_ResourceManager.LoadAssetAsync<GameObject>(UIName,
-            ( obj) =>
+        ResourceManager.LoadAsync<GameObject>(UIName,
+            (obj) =>
             {
                 if (obj == null)
                 {
@@ -360,12 +354,12 @@ public class UIManager : IModule
                 }
             });
     }
-    
+
     public static void OpenUIAsync(string UIName, OpenType type, UISimpleCallBack closeCallback, UISimpleCallBack openCallback = null, UICallBack displayCallback = null, params object[] objs)
     {
         Debug.Log("OpenUIAsync " + UIName);
-        m_ResourceManager.LoadAssetAsync<GameObject>(UIName,
-            ( obj) =>
+        ResourceManager.LoadAsync<GameObject>(UIName,
+            (obj) =>
             {
                 if (obj == null)
                 {
@@ -378,7 +372,7 @@ public class UIManager : IModule
                 }
             });
     }
-    
+
     public static T GetWindow<T>(string UIName) where T : UIWindowBase
     {
         if (s_UIs.ContainsKey(UIName) && s_UIs[UIName].Count > 0)
@@ -388,7 +382,7 @@ public class UIManager : IModule
 
         return null;
     }
-    
+
 
     public static void ShowMessage(string message, float time = 1.2f,
         ToastPositionEnum positionEnum = ToastPositionEnum.middle)
@@ -450,8 +444,8 @@ public class UIManager : IModule
 
     public static void PreloadUI(string UIName)
     {
-        m_ResourceManager.LoadAssetAsync<GameObject>(UIName,
-            ( obj) =>
+        ResourceManager.LoadAsync<GameObject>(UIName,
+            (obj) =>
             {
                 if (obj == null)
                 {
@@ -665,7 +659,25 @@ public class UIManager : IModule
     }
 
     #endregion
-    
+
+    #region GuideUi
+
+    /// <summary>
+    /// 展示新手引导
+    /// </summary>
+    /// <param name="guideUIRes"></param>
+    /// <param name="obj"></param>
+    /// <typeparam name="T"></typeparam>
+    public static void ShowGuideUI<T>(string guideUIRes, params object[] obj) where T : BaseGuideUi
+    {
+        OpenUIAsync(guideUIRes, ((ui, objs) =>
+        {
+            BaseGuideUi guide = ui as BaseGuideUi;
+            guide.SetGuideElement(obj);
+        }));
+    }
+
+    #endregion
 }
 
 #region UI事件 代理 枚举

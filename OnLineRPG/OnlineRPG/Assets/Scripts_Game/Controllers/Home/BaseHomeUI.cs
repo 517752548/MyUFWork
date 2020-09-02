@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BaseHomeUI : MonoBehaviour
 {
-    protected BaseThemeRoot root;
+    protected HomeRoot root;
     [SerializeField] protected List<BaseHomeUI> childHomeUIs;
 
-    public virtual void Init(BaseThemeRoot root)
+    public virtual void Init(HomeRoot root)
     {
         this.root = root;
         childHomeUIs.ForEach(ui => ui.Init(root));

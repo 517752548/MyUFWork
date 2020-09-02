@@ -10,19 +10,15 @@ public class IFixMgr
     public const string patchName = "Assembly-CSharp.patch.bytes";
     public static async void Init(Action callback)
     {
-        var patch = ResourceManager.LoadAsync<TextAsset>(patchName);
-        await patch.Task;
-        if (patch.Status == AsyncOperationStatus.Succeeded)
-        {
+        var patch = await ResourceManager.LoadAsync<TextAsset>(patchName);
 #if !UNITY_EDITOR
-            if (patch.Result != null && patch.Result.bytes != null)
-            {
-                PatchManager.Load(new MemoryStream(patch.Result.bytes));
-                PatchHolder();
-            }
-#endif
-            callback.Invoke();
+        if (patch != null && patch.bytes != null)
+        {
+            PatchManager.Load(new MemoryStream(patch.bytes));
+            PatchHolder();
         }
+#endif
+        callback.Invoke();
     }
 
     [IFix.Patch]

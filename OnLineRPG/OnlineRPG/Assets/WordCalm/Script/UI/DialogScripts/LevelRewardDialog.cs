@@ -17,13 +17,9 @@ public class LevelRewardDialog : UIWindowBase
     // Start is called before the first frame update
     void Start()
     {
-        int oldLevel = AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.LastValue;
-        ClassicSubWorldEntity subWorldEntity = AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().GetClassicSubWorld(oldLevel);
-        
         var sys = AppEngine.SSystemManager.GetSystem<ClassicGameSystem>();
-        var completedLevelIndex = sys.currentLevel.Value - 1;
+        var completedLevelIndex = sys.currentLevel.Value;
         sys.GetSubWorldBoxProgress(completedLevelIndex, out var currentProgress, out var currentMax);
-        
         progressText.text = string.Format("{0}/{1}", currentProgress, currentMax);
         progressImage.value = (float)currentProgress / currentMax;
         desText.text = string.Format("Complete <color=#81191C><size=100>LEVEL {0}</size></color>\nto open!", completedLevelIndex + currentMax - currentProgress);

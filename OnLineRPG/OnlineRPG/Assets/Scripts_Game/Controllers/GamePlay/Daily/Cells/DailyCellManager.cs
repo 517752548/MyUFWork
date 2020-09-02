@@ -95,6 +95,16 @@ public class DailyCellManager : BaseCellManager
         }
     }
 
+    public int CellCount
+    {
+        get
+        {
+            int count = 0;
+            wordList.ForEach(word => count += word.Answer.Length);
+            return count;
+        }
+    }
+
     protected override string GetCellResName()
     {
         return ViewConst.prefab_DailyCell;

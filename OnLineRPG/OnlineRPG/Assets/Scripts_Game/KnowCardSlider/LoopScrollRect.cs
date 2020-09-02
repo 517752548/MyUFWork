@@ -283,7 +283,7 @@ namespace UnityEngine.UI
         private void ReturnObjectAndSendMessage(Transform go)
         {
           //  go.SendMessage("ScrollCellReturn", SendMessageOptions.DontRequireReceiver);
-            SG.ResourceManager.Instance.ReturnObjectToPool(go.gameObject);
+            SG.PoolManager.Instance.ReturnObjectToPool(go.gameObject);
         }
 
         public void ClearCells()

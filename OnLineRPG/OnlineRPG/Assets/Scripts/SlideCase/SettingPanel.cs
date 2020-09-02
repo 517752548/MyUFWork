@@ -38,6 +38,7 @@ public class SettingPanel : UIWindowBase
     private void OnEnable()
     {
         InitToggleButton();
+        GameAnalyze.SettingReport("Home");
     }
 
     public override void OnOpen()
@@ -98,6 +99,15 @@ public class SettingPanel : UIWindowBase
     {
         if (PlatformUtil.GetNotificationState() == 1)
         {
+            //AppEngine.SGameSettingManager.Notification.Value = true;
+            if (!AppEngine.SGameSettingManager.Notification.Value)
+            {
+                AppEngine.SSystemManager.GetSystem<NotificationSystem>().SendNotification();
+            }
+            TimersManager.SetTimer(2, () =>
+            {
+                GameAnalyze.SettingReport("Home","Noti",AppEngine.SGameSettingManager.Notification.Value.ToString());
+            });
         }
         else
         {
@@ -162,6 +172,8 @@ public class SettingPanel : UIWindowBase
         if (!ResponseClick) return;
         BlockEvent();
         UIManager.OpenUIAsync(ViewConst.prefab_HowToPlayDialog, OpenType.Stack);
+        GameAnalyze.SettingReport("Home","How","1");
+//        ReportDataManager.pressHowToPlay();
     }
 
     public void ClickCommondButton()
@@ -194,6 +206,7 @@ public class SettingPanel : UIWindowBase
     {
         if (!ResponseClick) return;
         UIManager.OpenUIAsync(ViewConst.prefab_StoreDialog);
+        GameAnalyze.SettingReport("Home","Shop","1");
     }
 
     public void OnClickEmail()
@@ -202,6 +215,7 @@ public class SettingPanel : UIWindowBase
         BlockEvent();
         XUtils.SendEmail();
         CloseSetting();
+        GameAnalyze.SettingReport("Home","Email","1");
     }
 
     public void OnClickFAQ()
@@ -209,6 +223,7 @@ public class SettingPanel : UIWindowBase
         if (!ResponseClick) return;
         //buttonlist.GetComponent<HelpShiftController>().ShowHelpShift();
         CloseSetting();
+        GameAnalyze.SettingReport("Home","FAQ","1");
     }
 
     public void OnClickFaceBook()
@@ -221,17 +236,27 @@ public class SettingPanel : UIWindowBase
 
         Close();
         UIManager.OpenUIAsync(ViewConst.prefab_FBSignInDialog);
+        GameAnalyze.SettingReport("Home","FB","1");
     }
 
     public void ClickFanPage()
     {
         Application.OpenURL(Const.FanPage_URL);
+        GameAnalyze.SettingReport("Home","FAP","1");
     }
 
     public void OnClickRestore()
     {
         if (!ResponseClick) return;
         BlockEvent();
+        AppEngine.SPurchaserManager.RestorePurchases();
+        GameAnalyze.SettingReport("Home","Restore","1");
+    }
+
+    public void OnClickGameEmail() {
+        if (!ResponseClick) return;
+        BlockEvent();
+        UIManager.OpenUIAsync(ViewConst.prefab_EmaliSliderDialog);
     }
 
     public void OnClickRate()
@@ -252,12 +277,14 @@ public class SettingPanel : UIWindowBase
         {
             UIManager.OpenUIAsync(ViewConst.prefab_OldRateDialog, OpenType.Stack);
         }
+        GameAnalyze.SettingReport("Home","Rate","1");
     }
 
     public void RestoreButtonClick()
     {
         if (!ResponseClick) return;
         Close();
+        AppEngine.SPurchaserManager.RestorePurchases();
     }
 
 
@@ -266,6 +293,7 @@ public class SettingPanel : UIWindowBase
         if (!ResponseClick) return;
         BlockEvent();
         UIManager.OpenUIAsync(ViewConst.prefab_PrivacyPolicyDialog, OpenType.Stack);
+        GameAnalyze.SettingReport("Home","Policy","1");
     }
 
     public void ClickTestAdBtn()
@@ -299,6 +327,7 @@ public class SettingPanel : UIWindowBase
         PlatformAndroid.CopyTextToClipboard(AppEngine.SSystemManager.GetSystem<PlayerLoginSystem>().playerCrazeID.Value);
 #endif
         UIManager.ShowMessage("Copied Successfully");
+        GameAnalyze.SettingReport("Home","Copy","1");
     }
 
     public override IEnumerator EnterAnim(params object[] objs)

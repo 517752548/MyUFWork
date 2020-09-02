@@ -631,7 +631,6 @@ GameObject:
   - component: {fileID: 1593306799324121529}
   - component: {fileID: 1485789472855037207}
   - component: {fileID: 1466494117065047423}
-  - component: {fileID: 5660437704596912131}
   m_Layer: 5
   m_Name: DailyButton
   m_TagString: Untagged
@@ -700,7 +699,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5660437704596912131}
+      - m_Target: {fileID: 0}
         m_MethodName: ClickDailyButton
         m_Mode: 1
         m_Arguments:
@@ -769,20 +768,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5660437704596912131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517504325165298501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e29e22954328ce54583ca34876a97f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LockGamobject: {fileID: 3177347102670381076}
-  newDailyGameobject: {fileID: 7651996165660564832}
 --- !u!1 &3033448921684099787
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,11 +13,13 @@ namespace BetaFramework
     {
         private static IMessageFactory m_Factory;
         private static readonly EndianBitConverter m_Converter;
+        private static readonly NetworkWriter m_Writer;
 
         static MessageHelper()
         {
             m_Converter = EndianBitConverter.Big;
             m_Factory = new MessageFactory();
+            m_Writer = new NetworkWriter();
         }
 
         /// <summary>

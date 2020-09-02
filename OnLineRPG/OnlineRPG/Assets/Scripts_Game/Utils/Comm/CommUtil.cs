@@ -225,7 +225,20 @@ public static class CommUtil
     {
         go.transform.parent.parent.gameObject.SetActive(b);
     }
-    
+
+    public static string GetPrice(IapProductConfig_Data iap)
+    {
+#if UNITY_EDITOR
+        return "$" + iap.ProductDollarPrice;
+#endif
+        if (AppEngine.SPurchaserManager.IsInited())
+        {
+            return iap.ProductLocalizedPrice;
+        }
+
+        return "$" + iap.ProductDollarPrice;
+    }
+
     public static int[] GetWordSplit(string word)
     {
         if (string.IsNullOrEmpty(word))
@@ -278,6 +291,7 @@ public static class CommUtil
         return Scripts_Game.Utils.Comm.FileUtils.CheckFileExists(Scripts_Game.Utils.Comm.FileUtils.TextPathName,
             fileName);
     }
+
     public static string LoadCacheCard(string fileName)
     {
         if (Scripts_Game.Utils.Comm.FileUtils.CheckFileExists(Scripts_Game.Utils.Comm.FileUtils.TextPathName,
@@ -293,12 +307,12 @@ public static class CommUtil
                     Scripts_Game.Utils.Comm.FileUtils.TextPathName,
                     fileName);
             }
-           
         }
+
         return null;
     }
 
-    public static void SaveCacheText(string fileName,byte[] text)
+    public static void SaveCacheText(string fileName, byte[] text)
     {
         try
         {
@@ -308,60 +322,58 @@ public static class CommUtil
         catch (Exception e)
         {
         }
-        
     }
-    
+
     public static void LoadTittleOrCache(string fileName, Action<Sprite> imageback)
     {
         if (!Scripts_Game.Utils.Comm.FileUtils.CheckFileExists(Scripts_Game.Utils.Comm.FileUtils.TittleImagePath,
             fileName))
         {
-            WebRequestGetUtility.Instance.GetTexture(PathLevelConst.ServerImageURL.Replace("/Image/","/Tittle/") + fileName, (op) =>
-            {
-                if (op.isDone && !op.isHttpError && !op.isNetworkError)
+            WebRequestGetUtility.Instance.GetTexture(
+                PathLevelConst.ServerImageURL.Replace("/Image/", "/Tittle/") + fileName, (op) =>
                 {
-                    DownloadHandlerTexture textureloadhandler = (DownloadHandlerTexture) op.downloadHandler;
-                    Texture2D d = textureloadhandler.texture;
-                    if (d != null)
+                    if (op.isDone && !op.isHttpError && !op.isNetworkError)
                     {
-                        var Image = Sprite.Create(d, new Rect(0, 0, d.width, d.height),
-                            new Vector2(0.5f, 0.5f));
-                        imageback.Invoke(Image);
-                        byte[] rawImage = op.downloadHandler.data;
-                        Loom.RunAsync(() =>
+                        DownloadHandlerTexture textureloadhandler = (DownloadHandlerTexture) op.downloadHandler;
+                        Texture2D d = textureloadhandler.texture;
+                        if (d != null)
                         {
-                            try
+                            var Image = Sprite.Create(d, new Rect(0, 0, d.width, d.height),
+                                new Vector2(0.5f, 0.5f));
+                            imageback.Invoke(Image);
+                            byte[] rawImage = op.downloadHandler.data;
+                            Loom.RunAsync(() =>
                             {
-                            
-                                Scripts_Game.Utils.Comm.FileUtils.CreateFile(
-                                    Scripts_Game.Utils.Comm.FileUtils.ImagePathName, fileName, rawImage);
-                            }
-                            catch (Exception e)
-                            {
-                                Debug.LogError("保存失败");
-                                if (Scripts_Game.Utils.Comm.FileUtils.CheckFileExists(
-                                    Scripts_Game.Utils.Comm.FileUtils.ImagePathName,
-                                    fileName))
+                                try
                                 {
-                                    Scripts_Game.Utils.Comm.FileUtils.DeleteFile(
-                                        Scripts_Game.Utils.Comm.FileUtils.ImagePathName,
-                                        fileName);
+                                    Scripts_Game.Utils.Comm.FileUtils.CreateFile(
+                                        Scripts_Game.Utils.Comm.FileUtils.ImagePathName, fileName, rawImage);
                                 }
-                            }
-                        });
-                        
+                                catch (Exception e)
+                                {
+                                    Debug.LogError("保存失败");
+                                    if (Scripts_Game.Utils.Comm.FileUtils.CheckFileExists(
+                                        Scripts_Game.Utils.Comm.FileUtils.ImagePathName,
+                                        fileName))
+                                    {
+                                        Scripts_Game.Utils.Comm.FileUtils.DeleteFile(
+                                            Scripts_Game.Utils.Comm.FileUtils.ImagePathName,
+                                            fileName);
+                                    }
+                                }
+                            });
+                        }
+                        else
+                        {
+                            imageback.Invoke(null);
+                        }
                     }
                     else
                     {
+                        Debug.Log("Url错误" + PathLevelConst.ServerImageURL.Replace("/Image/", "/Tittle/") + fileName);
                         imageback.Invoke(null);
                     }
-                }
-                else
-                {
-                    Debug.Log("Url错误" + PathLevelConst.ServerImageURL.Replace("/Image/","/Tittle/") + fileName);
-                    imageback.Invoke(null);
-                }
-            });
+                });
         }
         else
         {
@@ -378,6 +390,7 @@ public static class CommUtil
             }
         }
     }
+
     public static void LoadCachedImage(string fileName, Action<Sprite> imageback, bool usethread = false)
     {
         if (!Scripts_Game.Utils.Comm.FileUtils.CheckFileExists(Scripts_Game.Utils.Comm.FileUtils.ImagePathName,
@@ -399,7 +412,6 @@ public static class CommUtil
                         {
                             try
                             {
-                            
                                 Scripts_Game.Utils.Comm.FileUtils.CreateFile(
                                     Scripts_Game.Utils.Comm.FileUtils.ImagePathName, fileName, rawImage);
                             }
@@ -416,7 +428,6 @@ public static class CommUtil
                                 }
                             }
                         });
-                        
                     }
                     else
                     {
@@ -441,10 +452,7 @@ public static class CommUtil
                     {
                         var Image = Sprite.Create(d, new Rect(0, 0, d.width, d.height),
                             new Vector2(0.5f, 0.5f));
-                        Loom.QueueOnMainThread(() =>
-                        {
-                            imageback.Invoke(Image);
-                        });
+                        Loom.QueueOnMainThread(() => { imageback.Invoke(Image); });
                     }
                     else
                     {
@@ -467,5 +475,49 @@ public static class CommUtil
                 }
             }
         }
+    }
+
+
+    public static int GetLevelStar(char star)
+    {
+        if (star.Equals('1'))
+        {
+            return 1;
+        }
+        else if (star.Equals('2'))
+        {
+            return 2;
+        }
+        else if (star.Equals('3'))
+        {
+            return 3;
+        }
+        return 1;
+    }
+    
+    public static string ShortNum(int num, int digits = 1)
+    {
+        long section = 1000;
+        if (num < section)
+            return num.ToString();
+        int d = (int)Math.Pow(10, digits);
+        long w = section;
+        section *= 1000;
+        if (num < section)
+            return $"{num / w}.{(num % w) / (w / d)}K";
+        w = section;
+        section *= 1000;
+        if (num < section)
+            return $"{num / w}.{(num % w) / (w / d)}M";
+        w = section;
+        section *= 1000;
+        if (num < section)
+            return $"{num / w}.{(num % w) / (w / d)}B";
+        w = section;
+        section *= 1000;
+        if (num < section)
+            return $"{num / w}.{(num % w) / (w / d)}T";
+        w = section;
+        return $"{num / w}.{(num % w) / (w / d)}P";
     }
 }

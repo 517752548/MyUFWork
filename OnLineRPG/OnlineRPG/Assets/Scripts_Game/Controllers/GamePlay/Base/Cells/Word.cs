@@ -1032,6 +1032,7 @@ public enum CheckAnswerResult
 public class BaseNormalWord : BaseWord
 {
     protected BaseQuestionEntity question;
+    protected bool checkAnswerToCompleteWord = true;
 
     public BaseNormalWord(BaseCellManager cellManager, BaseQuestionEntity question) : base(cellManager, question.Answer,
         question.SimiWords, CommUtil.GetWordSplit(question.wordSpit))
@@ -1047,7 +1048,7 @@ public class BaseNormalWord : BaseWord
     public override CheckAnswerResult CheckAnswer(bool lastInputedCell)
     {
         CheckAnswerResult result = base.CheckAnswer(lastInputedCell);
-        if (result == CheckAnswerResult.right)
+        if (result == CheckAnswerResult.right && checkAnswerToCompleteWord)
         {
             cellManager.OnCompleteOneWord(this);
         }

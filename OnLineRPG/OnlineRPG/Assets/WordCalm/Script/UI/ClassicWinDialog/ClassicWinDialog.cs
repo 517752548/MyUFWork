@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using BetaFramework;
 using DG.Tweening;
+using Scripts_Game.Controllers.Cup;
 using Scripts_Game.Controllers.GamePlay.Classic.Win;
+using Scripts_Game.Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -22,6 +24,7 @@ public class ClassicWinDialog : UIWindowBase
     public Animator fansAnimator;
     public GameObject tip;
     public Text tipText;
+    public CupCollectProgressBar cupBar;
 
     private ClassicLevelEntity currentLevelEntity;
     private ClassicPackage currentLevelPackage;
@@ -31,6 +34,7 @@ public class ClassicWinDialog : UIWindowBase
     private int currentFansupdate = 0;
     private int pieceOrder;
     private CardPieceCtrl _cardPieceCtrl;
+    private int rewardCupCount;
 
     public override void OnOpen()
     {
@@ -58,6 +62,7 @@ public class ClassicWinDialog : UIWindowBase
         RewardFans();
         SetKnowledgeCard();
         RewardSubworldTag();
+        DataManager.businessGiftData.LevelPass();
         if (Const.AutoPlay)
         {
             TimersManager.SetTimer(6f, () => { ClickContinue(); });
@@ -87,10 +92,11 @@ public class ClassicWinDialog : UIWindowBase
 
     private void RewardFans()
     {
+        Debug.LogError("add fans");
         int fans = AppEngine.SyncManager.Data.fansNumber.Value;
         oldFans = fans;
 
-        fansText.text = String.Format("{0}", fans);
+        //fansText.text = String.Format("{0}", fans);
 
         int addFans = 0;
         for (int i = 0; i < currentLevelEntity.Questions.Count; i++)
@@ -98,14 +104,18 @@ public class ClassicWinDialog : UIWindowBase
             addFans += currentLevelEntity.Questions[i].Answer.Length;
         }
 
-        FanPlus.text = string.Format("+{0}", addFans);
+        //FanPlus.text = string.Format("+{0}", addFans);
         fans += addFans;
         newFans = fans;
         AppEngine.SyncManager.Data.fansNumber.Value = newFans;
+        rewardCupCount = addFans;
+        RewardMgr.RewardInventory(InventoryType.Cup, rewardCupCount, RewardSource.classic);
+        cupBar.SetActive(false);
     }
 
     public void RewardCardKnowlegde()
     {
+        cupBar.Show();
         _cardPieceCtrl.PlayGotAni(pieceOrder, () =>
         {
             if (currentLevelPackage.CardLevelID == currentLevelEntity.ID)
@@ -121,30 +131,20 @@ public class ClassicWinDialog : UIWindowBase
 
     private void PlayFansAni()
     {
-        int fans = AppEngine.SyncManager.Data.fansNumber.Value;
-        int min = (int) (fans * 0.7f);
-        int max = (int) (fans * 1.3f);
-        float myInt = 0;
-        fansAnimator.SetTrigger("up");
-        DOTween.To(x => myInt = x, oldFans, newFans, 1.2f).OnUpdate(() =>
+        cupBar.startBar.Show(rewardCupCount);
+        cupBar.Fly(() =>
         {
-            currentFansupdate++;
-            if (currentFansupdate >= fansUpdaterate)
-            {
-                currentFansupdate = 0;
-                fansText.text = String.Format("{0}", (int) myInt);
-            }
-        }).OnComplete(() =>
-        {
-            fansText.text = String.Format("{0}", newFans);
+            winAnimator.SetTrigger("StartNext");
             if (currentLevelPackage.CardLevelID == currentLevelEntity.ID)
             {
                 StartCoroutine(ShowTip(currentLevelPackage._CardEntity.Description, 10f));
             }
         });
-        winAnimator.SetTrigger("StartNext");
         if (currentLevelPackage.CardLevelID == currentLevelEntity.ID)
         {
+            int fans = AppEngine.SyncManager.Data.fansNumber.Value;
+            int min = (int) (fans * 0.7f);
+            int max = (int) (fans * 1.3f);
             DataManager.PlayerData.KnowledgeCards.Value.AddKnowledgeCard(
                 AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.LastValue,
                 currentLevelPackage.CardID, Random.Range(min, max));
@@ -157,7 +157,22 @@ public class ClassicWinDialog : UIWindowBase
             AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value,
             (ok) => { LoggerHelper.Log("load new level ok"); });
         AppEngine.SyncManager.DoSync(null);
-
+        AppEngine.SAdManager.ShowInterstitialByCondition(AdManager.InterstitialCallPlace.ClassicLevelComplete,
+            show =>
+            {
+                UIManager.OpenUIAsync(ViewConst.prefab_GameLoadingWindow, (ui, para) =>
+                {
+                    UIManager.CloseUIWindow(this);
+                    MainSceneDirector.Instance.SwitchUi(GameUI.Home, ok =>
+                    {
+                        Timer.Schedule(AppThreadController.instance, 0.2f, () =>
+                        {
+                            UIManager.CloseUIWindow(
+                                UIManager.GetWindow<GameLoadingWindow>(ViewConst.prefab_GameLoadingWindow));
+                        });
+                    });
+                });
+            });
     }
 
     public void ClickWord()

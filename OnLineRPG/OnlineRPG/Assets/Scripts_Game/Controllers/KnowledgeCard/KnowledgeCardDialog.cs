@@ -30,6 +30,7 @@ public class KnowledgeCardDialog : UIWindowBase
 //        userPostText = transform.Find("Content/UserNews/UderHead/PhotoHead/Text_Post").GetComponent<Text>();
 //        userFansNum = transform.Find("Content/UserNews/Fans/Text_Fans_Num").GetComponent<Text>();
         loopScrollRect = transform.Find("Content/Slider/Scroll View").GetComponent<LoopVerticalScrollRect>();
+        GameAnalyze.LogblogClick("NULL","4");
     }
 
     public override void OnOpen()
@@ -48,7 +49,6 @@ public class KnowledgeCardDialog : UIWindowBase
         loopScrollRect.RefillCells();
             
         CheckGuide();
-        SetFansUI();
 
         if (DataManager.ProcessData.firstOpenKnowledge)
         {
@@ -58,26 +58,6 @@ public class KnowledgeCardDialog : UIWindowBase
             {
                 loading.SetActive(false);
             });
-        }
-    }
-
-    private void SetFansUI()
-    {
-        int currentFans = AppEngine.SyncManager.Data.fansNumber.Value;
-        int lastTarget = AppEngine.SSystemManager.GetSystem<WebSystem>().GetLastTarget(currentFans);
-        int lastNestFans = AppEngine.SSystemManager.GetSystem<WebSystem>().GetNextTarget(currentFans);
-        int currentRegion = AppEngine.SSystemManager.GetSystem<WebSystem>().GetCurrentTargetRegion(currentFans);
-        rewardId = AppEngine.SSystemManager.GetSystem<WebSystem>().GetNestTargetRewardId(currentFans);
-        float progress = (currentFans - lastTarget) / (float) currentRegion;
-        _fansSlider.value = progress;
-        if (lastNestFans > 0)
-        {
-            SetWebText(currentFans - lastTarget, currentRegion);
-        }
-        else
-        {
-            SetWebText(currentFans - lastTarget, -1);
-            _fansSlider.value = 1;
         }
     }
 

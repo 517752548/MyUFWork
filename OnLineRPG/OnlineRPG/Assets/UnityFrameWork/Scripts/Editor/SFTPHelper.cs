@@ -65,12 +65,16 @@ public class SFTPHelper
         {
             reqStream.Write(postBytes, 0, postBytes.Length);
         }
-        string html = string.Empty;
+
         using (HttpWebResponse response = (HttpWebResponse)web.GetResponse())
         {
-            Stream responseStream = response.GetResponseStream();
-            StreamReader streamReader = new StreamReader(responseStream, Encoding.UTF8);
-            html = streamReader.ReadToEnd();
+            using (Stream responseStream = response.GetResponseStream())
+            {
+                using (StreamReader streamReader = new StreamReader(responseStream, Encoding.UTF8))
+                {
+                    streamReader.ReadToEnd();
+                }
+            }
         }
     }
 

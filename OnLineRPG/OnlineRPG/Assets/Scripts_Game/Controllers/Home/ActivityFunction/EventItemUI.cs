@@ -25,7 +25,7 @@ public class EventItemUI : BaseHomeUI
         {
             if (EliteItemPrefab == null)
             {
-                ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_EliteItem, op =>
+                ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_CrossCrazeItem, op =>
                 {
                     EliteItemPrefab = Instantiate(op,ItemContent,false);
                     childHomeUIs.Add(EliteItemPrefab.GetComponent<BaseHomeUI>());

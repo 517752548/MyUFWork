@@ -15,6 +15,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             UIManager.OpenUIAsync(ViewConst.prefab_GameLoadingWindow, (ui, para) =>
             {
                 _GameManager.SaveLocal();
+                UIManager.OpenUIAsync(ViewConst.prefab_HappinessSelectLevelDialog);
                 MainSceneDirector.Instance.SwitchUi(GameUI.Home, ok =>
                 {
                     Timer.Schedule(AppThreadController.instance, 0.2f, () =>

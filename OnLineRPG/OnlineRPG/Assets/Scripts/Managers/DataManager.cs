@@ -9,19 +9,43 @@ public static class DataManager
 {
     public static void Init()
     {
-        if (ReferenceEquals(m_PlayerData, null)) {
+        
+        if (ReferenceEquals(m_BusinessData, null))
+        {
+            m_BusinessData = new BusinessData();
+            m_BusinessData.Initilize();
+        }
+
+        if (ReferenceEquals(m_PurchaseData, null))
+        {
+            m_PurchaseData = new PurchaseData();
+            m_PurchaseData.Initilize();
+        }
+        
+        
+		if (ReferenceEquals(m_PlayerData, null)) {
 			m_PlayerData = new PlayerData();
 			m_PlayerData.Initilize();
 		}
+        
+        if (ReferenceEquals(m_businessGiftData, null)) {
+            m_businessGiftData = new BusinessGiftData();
+            m_businessGiftData.Initilize();
+        }
+
 	}
 
 	public static void Clear()
     {
 		m_PlayerData = null;
+        m_PurchaseData = null;
+        m_BusinessData = null;
         m_DeviceData = null;
         m_RepAdsData = null;
         m_RepGiftData = null;
+        m_IapData = null;
         m_UserGenAdData = null;
+        m_businessGiftData = null;
     }
 
 	/// <summary>
@@ -38,7 +62,60 @@ public static class DataManager
 			return m_PlayerData;
 		}
 	}
-    
+
+
+	/// <summary>
+	/// 内购信息类
+	/// </summary>
+	private static PurchaseData m_PurchaseData;
+
+    public static PurchaseData ShopData
+    {
+        get
+        {
+            if (ReferenceEquals(m_PurchaseData, null))
+            {
+                m_PurchaseData = new PurchaseData();
+                m_PurchaseData.Initilize();
+            }
+            return m_PurchaseData;
+        }
+    }
+
+    /// <summary>
+    /// 行业化礼包的配置
+    /// </summary>
+    private static BusinessGiftData m_businessGiftData;
+
+    public static BusinessGiftData businessGiftData
+    {
+        get
+        {
+            if (ReferenceEquals(m_businessGiftData, null))
+            {
+                m_businessGiftData = new BusinessGiftData();
+                m_businessGiftData.Initilize();
+            }
+            return m_businessGiftData;
+        }
+    }
+    /// <summary>
+    /// 用户商业化数据
+    /// </summary>
+    private static BusinessData m_BusinessData;
+
+    public static BusinessData BusinessData
+    {
+        get
+        {
+            if (ReferenceEquals(m_BusinessData, null))
+            {
+                m_BusinessData = new BusinessData();
+                m_BusinessData.Initilize();
+            }
+            return m_BusinessData;
+        }
+    }
     
     
 
@@ -69,6 +146,21 @@ public static class DataManager
                 m_FastRaceData.Initilize();
             }
             return m_FastRaceData;
+        }
+    }
+    
+    private static CupWeeklyData m_CupWeeklyData;
+
+    public static CupWeeklyData CupWeeklyData
+    {
+        get
+        {
+            if (ReferenceEquals(m_CupWeeklyData, null))
+            {
+                m_CupWeeklyData = new CupWeeklyData();
+                m_CupWeeklyData.Initilize();
+            }
+            return m_CupWeeklyData;
         }
     }
 
@@ -159,7 +251,19 @@ public static class DataManager
             m_RepGiftData = value;
         }
     }
-    
+
+    private static IapData m_IapData;
+
+    public static IapData IapData
+    {
+        get
+        {
+            if (m_IapData == null)
+                m_IapData = new IapData();
+            return m_IapData;
+        }
+        set { m_IapData = value; }
+    }
 
 
     private static RepDailySignGiftData m_RepDailySignGiftData;

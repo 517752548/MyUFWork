@@ -11,7 +11,8 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
         public override void Enter()
         {
             base.Enter();
-            UIManager.OpenUIAsync(ViewConst.prefab_ClassicWinDialog);
+            UIManager.OpenUIAsync(ViewConst.prefab_CrossWinDialog, null, 
+                GameManager.GetEntity<CrossCellManager>().CellCount);
         }
 
         public override void Leave()

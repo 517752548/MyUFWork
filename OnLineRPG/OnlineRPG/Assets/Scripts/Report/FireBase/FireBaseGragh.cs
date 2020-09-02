@@ -9,8 +9,8 @@ using UnityEngine;
 
 public static class FireBaseGragh
 {
+    public static bool FireBaseInited = false;
     private static DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
-
     public static void Init()
     {
         try
@@ -29,6 +29,7 @@ public static class FireBaseGragh
                 BetaFramework.LoggerHelper.Error(
                   "Could not resolve all Firebase dependencies: " + dependencyStatus);
             }
+            FireBaseInited = true;
             Debug.Log("Firebase Init Successful");
         });
         }
@@ -43,7 +44,7 @@ public static class FireBaseGragh
     {
         FirebaseApp app = FirebaseApp.DefaultInstance;
         app.SetEditorDatabaseUrl(FireBaseConfig.DataURL);
-
+        
         Loom.QueueOnMainThread(() =>
         {
             EventDispatcher.TriggerEvent(GlobalEvents.FirebaseInitSuccess);

@@ -32,6 +32,7 @@ public class PetsDialog : UIWindowBase
         EventDispatcher.AddEventListener(GlobalEvents.RefreshPetsDialog,refreshDialog);
         completerContentCellSize();
         ShowPanel();
+        GameAnalyze.LogCrazeFriendsUI();
     }
 
     private void completerContentCellSize()

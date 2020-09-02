@@ -152,6 +152,7 @@ public class PetShowItem : MonoBehaviour
       AppEngine.SSoundManager.PlaySFX(ViewConst.ogg_EquipPet);
       AppEngine.SyncManager.Data.Pets.UpdateValue(petData =>
       {
+         GameAnalyze.LogChangeFriend(petData.currentPetId,this.petId);
          petData.currentPetId = this.petId;
          _petStatesManager.TransTo(PetBase.PetStates.hint);
          _showPetDialog.callBackPetStatus();

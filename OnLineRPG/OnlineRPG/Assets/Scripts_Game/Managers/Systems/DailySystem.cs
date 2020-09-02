@@ -33,7 +33,7 @@ public class DailySystem : ISystem
             new RecordExtra.ObjectPrefData<List<DailyQuestionEntity>>(PrefKeys.TodayLevelEntitys,
                 new List<DailyQuestionEntity>());
         AppEngine.STimeHeart.OnTimeUpdate += CheckDailyInfo;
-        AppEngine.SResourceManager.LoadAssetAsync<DailyRewardAB>(
+        ResourceManager.LoadAsync<DailyRewardAB>(
 #if UNITY_IOS
             string.Format("DailyRewardAB_Ios_ItemReward_{0}.asset", AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib()), 
 #else

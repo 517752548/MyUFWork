@@ -62,7 +62,7 @@ public class UIFit : MonoBehaviour
         m_originLocalPosition = transform.localPosition;
         m_originLocalScale = transform.localScale;
         string sceneName = SceneManager.GetActiveScene().name;
-        bool bannerAvalible = false;
+        bool bannerAvalible = BetaFramework.AppEngine.SAdManager.IsBannerAvailable();
         m_hasBanner = bannerAvalible;
         FitScreen();//确保执行一次该方法.
         EventDispatcher.AddEventListener(GlobalEvents.BannerAppeared, BannerAppeared);

@@ -28,7 +28,7 @@ public class ClassicCellManager : BaseCellManager
     {
         base.Init();
         scrollRect.OnEndDrag(OnScrollEndDrag);
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_BeeFly, 
+        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_BeeFly, 
             (go) => { beePrefab = go; });
         rateRewardConfig = PreLoadManager.GetPreLoadConfig<RateReward>(ViewConst.asset_RateReward_rate).dataList[0];
         
@@ -532,6 +532,10 @@ public class ClassicCellManager : BaseCellManager
         int Hint3 = AppEngine.SyncManager.Data.Hint3.Value;
         int Hint4 = AppEngine.SyncManager.Data.Hint4.Value;
         int hint5 = AppEngine.SyncManager.Data.Bee.Value;
+        GameAnalyze.LogitemConsume(GameManager.GetLevelSeq(),DataManager.ProcessData._GameMode.ToString(),"NULL",
+            coin.ToString(),hint1.ToString(),hint2.ToString(),Hint3.ToString(),Hint4.ToString(),
+            "0","0",
+            "hint", "hint5","0",count.ToString(),hint5.ToString(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr());
         //确定要飞蜜蜂的词
         List<BaseWord> beeFlyWords = new List<BaseWord>();
         if (count == words.Count)

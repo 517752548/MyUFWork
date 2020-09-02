@@ -50,7 +50,10 @@ public class PushDialog : UIWindowBase
 #else
 
 #endif
-
+        TimersManager.SetTimer(3, () =>
+        {
+            GameAnalyze.SettingReport("Home","Noti",AppEngine.SGameSettingManager.Notification.Value.ToString());
+        });
         Close();
     }
 	public void PrivacyClick()

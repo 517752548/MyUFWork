@@ -29,14 +29,16 @@ public class ShowPetDialog : UIWindowBase
     public override void OnOpen()
     {
         base.OnOpen();
+        _petItem = AppEngine.SyncManager.Data.Pets.Value;
+        PetData.isBrowsing = true;
         Pets_Data petsData = objs[0] as Pets_Data;
         if (petsData != null)
         {
             selectPetId = petsData.ID;
         }
         
-        _petItem = AppEngine.SyncManager.Data.Pets.Value;
         initItemView();
+        GameAnalyze.LogFriendTouch();
     }
 
     private void initItemView()
@@ -102,6 +104,8 @@ public class ShowPetDialog : UIWindowBase
     
     public void closeWindow()
     {
+        PetData.isBrowsing = false;
+        HomeRootFsmManager.GoIdle();
         if (windowStatus == WindowStatus.Opened)
         {
             for (int i = 0; i < list.Count; i++)

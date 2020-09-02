@@ -3,7 +3,23 @@ using System;
 public class DecorationThemeRoot : BaseThemeRoot
 {
     public DecorationFsmManager FsmManager => fsmManager as DecorationFsmManager;
-    void Awake()
+  
+    public override bool IsIdle()
+    {
+        
+        if (TitleData.isBrowsing || PetData.isBrowsing)
+        {
+            return false;
+        }
+        else
+        {
+            return FsmManager.IsIdle();
+        }
+
+        
+    }
+    
+    public override void Init(HomeRoot root)
     {
         if (fsmManager == null)
         {
@@ -14,19 +30,11 @@ public class DecorationThemeRoot : BaseThemeRoot
                 FsmManager.Init(this);
             }
         }
-    }
-    public override bool IsIdle()
-    {
-        return FsmManager.IsIdle();
-    }
-    public override void Init(BaseThemeRoot root)
-    {
         base.Init(root);
     }
 
     public override void OnEnter() {
         base.OnEnter();
-        FsmManager.Enter();
-        GetHomeUi<DecorationDialog>().OnShow();
+        //GetHomeUi<DecorationDialog>().OnShow();
     }
 }

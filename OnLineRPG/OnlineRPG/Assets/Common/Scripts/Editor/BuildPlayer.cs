@@ -1,4 +1,5 @@
-﻿using FastBundle.Editor;
+﻿using Facebook.Unity.Settings;
+using FastBundle.Editor;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -84,7 +85,7 @@ namespace BettaFramework
         [MenuItem("Build/Export Android Player")]
         static void ExportAndroidPlayer()
         {
-            // keystore 路径, ./user.keystore
+            // keystore 路径
             PlayerSettings.Android.keystoreName = "./wordcraze.jks";
             // one.keystore 密码
             PlayerSettings.Android.keystorePass = "123456";
@@ -104,6 +105,7 @@ namespace BettaFramework
                 }
             }
             //修改配置
+            FacebookSettings.SelectedAppIndex = 0;
             //修改配置
             PlayerSettings.applicationIdentifier = googleBundleIdentifier;
             //PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "NEW_VERSION;");
@@ -141,6 +143,7 @@ namespace BettaFramework
         static void ExportAndroidProfile()
         {
             //修改配置
+            FacebookSettings.SelectedAppIndex = 2;
             PlayerSettings.applicationIdentifier = googleBundleIdentifier;
             EditorApplication.ExecuteMenuItem(googlePlayStoreMenu);
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "NEW_VERSION;CONVERT");
@@ -163,6 +166,7 @@ namespace BettaFramework
         static void ExportAmazonPlayer()
         {
             //修改配置
+            FacebookSettings.SelectedAppIndex = 2;
             PlayerSettings.applicationIdentifier = amazonBundleIdentifier;
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android,
                 "NEW_VERSION;WordCrossy;UNITY_AMAZON");
@@ -184,6 +188,7 @@ namespace BettaFramework
         static void ExportDeAndroidPlayer()
         {
             //修改配置
+            FacebookSettings.SelectedAppIndex = 3;
             PlayerSettings.applicationIdentifier = germanBundleIdentifier;
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "NEW_VERSION;WordCrossyDE");
             EditorApplication.ExecuteMenuItem(googlePlayStoreMenu);
@@ -203,6 +208,7 @@ namespace BettaFramework
         static void ExportDeAndroidProfile()
         {
             //修改配置
+            FacebookSettings.SelectedAppIndex = 3;
             PlayerSettings.applicationIdentifier = germanBundleIdentifier;
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "NEW_VERSION;WordCrossyDE");
             EditorApplication.ExecuteMenuItem(googlePlayStoreMenu);
@@ -229,6 +235,7 @@ namespace BettaFramework
             Debug.Log("~~~~~~~~~~~~~~~~~~~~打bundle~~~~~~~~~~~~~~~~~~~~~~~~");
             AddressablesBundleBuildScript.BuildBundle();
             //修改配置
+            FacebookSettings.SelectedAppIndex = 0;
 
 
             AssetDatabase.Refresh();
@@ -266,6 +273,7 @@ namespace BettaFramework
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.iOS, defines);
             Debug.Log("~~~~~~~~~~~~~~~~~~~~打bundle~~~~~~~~~~~~~~~~~~~~~~~~");
             //修改配置
+            FacebookSettings.SelectedAppIndex = 0;
 
 
             AssetDatabase.Refresh();
@@ -304,6 +312,7 @@ namespace BettaFramework
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.iOS, "");
             Debug.Log("~~~~~~~~~~~~~~~~~~~~打bundle~~~~~~~~~~~~~~~~~~~~~~~~");
             //修改配置
+            FacebookSettings.SelectedAppIndex = 0;
 
 
             AssetDatabase.Refresh();
@@ -338,6 +347,7 @@ namespace BettaFramework
             Debug.Log("~~~~~~~~~~~~~~~~~~~~准备打包~~~~~~~~~~~~~~~~~~~~~~~~");
 
             //修改配置
+            FacebookSettings.SelectedAppIndex = 1;
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.iOS, "NEW_VERSION;CONVERT");
 
             AssetDatabase.Refresh();

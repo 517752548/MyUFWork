@@ -168,6 +168,7 @@ public abstract class BaseHint : MonoBehaviour, IPointerClickHandler, IPointerDo
             else
             {
                 OnCancelHint();
+                DataManager.businessGiftData.MoneyNotEnough();
                 return false;
             }
         }
@@ -236,6 +237,7 @@ public abstract class BaseHint : MonoBehaviour, IPointerClickHandler, IPointerDo
             canPointDown = false;
             TimersManager.SetTimer(3f, () => { canPointDown = true; });
             OnHintSelected(false);
+            DataManager.businessGiftData.MoneyNotEnough();
             isPointerDown = false;
             return;
         }
@@ -357,7 +359,12 @@ public abstract class BaseHint : MonoBehaviour, IPointerClickHandler, IPointerDo
         int Hint4 = AppEngine.SyncManager.Data.Hint4.Value;
         int hint5 = AppEngine.SyncManager.Data.Bee.Value;
         string SpendType = spendType.Contains("coin") ? "coin" : "hint";
-
+        GameAnalyze.LogitemConsume(levelSeq, DataManager.ProcessData._GameMode.ToString(), "NULL",
+            coin.ToString(), hint1.ToString(), hint2.ToString(), Hint3.ToString(), Hint4.ToString(),
+            progress.ToString(), skillManager.GameManager.GetEntity<BaseCellManager>().WrongTimes.ToString(),
+            SpendType, GetReportName(), coinCost, hintCost, hint5.ToString(),
+            AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),
+            AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr());
         // GameAnalyze.LogitemConsume(levelSeq,DataManager.ProcessData._GameMode.ToString(),"NULL",
         //     coin.ToString(),hint1.ToString(),hint2.ToString(),Hint3.ToString(),Hint4.ToString(),hint5.ToString(), 
         //     progress.ToString(),skillManager.GameManager.GetEntity<BaseCellManager>().WrongTimes.ToString(),
@@ -413,6 +420,7 @@ public abstract class BaseDragHint : BaseHint, IBeginDragHandler, IDragHandler, 
         {
             OnHintSelected(false);
             OnCancelHint();
+            DataManager.businessGiftData.MoneyNotEnough();
             return;
         }
 

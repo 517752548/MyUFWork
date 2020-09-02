@@ -87,7 +87,7 @@ public class GamePlay : MonoBehaviour
             prefabcallback?.Invoke(prefabObj[prefab]);
             return;
         }
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(prefab, op =>
+        ResourceManager.LoadAsync<GameObject>(prefab, op =>
         {
             if (!prefabObj.ContainsKey(prefab))
             {

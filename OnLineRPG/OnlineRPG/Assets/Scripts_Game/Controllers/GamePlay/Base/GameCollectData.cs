@@ -70,6 +70,24 @@ public class GameCollectData
         try
         {
             string gamemodel = DataManager.ProcessData._GameMode.ToString();
+            GameAnalyze.LoglevelPass(levelID.ToString(), "0",
+                AppEngine.SyncManager.Data.Coin.Value.ToString(),
+                AppEngine.SyncManager.Data.Hint1.Value.ToString(),
+                AppEngine.SyncManager.Data.Hint2.Value.ToString(),
+                AppEngine.SyncManager.Data.Hint3.Value.ToString(),
+                AppEngine.SyncManager.Data.Hint4.Value.ToString(), "2", gamemodel, dailyType,
+                AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().GetAbTestSpecialId(),
+                AppEngine.SSystemManager.GetSystem<TestABWordLibSystem>().GetUserTestLib(),
+                AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),
+                AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr(),
+                AppEngine.SSystemManager.GetSystem<PlayerLoginSystem>().playerCrazeID.Value,
+                AppEngine.SSystemManager.GetSystem<PlayerInfoSystem>().PlsyerFBID.Value,
+                isFRClassic.ToString(),
+                hint5num.ToString(),
+                AppEngine.SyncManager.Data.Bee.Value.ToString(),
+                ClassicVoiceKeyboard.VoiceProportion.ToString(),
+                AppEngine.SSystemManager.GetSystem<CellTipABSystem>().GetUserRewardLib()
+            );
         }
         catch (Exception e)
         {
@@ -92,6 +110,7 @@ public class GameCollectData
         if (firstInput)
         {
             firstInput = false;
+            GameAnalyze.LogClassicLevelStep(levelID.ToString(), "2");
         }
     }
 
@@ -105,6 +124,7 @@ public class GameCollectData
             gameSpendTime = TimeSpan.Zero;
         }
 
+        GameAnalyze.LogClassicLevelStep(levelID.ToString(), "3");
         ReportWin(gameSpendTime);
     }
 
@@ -127,6 +147,7 @@ public class GameCollectData
             }
         }
 
+        DataManager.businessGiftData.WordWrongOrRight(false);
     }
 
     public void DailyAnswerRight(List<BaseWord> words, string playSeq, int hint1, int hint2, int hint3, int hint4)
@@ -140,6 +161,7 @@ public class GameCollectData
                 hint2.ToString(), hint3.ToString(), hint4.ToString(), "");
         }
 
+        DataManager.businessGiftData.WordWrongOrRight(false);
     }
     
     public void CrossAnswerRight(List<BaseWord> words, string playSeq, int hint1, int hint2, int hint3, int hint4)
@@ -153,6 +175,7 @@ public class GameCollectData
         //         hint2.ToString(), hint3.ToString(), hint4.ToString(), "");
         // }
 
+        DataManager.businessGiftData.WordWrongOrRight(false);
     }
 
     public void DailyAnswerWrong(BaseWord word, string wrongword, int hint1, int hint2, int hint3, int hint4)
@@ -161,6 +184,7 @@ public class GameCollectData
         BQReport.LogDailyLevelWords(levelID.ToString(), ((BaseNormalWord) word).BaseQuestion.ID.ToString(), "-1",
             word.Answer, "2", gameSpendTime.Seconds.ToString(), hint1.ToString(), hint2.ToString(),
             hint3.ToString(), hint4.ToString(), wrongword);
+        DataManager.businessGiftData.WordWrongOrRight(true);
     }
 
     public void ClassicAnswerWrong(BaseWord word, string wrongword, int hint1, int hint2, int hint3, int hint4)
@@ -169,6 +193,7 @@ public class GameCollectData
         BQReport.LogclassicLevelWords(levelID.ToString(), ((BaseNormalWord) word).BaseQuestion.ID.ToString(), "-1",
             word.Answer, "2", gameSpendTime.Seconds.ToString(), hint1.ToString(), hint2.ToString(),
             hint3.ToString(), hint4.ToString(), wrongword);
+        DataManager.businessGiftData.WordWrongOrRight(true);
     }
     
     public void CrossAnswerWrong(BaseWord word, string wrongword, int hint1, int hint2, int hint3, int hint4)
@@ -177,11 +202,32 @@ public class GameCollectData
         // BQReport.LogDailyLevelWords(levelID.ToString(), ((BaseNormalWord) word).BaseQuestion.ID.ToString(), "-1",
         //     word.Answer, "2", gameSpendTime.Seconds.ToString(), hint1.ToString(), hint2.ToString(),
         //     hint3.ToString(), hint4.ToString(), wrongword);
+        DataManager.businessGiftData.WordWrongOrRight(true);
     }
 
     public virtual void ReportWin(TimeSpan gameSpendTime)
     {
         string gamemodel = DataManager.ProcessData._GameMode.ToString();
+        GameAnalyze.LoglevelPass(levelID.ToString(), ((int) gameSpendTime.TotalSeconds).ToString(),
+            AppEngine.SyncManager.Data.Coin.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint1.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint2.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint3.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint4.Value.ToString(), "1", gamemodel, dailyType,
+            AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().GetAbTestSpecialId(),
+            AppEngine.SSystemManager.GetSystem<TestABWordLibSystem>().GetUserTestLib(),
+            AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),
+            AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr(),
+            AppEngine.SSystemManager.GetSystem<PlayerLoginSystem>().playerCrazeID.Value,
+            AppEngine.SSystemManager.GetSystem<PlayerInfoSystem>().PlsyerFBID.Value,
+            isFRClassic.ToString(),
+            hint5num.ToString(),
+            AppEngine.SyncManager.Data.Bee.Value.ToString(),
+            ClassicVoiceKeyboard.VoiceProportion.ToString(),
+            AppEngine.SSystemManager.GetSystem<CellTipABSystem>().GetUserRewardLib()
+        );
+        
+        AOEReport.LevelPass(levelID);
     }
 
     /// <summary>
@@ -197,6 +243,24 @@ public class GameCollectData
         }
 
         string gamemodel = DataManager.ProcessData._GameMode.ToString();
+        GameAnalyze.LoglevelPass(levelID.ToString(), ((int) gameSpendTime.TotalSeconds).ToString(),
+            AppEngine.SyncManager.Data.Coin.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint1.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint2.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint3.Value.ToString(),
+            AppEngine.SyncManager.Data.Hint4.Value.ToString(), "0", gamemodel, "",
+            AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().GetAbTestSpecialId(),
+            AppEngine.SSystemManager.GetSystem<TestABWordLibSystem>().GetUserTestLib(),
+            AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),
+            AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr(),
+            AppEngine.SSystemManager.GetSystem<PlayerLoginSystem>().playerCrazeID.Value,
+            AppEngine.SSystemManager.GetSystem<PlayerInfoSystem>().PlsyerFBID.Value,
+            isFRClassic.ToString(),
+            hint5num.ToString(),
+            AppEngine.SyncManager.Data.Bee.Value.ToString(),
+            ClassicVoiceKeyboard.VoiceProportion.ToString(),
+            AppEngine.SSystemManager.GetSystem<CellTipABSystem>().GetUserRewardLib()
+        );
     }
 
     public void GameOnApplicationFocus(bool focus)

@@ -76,6 +76,14 @@ public class AdsOnSaleIconCtrl : MonoBehaviour
     {
         if (adView)
         {
+            if (AppEngine.SAdManager.CanShowRewardVideo(AdManager.RewardVideoCallPlace.ShopBottom))
+            {
+                adView.SetActive(true);
+            }
+            else
+            {
+                adView.SetActive(false);
+            }
         }
     }
 
@@ -101,6 +109,14 @@ public class AdsOnSaleIconCtrl : MonoBehaviour
     public void OnClickStore()
     {
         TimersManager.SetTimer(0.5f, () => { clickHome = false; });
+        if (DataManager.ShopData.ShowNoAdsSale)
+            DataManager.ShopData.ShowNoAdsSale = false;
+
+        if (saleIcon != null && saleIcon.enabled)
+        {
+            HideSaleIcon();
+            s_OpenShop = true;
+        }
 
         //Sound.instance.Play(Sound.Others.PanelShow);
     }

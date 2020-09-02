@@ -8,7 +8,7 @@ namespace Scripts_Game.Controllers.Home
     public class BaseEntranceCtrl : BaseHomeUI
     {
         protected List<BaseEntranceBtn> btnList = new List<BaseEntranceBtn>();
-        public override void Init(BaseThemeRoot root)
+        public override void Init(HomeRoot root)
         {
             base.Init(root);
             childHomeUIs.ForEach(ui =>
@@ -35,14 +35,13 @@ namespace Scripts_Game.Controllers.Home
 
         protected virtual void UpdateBtnWeight(ref BaseEntranceBtn btn)
         {
-            
+
         }
-        
+
         public async void AddBtn(string prefabName, int weight)
         {
-            var objHandle = ResourceManager.LoadAsync<GameObject>(prefabName);
-            await objHandle.Task;
-            GameObject entranceButton = Instantiate(objHandle.Result);
+            var prefab = await ResourceManager.LoadAsync<GameObject>(prefabName);
+            GameObject entranceButton = Instantiate(prefab);
             entranceButton.transform.SetParent(transform, false);
             entranceButton.transform.SetSiblingIndex(weight);
             var baseEntrance = entranceButton.GetComponent<BaseEntranceBtn>();

@@ -20,9 +20,14 @@ public class ButtonOpenDialog : MyButton
     public override void OnButtonClick()
     {
         base.OnButtonClick();
-
         Record.SetBool("shop_open_hint", false);
-
-        UIManager.OpenUIAsync(ViewConst.prefab_StoreDialog, OpenType.Replace,null);
+        if (MainSceneDirector.Instance.IsInGame())
+        {
+            UIManager.OpenUIAsync(ViewConst.prefab_StoreDialog, OpenType.Replace, null);
+        }
+        else
+        {
+            HomeRootFsmManager.CheckRefresh(HomeRootTab.shop);
+        }
     }
 }

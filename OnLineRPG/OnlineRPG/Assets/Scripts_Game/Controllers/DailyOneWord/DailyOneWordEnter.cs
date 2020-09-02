@@ -12,22 +12,21 @@ public class DailyOneWordEnter : BaseEntranceBtn
     public GameObject VideoFlag;
     public GameObject lockObj;
     public GameObject TimeObj;
-    
     private bool isCompleted;
-    
+
     public void OnClick()
     {
         AppEngine.SSoundManager.PlaySFX(ViewConst.wav_btn_normal);
         if (!AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsUnlocked())
         {
-            UIManager.OpenUIAsync(ViewConst.prefab_CommonNotice_Level, OpenType.Replace,null,
+            UIManager.OpenUIAsync(ViewConst.prefab_CommonNotice_Level, OpenType.Replace, null,
                 string.Format("Level {0}",
                     AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().GetUnlockLevel()));
             return;
         }
         if (!AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsReady())
         {
-            UIManager.OpenUIAsync(ViewConst.prefab_NetConnectFailDialog,null, null);
+            UIManager.OpenUIAsync(ViewConst.prefab_NetConnectFailDialog, null, null);
             AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().Load();
             return;
         }
@@ -38,35 +37,41 @@ public class DailyOneWordEnter : BaseEntranceBtn
         // }
         //DataManager.ProcessData._GameMode = GameMode.OneWord;
         //MainSceneDirector.Instance.SwitchUi(GameUI.Game);
-        UIManager.OpenUIAsync(ViewConst.prefab_GameLoadingWindow,OpenType.Replace, (ui, para) =>
-        {
-            DataManager.ProcessData._GameMode = GameMode.OneWord;
-            MainSceneDirector.Instance.SwitchUi(GameUI.Game, ok =>
-            {
-                Timer.Schedule(AppThreadController.instance, 0.2f, () =>
-                {
-                    UIManager.CloseUIWindow(
-                        UIManager.GetWindow<GameLoadingWindow>(ViewConst.prefab_GameLoadingWindow)); 
-                });
-            });
+        UIManager.OpenUIAsync(ViewConst.prefab_GameLoadingWindow, OpenType.Replace, (ui, para) =>
+         {
+             DataManager.ProcessData._GameMode = GameMode.OneWord;
+             MainSceneDirector.Instance.SwitchUi(GameUI.Game, ok =>
+             {
+                 Timer.Schedule(AppThreadController.instance, 0.2f, () =>
+                 {
+                     UIManager.CloseUIWindow(
+                         UIManager.GetWindow<GameLoadingWindow>(ViewConst.prefab_GameLoadingWindow));
+                 });
+             });
 
-        });
+         });
     }
 
     public override void OnShow()
     {
         base.OnShow();
-        AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().OnTimeUpdate += OnTimeUpdate;
-        if (!AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsEnable())
+        lockObj.SetActive(false);
+        if (AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsUnlocked())
         {
-            lockObj.SetActive(true);
-            TimeObj.SetActive(false);
+            AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().OnTimeUpdate += OnTimeUpdate;
+            if (!AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsEnable())
+            {
+                TimeObj.SetActive(false);
+            }
+            else
+            {
+                isCompleted = !AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsAllCompleted;
+                AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().UpdateTime();
+            }
         }
         else
         {
-            lockObj.SetActive(false);
-            isCompleted = !AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsAllCompleted;
-            AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().UpdateTime();
+            gameObject.SetActive(false);
         }
     }
 
@@ -75,32 +80,24 @@ public class DailyOneWordEnter : BaseEntranceBtn
         base.OnHidden();
         AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().OnTimeUpdate -= OnTimeUpdate;
     }
-    
+
 
     private void OnTimeUpdate(int sec)
     {
         if (AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsEnable())
         {
-            if (lockObj.activeSelf)
-            {
-                isCompleted = !AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsAllCompleted;
-                lockObj.SetActive(false);
-            }
+            isCompleted = AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsAllCompleted;
             var time = new CountDownTime(sec);
             timeText.text = sec > CountDownTime.HourSeconds ? $"{time.TotalHour:D2}h:{time.Minute:D2}m" : $"{time.Minute:D2}m:{time.Second:D2}s";
-            if (AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsAllCompleted != isCompleted)
+            if (isCompleted)
             {
-                isCompleted = !isCompleted;            
-                if (isCompleted)
-                {
-                    ani.SetTrigger("wait");
-                    TimeObj.SetActive(true);
-                }
-                else
-                {
-                    ani.SetTrigger("now");
-                    TimeObj.SetActive(false);
-                }
+                ani.SetTrigger("wait");
+                TimeObj.SetActive(true);
+            }
+            else
+            {
+                ani.SetTrigger("now");
+                TimeObj.SetActive(false);
             }
 
             VideoFlag.SetActive(AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().CanRefreshExLevel);
@@ -108,7 +105,6 @@ public class DailyOneWordEnter : BaseEntranceBtn
         else
         {
             ani.SetTrigger("wait");
-            lockObj.SetActive(true);
             TimeObj.SetActive(false);
         }
     }

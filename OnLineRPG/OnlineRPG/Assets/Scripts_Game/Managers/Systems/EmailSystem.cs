@@ -12,6 +12,7 @@ public class EmailSystem : ISystem
 {
     private EmailList emailList;
     private GameObject redpoint;
+    public Action<bool> newStateChangeAction;
     public override void InitSystem()
     {
         EventDispatcher.AddEventListener(GlobalEvents.LoginStatusRefresh,LoadEmailInfo);
@@ -22,6 +23,10 @@ public class EmailSystem : ISystem
     {
         this.redpoint = redpoint;
         SetEmails(this.emailList);
+    }
+
+    public bool HasNewEmail() {
+        return emailList != null && emailList.GetAllEmails().Find(x=>x.status == 1) != null;
     }
 
     public void CheckRedPoint()
@@ -36,10 +41,12 @@ public class EmailSystem : ISystem
         if (emails.Find(x=>x.status == 1) != null)
         {
             redpoint.SetActive(true);
+            newStateChangeAction?.Invoke(true);
         }
         else
         {
             redpoint.SetActive(false);
+            newStateChangeAction?.Invoke(false);
         }
     }
     public void ClearEmails(List<Email> needDelete)
@@ -272,6 +279,7 @@ public class Email
     public string bodys;
     public string sender;
     public List<EmailInfo> enclosure;
+    //1 未读 2 已读 3 领取 4 删除
     public int status;
     public int group;
     public int showDownLoad;

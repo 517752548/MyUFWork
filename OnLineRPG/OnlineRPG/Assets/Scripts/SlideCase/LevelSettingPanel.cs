@@ -27,6 +27,7 @@ public class LevelSettingPanel : UIWindowBase
     {
         base.OnOpen();
         highlightBtn.SetActive(AppEngine.SSystemManager.GetSystem<CellTipABSystem>().CellTipEnable);
+        GameAnalyze.SettingReport("Level");
     }
 
     private void InitToggleButton()

@@ -13,10 +13,10 @@ public class HomeChampionBoxState : HomeState
     {
         base.Enter();
         OnCompleted();
-        // if (HomeRoot.CurrentWorld.WorldState == 0 && 
+        // if (HomeRoot.CurrentWorld.WorldState == 0 &&
         //     AppEngine.SSystemManager.GetSystem<ChampionChallengeSystem>().SectionLevelProgress.IsChanged)
         // {
-        //     
+
         //     HomeRoot.GetHomeUi<HomeSceneController>()._HomeAnimatorController.FlyLevel(() =>
         //     {
         //         HomeRoot.GetHomeUi<ChampionBoxPanel>().PlayProgressAni(OnCompleted);

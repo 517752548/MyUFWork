@@ -35,11 +35,10 @@ public class Photo : MonoBehaviour, IDownloadListener
     {
         if ((!string.IsNullOrEmpty(url)) && url.Contains("head_"))
         {
-            ResourceManager.LoadAsync<Sprite>(string.Format("championships_{0}.png", url)).Completed += op =>
-            {
-
-                photo.sprite = op.Result;
-            };
+            ResourceManager.LoadAsync<Sprite>(string.Format("championships_{0}.png", url), op =>
+           {
+               photo.sprite = op;
+           });
             return;
         }
         if (sprite != null)
@@ -88,6 +87,6 @@ public class Photo : MonoBehaviour, IDownloadListener
         {
             LoggerHelper.Exception(ex);
         }
-        
+
     }
 }

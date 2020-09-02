@@ -61,10 +61,8 @@ public static class GlobalEvents
     /// 向homeroot 状态机发消息
     /// </summary>
     public const string TriggerHomeRootFsm = "TriggerHomeRootFsm";
-
-
-
-
     public const string EliteConfigLoad = "EliteConfigLoad";
     public const string HomeRootBanClick = "HomeRootBanClick";
+    public const string RefreshState = "RefreshState";
+    public static readonly string AFBack = "AFBack";
 }

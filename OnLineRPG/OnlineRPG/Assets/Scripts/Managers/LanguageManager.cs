@@ -9,8 +9,7 @@ public static class LanguageManager
 
     public static void Init()
     {
-        //CommandChannel commandChannel = CommandChannel.GetInstance();
-        LanguageConfig config = ResourcesManager.Load<LanguageConfig>(ViewConst.asset_LanguageConfig_EnConfig);//(LanguageConfig)commandChannel.PostCommand(ExcelCommandConst.GET_EXCEL_DATA, ViewConst.asset_LanguageConfig_EnConfig);
+        LanguageConfig config = PreLoadManager.GetPreLoad<LanguageConfig>(PreLoadConst.preload_Asset, ViewConst.asset_LanguageConfig_EnConfig);
 
         for (int i = 0; i < config.dataList.Count; i++)
         {

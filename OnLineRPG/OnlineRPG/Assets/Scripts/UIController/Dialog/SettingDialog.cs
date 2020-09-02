@@ -38,10 +38,12 @@ public class SettingDialog : UIWindowBase
 
     public void OnClickFaceBook()
     {
+        ButtonClickFB.Instance.OnButtonClick();
     }
     
 
     public void RestoreButtonClick()
     {
+        BetaFramework.AppEngine.SPurchaserManager.RestorePurchases();
     }
 }

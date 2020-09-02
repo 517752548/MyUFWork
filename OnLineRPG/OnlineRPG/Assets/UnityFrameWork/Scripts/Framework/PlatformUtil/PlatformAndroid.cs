@@ -123,11 +123,13 @@ namespace BetaFramework
 
         public static string GetVersionName()
         {
+            return Application.version;
             return CallStaticMethodWithReturn(PlatformUtil, m_PlatformUtilClassName, "getVersionName", "0.0.0");
         }
 
         public static int GetVersionCode()
         {
+            return GameSetting.BuildVersion;
             return CallStaticMethodWithReturn(PlatformUtil, m_PlatformUtilClassName, "getVersionCode", 1);
         }
 

@@ -81,6 +81,7 @@ public class DebugDialog : UIWindowBase
 //        DataManager.SkillData.AddMultiHintCount(hint3c);
 //        DataManager.SkillData.AddSpecificHintCount(hint2c);
 //        DataManager.SkillData.AddNormalHintCount(hint3c);
+        CommandBinder.DispatchBinding(GameEvent.AppRestart);
     }
 
     public void UnlockPet()
@@ -98,6 +99,7 @@ public class DebugDialog : UIWindowBase
         int unlocklevel = Convert.ToInt32(TextUnlockLevel.text);
         AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value = unlocklevel < 1?1:unlocklevel;
 
+        CommandBinder.DispatchBinding(GameEvent.AppRestart);
     }
 
     public void GetRandomPet()
@@ -109,9 +111,18 @@ public class DebugDialog : UIWindowBase
     private void AddToDictionary()
     {
         m_Content.Add("用户id：", DataManager.DeviceData.DeviceId);
+        m_Content.Add("当前分层：", DataManager.BusinessData.PlayerTag);
         m_Content.Add("广告数据：", JsonConvert.SerializeObject(DataManager.AdsData, Formatting.Indented));
         m_Content.Add("礼包数据：", JsonConvert.SerializeObject(DataManager.GiftData, Formatting.Indented));
+        m_Content.Add("充值内容：", JsonConvert.SerializeObject(DataManager.ShopData.PurchasedItems, Formatting.Indented));
         m_Content.Add("Normal窗口个数：", UIManager.GetNormalUICount().ToString());
+        m_Content.Add("DDL配置：", Record.GetString(PrefKeys.DDL_OnlineConfig) + "-" + JsonConvert.SerializeObject(HandleDdlMsg.localdata));
+
+        if (HandleDdlMsg.localdata != null)
+        {
+            m_Content.Add("DDL配置turn：", HandleDdlMsg.localdata.ShowInfo());
+            m_Content.Add("DDL配置map：", Record.GetString(PrefKeys.DDL_LevelMap));
+        }
     }
 
     private void ShowDictionary()
@@ -163,5 +174,6 @@ public class DebugDialog : UIWindowBase
     private void OnSwitchBtnClick()
     {
 
+        CommandBinder.DispatchBinding(GameEvent.AppRestart);
     }
 }

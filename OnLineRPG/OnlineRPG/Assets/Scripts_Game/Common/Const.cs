@@ -13,7 +13,7 @@ using UnityEngine;
 public partial class Const
 {
     const string iOSVersion = "1.1.8";
-    const string AndroidVersion = "1.11";
+    const string AndroidVersion = "1.10";
     public static string Version
     {
         get
@@ -106,6 +106,8 @@ public partial class Const
     {
         get
         {
+            //程江改回了原来的服务器地址
+            return ServerUrl;
             if (PlatformUtil.GetAppIsRelease())
             {
                 return "https://crazevs.wordzhgame.net/api";
@@ -309,6 +311,9 @@ public enum ServerCode
     GetFastRaceReward = 206,
     EliteConfig = 600,
     TitleConfig = 601,
+    GetOwendTitle = 602,
+    UploadTitleData = 603,
+    DeleteTitle = 604,
 }
 
 public enum CardPieceMode

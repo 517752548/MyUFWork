@@ -37,7 +37,7 @@ public class WebConfigMgr
         }
     }
 
-    public static void RefreshAll()
+    static void RefreshAll()
     {
         foreach (var item in configDic)
         {

@@ -9,6 +9,7 @@ using System.Collections.Generic;
         public static void RewardInventory(InventoryType inventoryType, int inventoryCount, RewardSource rewardSource, string buyProductId = "",
             string moneyCost = "", string payType = "")
         {
+            Debug.LogError("RewardInventory");
             int coin = 0;
             int hint1 = 0;
             int hint2 = 0;
@@ -60,12 +61,19 @@ using System.Collections.Generic;
                     break;
             }
             
+            GameAnalyze.LoggetReward(
+                AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value.ToString(),
+                "NULL",hint1.ToString(),hint2.ToString(),
+                hint3.ToString(),hint4.ToString(),coin.ToString(),
+                "",rewardSource.ToString(), buyProductId, moneyCost, payType,hint5.ToString(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr());
+
             AppEngine.SyncManager.DoSync(null);
         }
 
         public static void RewardInventoryWithSudId(InventoryType inventoryType, string subId, 
             RewardSource rewardSource, string buyProductId = "", string moneyCost = "", string payType = "")
         {
+            Debug.LogError("RewardInventory");
             switch (inventoryType)
             {
                 case InventoryType.Pet:
@@ -76,14 +84,16 @@ using System.Collections.Generic;
                     });
                     break;
                 case InventoryType.Title:
-                    AppEngine.SyncManager.Data.Titles.UpdateValue(data =>
-                    {
-                        data.titleDic[int.Parse(subId)] = 1;
-                        return data;
-                    });
+                    
                     break;
             }
             
+            GameAnalyze.LoggetReward(
+                AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value.ToString(),
+                "NULL","0", "0", "0", "0", "0",
+                subId,rewardSource.ToString(), buyProductId, moneyCost, payType,"0",
+                AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr());
+
             AppEngine.SyncManager.DoSync(null);
         }
 
@@ -147,6 +157,12 @@ using System.Collections.Generic;
                 }
             }
 
+            GameAnalyze.LoggetReward(
+                AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value.ToString(),
+                "NULL",hint1.ToString(),hint2.ToString(),
+                hint3.ToString(),hint4.ToString(),coin.ToString(),
+                "",rewardSource.ToString(),buyProductId,moneyCost,payType,hint5.ToString(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr());
+            
             AppEngine.SyncManager.DoSync(null);
         }
 
@@ -275,7 +291,7 @@ using System.Collections.Generic;
         signAd,
         queFeedback,
         email,
-        WebBox,
+        CupBox,
         WebBoxAd,
         subWorld,
         subWorldAd,
@@ -288,6 +304,9 @@ using System.Collections.Generic;
         FastRace,
         BeeCoin,
         FastRaceReward,
-        LimitShop
+        LimitShop,
+        Happiness,
+        elite,
+        classic,
     }
 }

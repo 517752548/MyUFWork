@@ -6,6 +6,8 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
     public class CrossGameManager : BaseGameManager
     {
         public RecordExtra.ObjectPrefData<CrossLevelProgressData> ProgressData { get; private set; }
+        
+        public bool TipReplay { get; private set; }
 
         private CrossLevelEntity _levelEntity;
         
@@ -52,11 +54,19 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
 
         public override void Init()
         {
-            int term = 1;
-            int term_level = 1;
-            _levelEntity = AppEngine.SSystemManager.GetSystem<EliteSystem>().GetCurrentCrossLevel();
+            var sys = AppEngine.SSystemManager.GetSystem<EliteSystem>();
+            int term = sys.currentWordID;
+            int term_level = sys.currentLevelID;
+            _levelEntity = sys.GetCurrentCrossLevel();
             ProgressData = new RecordExtra.ObjectPrefData<CrossLevelProgressData>(
                 $"cross_{term}_{term_level}_{_levelEntity.ID}",new CrossLevelProgressData());
+            if (ProgressData.Value.LevelID > 0 && ProgressData.Value.LevelID != _levelEntity.ID)
+            {
+                ProgressData.Value = new CrossLevelProgressData();
+            }
+
+            TipReplay = ProgressData.Value.LevelID < 0 && sys.IsReplayCurLevel();
+            ProgressData.Value.LevelID = _levelEntity.ID;
             GameTempData.levelID = _levelEntity.ID;
             base.Init();
         }

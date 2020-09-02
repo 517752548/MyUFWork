@@ -20,7 +20,7 @@ public class TestABSystem : ISystem
             UserEnterGame();
         }
 #if UNITY_IOS
-        AppEngine.SResourceManager.LoadAssetAsync<AdsConfig>(
+        ResourceManager.LoadAsync<AdsConfig>( 
             ADAB.Value == "A" ? ViewConst.asset_AdsConfig_IosA : ViewConst.asset_AdsConfig_IosB,
             ok =>
             {
@@ -28,7 +28,7 @@ public class TestABSystem : ISystem
                 OnCompleted();
             });
 #else
-AppEngine.SResourceManager.LoadAssetAsync<AdsConfig>(ADAB.Value == "A"?ViewConst.asset_AdsConfig_AndroidA : ViewConst.asset_AdsConfig_AndroidA,
+ResourceManager.LoadAsync<AdsConfig>(ADAB.Value == "A"?ViewConst.asset_AdsConfig_AndroidA : ViewConst.asset_AdsConfig_AndroidA,
             ok =>
             {
                 _AdsConfig = ok;

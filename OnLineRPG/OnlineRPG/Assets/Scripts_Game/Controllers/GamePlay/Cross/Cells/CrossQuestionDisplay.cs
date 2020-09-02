@@ -40,7 +40,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
                     questionImage.sprite = crossNormalWord.Question.ImageSprite;
                     imageContent.SetActive(true);
 
-                    if (!crossNormalWord.IsComplete)
+                    if (!crossNormalWord.IsComplete || crossNormalWord.Display)
                         ShowPicBox(crossNormalWord);
 
                     return;

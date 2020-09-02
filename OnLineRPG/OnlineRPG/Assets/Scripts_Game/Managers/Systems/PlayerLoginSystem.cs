@@ -25,8 +25,9 @@ public class PlayerLoginSystem : ISystem
         deviceID = new RecordExtra.StringPrefData(PrefKeys.deviceId, "");
         token = new RecordExtra.StringPrefData(PrefKeys.tokenID, "");
         fbOnline = new RecordExtra.BoolPrefData(PrefKeys.fbOnline,false);
+        FTDSdk.getInstance().getDeviceInfo(DeviceInfoBack);
 #if UNITY_EDITOR
-        DeviceInfoBack("{\"userid\":\"editor1234567890s\"}");
+        DeviceInfoBack("{\"userid\":\"editor1234567890sx12314\"}");
 #endif
         TimersManager.SetTimer(2, () =>
         {

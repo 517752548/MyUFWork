@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using BetaFramework;
 using DG.Tweening;
@@ -18,11 +19,12 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
 
         private CrossLevelEntity level;
         private CrossCell[,] cellArray;
+        private bool display = false;
 
         public override void Init()
         {
             base.Init();
-            AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_BeeFly,
+            ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_BeeFly,
                 (go) => { beePrefab = go; });
             if (_GameManager.ProgressData.Value.flyMap.Count == 0)
             {
@@ -149,6 +151,8 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             }
         }
 
+        public int CellCount => allCells.Count;
+
         private CrossCell GetCellByPos(int row, int col)
         {
             return cellArray[row, col];
@@ -211,7 +215,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
 
         public override void CacheLevelProgress()
         {
-            if (_GameManager != null && _GameManager.ProgressData.Value != null && wordList != null)
+            if (_GameManager != null && _GameManager.ProgressData.Value != null && wordList != null && !display)
             {
                 _GameManager.ProgressData.Value.CacheMemary(wordList);
             }
@@ -236,6 +240,17 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
         {
             _GameManager.GameTempData.CrossAnswerRight(words, CompletedWordsCount.ToString(), ReportData.Hint1,
                 ReportData.Hint2, ReportData.Hint3, ReportData.Hint4);
+            words.ForEach(word =>
+            {
+                GameManager.GetEntity<CrossQuestionDisplay>().OnCompleteOneWord(word);
+                if (word is CrossNormalWord normalWord)
+                {
+                    if (normalWord.BeeRewardCoin > 0)
+                    {
+                        RewardMgr.RewardInventory(InventoryType.Coin, normalWord.BeeRewardCoin, RewardSource.BeeCoin);
+                    }
+                }
+            });
             base.OnWordCompleted(words);
         }
 
@@ -251,19 +266,43 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
 
         public override void OnCompleteOneWord(BaseWord word, bool playAni = true, Action overCallback = null)
         {
-            GameManager.StateMachine.TriggerEvent(BaseFSMManager.Event_GuideClose_First);
-            //ChangeScrollRect(0);
-            //GameManager.GetEntity<CrossQuestionDisplay>().ClosePicBox();
-            GameManager.GetEntity<CrossQuestionDisplay>().OnCompleteOneWord(word);
-            if (word is CrossNormalWord normalWord)
-            {
-                if (normalWord.BeeRewardCoin > 0)
-                {
-                    RewardMgr.RewardInventory(InventoryType.Coin, normalWord.BeeRewardCoin, RewardSource.BeeCoin);
-                }
-            }
+            //base.OnCompleteOneWord(word, playAni, overCallback);
+        }
 
-            base.OnCompleteOneWord(word, playAni, overCallback);
+        public void OnlyDisplay()
+        {
+            display = true;
+            _GameManager.ProgressData.Value = new CrossLevelProgressData();
+            allCells.ForEach(cell =>
+            {
+                cell.SetFilled();
+                //cell.SetWordCompleted(null);
+            });
+            wordList.ForEach(word => (word as CrossNormalWord)?.SetComplete());
+            focusWordFlag.gameObject.SetActive(true);
+            wordList[0].SetSelect(true);
+        }
+
+        public override void OnClickChangeWord(bool next)
+        {
+            base.OnClickChangeWord(next);
+            if (display)
+            {
+                int index = wordList.IndexOf(curWord);
+                if (next)
+                {
+                    index++;
+                    if (index >= wordList.Count)
+                        index = 0;
+                }
+                else
+                {
+                    index--;
+                    if (index < 0)
+                        index = wordList.Count - 1;
+                }
+                wordList[index].Select();
+            }
         }
 
         public void UseBee(Action callback)
@@ -285,6 +324,12 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             int Hint3 = AppEngine.SyncManager.Data.Hint3.Value;
             int Hint4 = AppEngine.SyncManager.Data.Hint4.Value;
             int hint5 = AppEngine.SyncManager.Data.Bee.Value;
+            GameAnalyze.LogitemConsume(GameManager.GetLevelSeq(), DataManager.ProcessData._GameMode.ToString(), "NULL",
+                coin.ToString(), hint1.ToString(), hint2.ToString(), Hint3.ToString(), Hint4.ToString(),
+                "0", "0",
+                "hint", "hint5", "0", count.ToString(), hint5.ToString(),
+                AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserRewardLib(),
+                AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetABReportStr());
             //确定要飞蜜蜂的词
             List<BaseWord> beeFlyWords = new List<BaseWord>();
             if (count == words.Count)
@@ -714,8 +759,8 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             public void UseLink()
             {
                 LoggerHelper.Error("use link " + weight +
-                                   $"from {fromCell.cell.ParentWord.Index} {fromCell.cell.ColIndex} {fromCell.cell.AnswerLetter} " +
-                                   $"to {toCell.cell.ParentWord.Index} {toCell.cell.ColIndex} {toCell.cell.AnswerLetter} " +
+                                   $"from {fromCell.cell.PosRow} {fromCell.cell.PosCol} {fromCell.cell.AnswerLetter} " +
+                                   $"to {toCell.cell.PosRow} {toCell.cell.PosCol} {toCell.cell.AnswerLetter} " +
                                    $"flyOut={fromCell.isFlyOut} flyIn={toCell.isUsed}");
                 fromCell.cell.FlyToCell = toCell.cell;
                 fromCell.isFlyOut = true;
@@ -753,6 +798,12 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
                     weight = 0;
                     return;
                 }
+
+                if (toCell.cell.FlyToCell == fromCell.cell)
+                {
+                    weight = 0;
+                    return;
+                }
             }
 
             public void RefreshWeight()
@@ -778,6 +829,74 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
                 int flyOutMore = hFlyOutMore <= vFlyOutMore ? hFlyOutMore : vFlyOutMore;
                 int flyInMore = hFlyInMore <= vFlyInMore ? hFlyInMore : vFlyInMore;
                 weight += (500 - flyInMore - flyOutMore);
+            }
+        }
+
+        protected override IEnumerator CellFlyOut(List<BaseWord> words)
+        {
+            wordList.ForEach(w => w.ResetAutoHintFillCacheCells());
+            Dictionary<BaseCell, BaseCell> cellFromTo = new Dictionary<BaseCell, BaseCell>();
+            foreach (BaseWord word in words)
+            {
+                foreach (var cell in word.Cells)
+                {
+                    if (cell.FlyToCell != null && cell.FlyToCell.State != CellState.filled &&
+                        !cellFromTo.ContainsKey(cell))
+                        cellFromTo[cell] = cell.FlyToCell;
+                }
+            }
+
+            if (cellFromTo.Count > 0)
+            {
+                bool completed = false;
+                float upTime = 0.5f, flyTime = 1f, downTime = 0.15f, hintTime = 0.2f;
+
+                List<BaseCell> flyCells = new List<BaseCell>();
+                foreach (var pair in cellFromTo)
+                {
+                    var flyCell = pair.Key.Clone();
+                    flyCell._CanvasGroup.blocksRaycasts = false;
+                    flyCell.FlyToCell = pair.Value;
+                    flyCells.Add(flyCell);
+                }
+
+                var seq = DOTween.Sequence();
+                float timePos = 0.05f;
+                seq.InsertCallback(timePos, () => flyCells.ForEach(flyCell =>
+                {
+                    flyCell.cellAnimator.SetTrigger("flyup");
+                    flyCell.ShowTrailEffect();
+                }));
+                seq.InsertCallback(timePos += upTime, () =>
+                {
+                    flyCells.ForEach(flyCell =>
+                    {
+                        flyCell.transform.DOMove(flyCell.FlyToCell.transform.position, flyTime)
+                            .SetEase(Ease.OutCubic);
+                    });
+                });
+                seq.InsertCallback(timePos += flyTime,
+                    () => { flyCells.ForEach(flyCell => flyCell.cellAnimator.SetTrigger("flydown")); });
+                seq.InsertCallback(timePos += downTime, () =>
+                {
+                    flyCells.ForEach(flyCell =>
+                    {
+                        flyCell.FlyToCell.AutoHintFill();
+                        flyCell.FlyToCell.SetBeFlyToFlag(false);
+                    });
+                    AppEngine.SSoundManager.PlaySFX(ViewConst.ogg_AutoHintFill);
+                });
+                seq.InsertCallback(timePos += hintTime, () =>
+                {
+                    flyCells.ForEach(flyCell => { Destroy(flyCell.gameObject); });
+                    completed = true;
+                });
+                while (!completed)
+                {
+                    yield return new WaitForEndOfFrame();
+                }
+
+                CheckMultiWord();
             }
         }
     }

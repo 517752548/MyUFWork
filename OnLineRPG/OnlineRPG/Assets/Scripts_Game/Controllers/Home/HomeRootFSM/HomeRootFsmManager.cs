@@ -11,6 +11,9 @@ public class HomeRootFsmManager : StateMachine
     public const string HRFSMtoDecoration = "HRFSMtoDecoration";
     public const string HRFSMtoActivity = "HRFSMtoActivity";
     public const string HRFSMtoRank = "HRFSMtoRank";
+
+    public const string Event_CheckRefresh = "checkRefresh";
+    public const string Event_MoveTab = "Event_MoveTab";
     /// <summary>
     /// 执行完任务调用,当前状态机已经空闲
     /// </summary>
@@ -36,7 +39,7 @@ public class HomeRootFsmManager : StateMachine
         AddHeadState(home);
     }
 
-    private void RefreshState(HomeRootTab tab, string evt)
+    private void RefreshState(HomeRootTab tab, string evt, bool ani)
     {
         //查看当前root
         if (homeRoot.GetCurrentShowRoot().IsIdle() == false)
@@ -68,27 +71,30 @@ public class HomeRootFsmManager : StateMachine
         }
         switch (tab)
         {
+            case HomeRootTab.stay:
+                homeRoot.GetCurrentShowRoot().fsmManager.TriggerEvent(evt);
+                break;
             case HomeRootTab.home:
                 {
-                    homeRoot.MoveTo(tab, false);
+                    homeRoot.MoveTo(tab, ani);
                     homeRoot.GetHomeUi<HomeThemeRoot>().HomeFsmManager.TriggerEvent(evt);
                     break;
                 }
             case HomeRootTab.shop:
                 // Debug.LogError($"成功发送 {tab} 消息");
-                homeRoot.MoveTo(tab, false);
+                homeRoot.MoveTo(tab, ani);
                 homeRoot.GetHomeUi<ShopThemeRoot>().fsmManager.TriggerEvent(evt);
                 break;
             case HomeRootTab.decoration:
-                homeRoot.MoveTo(tab, false);
+                homeRoot.MoveTo(tab, ani);
                 homeRoot.GetHomeUi<DecorationThemeRoot>().fsmManager.TriggerEvent(evt);
                 break;
             case HomeRootTab.activity:
-                homeRoot.MoveTo(tab, false);
+                homeRoot.MoveTo(tab, ani);
                 homeRoot.GetHomeUi<ActivityThemeRoot>().fsmManager.TriggerEvent(evt);
                 break;
             case HomeRootTab.rank:
-                homeRoot.MoveTo(tab, false);
+                homeRoot.MoveTo(tab, ani);
                 homeRoot.GetHomeUi<RankThemeRoot>().fsmManager.TriggerEvent(evt);
                 break;
             case HomeRootTab.root:
@@ -133,39 +139,42 @@ public class HomeRootFsmManager : StateMachine
                     SetState(rank);
                     break;
                 }
+            case Event_CheckRefresh:
+                (currentState as HomeRootBaseState)?.Refresh();
+                break;
         }
     }
 
     public void Enter()
     {
         StartRun();
-        EventDispatcher.AddEventListener<HomeRootTab, string>(GlobalEvents.TriggerHomeRootFsm, RefreshState);
+        EventDispatcher.AddEventListener<HomeRootTab, string, bool>(GlobalEvents.TriggerHomeRootFsm, RefreshState);
     }
 
     public void Leave()
     {
-        EventDispatcher.RemoveEventListener<HomeRootTab, string>(GlobalEvents.TriggerHomeRootFsm, RefreshState);
+        EventDispatcher.RemoveEventListener<HomeRootTab, string, bool>(GlobalEvents.TriggerHomeRootFsm, RefreshState);
     }
 
     /// <summary>
     /// 检测刷新，看看当前是否有弹板或引导
     /// </summary>
     /// <param name="tab">哪个页签 shop\home\rank ...</param>
-    public static void CheckRefresh(HomeRootTab tab = HomeRootTab.home)
+    public static void CheckRefresh(HomeRootTab tab = HomeRootTab.stay, bool ani = true)
     {
-        EventDispatcher.TriggerEvent(GlobalEvents.TriggerHomeRootFsm, tab, HomeFsmManager.Event_CheckRefresh);
+        EventDispatcher.TriggerEvent(GlobalEvents.TriggerHomeRootFsm, tab, Event_CheckRefresh, ani);
     }
     /// <summary>
     /// 向root状态机发消息
     /// /// </summary>
     /// <param name="tab">要切换的页签</param>
     /// <param name="evt">事件名 如 Event_CheckRefresh,Event_Popup,Event_CompleteCurState</param>
-    public static void GiveMessage(string evt = HomeFsmManager.Event_CheckRefresh, HomeRootTab tab = HomeRootTab.home)
+    public static void GiveMessage(string evt = HomeFsmManager.Event_CheckRefresh, HomeRootTab tab = HomeRootTab.stay, bool ani = true)
     {
-        EventDispatcher.TriggerEvent(GlobalEvents.TriggerHomeRootFsm, tab, evt);
+        EventDispatcher.TriggerEvent(GlobalEvents.TriggerHomeRootFsm, tab, evt, ani);
     }
     public static void GoIdle()
     {
-        EventDispatcher.TriggerEvent(GlobalEvents.TriggerHomeRootFsm, HomeRootTab.home, Event_Idle);
+        EventDispatcher.TriggerEvent(GlobalEvents.TriggerHomeRootFsm, HomeRootTab.home, Event_Idle, false);
     }
 }

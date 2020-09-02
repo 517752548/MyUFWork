@@ -1,6 +1,7 @@
 ﻿using System;
 using Bag;
 using BetaFramework;
+using Scripts_Game.Managers;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Object = UnityEngine.Object;
@@ -34,8 +35,10 @@ namespace Scripts_Game.Controllers.GameInit.fsm
             AppEngine.SSystemManager.InstallSystem<GuideSystem>();
             AppEngine.SSystemManager.InstallSystem<PlayerSignSystem>();
             AppEngine.SSystemManager.InstallSystem<DailyOneWordSystem>();
-            AppEngine.SSystemManager.InstallSystem<WebSystem>();
+            AppEngine.SSystemManager.InstallSystem<NotificationSystem>();
+            AppEngine.SSystemManager.InstallSystem<CupSystem>();
             AppEngine.SSystemManager.InstallSystem<FastRacePlaySystem>();
+            AppEngine.SSystemManager.InstallSystem<BusinessSystem>();
             AppEngine.SSystemManager.InstallSystem<DownLoadResSystem>();
             AppEngine.SSystemManager.InstallSystem<EliteSystem>();
 
@@ -43,10 +46,15 @@ namespace Scripts_Game.Controllers.GameInit.fsm
             {
                 //由于网络配置管理依赖PlayerLoginSystem初始化完成，所以放到这里
                 WebConfigMgr.Init();
+                GameAnalyze.LogLoading("9", Time.realtimeSinceStartup.ToString());
                 CheckFirstLogin((first) =>
                 {
+                    GameAnalyze.LogLoading("13", Time.realtimeSinceStartup.ToString());
                     Object.FindObjectOfType<GameInitLoadBar>().LoadScene(first);
                     AppEngine.SSystemManager.GetSystem<TestABSystem>().UserEnterGame();
+                    InitGameCommand();
+                    CommandBinder.DispatchBinding(GameEvent.Login);
+                    CommandBinder.DispatchBinding(GameEvent.ResetPerDay);
                     OnCompleted();
                 });
             });
@@ -56,6 +64,7 @@ namespace Scripts_Game.Controllers.GameInit.fsm
         {
             if (AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value == 0)
             {
+                GameAnalyze.LogLoading("10", Time.realtimeSinceStartup.ToString());
                 //DataManager.ProcessData.FirstGoToGame = true;
                 var cnfig = AppEngine.SSystemManager.GetSystem<RewardABSystem>().GetUserPropConfig();
                 for (int i = 0; i < cnfig.dataList.Count; i++)
@@ -72,6 +81,7 @@ namespace Scripts_Game.Controllers.GameInit.fsm
                     AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value,
                     (ok) =>
                     {
+                        GameAnalyze.LogLoading("12", Time.realtimeSinceStartup.ToString());
                         if (ok)
                         {
                             LoggerHelper.Log("加载第一关成功");
@@ -80,6 +90,7 @@ namespace Scripts_Game.Controllers.GameInit.fsm
                         }
                         else
                         {
+                            GameAnalyze.LogEvent("loadlevelFail", AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value.ToString());
                             LoggerHelper.Error("第一关加载失败");
                             back.Invoke(false);
                         }
@@ -88,10 +99,27 @@ namespace Scripts_Game.Controllers.GameInit.fsm
             }
             else
             {
+                GameAnalyze.LogLoading("11", Time.realtimeSinceStartup.ToString());
                 //PreloadBG(null);
                 LoggerHelper.Log("进入home");
                 back.Invoke(false);
             }
+        }
+
+        private void InitGameCommand()
+        {
+            CommandBinder.AddBinding<CustomIapCommand>(GameEvent.CustomIapEvent);
+            CommandBinder.AddBinding<FacebookIapCommand>(GameEvent.FacebookIapEvent);
+            CommandBinder.AddBinding<FirebaseIapCommand>(GameEvent.FirebaseIapEvent);
+            CommandBinder.AddBinding<FabricIapCommand>(GameEvent.FabricIapEvent);
+            CommandBinder.AddBinding<FlurryIapCommand>(GameEvent.FlurryIapEvent);
+            CommandBinder.AddBinding<ValidateReceiptCommand>(GameEvent.ValidateReceipt);
+            CommandBinder.AddBinding<AnalysisIapCommand>(GameEvent.AnalysisIapEvent);
+            CommandBinder.AddBinding<SalePopupCommand>(GameEvent.SalePopup);
+            CommandBinder.AddBinding<RubyFlyCommand>(GameEvent.RubyFly);
+            CommandBinder.AddBinding<CurrencyIapCommand>(GameEvent.CurrencyIapEvent);
+
+            CommandBinder.DispatchBinding(GameEvent.ABTesting);
         }
 
         private async void PreloadBG(Action callback)

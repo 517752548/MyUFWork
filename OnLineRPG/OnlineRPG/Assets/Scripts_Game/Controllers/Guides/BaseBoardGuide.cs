@@ -22,6 +22,7 @@ public class BaseBoardGuide : UIWindowBase
         curRoot = MainSceneDirector.Instance.GetVisibleRoot();
 
         base.OnOpen();
+        GameAnalyze.LogLoading("16",Time.realtimeSinceStartup.ToString());
         guideParam = (GuideParam)objs[0];
 
         if (!string.IsNullOrEmpty(guideParam.desStr) && desText != null)

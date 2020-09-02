@@ -1,53 +1,60 @@
-﻿using BetaFramework;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class TitleItem : MonoBehaviour
 {
-    public TitleReceiveData itemData;
-    public Image bg;
-    public TextMeshProUGUI level;
-    public GameObject selected;
-    public GameObject lockObj;
-    public bool islock;
-
-    public void SetData(TitleReceiveData data , bool islock)
+    public Image titleImg;
+    public TextMeshProUGUI lv;
+    public int id;
+    Dictionary<int, TitleReceiveData> dic;
+    void Start()
     {
-        itemData = data;
-        this.islock = islock;
-        Debug.LogError("id: " +data.id +"--name: "+data.name +"--sprite: "+data.resources + "--level: "+data.introduce);
+        dic = TitleData.titleDic;
+        id = -1;        
+    }
+    /// <summary>
+    /// 当前展示的称号ID
+    /// </summary>
+    public void SetShowId(int itemId)
+    {
+        id = itemId;
     }
 
-    public void ShowItem()
+    /// <summary>
+    /// 展示称号
+    /// </summary>
+    public void Show()
     {
-        CommUtil.LoadTittleOrCache(itemData.resources,op =>
+        var titleList = TitleData.configList;
+        if (id != -1)
         {
-            if (op != null)
+            TitleReceiveData data = TitleData.GetReceiveData(id);
+            CommUtil.LoadTittleOrCache(data.resources, op =>
             {
-                bg.sprite = op;
-                level.text = itemData.introduce;
-                currentUseTitleStatus();
-                lockObj?.SetActive(islock);
-            }
-        });
+                if (op != null)
+                {
+                    titleImg.sprite = op;
+                    if (data.next > -1)
+                    {
+                        lv.gameObject.SetActive(true);                   
+                        lv.text = data.title;
+                    }
+                    else
+                    {
+                        lv.gameObject.SetActive(false);
+                    }                 
+                }
+            });
+        }       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         
-    }
-
-    public void currentUseTitleStatus()
-    {
-        selected.SetActive(false);
-        if (AppEngine.SyncManager.Data.Titles.Value.currentTitleId.Equals(itemData.id))
-        {
-            selected.SetActive(true);
-        }
-    }
-
-    public void ClickTitleItem()
-    {
-        UIManager.OpenUIAsync(ViewConst.prefab_ShowTitleDialog, null, itemData);
     }
 }

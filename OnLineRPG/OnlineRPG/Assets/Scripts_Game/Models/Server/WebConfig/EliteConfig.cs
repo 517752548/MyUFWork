@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using BetaFramework;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class EliteConfig : WebConfig<EliteConfigData>
@@ -38,10 +39,14 @@ public class EliteWorld
 {
     public int id;
     public string name;
+    public string stars;
     public long startTime;
     public int order;
     public string reward1;
     public string reward2;
     public string reward3;
     public string img;
+
+    [JsonIgnore]
+    public bool isNew;
 }

@@ -152,6 +152,7 @@ public class DailyRewardItem : MonoBehaviour
                 progressText.text = string.Format("{0}/{1}", currentLength, MaxStars);
                 progressImage.DOValue((float) currentLength / MaxStars, 0.4f).OnComplete(() =>
                 {
+                    FlyRewardView.instance.FlyCoin(fromCoin.position, null);
                     //SetStatus(DailyRewardStatus.Rewarded);
                     AnimFinish();
                     //AppEngine.SSoundManager.PlaySFX(ViewConst.ogg_Daily_addpower);

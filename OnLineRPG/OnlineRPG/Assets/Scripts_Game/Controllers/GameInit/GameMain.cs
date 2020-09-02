@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using BetaFramework;
-using PlayFab;
-using PlayFab.ClientModels;
-using PlayFab.ServerModels;
 using SRF;
 using UnityEngine;
 
@@ -51,41 +48,6 @@ namespace Scripts_Game.Controllers.GameInit
         };
 
         private void Awake()
-        {
-            AsyncPlayFabInit();
-        }
-
-        private string playfabid;
-        public void AsyncPlayFabInit()
-        {
-            //var request = new LoginWithAndroidDeviceIDRequest();
-            var request = new LoginWithCustomIDRequest { CustomId = "myidididid", CreateAccount = true};
-            //PlayFabClientAPI.LoginWithAndroidDeviceID(id, loginresule =>
-            PlayFabClientAPI.LoginWithCustomID(request, loginresule =>
-            {
-                playfabid = loginresule.PlayFabId;
-                Debug.LogError("登录成功");
-                UpdateUserInternalData();
-            }, loginerror =>
-            {
-                Debug.LogError("登录失败");
-            });
-        }
-        public void UpdateUserInternalData() {
-            PlayFabServerAPI.UpdateUserInternalData(new UpdateUserInternalDataRequest() {
-                    PlayFabId = playfabid,
-                    Data = new Dictionary<string, string>() {
-                        {"game", "Fighter"},
-                        {"Race", "Human"},
-                    },
-                },
-                result => Debug.Log("Set internal user data successful"),
-                error => {
-                    Debug.Log("Got error updating internal user data:");
-                    Debug.Log(error.GenerateErrorReport());
-                });
-        }
-        public void RunGame()
         {
             startTaskQueue = gameObject.AddComponent<CommQueueStateMachine>();
             startTaskQueue.AddQueueState(startTaskQueue.CreateState<fsm.LoadResState>());

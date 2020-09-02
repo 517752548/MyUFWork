@@ -10,10 +10,10 @@ public class FRStar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    public void FlyToTarget(Vector3 pos,FastRaceHead _FastRaceHead)
+    public void FlyToTarget(Vector3 pos, FastRaceHead _FastRaceHead)
     {
         gameObject.SetActive(true);
         float delay = 0.5f;
@@ -26,7 +26,7 @@ public class FRStar : MonoBehaviour
         {
             AppEngine.SSystemManager.GetSystem<FastRacePlaySystem>().AddScore();
             _FastRaceHead.DoAnim();
-            ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_FRStar_Boom).Completed += op =>
+            ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_FRStar_Boom, op =>
             {
                 Transform star = transform.GetChild(0);
                 if (star)
@@ -34,11 +34,11 @@ public class FRStar : MonoBehaviour
                     star.gameObject.SetActive(false);
                 }
                 AppEngine.SSoundManager.PlaySFX(ViewConst.ogg_frstarDown);
-                GameObject effect = Instantiate(op.Result,transform,false);
+                GameObject effect = Instantiate(op, transform, false);
                 effect.SetActive(true);
-                Destroy(gameObject,0.8f);
-            };
-            
+                Destroy(gameObject, 0.8f);
+            });
+
         }).SetDelay(delay);
     }
 }

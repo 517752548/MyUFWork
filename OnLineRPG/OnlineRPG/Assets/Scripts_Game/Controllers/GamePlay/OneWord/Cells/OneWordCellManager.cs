@@ -249,6 +249,7 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
         protected override void OnWordCompleted(List<BaseWord> words)
         {
             base.OnWordCompleted(words);
+            DataManager.businessGiftData.WordWrongOrRight(false);
         }
 
         public override void OnWordWrong(BaseWord word,string wrongword)
@@ -256,6 +257,7 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
             if (word is BaseNormalWord)
             {
                 base.OnWordWrong(word,wrongword);
+                DataManager.businessGiftData.WordWrongOrRight(true);
             }
         }
     }

@@ -1,6 +1,4 @@
-﻿using UnityEngine.Rendering;
-
-#if UNITY_2018_1_OR_NEWER
+﻿#if UNITY_2018_1_OR_NEWER
 
 namespace SRDebugger.Profiler
 {
@@ -47,6 +45,7 @@ namespace SRDebugger.Profiler
             CachedGameObject.hideFlags = HideFlags.NotEditable;
             CachedTransform.SetParent(Hierarchy.Get("SRDebugger"), true);
 
+            RenderPipeline.beginFrameRendering += RenderPipelineOnBeginFrameRendering;
             StartCoroutine(EndOfFrameCoroutine());
         }
 

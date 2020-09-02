@@ -1,39 +1,59 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Threading.Tasks;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using Object = UnityEngine.Object;
 
-public static class ResourceManager
+public class ResourceManager
 {
-    
-    public static void LoadAsync<T>(string assetAddress,Action<T> callback)
-    {
-        AssetLoadInfo<T> loadInfo = new AssetLoadInfo<T>(assetAddress,callback);
-        loadInfo.StartLoad();
-    }
+    static Dictionary<string, Task> resDic = new Dictionary<string, Task>();
 
-    public static void LoadAsync<T>(List<string> resList,Action<Dictionary<string,T>> callBack)
+    public static void Preload<T>(List<string> resList, Action<Dictionary<string, T>> callBack)
     {
-        AssetsLoadInfo<T> info = new AssetsLoadInfo<T>(resList,callBack);
+        var info = new AssetsLoadInfo<T>(resList, callBack);
         info.StartLoad();
     }
-    
-    public static void LoadAsync<T>(List<string> resList,Action<Dictionary<string,AsyncOperationHandle<T>>> callBack)
+    public static async void LoadAsync<T>(string assetAddress, Action<T> callback, bool persistent = false) where T : Object
     {
-        AssetsLoadInfo<T> info = new AssetsLoadInfo<T>(resList,callBack);
-        info.StartLoadHandler();
-    }
-    
-    public static AsyncOperationHandle<T> LoadAsync<T>(string assetAddress)
-    {
-       return Addressables.LoadAssetAsync<T>(assetAddress);
+        T result = await LoadAsync<T>(assetAddress, persistent);
+        callback(result);
     }
 
-    public static T LoadAsyncResult<T>(string assetAddress)
+    public static async Task<T> LoadAsync<T>(string assetAddress, bool persistent = false) where T : Object
     {
-        return Addressables.LoadAssetAsync<T>(assetAddress).Result;
+        Task taskObj;
+        if (resDic.TryGetValue(assetAddress, out taskObj))
+        {
+            if (taskObj.IsFaulted)
+            {
+                Addressables.Release(taskObj);
+                resDic.Remove(assetAddress);
+            }
+            else
+            {
+                if (!taskObj.IsCompleted)
+                {
+                    await taskObj;
+                }
+                Task<T> task = taskObj as Task<T>;
+                return task.Result;
+            }
+        }
+        var tTask = Addressables.LoadAssetAsync<T>(assetAddress).Task;
+        if (!persistent)
+        {
+            resDic.Add(assetAddress, tTask);
+        }
+        return await tTask;
+    }
+
+    public static void ReleaseAll()
+    {
+        foreach (var item in resDic)
+        {
+            var task = item.Value;
+            Addressables.Release(task);
+        }
+        resDic.Clear();
     }
 }

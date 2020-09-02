@@ -17,6 +17,7 @@ public class LimitTimeEnter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AppEngine.SSystemManager.GetSystem<BusinessSystem>().timeLoop += ShowTime;
         gameObject.SetActive(false);
     }
 
@@ -27,6 +28,18 @@ public class LimitTimeEnter : MonoBehaviour
         loopcount++;
         if (loopcount >= 3)
         {
+            if (DataManager.businessGiftData.AllGiftBuyed())
+            {
+                buyall = true;
+                gameObject.SetActive(false);
+                return;
+            }
+        }
+
+        if (!DataManager.businessGiftData.LevelEnough())
+        {
+            gameObject.SetActive(false);
+            return;
         }
 
         timeText.text = time;
@@ -42,5 +55,6 @@ public class LimitTimeEnter : MonoBehaviour
 
     private void OnDestroy()
     {
+        AppEngine.SSystemManager.GetSystem<BusinessSystem>().timeLoop -= ShowTime;
     }
 }

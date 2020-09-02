@@ -58,6 +58,8 @@ public class CommonRewardDialog : UIWindowBase
         rewardAdList = RewardMgr.GetVideoRewards(_rewardData.rewardId);
         hasADReward = _rewardData.CanShowAD() && rewardAdList.Count > 0;
         adbuttonButton.gameObject.SetActive(hasADReward);
+        if (hasADReward)
+            ADAnalyze.ADBtnShow(_rewardData.boxType.ToString());
         RewardInventory coin = rewardList.Find(x => x.type == InventoryType.Coin);
         if (coin != null)
         {
@@ -271,16 +273,22 @@ public class CommonRewardDialog : UIWindowBase
         StartCoroutine(WaitForAD());
         if (_rewardData.boxType == RewardBoxType.SignBox1 || _rewardData.boxType == RewardBoxType.SignBox2)
         {
+            AppEngine.SAdManager.ShowRewardVideo(AdManager.RewardVideoCallPlace.SignGiftPanel, VideoFinish);
+            ADAnalyze.AdBtnClick(_rewardData.boxType.ToString());
             return;
         }
 
         if (_rewardData.boxType == RewardBoxType.SubWorld)
         {
+            AppEngine.SAdManager.ShowRewardVideo(AdManager.RewardVideoCallPlace.SubWorldGiftPanel, VideoFinish);
+            ADAnalyze.AdBtnClick(_rewardData.boxType.ToString());
             return;
         }
 
-        if (_rewardData.boxType == RewardBoxType.WebBox)
+        if (_rewardData.boxType == RewardBoxType.CupBox)
         {
+            AppEngine.SAdManager.ShowRewardVideo(AdManager.RewardVideoCallPlace.BlogGiftPanel, VideoFinish);
+            ADAnalyze.AdBtnClick(_rewardData.boxType.ToString());
             return;
         }
 
@@ -358,6 +366,8 @@ public class CommonRewardDialog : UIWindowBase
         if (GetCoin > 0)
         {
             transform.GetChild(0).GetComponent<CanvasGroup>().DOFade(0, 0.3f);
+            CommandBinder.DispatchBinding(GameEvent.RubyFly,
+                new RubyFlyCommand.RubyFlyData(RubyType.stack, boxBG.transform.position, GetCoin));
             DOTween.Sequence().InsertCallback(0.8f, () =>
             {
                 UIManager.CloseUIWindow(this, false);
@@ -401,6 +411,21 @@ public class CommonRewardData
     /// <returns></returns>
     public bool CanShowAD()
     {
+        if (boxType == RewardBoxType.SignBox1 || boxType == RewardBoxType.SignBox2)
+        {
+            return AppEngine.SAdManager.CanShowRewardVideo(AdManager.RewardVideoCallPlace.SignGiftPanel);
+        }
+
+        if (boxType == RewardBoxType.SubWorld)
+        {
+            return AppEngine.SAdManager.CanShowRewardVideo(AdManager.RewardVideoCallPlace.SubWorldGiftPanel);
+        }
+
+        if (boxType == RewardBoxType.CupBox)
+        {
+            return AppEngine.SAdManager.CanShowRewardVideo(AdManager.RewardVideoCallPlace.BlogGiftPanel);
+        }
+
         return false;
     }
 
@@ -471,8 +496,8 @@ public class CommonRewardData
             case RewardBoxType.SignBox1:
             case RewardBoxType.SignBox2:
                 return "CARE PACKAGE";
-            case RewardBoxType.WebBox:
-                return "FANS REWARDS";
+            case RewardBoxType.CupBox:
+                return "CUP REWARDS";
             case RewardBoxType.DailyWin:
                 return "DAILY PUZZLE COMPLETED";
             case RewardBoxType.FastRace:
@@ -508,7 +533,7 @@ public class CommonRewardData
                 return ViewConst.prefab_Box_7Days_Big;
             case RewardBoxType.SignBox2:
                 return ViewConst.prefab_Box_7Days_Small;
-            case RewardBoxType.WebBox:
+            case RewardBoxType.CupBox:
                 return ViewConst.prefab_Box_WebRewards;
         }
 
@@ -537,7 +562,7 @@ public class CommonRewardData
             case RewardBoxType.SubWorld:
             case RewardBoxType.SignBox1:
             case RewardBoxType.SignBox2:
-            case RewardBoxType.WebBox:
+            case RewardBoxType.CupBox:
                 return true;
         }
 
@@ -564,7 +589,7 @@ public class CommonRewardData
             case RewardBoxType.SignBox1:
             case RewardBoxType.SignBox2:
                 return 2.4f;
-            case RewardBoxType.WebBox:
+            case RewardBoxType.CupBox:
                 return 1.4f;
         }
 
@@ -576,7 +601,7 @@ public enum RewardBoxType
 {
     None = 1,
     SubWorld = 2,
-    WebBox,
+    CupBox,
     SignBox1,
     SignBox2,
     Shop1 = 6,
@@ -587,5 +612,5 @@ public enum RewardBoxType
     DailyWin,
     OneWord,
     ShopNone = 21,
-    FastRace = 22
+    FastRace = 22,
 }

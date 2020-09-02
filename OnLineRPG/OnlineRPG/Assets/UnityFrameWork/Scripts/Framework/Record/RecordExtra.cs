@@ -186,6 +186,11 @@ public class ObjectPrefData<T> : PrefData<T> where T : new()
         else
             Record.SetObject(key, val);
     }
+    
+    public void UpdateValue(Func<T, T> op)
+    {
+        Value = op(Value);
+    }
 }
 
 public class DatePrefData : PrefData<DateTime>

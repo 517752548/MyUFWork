@@ -24,7 +24,7 @@ public class RewardABSystem : ISystem
         }
         
 
-        AppEngine.SResourceManager.LoadAssetAsync<RewardAB>(
+        ResourceManager.LoadAsync<RewardAB>(
 #if UNITY_IOS
             string.Format("RewardAB_Ios_Reward_{0}.asset", GetUserRewardLib()),
 #else
@@ -38,7 +38,7 @@ public class RewardABSystem : ISystem
                     OnCompleted();
                 }
             });
-        AppEngine.SResourceManager.LoadAssetAsync<PropertyAB>(
+        ResourceManager.LoadAsync<PropertyAB>(
 #if UNITY_IOS
             string.Format("PropertyAB_Ios_Prop_{0}.asset", GetUserRewardLib()), 
 #else

@@ -21,6 +21,7 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
         {
             if (AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().IsAllCompleted)
                 return;
+            AppEngine.SAdManager.ShowInterstitialByCondition(AdManager.InterstitialCallPlace.OneWordEnter);
         }
         public override BaseFSMManager InstantiateFSM()
         {

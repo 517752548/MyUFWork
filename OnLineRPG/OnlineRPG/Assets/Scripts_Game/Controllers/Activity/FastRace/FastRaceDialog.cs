@@ -81,57 +81,53 @@ public class FastRaceDialog : UIWindowBase
         AppEngine.SSystemManager.GetSystem<FastRacePlaySystem>().RefreshEnterButton();
     }
 
-    private void SetPlayers(RanListInfo ranklistinfo)
+    private async void SetPlayers(RanListInfo ranklistinfo)
     {
-        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_FloatWeekendRankItem).Completed += my =>
+        var my = await ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_FloatWeekendRankItem);
+        var other = await ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_WeekendRankItem);
+        GameObject item = null;
+        for (int i = 0; i < ranklistinfo.rankingList.Count; i++)
         {
-            ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_WeekendRankItem).Completed += other =>
+            if (ranklistinfo.rankingList[i].passportId ==
+                AppEngine.SSystemManager.GetSystem<PlayerLoginSystem>().deviceID.Value)
             {
-                GameObject item = null;
-                for (int i = 0; i < ranklistinfo.rankingList.Count; i++)
-                {
-                    if (ranklistinfo.rankingList[i].passportId ==
-                        AppEngine.SSystemManager.GetSystem<PlayerLoginSystem>().deviceID.Value)
-                    {
-                        item = Instantiate(my.Result, content, false);
-                        playerTransform = item.transform;
-                        item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
-                        rankText.text = ranklistinfo.rankingList[i].rank.ToString();
-                        AppEngine.SSystemManager.GetSystem<FastRacePlaySystem>().playerRank =
-                            ranklistinfo.rankingList[i].rank;
-                        
-                        currentRank = ranklistinfo.rankingList[i].rank;
-                        item = Instantiate(my.Result, fadeTopContent, false);
-                        topGroup = item.AddComponent<CanvasGroup>();
-                        topGroup.alpha = 0;
-                        item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
-                        item = Instantiate(my.Result, fadeBottomContent, false);
-                        bottonGroup = item.AddComponent<CanvasGroup>();
-                        bottonGroup.alpha = 0;
-                        item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
-                    }
-                    else
-                    {
-                        item = Instantiate(other.Result, content, false);
-                        item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
-                    }
-                }
+                item = Instantiate(my, content, false);
+                playerTransform = item.transform;
+                item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
+                rankText.text = ranklistinfo.rankingList[i].rank.ToString();
+                AppEngine.SSystemManager.GetSystem<FastRacePlaySystem>().playerRank =
+                    ranklistinfo.rankingList[i].rank;
 
-                Debug.LogError("超越动画" +  DataManager.ProcessData.oldRank + "-" + currentRank);
-                if (DataManager.ProcessData.oldRank != -1 && DataManager.ProcessData.oldRank > currentRank)
-                {
-                    playerTransform.SetSiblingIndex(DataManager.ProcessData.oldRank - 1);
+                currentRank = ranklistinfo.rankingList[i].rank;
+                item = Instantiate(my, fadeTopContent, false);
+                topGroup = item.AddComponent<CanvasGroup>();
+                topGroup.alpha = 0;
+                item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
+                item = Instantiate(my, fadeBottomContent, false);
+                bottonGroup = item.AddComponent<CanvasGroup>();
+                bottonGroup.alpha = 0;
+                item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
+            }
+            else
+            {
+                item = Instantiate(other, content, false);
+                item.GetComponent<FastRaceItem>().SetPlayerInfo(ranklistinfo.rankingList[i]);
+            }
+        }
 
-                    //需要播放超越动画
-                    StartCoroutine(DoUpAnimator());
-                }
-                else
-                {
-                    TimersManager.SetTimer(0.1f, () => { SetPlayerFocus(); });
-                    panelInited = true;
-                }
-            };
-        };
+        Debug.LogError("超越动画" + DataManager.ProcessData.oldRank + "-" + currentRank);
+        if (DataManager.ProcessData.oldRank != -1 && DataManager.ProcessData.oldRank > currentRank)
+        {
+            playerTransform.SetSiblingIndex(DataManager.ProcessData.oldRank - 1);
+
+            //需要播放超越动画
+            StartCoroutine(DoUpAnimator());
+        }
+        else
+        {
+            TimersManager.SetTimer(0.1f, () => { SetPlayerFocus(); });
+            panelInited = true;
+        }
     }
 
     /// <summary>
@@ -139,7 +135,7 @@ public class FastRaceDialog : UIWindowBase
     /// </summary>
     private void SetPlayerFocus()
     {
-        if (playerTransform != null && centPos!= null)
+        if (playerTransform != null && centPos != null)
         {
             if (playerTransform.position.y < centPos.position.y)
             {
@@ -158,7 +154,7 @@ public class FastRaceDialog : UIWindowBase
         });
     }
 
-    private IEnumerator DoMovePlayer(Transform trans,float distancey,float localY,float druation)
+    private IEnumerator DoMovePlayer(Transform trans, float distancey, float localY, float druation)
     {
         content.DOMoveY(content.position.y - distancey, druation).SetEase(Ease.Linear);
         trans.DOLocalMoveY(trans.localPosition.y - localY, druation).SetEase(Ease.Linear);
@@ -181,18 +177,18 @@ public class FastRaceDialog : UIWindowBase
         int current = playerTransform.GetSiblingIndex();
         content.GetComponent<ContentSizeFitter>().enabled = false;
         content.GetComponent<VerticalLayoutGroup>().enabled = false;
-        playerTransform.SetParent(content.parent,true);
+        playerTransform.SetParent(content.parent, true);
         yield return new WaitForSeconds(0.5f);
         while (current > targetIndex)
         {
             if (current > targetIndex)
             {
                 current--;
-                yield return DoMovePlayer(content.GetChild(current),twoDistance,twoLocalDistance,0.5f);
+                yield return DoMovePlayer(content.GetChild(current), twoDistance, twoLocalDistance, 0.5f);
                 playerItem.SetFadeRank(current + 1);
             }
         }
-        playerTransform.SetParent(content,true);
+        playerTransform.SetParent(content, true);
         playerTransform.SetSiblingIndex(targetIndex);
         content.GetComponent<ContentSizeFitter>().enabled = true;
         content.GetComponent<VerticalLayoutGroup>().enabled = true;

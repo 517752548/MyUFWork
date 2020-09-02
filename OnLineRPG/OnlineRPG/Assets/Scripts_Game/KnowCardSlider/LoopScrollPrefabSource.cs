@@ -14,10 +14,10 @@ namespace UnityEngine.UI
         {
             if(!inited)
             {
-                SG.ResourceManager.Instance.InitPool(prefabName, poolSize);
+                SG.PoolManager.Instance.InitPool(prefabName, poolSize);
                 inited = true;
             }
-            return SG.ResourceManager.Instance.GetObjectFromPool(prefabName);
+            return SG.PoolManager.Instance.GetObjectFromPool(prefabName);
         }
     }
 }

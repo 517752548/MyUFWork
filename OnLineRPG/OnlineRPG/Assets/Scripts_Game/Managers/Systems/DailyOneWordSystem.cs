@@ -84,6 +84,7 @@ public class DailyOneWordSystem : ISystem
                 return (int) (x.StartTimeStamp - y.StartTimeStamp);
             });
             CheckCurLevel();
+            AppEngine.SSystemManager.GetSystem<NotificationSystem>().SendNotification();
         }
         else
         {

@@ -20,7 +20,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
             GameManager.GetEntity<BaseSkillManager>().Appear();
             yield return new WaitForSeconds(0.2f);
             //OnCompleted();
-            if (AppEngine.SSystemManager.GetSystem<EliteSystem>().IsReplayCurLevel())
+            if ((GameManager as CrossGameManager).TipReplay)
                 UIManager.OpenUIAsync(ViewConst.prefab_EliteLevelContinueDialog, OpenType.Replace, null, (Action<int>)OnChoose);
             else
             {

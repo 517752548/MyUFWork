@@ -4,25 +4,17 @@ using Scripts_Game.Managers;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class HomeMessageState : HomeState
+public class HomeMessageState : BaseThemeMessageState
 {
-    enum HomeMsg
+    protected HomeFsmManager HomeFsmManager => stateMachine as HomeFsmManager;
+    protected HomeThemeRoot HomeRoot => (stateMachine as HomeFsmManager)?.homeRoot;
+    
+    class HomeMsg : BaseThemeMsg
     {
-        none,
-        Rate,
-        TournamentReward,
-        FastRace,
+        public const int Unknown = 10;
     }
 
-    private HomeMsg msg = HomeMsg.none;
-
-    public override bool CheckCondition()
-    {
-        msg = CheckToShowMessage();
-        return msg != HomeMsg.none;
-    }
-
-    private HomeMsg CheckToShowMessage()
+    protected override int CheckToShowMessage()
     {
         if (Const.AutoPlay)
         {
@@ -44,27 +36,29 @@ public class HomeMessageState : HomeState
         {
             return HomeMsg.FastRace;
         }
-        
 
+        if (DataManager.businessGiftData.inited && DataManager.businessGiftData.needshowpanel == 1 && !DataManager.businessGiftData.AllGiftBuyed() && DataManager.businessGiftData.LevelEnough() && DataManager.businessGiftData.cutdownTime.Subtract(AppEngine.STimeHeart.RealTime).TotalSeconds > 0)
+        {
+            return HomeMsg.BusinessGiftPanel;
+        }
+
+        if (AppEngine.SSystemManager.GetSystem<EliteSystem>().CanShowNew() && DataManager.ProcessData.showEliteSystem == false)
+        {
+            DataManager.ProcessData.showEliteSystem = true;
+            return HomeMsg.EliteNewLevel;
+        }
         AppEngine.SyncManager.Data.ClassicLevel.ResetLastValue();
-        return HomeMsg.none;
+        return base.CheckToShowMessage();
     }
 
-    public override void Enter()
+    protected override void ShowMessage()
     {
-        base.Enter();
-        ShowMessage();
-    }
-
-    private void ShowMessage()
-    {
-        switch (msg)
+        switch (msgType)
         {
             case HomeMsg.Rate:
                 UIManager.OpenUIAsync(ViewConst.prefab_OldRateDialog, OpenType.Stack, OnUIClosed);
                 break;
             case HomeMsg.TournamentReward:
-                //TODO 展示锦标赛奖励弹板
                 AppEngine.SSystemManager.GetSystem<FastRacePlaySystem>().GetReward((ok) =>
                 {
                     if (ok)
@@ -117,8 +111,39 @@ public class HomeMessageState : HomeState
             case HomeMsg.FastRace:
                 UIManager.OpenUIAsync(ViewConst.prefab_WeekendPropagandaDialog, OpenType.Stack, OnUIClosed);
                 break;
+            case HomeMsg.EliteNewLevel:
+                Action<bool> act = bo =>
+                {
+                    if (bo)
+                    {
+                        OnCompleted();
+                        UIManager.OpenUIAsync(ViewConst.prefab_HappinessSelectLevelDialog);
+                        HomeRootFsmManager.CheckRefresh(HomeRootTab.activity);
+                    }
+                    else
+                    {
+                        OnCompleted();
+                    }
+                };
+                UIManager.OpenUIAsync(ViewConst.prefab_EliteLevelStartDialog,null,act);
+                break;
+            case HomeMsg.BusinessGiftPanel:
+                UISimpleCallBack closeback = (ui) =>
+                {
+                    OnCompleted();
+                };
+                DataManager.businessGiftData.needshowpanel = 2;
+                if (DataManager.businessGiftData.shopItem.Length == 1)
+                {
+                    UIManager.OpenUIAsync(ViewConst.prefab_ShopLimitBagOneDialog, OpenType.Stack, closeback);
+                }
+                else
+                {
+                    UIManager.OpenUIAsync(ViewConst.prefab_ShopLimitBagTwoDialog, OpenType.Stack, closeback);
+                }
+                break;
             default:
-                OnCompleted();
+                base.ShowMessage();
                 break;
         }
     }
@@ -126,11 +151,6 @@ public class HomeMessageState : HomeState
     public override void Leave()
     {
         base.Leave();
-    }
-
-    private void OnUIClosed(UIWindowBase UI)
-    {
-        OnCompleted();
     }
 
     public override void HandleEvent(string eventName)

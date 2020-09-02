@@ -8,7 +8,7 @@ using UnityEditor;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEngine;
 using UnityEngine.Experimental.AssetBundlePatching;
-
+using UnityEngine.Purchasing.Security;
 
 public class FrameworkMenuTool : EditorWindow
 {

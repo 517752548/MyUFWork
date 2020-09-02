@@ -54,7 +54,10 @@ public class PlayerHeadFrame : MonoBehaviour, IDownloadListener
 //            else
 //                PlayerProfilesDialog.ShowOtherProfile(userId);
         }
-
+        else if (!FaceBookSDK.IsFacebookLoggedIn())
+        {
+            //
+        }
     }
 
     public void SetData(string headUrl, int frameId, bool isSelf, string userId = "")
@@ -93,7 +96,7 @@ public class PlayerHeadFrame : MonoBehaviour, IDownloadListener
 //        }
 
 		//var d = AppEngine.SConfigManager.GetExcelDataItem<WordHeadFrame_Data>(ViewConst.asset_WordHeadFrame_1, frameId.ToString());
-		//AppEngine.SResourceManager.petLoadManager.LoadOnLineBundleAsync<GameObject>(d.Thumb, (GameObject obj) => { 
+		//ResourceManager.petLoadManager.LoadOnLineBundleAsync<GameObject>(d.Thumb, (GameObject obj) => { 
 		//	if (obj != null) {
 		//		Instantiate(obj, frameImage.transform);
 		//	}

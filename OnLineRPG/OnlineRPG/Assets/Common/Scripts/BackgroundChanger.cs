@@ -72,7 +72,7 @@ public class BackgroundChanger : MonoBehaviour, IDownloadListener
             OnTextureLoaded(texture);
             return;
         }
-        AppEngine.SResourceManager.LoadAssetAsync<Texture2D>(url,  ( go) =>
+        ResourceManager.LoadAsync<Texture2D>(url,  ( go) =>
         {
             
             if (!m_Textures.ContainsKey(url))

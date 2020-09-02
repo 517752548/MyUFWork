@@ -194,7 +194,7 @@ namespace BetaFramework
 
         protected void ChangeState(BaseState state)
         {
-            if (state == null)
+            if (state == null || state == currentState)
                 return;
             currentState?.Leave();
             state.SetLastState(currentState);

@@ -46,7 +46,21 @@ namespace Scripts_Game.Controllers.GamePlay.Classic.Win
 
         public void PlayGotAni(int gotCount, Action callback)
         {
-            pieces[order[gotCount - 1]].PlayAppearAni(callback);
+            if (order.Count > gotCount - 1)
+            {
+                if (pieces.Length > order[gotCount - 1])
+                {
+                    pieces[order[gotCount - 1]].PlayAppearAni(callback);
+                }
+                else
+                {
+                    callback?.Invoke();
+                }
+            }
+            else
+            {
+                callback?.Invoke();
+            }
         }
 
         public void PlayFinishAni(Action callback)

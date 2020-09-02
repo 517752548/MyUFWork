@@ -14,13 +14,14 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
 
         private bool IsRewardVideoReady()
         {
-            return false;
+            return AppEngine.SAdManager.CanShowRewardVideo(AdManager.RewardVideoCallPlace.OneWordExtraLevel);
         }
         
         public void CheckRefresh()
         {
             if (AppEngine.SSystemManager.GetSystem<DailyOneWordSystem>().CanRefreshExLevel)
             {
+                ADAnalyze.ADBtnShow("OneWord");
                 gameObject.SetActive(true);
             }
         }
@@ -29,6 +30,8 @@ namespace Scripts_Game.Controllers.GamePlay.OneWord
         {
             if (IsRewardVideoReady())
             {
+                ADAnalyze.AdBtnClick("OneWord");
+                AppEngine.SAdManager.ShowRewardVideo(AdManager.RewardVideoCallPlace.OneWordExtraLevel, OnRewarded);
             }
             else
             {

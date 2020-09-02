@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Purchasing;
 
 namespace BaseFramework
 {
@@ -38,6 +39,7 @@ namespace BaseFramework
         /// </summary>
         public AppflyerPurcherData AppflyerPurcherDataObject;
 
+        public PurchaseEventArgs purchaseEventArgs;
 
         public EventInfo()
         {
@@ -46,6 +48,7 @@ namespace BaseFramework
             eventString = new Dictionary<string, string>();
             eventBool = new Dictionary<string, bool>();
             eventObject = null;
+            purchaseEventArgs = null;
             AppflyerPurcherDataObject = null;
         }
     }

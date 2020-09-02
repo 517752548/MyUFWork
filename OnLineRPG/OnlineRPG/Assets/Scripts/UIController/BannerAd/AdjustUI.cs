@@ -14,15 +14,18 @@ public class AdjustUI : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        AdManager manager = BetaFramework.AppEngine.SAdManager;
         if (hasRectTransform)
         {
             float rectHeight = this.GetComponent<RectTransform>().rect.height;
             float screenHeight = Screen.height;
             BetaFramework.LoggerHelper.Log("rectHeight " + rectHeight + " " + Screen.height);
 
+             bannerHeight = manager.GetBannerHeight() * this.GetComponent<RectTransform>().rect.height / Screen.height;
         }
         else
         {
+            bannerHeight = manager.GetBannerHeight();
         }
         if (ResetBannerHeight())
         {
@@ -101,12 +104,14 @@ public class AdjustUI : MonoBehaviour
     private static void TrigAppfacadeShowBannerMethod()
     {
         BetaFramework.LoggerHelper.Log("ShowBanner>>>>");
+        BetaFramework.AppEngine.SAdManager.ShowBanner();
         EventDispatcher.TriggerEvent(GlobalEvents.BannerAppeared);
     }
 
     private static void TrigAppfacedHideBannerMethod()
     {
         BetaFramework.LoggerHelper.Log("HideBanner>>>>");
+        BetaFramework.AppEngine.SAdManager.HideBanner();
     }
 
     private void HideBanner()
@@ -118,7 +123,7 @@ public class AdjustUI : MonoBehaviour
 
     virtual protected bool IsBannerAvailable()
     {
-         return false;
+         return BetaFramework.AppEngine.SAdManager.IsBannerAvailable();
     }
 
     private void ARemoveAdEvent()

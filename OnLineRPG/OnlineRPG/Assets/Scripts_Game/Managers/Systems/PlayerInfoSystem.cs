@@ -84,7 +84,7 @@ public class PlayerInfoSystem : ISystem
         base.InitSystem();
         if (string.IsNullOrEmpty(randomName.Value))
         {
-            AppEngine.SResourceManager.LoadAssetAsync<NameConfig>(
+            ResourceManager.LoadAsync<NameConfig>(
                 ViewConst.asset_NameConfig_girls,
                 ok =>
                 {
@@ -233,6 +233,11 @@ public class PlayerInfoSystem : ISystem
     public int GetPlayerInstallDays()
     {
        return DateTime.Now.Subtract(DateTime.Parse(FirstLoginTime.Value)).Days;
+    }
+
+    public double GetPlayerInstallHours()
+    {
+        return AppEngine.STimeHeart.RealTime.Subtract(DateTime.Parse(FirstLoginTime.Value)).TotalHours;
     }
 
     public int GetPayDays()

@@ -63,6 +63,7 @@ Application.targetFrameRate = 60;
                     if (!trace.Contains("BetaFramework.TimersManager.Execute"))
                     {
                         BQReport.LogPlayerException(condition, trace);
+                        GameAnalyze.LogException(SceneManager.GetActiveScene().name + condition, trace);
                         if (m_IsDebugMode)
                             UIManager.ShowMessage("有报错,给程序看一下");
                     }

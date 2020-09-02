@@ -19,6 +19,7 @@ public class EmailSliderDialog : UIWindowBase
     public override void OnOpen()
     {
         base.OnOpen();
+        GameAnalyze.SettingReport("Home","Email","1");
         LoadItem();
     }
 

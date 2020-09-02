@@ -12,6 +12,7 @@ namespace Scripts_Game.Controllers.GamePlay.Cross
         public override void Enter()
         {
             base.Enter();
+            GameManager.GetEntity<CrossCellManager>().OnlyDisplay();
         }
 
         public override void Leave()

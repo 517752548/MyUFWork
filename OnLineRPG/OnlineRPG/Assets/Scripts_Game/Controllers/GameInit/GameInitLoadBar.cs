@@ -91,6 +91,7 @@ namespace Scripts_Game.Controllers.GameInit
         {
             UIManager.OpenUIAsync(ViewConst.prefab_GameLoadingWindow, (ui, para) =>
             {
+                GameAnalyze.LogLoading("14",Time.realtimeSinceStartup.ToString());
                 DataManager.ProcessData.firstGoToGameScene = true;
                 DataManager.ProcessData._GameMode = GameMode.Classic;
                 Addressables.LoadSceneAsync(WordScene.MainScene);

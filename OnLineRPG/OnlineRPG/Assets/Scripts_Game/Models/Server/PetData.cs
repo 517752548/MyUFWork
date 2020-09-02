@@ -9,7 +9,8 @@ public class PetData : BaseSyncHandData
     public string currentPetId = Const.defaultPet;
     public Dictionary<string, int> petItems = new Dictionary<string, int>();
     public bool hasNewPet = false;
-    
+    public static bool isBrowsing = false;
+
     public PetData()
     {
         if (!petItems.ContainsKey(Const.defaultPet))

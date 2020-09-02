@@ -352,7 +352,7 @@ public class BaseCellManager : GameEntity
     /// 响应上一个、下一个按钮点击
     /// </summary>
     /// <param name="next">true下一个，false上一个</param>
-    public void OnClickChangeWord(bool next)
+    public virtual void OnClickChangeWord(bool next)
     {
         BaseWord toFocusWord = null;
         int index = wordList.IndexOf(curWord);
@@ -446,7 +446,7 @@ public class BaseCellManager : GameEntity
     /// <summary>
     /// hint3使用后检查格子和word
     /// </summary>
-    public void CheckMultiWord()
+    public void CheckMultiWord(bool playAni = true, BaseWord skipAniWord = null)
     {
         List<BaseWord> newCompleteWords = new List<BaseWord>();
         GetNotCompleteWord().ForEach(word => {
@@ -457,7 +457,7 @@ public class BaseCellManager : GameEntity
         if (newCompleteWords.Count > 0)
         {
             OnWordCompleted(newCompleteWords);
-            StartCoroutine(MultiWordCompleteProcess(newCompleteWords));
+            StartCoroutine(MultiWordCompleteProcess(newCompleteWords, playAni, skipAniWord));
         }
         else
         {
@@ -465,33 +465,38 @@ public class BaseCellManager : GameEntity
         }
     }
 
-    private IEnumerator MultiWordCompleteProcess(List<BaseWord> words)
+    private IEnumerator MultiWordCompleteProcess(List<BaseWord> words, bool playAni = true, BaseWord skipAniWord = null)
     {
         GameManager.GameAnimationStart();
-        BaseCell cell;
-        bool playAniDid = false;
-        for (int i = 0; i < rowCellCount; i++)
+        if (playAni)
         {
-            playAniDid = false;
-            words.ForEach(word => {
-                // if (i == 0)
-                //     DisplayCorrectLightFrame(word);
-                // if (i >= word.Cells.Count)
-                //     return;
-                if (word.Cells.Count > i)
-                {
-                    cell = word.Cells[i];
-                    if (cell.State != CellState.none)
+            BaseCell cell;
+            bool playAniDid = false;
+            for (int i = 0; i < rowCellCount; i++)
+            {
+                playAniDid = false;
+                words.ForEach(word => {
+                    // if (i == 0)
+                    //     DisplayCorrectLightFrame(word);
+                    // if (i >= word.Cells.Count)
+                    //     return;
+                    if (skipAniWord == word)
+                        return;
+                    if (word.Cells.Count > i)
                     {
-                        cell.PlayCompletedAni();
-                        playAniDid = true;
+                        cell = word.Cells[i];
+                        if (cell.State != CellState.none)
+                        {
+                            cell.PlayCompletedAni();
+                            playAniDid = true;
+                        }
                     }
-                }
                 
-            });
+                });
             
-            if (playAniDid)
-                yield return new WaitForSeconds(0.1f);
+                if (playAniDid)
+                    yield return new WaitForSeconds(0.1f);
+            }
         }
         //DisappearAllCorrectLightFrame();
         yield return OnAnswerCorrectAniOver(words);
@@ -1191,7 +1196,7 @@ public class BaseCellManager : GameEntity
     }
 
     
-    private IEnumerator CellFlyOut(List<BaseWord> words)
+    protected virtual IEnumerator CellFlyOut(List<BaseWord> words)
     {
         wordList.ForEach(w => w.ResetAutoHintFillCacheCells());
         Dictionary<BaseCell, BaseCell> cellFromTo = new Dictionary<BaseCell, BaseCell>();
@@ -1199,7 +1204,7 @@ public class BaseCellManager : GameEntity
         {
             foreach (var cell in word.Cells)
             {
-                if (cell.FlyToCell != null && cell.FlyToCell.State != CellState.filled)
+                if (cell.FlyToCell != null && cell.FlyToCell.State != CellState.filled && !cellFromTo.ContainsKey(cell))
                     cellFromTo[cell] = cell.FlyToCell;
             }
         }

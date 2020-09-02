@@ -17,7 +17,9 @@ public class RewardVideoDialog : UIWindowBase
 
     public void ClickVideo()
     {
+        ADAnalyze.AdBtnClick("ShopClose");
         DataManager.ProcessData.advideosource = RewardSource.closeShopAD;
+        BetaFramework.AppEngine.SAdManager.ShowRewardVideo(AdManager.RewardVideoCallPlace.ShopClose);
         Close();
     }
 

@@ -4,6 +4,7 @@ using BetaFramework;
 using Scripts_Game.Managers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Purchasing;
 using UnityEngine.UI;
 
 public class ClassicQuestionRate : GameEntity
@@ -143,6 +144,12 @@ public class ClassicQuestionRate : GameEntity
                     BaseNormalWord w =
                         words.Find(word => (word as BaseNormalWord).BaseQuestion.ID == keyValuePair.Key) as
                             BaseNormalWord;
+                    GameAnalyze.LogqueFeedback(levelIndex.ToString(), keyValuePair.Key.ToString(),
+                        keyValuePair.Value.ToString(),
+                        w.BaseQuestion.Question,
+                        w.BaseQuestion.Answer,
+                        AppEngine.SSystemManager.GetSystem<TestABWordLibSystem>().GetUserTestLib(),
+                        AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().GetAbTestSpecialId());
                 }
             }
 
@@ -170,6 +177,7 @@ public class ClassicQuestionRate : GameEntity
         //CommandBinder.DispatchBinding(GameEvent.RubyFly, new RubyFlyCommand.RubyFlyData(RubyType.single, curWord.Cells[0].transform,0));
         //AppEngine.SyncManager.Data.lastRateRewardTime.Value = AppEngine.STimeHeart.RealTime.ToString("yyyy-MM-dd");
         GameManager.GameAnimationStart();
+        FlyRewardView.instance.RateFlyCoin((curWord as ClassicNormalWord).GetAllCoinPos(), RefreshReward);
         RewardMgr.RewardInventory(InventoryType.Coin, (curWord as ClassicNormalWord).RateRewardCoin,
             RewardSource.queFeedback);
         StartCoroutine(

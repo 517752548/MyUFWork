@@ -15,7 +15,7 @@ public class DailyWinState : BaseWinState
         // _commonRewardData.coin = 20;
         // _commonRewardData.callback = DailyCallBack;
         // UIManager.OpenUIAsync(ViewConst.prefab_CommonRewardDialog,OpenType.Replace,null,_commonRewardData);
-        UIManager.OpenUIAsync(ViewConst.prefab_DailyWinDialog);
+        UIManager.OpenUIAsync(ViewConst.prefab_DailyWinDialog, null, GameManager.GetEntity<DailyCellManager>().CellCount);
         DailyCallBack();
         base.Enter();
     }

@@ -58,7 +58,7 @@ namespace BetaFramework
         /// <param name="parent"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T Spawn<T>(string prefabName, T prefab, Vector3 pos = default(Vector3), Quaternion rot = default(Quaternion), Transform parent = null) 
+        public T Spawn<T>(string prefabName, T prefab, Vector3 pos = default(Vector3), Quaternion rot = default(Quaternion), Transform parent = null)
             where T : Transform
         {
             for (int i = 0; i < m_ObjectPools.Count; i++)
@@ -130,13 +130,13 @@ namespace BetaFramework
                 if (_poolObject == null)
                 {
                     _poolObject = new GameObject("Pool");
-                    _poolObject.transform.position = new Vector3(9999,9999,0);
+                    _poolObject.transform.position = new Vector3(9999, 9999, 0);
                     Object.DontDestroyOnLoad(_poolObject);
                 }
                 return _poolObject;
             }
         }
-        private Dictionary<string,Queue<GameObject>> objectPool = new Dictionary<string, Queue<GameObject>>();
+        private Dictionary<string, Queue<GameObject>> objectPool = new Dictionary<string, Queue<GameObject>>();
 
         /// <summary>
         /// 申请一个对象
@@ -148,7 +148,7 @@ namespace BetaFramework
             if (objectPool.ContainsKey(assetName) && objectPool[assetName].Count > 0)
             {
                 GameObject obj = objectPool[assetName].Dequeue();
-                if (!ReferenceEquals(obj,null))
+                if (!ReferenceEquals(obj, null))
                 {
                     return obj;
                 }
@@ -157,26 +157,26 @@ namespace BetaFramework
             }
             else
             {
-               GameObject gobject = ResourcesManager.Load<GameObject>(assetName);
-               GameObject obj;
-               Queue<GameObject> objQueue = new Queue<GameObject>();
-               for (int i = 0; i < 10; i++)
-               {
-                   obj = Object.Instantiate(gobject);
-                   obj.transform.SetParent(poolObject.transform,false);
-                   objQueue.Enqueue(obj);
-               }
+                GameObject gobject = PreLoadManager.GetPreLoad<GameObject>(PreLoadConst.preload_Prefab, assetName);
+                GameObject obj;
+                Queue<GameObject> objQueue = new Queue<GameObject>();
+                for (int i = 0; i < 10; i++)
+                {
+                    obj = Object.Instantiate(gobject);
+                    obj.transform.SetParent(poolObject.transform, false);
+                    objQueue.Enqueue(obj);
+                }
 
-               if (objectPool.ContainsKey(assetName))
-               {
-                   objectPool[assetName] = objQueue;
-               }
-               else
-               {
-                   objectPool.Add(assetName,objQueue);
-               }
+                if (objectPool.ContainsKey(assetName))
+                {
+                    objectPool[assetName] = objQueue;
+                }
+                else
+                {
+                    objectPool.Add(assetName, objQueue);
+                }
 
-               return Spawn(assetName);
+                return Spawn(assetName);
             }
 
             return null;
@@ -188,9 +188,9 @@ namespace BetaFramework
         /// </summary>
         /// <param name="assetName"></param>
         /// <param name="obj"></param>
-        public void Despawn(string assetName,GameObject obj)
+        public void Despawn(string assetName, GameObject obj)
         {
-            obj.transform.SetParent(poolObject.transform,false);
+            obj.transform.SetParent(poolObject.transform, false);
             if (objectPool.ContainsKey(assetName))
             {
                 objectPool[assetName].Enqueue(obj);
@@ -199,10 +199,10 @@ namespace BetaFramework
             {
                 Queue<GameObject> objQueue = new Queue<GameObject>();
                 objQueue.Enqueue(obj);
-                objectPool.Add(assetName,objQueue);
+                objectPool.Add(assetName, objQueue);
             }
         }
         #endregion
     }
-    
+
 }

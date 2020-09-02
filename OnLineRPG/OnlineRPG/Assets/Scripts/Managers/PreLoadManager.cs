@@ -37,7 +37,7 @@ public class PreLoadManager
         }
         else
         {
-            ResourceManager.LoadAsync<TextAsset>(preloadList, (Dictionary<string,TextAsset> dict) =>
+            ResourceManager.Preload<TextAsset>(preloadList, (Dictionary<string,TextAsset> dict) =>
             {
                 Dictionary<string,TextAsset> preloads = new Dictionary<string, TextAsset>(preloadList.Count);
                 foreach (string dictKey in dict.Keys)
@@ -64,7 +64,7 @@ public class PreLoadManager
         }
         else
         {
-            ResourceManager.LoadAsync<GameObject>(preloadList, (dict) =>
+            ResourceManager.Preload<GameObject>(preloadList, (dict) =>
             {
                 Dictionary<string,GameObject> preloads = new Dictionary<string, GameObject>(preloadList.Count);
                 foreach (string dictKey in dict.Keys)
@@ -91,7 +91,7 @@ public class PreLoadManager
         }
         else
         {
-            ResourceManager.LoadAsync<ScriptableObject>(preloadList, (dict) =>
+            ResourceManager.Preload<ScriptableObject>(preloadList, (dict) =>
             {
                 Dictionary<string,ScriptableObject> preloads = new Dictionary<string, ScriptableObject>(preloadList.Count);
                 foreach (string dictKey in dict.Keys)
@@ -118,7 +118,7 @@ public class PreLoadManager
         }
         else
         {
-            ResourceManager.LoadAsync<Sprite>(preloadList, (dict) =>
+            ResourceManager.Preload<Sprite>(preloadList, (dict) =>
             {
                 Dictionary<string,Sprite> preloads = new Dictionary<string, Sprite>(preloadList.Count);
                 foreach (string dictKey in dict.Keys)

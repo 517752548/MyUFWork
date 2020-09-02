@@ -27,7 +27,8 @@ public class VideoGiftDialog : UIWindowBase
         TimersManager.SetTimer(0.2f,
             () =>
             {
-               
+                CommandBinder.DispatchBinding(GameEvent.RubyFly,
+                    new RubyFlyCommand.RubyFlyData(RubyType.stack, pos, rewardCoin));
             });
         Close();
     }

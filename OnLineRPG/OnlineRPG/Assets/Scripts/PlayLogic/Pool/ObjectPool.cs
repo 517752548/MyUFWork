@@ -29,7 +29,7 @@ public class ObjectPool : MonoBehaviour
 
     void LoadEffect(string resName,Action<SimpleObjectPool<GameObject>> callBack)
     {
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(resName, ( go) =>
+        ResourceManager.LoadAsync<GameObject>(resName, ( go) =>
         {
             SimpleObjectPool<GameObject> gopool =
                 new SimpleObjectPool<GameObject>(() => Instantiate(go, transform), EffectReset, 5);

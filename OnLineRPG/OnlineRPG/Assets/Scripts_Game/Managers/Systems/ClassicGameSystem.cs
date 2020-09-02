@@ -211,6 +211,7 @@ public class ClassicGameSystem : ISystem
 
     public async void LoadLocalClassicLevel(int levelIndex, Action<bool> callback)
     {
+        GameAnalyze.LogEvent("ClickLevel", levelIndex.ToString());
         LoggerHelper.Log("Version:" + wordVersion);
         if (classicLevelCache.ContainsKey(levelIndex))
         {
@@ -263,6 +264,8 @@ public class ClassicGameSystem : ISystem
                                         classicSubworldCache[levelIndex] = _classicSubWorldEntity;
                                         classicPackageCache[levelIndex] = _classicPackage;
                                         classicLevelCache[levelIndex] = level;
+                                        AppEngine.SSystemManager.GetSystem<NotificationSystem>()
+                                            .SendAnswerTips(level.Questions[level.Questions.Count - 1].Answer);
                                         callback?.Invoke(true);
                                     }
                                     else
@@ -298,6 +301,7 @@ public class ClassicGameSystem : ISystem
             return;
         }
 
+        GameAnalyze.LogEvent("ClickLevel", levelIndex.ToString());
         LoggerHelper.Log("Version:" + wordVersion);
         if (classicLevelCache.ContainsKey(levelIndex))
         {
@@ -355,6 +359,9 @@ public class ClassicGameSystem : ISystem
                                                 classicSubworldCache[levelIndex] = _classicSubWorldEntity;
                                                 classicPackageCache[levelIndex] = _classicPackage;
                                                 classicLevelCache[levelIndex] = level;
+                                                AppEngine.SSystemManager.GetSystem<NotificationSystem>()
+                                                    .SendAnswerTips(level.Questions[level.Questions.Count - 1]
+                                                        .Answer);
                                                 callback?.Invoke(true);
                                             }
                                             else
@@ -410,6 +417,24 @@ public class ClassicGameSystem : ISystem
 
         curProgress = completeLevelIndex - startLevelIndex;
         totalProgress = endLevelIndex - startLevelIndex;
+    }
+
+    /// <summary>
+    /// 获取比参数大的第一个奖励level
+    /// </summary>
+    /// <param name="rewardLevel">奖励level</param>
+    /// <returns>0表示未获取到，即当前任务为最大level</returns>
+    public int GetNextRewardLevel(int rewardLevel)
+    {
+        var res = _subWorldRewardTable.dataList.Find(x => x.LevelIndex > rewardLevel);
+        if (res == null)
+        {
+            return 0;
+        }
+        else
+        {
+            return res.LevelIndex;
+        }
     }
 
     public string GetSubWorldRewardId(int completedLevelIndex)

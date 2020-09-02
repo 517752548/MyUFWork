@@ -5,6 +5,7 @@ using BetaFramework;
 using UnityEngine;
 using UnityEngine.Networking;
 using Random = UnityEngine.Random;
+using com.forads.sdk;
 using PathC;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
@@ -30,6 +31,29 @@ public partial class SROptions
 	{
 		throw new Exception("test Exception");
 	}
+
+	[Category("SDK Test"), DisplayName("展示插屏")]
+	public void ShowInterstitial()
+	{
+		AppEngine.SAdManager.ShowInterstitialNoCondition(AdManager.InterstitialCallPlace.none);
+    }
+
+    [Category("SDK Test"), DisplayName("显示插屏分组AB")]
+    public void ShowInGroupAB()
+    {
+        UIManager.ShowMessage(string.Format("插屏分组:{0}", AppEngine.SSystemManager.GetSystem<TestABSystem>().GetUserTestLib()));
+    }
+
+    [Category("SDK Test"), DisplayName("视频")]
+	public void ShowReward()
+	{
+		BetaFramework.AppEngine.SAdManager.ShowRewardVideo(AdManager.RewardVideoCallPlace.ShopBottom);
+	}
+	[Category("SDK Test"), DisplayName("广告测试")]
+	public void ShowTestReward()
+	{
+		FORADS.getInstance().showTestAdView();
+	}
 	[Category("SDK Test"), DisplayName("闪退")]
     public void ForceExit()
     {
@@ -54,6 +78,12 @@ public partial class SROptions
     {
 	    AppEngine.SyncManager.Data.Coin.Value = 999999;
     }
+    [Category("数据"), DisplayName("当做AOE")]
+    public void SetAOE()
+    {
+	    Record.SetInt("AFBack", 1);
+    }
+    
     [Category("数据"), DisplayName("自动填词")]
     public void AutoInputLevel()
     {
@@ -208,7 +238,28 @@ public partial class SROptions
         UIManager.ShowMessage(string.Format("跳关成功:{0}",AppEngine.SSystemManager.GetSystem<ClassicGameSystem>().currentLevel.Value));
     }
 
-    
+    [Category("数据"), DisplayName("礼包信息")]
+    public void WinLevel()
+    {
+	    // BaseGameManager game = Object.FindObjectOfType<BaseGameManager>();
+	    // if (game)
+	    // {
+		   //  game.WinGame();
+	    // }
+	    if (DataManager.businessGiftData.inited)
+	    {
+		    Debug.LogError("初始化了");
+		    Debug.LogError(DataManager.businessGiftData.needshowpanel);
+		    Debug.LogError(DataManager.businessGiftData.AllGiftBuyed());
+		    Debug.LogError(DataManager.businessGiftData.LevelEnough());
+		    Debug.LogError(AppEngine.SSystemManager.GetSystem<BusinessSystem>().timeOut);
+		    
+	    }
+	    else
+	    {
+		    Debug.LogError("初始化失败了");
+	    }
+    }
     
     [Category("数据"), DisplayName("Count")]
     [Increment(1), NumberRange(0, 50)]

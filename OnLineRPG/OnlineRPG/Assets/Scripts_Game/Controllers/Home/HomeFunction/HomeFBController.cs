@@ -52,6 +52,7 @@ public class HomeFBController : MonoBehaviour
         {
             return;
         }
+        GameAnalyze.SettingReport("Home","FB","1");
         UIManager.OpenUIAsync(ViewConst.prefab_FBSignInDialog);
     }
 }

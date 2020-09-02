@@ -63,8 +63,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 58d03b63cb2e03646a3c2bbacd686732, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -86,9 +84,9 @@ GameObject:
   - component: {fileID: 1704202814994617988}
   - component: {fileID: 1010067761148456779}
   - component: {fileID: 1775312547900485349}
-  - component: {fileID: 6635789111513563223}
   - component: {fileID: 2657633618167177137}
   - component: {fileID: 3635071579241138786}
+  - component: {fileID: 8156806681911445678}
   m_Layer: 0
   m_Name: EmailEntrance
   m_TagString: Untagged
@@ -157,7 +155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6635789111513563223}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -168,8 +166,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!222 &1010067761148456779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -196,8 +192,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -207,21 +201,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &6635789111513563223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4072560017567955509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701620d481d3f2b478c3cffc3181a2c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  childHomeUIs: []
-  parentCtrl: {fileID: 0}
-  Weight: 0
 --- !u!114 &2657633618167177137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +234,21 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &8156806681911445678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072560017567955509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3975990e10a6f491c887a256d5c3055d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childHomeUIs: []
+  parentCtrl: {fileID: 0}
+  Weight: 0
 --- !u!1 &7671682768765937677
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,8 +312,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0aa309a8acd7da94f8d185d56fbff9d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1

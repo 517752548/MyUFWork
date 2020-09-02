@@ -3,7 +3,8 @@ using System;
 public class ActivityThemeRoot : BaseThemeRoot
 {
     public ActivityFsmManager FsmManager => fsmManager as ActivityFsmManager;
-    void Awake()
+
+    public override void Init(HomeRoot root)
     {
         if (fsmManager == null)
         {
@@ -14,7 +15,9 @@ public class ActivityThemeRoot : BaseThemeRoot
                 FsmManager.Init(this);
             }
         }
+        base.Init(root);
     }
+
     public override bool IsIdle()
     {
         return FsmManager.IsIdle();
@@ -22,6 +25,5 @@ public class ActivityThemeRoot : BaseThemeRoot
     public override void OnEnter()
     {
         base.OnEnter();
-        FsmManager.Enter();
     }
 }

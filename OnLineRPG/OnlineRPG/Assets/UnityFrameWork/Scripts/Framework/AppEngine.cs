@@ -11,13 +11,24 @@ namespace BetaFramework
         private static ModuleManager modules = null;
 
         public static DownloadManager SDownloadManager;
-        public static ResourcesManager SResourceManager;
         public static ObjectPoolManager SObjectPoolManager;
         public static SoundManager SSoundManager;
         public static TimersManager STimersManager;
         public static GameSettingManager SGameSettingManager;
         public static UIManager SUIManager;
+        public static SDKManager SSDKManager;
 
+        private static PurchaserManager s_PurchaserManager;
+        public static PurchaserManager SPurchaserManager
+        {
+            get
+            {
+                if (s_PurchaserManager == null || !s_PurchaserManager.Enable)
+                    s_PurchaserManager = modules.FindModule<PurchaserManager>();
+                return s_PurchaserManager;
+            }
+        }
+        public static AdManager SAdManager;
         public static NetworkManager SNetworkManager;
 //        public static AsyncTaskManager STaskManager;
 
@@ -42,7 +53,10 @@ namespace BetaFramework
             SObjectPoolManager = Modules.Registered<ObjectPoolManager>();
             SSoundManager = Modules.Registered<SoundManager>();
             SUIManager = Modules.Registered<UIManager>();
+            s_PurchaserManager = Modules.Registered<PurchaserManager>();
+            SAdManager = Modules.Registered<AdManager>();
             SNetworkManager = Modules.Registered<NetworkManager>();
+            SSDKManager = Modules.Registered<SDKManager>();
 //            STaskManager = Modules.Registered<AsyncTaskManager>();
             SSystemManager = new SystemManager();
             Modules.Registered<KeyEventManager>();
@@ -53,8 +67,6 @@ namespace BetaFramework
             s_InitSuccess = callback;
             
             SNetworkReachability = Application.internetReachability;
-
-            SResourceManager = Object.FindObjectOfType<ResourcesManager>();
 
             OnLoadConfigSuccess();
         }
@@ -113,8 +125,15 @@ namespace BetaFramework
 
         public static void ApplicationPause(bool pause)
         {
+            if (SNetworkReachability == NetworkReachability.NotReachable &&
+                SNetworkReachability != Application.internetReachability)
+            {
+                CommandBinder.DispatchBinding(GameEvent.AppRestart);
+            }
             SSystemManager.Pause(pause);
             Modules.Pause(pause);
+            if (SSystemManager.GetSystem<NotificationSystem>() != null)
+                AppEngine.SSystemManager.GetSystem<NotificationSystem>().CheckPlayerClickNotifi();
         }
 
         public static void AddDontGameObject(GameObject go)
@@ -132,6 +151,7 @@ namespace BetaFramework
             SSystemManager.OnEnterUI(UiToSwitch);
             if (UiToSwitch == GameUI.Home)
             {
+                GameAnalyze.LogusersActive();
             }
         }
     }

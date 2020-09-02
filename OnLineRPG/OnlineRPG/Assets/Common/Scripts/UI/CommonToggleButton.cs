@@ -34,6 +34,9 @@ public class CommonToggleButton : AnimationToggle
         IsOn = currentBool.Value;
         AppEngine.SSoundManager.PlaySFX(ViewConst.wav_btn_normal);
         clickDelegate?.Invoke();
-
+        if (From != "no")
+        {
+            GameAnalyze.SettingReport(From, ReportName, currentBool.Value.ToString());
+        }
     }
 }

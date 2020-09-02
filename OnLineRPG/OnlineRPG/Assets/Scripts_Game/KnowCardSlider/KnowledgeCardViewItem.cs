@@ -156,6 +156,7 @@ public class KnowledgeCardViewItem : MonoBehaviour
         }
         else
         {
+            GameAnalyze.LogblogClick(cardId, "1");
             heartImage.gameObject.SetActive(true);
             _localKnowledgeCard.isClickHeart = 1;
             _localKnowledgeCard.Praise_points += 1;
@@ -185,6 +186,7 @@ public class KnowledgeCardViewItem : MonoBehaviour
         AppEngine.SSoundManager.PlaySFX(ViewConst.wav_blog_itemclick);
         newFlagImage.gameObject.SetActive(false);
         _localKnowledgeCard.isNew = 1;
+        GameAnalyze.LogblogClick(cardId, "3");
         KnowCardIdManager.getInstance().addId(KnowCardIdManager.getInstance().showCard, this.cardId);
         storyPanel.SetActive(true);
     }

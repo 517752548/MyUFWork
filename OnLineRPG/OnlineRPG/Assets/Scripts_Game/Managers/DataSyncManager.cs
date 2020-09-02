@@ -6,7 +6,8 @@ using System.Reflection;
 using Bag;
 using BetaFramework;
 using Data.Request;
- using Newtonsoft.Json;
+using Facebook.Unity;
+using Newtonsoft.Json;
 using SimpleJson;
 using System.Linq;
 using UnityEngine;
@@ -21,7 +22,7 @@ public class DataSyncManager : IModule
     private bool isDuringSync = false;
 
     public bool IsDuringSync => isDuringSync;
-    
+
     public override void Init()
     {
         Data = new SyncDataAccesser();
@@ -54,8 +55,8 @@ public class DataSyncManager : IModule
             isNetEnable = isNet;
         }
     }
-    
-    
+
+
     public override void Shut()
     {
         base.Shut();
@@ -86,10 +87,10 @@ public class DataSyncManager : IModule
             {
                 back?.Invoke();
             });
-            
+
         }, true, true);
     }
-   
+
     public void DoSync(Action<bool, bool> resultCallback, bool uploadAll = false, bool forceExecute = false)
     {
 #if UNITY_EDITOR
@@ -152,7 +153,7 @@ public class DataSyncManager : IModule
         {
             DataManager.ProcessData.cancelFirstGoToGameScene = true;
         }
-        
+
         // if (SceneManager.GetActiveScene().name == WordScene.Main)
         // {
         //     LoggerHelper.Error("数据同步刷新UI");
@@ -198,31 +199,30 @@ public class SyncDataAccesser
     public IntSyncField Hint4 { get; private set; }
     public BoolSyncField Hint4Unlock { get; private set; }
     public IntSyncField Bee { get; private set; }
-    
+
     public StringSyncField TodayKey { get; private set; }
-    
+
     public IntSyncField Stars { get; private set; }
     public ObjSyncField<PetData> Pets { get; private set; }
-    public ObjSyncField<TitleData> Titles { get; private set; }
     //public ObjSyncField<KnowledgeCardData> KnowledgeCards { get; private set; }
-    
+
     public BoolSyncField ToadyFinished { get; private set; }
-    
+
     public IntSyncField fansNumber { get; private set; }
-    
+
     public StringSyncField lastRateRewardTime { get; private set; }
-    
+
     public StringSyncField MonKey { get; private set; }
-    
+
     public IntSyncField VideoShowTimes { get; private set; }
-    
+
     public BoolSyncField IsRemoveAd { get; private set; }
-    
+
     public StringSyncField OneWordLastCompleteID { get; private set; }
     public StringSyncField OneWordLastCompleteExID { get; private set; }
     public StringSyncField OneWordExLevelStartID { get; private set; }
     public StringSyncField OneWordCurExID { get; private set; }
-    
+
     public BoolSyncField GuideFirstWord { get; private set; }
     public BoolSyncField GuideWelcome { get; private set; }
     public BoolSyncField GuideHint1Unlock { get; private set; }
@@ -237,15 +237,19 @@ public class SyncDataAccesser
     public BoolSyncField GuideBeeReward { get; private set; }
     public BoolSyncField GuideBeeUse { get; private set; }
     public BoolSyncField GuideThemeWord { get; private set; }
-    
+
     public ObjCompressSyncField<EliteData> Elitedata { get; private set; }
+    //奖杯
     public IntSyncField Cup { get; private set; }
     public IntSyncField EliteTicket { get; private set; }
-    
+    public IntSyncField RewardCup { get; private set; }
+    public IntSyncField RewardLevel { get; private set; }
+    public IntSyncField currentTitleId { get; private set; }
+
     private SyncData _syncData;
     private List<SyncBaseField> allFields;
     public bool _ignoreChange;
-    
+
     public void Init()
     {
         DataVersion = new RecordExtra.IntPrefData("sync_data_version", 0);
@@ -258,15 +262,15 @@ public class SyncDataAccesser
         allFields = new List<SyncBaseField>();
         _syncData = new SyncData
         {
-            dataVersion = DataVersion.Value, 
+            dataVersion = DataVersion.Value,
             syncData = new PlayerSyncData()
         };
-        
-        UserTag = InitStringField(x => x.playerTag,"");
+
+        UserTag = InitStringField(x => x.playerTag, "");
         ClassicLevel = InitIntField(x => x.classicLevel, 0, PrefKeys.ClassicGameLevelIndex);
         SignTimes = InitIntField(x => x.signTimes, 0, "player_sign_times");
         LastSignDate = InitStrDateField(x => x.lastSignDate, DateTime.MinValue, "player_last_sign_date");
-        
+
         Bee = InitIntField(x => x.bee, 0);
         Coin = InitIntField(x => x.coin, 0);
         Hint1 = InitIntField(x => x.hint1, 0);
@@ -277,14 +281,13 @@ public class SyncDataAccesser
         Hint3Unlock = InitBoolField(x => x.hint3unlock, false);
         Hint4 = InitIntField(x => x.hint4, 0);
         Hint4Unlock = InitBoolField(x => x.hint4unlock, false);
-        TodayKey = InitStringField(x => x.todayKey, "",PrefKeys.DailyDay);
-        MonKey = InitStringField(x => x.monKey, "",PrefKeys.DailyMon);
+        TodayKey = InitStringField(x => x.todayKey, "", PrefKeys.DailyDay);
+        MonKey = InitStringField(x => x.monKey, "", PrefKeys.DailyMon);
         Pets = InitObjField(x => x.pets, new PetData());
-        Titles = InitObjField(x => x.titles, new TitleData());
-        
-        ToadyFinished = InitBoolField(x => x.toadyFinished, false,PrefKeys.DailyFinished);
+
+        ToadyFinished = InitBoolField(x => x.toadyFinished, false, PrefKeys.DailyFinished);
         Stars = InitIntField(x => x.stars, 0, PrefKeys.DailyStars);
-        
+
         //KnowledgeCards = InitObjField(x => x.cards, new KnowledgeCardData());
 
         fansNumber = InitIntField(x => x.fansNumber, 0, "fansNumber");
@@ -292,7 +295,7 @@ public class SyncDataAccesser
         IsRemoveAd = InitBoolField(x => x.isRemoveAd, false, PrefKeys.Remove_Ads);
         VideoShowTimes = InitIntField(x => x.videoShowTimes, 0, PrefKeys.RewardVideo_ShowTimes);
         lastRateRewardTime = InitStringField(x => x.lastRateRewardTime, "1970xx", "RateQuestionTime");
-        
+
         GuideFirstWord = InitBoolField(x => x.guideFirstWord, false, "guide_shown_first_word");
         GuideWelcome = InitBoolField(x => x.guideWelcome, false, "guide_shown_welcome");
         GuideHint1Unlock = InitBoolField(x => x.guideHint1Unlock, false, "guide_shown_hint1unlock");
@@ -307,15 +310,18 @@ public class SyncDataAccesser
         GuideBeeReward = InitBoolField(x => x.guideBeeReward, false, "guide_shown_bee_reward");
         GuideBeeUse = InitBoolField(x => x.guideBeeUse, false, "guide_shown_bee_use");
         GuideThemeWord = InitBoolField(x => x.guideThemeWord, false, "guide_shown_theme_word");
-        
+
         OneWordLastCompleteID = InitStringField(x => x.oneWordLastCompleteID, "", "oneword_last_ID");
         OneWordLastCompleteExID = InitStringField(x => x.oneWordLastCompleteExID, "", "oneword_last_ex_id");
         OneWordExLevelStartID = InitStringField(x => x.oneWordExLevelStartID, "", "oneword_ex_start_ID");
         OneWordCurExID = InitStringField(x => x.oneWordCurExID, "", "oneword_ex_level_ID");
         Elitedata = InitCompressObjField(x => x.elidate, new EliteData(), "elidate");
-        
+
         Cup = InitIntField(x => x.cup, -1);
         EliteTicket = InitIntField(x => x.eliteTicket, 0);
+        RewardCup = InitIntField(x => x.rewardCup, -1);
+        RewardLevel = InitIntField(x => x.rewardLevel, -1);
+        currentTitleId = InitIntField(x => x.currentTitleId, -1);
         MoveOldData();
     }
 
@@ -334,10 +340,10 @@ public class SyncDataAccesser
         var key = typeof(Bag.Coin).FullName;
         if (Record.HasKey(key))
         {
-             var d = Record.GetObject<Bag.Coin>(key, null);
-             _syncData.syncData.coin = d.Count;
-             Record.DeleteKey(key);
-             Coin.UpdateSave();
+            var d = Record.GetObject<Bag.Coin>(key, null);
+            _syncData.syncData.coin = d.Count;
+            Record.DeleteKey(key);
+            Coin.UpdateSave();
         }
         key = typeof(Bag.Hint1).FullName;
         if (Record.HasKey(key))
@@ -385,8 +391,8 @@ public class SyncDataAccesser
             var oldData = Record.GetObject<Bag.PetItem>(key, null);
             _syncData.syncData.pets = new PetData
             {
-                currentPetId = oldData.currentPetId, 
-                petItems = oldData.petItems, 
+                currentPetId = oldData.currentPetId,
+                petItems = oldData.petItems,
                 hasNewPet = oldData.hasNewPet
             };
             Record.DeleteKey(key);
@@ -424,15 +430,23 @@ public class SyncDataAccesser
             _syncData.syncData.cup = fansNumber.Value;
             Cup.UpdateSave();
         }
+        if (RewardCup.Value < 0) {
+            _syncData.syncData.rewardCup = fansNumber.Value;//小于这个值的target已经发放
+            RewardCup.UpdateSave();
+        }
+        if (RewardLevel.Value < 0) {
+            _syncData.syncData.rewardLevel = ClassicLevel.Value - 1;//当前关卡小1的奖励已经发放
+            RewardLevel.UpdateSave();
+        }
     }
 
     public string GetDataJson()
     {
         _syncData.dataVersion = DataVersion.Value;
         string json = JsonConvert.SerializeObject(new SyncRequest(ServerCode.DataSync, _syncData));
-        if (_ignoreChange || _syncData.dataVersion <= 0) 
+        if (_ignoreChange || _syncData.dataVersion <= 0)
             return json;
-        
+
         var json_param = SimpleJson.SimpleJson.DeserializeObject<JsonObject>(json);
         json_param.TryGetValue("data", out var data);
         ((JsonObject)data).TryGetValue("syncData", out var syncData);
@@ -461,7 +475,7 @@ public class SyncDataAccesser
         //     }
         // }
         json = json_param.ToString();
-    
+
         return json;
     }
 
@@ -488,77 +502,77 @@ public class SyncDataAccesser
         //当天版本是1.1.7 五个版本后打开就可以了，有问题是程江的锅
         //allFields.ForEach(f => f.Reset());
     }
-    
-    private StringSyncField InitStringField(Expression<Func<PlayerSyncData, string>> memberAccess, 
-        string defVal, string key=null)
+
+    private StringSyncField InitStringField(Expression<Func<PlayerSyncData, string>> memberAccess,
+        string defVal, string key = null)
     {
         var f = new StringSyncField(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    
-    private BoolSyncField InitBoolField(Expression<Func<PlayerSyncData, bool>> memberAccess, 
-        bool defVal, string key=null)
+
+    private BoolSyncField InitBoolField(Expression<Func<PlayerSyncData, bool>> memberAccess,
+        bool defVal, string key = null)
     {
         var f = new BoolSyncField(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    
-    private IntSyncField InitIntField(Expression<Func<PlayerSyncData, int>> memberAccess, 
-        int defVal, string key=null)
+
+    private IntSyncField InitIntField(Expression<Func<PlayerSyncData, int>> memberAccess,
+        int defVal, string key = null)
     {
         var f = new IntSyncField(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    
-    private FloatSyncField InitFloatField(Expression<Func<PlayerSyncData, float>> memberAccess, 
-        float defVal, string key=null)
+
+    private FloatSyncField InitFloatField(Expression<Func<PlayerSyncData, float>> memberAccess,
+        float defVal, string key = null)
     {
         var f = new FloatSyncField(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    
-    private ObjSyncField<T> InitObjField<T>(Expression<Func<PlayerSyncData, object>> memberAccess, 
-        T defVal, string key=null) where T : BaseSyncHandData, new()
+
+    private ObjSyncField<T> InitObjField<T>(Expression<Func<PlayerSyncData, object>> memberAccess,
+        T defVal, string key = null) where T : BaseSyncHandData, new()
     {
         var f = new ObjSyncField<T>(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    private ObjCompressSyncField<T> InitCompressObjField<T>(Expression<Func<PlayerSyncData, object>> memberAccess, 
-        T defVal, string key=null) where T : BaseSyncHandData, new()
+    private ObjCompressSyncField<T> InitCompressObjField<T>(Expression<Func<PlayerSyncData, object>> memberAccess,
+        T defVal, string key = null) where T : BaseSyncHandData, new()
     {
         var f = new ObjCompressSyncField<T>(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    private StrDateSyncField InitStrDateField(Expression<Func<PlayerSyncData, string>> memberAccess, 
-        DateTime defVal, string key=null)
+    private StrDateSyncField InitStrDateField(Expression<Func<PlayerSyncData, string>> memberAccess,
+        DateTime defVal, string key = null)
     {
         var f = new StrDateSyncField(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    
-    private DateSyncField InitDateField(Expression<Func<PlayerSyncData, DateTime>> memberAccess, 
-        DateTime defVal, string key=null)
+
+    private DateSyncField InitDateField(Expression<Func<PlayerSyncData, DateTime>> memberAccess,
+        DateTime defVal, string key = null)
     {
         var f = new DateSyncField(ref _syncData, GetFieldName(memberAccess), key, defVal);
         f.Init();
         allFields.Add(f);
         return f;
     }
-    
+
     private static string GetFieldName<T1, T2>(Expression<Func<T1, T2>> memberAccess)
     {
         return ((MemberExpression)memberAccess.Body).Member.Name;
@@ -569,12 +583,12 @@ public class SyncDataAccesser
 public class SyncBaseField
 {
     public bool IsSyncDataChanged { get; protected set; }
-    
+
     public virtual void UpdateSave()
     {
         IsSyncDataChanged = false;
     }
-    
+
     public virtual void UpdateRead()
     {
     }
@@ -586,7 +600,7 @@ public class SyncBaseField
 
     public virtual void Reset()
     {
-        
+
     }
 
     public virtual string FieldName { get; }
@@ -635,7 +649,7 @@ public abstract class SyncField<T> : SyncBaseField
         {
             Delta = value;
             OnDataChanged((T)(_syncDataField.GetValue(_syncData.syncData)), value);
-            _syncDataField.SetValue(_syncData.syncData, value); 
+            _syncDataField.SetValue(_syncData.syncData, value);
             SaveRecord(_key, value);
         }
     }
@@ -719,7 +733,7 @@ public abstract class SyncField<T> : SyncBaseField
         get => Record.GetBool(_key + "_change", true);
         set => Record.SetBool(_key + "_change", value);
     }
-    
+
     public event Action DataUpdateEvent
     {
         add
@@ -743,7 +757,7 @@ public abstract class SyncField<T> : SyncBaseField
 
 public class StringSyncField : SyncField<string>
 {
-    public StringSyncField(ref SyncData syncData, string name, string key, string defVal) 
+    public StringSyncField(ref SyncData syncData, string name, string key, string defVal)
         : base(ref syncData, name, key, defVal)
     {
     }
@@ -771,7 +785,7 @@ public class StringSyncField : SyncField<string>
 
 public class BoolSyncField : SyncField<bool>
 {
-    public BoolSyncField(ref SyncData syncData, string name, string key, bool defVal) 
+    public BoolSyncField(ref SyncData syncData, string name, string key, bool defVal)
         : base(ref syncData, name, key, defVal)
     {
     }
@@ -791,46 +805,46 @@ public class BoolSyncField : SyncField<bool>
         return v1 == v2;
     }
 }
- 
-public class IntSyncField : SyncField<int>
- {
-     public IntSyncField(ref SyncData syncData, string name, string key, int defVal) 
-         : base(ref syncData, name, key, defVal)
-     {
-         Delta = 0;
-     }
- 
-     protected override void OnDataChanged(int oldData, int newData)
-     {
-         Delta += (newData - oldData);
-         base.OnDataChanged(oldData, newData);
-     }
- 
-     protected override int GetRecord(string key, int defVal)
-     {
-         return Record.GetInt(key, defVal);
-     }
- 
-     protected override void SaveRecord(string key, int val)
-     {
-         Record.SetInt(key, val);
-     }
 
-     public override void Reset()
-     {
-         base.Reset();
-         Delta = 0;
-     }
-     
-     protected override bool IsEquals(int v1, int v2)
-     {
-         return v1 == v2;
-     }
- }
+public class IntSyncField : SyncField<int>
+{
+    public IntSyncField(ref SyncData syncData, string name, string key, int defVal)
+        : base(ref syncData, name, key, defVal)
+    {
+        Delta = 0;
+    }
+
+    protected override void OnDataChanged(int oldData, int newData)
+    {
+        Delta += (newData - oldData);
+        base.OnDataChanged(oldData, newData);
+    }
+
+    protected override int GetRecord(string key, int defVal)
+    {
+        return Record.GetInt(key, defVal);
+    }
+
+    protected override void SaveRecord(string key, int val)
+    {
+        Record.SetInt(key, val);
+    }
+
+    public override void Reset()
+    {
+        base.Reset();
+        Delta = 0;
+    }
+
+    protected override bool IsEquals(int v1, int v2)
+    {
+        return v1 == v2;
+    }
+}
 
 public class FloatSyncField : SyncField<float>
 {
-    public FloatSyncField(ref SyncData syncData, string name, string key, float defVal) 
+    public FloatSyncField(ref SyncData syncData, string name, string key, float defVal)
         : base(ref syncData, name, key, defVal)
     {
         Delta = 0;
@@ -851,13 +865,13 @@ public class FloatSyncField : SyncField<float>
     {
         Record.SetFloat(key, val);
     }
-    
+
     public override void Reset()
     {
         base.Reset();
         Delta = 0;
     }
-    
+
     protected override bool IsEquals(float v1, float v2)
     {
         return Math.Abs(v1 - v2) < 0.0001;
@@ -866,10 +880,10 @@ public class FloatSyncField : SyncField<float>
 
 public class ObjSyncField<T> : SyncField<T> where T : BaseSyncHandData, new()
 {
-    public ObjSyncField(ref SyncData syncData, string name, string key, T defVal) 
+    public ObjSyncField(ref SyncData syncData, string name, string key, T defVal)
         : base(ref syncData, name, key, defVal)
     {
-        
+
     }
 
     public override void Init()
@@ -918,74 +932,74 @@ public class ObjSyncField<T> : SyncField<T> where T : BaseSyncHandData, new()
     }
 }
 
- /// <summary>
- /// 压缩字符串
- /// </summary>
- /// <typeparam name="T"></typeparam>
- public class ObjCompressSyncField<T> : SyncField<T> where T : BaseSyncHandData, new()
- {
-     public ObjCompressSyncField(ref SyncData syncData, string name, string key, T defVal) 
-         : base(ref syncData, name, key, defVal)
-     {
-        
-     }
+/// <summary>
+/// 压缩字符串
+/// </summary>
+/// <typeparam name="T"></typeparam>
+public class ObjCompressSyncField<T> : SyncField<T> where T : BaseSyncHandData, new()
+{
+    public ObjCompressSyncField(ref SyncData syncData, string name, string key, T defVal)
+        : base(ref syncData, name, key, defVal)
+    {
 
-     public override void Init()
-     {
-         base.Init();
-         Value.SetChangeListener(OnObjDataChanged);
-     }
+    }
 
-     private void OnObjDataChanged()
-     {
-         OnDataChanged(null, Value);
-         SaveRecord(Key, Value);
-     }
+    public override void Init()
+    {
+        base.Init();
+        Value.SetChangeListener(OnObjDataChanged);
+    }
 
-     public override void ResetLastValue()
-     {
-         lastData = (T)Value.Clone();
-     }
+    private void OnObjDataChanged()
+    {
+        OnDataChanged(null, Value);
+        SaveRecord(Key, Value);
+    }
 
-     public override bool IsChanged => !lastData.IsEqual(Value);
+    public override void ResetLastValue()
+    {
+        lastData = (T)Value.Clone();
+    }
 
-     protected override T GetRecord(string key, T defVal)
-     {
-         string compressedstr = Record.GetString(key, "");
-         if (string.IsNullOrEmpty(compressedstr))
-         {
-             return defVal;
-         }
-         string decompressedstr = StringCompressUtils.DecompressString(compressedstr);
-         return JsonConvert.DeserializeObject<T>(decompressedstr);
-     }
+    public override bool IsChanged => !lastData.IsEqual(Value);
 
-     protected override void SaveRecord(string key, T val)
-     {
-         string compressValue = StringCompressUtils.CompressString(JsonConvert.SerializeObject(val));
-         Record.SetString(key, compressValue);
-     }
+    protected override T GetRecord(string key, T defVal)
+    {
+        string compressedstr = Record.GetString(key, "");
+        if (string.IsNullOrEmpty(compressedstr))
+        {
+            return defVal;
+        }
+        string decompressedstr = StringCompressUtils.DecompressString(compressedstr);
+        return JsonConvert.DeserializeObject<T>(decompressedstr);
+    }
 
-     public void UpdateValue(Func<T, T> op)
-     {
-         Value = op(Value);
-     }
+    protected override void SaveRecord(string key, T val)
+    {
+        string compressValue = StringCompressUtils.CompressString(JsonConvert.SerializeObject(val));
+        Record.SetString(key, compressValue);
+    }
 
-     protected override bool IsEquals(T v1, T v2)
-     {
-         return false;
-         //return v1 == null ? (v2 == null) : (v2 != null && (v1.Equals(v2)));
-     }
+    public void UpdateValue(Func<T, T> op)
+    {
+        Value = op(Value);
+    }
 
-     protected override bool IsValidValue()
-     {
-         return Value != null;
-     }
- }
- 
+    protected override bool IsEquals(T v1, T v2)
+    {
+        return false;
+        //return v1 == null ? (v2 == null) : (v2 != null && (v1.Equals(v2)));
+    }
+
+    protected override bool IsValidValue()
+    {
+        return Value != null;
+    }
+}
+
 public class DateSyncField : SyncField<DateTime>
 {
-    public DateSyncField(ref SyncData syncData, string name, string key, DateTime defVal) 
+    public DateSyncField(ref SyncData syncData, string name, string key, DateTime defVal)
         : base(ref syncData, name, key, defVal)
     {
     }
@@ -1008,7 +1022,7 @@ public class DateSyncField : SyncField<DateTime>
 
 public class StrDateSyncField : StringSyncField
 {
-    public StrDateSyncField(ref SyncData syncData, string name, string key, DateTime defVal) 
+    public StrDateSyncField(ref SyncData syncData, string name, string key, DateTime defVal)
         : base(ref syncData, name, key, DateToStr(defVal))
     {
     }

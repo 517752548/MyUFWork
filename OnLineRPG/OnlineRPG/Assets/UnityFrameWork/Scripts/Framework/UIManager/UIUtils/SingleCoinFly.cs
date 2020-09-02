@@ -25,7 +25,7 @@ public class SingleCoinFly
         int[] offsetx = new[] {0, 20, -16, 24, -18, 22, -18, 22};
         GameObject coinPrefab = null;
 
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_singlecoinFly,
+        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_singlecoinFly,
             ( go) => { coinPrefab = go; });
 
         while (coinPrefab == null)
@@ -64,7 +64,7 @@ public class SingleCoinFly
 
         GameObject coinPrefab = null;
 
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_singlecoinFly, 
+        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_singlecoinFly, 
             ( go) => { coinPrefab = go; });
 
         while (coinPrefab == null)
@@ -113,7 +113,7 @@ public class SingleCoinFly
 
         GameObject coinPrefab = null;
 
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_singlecoinFly,
+        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_singlecoinFly,
             ( go) => { coinPrefab = go; });
 
         while (coinPrefab == null)
@@ -153,7 +153,7 @@ public class SingleCoinFly
     {
         GameObject coinPrefab = null;
 
-        AppEngine.SResourceManager.LoadAssetAsync<GameObject>(ViewConst.prefab_singleAcIconFly, 
+        ResourceManager.LoadAsync<GameObject>(ViewConst.prefab_singleAcIconFly, 
             ( go) => { coinPrefab = go; });
 
         while (coinPrefab == null)

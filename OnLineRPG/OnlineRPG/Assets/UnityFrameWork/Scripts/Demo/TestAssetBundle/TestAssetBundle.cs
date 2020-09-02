@@ -34,7 +34,7 @@ public class TestAssetBundle : MonoBehaviour
                 StringBuilder url = new StringBuilder();
                 url.AppendFormat("png_icon_{0}_{1}", i, j);
 
-                AppEngine.SResourceManager.LoadAssetAsync<Sprite>(url.ToString(),
+                ResourceManager.LoadAsync<Sprite>(url.ToString(),
                     (Sprite tex) =>
                     {
                         Debug.LogError(tex.name + " load success");
@@ -71,7 +71,7 @@ public class TestAssetBundle : MonoBehaviour
         //var fileName = string.Format(Const.LevelText, 11, 1);
         //var path = string.Format("{0}/{1}", Const.LevelFolder, fileName);
 
-        //AppEngine.SResourceManager.LoadAssetAsync<TextAsset>(fileName, path, false, (id, textAsset) =>
+        //ResourceManager.LoadAssetAsync<TextAsset>(fileName, path, false, (id, textAsset) =>
         //{
         //    Debug.LogError(textAsset.text);
         //    //var subWordLayout = JsonConvert.DeserializeObject<SubWordLayout>(textAsset.text);

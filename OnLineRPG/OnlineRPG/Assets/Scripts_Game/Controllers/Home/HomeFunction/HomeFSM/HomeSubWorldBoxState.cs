@@ -16,10 +16,10 @@ public class HomeSubWorldBoxState : HomeState
             OnCompleted();
             return;
         }
+        // AppEngine.SyncManager.Data.ClassicLevel.Value += 40;
         if (AppEngine.SyncManager.Data.ClassicLevel.IsChanged)
         {
-            
-            HomeRoot.GetHomeUi<HomeThemeRoot>()._HomeAnimatorController.FlyLevel(() =>
+            HomeRoot._HomeAnimatorController.FlyLevel(() =>
             {
                 HomeRoot.GetHomeUi<LevelTaskPanel>().PlayProgressAni(OnCompleted);
             });
