@@ -10,7 +10,7 @@ public abstract class Request {
 	public virtual void Serialize(DataStream writer)
 	{
 		writer.WriteSInt32(GetProtocol());
-		writer.WriteByte(0);
+		//writer.WriteByte(0);
 	}
 
 	public virtual void Deserialize(DataStream reader)

@@ -67,12 +67,12 @@ public class ProtoManager
 	public Resp TryDeserialize(byte[] buffer)
 	{
 		DataStream stream = new DataStream(buffer, true);
-
 		int protocol = stream.ReadSInt32();
 		Resp ret = null;
 		if (mProtocolMapping.ContainsKey(protocol))
 		{
-			ret = mProtocolMapping[protocol](stream);
+			byte[] temp = ByteUtils.CupByte(buffer, 4, buffer.Length - 4);
+			ret = mProtocolMapping[protocol](new DataStream(temp, true));
 			if(ret != null){
 				if(mDelegateMapping.ContainsKey(protocol)){
 					List<responseDelegate> dels = mDelegateMapping[protocol];

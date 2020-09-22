@@ -12,5 +12,11 @@ public class TestBResp : Resp {
     public override void Deserialize(DataStream reader)
     {
         base.Deserialize(reader);
+        System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
+        byte[] message = reader.GetTotalByte();
+        string back =  encoding.GetString(message);
+        //string back = reader.ReadString();
+        Debug.LogError(back);
+
     }
 }

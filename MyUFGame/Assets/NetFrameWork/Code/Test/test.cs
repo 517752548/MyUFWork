@@ -11,7 +11,6 @@ public class test : MonoBehaviour {
         ProtoManager.Instance.AddRespDelegate(NetProtocols.ENTRY_GAME, Response);
         ProtoManager.Instance.AddRespDelegate(NetProtocols.TEST_A,Response);
         ProtoManager.Instance.AddRespDelegate(NetProtocols.TEST_B, Response);
-
         int width = (int)(Screen.currentResolution.width * 0.3f);
         int height = (int)(Screen.currentResolution.height * 0.3f);
         Debug.Log("width : " + width + " Screen.currentResolution.width : " + Screen.currentResolution.width);
@@ -47,7 +46,7 @@ public class test : MonoBehaviour {
 		}  
         if(CreateBtn(  "sendB"))  
         {   
-            TestBReq req = new TestBReq();
+            TestBReq req = new TestBReq("测试专用");
             req.Send();
         }  
 	}
@@ -66,6 +65,9 @@ public class test : MonoBehaviour {
             Debug.Log("int : " + resp.testint);
             Debug.Log("long : " + resp.testlong);
             Debug.Log("string : " + resp.teststring);
+        }else if(r.GetProtocol() == NetProtocols.TEST_B){
+	        TestBResp resp = (TestBResp)r;
+
         }
 
 	}

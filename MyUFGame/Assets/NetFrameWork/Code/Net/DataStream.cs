@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DataStream
 {
+	private byte[] buffer;
 	private BinaryReader mBinReader;
 	private BinaryWriter mBinWriter;
 	private MemoryStream mMemStream;
@@ -17,12 +18,14 @@ public class DataStream
 	
 	public DataStream(byte[] buffer, bool isBigEndian)
 	{
+		this.buffer = buffer;
 		mMemStream = new MemoryStream(buffer);
 		InitWithMemoryStream(mMemStream, isBigEndian);
 	}
 	
 	public DataStream(byte[] buffer, int index, int count, bool isBigEndian)
 	{
+		this.buffer = buffer;
 		mMemStream = new MemoryStream(buffer, index, count);
 		InitWithMemoryStream(mMemStream, isBigEndian);
 	}
@@ -77,7 +80,11 @@ public class DataStream
 		return mMemStream.ToArray();
 	}
 	
-	
+	public byte[] GetTotalByte()
+	{
+		//return mMemStream.GetBuffer();
+		return this.buffer;
+	}
 	
 	public long Seek(long offset, SeekOrigin loc)
 	{
@@ -169,11 +176,26 @@ public class DataStream
 		return encoding.GetString(bytes);
 	}
 	
+	public string ReadString()
+	{
+		Debug.LogError("长度" + (int)Length);
+		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
+		return encoding.GetString(mBinReader.ReadBytes((int)Length));
+	}
+	
 	public void WriteString16(string value)
 	{
 		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
 		byte[] data = encoding.GetBytes(value);
 		WriteInteger(BitConverter.GetBytes((Int16)data.Length));
+		//System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
+		mBinWriter.Write(data);
+	}
+	
+	public void WriteString(string value)
+	{
+		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
+		byte[] data = encoding.GetBytes(value);
 		//System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
 		mBinWriter.Write(data);
 	}
@@ -186,6 +208,7 @@ public class DataStream
 		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
 		return encoding.GetString(bytes);
 	}
+	
 	
 	private void WriteInteger(byte[] bytes)
 	{
