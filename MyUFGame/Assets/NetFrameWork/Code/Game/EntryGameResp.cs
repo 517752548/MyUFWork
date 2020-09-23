@@ -12,5 +12,6 @@ public class EntryGameResp : Resp {
     public override void Deserialize(DataStream reader)
     {
         base.Deserialize(reader);
+        Debug.Log(reader.ReadInt32());
     }
 }
