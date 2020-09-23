@@ -24,6 +24,6 @@ public class TestBReq : Request
     public override void Serialize(DataStream writer)
     {
         base.Serialize(writer);
-        writer.WriteString(info);
+        writer.WriteString32(info);
     }
 }

@@ -17,7 +17,7 @@ public class TestAResp : Resp {
         base.Deserialize(reader);
         testint = reader.ReadSInt32();
         testlong = reader.ReadSInt64();
-        teststring = reader.ReadString16();
+        teststring = reader.ReadString32();
     }
 
 }

@@ -25,6 +25,6 @@ public class TestAReq : Request {
 
         writer.WriteSInt32(testint);
         writer.WriteSInt64(testlong);
-        writer.WriteString16(teststring);
+        writer.WriteString32(teststring);
     }
 }

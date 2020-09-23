@@ -176,33 +176,19 @@ public class DataStream
 		return encoding.GetString(bytes);
 	}
 	
-	public string ReadString()
-	{
-		Debug.LogError("长度" + (int)Length);
-		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
-		return encoding.GetString(mBinReader.ReadBytes((int)Length));
-	}
 	
-	public void WriteString16(string value)
+	public void WriteString32(string value)
 	{
 		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
 		byte[] data = encoding.GetBytes(value);
-		WriteInteger(BitConverter.GetBytes((Int16)data.Length));
+		WriteInteger(BitConverter.GetBytes(data.Length));
 		//System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
 		mBinWriter.Write(data);
 	}
-	
-	public void WriteString(string value)
+
+	public string ReadString32()
 	{
-		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
-		byte[] data = encoding.GetBytes(value);
-		//System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
-		mBinWriter.Write(data);
-	}
-	
-	public string ReadString16()
-	{
-		ushort len = ReadInt16();
+		int len = (int)ReadInt32();
 		byte[] bytes = mBinReader.ReadBytes(len);
 		//  System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
 		System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();

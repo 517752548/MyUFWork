@@ -208,41 +208,13 @@ public class SocketHelper : MonoBehaviour
             DataStream bufferWriter = new DataStream(true);
             req.Serialize(bufferWriter);
             byte[] msg = bufferWriter.ToByteArray();
-            string consoleinfo = "";
             byte[] buffer = new byte[msg.Length + 4];
             DataStream writer = new DataStream(buffer, true);
-            byte[] data1 = writer.ToByteArray();
             writer.WriteInt32((uint) msg.Length); //增加数据长度
-            byte[] data2 = writer.ToByteArray();
-            byte[] length = BitConverter.GetBytes((uint) msg.Length);
-            for (int i = 0; i < length.Length; i++)
-            {
-                consoleinfo += length[i];
-                consoleinfo += " ";
-            }
-            Debug.Log(consoleinfo);
-            
+            //byte[] length = BitConverter.GetBytes((uint) msg.Length);
             writer.WriteRaw(msg);
-            byte[] data3 = writer.ToByteArray();
             System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
-            byte[] message = encoding.GetBytes("测试专用");
-            consoleinfo = "";
-            for (int i = 0; i < message.Length; i++)
-            {
-                consoleinfo += message[i];
-                consoleinfo += " ";
-            }
-            Debug.Log(consoleinfo);
-            consoleinfo = "";
             byte[] data = writer.ToByteArray();
-            
-            for (int i = 0; i < data.Length; i++)
-            {
-                consoleinfo += data[i];
-                consoleinfo += " ";
-            }
-            Debug.Log(consoleinfo);
-            
             IAsyncResult asyncSend = socket.BeginSend(data, 0, data.Length, SocketFlags.None,
                 new AsyncCallback(SendCallback), socket);
             bool success = asyncSend.AsyncWaitHandle.WaitOne(5000, true);
