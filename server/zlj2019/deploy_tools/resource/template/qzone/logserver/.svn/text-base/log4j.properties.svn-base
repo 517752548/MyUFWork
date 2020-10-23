@@ -1,0 +1,26 @@
+log4j.rootLogger=info,R,error
+log4j.logger.messageQueue=info,Q
+
+log4j.additivity.messageQueue=false
+
+log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.R.File=/data/tmplog/log_server.log
+log4j.appender.R.datePattern='.'yyyy-MM-dd
+log4j.appender.R.append=true
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+ 
+log4j.appender.Q=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.Q.File=/data/tmplog/queue.log
+log4j.appender.Q.datePattern='.'yyyy-MM-dd
+log4j.appender.Q.append=true
+log4j.appender.Q.layout=org.apache.log4j.PatternLayout
+log4j.appender.Q.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} - %m%n
+
+log4j.appender.error=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.error.File=../errorlogs/log_server.log
+log4j.appender.error.Threshold=WARN
+log4j.appender.error.encoding=UTF-8
+log4j.appender.error.append=true
+log4j.appender.error.layout=org.apache.log4j.PatternLayout
+log4j.appender.error.layout.ConversionPattern=%d{HH:mm:ss} [%-5p] - %C{1}.%M - %m%n

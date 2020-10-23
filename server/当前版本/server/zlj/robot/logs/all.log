@@ -1,0 +1,169 @@
+13:51:11,127 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+13:51:11,127 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+13:51:11,252 - NIOClientConnection.open - Connect success.
+13:53:38,685 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+13:53:38,685 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+13:53:38,826 - NIOClientConnection.open - Connect success.
+14:00:59,001 - AbstractIoHandler.exceptionCaught - #CLOSED.SESSION:127.0.0.1:8084
+14:00:59,001 - AbstractIoHandler.exceptionCaught - #CLOSE.SESSION.EXCEPTION:远程主机强迫关闭了一个现有的连接。--
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+14:00:59,017 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:00:59,017 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:00:59,017 - QueueMessageProcessor.run - [#CORE.QueueMessageProcessor.run] [Stop process]
+14:12:47,859 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:12:47,874 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:12:47,999 - NIOClientConnection.open - Connect success.
+14:13:21,839 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:41ms Total:1
+14:13:21,839 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:13:21,839 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:13:21,839 - QueueMessageProcessor.run - [#CORE.QueueMessageProcessor.run] [Stop process]
+14:14:34,751 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:14:34,751 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:15:13,683 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:15:13,683 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:15:13,824 - NIOClientConnection.open - Connect success.
+14:17:55,005 - AbstractIoHandler.exceptionCaught - #CLOSED.SESSION:127.0.0.1:8084
+14:17:55,005 - AbstractIoHandler.exceptionCaught - #CLOSE.SESSION.EXCEPTION:远程主机强迫关闭了一个现有的连接。--
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+14:17:55,021 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:17:55,021 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:17:55,021 - QueueMessageProcessor.run - [#CORE.QueueMessageProcessor.run] [Stop process]
+14:27:19,617 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:27:19,617 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:28:09,172 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:28:09,172 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:28:09,297 - NIOClientConnection.open - Connect success.
+14:28:34,075 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:28:34,075 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:28:34,075 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:3ms Total:1
+14:32:46,979 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:32:46,994 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:32:47,119 - NIOClientConnection.open - Connect success.
+14:32:54,493 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:32:54,493 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:32:54,493 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:3ms Total:1
+14:33:10,179 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:33:10,179 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:33:10,319 - NIOClientConnection.open - Connect success.
+14:33:16,772 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:33:16,772 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:33:16,772 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:2ms Total:1
+14:33:53,720 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:33:53,720 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:33:53,860 - NIOClientConnection.open - Connect success.
+14:34:00,375 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:34:00,375 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:34:00,375 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:2ms Total:1
+14:34:49,556 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:34:49,572 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:34:49,697 - NIOClientConnection.open - Connect success.
+14:34:56,946 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:34:56,946 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:34:56,946 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:2ms Total:1
+14:39:40,705 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:39:40,705 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:40:19,574 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:40:19,574 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:40:19,699 - NIOClientConnection.open - Connect success.
+14:40:38,915 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:40:38,915 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:40:38,915 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:2ms Total:1
+14:45:18,722 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:45:18,722 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:45:18,878 - NIOClientConnection.open - Connect success.
+14:46:17,263 - AbstractIoHandler.exceptionCaught - #CLOSED.SESSION:127.0.0.1:8084
+14:46:17,263 - AbstractIoHandler.exceptionCaught - #CLOSE.SESSION.EXCEPTION:远程主机强迫关闭了一个现有的连接。--
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+14:46:17,310 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:46:17,310 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:46:17,310 - QueueMessageProcessor.run - [#CORE.QueueMessageProcessor.run] [Stop process]
+14:47:21,197 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:47:21,197 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:47:21,321 - NIOClientConnection.open - Connect success.
+14:47:53,483 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+14:47:53,483 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+14:47:53,483 - QueueMessageProcessor.process - Message:GC_NOTIFY_EXCEPTION Type:1015 Time:3ms Total:1
+14:55:59,170 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+14:55:59,186 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+14:55:59,326 - NIOClientConnection.open - Connect success.
+14:56:51,019 - QueueMessageProcessor.process - Message:GC_ROLE_RANDOM_NAME Type:1008 Time:2ms Total:3
+14:56:51,565 - QueueMessageProcessor.process - Message:GC_ROLE_LIST Type:1003 Time:21ms Total:4
+15:02:36,408 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+15:02:36,424 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+15:02:36,549 - NIOClientConnection.open - Connect success.
+15:02:47,593 - QueueMessageProcessor.process - Message:GC_PROPERTY_CHANGED_NUMBER Type:1502 Time:4ms Total:2
+15:02:47,624 - QueueMessageProcessor.process - Message:GC_SCENE_INFO Type:1012 Time:3ms Total:4
+15:07:21,144 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+15:07:21,159 - NIOClientConnection.open - Start connect to Game Server host: 127.0.0.1 port: 8084
+15:07:21,284 - NIOClientConnection.open - Connect success.
+15:07:38,266 - QueueMessageProcessor.process - Message:GC_PROPERTY_CHANGED_NUMBER Type:1502 Time:3ms Total:2
+15:29:47,215 - AbstractIoHandler.exceptionCaught - #CLOSED.SESSION:127.0.0.1:8084
+15:29:47,246 - AbstractIoHandler.exceptionCaught - #CLOSE.SESSION.EXCEPTION:远程主机强迫关闭了一个现有的连接。--
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:273)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:44)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:690)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+15:29:47,246 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] stopping ...
+15:29:47,246 - QueueMessageProcessor.stop - Message processor thread Thread[MessageProcessor Thread,5,main] finish
+15:29:47,246 - QueueMessageProcessor.run - [#CORE.QueueMessageProcessor.run] [Stop process]

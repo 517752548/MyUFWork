@@ -1,0 +1,6 @@
+int normalWeight;[notNull=false;minValue=0]//普通宠权重	
+int transformWeight;[notNull=false;minValue=0]//变异宠权重	
+int add;[notNull=false;minValue=0]//成长率加成
+long nameLangId;[notNull=false]//成长率名称多语言Id
+String name;[notNull=false]//成长率名称
+int petScore;[notNull=false;minValue=0]//宠物评分

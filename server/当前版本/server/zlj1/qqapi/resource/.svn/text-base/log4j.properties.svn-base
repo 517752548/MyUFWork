@@ -1,0 +1,54 @@
+log4j.rootLogger=info,R,stdout
+log4j.logger.tr.platformlocal=debug,P
+log4j.logger.tr.util=debug,U
+log4j.logger.tr.login=debug,L
+log4j.logger.tr.activiteuser=debug.A
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.encoding=UTF-8
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{HH:mm:ss} [%-5p] - %C{1}.%M - %m%n
+
+#--------------------R--------------------------------
+log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.R.File=platform_all.log
+log4j.appender.R.datePattern='.'yyyy-MM-dd
+log4j.appender.R.append=true
+log4j.appender.R.encoding=UTF-8
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+
+#--------------------P--------------------------------
+log4j.appender.P=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.P.File=platform_common.log
+log4j.appender.P.datePattern='.'yyyy-MM-dd
+log4j.appender.P.append=true
+log4j.appender.P.encoding=UTF-8
+log4j.appender.P.layout=org.apache.log4j.PatternLayout
+log4j.appender.P.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+
+#--------------------U--------------------------------
+log4j.appender.U=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.U.File=platform_util.log
+log4j.appender.U.datePattern='.'yyyy-MM-dd
+log4j.appender.U.append=true
+log4j.appender.U.encoding=UTF-8
+log4j.appender.U.layout=org.apache.log4j.PatternLayout
+log4j.appender.U.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+
+#--------------------L--------------------------------
+log4j.appender.L=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.L.File=platform_login.log
+log4j.appender.L.datePattern='.'yyyy-MM-dd
+log4j.appender.L.append=true
+log4j.appender.L.encoding=UTF-8
+log4j.appender.L.layout=org.apache.log4j.PatternLayout
+log4j.appender.L.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+#--------------------A--------------------------------
+log4j.appender.A=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.A.File=platform_activiteuser.log
+log4j.appender.A.datePattern='.'yyyy-MM-dd
+log4j.appender.A.append=true
+log4j.appender.A.encoding=UTF-8
+log4j.appender.A.layout=org.apache.log4j.PatternLayout
+log4j.appender.A.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n

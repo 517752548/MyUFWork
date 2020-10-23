@@ -1,0 +1,9 @@
+int baseItemId;[notNull=true;minValue=1]//基础物品ID
+int baseItemNum;[notNull=true;minValue=1]//基础物品数量
+int baseProb;[notNull=true;minValue=0]//基本概率
+int extraItemId;[notNull=true;minValue=1]//额外加成所需物品ID
+int extraItemNum;[notNull=true;minValue=1]//额外概率加成所需物品数量
+int extraItemProb;[notNull=true;minValue=0]//额外概率
+int scale;[notNull=true;minValue=0]//加成百分比
+int level;[notNull=true;minValue=1]//开启等级
+int coins;[notNull=true;minValue=0]//所需银币

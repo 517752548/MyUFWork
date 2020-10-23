@@ -1,0 +1,29 @@
+#ifndef MESSAGETYPE_H
+\#define MESSAGETYPE_H
+
+enum MessageType {
+	// /////////////
+	// 服务器内部状态
+	// ////////////
+	STAUS_BEGIN = 400,
+	BASE_NUMBER = 500,
+	//客户端第一次登陆命令，服务器进行连接初始化
+	CG_HANDSHAKE = 490,
+	CG_HANDSHAKE2 = 492,
+	
+#foreach($key in $msgMap.keySet())
+#set($msgList = $msgMap.get($key))
+	// /////////////
+	// ${key}
+	// ////////////
+#set($msgOpKey = $key.toLowerCase())
+#set($msgOp = $message.get($msgOpKey))	
+    ${key}_NUMBER = $msgOp.get("start"),
+#foreach( $msg in $msgList )
+	${msg},
+#end
+
+#end
+};
+#endif
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildDeployTools.and" basedir="." default="root">
+	<!-- import -->
+	<import file="buildDeployTools.def.xml" />
+
+<!--
+// 版本号信息开始
+// 注意: 版本号信息由命令行参数给出!!
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 大版本号  -->
+	<property name="largeVer" value="cmdArgs" />
+	<!-- 代码版本号  -->
+	<property name="codeRev" value="cmdArgs" />
+	<!-- 语言版本 -->
+	<property name="langName" value="cmdArgs" />
+	<!-- 多语言资源版本号 -->
+	<property name="langRev" value="cmdArgs" />
+
+	<!-- 最终版本号及打包目录 -->
+	<property name="pubVer" 
+		value="${largeVer}.${codeRev}.${langName}.${langRev}"  />
+	<property name="tmpDir" 
+		value="${tempdir}/${pubVer}/temp" />
+	<property name="finalDir" 
+		value="${tempdir}/${pubVer}/final/deploy_tools" />
+
+<!--
+// 开始构建
+///////////////////////////////////////////////////////////////////
+//-->
+	<target name="root">
+		<echo message="::: 构建部署工具" />
+		
+		<antcall target="clearTempDir" />
+		<antcall target="svnExport" />
+		<antcall target="buildJavaAndCreateJar" />
+		<antcall target="createZip" />
+		<antcall target="onComplete" />
+	</target>
+
+	<!-- 清理临时目录 -->
+	<target name="clearTempDir">
+		<echo message="清理临时目录" />
+		<deltree dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}/out" />
+	</target>
+
+	<!-- svn 代码导出 -->
+	<target name="svnExport">
+		<!--// 导出 JAVA 代码, 
+			// 注意: serverProjBranchesExport 标记定义在 globals.def.xml 文件中 -->
+		<serverProjBranchesExport 
+			projURL="deploy_tools/src"
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/src" />
+
+		<serverProjBranchesExport 
+			projURL="deploy_tools/resource"
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/res" />
+
+		<!-- 替换版本号 -->
+		<replaceregexp file="${tmpDir}/res/version.js" 
+			match="@server.version@" 
+			replace="${pubVer}" 
+			byline="true" />
+		<replaceregexp file="${tmpDir}/res/version.js" 
+			match="@resource.version@" 
+			replace="${pubVer}" 
+			byline="true" />
+		<replaceregexp 
+			file="${tmpDir}/res/version.js" 
+			match="@db.version@" 
+			replace="${pubVer}" 
+			byline="true" />
+		<replaceregexp 
+			file="${tmpDir}/res/version.js" 
+			match="@client.version@" 
+			replace="${pubVer}" 
+			byline="true" />
+	</target>
+
+	<!-- 编译代码并创建 JAR 文件 -->
+	<target name="buildJavaAndCreateJar">
+		<echo message="编译 JAVA 源文件并创建 JAR 文件" />
+
+		<!--// 编译 JAVA 源文件, 
+			// 注意: lib.deployTools 定义在 globals.def.xml 文件中 -->
+		<buildJava cp="lib.deployTools"
+			src="${tmpDir}/src" 
+			out="${tmpDir}/out" />
+
+		<tstamp>
+			<format property="buildDate" pattern="yyyy-MM-dd HH:mm" />
+		</tstamp>
+
+		<!-- 创建 JAR 目录 -->
+		<mkdir dir="${tmpDir}/jar"/>
+		
+		<!-- 打包之前先复制配置文件 -->
+		<copy todir="${tmpDir}/out">
+			<fileset dir="${tmpDir}/res">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		
+		<!-- JAR -->
+		<jar destfile="${tmpDir}/jar/deploy_tools.jar" 
+			  basedir="${tmpDir}/out">
+			<!-- 将所依赖的 JAR 文件全部打进一个包里 -->
+			<zipgroupfileset dir="${libdir.deployTools}">
+				<include name="**/*.jar" />
+			</zipgroupfileset>
+			<manifest>
+				<attribute name="Version" value="${pubVer}" />
+				<attribute name="Build-Date" value="${buildDate}" />
+				<attribute name="Main-Class" value="com.imop.lj.deploy.Deploy" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<!-- 创建 ZIP 文件 -->
+	<target name="createZip">
+		<!-- 创建压缩包 -->
+		<echo message="创建压缩包 deploy_tools.zip" />
+		<zip destfile="${tmpDir}/deploy_tools.zip">
+			<fileset dir="${tmpDir}/jar">
+				<include name="**/*.jar" />
+			</fileset>
+		</zip>
+	</target>
+
+	<!-- 完成脚本 -->
+	<target name="onComplete">
+		<move file="${tmpDir}/deploy_tools.zip" tofile="${finalDir}/deploy_tools.zip" />
+	</target>
+</project>

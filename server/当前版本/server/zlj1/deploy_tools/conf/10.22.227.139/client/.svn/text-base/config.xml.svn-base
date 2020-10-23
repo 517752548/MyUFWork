@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+        <server_ip>60.29.249.160</server_ip>
+        <server_port>8080</server_port><!-- 端口 -->
+        <clientDomain>http://app11111.imgcache.qzone.com</clientDomain>
+        <operation_com>qzone</operation_com>
+        <language>CN</language> <!-- 语言版本 -->
+        <version>@client.version@</version><!-- 版本号 -->
+        <auto_login>1</auto_login>
+        <debug>0</debug>
+        <!-- log输出面板是否显示 1：true,0：false-->
+		<logPanel>0</logPanel>
+        <web_fangchenmi></web_fangchenmi>
+        <resource_static>http://app11111.imgcache.qzone.com</resource_static>
+        <sound_url>http://app11111.imgcache.qzone.com</sound_url>
+		<!--channelName-->
+		<channelName>qzone</channelName>
+		<!--otherPlatformLogin-->
+		<otherPlatformLogin>1</otherPlatformLogin>
+		<!-- 获取激活码地址 -->
+		<getJiHuoMaUrl></getJiHuoMaUrl>
+		<!-- 游戏进行功能付费，而未达到预期效果，为通过审查，设置此开关(0：不屏蔽，1：屏蔽) -->
+		<hideCostFunc>0</hideCostFunc>
+		<!-- 接入qq平台当前是否沙箱测试环境，true:表示沙箱测试环境，false或者不指定:表示正式环境 -->
+		<qq_sandbox>false</qq_sandbox>
+		<!-- qq的appid -->
+		<qq_appid>1101346127</qq_appid>
+		<!-- “开通黄钻”对应的超链接地址（链接中的*****请使用appid替代） -->
+		<qq_hz_charge>http://pay.qq.com/qzone/index.shtml?aid=game{0}</qq_hz_charge>
+		<!-- 充值开关 1:开启充值，0:关闭充值-->
+		<openCharge>1</openCharge>
+		<!-- 新增合服登录时用 -->
+		<serverId>2003</serverId>
+</config>

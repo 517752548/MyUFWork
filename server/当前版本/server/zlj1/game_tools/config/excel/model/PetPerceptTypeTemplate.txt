@@ -1,0 +1,5 @@
+int itemId;[notNull=true;minValue=0]//物品ID
+int itemNum;[notNull=true;minValue=0]//物品数量
+int currencyType;[notNull=true;minValue=0]//货币种类
+int currencyNum;[notNull=true;minValue=0]//货币数量
+int vipFuncId;[notNull=false;minValue=0]//对应vip功能Id

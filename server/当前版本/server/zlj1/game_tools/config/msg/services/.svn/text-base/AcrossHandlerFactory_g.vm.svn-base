@@ -1,0 +1,31 @@
+
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )boolean#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+#set($packageName = "com.imop.lj.gameserver.across."+$module+".handler")
+package $packageName;
+
+/**
+ * $message.comment
+ * 
+ * @author CodeGenerator, don't modify this file please.
+ */
+public class #upperFirstChar($module)AcrossHandlerFactory {
+	/** 区域消息处理器 */
+	private static #upperFirstChar($module)AcrossMessageHandler handler = new #upperFirstChar($module)AcrossMessageHandler();
+
+	/** 类默认构造器 */
+	private #upperFirstChar($module)AcrossHandlerFactory() {
+	}
+
+	/**
+	 * 获取区域消息处理器
+	 * 
+	 * @return
+	 */
+	public static #upperFirstChar($module)AcrossMessageHandler getHandler() {
+		return handler;
+	}
+}

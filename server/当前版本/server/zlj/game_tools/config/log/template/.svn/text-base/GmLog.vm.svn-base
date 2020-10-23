@@ -1,0 +1,40 @@
+#macro( bigType $type)
+#if( $type == "longstring" )String#else$type#end
+#end
+package com.imop.lj.gm.autolog.model;
+import java.util.List;
+import com.imop.lj.gm.model.log.BaseLog;
+/**
+ * This is an auto generated source,please don't modify it.
+ */
+ 
+public class ${logName} extends BaseLog{
+
+#foreach($field in $fields)
+	//$field.fieldInfo
+    private #bigType($field.getType()) $field.name;
+#end
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List toList(){
+		List list = super.toList();
+#foreach($field in $fields)
+		list.add($field.name);
+#end
+		return list;
+	}
+	
+#foreach($field in $fields)
+	public #bigType(${field.type}) get${field.getUpperName()}() {
+		return $field.name;
+	}
+#end
+        
+#foreach($field in $fields)
+	public void set${field.getUpperName()}(#bigType(${field.type}) ${field.name}) {
+		this.${field.name} = ${field.name};
+	}
+#end
+
+}

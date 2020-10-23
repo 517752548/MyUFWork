@@ -1,0 +1,12 @@
+jdbcDriver=com.mysql.jdbc.Driver
+jdbcUrl=jdbc:mysql://127.0.0.1:3306/probe?useUnicode=true&characterEncoding=utf-8
+username=root
+password=123456
+c3p0.minPoolSize=1
+c3p0.maxPoolSize=10
+c3p0.maxIdleTime=60
+c3p0.maxStatements=50
+c3p0.acquireIncrement=1
+c3p0.idleConnectionTestPeriod=10
+c3p0.testConnectionOnCheckout=true
+

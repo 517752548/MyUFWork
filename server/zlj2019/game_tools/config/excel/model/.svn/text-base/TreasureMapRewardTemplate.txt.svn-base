@@ -1,0 +1,7 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int itemId;[minValue=0;notNull=false]//道具Id
+int triggerType;[notNull=false;minValue=1;maxValue=2]//奖励类型
+int param;[minValue=0;notNull=false]//根据奖励类型遇怪或者给奖励
+int weight;[minValue=0;notNull=false]//权重
+int loseReward;[minValue=0;notNull=false]//打怪失败奖励

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+	<macro id="autolog" comment="自动游戏日志（客服）">
+	#foreach($logType in $logTypeList)
+		<submenu id="7_${logType.id}" pid="7" name="${logType.comment}" url="autoLog.do?action=init&amp;logType=${logType.name}" />
+	#end
+	</macro>
+</macros>

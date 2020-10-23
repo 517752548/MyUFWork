@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="promote">
+
+	<message type="CG_PROMOTE_PANEL" comment="打开提升面板">
+	</message>
+	
+	<message type="GC_PROMOTE_PANEL" comment="返回提升列表">
+	    <field type="com.imop.lj.gameserver.promote.PromoteInfo"
+	           clientType="PromoteInfo"
+	           name="promoteInfo" list="true" macro="PromoteInfo" comment="提升列表">
+	    </field>
+	</message>
+	
+</messages>

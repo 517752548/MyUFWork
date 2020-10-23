@@ -1,0 +1,5 @@
+int costGold;[minValue=1;notNull=false]//消耗银票
+int itemId1;[minValue=1;notNull=true]//低级消耗道具Id	
+int itemNum1;[minValue=1;notNull=true]//低级消耗道具数量	
+int itemId2;[minValue=1;notNull=true]//高级消耗道具Id	
+int itemNum2;[minValue=1;notNull=true]//高级消耗道具数量

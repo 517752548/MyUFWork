@@ -1,0 +1,5 @@
+message com.imop.lj.logserver.model.PlayerLoginLog(
+	String device;//登陆终端
+	long playerLoginTime;//登陆时间
+	String source;//登陆信息--设备来源|终端id|设备类型|设备版本号|客户端版本号|客户端语言类型
+)

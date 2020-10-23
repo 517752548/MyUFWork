@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.imop.lj.db.model">
+
+	<!-- 合服相关 -->
+	<!-- 查询所有卡牌活动表 -->
+	<query name="queryAllCardActivityEntity_merge">
+	<![CDATA[
+		from CardActivityEntity 	]]>
+	</query>
+	
+	<!-- 删除所有卡牌活动表 -->
+	<query name="delAllCardActivityEntity_merge">
+	<![CDATA[
+		delete from CardActivityEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有卡牌活动玩家数据 -->
+	<query name="queryAllCardUserEntity_merge">
+	<![CDATA[
+		from CardUserEntity 	]]>
+	</query>
+	
+	<!-- 删除所有卡牌活动玩家数据 -->
+	<query name="delAllCardUserEntity_merge">
+	<![CDATA[
+		delete from CardUserEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有幸运转盘活动表 -->
+	<query name="queryAllTurntableActivityEntity_merge">
+	<![CDATA[
+		from TurntableActivityEntity 	]]>
+	</query>
+	
+	<!-- 删除所有幸运转盘活动表 -->
+	<query name="delAllTurntableActivityEntity_merge">
+	<![CDATA[
+		delete from TurntableActivityEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有精彩活动数据 -->
+	<query name="queryAllGoodActivityEntity_merge">
+	<![CDATA[
+		from GoodActivityEntity 	]]>
+	</query>
+	
+	<!-- 删除所有精彩活动数据 -->
+	<query name="delAllGoodActivityEntity_merge">
+	<![CDATA[
+		delete from GoodActivityEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有玩家的精彩活动数据 -->
+	<query name="queryAllGoodActivityUserEntity_merge">
+	<![CDATA[
+		from GoodActivityUserEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有玩家的精彩活动数据 -->
+	<query name="delAllGoodActivityUserEntity_merge">
+	<![CDATA[
+		delete from GoodActivityUserEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有角色信息 -->
+	<query name="queryAllHumanEntity_merge">
+	<![CDATA[
+		from HumanEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有角色信息 -->
+	<query name="delAllHumanEntity_merge">
+	<![CDATA[
+		delete from HumanEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有武将信息 -->
+	<query name="queryAllPetEntity_merge">
+	<![CDATA[
+		from PetEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有武将信息 -->
+	<query name="delAllPetEntity_merge">
+	<![CDATA[
+		delete from PetEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有坐骑信息 -->
+	<query name="queryAllHorseEntity_merge">
+	<![CDATA[
+		from HorseEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有坐骑信息 -->
+	<query name="delAllHorseEntity_merge">
+	<![CDATA[
+		delete from HorseEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有邮件信息 -->
+	<query name="queryAllMailEntity_merge">
+	<![CDATA[
+		from MailEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有邮件信息 -->
+	<query name="delAllMailEntity_merge">
+	<![CDATA[
+		delete from MailEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有物品信息 -->
+	<query name="queryAllItemEntity_merge">
+	<![CDATA[
+		from ItemEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有物品信息 -->
+	<query name="delAllItemEntity_merge">
+	<![CDATA[
+		delete from ItemEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有离线奖励信息 -->
+	<query name="queryAllOfflineRewardEntity_merge">
+	<![CDATA[
+		from OfflineRewardEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有离线奖励信息 -->
+	<query name="delAllOfflineRewardEntity_merge">
+	<![CDATA[
+		delete from OfflineRewardEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有充值订单信息 -->
+	<query name="queryAllQQChargeOrderEntity_merge">
+	<![CDATA[
+		from QQChargeOrderEntity where deleted = 0	]]>
+	</query>
+	
+	<!-- 删除所有充值订单信息 -->
+	<query name="delAllQQChargeOrderEntity_merge">
+	<![CDATA[
+		delete from QQChargeOrderEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有场景信息 -->
+	<query name="queryAllSceneEntity_merge">
+	<![CDATA[
+		from SceneEntity 	]]>
+	</query>
+	
+	<!-- 删除所有场景信息 -->
+	<query name="delAllSceneEntity_merge">
+	<![CDATA[
+		delete from SceneEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有数据库版本信息 -->
+	<query name="queryAllDbVersion_merge">
+	<![CDATA[
+		from DbVersion 	]]>
+	</query>
+	
+	<!-- 删除所有数据库版本信息 -->
+	<query name="delAllDbVersion_merge">
+	<![CDATA[
+		delete from DbVersion
+	]]>
+	</query>
+	
+	<!-- 查询所有过滤词配置信息 -->
+	<query name="queryAllDirtyWordsTypeEntity_merge">
+	<![CDATA[
+		from DirtyWordsTypeEntity 	]]>
+	</query>
+	
+	<!-- 删除所有过滤词配置信息 -->
+	<query name="delAllDirtyWordsTypeEntity_merge">
+	<![CDATA[
+		delete from DirtyWordsTypeEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有集市任务完成条件 -->
+	<query name="queryAllQQMarketTaskTargetEntity_merge">
+	<![CDATA[
+		from QQMarketTaskTargetEntity 	]]>
+	</query>
+	
+	<!-- 删除所有集市任务完成条件 -->
+	<query name="delAllQQMarketTaskTargetEntity_merge">
+	<![CDATA[
+		delete from QQMarketTaskTargetEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有世界BOSS信息 -->
+	<query name="queryAllWorldBossEntity_merge">
+	<![CDATA[
+		from WorldBossEntity 	]]>
+	</query>
+	
+	<!-- 删除所有世界BOSS信息 -->
+	<query name="delAllWorldBossEntity_merge">
+	<![CDATA[
+		delete from WorldBossEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有模块数据 -->
+	<query name="queryAllModuleDataEntity_merge">
+	<![CDATA[
+		from ModuleDataEntity 	]]>
+	</query>
+	
+	<!-- 删除所有模块数据 -->
+	<query name="delAllModuleDataEntity_merge">
+	<![CDATA[
+		delete from ModuleDataEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有用户信息 -->
+	<query name="queryAllUserInfo_merge">
+	<![CDATA[
+		from UserInfo 	]]>
+	</query>
+	
+	<!-- 删除所有用户信息 -->
+	<query name="delAllUserInfo_merge">
+	<![CDATA[
+		delete from UserInfo
+	]]>
+	</query>
+	
+	<!-- 查询所有竞技场数据 -->
+	<query name="queryAllArenaSnapEntity_merge">
+	<![CDATA[
+		from ArenaSnapEntity 	]]>
+	</query>
+	
+	<!-- 删除所有竞技场数据 -->
+	<query name="delAllArenaSnapEntity_merge">
+	<![CDATA[
+		delete from ArenaSnapEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有财报道具消耗记录 -->
+	<query name="queryAllItemCostRecordEntity_merge">
+	<![CDATA[
+		from ItemCostRecordEntity 	]]>
+	</query>
+	
+	<!-- 删除所有财报道具消耗记录 -->
+	<query name="delAllItemCostRecordEntity_merge">
+	<![CDATA[
+		delete from ItemCostRecordEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有斗地主表 -->
+	<query name="queryAllLandlordEntity_merge">
+	<![CDATA[
+		from LandlordEntity 	]]>
+	</query>
+	
+	<!-- 删除所有斗地主表 -->
+	<query name="delAllLandlordEntity_merge">
+	<![CDATA[
+		delete from LandlordEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有关系表 -->
+	<query name="queryAllRelationEntity_merge">
+	<![CDATA[
+		from RelationEntity 	]]>
+	</query>
+	
+	<!-- 删除所有关系表 -->
+	<query name="delAllRelationEntity_merge">
+	<![CDATA[
+		delete from RelationEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有正在做的任务信息 -->
+	<query name="queryAllDoingQuestEntity_merge">
+	<![CDATA[
+		from DoingQuestEntity 	]]>
+	</query>
+	
+	<!-- 删除所有正在做的任务信息 -->
+	<query name="delAllDoingQuestEntity_merge">
+	<![CDATA[
+		delete from DoingQuestEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有已经完成的任务信息 -->
+	<query name="queryAllFinishedQuestEntity_merge">
+	<![CDATA[
+		from FinishedQuestEntity 	]]>
+	</query>
+	
+	<!-- 删除所有已经完成的任务信息 -->
+	<query name="delAllFinishedQuestEntity_merge">
+	<![CDATA[
+		delete from FinishedQuestEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有军团信息 -->
+	<query name="queryAllCorpsEntity_merge">
+	<![CDATA[
+		from CorpsEntity 	]]>
+	</query>
+	
+	<!-- 删除所有军团信息 -->
+	<query name="delAllCorpsEntity_merge">
+	<![CDATA[
+		delete from CorpsEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有军团成员信息 -->
+	<query name="queryAllCorpsMemberEntity_merge">
+	<![CDATA[
+		from CorpsMemberEntity 	]]>
+	</query>
+	
+	<!-- 删除所有军团成员信息 -->
+	<query name="delAllCorpsMemberEntity_merge">
+	<![CDATA[
+		delete from CorpsMemberEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有领地数据 -->
+	<query name="queryAllLandEntity_merge">
+	<![CDATA[
+		from LandEntity 	]]>
+	</query>
+	
+	<!-- 删除所有领地数据 -->
+	<query name="delAllLandEntity_merge">
+	<![CDATA[
+		delete from LandEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有环任务 -->
+	<query name="queryAllLoopTaskEntity_merge">
+	<![CDATA[
+		from LoopTaskEntity 	]]>
+	</query>
+	
+	<!-- 删除所有环任务 -->
+	<query name="delAllLoopTaskEntity_merge">
+	<![CDATA[
+		delete from LoopTaskEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有摇钱树 -->
+	<query name="queryAllMoneyTreeEntity_merge">
+	<![CDATA[
+		from MoneyTreeEntity 	]]>
+	</query>
+	
+	<!-- 删除所有摇钱树 -->
+	<query name="delAllMoneyTreeEntity_merge">
+	<![CDATA[
+		delete from MoneyTreeEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有内政任务 -->
+	<query name="queryAllPassTaskEntity_merge">
+	<![CDATA[
+		from PassTaskEntity 	]]>
+	</query>
+	
+	<!-- 删除所有内政任务 -->
+	<query name="delAllPassTaskEntity_merge">
+	<![CDATA[
+		delete from PassTaskEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有成长目标任务 -->
+	<query name="queryAllStepTaskEntity_merge">
+	<![CDATA[
+		from StepTaskEntity 	]]>
+	</query>
+	
+	<!-- 删除所有成长目标任务 -->
+	<query name="delAllStepTaskEntity_merge">
+	<![CDATA[
+		delete from StepTaskEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有离线数据 -->
+	<query name="queryAllUserSnapEntity_merge">
+	<![CDATA[
+		from UserSnapEntity 	]]>
+	</query>
+	
+	<!-- 删除所有离线数据 -->
+	<query name="delAllUserSnapEntity_merge">
+	<![CDATA[
+		delete from UserSnapEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有礼包奖励 -->
+	<query name="queryAllUserPrize_merge">
+	<![CDATA[
+		from UserPrize 	]]>
+	</query>
+	
+	<!-- 删除所有礼包奖励 -->
+	<query name="delAllUserPrize_merge">
+	<![CDATA[
+		delete from UserPrize
+	]]>
+	</query>
+	
+	<!-- 查询所有vip数据 -->
+	<query name="queryAllVipEntity_merge">
+	<![CDATA[
+		from VipEntity 	]]>
+	</query>
+	
+	<!-- 删除所有vip数据 -->
+	<query name="delAllVipEntity_merge">
+	<![CDATA[
+		delete from VipEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有渡江船只数据 -->
+	<query name="queryAllShipEntity_merge">
+	<![CDATA[
+		from ShipEntity 	]]>
+	</query>
+	
+	<!-- 删除所有渡江船只数据 -->
+	<query name="delAllShipEntity_merge">
+	<![CDATA[
+		delete from ShipEntity
+	]]>
+	</query>
+	
+	<!-- 查询所有渡江抢夺收益 -->
+	<query name="queryAllIncomeEntity_merge">
+	<![CDATA[
+		from IncomeEntity 	]]>
+	</query>
+	
+	<!-- 删除所有渡江抢夺收益 -->
+	<query name="delAllIncomeEntity_merge">
+	<![CDATA[
+		delete from IncomeEntity
+	]]>
+	</query>
+	
+</hibernate-mapping>

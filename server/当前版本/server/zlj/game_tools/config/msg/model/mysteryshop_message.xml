@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="mysteryshop">
+	
+	<message type="CG_REQ_MYSTERY_SHOP_INFO" comment="请求神秘商店信息"/>
+	
+	<message type="GC_MYSTERY_SHOP_INFO" comment="返回神秘商店信息">
+		<field type="com.imop.lj.common.model.mysteryshop.MSItemInfo"
+			clientType="MSItemInfoData" name="msItemInfoList" comment="神秘商店物品列表" list="true">
+			<field type="Integer" name="id" comment="神秘商店物品ID"/>
+			<field type="Integer" name="buyState" comment="1-等待购买,2-已购买"/>
+		</field>
+		<field type="Long" name="cd" comment="CD"/>
+		<field type="com.imop.lj.common.model.CurrencyInfo" name="bondFlushPrice" comment="刷新价格" macro="CurrencyInfo" clientType="CurrencyInfo"/>
+		<field type="Integer" name="freeFlushNum" comment="免费刷新次数"/>	
+	</message>
+	
+	<message type="CG_FLUSH_MYSTERY" comment="刷新神秘商店">
+		<field type="Integer" name="flushType" comment="刷新类型1：普通刷新2：Vip刷新"/>
+	</message>
+	
+	<message type="CG_BUY_MS_ITEM" comment="购买神秘商店物品">
+		<field type="Integer" name="msItemId" comment="神秘商店物品ID"/>
+	</message>
+</messages>

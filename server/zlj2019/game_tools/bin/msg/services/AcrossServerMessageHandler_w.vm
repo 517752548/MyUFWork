@@ -1,0 +1,35 @@
+
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )boolean#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+#macro( lowerSecondChar $type)$type.substring(0,2).toLowerCase()$type.substring(2)#end
+#set($packageName = "com.imop.lj.gameserver.acrossserver."+$module+".handler")
+package $packageName;
+
+import com.imop.lj.gameserver.acrossserver.ServerClient;
+#foreach($msgObj in $msgs)
+import com.imop.lj.gameserver.acrossserver.${module}.msg.${msgObj.className};
+#end
+/**
+ * $message.comment
+ * 
+ * @author CodeGenerator, don't modify this file please.
+ */
+
+public class #upperFirstChar($module)AcrossServerMessageHandler {	
+	
+	public #upperFirstChar($module)AcrossServerMessageHandler() {	
+	}	
+	#foreach($msgObj in $msgs)
+	/**
+ 	* $msgObj.comment
+ 	* 
+ 	* CodeGenerator
+ 	*/
+	public void ${msgObj.handleMethodName}(ServerClient serverClient, ${msgObj.className} #lowerSecondChar(${msgObj.className})) {
+		
+	}
+	#end
+}

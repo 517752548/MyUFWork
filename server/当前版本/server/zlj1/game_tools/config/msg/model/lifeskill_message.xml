@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="lifeskill">
+	
+	<message type="CG_LS_MINE_GET_PANNEL" comment="申请采矿界面">
+	</message>
+	
+	<message type="GC_LS_MINE_GET_PANNEL" comment="返回采矿界面结果">
+		<field type="com.imop.lj.gameserver.lifeskill.MinePitInfo" 
+			   clientType="MinePitInfo"
+			name="pitList" list="true" macro="MinePitInfo" comment="矿点信息">
+		</field>
+		<field type="Long" name="serverTime" comment="服务器时间"/>
+	</message>
+	
+	<message type="CG_LS_MINE_START" comment="申请开始采矿">
+		<field type="Integer" name="pitId" comment="矿点ID"/>
+		<field type="Integer" name="mineId" comment="矿石ID"/>
+		<field type="Integer" name="miningTypeId" comment="采矿方式ID"/>
+		<field type="Long" name="minerId" comment="矿工UUID"/>
+	</message>
+	
+	<message type="GC_LS_MINE_START" comment="返回申请采矿结果">
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_LS_MINE_GAIN" comment="申请取得矿石">
+		<field type="Integer" name="pitId" comment="矿点ID"/>
+	</message>
+	
+	<message type="GC_LS_MINE_GAIN" comment="返回取得矿石结果">
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+</messages>

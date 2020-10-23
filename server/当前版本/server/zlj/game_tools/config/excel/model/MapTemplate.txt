@@ -1,0 +1,17 @@
+int nameLangId;[minValue=0;notNull=false]//名称多语言 Id
+String name;//名称
+int mapTypeId;[minValue=0;notNull=false]//地图类型
+int mapLevel;[minValue=0;notNull=false]//地图等级
+int openLevel;[minValue=0;notNull=false]//开启等级
+String icon;//地图图片Id
+String music;//背景音乐Id
+int width;[minValue=1;notNull=false]//地图宽度（像素）
+int height;[minValue=1;notNull=false]//地图高度（像素）
+int initX;[minValue=0;notNull=false]//初始X坐标（像素）
+int initY;[minValue=0;notNull=false]//初始Y坐标（像素）
+int meetMonsterPlanId;[minValue=0;notNull=false]//遇怪方案
+int meetMonsterAddProb;[minValue=0;notNull=false]//遇敌率附加值（*1000）
+int pvpFlag;[minValue=0;notNull=false]//开启PVP
+int treasureMap;[minValue=0;notNull=false]//开启藏宝图
+int guajiFlag;[minValue=0;notNull=false]//开启挂机
+String desc;//描述

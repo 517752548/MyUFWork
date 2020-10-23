@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="gameServer.ant" basedir="." default="root">
+	<!-- import -->
+	<import file="buildGameServer.def.xml" />
+
+<!--
+// 版本号信息开始
+// 注意: 版本号信息由命令行参数给出!!
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 大版本号  -->
+	<property name="largeVer" value="cmdArgs" />
+	<!-- 代码版本号  -->
+	<property name="codeRev" value="cmdArgs" />
+	<!-- 语言版本名称 -->
+	<property name="langName" value="cmdArgs" />
+	<!-- 多语言资源版本号 -->
+	<property name="langRev" value="cmdArgs" />
+
+	<!-- 最终版本号及打包目录 -->
+	<property name="pubVer" 
+		value="${largeVer}.${codeRev}.${langName}.${langRev}" />
+	<property name="tmpDir" 
+		value="${tempdir}/${pubVer}" />
+
+<!--
+// 构建开始
+///////////////////////////////////////////////////////////////////
+//-->
+	<target name="root">
+		<echo message="::: 构建过程初始化" />
+		
+		<!-- 重建版本目录 -->
+		<echo message="重建版本目录" />
+		<deltree dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}/temp" />
+		<mkdir dir="${tmpDir}/final" />
+
+		<!-- 创建结构目录 -->
+		<mkdir dir="${tmpDir}/final/client_web" />
+		<mkdir dir="${tmpDir}/final/db_init" />
+		<mkdir dir="${tmpDir}/final/deploy_tools" />
+		<mkdir dir="${tmpDir}/final/gm_server" />
+		<mkdir dir="${tmpDir}/final/lang" />
+		<mkdir dir="${tmpDir}/final/server" />
+		<mkdir dir="${tmpDir}/final/sql" />
+		
+		<echo message="重建完成!" />
+		<echo message="版本目录位置: ${tmpDir}" />
+	</target>
+</project>

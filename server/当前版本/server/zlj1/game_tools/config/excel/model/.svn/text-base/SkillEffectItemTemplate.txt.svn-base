@@ -1,0 +1,38 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;	
+;	
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int skillEffectId;[notNull=false;minValue=0;]//技能效果ID
+int initExp;[notNull=false;minValue=1]//初始经验
+int levelMax;[notNull=false;minValue=0]//等级上限
+int embedType;[notNull=false;minValue=0]//镶嵌类型（同一类型的不能同时在一个技能上）
+int uniqueFlag;[notNull=false;minValue=0]//是否稀有（稀有的一个技能只能有一个）

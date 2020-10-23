@@ -1,0 +1,6 @@
+int rankMin;[minValue=1;notNull=false]//排名上限
+int rankMax;[minValue=1;notNull=false]//排名下限
+int rewardId;[minValue=1;notNull=false]//奖励Id
+String mailTitle;[notNull=false]//奖励邮件标题
+String mailContent;[notNull=false]//奖励邮件内容
+int canAlloate;[notNull=false]//是否可以分配

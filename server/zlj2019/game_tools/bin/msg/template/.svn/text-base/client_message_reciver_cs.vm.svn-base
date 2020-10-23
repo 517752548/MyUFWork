@@ -1,0 +1,33 @@
+namespace app.net
+{
+	public class MessageReciver
+	{
+		
+		public static BaseMessage createMessage(int msgType)
+        {
+            switch (msgType)
+            {
+#foreach( $key in $gcMsgTypeNameToClassNameMap.keySet() )
+			case MessageType.$key:
+				return new ${gcMsgTypeNameToClassNameMap.get($key)}();
+#end
+			default:
+				break;
+            }
+            return null;
+        }
+        
+        public static void handleReviceMessage(BaseMessage baseMsg)
+        {
+            string eventType = baseMsg.getEventType();
+            if (eventType != null && eventType != "")
+            {
+                EventCore.dispathRMetaEventByParms(baseMsg.getEventType(), baseMsg);
+            }
+            else
+            {
+                ClientLog.LogError("baseMsg eventType is invalid!msgType=" + baseMsg.GetMessageType());
+            }
+        }
+	}
+}

@@ -1,0 +1,7 @@
+message com.imop.lj.logserver.model.MallLog(
+	String currQueueConfig; // 当前队列组
+	String currQueueUUID;//当前队列UUID
+	int currQueueId;//当前队列模版ID
+	long currStartTime;//当前队列开始时间
+	longstring stock;//库存
+)

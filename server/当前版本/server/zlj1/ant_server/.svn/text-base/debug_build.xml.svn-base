@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tr" basedir="." default="help">
+	<property file="build.properties" />
+	<!-- server及resource的版本号  -->
+	<property name="version" value="0.1.0.0" />
+	<!-- DB的版本号  -->
+	<property name="db.version" value="0.1.0.0" />
+	<!-- 客户端的版本号  -->
+	<property name="client.version" value="0.1.0.0" />
+	<!-- resource的版本号  -->
+	<property name="resource.version" value="0.1.0.0" />
+	<!-- 一键打包时，发布包文件的版本号  -->
+	<property name="release.pkg.version" value="0.1.0.0" />
+	
+	<!-- 版本语言 -->
+	<property name="language" value="zh_CN" />
+	
+	
+	<!-- 是否加密,可以通过-Dencrypt=false 取消加密 -->
+	<property name="encrypt" value="false" />
+	<!-- 是否加密资源  -->
+	<property name="encrypt.resource" value="false" />
+	<!-- 引入宏定义  -->
+	<import file="macro_build.xml" />
+	
+	<!-- svn的路径属性 -->
+	<property name="trunk.server.path" value="${server.trunk.url}" />
+	
+	<property name="trunk.client.path" value="${client.trunk.url}" />
+	
+	<property name="trunk.resource.path" value="${server.trunk.url}" />
+	
+	<!--打 trunk 还是 branches 在此修改-->
+	<property name="server.path" value="${trunk.server.path}" />
+	<property name="client.path" value="${trunk.client.path}" />
+	<property name="resource.path" value="${trunk.resource.path}" />
+	<!--end 打 trunk 还是 branches 在此修改-->
+	
+	<property name="release.client.flag" value="false" />
+	<property name="release.server.flag" value="true" />
+	<property name="release.resource.flag" value="true" />
+	<property name="release.deploy.flag" value="true" />
+	<property name="release.sql.flag" value="false" />
+	<property name="release.gm.flag" value="false" />
+	
+	
+	<!-- 定义路径属性开始  -->
+	<!-- core工程的jar文件路径-->
+	<path id="lib.path">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- ant_server本库所使用到的工具jar路径 -->
+	<path id="ant.lib.path">
+		<fileset dir="${basedir}/ant_lib">
+			<include name="**/*.jar" />
+			<include name="**/*.zip" />
+		</fileset>
+	</path>
+	<!-- 定义路径属性结束 -->
+
+	<path id="tools.lib.path">
+		<fileset dir="${basedir}/tools_lib">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	
+	<path id="resin.lib.path">
+        <fileset dir="${resin.lib.dir}">
+                <include name="**/*.zip" />
+                <include name="**/*.jar" />
+        </fileset>
+	</path>
+	
+	<!-- 引入ant contrib任务 -->
+	<taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="ant.lib.path" />
+	
+	<!-- 公用target定义开始  -->
+	<target name="_update_project_src">
+		<svn_update project="${project}" dir="src" out="${src.dir}/java" />
+	</target>
+
+	<target name="_update_project_config">
+		<svn_update project="${project}" dir="config" out="${src.dir}/config" />
+	</target>
+	<!-- 公用target定义结束 -->
+	
+	<target name="help">
+		<echo>Usage:ant [target]</echo>
+		<echo>where targets include:</echo>
+		<echo>clean  Delete the src,build and dist dir.</echo>
+		<echo>init_server Delete the src,build and dist dir and then create them again.</echo>
+		<echo>compile.server_lib compile and create the server_lib.jar</echo>
+		<echo>package.server_lib package the server_lib.zip </echo>
+		<echo>package.resource package the resource.zip</echo>
+		<echo>package.deploy_tools package the deploy_tool.zip</echo>
+		<echo>package.release package the release pkg</echo>
+		<echo>package.update dist release pkg to target</echo>		
+	</target>
+	
+	<target name="test">
+		<svn_update project="core" dir="config" out="${lib.dir}"  />	
+	</target>
+	
+	<!-- 在编译前清除所有资源 -->
+	<target name="clean" description="delete the src,build,dist dir">
+		<delete dir="${src.dir}" />
+		<delete dir="${build.dir}" />
+		<delete dir="${lib.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+	
+	<!-- 建立所需要的目录 -->
+	<target name="initdir" depends="clean">
+		<tstamp />
+		<mkdir dir="${src.dir}" />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${lib.dir}" />
+	</target>
+	
+	<!-- 执行初始化操作 -->
+	<target name="init_server" depends="initdir" description="init">
+		<echo message="初始化..." />
+		<echo message="更新lib" />
+		<svn_update project="core" dir="lib" out="${lib.dir}" />
+		<echo message="更新代码" />
+		<foreach list="core,game_db,game_server,log_server,probe_collector" param="project" target="_update_project_src" />
+		<echo message="更新配置文件" />
+		<foreach list="game_server,log_server" param="project" target="_update_project_config" />
+		<echo message="初始化结束" />
+	</target>
+
+	<!-- 编译服务器jar包 -->
+	<target name="compile.server_lib" depends="init_server">
+		<patternset id="resource_config">
+			<include name="**/*.*" />
+			<exclude name="**/*.js" />
+			<exclude name="**/log4j.properties" />
+			<exclude name="**/hibernate.properties" />
+			<exclude name="**/log_ibatis_config.xml" />
+		</patternset>
+		<patternset id="src_config">
+			<include name="**/*.xml" />
+			<include name="*.xls" />
+		</patternset>
+		<compile_project destfile="server_lib" classpath="lib.path" resource-config="resource_config" source-config="src_config" jar-version-name="MMO-Server-Version" />
+	</target>
+	
+	<!-- 打包服务器程序包,包括所有依赖的包  -->
+	<target name="package.server_lib" depends="compile.server_lib">
+		<if>
+			<equals arg1="${encrypt}" arg2="true" />
+			<then>
+				<delete>
+					<fileset dir="${lib.dir}">
+						<include name="**/mysql*.jar" />
+						<include name="**/mysql*.zip" />
+					</fileset>
+				</delete>
+				<!-- 拷贝连接加密数据库的mysql jar包 -->
+				<copy todir="${lib.dir}">
+					<!-- 将${enc.lib.dir}中的jar和zip文件拷贝到Server的lib目录中  -->
+					<fileset dir="${enc.lib.dir}">
+						<include name="**/*.jar" />
+						<include name="**/*.zip" />
+					</fileset>
+				</copy>
+			</then>
+		</if>
+		<package_server servername="server_lib" />
+	</target>
+		
+	<!-- 打包资源文件 -->
+	<target name="package.resource" depends="initdir">
+		<svn_update svnpath="${resource.path}" project="resources" dir="." out="${build.dir}/resources" />
+		<echo message="${version}" file="${build.dir}/resources/version" />
+		<!-- 生成最新的sys_lang.xls -->
+		<!--
+		<java classname="com.imop.tr.tools.i18n.SysLangGenerator" classpathref="tools.lib.path">
+			<arg value="${build.dir}/resources/i18n/${language}/sys_lang.xls" />
+		</java>
+		-->
+		<if>
+			<equals arg1="${encrypt.resource}" arg2="true" />
+			<then>
+				<mkdir dir="${build.dir}/resources/temp_in/" />
+				<copy todir="${build.dir}/resources/temp_in/">
+					<fileset dir="${build.dir}/resources/scripts/"><!-- 目前只加密xls配置表-->
+						<include name="**/*.xls" />
+					</fileset>					
+				</copy>
+				<java classname="com.imop.tr.core.encrypt.EncryptFileGenerator" classpathref="tools.lib.path">
+					<arg value="${build.dir}/resources/temp_in/" />
+					<arg value="${build.dir}/resources/temp_out/" />
+				</java>
+				<copy todir="${build.dir}/resources/scripts/">
+					<fileset dir="${build.dir}/resources/temp_out/">
+						<include name="**/*.xls" />
+					</fileset>
+				</copy>
+				<delete dir="${build.dir}/resources/temp_in/" />
+				<delete dir="${build.dir}/resources/temp_out/" />
+			</then>
+		</if>
+		<zip destfile="${dist.dir}/resource.zip">
+			<fileset dir="${build.dir}/resources">
+				<include name="**/i18n/**" />
+				<include name="**/maps/**" />
+				<include name="**/scripts/**" />
+				<include name="version" />
+			</fileset>
+		</zip>
+	</target>
+	
+	<!-- 部署配置生成工具，需要使用非加密的方式 ant -Dencrypt=false package.deploy_tools-->
+	<target name="package.deploy_tools" depends="initdir">
+		<foreach list="deploy_tools" param="project" target="_update_project_src" />
+		<svn_update project="deploy_tools" dir="resource" out="${src.dir}/config" />
+
+		<!-- 生成deploy_tool中的version -->
+		<replaceregexp file="${src.dir}/config/version.js" match="@server.version@" replace="${version}" byline="true" />
+        <replaceregexp file="${src.dir}/config/version.js" match="@resource.version@" replace="${resource.version}" byline="true" />
+	    <replaceregexp file="${src.dir}/config/version.js" match="@db.version@" replace="${db.version}" byline="true" />
+        <replaceregexp file="${src.dir}/config/version.js" match="@client.version@" replace="${client.version}" byline="true" />
+		
+		<patternset id="deploy_config">
+			<include name="template/**/*" />
+			<include name="log4j.properties" />
+			<include name="version.js" />
+		</patternset>
+		<compile_project destfile="deploy_tool_only" classpath="ant.lib.path" resource-config="deploy_config" encrypt="false"/>
+		<tstamp>
+			<format property="build_date" pattern="yyyy-MM-dd HH:mm" />
+		</tstamp>
+		<!-- 将所有需要的类都打包到同一个jar中 -->
+		<jar destfile="${dist.dir}/deploy_tool.jar" duplicate="preserve">
+			<zipgroupfileset dir="${dist.dir}">
+				<include name="deploy_tool_only.jar" />
+			</zipgroupfileset>
+			<zipgroupfileset dir="${basedir}/ant_lib">
+				<include name="velocity-1.5.jar" />
+				<include name="commons-lang-2.1.jar" />
+				<include name="commons-collections-3.1.jar" />
+				<include name="commons-logging-1.0.4.jar" />
+				<include name="log4j-1.2.12.jar" />
+			</zipgroupfileset>
+			<manifest>
+				<attribute name="Version" value="${version}" />
+				<attribute name="Build-Date" value="${build_date}" />
+				<attribute name="Main-Class" value="com.imop.tr.deploy.Deploy" />
+			</manifest>
+		</jar>
+		<zip destfile="${dist.dir}/deploy_tools.zip">
+			<fileset dir="${dist.dir}">
+				<include name="deploy_tool.jar" />
+			</fileset>
+		</zip>
+	</target>
+
+	<!-- 一键打发布包 -->
+	<target name="package.release">
+        <delete dir="${release.pkg.dir}" />
+        <mkdir dir="${release.pkg.dir}" />
+        <!-- 打包deploy_tool -->
+		<if>
+			<equals arg1="${release.deploy.flag}" arg2="true"/>
+			<then>
+				<antcall target="package.deploy_tools"/>
+				<mkdir dir="${release.pkg.deploy.dir}" />
+				<copy file="${dist.dir}/deploy_tools.zip" todir="${release.pkg.deploy.dir}"/>
+			</then>
+		</if>
+		
+        <!-- 打包server_lib -->
+        <if>
+            <equals arg1="${release.server.flag}" arg2="true"/>
+            <then>
+                <antcall target="package.server_lib"/>
+                <mkdir dir="${release.pkg.server.dir}" />
+                <copy file="${dist.dir}/server_lib.zip" todir="${release.pkg.server.dir}"/>
+            </then>
+        </if>
+		
+        <!-- 打包resource -->
+        <if>
+            <equals arg1="${release.resource.flag}" arg2="true"/>
+            <then>
+                <if>
+                    <equals arg1="${language}" arg2="zh_CN" />
+                    <then>
+                        <antcall target="package.resource" />
+                    </then>
+                    <else>
+                        <antcall target="package.multi.resource" />
+                    </else>
+                </if>
+                <mkdir dir="${release.pkg.server.dir}" />
+                <copy file="${dist.dir}/resource.zip" todir="${release.pkg.server.dir}"/>
+            </then>
+        </if>
+		
+        <!-- 打zip发布包 -->
+        <zip destfile="${release.pkg.dir}/tr_release_${release.pkg.version}.zip">
+            <fileset dir="${release.pkg.dir}">
+                <include name="**/*" />
+            </fileset>
+        </zip>
+	
+	</target>
+	
+	<target name="package.update" depends="package.release,package.update.only">
+	</target>
+
+	<target name="package.update.only">
+		<delete dir="${update.pkg.dir}" />
+		<mkdir dir="${update.pkg.dir}" />
+
+		<echo>解压版本包开始</echo>
+		<unzip src="${release.pkg.dir}/tr_release_${release.pkg.version}.zip" dest="${update.pkg.dir}" />
+		<echo>解压版本包结束</echo>
+
+		<echo>分发文件开始</echo>
+		<if>
+			<equals arg1="${release.server.flag}" arg2="true" />
+			<then>
+				<unzip src="${update.pkg.dir}/server/server_lib.zip" dest="../lib" />
+			</then>
+		</if>
+		<if>
+			<equals arg1="${release.deploy.flag}" arg2="true" />
+			<then>
+				<echo>${update.pkg.dir}/deploy_tools/deploy_tools.zip</echo>
+				<unzip src="${update.pkg.dir}/deploy_tools/deploy_tools.zip" dest="../deploy_tools" />
+			</then>
+		</if>
+		<if>
+			<equals arg1="${release.resource.flag}" arg2="true" />
+			<then>
+				<unzip src="${update.pkg.dir}/server/resource.zip" dest="../resource/" />
+			</then>
+		</if>
+
+		<svn_update svnpath="${trunk.client.path}" project="tr_client" dir="bin" out="../client" />
+		<echo>分发文件结束</echo>
+
+	</target>
+	
+	<target name="_update_client_bin">
+		<svn_update svnpath="${trunk.client.path}" project="tr_client" dir="bin" out="../client" />	
+	</target>
+		
+</project>

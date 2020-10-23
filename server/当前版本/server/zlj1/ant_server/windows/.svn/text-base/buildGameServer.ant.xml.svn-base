@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="gameServer.ant" basedir="." default="root">
+	<!-- import -->
+	<import file="buildGameServer.def.xml" />
+
+<!--
+// 版本号信息开始
+// 注意: 版本号信息由命令行参数给出!!
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 大版本号  -->
+	<property name="largeVer" value="cmdArgs" />
+	<!-- 代码版本号  -->
+	<property name="codeRev" value="cmdArgs" />
+	<!-- 语言版本 -->
+	<property name="langName" value="cmdArgs" />
+	<!-- 多语言资源版本号 -->
+	<property name="langRev" value="cmdArgs" />
+	<!-- 加密 JAR 文件 -->
+	<property name="jarencFlag" value="cmdArgs" />
+
+	<!-- 最终版本号及打包目录 -->
+	<property name="pubVer" 
+		value="${largeVer}.${codeRev}.${langName}.${langRev}"  />
+	<property name="tmpDir" 
+		value="${tempdir}/${pubVer}/temp" />
+	<property name="finalDir" 
+		value="${tempdir}/${pubVer}/final/server" />
+
+<!--
+// 开始构建
+///////////////////////////////////////////////////////////////////
+//-->
+	<target name="root">
+		<echo message="::: 构建服务端" />
+
+		<antcall target="clearTempDir" />
+		<antcall target="svnExport" />
+		<antcall target="buildJavaAndCreateJar" />
+		
+		<if>
+			<equals arg1="${jarencFlag}" arg2="1" />
+			<then>
+				<!-- 加密 JAR 文件 -->
+				<antcall target="encryptJar" />
+			</then>
+		</if>
+
+		<antcall target="createZip" />
+		<antcall target="onComplete" />
+	</target>
+
+	<!-- 清理临时目录 -->
+	<target name="clearTempDir">
+		<echo message="清理临时目录" />
+		<deltree dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}/out" />
+		<mkdir dir="${tmpDir}/jar" />
+	</target>
+
+	<!-- svn 代码导出 -->
+	<target name="svnExport">
+		<!-- core -->
+		<echo message="从 svn 中导出 core 项目代码" />
+		<serverProjBranchesExport 
+			projURL="core/src" 
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/src" />
+
+		<!-- game_db -->
+		<echo message="从 svn 中导出 game_db 项目代码" />
+		<serverProjBranchesExport 
+			projURL="game_db/src" 
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/src" />
+
+		<!-- game_server -->
+		<echo message="从 svn 中导出 game_server 项目代码" />
+		<serverProjBranchesExport 
+			projURL="game_server/src" 
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/src" />
+
+		<!-- log_server -->
+		<echo message="从 svn 中导出 log_server 项目代码" />
+		<serverProjBranchesExport 
+			projURL="log_server/src" 
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/src" />
+
+		<!-- probe_collector -->
+		<echo message="从 svn 中导出 probe_collector 项目代码" />
+		<serverProjBranchesExport 
+			projURL="probe_collector/src" 
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}/src" />
+	</target>
+
+	<!-- 编译代码 -->
+	<target name="buildJavaAndCreateJar">
+		<echo message="编译 JAVA 源文件并创建 JAR 文件" />
+
+		<!--// 编译 JAVA 源码, 
+			// 注意: lib.gameServer 是常量! 定义在 globals.def.xml 文件中 -->
+		<buildJava cp="lib.gameServer"
+			src="${tmpDir}/src" 
+		   	out="${tmpDir}/out" />
+
+		<tstamp>
+			<format property="buildDate" pattern="yyyy-MM-dd HH:mm" />
+		</tstamp>
+
+		<!-- JAR -->
+		<jar destfile="${tmpDir}/jar/game_server.jar" 
+			  basedir="${tmpDir}/out">
+			<manifest>
+				<attribute name="Version" value="${pubVer}" />
+				<attribute name="Build-Date" value="${buildDate}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<!-- 加密 JAR 文件, 加密后原有的 JAR 文件会被删除 -->
+	<target name="encryptJar">
+		<echo message="加密 JAR 文件" />
+
+		<tstamp>
+			<format property="buildDate" pattern="yyyyMMddHHmmss" />
+		</tstamp>
+
+		<copy file="${tmpDir}/jar/game_server.jar" 
+			tofile="${tmpDir}/jar/game_server_${buildDate}.jar" />
+
+		<jarencByLinux
+			localDir="${tmpDir}/jar"
+			jarFilename="game_server_${buildDate}.jar" 
+			outFilename="game_server_${buildDate}.encrypt" />
+
+		<copy file="${tmpDir}/jar/game_server_${buildDate}.encrypt" 
+			tofile="${tmpDir}/jar/game_server.encrypt" />
+
+		<!-- 删除 game_server.jar 文件及相关文件 -->
+		<delete file="${tmpDir}/jar/game_server.jar" />
+		<delete file="${tmpDir}/jar/game_server_${buildDate}.jar" />
+		<delete file="${tmpDir}/jar/game_server_${buildDate}.encrypt" />
+	</target>
+
+	<!-- 创建 ZIP 文件 -->
+	<target name="createZip">
+		<!-- 事先复制依赖包 -->
+		<echo message="复制依赖包" />
+		<copy todir="${tmpDir}/jar">
+			<fileset dir="${libdir.gameServer}">
+				<include name="**/*.zip" />
+				<include name="**/*.jar" />
+				<include name="**/*.encrypt" />
+			</fileset>
+		</copy>
+
+		<!-- 创建压缩包 -->
+		<echo message="创建压缩包 server_lib.zip" />
+		<zip destfile="${tmpDir}/server_lib.zip">
+			<fileset dir="${tmpDir}/jar">
+				<include name="**/*.zip" />
+				<include name="**/*.jar" />
+				<include name="**/*.encrypt" />
+			</fileset>
+		</zip>
+	</target>
+
+	<!-- 完成脚本 -->
+	<target name="onComplete">
+		<move file="${tmpDir}/server_lib.zip" tofile="${finalDir}/server_lib.zip" />
+	</target>
+</project>

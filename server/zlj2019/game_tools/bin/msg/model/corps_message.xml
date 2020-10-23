@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="corps">
+	
+	<message type="CG_CLICK_CORPS_PANEL" comment="点击军团按钮"/>
+
+	<message type="CG_SEARCH_CORPS" comment="军团列表搜索">
+		<field type="Integer" name="country" comment="国家0:全部，1：蜀，2：魏，3：吴"/>
+		<field type="String" name="name" comment="军团名称"/>
+	</message>
+	
+	<message type="CG_CORPS_PAGE_SKIP" comment="页面跳转">
+		<field type="Integer" name="country" comment="国家0:全部，1：蜀，2：魏，3：吴"/>
+		<field type="Integer" name="page" comment="跳转页"/>
+	</message>
+
+	<message type="CG_CLICK_CORPS_FUNCTION" comment="点击军团相关功能">
+		<field type="Long" name="corpsId" comment="军团ID"/>
+		<field type="Integer" name="funcId" comment="功能ID"/>
+	</message>
+	
+	<message type="CG_CLICK_CORPS_MEMBER_FUNCTION" comment="点击军团成员相关功能">
+		<field type="Long" name="corpsMemberId" comment="军团成员ID"/>
+		<field type="Integer" name="funcId" comment="功能ID"/>
+	</message>
+	
+	<message type="CG_CREATE_CORPS" comment="创建军团">
+		<field type="String" name="name" comment="军团名称"/>
+		<field type="String" name="notice" comment="军团公告"/>
+	</message>
+	
+	<message type="GC_CORPS_LIST_PANEL" comment="军团列表面板">
+		<field type="Integer" name="currPage" comment="当前页数"/>
+		<field type="Integer" name="maxPageNum" comment="总数页数"/>
+		<field type="com.imop.lj.common.model.corps.SimpleCorpsInfo" name="simpleCorpsInfos" clientType="SimpleCorpsInfo"
+			comment="军团信息列表" macro="SimpleCorpsInfo" list="true"/>
+		<field type="com.imop.lj.common.model.corps.CorpsFuncInfo" name="corpsListPanelFuncInfoList" clientType="CorpsFuncInfo"
+			comment="军团列表功能列表" macro="CorpsFuncInfo" list="true"/>
+	</message>
+	
+	<message type="GC_UPDATE_SINGLE_CORPS" comment="更新单条军团信息">
+		<field type="com.imop.lj.common.model.corps.SimpleCorpsInfo" name="simpleCorpsInfo" clientType="SimpleCorpsInfo"
+				comment="军团信息" macro="SimpleCorpsInfo"/>
+	</message>
+	
+	<message type="CG_OPEN_CORPS_PANEL" comment="打开军团面板"/>
+	
+	<message type="GC_OPEN_CORPS_PANEL" comment="返回军团面板">
+		<field type="com.imop.lj.common.model.corps.DetailCorpsInfo" name="detailCorpsInfo" 
+						clientType="DetailCorpsInfo" comment="军详细团信息" macro="DetailCorpsInfo"/>
+		
+		<field type="com.imop.lj.common.model.corps.MemberApplyInfo" name="memberApplyInfoList" clientType="MemberApplyInfo"
+					comment="军团成员申请信息" list="true">
+			<field type="Long" name="memId" comment="申请玩家ID"/>
+			<field type="String" name="name" comment="玩家姓名"/>
+			<field type="Integer" name="level" comment="玩家级别"/>
+			<field type="Integer" name="sex" comment="玩家性别"/>
+			<field type="Integer" name="petJob" comment="玩家职业"/>
+			<field type="com.imop.lj.common.model.corps.CorpsMemberFuncInfo" name="applyFuncInfoList" clientType="CorpsMemberFuncInfo"
+					comment="申请功能列表" macro="CorpsMemberFuncInfo" list="true"/>
+		</field>
+		
+		<field type="com.imop.lj.common.model.corps.CorpsEventInfo" name="corpsEventInfoList" clientType="CorpsEventInfo"
+					comment="军团日志列表" list="true">
+			<field type="String" name="corpsLog" comment="军团日志信息"/>
+			<field type="String" name="onlineDesc" comment="在线状态描述"/>
+		</field>
+		
+		<field type="com.imop.lj.common.model.corps.CorpsFuncInfo" name="corpsPanelFuncInfoList" clientType="CorpsFuncInfo"
+			comment="军团面板功能列表" macro="CorpsFuncInfo" list="true"/>
+	</message>
+	
+	<message type="CG_CORPS_DONATE" comment="军团捐献">
+		<field type="Integer" name="num" comment="捐献数量"/>
+	</message>
+	
+	<message type="CG_CORPS_NOTICE_UPDATE" comment="修改公告">
+		<field type="String" name="qq" comment="军团QQ"/>
+		<field type="String" name="notice" comment="公告内容"/>
+	</message>
+	
+	<message type="CG_OPEN_CORPS_MEMBER_LIST" comment="打开军团成员列表"/>
+	
+	<message type="GC_OPEN_CORPS_MEMBER_LIST" comment="返回军团成员列表">
+		<field type="com.imop.lj.common.model.corps.CorpsMemberInfo" name="corpsMemInfoList" clientType="CorpsMemberInfo"
+			comment="军团成员列表" macro="CorpsMemberInfo" list="true"/>
+		<field type="com.imop.lj.common.model.corps.CorpsFuncInfo" name="corpsPanelFuncInfoList" clientType="CorpsFuncInfo"
+			comment="军团面板功能列表" macro="CorpsFuncInfo" list="true"/>
+	</message>
+	
+	<message type="CG_OPEN_CORPS_STORAGE" comment="打开军团仓库"/>
+	
+	<message type="GC_CORPS_STORAGE" comment="返回军团仓库">
+		<field type="com.imop.lj.common.model.corps.StorageCorpsMemberInfo" name="storageMemList" clientType="StorageCorpsMemberInfo"
+			comment="仓库军团成员列表" macro="StorageCorpsMemberInfo" list="true"/>
+		<field type="com.imop.lj.common.model.corps.StorageItemTempInfo" name="storageItemTempList" clientType="StorageItemTempInfo"
+			comment="仓库物品模版列表" macro="StorageItemTempInfo" list="true"/>
+		<field type="com.imop.lj.common.model.corps.StorageItemInfo" name="storageItemList" clientType="StorageItemInfo"
+			comment="仓库物品列表" macro="StorageItemInfo" list="true"/>
+		<field type="Integer" name="canAllccation" comment="是否可以進行分配操作1:可以；0：不可以"/>
+	</message>
+	
+	<message type="CG_ALLOCATION_ITEM" comment="分配物品">
+		<field type="Long" name="targetId" comment="接受者"/>
+		<field type="com.imop.lj.common.model.corps.StorageItemInfo" name="storageItemList" clientType="StorageItemInfo"
+			comment="仓库物品列表" macro="StorageItemInfo" list="true"/>
+	</message>
+	
+	<message type="GC_STORAGE_ITEM_LIST" comment="分配物品">
+		<field type="com.imop.lj.common.model.corps.StorageItemTempInfo" name="storageItemTempList" clientType="StorageItemTempInfo"
+			comment="仓库物品模版列表" macro="StorageItemTempInfo" list="true"/>
+		<field type="com.imop.lj.common.model.corps.StorageItemInfo" name="storageItemList" clientType="StorageItemInfo"
+			comment="仓库物品列表" macro="StorageItemInfo" list="true"/>
+	</message>
+	
+	<message type="GC_CORPS_EVENT_NOTICE" comment="军团事件通知">
+		<field type="Integer" name="corpsEventType" comment="事件类型"/>
+		<field type="Long" name="param" comment="事件参数"/>
+	</message>
+	
+	<message type="CG_CORPS_ADD_TO_FRIEND" comment="添加军团成员成好友">
+	</message>
+	
+	<message type="CG_CORPS_BATCH_FIRE_MEMBER" comment="批量踢出成员">
+		<field type="Long" name="targetIds" comment="成员IDLIST" list="true"/>
+	</message>
+	
+	<message type="CG_CORPS_BATCH_ADD_APPLY_MEMBER" comment="批量添加成员">
+		<field type="Long" name="targetIds" comment="成员IDLIST" list="true"/>
+	</message>
+	
+	<message type="CG_CORPS_MEMBER_INFO" comment="请求个人帮派成员信息">
+	</message>
+	
+	<message type="GC_CORPS_MEMBER_INFO" comment="返回个人帮派成员信息">
+		<field type="com.imop.lj.common.model.corps.CorpsMemberInfo" name="corpsMemInfo" clientType="CorpsMemberInfo"
+			comment="军团成员" macro="CorpsMemberInfo"/>
+		<field type="String" name="corpsName" comment="军团名称"/>
+	</message>
+	
+	<message type="GC_CORPS_CHANGED_MEMBER_INFO" comment="返回有更改的帮派成员信息">
+		<field type="com.imop.lj.common.model.corps.CorpsMemberInfo" name="corpsMemInfoList" clientType="CorpsMemberInfo"
+			comment="军团成员" macro="CorpsMemberInfo" list="true" />
+		<field type="Integer" name="changeType" comment="更新类别 1修改,2添加,3删除"/>
+	</message>
+	
+	<message type="CG_CORPS_QUICK_APPLY" comment="一键申请">
+		<field type="Integer" name="page" comment="请求的页数"/>
+	</message>
+	
+	<!-- 帮派竞赛消息 -->
+	<message type="CG_ENTER_CORPSWAR" comment="请求进入帮派竞赛">
+	</message>
+	
+	<message type="CG_CORPSWAR_INFO" comment="请求帮派竞赛信息">
+	</message>
+	
+	<message type="GC_CORPSWAR_INFO" comment="帮派竞赛信息">
+		<field type="Integer" name="corpsScore" comment="本帮派积分" />
+		<field type="String" name="corpsName" comment="帮派名字" />
+		<field type="Long" name="leftTime" comment="剩余时间，毫秒" />
+		<field type="Integer" name="state" comment="活动当前状态，1准备中，2已开始" />
+	</message>
+	
+	<message type="CG_LEAVE_CORPSWAR" comment="请求离开帮派竞赛">
+	</message>
+	
+	<message type="CG_CORPSWAR_RANK_LIST" comment="请求帮派竞赛排行榜">
+	</message>
+	
+	<message type="GC_CORPSWAR_RANK_LIST" comment="帮派竞赛排行榜">
+		<field type="com.imop.lj.common.model.corps.CorpsWarRankInfo" name="cwRankInfoList" clientType="CorpsWarRankInfo"
+					comment="帮派竞赛排行榜信息" list="true" >
+			<field type="Long" name="corpsId" comment="军团id" />
+			<field type="String" name="name" comment="军团名称"/>
+			<field type="Integer" name="rank" comment="排名"/>
+			<field type="Integer" name="score" comment="积分"/>
+		</field>
+	</message>
+	
+	<message type="CG_BACK_CORPS_MAP" comment="请求回到帮派场景">
+	</message>
+	
+	<message type="CG_OPEN_CORPS_BUILDING_PANEL" comment="打开帮派建筑面板">
+		<field type="Integer" name="buildType" comment="建筑类型,1朱雀,2青龙,3白虎,4朱雀,5玄武,6养生,7侍剑"/>
+	</message>
+	
+	<message type="GC_OPEN_CORPS_BUILDING_PANEL" comment="返回帮派建筑面板">
+		<field type="com.imop.lj.common.model.corps.CorpsBuildingInfo" name="corpsBuildingInfo" 
+						clientType="CorpsBuildingInfo" comment="帮派建筑信息" macro="CorpsBuildingInfo"/>
+	</message>
+	
+	<message type="CG_UPGRADE_CORPS" comment="请求升级帮派建筑">
+		<field type="Integer" name="buildType" comment="建筑类型,1朱雀,2青龙,3白虎,4朱雀,5玄武,6养生,7侍剑"/>
+	</message>
+	
+	<message type="GC_UPGRADE_CORPS" comment="返回升级帮派建筑结果">
+		<field type="Integer" name="buildType" comment="建筑类型,1朱雀,2青龙,3白虎,4朱雀,5玄武,6养生,7侍剑"/>
+		<field type="Integer" name ="result" comment="升级结果,1成功,2失败"/>
+	</message>
+	
+	<message type="GC_DEGRADE_CORPS" comment="返回帮派降级后信息,其中帮派建筑等级未变">
+		<field type="com.imop.lj.common.model.corps.DetailCorpsInfo" name="detailCorpsInfo" 
+						clientType="DetailCorpsInfo" comment="军详细团信息" macro="DetailCorpsInfo"/>
+		<field type="com.imop.lj.common.model.corps.CorpsBuildingInfo" name="corpsBuildingInfo" 
+						clientType="CorpsBuildingInfo" comment="帮派建筑信息" macro="CorpsBuildingInfo"/>
+	</message>
+	
+	<message type ="CG_OPEN_CORPS_BENIFIT_PANEL" comment="打开帮派福利面板">
+	</message>
+	<message type ="GC_OPEN_CORPS_BENIFIT_PANEL" comment="返回帮派福利面板">
+		<field type="com.imop.lj.common.model.corps.CorpsBenifitInfo" name="corpsBenifitInfo" 
+			clientType="CorpsBenifitInfo" comment="帮派福利信息" macro="CorpsBenifitInfo"/>
+	</message>
+	
+	<message type ="CG_GET_BENIFIT" comment="请求领取帮派福利">
+	</message>
+	<message type="GC_GET_BENIFIT" comment="返回领取帮派福利结果">
+		<field type="Integer" name ="result" comment="1成功,2失败"/>
+	</message>
+	
+	<!-- 帮派修炼技能 -->
+	<message type ="CG_OPEN_CORPS_CULTIVATE_PANEL" comment="请求打开帮派修炼技能面板">
+	</message>
+	<message type="GC_OPEN_CORPS_CULTIVATE_PANEL" comment="返回帮派修炼技能面板">
+		<field type="com.imop.lj.common.model.corps.CorpsSkillInfo" name="corpsSkillInfoList" 
+			clientType="CorpsSkillInfo" comment="帮派修炼技能信息" macro="CorpsSkillInfo" list="true" />
+	</message>
+	
+	<message type ="CG_CULTIVATE_SKILL" comment="请求修炼技能">
+		<field type="Integer" name ="skillId" comment="技能Id"/>
+		<field type="Integer" name ="isBatch" comment="修炼方式是否批量,0-否,1-是"/>
+	</message>
+	<message type ="GC_CULTIVATE_SKILL" comment="返回请求修炼技能结果">
+		<field type="Integer" name ="result" comment="升级结果,1成功,2失败"/>
+	</message>
+	
+	
+	<!-- 帮派辅助技能 -->
+	<message type ="CG_OPEN_CORPS_ASSIST_PANEL" comment="请求打开帮派辅助技能面板">
+	</message>
+	<message type="GC_OPEN_CORPS_ASSIST_PANEL" comment="返回帮派辅助技能面板">
+		<field type="com.imop.lj.common.model.corps.CorpsSkillInfo" name="corpsSkillInfoList" 
+			clientType="CorpsSkillInfo" comment="帮派辅助技能信息" macro="CorpsSkillInfo" list="true" />
+	</message>
+	
+	<message type ="CG_LEARN_ASSIST_SKILL" comment="请求学习辅助技能">
+		<field type="Integer" name ="skillId" comment="技能Id"/>
+	</message>
+	<message type ="GC_LEARN_ASSIST_SKILL" comment="返回请求学习辅助技能结果">
+		<field type="Integer" name ="result" comment="升级结果,1成功,2失败"/>
+	</message>
+	
+	<message type ="CG_MAKE_ITEM" comment="请求制作物品">
+		<field type="Integer" name ="skillId" comment="技能Id"/>
+		<field type="Integer" name ="targetLevel" comment="生成对应等级的物品,默认为0代表该生成物品为随机方式"/>
+	</message>
+	<message type ="GC_MAKE_ITEM" comment="返回请求制作物品">
+		<field type="Integer" name ="result" comment="制作结果,1成功,2失败"/>
+	</message>
+	
+	<!-- 红包相关 -->
+	<message type ="CG_OPEN_CORPS_RED_ENVELOPE_PANEL" comment="请求打开帮派红包面板">
+	</message>
+	<message type ="GC_OPEN_CORPS_RED_ENVELOPE_PANEL" comment="返回请求打开帮派红包面板">
+		<field type="com.imop.lj.common.model.corps.CorpsRedEnvelopeInfo" name="corpsRedEnvelopeInfoList" 
+			clientType="CorpsRedEnvelopeInfo" comment="帮派发送红包的玩家信息" list="true" >
+			<field type="String" name="uuid" comment="要领取红包的uuid" />
+			<field type="Long" name ="corpsId" comment="所属帮派Id"/>
+			<field type="Long" name ="sendId" comment="发红包玩家id"/>
+			<field type="String" name ="sendName" comment="发红包玩家名称"/>
+			<field type="String" name ="content" comment="红包内容"/>
+			<field type="Integer" name ="redEnvelopeType" comment="红包类型,1-帮派红包"/>
+			<field type="Integer" name ="redEnvelopeStatus" comment="红包状态,0-不可领取,1-可领取"/>
+			<field type="Long" name ="createTime" comment="发送时间"/>
+			<field type="Integer" name ="bonusAmount" comment="红包总金额"/>
+			<field type="Integer" name ="remainingNum" comment="剩余红包数量"/>
+			<field type="Integer" name ="remainingBonus" comment="剩余红包金额"/>
+			<field type="com.imop.lj.common.model.corps.OpenRedEnveloperInfo" name="openRedEnveloperInfoList" 
+				clientType="OpenRedEnveloperInfo" comment="帮派抢到红包的玩家信息" macro="OpenRedEnveloperInfo" list="true" />
+		</field>
+	</message>
+	
+	<message type ="CG_CREATE_CORPS_RED_ENVELOPE" comment="请求发送帮派红包">
+		<field type="Integer" name ="redEnvelopeType" comment="红包类型,1-帮派红包"/>
+		<field type="String" name ="content" comment="红包内容"/>
+		<field type="Integer" name ="bonusAmount" comment="红包总金额"/>
+	</message>
+	<message type ="GC_CREATE_CORPS_RED_ENVELOPE" comment="返回请求发送帮派红包">
+		<field type="Integer" name ="result" comment="结果,1成功,2失败"/>
+	</message>
+	
+	<message type ="CG_GOT_CORPS_RED_ENVELOPE" comment="请求领取帮派红包">
+		<field type="Integer" name ="redEnvelopeType" comment="红包类型,1-帮派红包"/>
+		<field type="String" name="uuid" comment="要领取红包的uuid" />
+	</message>
+	<message type ="GC_GOT_CORPS_RED_ENVELOPE" comment="返回请求领取帮派红包">
+		<field type="String" name="uuid" comment="要领取红包的uuid" />
+		<field type="Integer" name ="result" comment="结果,1成功,2失败"/>
+		<field type="Integer" name ="gotBonus" comment="领取的金额"/>
+	</message>
+	
+	<message type ="CG_LOOK_CORPS_RED_ENVELOPE" comment="请求查看红包详情">
+		<field type="String" name="uuid" comment="要查看红包的uuid" />
+	</message>
+	
+	<!-- 分配物品,目前用于帮派竞赛-->
+	<message type ="CG_OPEN_ALLOCATE_PANEL" comment="请求打开活动奖励分配面板">
+		<field type="Integer" name ="activityType" comment="活动类型,1-帮派竞赛"/>
+	</message>
+	<message type ="GC_OPEN_ALLOCATE_PANEL" comment="返回请求打开活动奖励分配面板">
+		<field type="com.imop.lj.common.model.allocate.AllocateItemInfo" name="beforeAllocateItemInfos" 
+				clientType="AllocateItemInfo" comment="待被分配到的奖励内容" macro="AllocateItemInfo" list="true" />
+		<field type="com.imop.lj.common.model.allocate.AllocateMemberInfo" name="allocateMemberInfoList" 
+				clientType="AllocateMemberInfo" comment="被分配奖励的玩家信息" list="true">
+			<field type="Long" name ="roleId" comment="玩家id"/>
+			<field type="String" name ="playerName" comment="玩家姓名"/>
+			<field type="Long" name ="corpsId" comment="玩家军团id"/>
+			<field type="Integer" name ="score" comment="玩家积分"/>
+			<field type="Integer" name ="playerLevel" comment="玩家等级"/>
+			<field type="Integer" name ="playerPower" comment="玩家战力"/>
+			<field type="Integer" name ="corpsJob" comment="玩家帮派职务"/>
+			<field type="com.imop.lj.common.model.allocate.AllocateItemInfo" name="afterAllocateItemInfos" 
+					clientType="AllocateItemInfo" comment="已被分配到的奖励内容" macro="AllocateItemInfo" list="true" />
+		</field>
+	</message>
+	
+	<message type="CG_ALLOCATE_ACTIVITY_ITEM" comment="请求分配活动得到的物品">
+		<field type="Integer" name ="activityType" comment="活动类型,1-帮派竞赛"/>
+		<field type="Long" name="targetId" comment="接受者"/>
+		<field type="com.imop.lj.common.model.allocate.AllocateItemInfo" name="allocatingItemInfos" 
+				clientType="AllocateItemInfo" comment="分配中的奖励内容" macro="AllocateItemInfo" list="true" />
+	</message>
+	
+</messages>

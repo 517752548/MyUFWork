@@ -1,0 +1,3 @@
+int equipmentID;[notNull=true]//装备ID
+int grade;[notNull=true;minValue=1]//装备等阶
+int gradeProb;[notNull=false]//概率

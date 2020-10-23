@@ -1,0 +1,4 @@
+int templateId;[notNull=true]//上架商品模板ID
+int commodityType;[notNull=true]//商品类型
+int subTagId;[notNull=true]//二级标签
+int isAvailable;[notNull=false]//有效的(1有效，0无效)

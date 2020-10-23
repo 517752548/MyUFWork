@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="wizardraid">
+
+	<message type="GC_WIZARDRAID_LEFT_TIMES" comment="绿野仙踪剩余免费进入次数">
+		<field type="Integer" name="leftFreeTimes" comment="剩余免费进入次数" />
+	</message>
+
+	<message type="CG_WIZARDRAID_ENTER_SINGLE" comment="请求进入单人副本">
+		<field type="Integer" name="raidId" comment="副本id" />
+	</message>
+	
+	<message type="GC_WIZARDRAID_ENTER_SINGLE" comment="进入单人副本">
+		<field type="Integer" name="raidId" comment="副本id" />
+	</message>
+	
+	<message type="CG_WIZARDRAID_ASK_ENTER_TEAM" comment="队长请求进入组队副本">
+		<field type="Integer" name="raidId" comment="副本id" />
+	</message>
+	
+	<message type="GC_WIZARDRAID_ASK_ENTER_TEAM" comment="队长请求进入组队副本">
+		<field type="Integer" name="raidId" comment="副本id" />
+	</message>
+	
+	<message type="CG_WIZARDRAID_ANSWER_ENTER_TEAM" comment="应答进入组队副本的请求">
+		<field type="Integer" name="agree" comment="是否同意进入，0不同意，1同意" />
+	</message>
+
+	<message type="GC_WIZARDRAID_ENTER_TEAM" comment="进入组队副本">
+		<field type="Integer" name="raidId" comment="副本id" />
+	</message>
+	
+	<message type="CG_WIZARDRAID_LEAVE" comment="离开副本">
+	</message>
+
+	<message type="GC_WIZARDRAID_INFO" comment="副本信息">
+		<field type="Integer" name="wave" comment="当前波数" />
+		<field type="Integer" name="winNum" comment="击杀怪物数量" />
+		<field type="Long" name="leftTime" comment="剩余时间，毫秒" />
+	</message>
+	
+</messages>

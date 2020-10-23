@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="title">
+
+    <message type="CG_TITLE_PANEL" comment="申请称号界面">
+
+    </message>
+<message type="GC_TITLE_PANEL" comment="返回称号界面">
+    <field type="com.imop.lj.gameserver.title.TitleInfo"
+           clientType="TitleInfo"
+           name="titleList" list="true" macro="TitleInfo" comment="称号信息页面">
+    </field>
+</message>
+
+<message type="CG_USE_TITLE" comment="使用称号">
+   <field type="Integer" name="titleTemplateId" comment="称号的模版ID" />
+</message>
+<message type="GC_USR_TITLE" comment="正在使用称号">
+    <field type="Integer" name="titleTemplateId" comment="称号的模版id"/>
+</message>
+    <message type="CG_DIS_TITLE" comment="隐藏称号">
+        <field type="Integer" name="distitle" comment="是否隐藏称号 0隐藏,1显示称号" />
+    </message>
+
+</messages>

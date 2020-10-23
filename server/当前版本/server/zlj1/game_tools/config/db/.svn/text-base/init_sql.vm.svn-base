@@ -1,0 +1,34 @@
+SET CHARACTER_SET_CLIENT=utf8;
+SET CHARACTER_SET_CONNECTION=utf8;
+
+-- DROP DATABASE IF EXISTS `tr_${server_id}_battle_report`;
+CREATE DATABASE `tr_${server_id}_battle_report` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `tr_${server_id}_battle_report`;
+
+-- DROP DATABASE IF EXISTS `tr_${server_id}`;
+CREATE DATABASE `tr_${server_id}` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `tr_${server_id}`;
+$initSql
+
+
+-- log日志
+-- DROP DATABASE IF EXISTS `tr_${server_id}_log`;
+CREATE DATABASE `tr_${server_id}_log` DEFAULT CHARACTER SET utf8  COLLATE utf8_general_ci;
+USE `tr_${server_id}_log`;
+
+-- ----------------------------
+DROP TABLE IF EXISTS `tr_${server_id}_log`.`reason_list`;
+-- ----------------------------
+CREATE TABLE `reason_list` (
+  `log_uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `log_type` int(10) unsigned NOT NULL,
+  `log_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `log_table` varchar(255) NOT NULL,
+  `log_desc` varchar(255) NOT NULL,
+  `log_field` varchar(255) NOT NULL,
+  `reason` int(10) NOT NULL,
+  `reason_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`log_uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+$reasonListSql

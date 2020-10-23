@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="relation">
+	
+	<message type="CG_CLICK_RELATION_PANEL" comment="打开好友面板">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="Integer" name="page" comment="页码"/>
+	</message>
+
+	<message type="GC_CLICK_RELATION_PANEL" comment="打开好友面板">
+		<field type="Integer" name="curPage" comment="当前页码"/>
+		<field type="Integer" name="maxPage" comment="总页码"/>
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="com.imop.lj.common.model.RelationInfo" 
+			macro="RelationInfo" name="relationInfoList" list="true" comment="玩家列表">
+		</field>
+	</message>
+	
+	<message type="CG_ADD_RELATION_BY_NAME" comment="添加关系">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="String" name="targetName" comment="目标玩家名称"/>
+	</message>
+	
+	<message type="CG_ADD_RELATION_BY_ID" comment="添加关系">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="Long" name="targetCharId" comment="目标玩家Id"/>
+	</message>
+	
+	<message type="CG_ADD_RELATION_BY_ID_STR" comment="添加关系">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="String" name="targetCharIdStr" comment="目标玩家Id"/>
+	</message>
+	
+	<message type="GC_ADD_RELATION" comment="添加关系成功">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="Long" name="targetCharId" comment="目标玩家Id"/>
+		<field type="com.imop.lj.common.model.RelationInfo" 
+			macro="RelationInfo" name="relationInfoData" comment="玩家信息">
+		</field>
+	</message>
+	
+	<message type="CG_ADD_RELATION_BATCH" comment="批量添加关系">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="Long" name="targetCharIdArr" list="true" comment="目标玩家Id列表"/>
+	</message>
+	
+	<message type="CG_DEL_RELATION" comment="删除关系">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="String" name="targetName" comment="目标玩家名称"/>
+	</message>
+	
+	<message type="GC_DEL_RELATION" comment="删除关系成功">
+		<field type="Integer" name="relationType" comment="1好友，2黑名单"/>
+		<field type="Long" name="targetCharId" comment="目标玩家Id"/>
+	</message>
+	
+	<message type="CG_SHOW_RECOMMEND_FRIEND_LIST" comment="显示好友推荐面板">
+	</message>
+	
+	<message type="GC_SHOW_RECOMMEND_FRIEND_LIST" comment="显示好友推荐面板">
+		<field type="com.imop.lj.common.model.RelationInfo" 
+			macro="RelationInfo" name="relationInfoList" list="true" comment="玩家列表">
+		</field>
+	</message>
+</messages>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="corps_build_log" type="com.imop.lj.logserver.model.CorpsBuildLog" />
+    <insert id="insert_corps_build_log" parameterClass="corps_build_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,char_id,char_name,level,country_id,vip_level,total_charge,device_id,device_type,device_version,client_version,client_language,appid,f_value,reason,param,corps_id,corps_name,corps_level,member_num,curr_exp,cur_fund, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#charId#,#charName#,#level#,#countryId#,#vipLevel#,#totalCharge#,#deviceId#,#deviceType#,#deviceVersion#,#clientVersion#,#clientLanguage#,#appid#,#fValue#,#reason#,#param#,#corpsId#,#corpsName#,#corpsLevel#,#memberNum#,#currExp#,#curFund#, #createTime#)</insert>
+    <statement id="createTable_corps_build_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id varchar(128),
+	account_name varchar(128),
+	char_id bigint not null,
+	char_name varchar(128),
+	level int(11) ,
+	country_id int(11) ,
+	vip_level int(11) ,
+	total_charge int(11) ,
+	device_id varchar(256),
+	device_type varchar(256),
+	device_version varchar(256),
+	client_version varchar(256),
+	client_language varchar(256),
+	appid varchar(256),
+	f_value varchar(256),
+	reason int(11) ,
+	param text ,
+	corps_id bigint ,
+	corps_name varchar(256),
+	corps_level int(11) ,
+	member_num int(11) ,
+	curr_exp bigint ,
+	cur_fund bigint ,
+createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+	,key char_id (char_id)
+	,key char_name (char_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

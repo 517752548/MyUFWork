@@ -1,0 +1,7 @@
+int lowerLimit;[minValue=1;notNull=false]//等级下限
+int upperLimit;[minValue=1;notNull=false]//等级上限
+int tempId;[notNull=false]//物品模版ID
+int num;[minValue=1;notNull=false]//数量
+List<com.imop.lj.common.model.template.CurrencyTemplate> priceList;[Collection(1,2)]//打折后的价格
+int discount;[minValue=1;maxValue=10;notNull=false]//折扣
+int weight;[minValue=1;notNull=false]//权重

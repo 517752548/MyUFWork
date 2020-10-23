@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="equip">
+	
+	<message type="CG_EQP_CRAFT" comment="打造装备">
+		<field type="Integer" name="equipmentID" comment="装备ID"/>
+	</message>
+	
+	<message type="GC_EQP_CRAFT" comment="返回打造结果">
+		<field type="Integer" name="equipmentID" comment="装备模板ID"/>
+		<field type="String" name="itemUUId" comment="道具唯一ID"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_EQP_UPSTAR" comment="升星装备位">
+		<field type="Integer" name="equipPosition" comment="装备位"/>
+		<field type="Integer" name="useExtraItem" comment="是否使用物品提升概率，1使用，2不使用"/>
+	</message>
+	
+	<message type="GC_EQP_UPSTAR" comment="返回升星结果">
+		<field type="Integer" name="equipPosition" comment="装备位"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_EQP_GEM_TAKEDOWN" comment="取下宝石">
+		<field type="Integer" name="equipPosition" comment="装备位"/>
+		<field type="Integer" name="gemPosition" comment="宝石位"/>
+	</message>
+	
+	<message type="CG_EQP_GEM_SET" comment="镶嵌宝石">
+		<field type="Integer" name="equipPosition" comment="装备位"/>
+		<field type="Integer" name="gemPosition" comment="宝石位"/>
+		<field type="Integer" name="gemIndex" comment="在主背包的index"/>
+	</message>
+	
+	<message type="GC_EQP_GEM_SET" comment="镶嵌宝石结果">
+		<field type="Integer" name="result" comment="镶嵌宝石结果 1成功 2失败"/>
+	</message>
+	
+	<message type="CG_EQP_GEM_SYNTHESIS" comment="合成宝石">
+		<field type="Integer" name="gemType" comment="目标宝石类别"/>
+		<field type="Integer" name="gemLevel" comment="目标宝石等级"/>
+		<field type="Integer" name="synthesisBase" comment="合成基数 3 三合一 4 四合一 5 五合一"/>
+		<field type="Integer" name="synthesisType" comment="合成方式 1单个2全部"/>
+	</message>
+	
+	<message type="GC_EQP_GEM_SYNTHESIS" comment="合成结果">
+		<field type="Integer" name="sucNum" comment="合成成功数量"/>
+		<field type="Integer" name="failNum" comment="合成失败数量"/>
+		<field type="Integer" name="rewardNum" comment="合成失败返回道具数量"/>
+		
+	</message>
+	
+	<message type="CG_EQP_RECAST" comment="重铸装备">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+		<field type="Integer" name="EquipRecastInfo" list="true" comment="重铸时锁定装备列表" >
+		</field>
+	</message>
+	
+	<message type="GC_EQP_RECAST" comment="重铸装备结果">
+		<field type="Integer" name="result" comment="1成功2失败"/>
+	</message>
+	
+	<message type="CG_EQP_DECOMPOSE" comment="分解装备">
+		<field type="String" name="equipList" comment="装备UUIDList" list="true"/>
+	</message>
+	
+	<message type="GC_EQP_DECOMPOSE" comment="分解装备结果">
+		<field type="Integer" name="result" comment="1成功2失败"/>
+	</message>
+	
+	<message type="CG_EQP_REFINERY" comment="洗炼装备">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+	</message>
+	
+	<message type="GC_EQP_REFINERY" comment="洗炼装备结果">
+		<field type="Integer" name="result" comment="1成功2失败"/>
+	</message>
+	
+</messages>

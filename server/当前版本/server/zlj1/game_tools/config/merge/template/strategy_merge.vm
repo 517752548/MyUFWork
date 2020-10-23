@@ -1,0 +1,144 @@
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+package com.imop.lj.mergedb.strategy;
+
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.imop.lj.core.orm.BaseEntity;
+import ${module.fullClassName};
+import com.imop.lj.mergedb.Globals;
+import com.imop.lj.mergedb.log.Loggers;
+
+/**
+ * ${module.mergeModelName}合服策略
+ * 
+ * @author CodeGenerator, don't modify this file please.
+ */
+public abstract class ${module.className}Strategy implements IStrategy {
+	
+	protected final static String TABLE_NAME = "${module.tableName}";
+	
+	protected Map<${module.idClassName},${module.className}> #lowerFirstChar($module.className)Map = new HashMap<${module.idClassName},${module.className}>();
+
+	@Override
+	public void read(){
+		Loggers.mergeDbLogger.info("read ${module.className} is starting...");
+		long start = System.currentTimeMillis();
+#if (!$module.globals)
+		List<${module.className}> from${module.className}List = Globals.getFromDbDaoService().getMergeDao().queryAll${module.className}();
+#end		
+		List<${module.className}> to${module.className}List = Globals.getToDbDaoService().getMergeDao().queryAll${module.className}();
+
+		
+		if (null == to${module.className}List || to${module.className}List.size() == 0) {
+			String warnInfo = "To 表{0}的记录 为空";
+#if ($module.empty)
+			Loggers.mergeDbLogger.warn(MessageFormat.format(warnInfo, TABLE_NAME));
+#else
+			throw new com.imop.lj.mergedb.exception.MergeException(TABLE_NAME, "", MessageFormat.format(warnInfo, TABLE_NAME));
+#end 			
+		} else {
+			// 排重插入
+			for (${module.className} #lowerFirstChar($module.className) : to${module.className}List) {
+				addEntity(#lowerFirstChar($module.className));
+			}
+		}
+
+#if (!$module.globals)
+		if (null == from${module.className}List || from${module.className}List.size() == 0) {
+			String warnInfo = "From 表{0}的记录 为空";
+#if ($module.empty)
+			Loggers.mergeDbLogger.warn(MessageFormat.format(warnInfo, TABLE_NAME));
+#else
+			throw new com.imop.lj.mergedb.exception.MergeException(TABLE_NAME, "", MessageFormat.format(warnInfo, TABLE_NAME));
+#end 			
+		} else {
+			for (${module.className} #lowerFirstChar($module.className) : from${module.className}List) {
+				if (#lowerFirstChar($module.className)Map.containsKey(#lowerFirstChar($module.className).getId())) {
+					String errorInfo = "插入{0}表的记录id={1}重复";
+					Loggers.mergeDbLogger.error(MessageFormat.format(errorInfo, TABLE_NAME, #lowerFirstChar($module.className).getId() + ""));
+					throw new com.imop.lj.mergedb.exception.MergeException(TABLE_NAME, #lowerFirstChar($module.className).getId(), "插入玩家信息id重复");
+				} else {
+					addEntity(#lowerFirstChar($module.className));
+				}
+			}
+		}
+#end
+		long end = System.currentTimeMillis();
+		String content = "任务：{0}:执行所需时间:{1}ms";
+		Loggers.mergeDbLogger.info(MessageFormat.format(content, "read #lowerFirstChar($module.className)", end - start + ""));
+		Loggers.mergeDbLogger.info("read #lowerFirstChar($module.className) is finished");
+	}
+	
+	@Override
+	@SuppressWarnings("rawtypes")
+	public void save(){
+		Loggers.mergeDbLogger.info("save #lowerFirstChar($module.className) is starting...");
+		long start=System.currentTimeMillis();
+		Loggers.mergeDbLogger.info(#lowerFirstChar($module.className)Map.size() + " #lowerFirstChar($module.className) need save!");
+		int i=0;
+		List<BaseEntity> #lowerFirstChar($module.className)List = new ArrayList<BaseEntity>();
+		for(${module.className} #lowerFirstChar($module.className) : #lowerFirstChar($module.className)Map.values()){
+			i++;
+			#lowerFirstChar($module.className)List.add(#lowerFirstChar($module.className));
+			if(i % Globals.getConfig().getInsertNumOnce() == 0){
+				Globals.getNewDbDaoService().getMergeDao().saveAll(#lowerFirstChar($module.className)List);
+				#lowerFirstChar($module.className)List = new ArrayList<BaseEntity>();
+				Loggers.mergeDbLogger.info(i + " #lowerFirstChar($module.className) is saved");
+			}
+		}
+		if(null != #lowerFirstChar($module.className)List && #lowerFirstChar($module.className)List.size() > 0){
+			Globals.getNewDbDaoService().getMergeDao().saveAll(#lowerFirstChar($module.className)List);
+			Loggers.mergeDbLogger.info(i + " #lowerFirstChar($module.className) is saved");
+		}
+		
+		//清空map
+		#lowerFirstChar($module.className)Map.clear();
+		
+		long end=System.currentTimeMillis();
+		String content = "任务：{0}:执行所需时间:{1}ms";
+		Loggers.mergeDbLogger.info(MessageFormat.format(content,"save #lowerFirstChar($module.className)",end-start+""));
+		Loggers.mergeDbLogger.info("save #lowerFirstChar($module.className) is finished");
+	}
+	
+	@Override
+	public void delete(){
+		Loggers.mergeDbLogger.info("delete #lowerFirstChar($module.className) is starting...");
+		long start=System.currentTimeMillis();
+		Globals.getNewDbDaoService().getMergeDao().delAll${module.className}();
+		long end=System.currentTimeMillis();
+		String content = "任务：{0}:执行所需时间:{1}ms";
+		Loggers.mergeDbLogger.info(MessageFormat.format(content,"delete #lowerFirstChar($module.className)",end-start+""));
+		Loggers.mergeDbLogger.info("delete #lowerFirstChar($module.className) is finished");
+	}
+	
+	protected void addEntity($module.className #lowerFirstChar($module.className)) {
+#if ($module.bindCharId)
+		// 没在删除的charId集合中，则加入map
+		if (!Globals.getMergeService().getDeletedCharIdSet().contains(getEntityCharId(#lowerFirstChar($module.className)))) {
+			#lowerFirstChar($module.className)Map.put(#lowerFirstChar($module.className).getId(), #lowerFirstChar($module.className));
+		}
+#else
+		#lowerFirstChar($module.className)Map.put(#lowerFirstChar($module.className).getId(), #lowerFirstChar($module.className));
+#end
+#if ($module.bindCharName)
+		// 重命名角色名
+		String newName = Globals.getMergeService().getRenameCharNameMap().get(getEntityCharId(#lowerFirstChar($module.className)));
+		if (null != newName && !newName.equalsIgnoreCase("")) {
+			setEntityCharName(#lowerFirstChar($module.className), newName);
+		}
+#end
+	}
+	
+#if ($module.bindCharId || $module.bindCharName)
+	public abstract long getEntityCharId($module.className #lowerFirstChar($module.className));
+#end
+
+#if ($module.bindCharName)
+	public abstract void setEntityCharName($module.className #lowerFirstChar($module.className), String newName);
+#end
+}

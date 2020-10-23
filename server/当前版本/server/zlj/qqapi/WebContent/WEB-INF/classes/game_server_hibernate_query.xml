@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mop.webzt.db.model">
+	<!-- 查询邀请信息
+		<query name="queryQQInvkeyByInvkeyOpenid">
+		<![CDATA[
+			from QQInvkeyEntity where iopenid =:iopenid and appid =:appid
+		]]>
+		</query>
+	 -->
+</hibernate-mapping>

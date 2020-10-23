@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
+	default-autowire="byName">
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="login.htm">validateController</prop>
+				<prop key="homePage.do">homePageController</prop>
+				<prop key="user.do">userManageController</prop>
+				<prop key="corps.do">corpsController</prop>
+				<prop key="branch.do">branchManageController</prop>
+				<prop key="employee.do">employeeManageController</prop>
+				<prop key="role.do">roleManageController</prop>
+				<prop key="timeNotice.do">timeNoticeController</prop>
+				<prop key="gameNotice.do">gameNoticeController</prop>
+				<prop key="cmd.do">cmdManageController</prop>
+				<prop key="activity.do">activityManageController</prop>
+				<prop key="svrStatus.do"> svrStatusController</prop>
+				<prop key="sysUser.do"> sysUserController</prop>
+				<prop key="newSvrCheck.do">newSvrCheckController</prop>
+				<prop key="userPrize.do">userPrizeController</prop>
+				<prop key="mall.do">mallController</prop>
+				<prop key="prize.do">prizeController</prop>
+				<prop key="svrSYN.do">svrSYNController</prop>
+				<prop key="regionSYN.do">regionSYNController</prop>
+				<prop key="guildInfo.do">guildInfoController</prop>
+				<prop key="accessControl.do">accessControlController</prop>
+				<prop key="pet.do">petManageController</prop>
+				<prop key="petLog.do">petLogController</prop>
+				<prop key="battleLog.do">battleLogController</prop>
+				<prop key="newSvrClear.do">newSvrClearController</prop>
+				<prop key="svrMonitor.do">svrMonitorController</prop>
+				<prop key="export.do">exportController</prop>
+				<prop key="basicLog.do">basicLogController</prop>
+				<prop key="wallowControl.do">wallowController</prop>
+				<prop key="vipLevel.do">vipLevelController</prop> 
+				<prop key="shopmall.do">shopmallController</prop> 
+				<prop key="statistics.do">statisticsController</prop>
+				<prop key="worldGift.do">worldGiftController</prop>
+<!--				//停服开服-->
+				<prop key="server.do">stopServerController</prop> 
+				<!-- 游戏世界管理 -->
+				<prop key="battle.do">battleManageController</prop> 
+				<prop key="arenSnap.do">arenaSnapManageController</prop>
+				<prop key="boss.do">bossManageController</prop> 
+				<prop key="dailyQuest.do">dailyQuestController</prop>
+				<prop key="dbVersion.do">dbVersionController</prop> 
+				<prop key="escortHelpSnap.do">escortHelpSnapController</prop>
+				<prop key="relation.do">relationController</prop>
+				<prop key="escortSnap.do">escortSnapController</prop>
+				<prop key="pet.do">petController</prop>
+				<prop key="doingQuest.do">doingQuestController</prop>
+				<prop key="finishedQuest.do">finishedQuestController</prop>
+				<prop key="hunter.do">hunterController</prop>
+				<prop key="item.do">itemController</prop>
+				<prop key="tempHuntBag.do">tempHuntBagController</prop>
+				<prop key="sortArenaLevel.do">sortArenaLevelController</prop>
+				<prop key="sortHonerLevel.do">sortHonerLevelController</prop>
+				<prop key="sortCompanyInComeLevel.do">sortCompanyInComeLevel</prop>
+				<prop key="commerceController.do">commerceController</prop>
+				<prop key="commerceMemberController.do">commerceMemberController</prop>
+				<prop key="addressBook.do">addressBookController</prop>
+				
+				<prop key="mobileActivity.do">mobileActivityController</prop>
+				<prop key="dirtyWorlds.do">dirtyWorldsController</prop>
+				<prop key="onlinePlayerCommand.do">onlinePlayerCommandController</prop>
+				<prop key="cdkey.do">cdkeyController</prop>
+				<prop key="userPrizeAll.do">userPrizeAllController</prop>
+				<prop key="cdkeyPlans.do">cdkeyPlansController</prop>
+				<prop key="cdkeyManager.do">cdkeyManagerController</prop>
+				
+				<prop key="borsor.do">brosorUrlController</prop>
+				<!--  <prop key="prizeInfo.do">prizeInfoController</prop>-->
+				<!-- 自动log -->
+				<prop key="autoLog.do">autoLogController</prop>
+				
+				<!-- 执行SQL查询并生成CSV文件 -->
+				<prop key="sql.do">sqlController</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.InternalResourceView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<bean id="paraMethodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName" value="action" />
+	</bean>
+	<bean id="validateController" class="com.imop.lj.gm.controller.ValidateController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="homePageView" value="homePage" />
+		<property name="indexView" value="../../index" />
+		<property name="loginView" value="../../login" />
+	</bean>
+	<bean id="homePageController" class="com.imop.lj.gm.controller.HomePageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="homePageView" value="homePage" />
+		<property name="topFrameView" value="topFrame" />
+		<property name="leftFrameView" value="leftFrame" />
+		<property name="mainFrameView" value="welcome" />
+		<property name="loginView" value="../../index" />
+	</bean>
+	<bean id="branchManageController" class="com.imop.lj.gm.controller.BranchManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="branchInitView" value="branch/branchList" />
+		
+	</bean>
+	<bean id="employeeManageController" class="com.imop.lj.gm.controller.EmployeeManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="employeeInitView" value="employee/employeeList" />
+		<!-- <property name="employeeSearchInitView" value="employee/employeeSearchList" />  -->
+	</bean>
+	<bean id="userManageController" class="com.imop.lj.gm.controller.UserManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="userInitView" value="user/userList" />
+		<property name="userPrivilegeView" value="user/userPrivilege" />
+		<property name="lockUserInitView" value="user/lockUserInit" />
+		<property name="batchLockUserInitView" value="user/batchLockUserInit" />
+		<property name="unlockUserInitView" value="user/unlockUserInit" />
+		<property name="importCSVInitView" value="user/importCSVInit" />
+		<property name="batchSearchInitView" value="user/batchSearchInit" />
+		<property name="foribdtalkView" value="user/roleforibdtalk" />
+	</bean>
+	
+	<bean id="corpsController" class="com.imop.lj.gm.controller.CorpsController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="corpsInitView" value="corps/corpsList" />
+	</bean>
+	
+	<bean id="statisticsController" class="com.imop.lj.gm.controller.StatisticsController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="statisticsInfoView" value="statistics/statisticsInfo" />
+	</bean>
+	<bean id="roleManageController" class="com.imop.lj.gm.controller.RoleManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="roleInitView" value="role/roleList" />
+		<property name="roleBasicInfoView" value="role/roleBasicInfo" />
+		<property name="rolePetView" value="role/rolePet" />
+		<property name="roleItemView" value="role/roleItem" />
+		<property name="itemBasicInfoView" value="item/itemBasicInfo" />
+		<property name="roleTaskView" value="role/roleTask" />
+		<property name="genLogInitView" value="role/genLogInit" />
+		<property name="roleTitleView" value="role/roleTitle" />
+		<property name="roleSkillView" value="role/roleSkill" />
+		<property name="roleXinfaView" value="role/roleXinfa" />
+		<property name="roleFriendView" value="role/roleFriend" />
+		<property name="roleBuffView" value="role/roleBuff" />
+		<property name="roleRaidView" value="role/roleRaid" /> 
+		<property name="batchSearchInitView" value="role/roleBatchSearch" />
+	</bean>
+	<bean id="cmdManageController" class="com.imop.lj.gm.controller.maintenance.CmdManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="cmdInitView" value="cmdManage/cmdManage" />
+	</bean>
+	<bean id="activityManageController" class="com.imop.lj.gm.controller.maintenance.ActivityManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="cmdInitView" value="cmdManage/activityManage" />
+		<property name="cmdActivityManageView" value="cmdManage/viewActivityManage" />
+	</bean>
+	<bean id="petLogController" class="com.imop.lj.gm.controller.log.PetLogController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="petLogInitView" value="petLog/petLogList" />
+		<property name="petBasicInfoView" value="petLog/petBasicInfo" />
+		<property name="petRecoverView" value="petLog/petRecoverInit" />
+	</bean>
+	<bean id="battleLogController" class="com.imop.lj.gm.controller.log.BattleLogController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="battleLogInitView" value="battleLog/battleLogList" />
+		<property name="battleInfoView" value="battleLog/battleInfo" />
+	</bean>
+	<bean id="timeNoticeController" class="com.imop.lj.gm.controller.notice.TimeNoticeController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="gmConfig" ref="gmConfig" />
+		<property name="timeNoticeListView" value="timeNotice/timeNoticeList" />
+		<property name="editTimeNoticeView" value="timeNotice/editTimeNotice" />
+	</bean>
+	<bean id="gameNoticeController" class="com.imop.lj.gm.controller.notice.GameNoticeController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="gameNoticeListView" value="gameNotice/gameNoticeList" />
+		<property name="editGameNoticeView" value="gameNotice/editGameNotice" />
+		<property name="gmConfig" ref="gmConfig" />
+	</bean>
+	<bean id="svrStatusController" class="com.imop.lj.gm.controller.maintenance.SvrStatusController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="svrStatusInitView" value="svrStatus/svrStatusList" />
+	</bean>
+	<bean id="stopServerController" class="com.imop.lj.gm.controller.maintenance.StopServerController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="stopServerInitView" value="svrStatus/stopServer" />
+	</bean>
+	<bean id="sysUserController" class="com.imop.lj.gm.controller.sys.SysUserController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="sysUserInitView" value="sysUser/sysUserList" />
+		<property name="addSysUserView" value="sysUser/addSysUser" />
+		<property name="editSysUserView" value="sysUser/editSysUser" />
+		<property name="editPasswordView" value="sysUser/editPassword" />
+		<property name="viewRightView" value="sysUser/rolePrivilige" />
+	</bean>
+	<bean id="newSvrCheckController" class="com.imop.lj.gm.controller.check.NewSvrCheckController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="newSvrCheckView" value="newSvrCheck/newSvrCheck" />
+	</bean>
+	<bean id="userPrizeController" class="com.imop.lj.gm.controller.maintenance.UserPrizeController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="gmConfig" ref="gmConfig" />
+		<property name="userPrizeListView" value="userPrize/userPrizeList" />
+		<property name="addUserPrizeInitView" value="userPrize/addUserPrize" />
+		<property name="addUserPrizeParamsInitView" value="userPrize/userPrizeItemParams" />
+		<property name="userPrizeResListView" value="userPrize/userPrizeResList" />
+		<property name="csvBatchPrizeInitView" value="userPrize/csvBatchPrizeInit" />
+	</bean>
+	<bean id="mallController" class="com.imop.lj.gm.controller.maintenance.MallController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="mallInfoView" value="mall/mallInfo" />
+		<property name="changeMallView" value="mall/changeMall" />
+	</bean>
+	<bean id="prizeController" class="com.imop.lj.gm.controller.maintenance.PrizeController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="prizeListView" value="prize/prizeList" />
+		<property name="addPrizeInitView" value="prize/addPrize" />
+		<property name="prizeResListView" value="prize/prizeResList" />
+		<property name="gmConfig" ref="gmConfig" />
+	</bean>
+	<bean id="svrSYNController" class="com.imop.lj.gm.controller.notice.SvrSYNController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="svrSYNView" value="svrSYN/svrSYN" />
+		<property name="svrSYNResultView" value="svrSYN/svrSYNResult" />
+	</bean>
+	<bean id="regionSYNController" class="com.imop.lj.gm.controller.notice.RegionSYNController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="regionSYNView" value="regionSYN/regionSYN" />
+		<property name="regionSYNResultView" value="regionSYN/regionSYNResult" />
+	</bean>
+	<bean id="guildInfoController" class="com.imop.lj.gm.controller.GuildInfoController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="guildInfoView" value="guildInfo/guildInfo" />
+		<property name="guildMemberView" value="guildInfo/guildMember" />
+		<property name="guildBasicInfoView" value="guildInfo/guildBasicInfo"/>
+	</bean>
+	<bean id="accessControlController" class="com.imop.lj.gm.controller.maintenance.AccessControlController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="accessControlView" value="accessControl/accessControl" />
+		<property name="accConResultView" value="accessControl/accConResult" />
+	</bean>
+	<bean id="wallowController" class="com.imop.lj.gm.controller.maintenance.WallowController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="wallowControlView" value="wallowControl/wallowControl" />
+		<property name="wallowControlResultView" value="wallowControl/wallowControlResult" />
+	</bean>
+	<bean id="petManageController" class="com.imop.lj.gm.controller.PetManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="petBasicInfoView" value="pet/petBasicInfo" />
+		<property name="editPetView" value="pet/editPetInfo" />
+	</bean>
+	<bean id="newSvrClearController" class="com.imop.lj.gm.controller.check.NewSvrClearController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="newSvrClearInitView" value="newSvrClear/newSvrClear" />
+		<property name="newSvrClearResultView" value="newSvrClear/newSvrClearResult" />
+		<property name="svrSYNResultView" value="newSvrClear/newSvrSYNResult" />
+	</bean>
+	<bean id="svrMonitorController" class="com.imop.lj.gm.controller.maintenance.SvrMonitorController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initView" value="svrMonitor/svrMonitorList" />
+		<property name="svrView" value="svrMonitor/svrMonitorState" />
+	</bean>
+	<bean id="exportController" class="com.imop.lj.gm.controller.log.ExportController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="exportView" value="export/export" />
+	</bean>
+	<bean id="basicLogController" class="com.imop.lj.gm.controller.log.BasicLogController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initView" value="basicLog/basicLogList" />
+	</bean>
+	<bean id="vipLevelController" class="com.imop.lj.gm.controller.VipLevelController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initView" value="vipLevel/vipLevel" />
+	</bean>
+	<bean id="shopmallController" class="com.imop.lj.gm.controller.ShopmallController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initView" value="shopmall/shopmallList" />
+	</bean>
+	<!-- 游戏世界管理 -->
+	<bean id="battleManageController" class="com.imop.lj.gm.controller.BattleManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="battleInitView" value="battle/battleList" />		
+	</bean>
+	<bean id="arenaSnapManageController" class="com.imop.lj.gm.controller.ArenaSnapManageController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="arenaSnapInitView" value="arena/arenaList" />		
+	</bean>
+	<bean id="bossManageController" class="com.imop.lj.gm.controller.BossController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="bossInitView" value="boss/bossList" />		
+	</bean>
+	<bean id="dailyQuestController" class="com.imop.lj.gm.controller.DailyQuestController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="dailyQuestInitView" value="dailyQuest/dailyQuestList" />		
+	</bean>
+	<bean id="dbVersionController" class="com.imop.lj.gm.controller.DbVersionController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="dbVersionInitView" value="dbVersion/dbVersionList" />		
+	</bean>
+	<bean id="escortHelpSnapController" class="com.imop.lj.gm.controller.EscortHelpSnapController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="escortHelpSnapInitView" value="escortHelpSnap/escortHelpSnapList" />		
+	</bean>
+	<bean id="relationController" class="com.imop.lj.gm.controller.RelationController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="relationInitView" value="relation/relationList" />		
+	</bean>
+	<bean id="escortSnapController" class="com.imop.lj.gm.controller.EscortSnapController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="escortSnapInitView" value="escortSnap/escortSnapList" />		
+	</bean>
+	<bean id="petController" class="com.imop.lj.gm.controller.PetController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="secretaryInitView" value="secretary/secretaryList" />		
+	</bean>
+	<bean id="addressBookController" class="com.imop.lj.gm.controller.AddressBookController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="addressBookInitView" value="addressBook/addressBookList" />		
+	</bean>
+	<bean id="doingQuestController" class="com.imop.lj.gm.controller.DoingQuestController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="doingQuestInitView" value="doingQuest/doingQuestList" />		
+	</bean>
+	<bean id="finishedQuestController" class="com.imop.lj.gm.controller.FinishedQuestController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="finishedQuestInitView" value="finishedQuest/finishedQuestList" />		
+	</bean>
+	<bean id="hunterController" class="com.imop.lj.gm.controller.HunterController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="hunterInitView" value="hunter/hunterList" />		
+	</bean>
+	<bean id="itemController" class="com.imop.lj.gm.controller.ItemController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="itemInitView" value="item/itemList" />		
+	</bean>
+	
+	<bean id="tempHuntBagController" class="com.imop.lj.gm.controller.TempHuntBagController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="tempHuntBagInitView" value="tempHuntBag/tempHuntBagList" />		
+	</bean>
+	<bean id="sortArenaLevelController" class="com.imop.lj.gm.controller.SortArenaLevelController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="sortArenaLevelInitView" value="sortArenaLevel/sortArenaLevelList" />		
+	</bean>
+	<bean id="sortHonerLevelController" class="com.imop.lj.gm.controller.SortHonerLevelController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="sortHonerLevelInitView" value="sortHonerLevel/sortHonerLevelList" />		
+	</bean>
+	<bean id="sortCompanyInComeLevel" class="com.imop.lj.gm.controller.SortCompanyInComeLevelController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="sortCompanyInComeLevelInitView" value="sortCompanyInComeLevel/sortCompanyInComeLevelList" />		
+	</bean>
+	<bean id="commerceController" class="com.imop.lj.gm.controller.CommerceController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="commerceInitView" value="commerce/commerceList" />		
+	</bean>
+	<bean id="commerceMemberController" class="com.imop.lj.gm.controller.CommerceMemberController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="commerceMemberInit" value="commerceMember/commerceMemberList" />		
+	</bean>
+	
+	
+	<bean id="brosorUrlController" class="com.imop.lj.gm.controller.notice.BrosorUrlController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="brosorInitView" value="brosor/brosorurlList" />
+		<property name="updateBrosorUrlView" value="brosor/brosorurlUpdateList" />		
+	</bean>
+	
+	<bean id="sqlController" class="com.imop.lj.gm.controller.SqlController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="sqlInitView" value="sql/sql" />
+	</bean>
+	
+	
+	<!--  <bean id="prizeInfoController" class="com.imop.lj.gm.controller.PrizeInfoController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="prizeInfoInitView" value="prize/prizeInfoList" />		
+	</bean>-->
+	
+	<!--可配置活动-->	
+	<bean id="mobileActivityController" class="com.imop.lj.gm.controller.notice.MobileActivityController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="mobileActivityInitView" value="mobileActivity/activitywebList" />	
+		<property name="updatemobileActivityView" value="mobileActivity/editactivityweb" />	
+		<property name="copymobileActivityView" value="mobileActivity/copyactivityweb" />
+		<property name="editPresetActivityView" value="mobileActivity/editPresetActivity" />		
+	</bean>
+	
+	<!-- 游戏脏语言过滤 -->
+	<bean id="dirtyWorldsController" class="com.imop.lj.gm.controller.notice.DirtyWorldsNetController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="dirtyWorldsNetInitView" value="dirtyworlds/dirtyWorldsNetList" />	
+		<property name="dirtyWorldsNetEditView" value="dirtyworlds/editdirtyWorldsNet" />
+		<property name="refrushdirtyWorldsNetView" value="dirtyworlds/refrushdirtyWorldsNet" />
+	</bean>
+	
+	<!--卡牌活动
+	<bean id="cardActivityController" class="com.imop.lj.gm.controller.CardActivityController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="mobileActivityInitView" value="cardActivity/cardActivityList" />	
+		<property name="updatemobileActivityView" value="cardActivity/editCardActivity" />	
+	</bean>
+	-->
+	<!--幸运转盘活动
+	<bean id="turntableActivityController" class="com.imop.lj.gm.controller.TurntableActivityController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="mobileActivityInitView" value="turntableActivity/turntableActivityList" />	
+		<property name="updatemobileActivityView" value="turntableActivity/editTurntableActivity" />	
+	</bean>
+	-->
+	<!-- 任务集市完成条件设置 
+	<bean id="qqMarketTaskTargetController" class="com.imop.lj.gm.controller.QQMarketTaskTargetController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="mobileActivityInitView" value="qqMarketTaskTarget/qqMarketTaskTargetList" />	
+		<property name="updatemobileActivityView" value="qqMarketTaskTarget/editMarketTaskTarget" />	
+	</bean>
+	-->
+	<!-- 在线玩家命令 -->
+	<bean id="onlinePlayerCommandController" class="com.imop.lj.gm.controller.OnlinePlayerCommandController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initOnlinePlayerView" value="onlinePlayer/initOnlinePlayer" />
+	</bean>
+	
+	<!-- cdkey配置 -->
+	<bean id="cdkeyController" class="com.imop.lj.gm.controller.cdkey.CDKeyController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initCDKeyView" value="cdkey/initCDKey" />
+	</bean>
+	
+	<!-- 全服奖励 -->
+	<bean id="userPrizeAllController" class="com.imop.lj.gm.controller.maintenance.UserPrizeAllServerController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="gmConfig" ref="gmConfig" />
+		<property name="userPrizeAllInitView" value="userPrizeAll/userPrizeAllInit" />
+		<property name="addAllServerUserPrizeView" value="userPrizeAll/addAllServerUserPrize"/>
+		<property name="userPrizeResAllListView" value="userPrizeAll/userPrizeResAllList"/>
+	</bean>
+	
+	<!-- 全服礼包  -->
+	<bean id="worldGiftController" class="com.imop.lj.gm.controller.WorldGiftController" >
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initGiftView" value="worldgift/initGift" />
+		<property name="addGiftView" value="worldgift/addGift" />
+	</bean>
+	
+	<!-- cdkey生成绑定全服礼包和cdkey套餐配置  -->
+	<bean id="cdkeyPlansController" class="com.imop.lj.gm.controller.cdkey.CDKeyPlansController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initView" value="cdkeyplans/initCDKeyPlans" />
+		<property name="addView" value="cdkeyplans/createCDKeyPlans" />
+	</bean>
+	
+	<bean id="cdkeyManagerController" class="com.imop.lj.gm.controller.cdkey.CDKeyManagerController">
+		<property name="methodNameResolver" ref="paraMethodResolver" />
+		<property name="initCDKeyManagerView" value="cdkeymanager/initCDKey" />
+		<property name="createCDKeyView" value="cdkey/createCDKey" />
+	</bean>
+	
+</beans>

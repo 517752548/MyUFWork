@@ -1,0 +1,9 @@
+int forageStar;[minValue=1;notNull=false]//粮草品质
+int deposit;[minValue=1;notNull=false]//押金
+int depositType;[minValue=1;notNull=false]//押金类型
+int rewardType1;[minValue=1;notNull=false]//基础奖励类型1
+int rewardNum1;[minValue=1;notNull=false]//基础奖励1
+int deductProp1;[notNull=false]//战斗失败扣除基础奖励1的比例
+int rewardType2;[minValue=1;notNull=false]//基础奖励类型2
+int rewardNum2;[minValue=1;notNull=false]//基础奖励2
+int rewardProp2;[notNull=false]//刷出基础奖励2的概率

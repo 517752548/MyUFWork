@@ -1,0 +1,25 @@
+int nameLangId;[minValue=0;notNull=false]//道具名称多语言 Id
+String name;//道具名称
+int descLangId;[minValue=0;notNull=false]//道具描述多语言 Id
+String desc;//道具描述 
+String icon;//道具图标
+int identityTypeId;//道具身份类型,对应ItemDef.IdentityType
+int itemTypeId;//道具类型,对应ItemDef.ItemType
+int bagId;//包裹标示,增加道具时将被放在哪种包裹中
+int rarityId;//道具稀有程度
+int level;//需求等级
+int maxOverlap;[minValue=1;notNull=false]//叠加上限
+int pageId;//所属分页id
+int orderId;[notNull=false]//排序id
+boolean canUsed;//是否可以使用
+boolean canSelled;//是否可以出售
+int sellCurrencyId;[minValue=0;notNull=false]//出售给商店的货币类型
+int sellPrice;[minValue=0;notNull=false]//出售给商店的的价格
+String modelId;[notNull=false]//美术Id
+boolean canCompose;//是否可合成
+int listingFeeType;[notNull=false] //上架费用类型
+int listingFee;[notNull=false] //上架费用
+int tradeBasePriceType;[notNull=false] //交易基础价格类型
+int tradeBasePrice;[notNull=false] //交易基础价格
+List<com.imop.lj.gameserver.item.template.ItemGetWayTemplate> wayList;[Collection(3,3)]//获取途径列表
+int expiredHour;[minValue=0;notNull=false]//时效时长,以小时为单位

@@ -1,0 +1,16 @@
+String name;//名称
+double HP;[minValue=0;notNull=true]//生命值系数
+double MP;[minValue=0;notNull=true]//法力值系数
+double physicalAttack;[minValue=0;notNull=true]//物理攻击系数
+double physicalArmor;[minValue=0;notNull=true]//物理护甲系数
+double physicalHit;[minValue=0;notNull=true]//物理命中系数
+double physicalDodgy;[minValue=0;notNull=true]//物理闪避系数
+double physicalCrit;[minValue=0;notNull=true]//物理暴击系数
+double physicalAnticrit;[minValue=0;notNull=true]//物理抗暴系数
+double magicalAttack;[minValue=0;notNull=true]//法术强度系数
+double magicalArmor;[minValue=0;notNull=true]//法术抗性系数
+double magicalHit;[minValue=0;notNull=true]//法术命中系数
+double magicalDodgy;[minValue=0;notNull=true]//法术抵挡系数
+double magicalCrit;[minValue=0;notNull=true]//法术暴击系数
+double magicalAnticrit;[minValue=0;notNull=true]//法术抗暴系数
+double speed;[minValue=0;notNull=true]//速度系数

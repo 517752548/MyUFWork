@@ -1,0 +1,6 @@
+String name;[notNull=false]//名称
+int mainTagId;[notNull=true]//一级标签ID
+int displayIndex;[notNull=false]//显示序号
+String displayIcon;[notNull=false]//默认图标
+int jobType;[notNull=false]//职业
+int sex;[notNull=false]//性别

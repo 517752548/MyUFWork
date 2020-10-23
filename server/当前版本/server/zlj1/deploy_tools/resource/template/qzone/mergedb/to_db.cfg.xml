@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect"> org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="hibernate.cache.use_query_cache">false</property>
+
+		<property name="hibernate.connection.url">jdbc:mysql://${toDbConfig.ip}:${toDbConfig.port}/${toDbConfig.database}?useUnicode=true&amp;characterEncoding=utf-8&amp;useServerPrepStmts=true</property>
+		<property name="hibernate.connection.username">${toDbConfig.username}</property>
+		<property name="hibernate.connection.password">${toDbConfig.password}</property>
+
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">none</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.timeout">1000</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+
+		<mapping class="com.imop.lj.db.model.DbVersion" />
+		<mapping class="com.imop.lj.db.model.UserInfo" />
+		<mapping class="com.imop.lj.db.model.HumanEntity" />
+		<mapping class="com.imop.lj.db.model.PetEntity" />
+		<mapping class="com.imop.lj.db.model.SceneEntity" />
+		<mapping class="com.imop.lj.db.model.ItemEntity" />
+		<mapping class="com.imop.lj.db.model.HorseEntity" />
+		<mapping class="com.imop.lj.db.model.DoingQuestEntity" />
+		<mapping class="com.imop.lj.db.model.FinishedQuestEntity" />
+		<mapping class="com.imop.lj.db.model.UserSnapEntity" />
+		<mapping class="com.imop.lj.db.model.RelationEntity" />
+		<mapping class="com.imop.lj.db.model.EnemyArmyReportEntity" />
+		<mapping class="com.imop.lj.db.model.CorpsEntity" />
+		<mapping class="com.imop.lj.db.model.CorpsMemberEntity" />
+		<mapping class="com.imop.lj.db.model.MailEntity" />
+		<mapping class="com.imop.lj.db.model.CorpsWarJoinEntity" />
+		<mapping class="com.imop.lj.db.model.CorpsWarEntity" />
+		<mapping class="com.imop.lj.db.model.ArenaSnapEntity" />
+		<mapping class="com.imop.lj.db.model.ArenaLogEntity" />
+		<mapping class="com.imop.lj.db.model.WorldBossEntity" />
+		<mapping class="com.imop.lj.db.model.OfflineRewardEntity" />
+		<mapping class="com.imop.lj.db.model.MoneyTreeEntity" />
+		<mapping class="com.imop.lj.db.model.LandlordEntity" />
+		<mapping class="com.imop.lj.db.model.SysMailEntity" />
+		<mapping class="com.imop.lj.db.model.BestReportEntity" />
+		<mapping class="com.imop.lj.db.model.LandEntity" />
+		<mapping class="com.imop.lj.db.model.StepTaskEntity" />
+		<mapping class="com.imop.lj.db.model.PassTaskEntity" />
+		<mapping class="com.imop.lj.db.model.VipEntity" />
+		<mapping class="com.imop.lj.db.model.UserPrize" />
+		<mapping class="com.imop.lj.db.model.GoodActivityEntity" />
+		<mapping class="com.imop.lj.db.model.GoodActivityUserEntity" />
+		<mapping class="com.imop.lj.db.model.MallEntity" />
+		<mapping class="com.imop.lj.db.model.ItemCostRecordEntity" />
+		<mapping class="com.imop.lj.db.model.DirtyWordsTypeEntity" />
+		<mapping class="com.imop.lj.db.model.PrizeInfo" />
+		<mapping class="com.imop.lj.db.model.CardActivityEntity" />
+		<mapping class="com.imop.lj.db.model.CardUserEntity" />
+		<mapping class="com.imop.lj.db.model.TurntableActivityEntity" />
+		<mapping class="com.imop.lj.db.model.QQChargeOrderEntity" />
+		<mapping class="com.imop.lj.db.model.QQInviteWorldEntity" />
+		<mapping class="com.imop.lj.db.model.QQChargeReturnWorldEntity" />
+		<mapping class="com.imop.lj.db.model.LoopTaskEntity" />
+		<mapping class="com.imop.lj.db.model.QQMarketTaskTargetEntity" />
+		<mapping class="com.imop.lj.db.model.ShipEntity" />
+		<mapping class="com.imop.lj.db.model.IncomeEntity" />
+		<mapping class="com.imop.lj.db.model.ModuleDataEntity" />
+		<!-- time notice -->
+	</session-factory>
+</hibernate-configuration>

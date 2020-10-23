@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<version>${versionConfig.clientVersion}</version>
+	<server_ip>${deployConfig.gameServer.wanIp}</server_ip>
+	<server_port>${deployConfig.gameServer.wanPort}</server_port>
+	<debug>0</debug>
+	<load>${deployConfig.clientConfig.load}</load>
+	<multiopen>10</multiopen>
+	<operation_com>rrgame</operation_com>
+	<language>de_DE</language>
+	<resource_url>${deployConfig.clientConfig.resourceUrl}</resource_url>
+	<sound_url>${deployConfig.clientConfig.soundUrl}</sound_url>
+	<report_url>http://${deployConfig.gameServer.wanIp}/reports</report_url>
+	<auto_login>${deployConfig.clientConfig.autoLogin}</auto_login>
+	<login_url>http://de.rrgame.eu/im/</login_url>
+	<show_renren_logo>0</show_renren_logo>
+	<useSimpleVersion>1</useSimpleVersion>
+	<add_attention>0</add_attention>
+	<fontName>Tahoma</fontName>
+	<fontSize>10</fontSize>
+</config>

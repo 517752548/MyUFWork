@@ -1,0 +1,4 @@
+int mapId;[notNull=false;minValue=1]//地图ID
+int isKing;[notNull=false;minValue=0]//是否是魔王
+int npcId;[minValue=1;notNull=false]//npcId
+int weight;[minValue=0;notNull=false]//权重

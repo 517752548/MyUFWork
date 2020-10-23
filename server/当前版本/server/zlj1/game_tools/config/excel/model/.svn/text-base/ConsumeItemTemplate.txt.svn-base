@@ -1,0 +1,50 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;	
+;	
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int fightUseFlag;[notNull=false;minValue=0;maxValue=1]//战斗内可使用，0不可以，1可以
+int costTypeId;[notNull=false;minValue=0] //消耗类型
+int costArgA;[notNull=false;minValue=0] //消耗参数A
+int costArgB;[notNull=false;minValue=0] //消耗参数B
+int useTargetId;[notNull=false]//使用对象1使用时没有使用对象，对象是角色本身2只能对除主将以外武将使用3只能对主将使用4所有武将都可以用
+int fastUseTip;[notNull=false;minValue=0;maxValue=1]//是否弹快捷使用，0否，1是
+int functionId;[notNull=false]//函数功能
+int argA;[minValue=0;notNull=false]//参数a
+int argB;[minValue=0;notNull=false]//参数b
+int argC;[minValue=0;notNull=false]//参数c
+int argD;[minValue=0;notNull=false]//参数d
+int argE;[minValue=0;notNull=false]//参数e
+int argF;[minValue=0;notNull=false]//参数f
+int mapId;[minValue=0;notNull=false]//地图ID
+int tileX;[minValue=0;notNull=false]//x坐标点
+int tileY;[minValue=0;notNull=false]//y坐标点
+

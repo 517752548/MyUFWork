@@ -1,0 +1,30 @@
+#macro( smallType $type)
+#if($type == "Byte")byte#elseif( $type == "Boolean" )bool#elseif( $type == "Short" )short#elseif( $type == "String" )string#elseif( $type == "Integer" )int#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Bool#elseif( $type == "String" )String#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+
+namespace app.net
+{
+	public class $field.clientType
+	{
+#foreach( $subField in $field.subFields )
+		/** $subField.comment */
+#if($subField.list)
+#if($subField.isNewType)
+		public ${subField.clientType}[] ${subField.smallName};
+#else
+		public #smallType(${subField.clientType})[] ${subField.smallName};
+#end
+#else
+#if($subField.isNewType)
+		public ${subField.clientType} ${subField.smallName};
+#else
+		public #smallType(${subField.clientType}) ${subField.smallName};
+#end
+#end
+#end
+	}
+}

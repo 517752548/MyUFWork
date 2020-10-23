@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="globals.def" basedir="." default="">
+<!--
+// 常量定义
+///////////////////////////////////////////////////////////////////
+//-->
+	<property file="globals.properties" />
+
+	<!-- 依赖包配置 -->
+	<path id="lib.ant">
+		<fileset dir="${libdir.ant}">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<path id="lib.deployTools">
+        <fileset dir="${libdir.deployTools}">
+            <include name="**/*.zip" />
+            <include name="**/*.jar" />
+        </fileset>
+	</path>
+	<path id="lib.enc">
+        <fileset dir="${libdir.enc}">
+            <include name="**/*.zip" />
+            <include name="**/*.jar" />
+        </fileset>
+	</path>
+	<path id="lib.gameServer">
+		<fileset dir="${libdir.gameServer}">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<path id="lib.resin">
+        <fileset dir="${libdir.resin}">
+            <include name="**/*.zip" />
+            <include name="**/*.jar" />
+        </fileset>
+	</path>
+
+	<!-- 任务定义 -->
+	<taskdef resource="org/tigris/subversion/svnant/svnantlib.xml" 
+		classpathref="lib.ant" />
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" 
+		classpathref="lib.ant" />
+
+	<!-- svn 定义 -->
+	<svnSetting id="defaultSvnSetting" 
+		username="${svn.u}" password="${svn.p}" 
+		javahl="false" />
+
+<!--
+// 从服务器端 svn 地址中导出代码或文件
+///////////////////////////////////////////////////////////////////
+//-->
+	<macrodef name="serverProjTrunkExport">
+		<!-- 项目 URL 位置(相对位置) -->
+		<attribute name="projURL" />
+		<!-- 代码版本号 -->
+		<attribute name="codeRev" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!--// 从 svn 中导出代码 
+				// 注意: defaultSvnSetting 定义在 globals.def.xml -->
+			<svn refid="defaultSvnSetting">
+				<export force="true" 
+					srcurl="${svn.serverTrunkURL}/@{projURL}" 
+					revision="@{codeRev}" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="serverProjBranchesExport">
+		<!-- 项目 URL 位置(相对位置) -->
+		<attribute name="projURL" />
+		<!-- branches 版本号 -->
+		<attribute name="branchesVer" />
+		<!-- 代码版本号 -->
+		<attribute name="codeRev" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!--// 从 svn 中导出代码
+				// 注意: defaultSvnSetting 定义在 globals.def.xml -->
+			<svn refid="defaultSvnSetting">
+				<export force="true" 
+					srcurl="${svn.serverBranchesURL}/@{branchesVer}/@{projURL}" 
+					revision="@{codeRev}" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+<!--
+// 编译 JAVA
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 编译 JAVA 源文件 -->
+	<macrodef name="buildJava">
+		<attribute name="src" />
+		<attribute name="out" />
+		<attribute name="cp" />
+		<attribute name="debug" default="on" />
+
+		<sequential>
+			<javac classpathref="@{cp}"
+				srcdir="@{src}" 
+				destdir="@{out}" 
+				debug="@{debug}" 
+				memoryMaximumSize="512M" 
+				fork="true" 
+				source="1.6" 
+				target="1.6" 
+				encoding="utf-8" 
+				deprecation="true" 
+				nowarn="true" />
+		</sequential>
+	</macrodef>
+
+<!--
+// 加密 jar 包
+///////////////////////////////////////////////////////////////////
+//-->
+	<macrodef name="jarencByWin">
+		<attribute name="jarFilename" />
+		<attribute name="outFilename" />
+		<sequential>
+			<!--// 直接使用 jarenc 可执行文件进行加密 //-->
+			<exec executable="cmd.exe" 
+				failonerror="true">
+				<arg line="/c jarenc @{jarFilename} @{outFilename}" />
+			</exec>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="jarencByLinux">
+		<attribute name="localDir" />
+		<attribute name="jarFilename" />
+		<attribute name="outFilename" />
+		<sequential>
+			<!--// 1. 上传 .jar 文件到 ftp 服务器, 
+				//    该 ftp 服务器是 linux 服务器并且已经启动了加密服务;
+				// 2. 由 linux 服务器加密 .jar 文件;
+				// 3. 从 ftp 服务器下载 .jar 文件;
+				//-->
+			<echo message="上传 @{localDir}/@{jarFilename}" />
+			<ftp server="${ftp.server}" 
+				userid="${ftp.u}" 
+				password="${ftp.p}" 
+				remotedir="${ftp.encryptSourceDir}">
+				<fileset dir="@{localDir}">
+					<include name="**/@{jarFilename}" />
+				</fileset>
+			</ftp>
+
+			<!--// 暂停 5 秒, 等待加密服务执行完成 //-->
+			<sleep seconds="5" />
+
+			<!--// 从 ftp 服务器下载加密后的文件 //-->
+			<ftp server="${ftp.server}" 
+				userid="${ftp.u}" 
+				password="${ftp.p}" 
+				remotedir="${ftp.encryptTargetDir}" 
+				action="get">
+				<fileset dir="@{localDir}">
+					<include name="@{outFilename}" />
+				</fileset>
+			</ftp>
+		</sequential>
+	</macrodef>
+
+<!--
+// 加密资源文件
+///////////////////////////////////////////////////////////////////
+//-->
+	<macrodef name="resenc">
+		<attribute name="xlsDir" />
+		<attribute name="outDir" />
+		<sequential>
+			<java classname="com.imop.lj.core.encrypt.EncryptFileGenerator" 
+				classpathref="lib.enc" 
+				failonerror="true">
+				<arg value="@{xlsDir}" />
+				<arg value="@{outDir}" />
+			</java>
+		</sequential>
+	</macrodef>
+</project>

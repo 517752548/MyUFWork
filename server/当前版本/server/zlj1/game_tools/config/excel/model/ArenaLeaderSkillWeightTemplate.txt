@@ -1,0 +1,5 @@
+int jobTypeId;[notNull=false;minValue=1;maxValue=8]//职业
+int skillId;[notNull=false;minValue=1;]//技能ID
+int isFirst;[notNull=false;minValue=0;maxValue=1]//是否优先施放该技能
+int weight;[notNull=false;minValue=1]//技能权重
+int cdRound;[notNull=false;minValue=0]//技能冷却回合

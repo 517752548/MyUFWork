@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="exam">
+	
+	<message type="CG_EXAM_APPLY" comment="申请答题">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+	</message>
+	
+	<message type="GC_EXAM_APPLY" comment="申请答题结果">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+		<field type="Integer" name="result" comment="申请结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_EXAM_USE_ITEM" comment="使用物品">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+		<field type="Integer" name="itemId" comment="使用的特殊道具,1松木令,2玉木令"/>
+	</message>
+	
+	<message type="GC_EXAM_USE_ITEM" comment="使用物品结果">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+		<field type="Integer" name="result" comment="物品使用结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_EXAM_CHOSE" comment="选择选项">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+		<field type="Integer" name="choseAnswer" comment="选择的答案"/>
+	</message>
+	
+	<message type="GC_EXAM_CHOSE" comment="选择选项结果">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+		<field type="Integer" name="result" comment="选择结果 1成功,2失败"/>
+	</message>
+	
+	<message type="GC_EXAM_INFO" comment="科举考试信息">
+		<field type="com.imop.lj.gameserver.exam.bean.ExamInfo" name="ExamInfo" comment="科举信息" 
+			clientType="ExamInfo" macro="ExamInfo"/>
+	</message>
+
+</messages>

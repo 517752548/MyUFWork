@@ -1,0 +1,8 @@
+int activityTplId;//活动模版ID
+int delayTime;[minValue=0;notNull=false]//延迟时间
+int duration;[minValue=1;notNull=false]//持续时间
+int activityUsable;[minValue=0;maxValue=1;notNull=false]//是否生效
+String activityName;[notNull=false]//活动名称
+String activityDesc;[notNull=false]//活动描述
+int nameIcon;[minValue=0;notNull=false]//名称Icon
+int tatleIcon;[minValue=0;notNull=false]//标题Icon

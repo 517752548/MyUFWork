@@ -1,0 +1,4 @@
+int equipmentID;[notNull=true]//装备ID
+int materialID;[notNull=true]//材料ID
+int materialNum;[minValue=1;notNull=true]//消耗材料数量
+int coins;[minValue=0]//单个材料消耗银币

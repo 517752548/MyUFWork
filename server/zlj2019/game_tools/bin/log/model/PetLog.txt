@@ -1,0 +1,5 @@
+message com.imop.lj.logserver.model.PetLog(
+    int templateId;// 武将模板ID
+    long instUUID;// 武将实例ID
+    String init;//是否初始生成
+)

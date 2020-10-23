@@ -1,0 +1,7 @@
+int cultivateLevel;[minValue=0;notNull=false]//当前修炼等级
+int playerLevel;[minValue=0;notNull=false]//需求玩家等级
+int corpsLevel;[minValue=0;notNull=false]//需求帮派等级
+int zqLevel;[minValue=0;notNull=false]//需求朱雀堂等级
+int cultivateLimit;[minValue=0;notNull=false]//修炼上限
+int costContri;[minValue=0;notNull=false]//修炼1次消耗帮贡
+long costExp;[minValue=0;notNull=false]//修炼升级所需经验

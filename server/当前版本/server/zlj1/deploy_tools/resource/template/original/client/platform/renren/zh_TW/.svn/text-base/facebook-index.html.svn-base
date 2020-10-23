@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${deployConfig.clientConfig.title}</title>
+<script type="text/javascript" src="script/swfobject.js"></script>
+<script type="text/javascript" src="script/platform/renren/zh_TW/notice.js"></script>
+<script type="text/javascript" src="script/core.js"></script>
+
+<style type="text/css">
+#nav_bar {
+	font-family: "Tahoma";
+	font-size: 12px;
+}
+
+#nav_bar a {
+	color: #ffffff;
+	margin: 0px 8px 0px 8px;
+}
+</style>
+</head>
+<body bgcolor="#000000"
+	topmargin="0px" leftmargin="0px">
+
+<table border="0px" 
+	cellpadding="0px" cellspacing="0px">
+	<tr>
+		<td>
+			<div id="main">&nbsp;</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">
+			<span id="nav_bar">&nbsp;</span>
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+
+var swfW = getUrlcookie('swfW') == 'fail' ? 1000 : getUrlcookie('swfW');
+var swfH = getUrlcookie('swfH') == 'fail' ?  600 : getUrlcookie('swfH');
+
+var so = new SWFObject("Loading_${versionConfig.clientVersion}.swf", "Loading", swfW, swfH, "10", "#000000");
+so.addParam("quality", "best");
+so.addVariable("name", "Loading");
+so.addParam("id", "Loading");
+so.addParam("algin", "middle");
+so.addParam("AllowScriptAccess", "sameDomain");
+so.addParam("menu", "false");
+so.addParam("pluginspage", "http://www.adobe.com/go/getflashplayer");
+so.write("main");
+
+</script>
+
+</body>
+</html>

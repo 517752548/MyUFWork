@@ -1,0 +1,17 @@
+long nameLangId;[notNull=false]//名称多语言Id
+String name;[notNull=false]//名称
+long descLangId;[notNull=false]//描述多语言Id
+String descInfo;[notNull=false]//描述
+int embedEffect;[notNull=false;minValue=0;maxValue=1]//能否镶嵌仙符（0不能，1能）
+int isPassive;[notNull=false;minValue=0]//是否被动技能，0否，1是
+int skillTypeId;[notNull=false;minValue=0]//技能类型（0普通技能，1宠物天赋技能，2宠物普通技能）
+String bubble;[notNull=false]//技能冒字资源
+String icon;[notNull=false]//技能icon
+int notNeedShow;[notNull=false;minValue=0;maxValue=1]//是否不需要表现，0需要，1不需要
+int needShowOnRelease;[notNull=false;minValue=0;maxValue=1]//是否在头顶显示名称,0不显示，1显示
+int costTypeId;[notNull=false;minValue=0]//消耗类型 1、魔法 2、怒气 3、寿命
+int costBase;[notNull=false;minValue=0]//初始消耗
+int costAdd;[notNull=false;minValue=0]//增量消耗
+int skillScore;[notNull=false;minValue=0]//战力及评分系数
+int upgradeCostPos;[notNull=false;minValue=0]//人物学习技能升级消耗位置
+int upgradeCostCoef;[notNull=false;minValue=0]//人物学习技能升级消耗系数（放大1000倍）

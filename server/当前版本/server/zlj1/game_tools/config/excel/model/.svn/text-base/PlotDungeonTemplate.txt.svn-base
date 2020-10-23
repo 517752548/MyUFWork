@@ -1,0 +1,10 @@
+int plotDungeonLevel;[minValue=1;notNull=false]//剧情副本等级
+int hardFlag;[minValue=0;notNull=false]//是否是精英副本
+int triggerQuestId;[minValue=1;notNull=false]//开启任务id
+int enemyArmyId;[minValue=1;notNull=false]//怪物组ID
+int showEnemyRewardId;[minValue=1;notNull=false]//打怪显示奖励Id
+String model3DId;[notNull=false]//3D模型
+String showRewardName;[notNull=false]//显示奖励名字
+String chapterName;[notNull=false]//章节名称
+int dailyRewardId;[minValue=1;notNull=false]//每日奖励Id
+int showDailyRewardId;[minValue=1;notNull=false]//每日显示奖励Id

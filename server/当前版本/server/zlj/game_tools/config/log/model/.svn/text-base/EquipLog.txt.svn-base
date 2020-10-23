@@ -1,0 +1,10 @@
+message com.imop.lj.logserver.model.EquipLog(
+	String uuid;//UUID
+	int tempId;//模版ID
+	int enhanceLevel;//装备强化等级
+	int fumoLevel;//装备附魔等级
+	int weaponSkillId;//武器技能ID
+	longstring additionAttrStr;//附加属性
+	longstring gemStr;//宝石
+	String extraStr;//备用
+)

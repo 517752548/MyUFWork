@@ -1,0 +1,9 @@
+String name;[notNull=false]//技能名称
+int effectSkillId;[notNull=false;minValue=0]//影响技能Id
+int scenarios;[notNull=false;minValue=0]//技能应用场景
+int extraCoef1;[notNull=false;minValue=0]//附加参数1
+int extraCoef2;[notNull=false;minValue=0]//附加参数2
+int extraCoef3;[notNull=false;minValue=0]//附加参数3
+int extraCoef4;[notNull=false;minValue=0]//附加参数4
+int extraCoef5;[notNull=false;minValue=0]//附加参数5
+List<Integer> levelAddList;[Collection(10,1)]//骑宠技能等级加成列表

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="trade">
+	
+	<message type="CG_TRADE_BOOTHINFO" comment="申请摊位信息">
+		
+	</message>
+	
+	<message type="GC_TRADE_BOOTHINFO" comment="摊位信息">
+		<field type="com.imop.lj.gameserver.trade.TradeInfo" 
+			   clientType="TradeInfo"
+			name="tradeList" list="true" macro="TradeInfo" comment="商品信息">
+		</field>
+	</message>
+	
+	<message type="GC_TRADE_COMMODITY_LIST" comment="商品信息表">
+		<field type="com.imop.lj.gameserver.trade.TradeInfo" 
+			   clientType="TradeInfo"
+			name="tradeList" list="true" macro="TradeInfo" comment="商品信息">
+		</field>
+		<field type="Integer" name="pageNum" comment="当前页数"/>
+		<field type="Integer" name="totalPageNum" comment="总页数"/>
+	</message>
+	
+	<message type="CG_TRADE_BUY" comment="购买物品">
+		<field type="Long" name="sellerId" comment="卖家Id"/>
+		<field type="Integer" name="commodityType" comment="商品类型"/>
+		<field type="Integer" name="boothIndex" comment="摊位坐标(1-10)"/>
+		<field type="String" name="commodityId" comment="商品uuid"/>
+	</message>
+	
+	<message type="CG_TRADE_SEARCH" comment="商品查询">
+		<field type="String" name="conditions" comment="商品查询条件"/>
+	</message>
+	
+	<message type="CG_TRADE_SIMPLE_SEARCH" comment="简单商品查询">
+		<field type="Integer" name="commodityType" comment="商品类别"/>
+		<field type="Integer" name="subTagId" comment="商品二级标签"/>
+		<field type="Integer" name="sortField" comment="排序字段"/>
+		<field type="Integer" name="sortOrder" comment="1升序,2降序"/>
+		<field type="Integer" name="equipColor" comment="装备颜色,0则显示全部"/>
+		<field type="Integer" name="equipLevel" comment="装备等级"/>
+		<field type="Integer" name="gemLevel" comment="宝石等级"/>
+		<field type="Integer" name="pageNum" comment="页数"/>
+	</message>
+	
+	<message type="CG_TRADE_SELL" comment="申请卖出商品">
+		<field type="String" name="commodityId" comment="商品UUID"/>
+		<field type="Integer" name="currencyType" comment="出售的货币种类"/>
+		<field type="Integer" name="currencyNum" comment="出售的货币数量(单价)"/>
+		<field type="Integer" name="commodityType" comment="商品类型"/>
+		<field type="Integer" name="commodityNum" comment="商品数量"/>
+		<field type="Integer" name="boothIndex" comment="摊位坐标(1-10)"/>
+	</message>
+	
+	<message type="CG_TRADE_TAKE_OFF" comment="申请下架物品">
+		<field type="Integer" name="commodityType" comment="商品类型"/>
+		<field type="Integer" name="boothIndex" comment="摊位坐标(1-10)"/>
+	</message>
+	
+	<message type="GC_TRADE_SELL_RESULT" comment="卖出商品结果">
+		<field type="Integer" name="result" comment="1成功，2失败"/>
+	</message>
+
+</messages>

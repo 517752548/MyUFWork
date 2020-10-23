@@ -1,0 +1,42 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;	
+;	
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int propKey;[minValue=0;notNull=false]//属性key
+int propValue;[minValue=0;notNull=false]//属性值
+int gemTypeId;[minValue=1;notNull=true]//宝石颜色
+int gemLevel;[minValue=1;notNull=true]//宝石等级
+int gemGroup;[minValue=1;notNull=true]//宝石组（降级时按组找低级宝石）

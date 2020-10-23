@@ -1,0 +1,64 @@
+.hidden { display: none; }
+
+div.timepicker {
+    border: 1px solid #77bbff;
+    color: #1166bb;
+    padding: 0px;
+    margin: 0;
+    background: #fff;
+    position: absolute;
+    text-align: center;
+}
+
+.timepicker table tr, .timepicker table td {
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.timepicker div.scoreboard {
+    cursor: default;
+    margin: 2px 6px;
+}
+
+.timepicker .scoreboard .increase-button span,
+.timepicker .scoreboard .decrease-button span { 
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    width: 24px;
+    margin: 0 auto;
+}
+.timepicker .scoreboard .increase-button span {
+    background: url("increase.png") no-repeat;
+}
+.timepicker .scoreboard .decrease-button span {
+    background: url("decrease.png") no-repeat;
+}
+
+.timepicker .scoreboard .score span {
+    font-family: monospace;
+    display: block;
+    padding: 4px 0;
+}
+
+.timepicker .time-suggest-wrap td {
+    font-size: 12px;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.timepicker .clear-wrap, .timepicker .close-wrap {
+    font-size: 12px;
+    text-align: center;
+    padding: 2px 0;
+    cursor: pointer;
+    border: 1px solid #77bbff;
+}
+
+.timepicker .time-suggest-wrap td:hover,
+.timepicker .clear-wrap:hover, .timepicker .close-wrap:hover {
+    background: #77bbff;
+    color: #fff;
+    font-weight: bold;
+}

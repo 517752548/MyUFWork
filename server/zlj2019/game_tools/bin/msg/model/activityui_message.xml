@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="activityui">
+
+	<message type="CG_ACTIVITY_UI" comment="打开活动UI面板">
+	</message>
+	
+	<message type="GC_ACTIVITY_UI_INFO" comment="返回活动UI面板信息">
+		<field type="com.imop.lj.gameserver.activityui.ActivityUIInfo"
+			name="activityList" clientType="ActivityUIInfo" list="true" macro="ActivityUIInfo" comment="返回活动UI面板信息">
+		</field>
+		<field type="Integer" name="rewardGainList" list="true" comment="奖励的领取情况" />
+		<field type="Integer" name="totalActivityVitality" comment="当前总活跃值" />
+	</message>
+		
+	<message type="CG_ACITVITY_UI_REWARD" comment="获得活跃度奖励">
+		<field type="Integer" name="vitalityNum" comment="活力值(20,40,60,80,100)" />
+	</message>
+	
+	<message type="CG_ACITVITY_UI_REWARD_INFO" comment="申请获得rewardInfoList">
+	</message>
+	
+	<message type="GC_ACITVITY_UI_REWARD_INFO" comment="返回rewardInfoList">
+		<field type="com.imop.lj.gameserver.activityui.ActivityUIRewardInfo" list="true" name="activityUIRewardInfoList" clientType="ActivityUIRewardInfo" comment="返回可以获得的奖励的信息" macro="ActivityUIRewardInfo"/>
+	</message>
+	
+</messages>

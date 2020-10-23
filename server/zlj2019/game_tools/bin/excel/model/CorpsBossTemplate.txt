@@ -1,0 +1,7 @@
+int bossLevel;[minValue=1;notNull=false]//帮派boss等级
+int enemyArmyId;[minValue=1;notNull=false]//怪物组ID
+String model3DId;[notNull=false]//3D模型
+int rewardId;[minValue=1;notNull=false]//奖励Id
+String showRewardName;[notNull=false]//显示奖励名字
+int showRewardId;[minValue=1;notNull=false]//显示奖励Id
+String chapterName;[notNull=false]//章节名称

@@ -1,0 +1,4 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int activityId;[notNull=false;minValue=1]//活动ID
+int weight;[minValue=0;notNull=false]//权重

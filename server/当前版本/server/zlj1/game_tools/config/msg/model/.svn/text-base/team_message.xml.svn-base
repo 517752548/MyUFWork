@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="team">
+
+	<message type="CG_TEAM_CREATE" comment="创建队伍">
+	</message>
+	
+	<message type="CG_TEAM_MY" comment="请求我的队伍">
+	</message>
+	
+	<message type="GC_TEAM_MY_TEAM_MEMBER_LIST" comment="我的队伍队员列表">
+		<field type="com.imop.lj.common.model.team.TeamMemberInfo" name="teamMemberInfos"
+			clientType="TeamMemberInfo" macro="TeamMemberInfo" list="true" comment="队员信息列表" >
+		</field>
+	</message>
+	
+	<message type="GC_TEAM_MY_TEAM_INFO" comment="我的队伍信息">
+		<field type="Integer" name="targetId" comment="目标Id"/>
+		<field type="Integer" name="levelMin" comment="等级下限"/>
+		<field type="Integer" name="levelMax" comment="等级上限"/>
+		<field type="Integer" name="isAutoMatch" comment="是否自动匹配，0否1是"/>
+	</message>
+	
+	<message type="CG_TEAM_AUTO_MATCH" comment="设置队伍自动匹配">
+		<field type="Integer" name="isAutoMatch" comment="是否自动匹配，0否1是"/>
+	</message>
+	
+	<message type="CG_TEAM_APPLY_LIST" comment="申请列表">
+	</message>
+	
+	<message type="GC_TEAM_APPLY_LIST" comment="申请列表信息" compress="true">
+		<field type="com.imop.lj.common.model.team.TeamMemberInfo" name="teamMemberInfos"
+			clientType="TeamMemberInfo"  macro="TeamMemberInfo" list="true" comment="队员信息列表" >
+		</field>
+	</message>
+	
+	<message type="CG_TEAM_APPLY_LIST_CLEAN" comment="清空申请列表">
+	</message>
+	
+	<message type="CG_TEAM_APPLY_AGREE" comment="接受玩家申请加入">
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+	</message>
+	
+	<message type="CG_TEAM_CHOOSE_TARGET" comment="选择队伍的目标">
+		<field type="Integer" name="targetId" comment="目标Id"/>
+		<field type="Integer" name="levelMin" comment="等级下限"/>
+		<field type="Integer" name="levelMax" comment="等级上限"/>
+		<field type="Integer" name="isAutoMatch" comment="是否自动匹配，0否1是"/>
+	</message>
+	
+	<message type="CG_TEAM_SHOW_LIST" comment="显示队伍列表界面">
+		<field type="Integer" name="targetId" comment="目标Id"/>
+	</message>
+	
+	<message type="GC_TEAM_SHOW_LIST" comment="显示队伍列表界面" compress="true">
+		<field type="com.imop.lj.common.model.team.TeamInfo" name="teamInfos"
+			clientType="TeamInfo" macro="TeamInfo" list="true" comment="队伍信息列表" >
+		</field>
+		<field type="Integer" name="waitingLeaderNum" comment="等待匹配的队长数量"/>
+		<field type="Integer" name="waitingMemberNum" comment="等待匹配的队员数量"/>
+	</message>
+	
+	<message type="CG_TEAM_APPLY" comment="申请加入队伍">
+		<field type="Integer" name="teamId" comment="队伍Id"/>
+	</message>
+	
+	<message type="GC_TEAM_APPLY" comment="申请加入队伍成功">
+		<field type="Integer" name="teamId" comment="队伍Id"/>
+	</message>
+	
+	<message type="CG_TEAM_APPLY_AUTO" comment="自动申请加入队伍">
+		<field type="Integer" name="isAuto" comment="是否自动申请，0否1是"/>
+		<field type="Integer" name="targetId" comment="目标Id"/>
+	</message>
+	
+	<message type="GC_TEAM_APPLY_AUTO" comment="自动申请加入队伍">
+		<field type="Integer" name="isAuto" comment="是否自动申请，0否1是"/>
+		<field type="Integer" name="targetId" comment="目标Id"/>
+	</message>
+	
+	<message type="CG_TEAM_INVITE_LIST" comment="邀请成员列表">
+		<field type="Integer" name="inviteTypeId" comment="邀请类型，1好友，2军团"/>
+	</message>
+	
+	<message type="GC_TEAM_INVITE_LIST" comment="邀请成员列表" compress="true">
+		<field type="Integer" name="inviteTypeId" comment="邀请类型，1好友，2军团"/>
+		<field type="com.imop.lj.common.model.team.TeamInvitePlayerInfo" name="teamInvitePlayerInfos"
+			clientType="TeamInvitePlayerInfo" macro="TeamInvitePlayerInfo" list="true" comment="邀请玩家信息列表" >
+		</field>
+	</message>
+	
+	<message type="CG_TEAM_INVITE_PLAYER" comment="邀请成员加入队伍">
+		<field type="Integer" name="inviteTypeId" comment="邀请类型，1好友，2军团"/>
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+	</message>
+	
+	<message type="GC_TEAM_INVITE_PLAYER" comment="邀请成员加入队伍操作成功">
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+	</message>
+	
+	<message type="GC_TEAM_INVITE_PLAYER_NOTICE" comment="邀请成员加入队伍的弹出提示框">
+		<field type="Integer" name="teamId" comment="邀请玩家的队伍Id"/>
+		<field type="Long" name="inviterRoleId" comment="邀请者的玩家Id"/>
+		<field type="String" name="inviterName" comment="邀请者的名字"/>
+	</message>
+	
+	<message type="CG_TEAM_INVITE_PLAYER_ANSWER" comment="邀请成员弹出提示框的响应">
+		<field type="Integer" name="teamId" comment="邀请玩家的队伍Id"/>
+		<field type="Integer" name="agree" comment="是否同意邀请，0拒绝，1同意"/>
+	</message>
+	
+	<message type="CG_TEAM_AWAY" comment="暂离队伍">
+	</message>
+	
+	<message type="CG_TEAM_QUIT" comment="退出队伍">
+	</message>
+	
+	<message type="GC_TEAM_QUIT" comment="退出队伍成功">
+	</message>
+	
+	<message type="CG_TEAM_BACK" comment="回到队伍，暂离状态下">
+	</message>
+	
+	<message type="CG_TEAM_CALL_BACK" comment="召唤队友归队">
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+	</message>
+	
+	<message type="GC_TEAM_CALL_BACK_NOTICE" comment="召唤队友归队的弹出提示框">
+	</message>
+	
+	<message type="CG_TEAM_CHAT_SPEAK" comment="一键喊话">
+	</message>
+	
+	<message type="CG_TEAM_CHANGE_POSITION" comment="调整队员位置">
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+		<field type="Integer" name="targetPosition" comment="目标玩家位置，从1开始计数"/>
+	</message>
+	
+	<message type="CG_TEAM_CHANGE_LEADER" comment="升为队长">
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+	</message>
+	
+	<message type="CG_TEAM_KICK" comment="请离队伍">
+		<field type="Long" name="targetPlayerId" comment="目标玩家id"/>
+	</message>
+	
+</messages>

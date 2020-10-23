@@ -1,0 +1,6 @@
+int petpetTypeId;[notNull=false;minValue=0]//宠物类型（0普通，1高级宠，2神兽）
+int itemId;[notNull=true;minValue=0]//消耗物品ID
+int itemNum;[notNull=true;minValue=0]//消耗物品数量
+int currencyNum;[notNull=false;minValue=0]//消耗金币
+int currencyType;[notNull=false;minValue=0]//货币种类
+String name;//名称

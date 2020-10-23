@@ -1,0 +1,5 @@
+int rewardId;[minValue=0;notNull=true]//奖励ID
+int showRewardId;[minValue=0;notNull=true]//显示的奖励ID
+int isSpecial;[notNull=false;minValue=0]//是否特殊标记
+int vipRewardTimes;[notNull=false;minValue=0]//vip额外奖励次数
+int vipLevelLimit;[notNull=false;minValue=0]//要求vip等级

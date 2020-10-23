@@ -1,0 +1,15 @@
+int type;[notNull=false]//npc类型
+int notShowPanelInt;[notNull=false]//是否不显示对话面板，0显示，1不显示
+long nameLangId;[notNull=false]//NPC名字多语言Id
+String name;[notNull=false]//npc名字
+long talkLangId;[notNull=false]//NPC对话多语言Id
+String talk;[notNull=false]//npc常规对话内容
+String model3DId;[notNull=false]//3D模型
+String model2DId;[notNull=false]//2D模型
+int direction;[notNull=false]//方向
+List<Integer> fuctionIdList;[Collection(5,1)] //功能Id列表
+int targetMapId;[notNull=false]//目标地图Id
+int enemyGroupId;[notNull=false]//战斗敌人组Id
+String musicId;[notNull=false]//音乐Id
+String questLimit;[notNull=false]//任务限制（多个分号隔开，只有有这个任务的时候，才显示）
+List<com.imop.lj.gameserver.npc.template.npcGetLoopStrTemplate> loopStrList;[Collection(3,2)]//NPC循环播放文字列表

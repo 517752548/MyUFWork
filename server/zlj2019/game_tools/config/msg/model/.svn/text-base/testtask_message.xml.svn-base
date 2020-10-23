@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="testtask">
+
+	<message type="GC_OPEN_TESTTASK_PANEL" comment="打开测试任务面板">
+		<field type="Integer" name="finishTimes" comment="今日已完成任务数" />
+		<field type="Integer" name="totalTimes" comment="总任务数" />
+	</message>
+
+	<message type="GC_TESTTASK_DONE" comment="已完成所有任务">
+	</message>
+	
+	<message type="GC_TESTTASK_UPDATE" comment="测试任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_TESTTASK_ACCEPT" comment="接受任务">
+	</message>
+	
+	<message type="CG_GIVE_UP_TESTTASK" comment="放弃已接任务">
+	</message>
+	
+	<message type="CG_FINISH_TESTTASK" comment="完成任务">
+	</message>
+
+</messages>

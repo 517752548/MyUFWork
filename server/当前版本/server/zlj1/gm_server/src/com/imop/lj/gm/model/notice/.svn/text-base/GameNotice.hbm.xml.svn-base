@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.mop.lzr.gm.model.notice">
+<class name="com.imop.lj.gm.model.notice.GameNotice" table="t_game_notice">
+ <id name="id" column="id" type="int">
+	<generator class="native"/>
+</id>
+<property name="status" column="status" type="int" />
+<property name="serverIds" column="serverIds" type="string"/>
+<property name="content" column="content" type="string" length="5000"/>
+</class>
+</hibernate-mapping>

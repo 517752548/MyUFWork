@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="corpsboss">
+
+	<message type="CG_CORPS_BOSS_INFO" comment="查看当前队长或个人的boss情况">
+	</message>
+	
+	<message type="GC_CORPS_BOSS_INFO" comment="返回当前队长或个人的boss情况">
+		<field type="Integer" name="curCorpsBossLevel" comment="当前挑战boss进度" />
+		<field type="com.imop.lj.common.model.corps.CorpsBossInfo" clientType="CorpsBossInfoData" list="true" 
+			name="CorpsBossInfoDataList" comment="地图玩家信息">
+			<field type="Integer" name="bossLevel" comment="boss进度" />
+			<field type="Integer" name="bossRewardNum" comment="可获得奖励次数" />
+			<field type="Integer" name="weekFight" comment="本周是否已打,1-已到,0-未打" />
+		</field>
+	</message>
+	
+	<message type="CG_CORPSBOSS_ASK_ENTER_TEAM" comment="队长请求挑战帮派boss">
+		<field type="Integer" name="bossLevel" comment="boss进度" />
+	</message>
+	
+	<message type="GC_CORPSBOSS_ASK_ENTER_TEAM" comment="返回队长请求挑战帮派boss">
+		<field type="Integer" name="bossLevel" comment="boss进度" />
+	</message>
+	
+	<message type="CG_CORPSBOSS_ANSWER_ENTER_TEAM" comment="应答挑战帮派boss的请求">
+		<field type="Integer" name="agree" comment="是否同意进入，0不同意，1同意" />
+	</message>
+	
+	<message type="CG_WATCH_CORPS_BOSS" comment="查看本帮最高纪录">
+	</message>
+	
+	<!-- 排行榜 -->
+	<message type="CG_CORPSBOSS_RANK_LIST" comment="请求帮派boss排行榜">
+	</message>
+	
+	<message type="GC_CORPSBOSS_RANK_LIST" comment="帮派boss排行榜">
+		<field type="com.imop.lj.common.model.corps.CorpsBossRankInfo" name="cbRankInfo" clientType="CorpsBossRankInfo"
+					comment="本帮派boss排行榜信息"  macro="CorpsBossRankInfo"/>
+		<field type="com.imop.lj.common.model.corps.CorpsBossRankInfo" name="cbRankInfoList" clientType="CorpsBossRankInfo"
+					comment="所有帮派boss排行榜信息" list="true" macro="CorpsBossRankInfo"/>
+	</message>
+	
+	<message type="CG_CORPSBOSS_RANK_REPLAY" comment="请求查看帮派boss单一排行榜的录像">
+		<field type="Integer" name="rank" comment="排名" />
+	</message>
+	
+	<message type="CG_CORPSBOSS_COUNT_RANK_LIST" comment="请求帮派boss挑战次数排行榜">
+	</message>
+	
+	<message type="GC_CORPSBOSS_COUNT_RANK_LIST" comment="帮派boss挑战次数排行榜">
+		<field type="com.imop.lj.common.model.corps.CorpsBossCountRankInfo" name="cbCountRankInfo" clientType="CorpsBossCountRankInfo"
+					comment="本帮派boss挑战次数排行榜信息" macro="CorpsBossCountRankInfo"/>
+		<field type="com.imop.lj.common.model.corps.CorpsBossCountRankInfo" name="cbCountRankInfoList" clientType="CorpsBossCountRankInfo"
+					comment="所有帮派boss挑战次数排行榜信息" list="true" macro="CorpsBossCountRankInfo"/>
+	</message>
+	
+	
+</messages>

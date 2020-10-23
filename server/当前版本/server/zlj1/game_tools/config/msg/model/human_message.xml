@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="human">
+	
+	<message type="GC_HUMAN_CD_QUEUE_UPDATE" comment="服务器下发新的冷却队列信息（部分改变）">
+		<field type="com.imop.lj.gameserver.cd.CdQueueInfo"  clientType="com.imop.lj.data.CdQueueInfoData"
+				name="cdQueueInfo" comment="冷却队列" macro="CdQueueInfo" list="true">
+		</field>
+	</message>
+	
+	<message type="GC_PROPERTY_CHANGED_NUMBER" comment="用于发送数值类型的属性改变消息">
+		<field type="Short" name="roleType" comment="角色类型"></field>
+		<field type="Long" name="roleUUID" comment="角色UUID"></field>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" 
+			   clientType="KeyValuePairIntData"
+			name="properties" list="true" comment="所有变化的属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+	</message>
+
+	<message type="GC_PROPERTY_CHANGED_STRING" comment="用于发送字符串类型的属性改变消息">
+		<field type="Short" name="roleType" comment="角色类型"></field>
+		<field type="Long" name="roleUUID" comment="角色UUID"></field>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,String&gt;"  
+		       clientType="KeyValuePairStringData"
+			name="properties" list="true" comment="所有变化的属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="String" name="value" comment="属性值" />
+		</field>
+	</message>
+	
+	
+	<message type="CG_KILL_CD_TIME" comment="清除 Cd 等待时间">
+		<field type="Integer" name="cdType" comment="Cd 类型" />
+		<field type="Integer" name="cdIndex" comment="Cd 索引位置" />
+	</message>
+
+	<message type="CG_ADD_CD" comment="增加 Cd 队列">
+		<field type="Short" name="cdType" comment="Cd 类型" />
+		<field type="Short" name="cdIndex" comment="Cd 索引" />
+	</message>
+	
+	<!-- 功能按钮 -->
+	<message type="GC_FUNC_LIST" comment="功能按钮列表" compress="true">
+		<field type="com.imop.lj.common.model.human.FuncShowInfo" clientType="FuncShowInfo"
+			macro="FuncShowInfo" name="funcInfoList" list="true" comment="功能按钮列表">
+		</field>
+	</message>
+	
+	<message type="CG_FUNC_UPDATE" comment="功能按钮更新">
+		<field type="Integer" name="funcType" comment="功能按钮类型"/>
+	</message>
+	
+	<message type="GC_FUNC_UPDATE" comment="功能按钮更新">
+		<field type="com.imop.lj.common.model.human.FuncShowInfo" clientType="FuncShowInfo"
+			macro="FuncShowInfo" name="funcInfo" comment="功能按钮">
+		</field>
+	</message>
+	
+	<!-- 离线奖励 -->
+	<message type="CG_OFFLINEREWARD_INFO" comment="离线奖励信息，一个奖励">
+		<field type="Integer" name="funcTypeId" comment="奖励功能按钮类型Id"/>
+	</message>
+	
+	<message type="GC_OFFLINEREWARD_INFO" comment="离线奖励信息，一个奖励">
+		<field type="Integer" name="offlineRewardType" comment="离线奖励类型"/>
+		<field type="String" name="createTime" comment="创建时间"/>
+		<field type="String" name="props" comment="离线奖励描述信息"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo"
+			clientType="RewardInfoData" name="rewardInfos" comment="具体奖励信息" macro="RewardInfo">
+		</field>
+	</message>
+	
+	<message type="CG_OFFLINEREWARD_GET" comment="玩家领取一个离线奖励">
+		<field type="Integer" name="funcTypeId" comment="奖励功能按钮类型Id"/>
+	</message>
+
+	<!-- 体力相关 -->
+	<message type="CG_BUY_POWER" comment="购买体力">
+	</message>
+
+	<message type="CG_BUY_POWER_TIPS" comment="购买体力tips信息">
+	</message>
+	
+	<message type="GC_BUY_POWER_TIPS" comment="购买体力tips信息">
+		<field type="String" name="tips" comment="购买体力tips信息"/>
+	</message>
+	
+	<!-- 渠道兑换码 -->
+	<message type="CG_CHANNEL_EXCHANGE" comment="通过码兑换奖励">
+		<field type="String" name="code" comment="兑换码"/>
+	</message>
+	<message type="GC_CHANNEL_EXCHANGE" comment="通过码兑换奖励结果">
+		<field type="Integer" name="result" comment="兑换结果，1成功，2失败"/>
+	</message>
+	
+	<!-- vip信息 -->
+	<message type="GC_VIP_INFO" comment="玩家vip信息">
+		<field type="Integer" name="level" comment="vip等级"/>
+		<field type="Integer" name="exp" comment="vip经验"/>
+		<field type="Integer" name="tmpLevel" comment="临时vip等级"/>
+		<field type="Long" name="leftTime" comment="临时vip剩余有效时间"/>
+		<field type="Integer" name="vType" comment="类型，0普通，1临时"/>
+		<field type="Integer" name="isCharge" comment="是否充过钱，0否，1是"/>
+		<field type="Integer" name="canGetDayReward" comment="今日奖励是否可领取，0否，1是"/>
+	</message>
+	
+	<message type="CG_VIP_GET_DAY_REWARD" comment="领取每日vip奖励">
+	</message>
+	
+	<!-- 行为信息 -->
+	<message type="GC_BEHAVIOR_INFO" comment="行为信息">
+		<field type="com.imop.lj.common.model.BehaviorInfo"	clientType="BehaviorInfoData" 
+			name="behaviorInfos" list="true" comment="行为信息列表" macro="BehaviorInfo">
+		</field>
+	</message>
+	
+	<!-- 充值测试消息 -->
+	<message type="CG_CHARGE_GM_TEST" comment="充值测试消息">
+		<field type="Integer" name="tplId" comment="充值模板Id"/>
+	</message>
+	
+	<!-- 七日目标 -->
+	<message type="GC_DAY7_TASK_UPDATE" comment="七日目标任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_DAY7_TASK_FINISH" comment="七日目标任务领取奖励">
+		<field type="Integer" name="questId" comment="任务Id"/>
+	</message>
+	
+	<message type="GC_DAY7_TASK_LIST" comment="七日目标所有任务状态列表">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo" list="true">
+		</field>
+	</message>
+
+	<message type="GC_LOGIN_DAYS" comment="玩家登录天数">
+		<field type="Integer" name="day" comment="天数"/>
+	</message>
+	
+	<message type="GC_CREATE_TIME" comment="玩家创建角色时间">
+		<field type="Long" name="createTime" comment="创建角色时间，毫秒"/>
+	</message>
+	
+</messages>

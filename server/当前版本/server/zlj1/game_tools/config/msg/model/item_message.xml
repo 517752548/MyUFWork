@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="item">
+
+	<!-- 背包道具部分 注意此协议是压缩的，拷贝的时候要把compress去掉 TODO 客户端还没有实现解压 -->
+	<message type="GC_BAG_UPDATE" comment="刷新整个背包" compress="true">
+		<field type="Integer" name="bagId" comment="背包ID" />
+		<field type="Long" name="wearerId" comment="佩戴者uuid" />
+		<field type="com.imop.lj.common.model.item.CommonItem"
+			clientType="com.imop.lj.data.CommonItemData" name="item" comment="单个道具信息"
+			list="true" macro="CommonItem">
+		</field>
+	</message>
+
+	<message type="GC_ITEM_UPDATE" comment="更新单个道具信息，客户端受到此消息就替换原来此位置的道具">
+		<field type="com.imop.lj.common.model.item.CommonItem"
+			clientType="com.imop.lj.data.CommonItemData" name="item" comment="单个道具信息"
+			macro="CommonItem">
+		</field>
+	</message>
+	
+	<message type="CG_SELL_ITEM" comment="卖出道具">
+		<field type="Integer" name="bagId" comment="背包ID" />
+		<field type="com.imop.lj.common.model.item.SellItemInfo"
+			clientType="com.imop.lj.data.SellItemInfoData" name="sellItems"
+			comment="卖出道具信息" list="true">
+			<field type="Integer" name="index" comment="背包内位置索引" />
+			<field type="Integer" name="count" comment="卖出道具的数量" />
+		</field>
+	</message>
+
+	<message type="CG_USE_ITEM" comment="玩家使用道具消息">
+		<field type="Integer" name="bagId" comment="背包ID" />
+		<field type="Integer" name="index" comment="道具索引" />
+		<field type="Integer" name="count" comment="使用数量" />
+		<field type="Integer" name="wearType" comment="佩戴者类型，如果佩戴者不为0，wearType与roleType对应1:human,2:pet,3:horse,默认对wearId只对2、3有效" />
+		<field type="Long" name="wearerId" comment="物品佩戴者的UUID,即当前操作的武将或者宠物id，wearId为0表示没有佩戴者" />
+	</message>
+	
+	<message type="GC_REMOVE_ITEM" comment="移除一个道具">
+		<field type="Long" name="wearerId" comment="佩戴者uuid，主背包为0" />
+		<field type="String" name="uuid" comment="物品UUID"/>
+		<field type="Integer" name="bagId" comment="包id" />
+		<field type="Integer" name="index" comment="道具在包内位置索引" />
+	</message>
+
+	<message type="CG_MOVE_ITEM" comment="移动物品，用于拖拽动作">
+		<field type="Integer" name="fromBagId" comment="来源包id" />
+		<field type="Integer" name="fromIndex" comment="道具在来源背包内位置索引" />
+		<field type="Integer" name="toBagId" comment="目的包id" />
+		<field type="Integer" name="toIndex" comment="道具在目的包内位置索引" />
+		<field type="Long" name="wearerId" comment="物品佩戴者的UUID,即当前操作的武将宠物id" />
+	</message>
+	
+	<message type="GC_SWAP_ITEM" comment="交换道具">
+		<field type="Long" name="fromWearerId" comment="来源持有者id，主背包为0" />
+		<field type="Integer" name="fromBagId" comment="来源包id" />
+		<field type="Integer" name="fromIndex" comment="道具在来源背包内位置索引" />
+		<field type="Long" name="toWearerId" comment="目的持有者id，主背包为0" />
+		<field type="Integer" name="toBagId" comment="目的包id" />
+		<field type="Integer" name="toIndex" comment="道具在目的包内位置索引" />
+	</message>
+	
+	<message type="GC_RESET_CAPACITY" comment="重新设置背包的容量，只可能是主道具包、材料包、仓库三者之一">
+		<field type="Integer" name="bagId" comment="包Id" />
+		<field type="Integer" name="capacity" comment="新的容量" />
+	</message>
+	
+	<message type="GC_USE_POOL_ADD_RESULT" comment="战斗外嗑药结果消息">
+		<field type="Integer" name="itemTplId" comment="道具模板Id" />
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_OPEN_STORE" comment="仓库开格子">
+	</message>
+	
+	<!-- 展示相关 -->
+	<message type="CG_SHOW_ITEM" comment="按uuid查看道具，聊天中使用">
+		<field type="String" name="itemUUID" comment="道具唯一Id" />
+	</message>
+	
+	<message type="GC_SHOW_ITEM" comment="显示道具，聊天中使用">
+		<field type="com.imop.lj.common.model.item.CommonItem"
+			clientType="com.imop.lj.data.CommonItemData" name="item" comment="单个道具信息"
+			macro="CommonItem">
+		</field>
+	</message>
+	
+	<!-- 道具批量的消息 -->
+	<message type="GC_ITEM_UPDATE_LIST" comment="更新道具list" compress="true">
+		<field type="com.imop.lj.common.model.item.CommonItem"
+			clientType="com.imop.lj.data.CommonItemData" name="item" comment="单个道具信息"
+			macro="CommonItem" list="true">
+		</field>
+	</message>
+	
+</messages>

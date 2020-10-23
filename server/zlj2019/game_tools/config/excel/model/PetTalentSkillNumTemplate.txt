@@ -1,0 +1,7 @@
+int affiMinNum;[minValue=0;notNull=false]//还童次数下限
+int affiMaxNum;[minValue=1;notNull=false]//还童次数上限
+int talentSkillNum;[minValue=0;notNull=false]//天赋技能数量
+int weight;[minValue=0;notNull=false]//技能权重
+int talentSkill1Flag;[minValue=0;notNull=false]//天赋技能开关
+int variationFlag;[minValue=0;notNull=false]//变异开关
+int growthFlag;[minValue=0;notNull=false]//成长率卓越完美开关

@@ -1,0 +1,8 @@
+int notSale;[notNull=false;minValue=0;maxValue=1]//是否下架（0否，1是）
+int sortId;//排序ID
+List<com.imop.lj.common.model.template.ItemCostTemplate> normalItemList;[Collection(1,2)]//商城物品
+int catalogId;[notNull=false;minValue=0]//目录
+boolean sellWell;//是否热销
+List<com.imop.lj.common.model.template.CurrencyTemplate> priceList;[Collection(2,2)]//购买价格
+String marks;[notNull=false]//各种标识
+int subTag;[notNull=false]//二级标签

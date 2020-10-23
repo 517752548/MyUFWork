@@ -1,0 +1,1 @@
+tr_console.sh是命令行入口，只能linux下修改。

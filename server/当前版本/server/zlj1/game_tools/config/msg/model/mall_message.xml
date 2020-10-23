@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="mall">
+	<message type="GC_MALL_CATALOG_INFO_LIST" comment="返回商城标签列表">
+		<field type="com.imop.lj.common.model.mall.MallCatalogInfo" name="mallCatalogInfoList" clientType="MallCatalogInfoData" comment="商城标签列表" list="true">
+			<field type="Integer" name="catalogId" comment="标签ID"/>
+			<field type="String" name="name" comment="标签名称"/>
+			<field type="Integer" name="catalogType" comment="标签类型；0：热卖列表; 1:限购列表; 2:金币列表"/>
+		</field>
+	</message>
+	
+	<message type="CG_ITEM_LIST_BY_CATALOGID" comment="根据标签ID获取物品列表">
+		<field type="Integer" name="catalogId" comment="标签ID" />
+	</message>
+	
+	<message type="CG_TIME_LIMIT_ITEM_LIST" comment="请求限时抢购队列">
+	</message>
+	
+	<message type="GC_MALL_ITEM_LIST" comment="返回商城物品列表">
+		<field type="Integer" name="catalogId" comment="标签ID"/>
+		<field type="com.imop.lj.common.model.mall.MallNormalItemInfo" name="normalItemInfoList" clientType="MallNormalItemInfoData" comment="商城物品信息列表" list="true">
+			<field type="Integer" name="mallItemId" comment="商城物品ID"/>
+			<field type="com.imop.lj.common.model.item.CommonItem" name="commonItem" clientType="CommonItemData" comment="商城物品信息" macro="CommonItem"/>
+			<field type="com.imop.lj.common.model.CurrencyInfo" name="originalPrice" clientType="CurrencyInfoData" comment="原始价格" macro="CurrencyInfo"/>
+			<field type="com.imop.lj.common.model.CurrencyInfo" name="discountPrice" clientType="CurrencyInfoData" comment="折后价格" macro="CurrencyInfo"/>
+			<field type="com.imop.lj.common.model.CurrencyInfo" name="vipPrices" clientType="CurrencyInfoData" comment="VIP价格" list="true" macro="CurrencyInfo"/>
+			<field type="Integer" name="hot" comment="是否热卖"/>
+			<field type="String" name="marks" comment="各种标识"/>
+		</field>
+	</message>
+	 
+	<message type="GC_TIME_LIMIT_ITEM_LIST" comment="请求限时物品列表">
+		<field type="String" name="queueUUID" comment="队列ID"/>
+		<field type="com.imop.lj.common.model.mall.MallTimeLimitItemInfo" name="timeLimitItemInfoList" clientType="MallTimeLimitItemInfoData" comment="商城限时物品信息列表" list="true">
+			<field type="Integer" name="mallItemId" comment="商城物品ID"/>
+			<field type="com.imop.lj.common.model.item.CommonItem" name="commonItem" clientType="CommonItemData" comment="商城限时物品信息" macro="CommonItem"/>
+			<field type="com.imop.lj.common.model.CurrencyInfo" name="price" clientType="CurrencyInfoData" comment="价格" macro="CurrencyInfo"/>
+			<field type="Long" name="validPeriod" comment="有效期"/>
+			<field type="Integer" name="limitStock" comment="是否限制库存"/>
+			<field type="Integer" name="stock" comment="是否限制库存"/>
+			<field type="Integer" name="limitPurchase" comment="是否限购"/>
+			<field type="Integer" name="limitPurchaseNum" comment="限购数量"/>
+			<field type="String" name="marks" comment="各种标识"/>
+		</field>
+	</message>
+	
+	<message type="GC_NEXT_QUEUE_CD" comment="返回下个限时列表上架CD">
+		<field type="Long" name="cd" comment="cd"/>
+	</message>
+	
+	<message type="CG_BUY_NORMAL_ITEM" comment="购买普通物品">
+		<field type="Integer" name="mallItemId" comment="商城物品ID" />
+		<field type="Integer" name="count" comment="购买数量"/>
+	</message>
+	
+	<message type="CG_BUY_TIME_LIMIT_ITEM" comment="购买限时物品">
+		<field type="String" name="queueUUID" comment="限时列表ID"/>
+		<field type="Integer" name="mallItemId" comment="商城物品ID"/>
+		<field type="Integer" name="count" comment="购买数量"/>
+	</message>
+	
+	<message type="GC_BUY_ITEM_PANEL_OPERATE" comment="物品购买数量选择面板操作">
+		<field type="Integer" name="opeType" comment="1:关闭2：刷新"/>
+	</message>
+</messages>

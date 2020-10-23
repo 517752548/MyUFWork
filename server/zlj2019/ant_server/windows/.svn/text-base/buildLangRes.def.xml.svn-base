@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildRes.def" basedir="." default="">
+	<!-- 导入文件 -->
+	<import file="globals.def.xml" />
+
+<!--
+// 从 svn 导出代码
+///////////////////////////////////////////////////////////////////
+//-->
+	<macrodef name="langResTrunkExport">
+		<!-- 语言名称 -->
+		<attribute name="langName" />
+		<!-- 语言版本号 -->
+		<attribute name="langRev" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!-- 从 svn 中导出资源 -->
+			<svn username="${svn.u}" password="${svn.p}" 
+				javahl="false">
+				<export force="true" 
+					srcurl="${svn.langResURL}/@{langName}/trunk" 
+					revision="@{langRev}" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="langResBranchesExport">
+		<!-- 语言名称 -->
+		<attribute name="langName" />
+		<!-- branches 版本号 -->
+		<attribute name="branchesVer" />
+		<!-- 语言版本号 -->
+		<attribute name="langRev" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!--// 从 svn 中导出资源
+				// 注意: defaultSvnSetting 定义在 globals.def.xml -->
+			<svn refid="defaultSvnSetting">
+				<export force="true" 
+					srcurl="${svn.langResURL}/@{langName}/branches/@{branchesVer}" 
+					revision="@{langRev}" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+</project>

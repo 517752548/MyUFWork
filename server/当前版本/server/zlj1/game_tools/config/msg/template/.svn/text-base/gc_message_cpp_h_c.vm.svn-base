@@ -1,0 +1,31 @@
+#macro( smallType $type)
+#if($type == "Byte")char#elseif( $type == "String" )const string&#elseif( $type == "Boolean" )bool#elseif( $type == "Short" )short#elseif( $type == "Integer" )int32#elseif( $type == "Long" )int64#else$type *#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )INT32#elseif( $type == "Short" )SHORT#elseif( $type == "Byte" )BYTE#elseif( $type == "Boolean" )BOOL#elseif( $type == "Long" )INT64#elseif( $type == "String" )STRING#else$type#end
+#end
+#macro( lowerCase $type)$type.toLowerCase()#end
+
+#ifndef ${module}GCMessage_H
+\#define ${module}GCMessage_H
+
+\#include "../Msg.h"
+\#include "../Data.h"
+
+#foreach( $msg in $msgs )
+/**
+ * $msg.comment
+#foreach( $field in $msg.fields )
+ * @param $field.smallName $field.comment
+#end
+ */
+void #lowerCase($msg.type)(#foreach( $field in $msg.fields )#if ($field.list)#if($field.type=="String")vector<string>#else vector<#smallType($field.clientType)>#end*#else#smallType($field.clientType)#end ${field.smallName}#if($velocityCount != $msg.fields.size()),#end#end);
+#end
+
+#foreach( $msg in $msgs )
+void #lowerCase($msg.type)_decode(Stream* data);
+#end
+
+void #lowerCase($module)_message_register_decoders();
+
+#endif

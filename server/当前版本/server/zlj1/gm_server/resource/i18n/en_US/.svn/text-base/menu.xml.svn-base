@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+<menu id="1" name="Game World Manage" url="" pid="0">
+<submenu id="1_1" pid="1" name="User Account"  url="user.do?action=init" />
+<submenu id="1_2" pid="1" name="Role Manage"  url="user.do?action=init"/>
+<submenu id="1_3" pid="1" name="Item Manage"  url="user.do?action=init"/>
+</menu>
+<menu id="2" name="Activity and Notice" url="" pid="0">
+<submenu id="2_1" pid="2" name="Time Notice"  url="user.do?action=init"/>
+<submenu id="2_2" pid="2" name="Game Notice"  url="user.do?action=init"/>
+<submenu id="2_3" pid="2" name="Game Activity"  url="user.do?action=init"/>
+</menu>
+<menu id="3" name="Game Log" url="" pid="0"/>
+<submenu id="3_1" pid="3" name="General Search"  url="user.do?action=init"/>
+<submenu id="3_2" pid="3" name="Role Log"  url="user.do?action=init"/>
+<submenu id="3_3" pid="3" name="Item Consume Log"  url="user.do?action=init"/>
+</menus>

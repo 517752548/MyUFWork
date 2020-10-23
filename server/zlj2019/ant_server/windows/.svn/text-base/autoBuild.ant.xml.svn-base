@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="autoBuild.ant" basedir="." default="root">
+<!--
+// 版本号信息开始
+// 注意: 版本号信息由命令行参数给出!!
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 大版本号  -->
+	<property name="largeVer" value="cmdArgs" />
+	<!-- 代码版本号  -->
+	<property name="codeRev" value="cmdArgs" />
+	<!-- 语言版本 -->
+	<property name="langnName" value="cmdArgs" />
+	<!-- 多语言资源版本号 -->
+	<property name="langRev" value="cmdArgs" />
+
+	<target name="root">
+		<ant antfile="buildInit.ant.xml" />
+		<ant antfile="buildGameServer.ant.xml" />
+		<ant antfile="buildRes.ant.xml" />
+		<ant antfile="buildSQL.ant.xml" />
+		<ant antfile="buildManageServer.ant.xml" />
+		<ant antfile="buildLangUpdateSQL.ant.xml" />
+		<ant antfile="buildLangRes.ant.xml" />
+		<ant antfile="buildDeployTools.ant.xml" />
+		<ant antfile="zipAll.ant.xml" />
+	</target>
+</project>

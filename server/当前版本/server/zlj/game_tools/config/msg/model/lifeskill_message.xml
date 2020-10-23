@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="lifeskill">
+	
+	<message type="CG_USE_LIFE_SKILL" comment="使用生活技能">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="resourceId" comment="资源点Id"/>
+	</message>
+	<message type="GC_USE_LIFE_SKILL" comment="使用生活技能结果">
+		<field type="Integer" name="result" comment="采集状态,0未在采集,1-伐木,2-采药,3-采矿,4-狩猎"/>
+	</message>
+	
+	<message type="CG_CANCEL_LIFE_SKILL" comment="取消采集">
+	</message>
+	
+	<message type="CG_LIFE_SKILL_UPGRADE" comment="生活技能升级">
+		<field type="Integer" name="itemId" comment="技能书道具Id"/>
+	</message>
+	
+	<message type="GC_LIFE_SKILL_UPGRADE" comment="生活技能升级结果">
+		<field type="Integer" name="result" comment="结果 1成功,2失败"/>
+	</message>
+	
+	<message type="GC_LIFE_SKILL_INFO" comment="生活技能列表">
+		<field type="com.imop.lj.common.model.human.LifeSkillInfo" name="lifeSkillInfos" clientType="LifeSkillInfo"
+			comment="生活技能列表" macro="LifeSkillInfo" list="true"/>
+	</message>
+	
+	
+</messages>

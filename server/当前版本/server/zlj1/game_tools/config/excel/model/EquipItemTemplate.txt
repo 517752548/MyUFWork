@@ -1,0 +1,45 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;	
+;	
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int isFixedAttr;[minValue=0;maxValue=1;notNull=false]//是否固定装备，0否，1是
+int positionId;[minValue=1;notNull=false]//部位Id
+int gradeId;[minValue=1;notNull=false]//阶数Id
+int jobLimit;[minValue=1;notNull=false]//职业要求
+int sexLimit;[minValue=1;notNull=false]//性别要求
+int durability;[minValue=1;notNull=false]//耐久度
+String leftModel;[notNull=false]//左手模型
+String rightModel;[notNull=false]//右手模型
+int basePropValue;[minValue=0;notNull=false]//基础属性价值
+int addPropValue;[minValue=0;notNull=false]//附加属性价值
+List<com.imop.lj.gameserver.item.template.EquipItemAttribute> basePropList;[Collection(1,2)] //基础属性列表，目前只有一组
+List<com.imop.lj.gameserver.item.template.EquipItemAttribute> addPropList;[Collection(6,2)] //附加属性列表

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="overman">
+
+    <message type="CG_FIRST_OVERMAN" comment="申请收徒,弹框" />
+    <message type="GC_FIRST_OVERMAN" comment="申请收徒,弹框,徒弟" />
+
+    <message type="CG_OVERMAN" comment="申请拜师 ,徒弟发出" >
+        <field type="Integer" name="canOverman" comment="是否同意 1是同意" />
+    </message>
+
+
+    <message type="CG_OVERMAN_INFO" comment="获取当前用户的拜师信息"/>
+    <message type="GC_OVERMAN_INFO" comment="师徒相关信息">
+        <field type="Long" name="overman" comment="师傅charId" />
+        <field type="String" name="overmanName" comment="师傅charId" />
+        <field type="Integer" name="overmanTemplateId" comment="师傅的模版id" />
+        <field type="Boolean" name="isOnline" comment="师傅是否在线,1是,0否" />
+        <field type="com.imop.lj.gameserver.overman.LowermanInfo"
+               clientType="LowermanInfo"
+               name="lowerList" list="true" macro="LowermanInfo" comment="徒弟信息">
+        </field>
+    </message>
+
+    <message type="GC_OVERMAN_HONGDIAN" comment="可以领取奖励,没有可以领奖就空">
+        <field type="Long" name="rewardInfo" comment="奖励信息" list="true" />
+    </message>
+
+    <message type="CG_FIRST_FIRE_OVERMAN" comment="申请出师" />
+    <message type="GC_FIRST_FIRE_OVERMAN" comment="申请出师,发给徒弟" />
+    <message type="CG_FIRE_OVERMAN" comment="出师" >
+        <field type="Integer" name="canOverman" comment="是否同意 1是同意 徒弟发" />
+    </message>
+
+    <message type="CG_FIRST_TEAM_FIRE_OVERMAN" comment="申请解除师徒关系" />
+    <message type="GC_FIRST_TEAM_FIRE_OVERMAN" comment="申请解除师徒关系,师傅徒弟都发" />
+    <message type="CG_TEAM_FIRE_OVERMAN" comment="确认解除师徒关系师傅徒弟都发 1是同意" >
+        <field type="Integer" name="canOverman" comment="是否同意 1是同意 徒弟发" />
+    </message>
+
+
+    <message type="CG_FORCE_FIRE_OVERMAN" comment="强制出师">
+        <field type="Long" name="charId" comment="师傅或者徒弟的charid"/>
+    </message>
+    <message type="CG_GET_OVERMAN_REWARD" comment="获取师傅在这个徒弟身上所有奖励的状态">
+        <field type="Long" name="lowermanCharId" comment="徒弟的charid"/>
+    </message>
+    <message type="GC_GET_OVERMAN_REWARD" comment="师傅在这个徒弟身上所有奖励的状态">
+        <field type="Long" name="lowermanCharId" comment="徒弟的id"/>
+        <field type="com.imop.lj.gameserver.overman.OvermanRewardInfo"
+               clientType="com.imop.lj.data.OvermanRewardInfo" name="rewardInfo"
+               comment="奖励信息" list="true">
+            <field type="Integer" name="index" comment="奖励索引" />
+            <field type="Integer" name="hadget" comment="是否领取,1领取,0未领取" />
+        </field>
+    </message>
+    <message type="CG_GET_LOWERMAN_REWARD" comment="获得徒弟所有的奖励状态">
+    </message>
+    <message type="GC_GET_LOWERMAN_REWARD" comment="获得徒弟所有的奖励状态">
+        <field type="com.imop.lj.gameserver.overman.OvermanRewardInfo"
+               clientType="com.imop.lj.data.OvermanRewardInfo" name="rewardInfo"
+               comment="奖励信息" list="true">
+            <field type="Integer" name="index" comment="奖励索引" />
+            <field type="Integer" name="hadget" comment="是否领取,1领取,0未领取" />
+        </field>
+    </message>
+    <message type="CG_ADD_LOWERMAN_REWARD" comment="徒弟获取升级的奖励">
+        <field type="Integer" name="rewardId" comment="奖励id"/>
+    </message>
+    <message type="CG_ADD_OVERMAN_REWARD" comment="师傅获取徒弟升级的奖励">
+        <field type="Integer" name="rewardId" comment="奖励id"/>
+        <field type="Long" name="lowermanCharId" comment="徒弟的id"/>
+    </message>
+
+</messages>

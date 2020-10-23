@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--主要配置 -->
+<deploy_config name="$pool.domain" language="$pool.lang" regionId="$pool.regionid" serverGroupId="$pool.servergroupid" localDomain="local.csj.mop.com">
+
+    <!-- 游戏资源路径 -->
+	<resource dir="$pool.baseresourcedir"/> 
+	#set( $dbuser = "sz" )
+	#set( $dbpwd = "szpwd" )
+	#set( $dbname = "tr,tr_log" )
+	$pool.setDbuser($dbuser)
+	$pool.setDbpwd($dbpwd)
+	$pool.setDbname($dbname)
+	
+	
+    <battleReport dir="/data/www_index/reports"/> 
+	
+	<!-- 游戏数据库主库信息 -->
+	<mmo_db username="$dbuser" password="$dbpwd" ip="$pool.dbip" port="3306" database="tr" />
+
+	<!-- 战报数据库主库信息 -->
+	<battle_report_db username="$dbuser" password="$dbpwd" ip="$pool.dbip" port="3306" database="tr_battle_report" />
+
+	<!-- 日志数据库主库信息 -->
+	<log_db username="$dbuser" password="$dbpwd" ip="$pool.dbip" port="3306" database="tr_log" />
+	
+
+	#set( $name = "log_server" )
+	#set( $xmx = 2048 )
+	$pool.setCurAppName($name)
+	$pool.setCurxmx($xmx)
+	<!-- 日志服配置 -->
+	<log_server id="13" name="$name" lanip="$pool.getLanip(1)" lanport="$pool.getNextport(1)" xmx="2048" xms="2048" />
+
+	#set( $name = "game_server" )
+	#set( $xmx = 6144 )
+	$pool.setCurAppName($name)
+	$pool.setCurxmx($xmx)
+	<!-- 游戏服配置 -->
+	<game_server id="1" name="$name" lanip="$pool.getLanip(1)" lanport="$pool.getNextport(1)" wanip="$pool.getWanip(1)" wanport="8080" xmx="6144" xms="6144" gcOpt="-Xmn4096m -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError" probeTurnOn="ture" operation_com="renren" chargeEnabled="true" />
+	
+	<!-- client配置	-->
+	<client ip="$pool.clientip" title="$pool.gamename - $pool.servername - $pool.domain" resource_url="http://resourcex.csj.renren.com" sound_url="http://resourcex.csj.renren.com" auto_login="1" operation_com="renren" show_renren_logo="1" report_url="0" login_url="" />
+	
+	##此处配置的是服务的启动顺序格式为（应用名[间隔时间,单位是秒]）
+	#set($startQueue = "log_server[0],game_server[0]")
+	#set($stopQueue = "game_server[180],log_server[0]")
+	$pool.setCurStartQueue($startQueue)
+	$pool.setCurStopQueue($stopQueue)
+	
+</deploy_config>

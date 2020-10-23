@@ -1,0 +1,8 @@
+int distTypeId; // 区域类型 ID
+int index;	//场景索引
+long distNameLangId;[minValue=0;notNull=false] // 区域名称多语言 Id 
+String distName; // 区域名称
+long descLangId;[minValue=0;notNull=false] // 城市说明多语言 Id
+String desc; // 城市说明
+int requireLevel;[minValue=0;notNull=false]	//允许访问等级
+int musicId;[notNull=false]//音乐ID

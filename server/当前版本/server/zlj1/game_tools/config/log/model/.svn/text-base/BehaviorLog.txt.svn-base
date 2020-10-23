@@ -1,0 +1,7 @@
+message com.imop.lj.logserver.model.BehaviorLog(
+   int behaviorType;//行为类型
+   int oldOpCount;//旧行为次数
+   int newOpCount;//新行为次数
+   int oldAddCount;//旧附加次数
+   int newAddCount;//新附加次数
+)

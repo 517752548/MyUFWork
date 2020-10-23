@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="battle_report" type="com.imop.lj.gameserver.battlereport.BattleReportEntity" />
+    <insert id="insert" parameterClass="battle_report">
+	insert into $tableName$(id,data,createTime) values(#id#,#data#,#createTime#)
+	</insert>
+	<select id="getById" resultClass="battle_report">
+	select id, data, createTime
+    from $tableName$
+    where id = #id#
+  	</select>
+  	<select id="getMaxId" parameterClass="String" resultClass="Long">
+	select max(id)
+    from $tableName$
+  	</select>
+    <statement id="createTable" parameterClass="java.lang.String">
+	create table if not exists $tableName$
+	(
+		id bigint(18) not null primary key,
+		data text default null,
+		createTime datetime default null
+	)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

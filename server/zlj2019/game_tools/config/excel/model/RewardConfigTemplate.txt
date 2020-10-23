@@ -1,0 +1,4 @@
+int rewardReasonTypeId;//奖励身份识别，便于知道奖励来源，加奖励基于什么
+int fixedRewardSetId;[notNull=false;minValue=0]//固定奖励集合id
+int fixedRewardNum;[notNull=false;minValue=0]//从固定奖励集合中获得奖励数
+List<com.imop.lj.gameserver.reward.template.RandomRewardTemplate> randomRewardTempalteList;[Collection(20,3)]//随机奖励数

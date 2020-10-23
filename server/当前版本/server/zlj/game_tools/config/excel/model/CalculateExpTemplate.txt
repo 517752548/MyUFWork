@@ -1,0 +1,6 @@
+int expType;[minValue=1;notNull=false]//经验类型
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int roundFlag;[minValue=0;notNull=false]//取整方式,0-四舍五入,1-向下取整
+int power;[minValue=1;notNull=false]//指数幂
+int expBase;[minValue=1;notNull=false]//经验基数

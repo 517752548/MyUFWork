@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="plotdungeon">
+
+	<message type="CG_PLOT_DUNGEON_INFO" comment="查看当前剧情副本情况">
+		<field type="Integer" name="plotDungeonType" comment="剧情副本类型,0-简单,1-精英" />
+	</message>
+	
+	<message type="GC_PLOT_DUNGEON_INFO" comment="返回当前剧情副本情况">
+		<field type="Integer" name="plotDungeonChapter" comment="剧情副本可开启的章节数" />
+		<field type="Integer" name="plotDungeonType" comment="剧情副本类型,0-简单,1-精英" />
+		<field type="Integer" name="curPlotDungeonLevel" comment="当前挑战剧情副本进度" />
+	</message>
+	
+	<message type="CG_PLOT_DUNGEON_START" comment="请求挑战剧情副本">
+		<field type="Integer" name="plotDungeonType" comment="剧情副本类型,0-简单,1-精英" />
+		<field type="Integer" name="plotDungeonLevel" comment="剧情副本进度" />
+	</message>
+	
+	<!-- 每日剧情副本奖励 -->
+	<message type="CG_DAILY_PLOT_DUNGEON_INFO" comment="请求查看每日剧情副本奖励信息">
+	</message>
+	<message type="GC_DAILY_PLOT_DUNGEON_INFO" comment="返回每日剧情副本奖励信息">
+		<field type="com.imop.lj.common.model.plotdungeon.PlotDungeonInfo" name="plotDungeonInfoList" 
+				clientType="PlotDungeonInfo" comment="每日剧情副本奖励信息" list="true">
+			<field type="Integer" name ="plotDungeonType" comment="剧情副本类型,0-简单,1-精英"/>
+			<field type="Integer" name ="plotDungeonChapter" comment="剧情副本章数"/>
+			<field type="Integer" name ="plotDungeonStatus" comment="剧情副本状态,0-不可领取,1-可领取但未领取,2-已领取"/>
+		</field>
+	</message>
+	
+	<message type="CG_GET_DAILY_PLOT_DUNGEON_REWARD" comment="领取每日剧情副本奖励">
+		<field type="Integer" name="plotDungeonType" comment="剧情副本类型,0-简单,1-精英" />
+		<field type="Integer" name="plotDungeonChapter" comment="剧情副本章数" />
+	</message>
+</messages>

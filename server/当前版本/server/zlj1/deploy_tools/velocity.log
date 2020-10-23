@@ -1,0 +1,288 @@
+2014-07-03 15:47:41,234 - Log4JLogChute initialized using file 'velocity.log'
+2014-07-03 15:47:41,234 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2014-07-03 15:47:41,234 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-07-03 15:47:41,234 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-07-03 15:47:41,250 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:227)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:111)
+	at com.imop.lj.deploy.Deploy.initVelocity(Deploy.java:298)
+	at com.imop.lj.deploy.Deploy.main(Deploy.java:128)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 13 more
+2014-07-03 15:47:41,250 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 15:47:41,250 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 15:47:41,265 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-07-03 15:47:41,265 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:41,578 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-07-03 15:47:41,594 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-07-03 15:47:41,594 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-07-03 15:47:41,594 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-07-03 15:47:41,594 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-07-03 15:47:41,594 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-07-03 15:47:41,640 - Created '20' parsers.
+2014-07-03 15:47:41,640 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-07-03 15:47:41,640 - Velocimacro : Default library not found.
+2014-07-03 15:47:41,640 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-07-03 15:47:41,640 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-07-03 15:47:41,640 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-07-03 15:47:41,640 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-07-03 15:47:41,750 - ResourceManager : found template\qzone\logserver/log_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:41,765 - ResourceManager : found template\qzone\logserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:41,812 - ResourceManager : found template\qzone\logserver/log_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:41,890 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:41,906 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:41,906 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 15:47:41,906 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 15:47:42,015 - ResourceManager : found template\qzone\gameserver/hibernate.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,047 - ResourceManager : found template\qzone\gameserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,125 - ResourceManager : found template\qzone\gameserver/game_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,125 - Null reference [template 'template\qzone\gameserver/game_server.cfg.js', line 145, column 30] : ${deployConfig.gameServer.worldServerConfigIp} cannot be resolved.
+2014-07-03 15:47:42,156 - ResourceManager : found template\qzone\gameserver/battle_report_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,156 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,203 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,203 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 15:47:42,203 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 15:47:42,359 - ResourceManager : found sql\db_init.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,359 - ResourceManager : found sql\db_update.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,422 - ResourceManager : found template/client/platform/qzone/zh_CN/config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,437 - ResourceManager : found template/client/platform/qzone/zh_CN/index.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:42,437 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 173, column 84] : ${gameUrl} cannot be resolved.
+2014-07-03 15:47:42,437 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 176, column 84] : ${wmodeValue} cannot be resolved.
+2014-07-03 15:47:42,437 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 177, column 96] : ${allowDomain} cannot be resolved.
+2014-07-03 15:47:42,437 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 178, column 69] : ${gameUrl} cannot be resolved.
+2014-07-03 15:47:42,437 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 183, column 84] : ${allowDomain} cannot be resolved.
+2014-07-03 15:47:42,687 - ResourceManager : found template/client/platform/qzone/zh_CN/game.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:47:46,375 - ResourceManager : found template/client/platform/qzone/zh_CN/script/qzone.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,431 - Log4JLogChute initialized using file 'velocity.log'
+2014-07-03 15:50:33,431 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2014-07-03 15:50:33,431 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-07-03 15:50:33,431 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-07-03 15:50:33,431 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:227)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:111)
+	at com.imop.lj.deploy.Deploy.initVelocity(Deploy.java:298)
+	at com.imop.lj.deploy.Deploy.main(Deploy.java:128)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 13 more
+2014-07-03 15:50:33,431 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 15:50:33,431 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 15:50:33,431 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-07-03 15:50:33,431 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,446 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-07-03 15:50:33,446 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-07-03 15:50:33,446 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-07-03 15:50:33,446 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-07-03 15:50:33,462 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-07-03 15:50:33,462 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-07-03 15:50:33,478 - Created '20' parsers.
+2014-07-03 15:50:33,478 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-07-03 15:50:33,478 - Velocimacro : Default library not found.
+2014-07-03 15:50:33,478 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-07-03 15:50:33,478 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-07-03 15:50:33,478 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-07-03 15:50:33,478 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-07-03 15:50:33,540 - ResourceManager : found template\qzone\logserver/log_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,556 - ResourceManager : found template\qzone\logserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,571 - ResourceManager : found template\qzone\logserver/log_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,571 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,587 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,587 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 15:50:33,587 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 15:50:33,603 - ResourceManager : found template\qzone\gameserver/hibernate.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,618 - ResourceManager : found template\qzone\gameserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,665 - ResourceManager : found template\qzone\gameserver/game_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,665 - Null reference [template 'template\qzone\gameserver/game_server.cfg.js', line 145, column 30] : ${deployConfig.gameServer.worldServerConfigIp} cannot be resolved.
+2014-07-03 15:50:33,681 - ResourceManager : found template\qzone\gameserver/battle_report_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,681 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,681 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,681 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 15:50:33,681 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 15:50:33,712 - ResourceManager : found sql\db_init.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,712 - ResourceManager : found sql\db_update.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,728 - ResourceManager : found template/client/platform/qzone/zh_CN/config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,728 - ResourceManager : found template/client/platform/qzone/zh_CN/index.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,728 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 173, column 84] : ${gameUrl} cannot be resolved.
+2014-07-03 15:50:33,728 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 176, column 84] : ${wmodeValue} cannot be resolved.
+2014-07-03 15:50:33,728 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 177, column 96] : ${allowDomain} cannot be resolved.
+2014-07-03 15:50:33,728 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 178, column 69] : ${gameUrl} cannot be resolved.
+2014-07-03 15:50:33,728 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 183, column 84] : ${allowDomain} cannot be resolved.
+2014-07-03 15:50:33,743 - ResourceManager : found template/client/platform/qzone/zh_CN/game.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:50:33,743 - ResourceManager : found template/client/platform/qzone/zh_CN/script/qzone.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,374 - Log4JLogChute initialized using file 'velocity.log'
+2014-07-03 15:54:01,374 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2014-07-03 15:54:01,374 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-07-03 15:54:01,374 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-07-03 15:54:01,374 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:227)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:111)
+	at com.imop.lj.deploy.Deploy.initVelocity(Deploy.java:298)
+	at com.imop.lj.deploy.Deploy.main(Deploy.java:128)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 13 more
+2014-07-03 15:54:01,374 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 15:54:01,374 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 15:54:01,374 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-07-03 15:54:01,390 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,406 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-07-03 15:54:01,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-07-03 15:54:01,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-07-03 15:54:01,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-07-03 15:54:01,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-07-03 15:54:01,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-07-03 15:54:01,421 - Created '20' parsers.
+2014-07-03 15:54:01,437 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-07-03 15:54:01,437 - Velocimacro : Default library not found.
+2014-07-03 15:54:01,437 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-07-03 15:54:01,437 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-07-03 15:54:01,437 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-07-03 15:54:01,437 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-07-03 15:54:01,468 - ResourceManager : found template\qzone\logserver/log_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,468 - ResourceManager : found template\qzone\logserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,484 - ResourceManager : found template\qzone\logserver/log_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,499 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,515 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,515 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 15:54:01,515 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 15:54:01,531 - ResourceManager : found template\qzone\gameserver/hibernate.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,546 - ResourceManager : found template\qzone\gameserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,593 - ResourceManager : found template\qzone\gameserver/game_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,593 - Null reference [template 'template\qzone\gameserver/game_server.cfg.js', line 145, column 30] : ${deployConfig.gameServer.worldServerConfigIp} cannot be resolved.
+2014-07-03 15:54:01,609 - ResourceManager : found template\qzone\gameserver/battle_report_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,609 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,609 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,609 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 15:54:01,609 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 15:54:01,656 - ResourceManager : found sql\db_init.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,656 - ResourceManager : found sql\db_update.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,687 - ResourceManager : found template/client/platform/qzone/zh_CN/config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,703 - ResourceManager : found template/client/platform/qzone/zh_CN/index.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,703 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 173, column 84] : ${gameUrl} cannot be resolved.
+2014-07-03 15:54:01,703 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 176, column 84] : ${wmodeValue} cannot be resolved.
+2014-07-03 15:54:01,703 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 177, column 96] : ${allowDomain} cannot be resolved.
+2014-07-03 15:54:01,703 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 178, column 69] : ${gameUrl} cannot be resolved.
+2014-07-03 15:54:01,703 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 183, column 84] : ${allowDomain} cannot be resolved.
+2014-07-03 15:54:01,703 - ResourceManager : found template/client/platform/qzone/zh_CN/game.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 15:54:01,703 - ResourceManager : found template/client/platform/qzone/zh_CN/script/qzone.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,113 - Log4JLogChute initialized using file 'velocity.log'
+2014-07-03 17:32:56,113 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2014-07-03 17:32:56,113 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2014-07-03 17:32:56,113 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2014-07-03 17:32:56,113 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:227)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:111)
+	at com.imop.lj.deploy.Deploy.initVelocity(Deploy.java:298)
+	at com.imop.lj.deploy.Deploy.main(Deploy.java:128)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 13 more
+2014-07-03 17:32:56,113 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 17:32:56,113 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2014-07-03 17:32:56,113 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2014-07-03 17:32:56,113 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,129 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2014-07-03 17:32:56,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2014-07-03 17:32:56,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2014-07-03 17:32:56,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2014-07-03 17:32:56,145 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2014-07-03 17:32:56,145 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2014-07-03 17:32:56,160 - Created '20' parsers.
+2014-07-03 17:32:56,160 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2014-07-03 17:32:56,160 - Velocimacro : Default library not found.
+2014-07-03 17:32:56,160 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2014-07-03 17:32:56,160 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2014-07-03 17:32:56,160 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2014-07-03 17:32:56,160 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2014-07-03 17:32:56,207 - ResourceManager : found template\qzone\logserver/log_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,223 - ResourceManager : found template\qzone\logserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,238 - ResourceManager : found template\qzone\logserver/log_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,238 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,254 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,254 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 17:32:56,254 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 17:32:56,301 - ResourceManager : found template\qzone\gameserver/hibernate.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,332 - ResourceManager : found template\qzone\gameserver/log4j.properties with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,363 - ResourceManager : found template\qzone\gameserver/game_server.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,363 - Null reference [template 'template\qzone\gameserver/game_server.cfg.js', line 145, column 30] : ${deployConfig.gameServer.worldServerConfigIp} cannot be resolved.
+2014-07-03 17:32:56,379 - ResourceManager : found template\qzone\gameserver/battle_report_ibatis_config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,379 - ResourceManager : found template\qzone\launch.cfg.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,379 - ResourceManager : found template\qzone\server_launch.sh.tmpl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,379 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 6, column 15] : $jar_lib cannot be resolved.
+2014-07-03 17:32:56,379 - Null reference [template 'template\qzone\server_launch.sh.tmpl', line 8, column 161] : ${jar_lib} cannot be resolved.
+2014-07-03 17:32:56,410 - ResourceManager : found sql\db_init.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,410 - ResourceManager : found sql\db_update.sql with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,426 - ResourceManager : found template/client/platform/qzone/zh_CN/config.xml with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,426 - ResourceManager : found template/client/platform/qzone/zh_CN/index.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,426 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 173, column 84] : ${gameUrl} cannot be resolved.
+2014-07-03 17:32:56,426 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 176, column 84] : ${wmodeValue} cannot be resolved.
+2014-07-03 17:32:56,426 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 177, column 96] : ${allowDomain} cannot be resolved.
+2014-07-03 17:32:56,426 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 178, column 69] : ${gameUrl} cannot be resolved.
+2014-07-03 17:32:56,426 - Null reference [template 'template/client/platform/qzone/zh_CN/index.html', line 183, column 84] : ${allowDomain} cannot be resolved.
+2014-07-03 17:32:56,426 - ResourceManager : found template/client/platform/qzone/zh_CN/game.html with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2014-07-03 17:32:56,442 - ResourceManager : found template/client/platform/qzone/zh_CN/script/qzone.js with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

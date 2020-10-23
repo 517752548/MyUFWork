@@ -1,0 +1,7 @@
+message com.imop.lj.logserver.model.PetExpLog(
+    int templateId;// 武将模板ID
+    long instUUID;// 武将实例ID
+    long addExp;//增加经验
+    int petLevel;//当前级别
+    long petExp;//武将当前经验
+)

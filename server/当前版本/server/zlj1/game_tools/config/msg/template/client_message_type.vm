@@ -1,0 +1,26 @@
+package com.renren.framework.net{
+	public class MessageType{
+	// /////////////
+	// 服务器内部状态
+	// ////////////
+	public static const STAUS_BEGIN:int = 400;
+	public static var BASE_NUMBER:int = 500;
+	//客户端第一次登陆命令，服务器进行连接初始化
+	public static const CG_HANDSHAKE:int = 490;
+	public static const CG_HANDSHAKE2:int = 492;
+	
+#foreach($key in $msgMap.keySet())
+#set($msgList = $msgMap.get($key))
+	// /////////////
+	// ${key}
+	// ////////////
+#set($msgOpKey = $key.toLowerCase())
+#set($msgOp = $message.get($msgOpKey))	
+    private static var ${key}_NUMBER:int = $msgOp.get("start");	
+#foreach( $msg in $msgList )
+	public static const ${msg}:int = ++${key}_NUMBER;
+#end
+
+#end
+	}
+}

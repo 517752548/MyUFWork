@@ -1,0 +1,9 @@
+int gemLevel;[notNull=true;minValue=1]//宝石等级
+int synthesisBase;[notNull=true;minValue=1]//合成基数
+int currencyType;[notNull=true]//合成费用类型
+int currencyNum;[notNull=false;minValue=1]//合成费用
+int symbolId;[notNull=true;minValue=1]//合成符ID
+int symbolNum;[notNull=false;minValue=1]//合成符消耗
+int synthesisProb;[notNull=false]//成功概率
+int rewardProb;[notNull=false]//返还道具概率
+int rewardId;[notNull=false;minValue=1]//奖励ID

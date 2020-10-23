@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+	<macro id="autolog" comment="自动游戏日志（客服）">
+			<submenu id="7_1" pid="7" name="竞技场日志" url="autoLog.do?action=init&amp;logType=arena_log" />
+			<submenu id="7_2" pid="7" name="用户特定行为日志" url="autoLog.do?action=init&amp;logType=behavior_log" />
+			<submenu id="7_3" pid="7" name="充值日志" url="autoLog.do?action=init&amp;logType=charge_log" />
+			<submenu id="7_4" pid="7" name="聊天日志" url="autoLog.do?action=init&amp;logType=chat_log" />
+			<submenu id="7_5" pid="7" name="掉落日志" url="autoLog.do?action=init&amp;logType=drop_item_log" />
+			<submenu id="7_6" pid="7" name="GM操作日志" url="autoLog.do?action=init&amp;logType=gm_command_log" />
+			<submenu id="7_7" pid="7" name="物品产出日志" url="autoLog.do?action=init&amp;logType=item_gen_log" />
+			<submenu id="7_8" pid="7" name="物品改变日志" url="autoLog.do?action=init&amp;logType=item_log" />
+			<submenu id="7_9" pid="7" name="邮件日志" url="autoLog.do?action=init&amp;logType=mail_log" />
+			<submenu id="7_10" pid="7" name="金钱日志" url="autoLog.do?action=init&amp;logType=money_log" />
+			<submenu id="7_11" pid="7" name="玩家在线时间日志" url="autoLog.do?action=init&amp;logType=online_time_log" />
+			<submenu id="7_12" pid="7" name="用户登陆日志" url="autoLog.do?action=init&amp;logType=player_login_log" />
+			<submenu id="7_13" pid="7" name="Vip日志" url="autoLog.do?action=init&amp;logType=vip_log" />
+			<submenu id="7_14" pid="7" name="task日志" url="autoLog.do?action=init&amp;logType=task_log" />
+			<submenu id="7_15" pid="7" name="布阵日志" url="autoLog.do?action=init&amp;logType=formation_log" />
+			<submenu id="7_16" pid="7" name="关卡日志" url="autoLog.do?action=init&amp;logType=mission_log" />
+			<submenu id="7_17" pid="7" name="奖励日志" url="autoLog.do?action=init&amp;logType=reward_log" />
+			<submenu id="7_18" pid="7" name="装备相关日志" url="autoLog.do?action=init&amp;logType=equip_log" />
+			<submenu id="7_19" pid="7" name="武将相关日志" url="autoLog.do?action=init&amp;logType=pet_log" />
+			<submenu id="7_20" pid="7" name="补偿奖励" url="autoLog.do?action=init&amp;logType=prize_log" />
+			<submenu id="7_21" pid="7" name="神秘商店日志" url="autoLog.do?action=init&amp;logType=mystery_shop_log" />
+			<submenu id="7_22" pid="7" name="武将经验日志" url="autoLog.do?action=init&amp;logType=pet_exp_log" />
+			<submenu id="7_23" pid="7" name="坐骑日志" url="autoLog.do?action=init&amp;logType=horse_log" />
+			<submenu id="7_24" pid="7" name="商城日志" url="autoLog.do?action=init&amp;logType=mall_log" />
+			<submenu id="7_25" pid="7" name="财务汇报日志" url="autoLog.do?action=init&amp;logType=item_cost_record_log" />
+			<submenu id="7_26" pid="7" name="小助手" url="autoLog.do?action=init&amp;logType=pop_tips_log" />
+			<submenu id="7_27" pid="7" name="精彩活动" url="autoLog.do?action=init&amp;logType=good_activity_log" />
+			<submenu id="7_28" pid="7" name="战斗结果日志" url="autoLog.do?action=init&amp;logType=battle_result_log" />
+			<submenu id="7_29" pid="7" name="酒馆任务日志" url="autoLog.do?action=init&amp;logType=pub_task_log" />
+			<submenu id="7_30" pid="7" name="酒馆经验日志" url="autoLog.do?action=init&amp;logType=pub_exp_log" />
+			<submenu id="7_31" pid="7" name="科举日志" url="autoLog.do?action=init&amp;logType=exam_log" />
+			<submenu id="7_32" pid="7" name="军团日志" url="autoLog.do?action=init&amp;logType=corps_log" />
+			<submenu id="7_33" pid="7" name="除暴安良日志" url="autoLog.do?action=init&amp;logType=the_sweeney_task_log" />
+			<submenu id="7_34" pid="7" name="藏宝图日志" url="autoLog.do?action=init&amp;logType=treasure_map_log" />
+			<submenu id="7_35" pid="7" name="称号log" url="autoLog.do?action=init&amp;logType=title_log" />
+			<submenu id="7_36" pid="7" name="护送粮草任务日志" url="autoLog.do?action=init&amp;logType=forage_task_log" />
+			<submenu id="7_37" pid="7" name="师徒关系" url="autoLog.do?action=init&amp;logType=overman_log" />
+			<submenu id="7_38" pid="7" name="翅膀日志" url="autoLog.do?action=init&amp;logType=wing_log" />
+			<submenu id="7_39" pid="7" name="寄售商品日志" url="autoLog.do?action=init&amp;logType=commodity_sell_log" />
+			<submenu id="7_40" pid="7" name="购买商品日志" url="autoLog.do?action=init&amp;logType=commodity_buy_log" />
+			<submenu id="7_41" pid="7" name="帮派任务日志" url="autoLog.do?action=init&amp;logType=corps_task_log" />
+			<submenu id="7_42" pid="7" name="帮派建设日志" url="autoLog.do?action=init&amp;logType=corps_build_log" />
+			<submenu id="7_43" pid="7" name="帮派福利日志" url="autoLog.do?action=init&amp;logType=corps_benefit_log" />
+			<submenu id="7_44" pid="7" name="通天塔日志" url="autoLog.do?action=init&amp;logType=tower_log" />
+			<submenu id="7_45" pid="7" name="帮派boss日志" url="autoLog.do?action=init&amp;logType=corps_boss_log" />
+			<submenu id="7_46" pid="7" name="限时杀怪日志" url="autoLog.do?action=init&amp;logType=time_limit_monster_log" />
+			<submenu id="7_47" pid="7" name="限时挑战Npc日志" url="autoLog.do?action=init&amp;logType=time_limit_npc_log" />
+		</macro>
+</macros>

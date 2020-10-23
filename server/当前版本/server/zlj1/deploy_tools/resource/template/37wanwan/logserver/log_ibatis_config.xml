@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-config-2.dtd" >
+<sqlMapConfig>
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="64" maxSessions="30"
+		maxTransactions="100" useStatementNamespaces="false" />
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+#if(${log_db.ip}==${server.lanIp})
+<property name="JDBC.ConnectionURL" value="jdbc:mysql://127.0.0.1:${log_db.port}/${log_db.database}?useUnicode=true&amp;characterEncoding=utf-8&amp;useServerPrepStmts=true" />
+#else
+<property name="JDBC.ConnectionURL" value="jdbc:mysql://${log_db.ip}:${log_db.port}/${log_db.database}?useUnicode=true&amp;characterEncoding=utf-8&amp;useServerPrepStmts=true" />
+#end
+			<property name="JDBC.Username" value="${log_db.username}" />
+			<property name="JDBC.Password" value="${log_db.password}" />
+			<property name="Pool.MaximumActiveConnections" value="50"/>
+            <property name="Pool.MaximumIdleConnections" value="1"/>
+		</dataSource>
+	</transactionManager>
+	<sqlMap resource="com/imop/lj/logserver/model/arena.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/behavior.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/charge.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/chat.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/dropitem.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/gmcommand.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/itemgen.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/item.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/mail.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/money.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/onlinetime.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/playerlogin.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/vip.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/task.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/drillground.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/formation.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/mission.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/raid.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/reward.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/corps.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/moneytree.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/landlord.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/heromission.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/equip.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/treasure.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/pet.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/land.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/steptask.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/passtask.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/godhero.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/prize.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/mysteryshop.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/petexp.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/horse.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/mall.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/itemcostrecord.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/armytitle.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/poptips.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/goodactivity.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/landofferadvice.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/battleresult.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/bun.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/everydaytarget.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/bank.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/armour.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/card.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/gemmaze.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/convertmall.xml" />
+	<sqlMap resource="com/imop/lj/logserver/model/looptask.xml" />
+</sqlMapConfig>

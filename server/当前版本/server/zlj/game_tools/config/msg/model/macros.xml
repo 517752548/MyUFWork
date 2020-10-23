@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<macros xmlns="http://com.imop.lj.message">
+	<macro id="CommonItem" comment="道具信息">
+		<field type="String" name="uuid" comment="道具实例uuid" />
+		<field type="Integer" name="bagId" comment="包id" />
+		<field type="Integer" name="index" comment="道具在背包内位置索引" />
+		<field type="Integer" name="tplId" comment="道具模板Id" />
+		<field type="Integer" name="count" comment="数量" />
+		<field type="Long" name="lastUpdateTime" comment="最后一次更新时间"/>
+		<field type="String" name="expireDesc" comment="剩余使用时限描述"/>
+		<field type="Long" name="wearerId" comment="持有者id，主背包为0" />
+		<field type="Integer" name="bind" comment="绑定状态，0绑定，1未绑定" />
+		<field type="String" name="props" comment="道具props，json" />
+	</macro>
+	
+	<macro id="VipInfo" comment="Vip介绍信息">
+		<field type="String" name="vipName" comment="VIP级别的名称" />
+		<field type="String" name="vipDescs" list="true" comment="vip能享受的功能描述列表"/>
+		<field type="com.imop.lj.gameserver.vip.VipFunctionInfo" name="vipInfos"
+			list="true" comment="Vip功能信息">
+			<field type="Integer" name="key" comment="vip功能身份识别，用于客户端显示 对应 VipFunctionIdentityType" />
+			<field type="Integer" name="config" comment="vip功能mask" />
+			<field type="Integer" name="parameter" comment="vip功能参数" />
+		</field>
+	</macro>
+	
+	<macro id="CdQueueInfo" comment="Cd队列信息">
+		<field type="Integer" name="cdTypeInt" comment="cd队列的类型" />
+		<field type="Integer" name="index" comment="cd队列索引" />
+		<field type="String" name="name" comment="cd队列名称" />
+		<field type="String" name="icon" comment="图标" />
+		<field type="Integer" name="currTimeDiff" comment="服务器当前时间到结束时间的时间差" />
+		<field type="Boolean" name="opened" comment="是否已开启" />
+		<field type="Boolean" name="canAddTime" comment="是否可以累计时间" />
+	</macro>
+	
+	<macro id="MapPointInfo" comment="地图中的点信息">
+		<field type="Integer" name="mapId" comment="地图Id" />
+		<field type="Integer" name="pointType" comment="点的类型，1场景 2关卡 3副本" />
+		<field type="Integer" name="pointId" comment="类型对应的点Id" />
+		<field type="Integer" name="isVisable" comment="是否可见" />
+		<field type="Integer" name="isHighLight" comment="是否高亮" />
+		<field type="Integer" name="isIn" comment="是否在其中" />
+	</macro>
+	
+	<macro id="QuestInfo" comment="任务信息">
+		<field type="String" name="uuid" comment="任务UUID" />
+		<field type="Integer" name="questId" comment="任务模板Id" />
+		<field type="Integer" name="destGotNum" comment="已完成数量,分子" />
+		<field type="Integer" name="destReqNum" comment="任务目标需求数量，分母" />
+		<field type="Integer" name="questStatus" comment="任务当前状态" />
+		<field type="String" name="showRewardInfo" comment="显示奖励信息" />
+	</macro>
+	
+	<macro id="QuestPanelInfo" comment="任务面板信息">
+		<field type="Integer" name="questType" comment="任务类型" />
+		<field type="Integer" name="questMinLevel" comment="任务等级限制" />
+		<field type="Integer" name="finishTimes" comment="今日已完成任务数" />
+		<field type="Integer" name="totalTimes" comment="总任务数" />
+	</macro>
+	
+	<macro id="PetBasicInfo" comment="武将基础信息">
+		<field type="Long" name="petId" comment="武將ID"/>
+		<field type="Integer" name="petTempId" comment="武將模版ID"/>
+		<field type="Integer" name="quality" comment="武将品质"/>
+		<field type="Integer" name="photoId" comment="武将头像ID"/>
+		<field type="String" name="petName" comment="武將姓名"/>
+		<field type="Integer" name="level" comment="武將等級"/>
+		<field type="String" name="desc" comment="武將描述"/>
+		<field type="Integer" name="jobType" comment="武將类型"/>
+		<field type="Integer" name="strength" comment="力量"/>
+		<field type="Integer" name="agility" comment="敏捷"/>
+		<field type="Integer" name="intellect" comment="智力"/>
+		<field type="Integer" name="life" comment="生命"/>
+		<field type="Integer" name="strengthGrowthRate" comment="力量成长率,除以100显示"/>
+		<field type="Integer" name="agilityGrowthRate" comment="敏捷成长率,除以100显示"/>
+		<field type="Integer" name="intellectGrowthRate" comment="智力成长率,除以100显示"/>
+		<field type="Integer" name="lifeGrowthRate" comment="生命成长率,除以100显示"/>
+		<field type="String" name="skillName" comment="技能名称"/>
+		<field type="String" name="skillDesc" comment="技能描述"/>
+		<field type="String" name="talentName" comment="天赋名称"/>
+		<field type="String" name="talentDesc" comment="天赋描述"/>
+	</macro>
+	
+	<macro id="PetInfo" comment="有实例的武将基础信息">
+		<field type="Long" name="petId" comment="武將ID"/>
+		<field type="Integer" name="tplId" comment="武將模版ID"/>
+		<field type="Integer" name="colorId" comment="武将品质"/>	
+		<field type="Integer" name="star" comment="武将星级"/>
+		<field type="Integer" name="level" comment="武将等级"/>
+		<field type="Long" name="exp" comment="武將经验"/>
+		<field type="Integer" name="petType" comment="武將类型，1主将，2宠物，3伙伴"/>
+		<field type="com.imop.lj.common.model.pet.SkillInfo" name="skillList" clientType="PetSkillInfo"
+			comment="武将技能列表" macro="PetSkillInfo" list="true"/>
+		<field type="Integer" list="true" name="aPropAddArr" comment="一级属性附加值"/>
+		<field type="Integer" list="true" name="aEquipStar" comment="装备位星级"/>
+		<field type="Integer" list="true" name="trainPropArr" comment="宠物培养增加属性"/>
+		<field type="Integer" list="true" name="trainTmpPropArr" comment="宠物培养临时属性"/>
+		<field type="Integer" name="trainMax" comment="宠物培养上限值"/>
+		<field type="Integer" name="petScore" comment="宠物培评分"/>
+		<field type="Integer" name="petSkillBarNum" comment="宠物技能栏数量"/>
+		<field type="Integer" list="true" name="propItemIndex" comment="宠物资质丹索引"/>
+		<field type="com.imop.lj.common.model.pet.ShortcutInfo" name="shortcutList" clientType="PetSkillShortcutInfo"
+			comment="技能快捷栏信息" macro="ShortcutInfo" list="true"/>
+		<field type="Long" name="soulLinkPetHorseId" comment="灵魂链接骑宠ID, 0-无灵魂链接"/>
+	</macro>
+	
+	<macro id="PetSoulLinkInfo" comment="宠物灵魂链接信息">
+		<field type="Long" name="petId" comment="petId"/>
+		<field type="Long" name="soulLinkPetHorseId" comment="灵魂链接骑宠ID, 0-无灵魂链接"/>
+	</macro>
+	
+	<macro id="PetSkillInfo" comment="武将技能信息">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="level" comment="技能等级"/>
+		<field type="Integer" name="skillCost" comment="技能消耗"/>
+		<field type="com.imop.lj.common.model.pet.SkillEffectInfo" name="embedSkillEffectList" clientType="PetSkillEffectInfo"
+			comment="技能镶嵌的效果列表" list="true">
+			<field type="Integer" name="effectItemId" comment="技能效果道具Id"/>
+			<field type="Integer" name="level" comment="技能效果等级"/>
+			<field type="Integer" name="exp" comment="技能效果经验"/>
+		</field>
+		<field type="Integer" name="layer" comment="层数"/>
+		<field type="Long" name="proficiency" comment="熟练度"/>
+	</macro>
+	
+	<macro id="ShortcutInfo" comment="快捷技能栏基础信息">
+		<field type="Integer" name="shortcutIndex" comment="快捷栏索引, 默认为-1"/>
+		<field type="Integer" name="skillId" comment="技能Id"/>
+	</macro>
+	
+	
+	<macro id="DGPetBasicInfo" comment="校场武将基础信息">
+		<field type="Integer" name="petTempId" comment="武将模版ID"/>
+		<field type="Integer" name="winNum" comment="胜利次数"/>
+		<field type="Integer" name="loseNum" comment="失败次数"/>
+		<field type="Integer" name="perfectState" comment="完胜状态 1、未完胜2、完胜未领取3、完胜已领取"/>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="com.imop.lj.data.CurrencyInfoData"  name="hireCost" comment="招募货币消耗" macro="CurrencyInfo"/>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="com.imop.lj.data.CurrencyInfoData"  name="currNum" comment="当前拥有货币数量" macro="CurrencyInfo"/>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="com.imop.lj.data.CurrencyInfoData"  name="perfectReward" comment="完胜奖励" macro="CurrencyInfo"/>
+		<field type="Integer" name="hireState" comment="招募状态：1、不能招募2、能招募3、已招募"/>
+	</macro>
+	
+	<macro id="CurrencyInfo" comment="货币信息信息">
+		<field type="Integer" name="currencyType" comment="货币类型"/>
+		<field type="Long" name="num" comment="货币数量"/>
+	</macro>
+	
+	<macro id="NpcInfo" comment="npc信息">
+		<field type="String" name="uuid" comment="唯一id" />
+		<field type="Integer" name="mapId" comment="地图Id"/>
+		<field type="Integer" name="npcId" comment="npcId" />
+		<field type="Integer" name="x" comment="npc位置坐标x" />
+		<field type="Integer" name="y" comment="npc位置坐标y" />
+		<field type="Integer" name="isInBattle" comment="是否处于战斗中，0否，1是" />
+		<field type="Integer" name="activityType" comment="活动战斗类型" />
+		<field type="Long" name="createTime" comment="动态生成npc的时间" />
+	</macro>
+	
+	<!-- 好友 -->
+	<macro id="RelationInfo" comment="关系信息">
+		<field type="Long" name="uuid" comment="角色ID" />
+		<field type="String" name="name" comment="角色名称" />
+		<field type="Integer" name="country" comment="国家" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="pic" comment="头像" />
+		<field type="com.imop.lj.common.model.human.QQInfo" name="qqInfo" clientType="QQInfoData"
+			comment="玩家qq信息vip等数据" macro="QQInfo" />
+	</macro>
+	
+	<!-- 好友 -->
+	<macro id="MoneyTreeFriendInfo" comment="摇钱树好友信息">
+		<field type="Long" name="uuid" comment="角色ID" />
+		<field type="String" name="name" comment="角色名称" />
+		<field type="Integer" name="country" comment="国家" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="status" comment="状态，0不可浇水，1可浇水" />
+	</macro>
+	
+	<macro id="SkillInfo" comment="技能信息">
+		<field type="Integer" name="tempId" comment="技能模版ID"/>
+		<field type="String" name="name" comment="技能名称"/>
+		<field type="Integer" name="resId" comment="资源ID"/>
+		<field type="String" name="desc" comment="技能描述"/>
+	</macro>
+	
+	<macro id="CleanMissionEnemyArmy" comment="扫荡敌人对象">
+		<field type="String" name="name" comment="敌人名称" />
+		<field type="Integer" name="level" comment="敌人等级" />
+		<field type="Integer" name="num" comment="敌人数量" />
+	</macro>
+	
+	<!-- 奖励信息 -->
+	<macro id="RewardInfo" comment="奖励信息">
+		<field type="String" name="rewardStr" comment="奖励信息" />
+	</macro>
+	
+	<macro id="RewardItemInfo" comment="道具奖励信息">
+		<field type="Integer" name="itemTemplateId" comment="道具模板Id" />
+		<field type="String" name="name" comment="道具名称" />
+		<field type="Integer" name="count" comment="道具数量" />
+		<field type="Integer" name="rarity" comment="道具颜色" />
+		<field type="String" name="icon" comment="道具图片" />
+		<field type="String" name="props" comment="道具属性" />
+	</macro>
+	
+	<macro id="RewardCurrencyInfo" comment="货币奖励信息">
+		<field type="Integer" name="currencyId" comment="货币类型" />
+		<field type="Integer" name="amount" comment="货币数量" />
+	</macro>
+	
+	<macro id="CorpsFuncInfo" comment="军团功能信息">
+		<field type="String" name="title" comment="功能标题"/>
+		<field type="String" name="desc" comment="附加描述"/>
+		<field type="Integer" name="funcId" comment="功能类型ID"/>
+		<field type="Long" name="corpsUUID" comment="军团ID"/>
+		<field type="Integer" name="available" comment="功能是否可用 1:可用，0：不可用"/>
+	</macro>
+	
+	<macro id="CorpsMemberFuncInfo" comment="军团成员功能信息">
+		<field type="String" name="title" comment="功能标题"/>
+		<field type="String" name="desc" comment="附加描述"/>
+		<field type="Integer" name="funcId" comment="功能类型ID"/>
+		<field type="Long" name="memUUID" comment="军团ID"/>
+		<field type="Integer" name="available" comment="功能是否可用 1:可用，0：不可用"/>
+	</macro>
+	
+	<macro id="SimpleCorpsInfo" comment="简单军团信息">
+		<field type="Long" name="corpsId" comment="军团ID"/>
+		<field type="String" name="name" comment="军团名称"/>
+		<field type="Integer" name="level" comment="军团级别"/>
+		<field type="String" name="presidentName" comment="团长名称"/>
+		<field type="Long" name="presidentId" comment="团长ID"/>
+		<field type="Integer" name="presidentTplId" comment="团长模板Id"/>
+		<field type="Integer" name="presidentLevel" comment="团长等级"/>
+		<field type="Integer" name="currMemNum" comment="当前成员数量"/>
+		<field type="Integer" name="maxMemNum" comment="最大成员数量"/>
+		<field type="Integer" name="country" comment="所属国家"/>
+		<field type="String" name="qq" comment="军团QQ"/>
+		<field type="String" name="notice" comment="公告"/>
+		<field type="Integer" name="rank" comment="军团排名"/>
+		<field type="Integer" name="isApplied" comment="是否已经申请 1是 0否"/>
+		<field type="com.imop.lj.common.model.corps.CorpsFuncInfo" name="corpsFuncInfoList" clientType="CorpsFuncInfo"
+			comment="军团功能列表" macro="CorpsFuncInfo" list="true"/>
+	</macro>
+	<macro id="DetailCorpsInfo" comment="详细军团信息">
+		<field type="Long" name="corpsId" comment="军团ID"/>
+		<field type="String" name="name" comment="军团名称"/>
+		<field type="Integer" name="level" comment="军团级别"/>
+		<field type="Integer" name="hasNextLevel" comment="是否有下一级，1：有；0：没有"/>
+		<field type="Integer" name="currMemNum" comment="当前成员数量"/>
+		<field type="Long" name="currExp" comment="当前帮派经验"/>
+		<field type="Long" name="currFund" comment="当前帮派资金"/>
+		<field type="String" name="presidentName" comment="团长名称"/>
+		<field type="String" name="notice" comment="公告"/>
+		<field type="Integer" name="rank" comment="军团排名"/>
+		<field type="Long" name="disbandConfirmDate" comment="帮会解散确认时间"/>
+	</macro>
+	
+	<macro id="CorpsMemberInfo" comment="军团成员信息">
+		<field type="Long" name="memId" comment="成员ID"/>
+		<field type="String" name="name" comment="名称"/>
+		<field type="Integer" name="tplId" comment="模板Id"/>
+		<field type="Integer" name="level" comment="级别"/>
+		<field type="Integer" name="memJob" comment="职位"/>
+		<field type="Integer" name="petJob" comment="职业"/>
+		<field type="Long" name="weekContribution" comment="本周贡献"/>
+		<field type="Long" name="totalContribution" comment="总贡献"/>
+		<field type="String" name="onlineDesc" comment="在线描述"/>
+		<field type="Long" name="lastOfflineTime" comment="最后一次离线时间"/>
+		<field type="com.imop.lj.common.model.corps.CorpsMemberFuncInfo" name="corpsMemberFuncInfoList" clientType="CorpsMemberFuncInfo"
+			comment="军团成员功能列表" macro="CorpsMemberFuncInfo" list="true"/>
+	</macro>
+	
+	<macro id="CorpsBenifitInfo" comment="帮派福利信息">
+		<field type="Long" name="corpsId" comment="帮派ID"/>
+		<field type="Integer" name="lastWeekContribution" comment="上周帮贡 "/>
+		<field type="Integer" name="canReceive" comment="是否可领取 ,1可以,0不可以"/>
+	</macro>
+	
+	<macro id="CorpsSkillInfo" comment="帮派技能信息">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="level" comment="技能等级"/>
+		<field type="Long" name="exp" comment="如果技能升级需要经验,就设置该值"/>
+	</macro>
+	
+	<macro id="StorageCorpsMemberInfo" comment="仓库军团成员信息">
+		<field type="Long" name="memId" comment="成员ID"/>
+		<field type="String" name="name" comment="名称"/>
+		<field type="String" name="jobName" comment="职位名称"/>
+		<field type="Long" name="totalContribution" comment="总贡献"/>
+	</macro>
+	
+	<macro id="StorageItemTempInfo" comment="军团仓库物品模版信息">
+		<field type="Integer" name="tempId" comment="模版ID"/>
+		<field type="String" name="iconId" comment="ICONID"/>
+		<field type="String" name="name" comment="物品名称"/>
+		<field type="Integer" name="useLevel" comment="使用等级"/>
+		<field type="String" name="desc" comment="功能描述"/>
+		<field type="Integer" name="price" comment="出售价格"/>
+		<field type="Integer" name="quality" comment="品质"/>
+	</macro>
+	
+	<macro id="StorageItemInfo" comment="军团仓库物品信息">
+		<field type="Integer" name="tempId" comment="模版ID"/>
+		<field type="Integer" name="index" comment="物品位置"/>
+		<field type="Integer" name="num" commnet="数量"></field>
+	</macro>
+	
+	<macro id="CorpsBuildingInfo" comment="帮派建筑信息">
+		<field type="Long" name="corpsId" comment="帮派ID"/>
+		<field type="Integer" name="buildType" comment="建筑类型"/>
+		<field type="String" name="buildingName" comment="建筑名称"/>
+		<field type="String" name="buildingDesc" comment="建筑功能介绍"/>
+		<field type="Integer" name="buildingLevel" comment="建筑等级"/>
+		<field type="Long" name="upgradeCountDownTime" comment="当前等级升级倒计时,以毫秒为单位"/>
+	</macro>
+
+	<macro id="ActivityInfo" comment="活动信息">
+		<field type="Integer" name="activityId" comment="活动id" />
+		<field type="String" name="name" comment="活动名称" />
+		<field type="String" name="timeDesc" comment="活动时间描述" />
+		<field type="String" name="desc" comment="活动描述" />
+		<field type="Integer" name="icon" comment="活动图标" />
+		<field type="Integer" name="state" comment="0活动未开启,1活动准备阶段 ,2活动开始阶段,3活动结束 ,4活动关闭" />
+		<field type="Integer" name="isVip" comment="0非vip,1是vip" />
+	</macro>
+	
+	<macro id="MailInfo" comment="邮件信息">
+		<field type="String" name="uuid" comment="邮件的唯一标识" />
+		<field type="String" name="title" comment="邮件的标题" />
+		<field type="String" name="senderName" comment="发送玩家名称" />
+		<field type="String" name="recName" comment="接收玩家名称" />
+		<field type="String" name="content" comment="邮件的内容" />
+		<field type="Integer" name="mailType" comment="邮件类型" />
+		<field type="Integer" name="mailStatus" comment="邮件状态" />
+		<field type="Integer" name="attachmented" comment="是否有附件，0没有，1有" />
+		<field type="String" name="createTime" comment="发送时间" />
+		<field type="String" name="deleteTime" comment="删除时间" />
+		<field type="Long" name="updateTime" comment="最后更新时间" />	
+		<field type="com.imop.lj.common.model.reward.RewardInfo"
+			clientType="RewardInfoData" name="rewardInfo" comment="附件奖励信息" macro="RewardInfo">
+		</field>
+	</macro>
+	
+	<macro id="EnhanceActivityItemInfo" comment="強化活動信息">
+		<field type="Integer" name="activityid" comment="活动ID"/>
+		<field type="Integer" name="iconId" comment="ICONID"/>
+		<field type="String" name="name" comment="活动名称"/>
+		<field type="Integer" name="currencyTypeId" comment="消耗货币类型"/>
+		<field type="String" name="num" comment="消耗货币数量"/>
+		<field type="String" name="tips" comment="Tips"/>
+		<field type="String" name="timeDesc" comment="时间描述"/>
+	</macro>
+	
+	<macro id="AdditionalAttrInfo" comment="附加属性信息">
+		<field type="Integer" name="propKey" comment="属性Key"/>
+		<field type="Integer" name="currValue" comment="当前值"/>
+		<field type="Integer" name="maxValue" comment="最大值"/>
+		<field type="Integer" name="qualityId" comment="品质"/>
+	</macro>
+	
+	<macro id="FuncShowInfo" comment="功能按钮信息">
+		<field type="Integer" name="funcType" comment="功能按钮类型" />
+		<field type="Integer" name="isOpened" comment="1开启，0关闭" />
+		<field type="Integer" name="ownerFuncType" comment="所属功能" />
+		<field type="Integer" name="effect" comment="特效" />
+		<field type="String" name="name" comment="名称" />
+		<field type="String" name="desc" comment="描述" />
+		<field type="Integer" name="showNum" comment="数字角标，没有则为0" />
+		<field type="Long" name="countDownTime" comment="倒计时，没有则为0" />
+		<field type="Integer" name="position" comment="按钮位置" />
+		<field type="Integer" name="order" comment="顺序" />
+		<field type="Integer" name="isFirstOpen" comment="是否首次开启，0否，1是" />
+		<field type="Long" name="totalCountDownTime" comment="总CD时间"/>
+		<field type="String" name="icon" comment="图片ID"/>
+		<field type="String" name="menuDesc" comment="按钮描述"/>
+		<field type="Integer" name="groupID" comment="组ID" />
+	</macro>
+	
+	<macro id="KeyValueInfo" comment="属性键值对">
+		<field type="Integer" name="key" comment="属性Key" />
+		<field type="Integer" name="value" comment="属性值" />
+	</macro>
+	
+	<macro id="HorseInfo" comment="坐骑信息">
+		<field type="Integer" name="tempId" comment="模版ID" />
+		<field type="Integer" name="model" comment="模型ID" />
+		<field type="String" name="name" comment="名称" />
+		<field type="Integer" name="artFontName" comment="美术字名称"/>
+		<field type="Integer" name="step" comment="阶数" />
+	</macro>
+	
+	<macro id="TalentSkillInfo" comment="天赋技能信息">
+		<field type="Integer" name="groupId" comment="技能组ID"/>
+		<field type="Integer" name="state" comment="天赋技能状态"></field>
+		<field type="com.imop.lj.common.model.pet.SkillInfo" name="currSkill" clientType="SkillInfo" comment="当前技能" macro="SkillInfo"/>
+		<field type="com.imop.lj.common.model.pet.SkillInfo" name="nextSkill" clientType="SkillInfo" comment="当前技能" macro="SkillInfo"/>
+		<field type="Long" name="currExp" comment="当前经验"/>
+		<field type="Long" name="upgradeRequireExp" comment="升级所需经验"/>
+		<field type="Integer" name="currLevel" comment="当前级别"/>
+		<field type="Integer" name="maxLevel" comment="当前阶最大 等级"/>
+		<field type="String" name="nextSkill2HorseName" comment="下一等级技能对应坐骑名称"/>		
+	</macro>
+	
+	<macro id="VipCardInfo" comment="VIP卡信息">
+		<field type="Integer" name="cardId" comment="卡ID"/>
+		<field type="Integer" name="cardTypeId" comment="卡类型1：普通卡2：体验卡"/>
+		<field type="Integer" name="iconId" comment="IconId"/>
+		<field type="Integer" name="privilegeId" comment="特权标题ID"/>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="com.imop.lj.data.CurrencyInfoData"  name="buyPrice" comment="购买价格" macro="CurrencyInfo"/>
+		<field type="String" name="name" comment="名称"/>
+		<field type="Integer" name="rarityId" comment="品质ID"/>
+		<field type="String" name="validPeriodDesc" comment="有效期描述"/>
+		<field type="Long" name="expireTime" comment="失效时间"/>
+		<field type="Integer" name="vipLevel" comment="VIP级别"/>
+		<field type="Integer" name="growthValue" comment="成长值"/>
+		<field type="String" name="desc" comment="描述 "/>
+	</macro>
+	
+	<macro id="GoodActivityInfo" comment="精彩活动信息">
+		<field type="Long" name="activityId" comment="活动唯一Id"/>
+		<field type="Integer" name="typeId" comment="活动类型Id"/>
+		<field type="Integer" name="icon" comment="活动图标"/>
+		<field type="Integer" name="nameIcon" comment="名称图标"/>
+		<field type="Integer" name="titleIcon" comment="标题图标"/>
+		<field type="String" name="name" comment="名称"/>
+		<field type="String" name="desc" comment="描述 "/>
+		<field type="Integer" name="isNew" comment="是否新活动，1新，0否"/>
+		<field type="Long" name="startTime" comment="活动开始时间"/>
+		<field type="Long" name="endTime" comment="活动结束时间"/>
+		<field type="Integer" name="hasUnGotBonus" comment="是否有未领取的奖励，1是，0否"/>
+		<field type="String" name="countDownTimeDesc" comment="倒计时描述"/>
+		<field type="Long" name="countDownTime" comment="倒计时时间"/>
+		<field type="String" name="selfInfo" comment="自身相关信息"/>
+		<field type="String" name="targetInfo" comment="活动目标json串"/>
+		<field type="Integer" name="showTargetType" comment="目标类型，前端显示用"/>
+		<field type="Integer" name="isRecentOpen" comment="最近开启的"/>
+		<field type="Integer" name="isRecentClose" comment="最近结束的"/>
+		<field type="String" name="logList" list="true" comment="日志列表 "/>
+		<field type="Integer" name="needHide" comment="是否需要隐藏，0否，1是"/>
+	</macro>
+	
+	<macro id="ArmyTitleTalentInfo" comment="军衔天赋信息">
+		<field type="Integer" name="id" comment="军衔Id"/>
+		<field type="Integer" name="armyTitleId" comment="军衔Id"/>
+		<field type="Integer" name="talentFrontId" comment="天赋前置id"/>
+		<field type="Integer" name="openTalentNeedHonor" comment="开启需要声望值"/>
+		<field type="Integer" name="talentNameLangId" comment="军衔多语言id"/>
+		<field type="String" name="talentName" comment="天赋名称 "/>
+		<field type="Integer" name="talentDescLangId" comment="天赋描述多语言id"/>
+		<field type="String" name="talentDesc" comment="天赋描述"/>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,String&gt;"  
+		       clientType="KeyValuePairStringData"
+			name="properties" list="true" comment="所有变化的属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="String" name="value" comment="属性值" />
+		</field>
+	</macro>
+	
+	<macro id="ArmyTitleInfo" comment="军衔信息">
+		<field type="Integer" name="armyTitleId" comment="军衔Id" />
+		<field type="Long" name="openNeedHonor" comment="开启本级军衔需要声望值" />
+		<field type="Integer" name="armyTitleNameLangId" comment="军衔多语言id" />
+		<field type="String" name="armyTitleName" comment="军衔名称" />
+		<field type="Integer" name="armyTitleDescLangId" comment="军衔描述多语言id" />
+		<field type="String" name="armyTitleDesc" comment="军衔描述" />
+		<field type="com.imop.lj.common.model.pet.PetBasicInfo" name="petBasicInfo" 
+			clientType="PetBasicInfoData" macro="PetBasicInfo" comment="武将基础信息">
+			<field type="Integer" name="resId" comment="武将资源ID"/>
+			<field type="Integer" name="positionType" comment="位置类型1，前；2，中；3，后"/> 
+		</field>
+		<field type="Long" name="consumeHonorEveryDay" comment="本级军衔每日消耗声望值" />
+		<field type="com.imop.lj.common.model.reward.RewardInfo"
+			clientType="RewardInfoData" name="rewardInfo" comment="军衔俸禄" macro="RewardInfo">
+		</field>
+		<field type="Integer" name="armyTitleCombat" comment="军衔战斗力" />
+		<field type="Integer" name="canOwnePetMaxNum" comment="可拥有武将数量" />
+		<field type="Integer" name="canOnBattleMaxNum" comment="可上阵武将数量" />
+	</macro>
+	
+	<macro id="EquipAndPropsInfo" comment="装备和属性信息">
+		<field type="Long" name="roleUUID" comment="角色UUID"/>
+		<field type="Integer" name="capacity" comment="背包容量"/>
+		<field type="com.imop.lj.common.model.item.CommonItem" name="items" clientType="CommonItemData"
+			comment="物品" macro="CommonItem" list="true">
+			<field type="Integer" name="bagId" comment="包id" />
+			<field type="Integer" name="index" comment="道具在背包内位置索引" />
+			<field type="Integer" name="currency" comment="出售给商店的货币类型"></field>
+			<field type="Long" name="price" comment="出售给商店的价格"></field>
+			<field type="Integer" name="singlePrice" comment="出售给商店的单价"></field>
+			<field type="Integer" name="canSelled" comment="是否可以出售0不能出售1能出售" />
+			<field type="Integer" name="canUsed" comment="是否可以使用0不能使用1能使用" />
+			<field type="Integer" name="canShowed" comment="是否可以展示0不能展示1能展示" />
+			<field type="Integer" name="canThrowed" comment="是否可以丢弃0不能丢弃1能丢弃" />
+			<field type="Long" name="wearerId" comment="持有者id，主背包为0" />
+		</field>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" clientType="KeyValuePairIntData" name="intProperties" list="true" comment="所有变化的属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,String&gt;" clientType="KeyValuePairStringData" name="strProperties" list="true" comment="所有变化的属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="String" name="value" comment="属性值" />
+		</field>
+		
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" clientType="KeyValuePairIntData" name="treasureIntProperties" list="true" comment="宝物属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+	</macro>
+	
+	<macro id="ArenaMemberInfo" comment="竞技场玩家信息">
+		<field type="Long" name="memberId" comment="成员Id" />
+		<field type="Integer" name="rank" comment="排名" />
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="tplId" comment="模板Id" />
+		<field type="Integer" name="fightPower" comment="战力" />
+		<field type="Integer" name="isSelf" comment="是否自己，0否，1是" />
+		<field type="Integer" name="isRobot" comment="是否机器人，0否，1是" />
+		<field type="Long" name="corpsId" comment="军团Id" />
+		<field type="String" name="corpsName" comment="军团名字" />
+	</macro>
+	
+	<macro id="EveryDayActivityInfo" comment="每日活动数据">
+		<field type="Integer" name="id" comment="id" />
+		<field type="String" name="activityName" comment="活动名字" />
+		<field type="String" name="activityIcon" comment="活动icon" />
+		<field type="String" name="activityNameIcon" comment="活动名称icon" />
+		<field type="String" name="showTime" comment="显示时间" />
+		<field type="Integer" name="gainShowName1Type" comment="收益1类型" />
+		<field type="Integer" name="gainShowName1Id" comment="收益1Id" />
+		<field type="Integer" name="star1" comment="星级评价1" />
+		<field type="Integer" name="gainShowName2Type" comment="收益2类型" />
+		<field type="Integer" name="gainShowName2Id" comment="收益2Id" />
+		<field type="Integer" name="star2" comment="星级评价2" />
+		<field type="Integer" name="gainShowName3Type" comment="收益3类型" />
+		<field type="Integer" name="gainShowName3Id" comment="收益3Id" />
+		<field type="Integer" name="star3" comment="星级评价3" />
+		<field type="Integer" name="isOpen" comment="是否开放：1开放，0未开放" />
+		<field type="String" name="activityInfo" comment="玩法介绍" />
+		<field type="String" name="activityRule" comment="活动规则" />
+		<field type="Integer" name="operator1" comment="操作1" />
+		<field type="Integer" name="operator2" comment="操作2" />
+		<field type="Integer" name="state" comment="状态：0未开始，1进行中， 3结束" />
+		<field type="Long" name="countDownTime" comment="倒计时，只有为开始状态下有值，默认为0" />
+	</macro>
+	
+	<macro id="EveryDayTargetInfo" comment="每日必做数据">
+		<field type="Integer" name="id" comment="id" />
+		<field type="String" name="dailyActivityName" comment="日常玩法名称" />
+		<field type="Integer" name="finishConditionNum" comment="完成条件数量" />
+		<field type="Integer" name="rewardActiveValue" comment="奖励活跃值" />
+		<field type="Integer" name="operatorType1" comment="操作1" />
+		<field type="Integer" name="operatorType2" comment="操作2" />
+		<field type="String" name="operatorName" comment="操作显示名称" />
+		<field type="String" name="acivityInfo" comment="玩法介绍信息" />
+		<field type="Integer" name="currFinishNum" comment="当前完成数量" />
+		<field type="Integer" name="isFinish" comment="完成状态：0未完成，1完成" />
+		<field type="Integer" name="openState" comment="开启状态：0未开启，1开启" />
+	</macro>
+	
+	<macro id="EveryDayTargetRewardInfo" comment="每日必做奖励数据">
+		<field type="Integer" name="id" comment="id" />
+		<field type="Integer" name="rewardActiveValue" comment="奖励活跃值" />
+		<field type="String" name="rewardInfoStr" comment="奖励描述" />
+		<field type="Integer" name="takeState" comment="领取状态：1领取过；0未领取； 2不可领取" />
+	</macro>
+	
+	<macro id="BunRankingInfo" comment="吃包子排行数据">
+		<field type="Long" name="uuid" comment="玩家uuid" />
+		<field type="String" name="humanName" comment="玩家名字" />
+		<field type="String" name="useTime" comment="吃包子用时" />
+	</macro>
+		
+	<macro id="MonsterWarUnitInfo" comment="南蛮入侵战斗单位">
+		<field type="Integer" name="unitId" comment="战斗单位ID" />
+		<field type="Integer" name="unitType" comment="战斗单位类型：1，五虎将；2：怪物；3：粮草车"/>
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="rarity" comment="品质"/>
+		<field type="Integer" name="resId" comment="资源ID" />
+		<field type="String" name="desc" comment="描述" />
+		<field type="Long" name="hp" comment="血量"/>
+		<field type="Long" name="maxHp" comment="最大血量"/>
+		<field type="String" name="talk" comment="喊话"/>
+		<field type="String" name="damageTalk" comment="伤害喊话"/>
+		<field type="Integer" name="line" comment="刷新线路：从上到下依次为1-5"/>
+		<field type="Integer" name="bornPointX" comment="出生点横坐标"/>
+		<field type="Integer" name="targetPointX" comment="目标点横坐标"/>
+		<field type="Integer" name="speed" comment="移动速度，像素/秒"/>
+	</macro>
+	
+	<macro id="TowerEncourageBuffInfo" comment="五虎将激励Buff信息">
+		<field type="Integer" name="towerId" comment="五虎将Id"/>
+		<field type="String" name="name" comment="激励名称" />
+		<field type="String" name="desc" comment="Buff描述"/>
+		<field type="Integer" name="overlay" comment="叠加层数"/>
+		<field type="com.imop.lj.common.model.KeyValueInfo" clientType="KeyValueInfoData" name="recourageProps" list="true" comment="激励属性" macro="KeyValueInfo"/>
+	</macro>
+	
+	<macro id="ReportItemInfo" comment="南蛮入侵战报单位">
+		<field type="Long" name="uuid" comment="攻击者ID（玩家）"/>
+		<field type="Integer" name="monsterId" comment="怪物ID"/>
+		<field type="Long" name="monsterChangeHp" comment="怪物血量变化"/>
+		<field type="Long" name="monsterHp" comment="怪物剩余血量"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="RewardInfoData" name="currReward" comment="本次奖励" macro="RewardInfo"/>
+	</macro>
+	
+	<macro id="SimplePlayerInfo" comment="简单玩家信息">
+		<field type="Long" name="uuid" comment="玩家ID"/>
+		<field type="Integer" name="quality" comment="玩家品质"/>
+		<field type="Integer" name="resId" comment="资源ID"/>
+		<field type="Integer" name="rank" comment="排名"/>
+		<field type="Integer" name="level" comment="等级"/>
+		<field type="Integer" name="fightPower" comment="战斗力"/>
+		<field type="String" name="name" comment="名字"/>
+		<field type="Integer" name="killNum" comment="击杀数量"/>
+		<field type="Integer" name="country" comment="国家"/>
+	</macro>
+
+	<macro id="BankWeekRecordInfo" comment="周卡领奖记录信息数据">
+		<field type="Integer" name="dayNum" comment="天数：第几天" />
+		<field type="Integer" name="payBackType" comment="返还类型" />
+		<field type="Integer" name="payBackValue" comment="返还金额" />
+		<field type="String" name="desc" comment="描述" />
+		<field type="Integer" name="takenState" comment="领取奖励状态，1领取,2可领取,3明天可领取,4过期" />
+	</macro>
+	
+	<macro id="CardRankInfo" comment="卡牌活动排名信息">
+		<field type="Integer" name="rank" comment="返还金额" />
+		<field type="Long" name="charId" comment="返还金额" />
+		<field type="String" name="charName" comment="描述" />
+		<field type="Integer" name="score" comment="返还金额" />
+		<field type="Integer" name="canGetSuperReward" comment="能否领取超级奖励，0否，1是" />
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="RewardInfoData" name="normalReward" comment="普通奖励" macro="RewardInfo"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="RewardInfoData" name="superReward" comment="超级奖励" macro="RewardInfo"/>
+	</macro>
+	
+	<macro id="ArmourGridBaseInfo" comment="战甲部位信息">
+		<field type="Integer" name="positionId" comment="位置id"/>
+		<field type="String" name="name" comment="战甲名称" />
+		<field type="Integer" name="attackValue" comment="战力值"/>
+		<field type="String" name="armourDes" comment="战甲描述"/>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" 
+			clientType="KeyValuePairIntData" name="keyValuePair" comment="栏位属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+	</macro>
+	
+	<macro id="ArmourGridEnhanceInfo" comment="战甲部位强化信息">
+		<field type="Integer" name="positionId" comment="位置id"/>
+		<field type="Integer" name="enhanceLevel" comment="战甲强化等级" />
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" 
+			clientType="KeyValuePairIntData" name="currProperty" comment="当前强化等级属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="com.imop.lj.data.CurrencyInfoData" name="consumeGoldCurrency" comment="强化战甲金币消耗" macro="CurrencyInfo"/>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="com.imop.lj.data.CurrencyInfoData" name="consumeArmourCurrency" comment="强化战甲战甲精华消耗" macro="CurrencyInfo"/>
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" 
+			clientType="KeyValuePairIntData" name="nextProperty" comment="强化到下一级的属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+		<field type="Integer" name="isMaxLevle" comment="是否到最大强化等级：1已经到最大强化等级，0未到最大强化等级" />
+	</macro>
+	
+	<macro id="ArmourSuitInfo"  comment="战甲套装信息">
+		<field type="Integer" name="id" comment="套装id"/>
+		<field type="String" name="name" comment="套装名称" />
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" 
+			clientType="KeyValuePairIntData" name="intProperties" list="true" comment="套装属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+		<field type="com.imop.lj.common.model.item.CommonItem" name="suitItemList" clientType="CommonItemData"
+			comment="套装需要的物品列表" macro="CommonItem" list="true">
+		</field>
+	</macro>
+	
+	<macro id="GemMazeGridInfo" comment="宝石迷阵地图格子信息">
+		<field type="Integer" name="pointX" comment="x坐标"/>
+		<field type="Integer" name="pointY" comment="y坐标" />
+		<field type="Integer" name="color" comment="颜色"/>
+	</macro>
+	
+	<macro id="IntegrationReward" comment="宝石迷阵所有积分奖励">
+		<field type="Integer" name="integration" comment="积分"/>
+		<field type="String" name="rewardStr" comment="奖励串" />
+	</macro>
+	
+	<macro id="ConvertMallItemInfo" comment="兑换商城物品">
+		<field type="Integer" name="id" comment="id"/>
+		<field type="Integer" name="sortId" comment="排序id"/>
+		<field type="com.imop.lj.common.model.item.CommonItem" name="CommonItem" 
+			macro="CommonItem" clientType="CommonItemData" comment="物品"/>
+		<field type="com.imop.lj.common.model.drillground.CurrencyInfo"
+			clientType="CurrencyInfoData"  name="currencyInfo" comment="货币消耗" macro="CurrencyInfo"/>
+		<field type="Integer" name="isBuyLimit" comment="是否限购(1限购)"/>
+		<field type="Integer" name="humanMaxBuyNum" comment="每人最大购买数量"/>
+		<field type="Integer" name="limitType" comment="限购类型:0无限购, 1 永久, 2月, 3周,4天"/>
+		<field type="Integer" name="buyHumanLevel" comment="角色购买等级"/>
+		<field type="Integer" name="canBuy" comment="是否可以购买 :1可以，0不可以"/>
+		<field type="Integer" name="canBuyNum" comment="可以购买最大数量"/>
+		<field type="String" name="petAttackModel" comment="宠物攻击动作"/>
+	</macro>
+	
+	<macro id="QQInfo" comment="玩家qq信息vip等">
+		<field type="Integer" name="isYellowVip" comment="是否黄钻用户，0否，1是"/>
+		<field type="Integer" name="yellowVipLevel" comment="黄钻等级"/>
+		<field type="Integer" name="isYellowYearVip" comment="是否黄钻年费用户，0否，1是"/>
+		<field type="Integer" name="isYellowHighVip" comment="是否豪华版黄钻用户，0否，1是"/>
+	</macro>
+	
+	<macro id="ShipInfo" comment="船只信息">
+		<field type="Long" name="roleId" comment="角色ID"/>
+		<field type="Long" name="corpsId" comment="军团ID"/>
+		<field type="Integer" name="tmplId" comment="船只模版ID"/>
+		<field type="Integer" name="line" comment="所属航道"/>
+		<field type="Long" name="sailedTime" comment="已航行时间"/>
+		<field type="Long" name="protectedTime" comment="剩余保护时间"/>
+		<field type="String" name="lucyEventEffect" comment="运势效果，为JSON字符串，需解析"/>
+	</macro>
+	
+	<macro id="IncomeRankInfo" comment="抢夺收益排行信息">
+		<field type="Long" name="roleId" comment="角色ID"/>
+		<field type="Integer" name="rarity" comment="品质"/>
+		<field type="String" name="name" comment="玩家姓名"/>
+		<field type="Integer" name="rank" comment="排行"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="com.imop.lj.data.RewardInfoData" name="accuReward" comment="累积奖励" macro="RewardInfo"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="com.imop.lj.data.RewardInfoData" name="normalReward" comment="普通奖励" macro="RewardInfo"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="com.imop.lj.data.RewardInfoData" name="superReward" comment="超级奖励" macro="RewardInfo"/>
+	</macro>
+
+	
+	<macro id="OfferAdviceVisitInfo" comment="来访记录对象">
+		<field type="String" name="logs" comment="显示献计日志"/>
+		<field type="Long" name="friendId" comment="好友id"/>
+		<field type="Integer" name="visitState" comment="献计状态0献计初始状态， 1献计完成"/>
+	</macro>
+	
+	<macro id="EveryDayChargeGigtInfo" comment="每日首充对象">
+		<field type="Integer" name="id" comment="id"/>
+		<field type="Integer" name="dayNum" comment="星期几：1表示星期一，7表示星期日"/>
+		<field type="Integer" name="chargeNum" comment="充值金额"/>
+		<field type="String" name="rewardStr" comment="奖励字符串"/>
+		<field type="Integer" name="state" comment="状态：0无，1可领取，2已领取，3不可领(条件不满足)"/>
+	</macro>
+	
+	<macro id="BaseLogMessage" comment="BaseLogMessage">
+		<field type="String" name="tableName" comment="tableName"/>
+		<field type="Integer" name="id" comment="id"/>
+		<field type="Integer" name="logType" comment="logType"/>
+		<field type="Long" name="logTime" comment="logTime"/>
+		<field type="String" name="accountId" comment="accountId"/>
+		<field type="Long" name="charId" comment="charId"/>
+		<field type="Integer" name="regionId" comment="regionId"/>
+		<field type="Integer" name="serverId" comment="serverId"/>
+		<field type="Integer" name="level" comment="level"/>
+		<field type="Integer" name="countryId" comment="countryId"/>
+		<field type="Integer" name="vipLevel" comment="vipLevel"/>
+		<field type="Integer" name="reason" comment="reason"/>
+		<field type="String" name="accountName" comment="accountName"/>
+		<field type="String" name="charName" comment="charName"/>
+		<field type="String" name="param" comment="param"/>
+		<field type="Long" name="createTime" comment="createTime"/>
+		<field type="String" name="deviceId" comment="deviceId"/>
+		<field type="String" name="deviceType" comment="deviceType"/>
+		<field type="String" name="deviceVersion" comment="deviceVersion"/>
+		<field type="String" name="clientVersion" comment="clientVersion"/>
+		<field type="String" name="clientLanguage" comment="clientLanguage"/>
+		<field type="String" name="appid" comment="appid"/>
+		<field type="String" name="fValue" comment="fValue"/>
+	</macro>
+
+	<macro id="DrawBarResultInfo" comment="拉杆结果信息">
+		<field type="Integer" name="tplId" comment="命中的模板Id" />
+		<field type="Integer" name="targetId" comment="目标Id" />
+		<field type="Integer" name="targetValue" comment="目标数值" />
+		<field type="Integer" name="critState" comment="目标暴击状态，对应 CritStateType" />
+	</macro>
+
+	<macro id="EquipBuildMaterialInfo" comment="打造材料信息">
+		<field type="com.imop.lj.common.model.item.CommonItem" name="commonItem" clientType="CommonItemData" comment="材料信息" macro="CommonItem">
+			<field type="Integer" name="bagId" comment="包id" />
+			<field type="Integer" name="index" comment="道具在背包内位置索引" />
+			<field type="Integer" name="currency" comment="出售给商店的货币类型"></field>
+			<field type="Long" name="price" comment="出售给商店的价格"></field>
+			<field type="Integer" name="singlePrice" comment="出售给商店的单价"></field>
+			<field type="Integer" name="canSelled" comment="是否可以出售0不能出售1能出售" />
+			<field type="Integer" name="canUsed" comment="是否可以使用0不能使用1能使用" />
+			<field type="Integer" name="canShowed" comment="是否可以展示0不能展示1能展示" />
+			<field type="Integer" name="canThrowed" comment="是否可以丢弃0不能丢弃1能丢弃" />
+			<field type="Long" name="wearerId" comment="持有者id，主背包为0" />
+		</field>
+		<field type="Integer" name="currNum" comment="当前数量"/>
+		<field type="Integer" name="needNum" comment="需求数量"/>
+	</macro>
+	
+	<macro id="AccessoryAttrInfo" comment="武将饰品属性信息">
+		<field type="Long" name="petId" comment="武将ID" />
+		<field type="com.imop.lj.common.model.KeyValueInfo" clientType="KeyValueInfoData" name="attrList" list="true" comment="属性列表" macro="KeyValueInfo"/>
+	</macro>
+	<macro id="ClassicBattleMapPointInfo" comment="经典战役大地图点数据">
+		<field type="Integer" name="id" comment="大地图id"/>
+		<field type="Integer" name="initActionPower" comment="初始关卡总行动力"/>
+		<field type="Integer" name="pointX" comment="x坐标"/>
+		<field type="Integer" name="pointY" comment="y坐标"/>
+		<field type="String" name="mapIcon" comment="关卡图标"/>
+		<field type="Integer" list="true" name="proposePointList" comment="前置点列表"/>
+		<field type="String" name="bossModelId" comment="关卡boss模型id" />
+		<field type="String" name="bossName" comment="关卡boss名称" />
+		<field type="String" name="groundIcon" comment="事件点地图背景图" />
+	</macro>
+	
+	<macro id="ClassicBattleHumanMapPointInfo" comment="经典战役角色进度大地图点数据">
+		<field type="Integer" name="id" comment="id"/>
+		<field type="Integer" name="isFinish" comment="是否完成：0未完成，1完成"/>
+	</macro>
+	
+	<macro id="ClassicBattlePassInfo" comment="经典战役事件点数据">
+		<field type="Integer" name="id" comment="事件点id"/>
+		<field type="String" name="passName" comment="事件点名称,格式:html,带颜色"/>
+		<field type="Integer" name="passX" comment="x坐标"/>
+		<field type="Integer" name="passY" comment="y坐标"/>
+		<field type="Integer" name="consumeActionPower" comment="消耗行动力"/>
+		<field type="Integer" name="showType" comment="显示类型:1=起点;2=小怪;3=精英怪物;4=boss怪物;5=问号;6=宝箱"/>
+		<field type="Integer" name="passStar" comment="星级"/>
+		<field type="Integer" name="passProcessType" comment="过程点类型:1起点、2过程点、3终点"/>
+		<field type="Integer" list="true" name="proposePassList" comment="前置点列表"/>
+	</macro>
+	
+	<macro id="ClassicBattleMapPointInfo" comment="经典战役大地图点数据">
+		<field type="Integer" name="id" comment="大地图id"/>
+		<field type="Integer" name="initActionPower" comment="初始关卡总行动力"/>
+		<field type="Integer" name="pointX" comment="x坐标"/>
+		<field type="Integer" name="pointY" comment="y坐标"/>
+		<field type="String" name="mapIcon" comment="关卡图标"/>
+		<field type="Integer" list="true" name="proposePointList" comment="前置点列表"/>
+		<field type="String" name="bossModelId" comment="关卡boss模型id" />
+		<field type="String" name="bossName" comment="关卡boss名称" />
+		<field type="String" name="groundIcon" comment="事件点地图背景图" />
+		<field type="Integer" name="offset" comment="事件点地图背景图偏移量" />
+		<field type="Integer" name="humanLevel" comment="开启需要角色等级" />
+	</macro>
+	
+	<macro id="ClassicBattleHumanMapPointInfo" comment="经典战役角色进度大地图点数据">
+		<field type="Integer" name="id" comment="id"/>
+		<field type="Integer" name="isFinish" comment="是否完成：0未完成，1完成"/>
+	</macro>
+	
+	<macro id="ClassicBattlePassInfo" comment="经典战役事件点数据">
+		<field type="Integer" name="id" comment="事件点id"/>
+		<field type="String" name="passName" comment="事件点名称,格式:html,带颜色"/>
+		<field type="Integer" name="passX" comment="x坐标"/>
+		<field type="Integer" name="passY" comment="y坐标"/>
+		<field type="Integer" name="consumeActionPower" comment="消耗行动力"/>
+		<field type="Integer" name="showType" comment="显示类型:1=起点;2=小怪;3=精英怪物;4=boss怪物;5=问号;6=宝箱"/>
+		<field type="Integer" name="passStar" comment="星级"/>
+		<field type="Integer" name="passProcessType" comment="过程点类型:1起点、2过程点、3终点"/>
+		<field type="Integer" list="true" name="proposePassList" comment="前置点列表"/>
+	</macro>
+	
+	<macro id="SwordSoulProgressInfo" comment="武将剑气进度列表">
+		<field type="Long" name="petId" comment="武将ID"/>
+		<field type="com.imop.lj.common.model.KeyValueInfo" name="progressList" clientType="KeyValueInfoData" comment="武将剑气进度列表" macro="KeyValueInfo" list="true" />
+		<field type="com.imop.lj.core.util.KeyValuePair&lt;Integer,Integer&gt;" clientType="KeyValuePairIntData" name="totalAttrList" list="true" comment="当前进度增加的总属性">
+			<field type="Integer" name="key" comment="属性索引" />
+			<field type="Integer" name="value" comment="属性值" />
+		</field>
+	</macro>
+
+	<macro id="ExamInfo" comment="科举信息">
+		<field type="Integer" name="examType" comment="申请的科举类型"/>
+		<field type="Integer" name="examState" comment="申请的科举类型对应的运行状态"/>
+		<field type="Integer" name="rightNum" comment="正确答题数目"/>
+		<field type="Integer" name="totalNum" comment="答题总数目"/>
+		<field type="Integer" name="examId" comment="题目Id"/>
+		<field type="Integer" list="true" name="excludeOptions" comment="已经排除的答案ID"/>
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="RewardInfoData" name="rewardInfo" comment="本次奖励" macro="RewardInfo"/>
+		<field type="Long" name="timestamp" comment="时间戳"/>
+		<field type="Long" name="leftTime" comment="答题剩余时间，毫秒"/>
+	</macro>
+
+	<macro id="TradeInfo" comment="交易信息">
+		<field type="Long" name="sellerId" comment="卖家ID"/>
+		<field type="Long" name="buyerId" comment="买家ID"/>
+		<field type="Integer" name="commodityType" comment="商品类型"/>
+		<field type="Integer" name="tradeStatus" comment="交易状态"/>
+		<field type="String" name="commodityJson" comment="商品详细信息"/>
+		<field type="Integer" name="boothIndex" comment="摊位坐标"/>
+		<field type="Integer" name="currencyType" comment="货币类型"/>
+		<field type="Integer" name="currencyNum" comment="货币数量"/>
+		<field type="Integer" name="commodityNum" comment="商品数量"/>
+		<field type="Long" name="startTime" comment="交易创建时间"/>
+		<field type="Long" name="overDueTime" comment="交易过期时间"/>
+	</macro>
+	
+	<macro id="ActivityUIInfo" comment="活动UI信息">
+		<field type="Integer" name="activityId" comment="活动id" />
+		<field type="Integer" name="activityType" comment="活动类型" />
+		<field type="Integer" name="activityTimes" comment="当前活动次数" />
+		<field type="Integer" name="specialType" comment="特殊类型(0普通,1推荐,2节日)" />
+		<field type="Integer" name="finishStatue" comment="完成情况 0未完成,1已完成" />
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="com.imop.lj.data.RewardInfoData" name="rewardInfo" comment="奖励" macro="RewardInfo"/>
+		<field type="Long" name="cd" comment="限时活动倒计时,毫秒"/>
+	</macro>
+	
+	<macro id="ActivityUIRewardInfo" comment="活动UI信息">
+		<field type="Integer" name="vitalityNum" comment="活跃度" />
+		<field type="com.imop.lj.common.model.reward.RewardInfo" clientType="com.imop.lj.data.RewardInfoData" name="rewardInfo" comment="奖励" macro="RewardInfo"/>
+	</macro>
+	
+	<macro id="TeamInfo" comment="组队队伍信息">
+		<field type="Integer" name="teamId" comment="队伍Id" />
+		<field type="String" name="name" comment="名字 " />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="jobTypeId" comment="职业Id" />
+		<field type="Integer" name="targetId" comment="目标Id" />
+		<field type="Integer" name="memberNum" comment="队员数量" />
+		<field type="Integer" name="levelMin" comment="队伍要求等级下限" />
+		<field type="Integer" name="levelMax" comment="队伍要求等级上限" />
+		<field type="Integer" name="applyStatus" comment="申请状态，0可申请，1已申请" />
+	</macro>
+	
+	<macro id="TeamMemberInfo" comment="组队队员信息">
+		<field type="Long" name="uuid" comment="队员唯一Id" />
+		<field type="Integer" name="isLeader" comment="是否队长" />
+		<field type="Integer" name="tplId" comment="模板Id" />
+		<field type="Integer" name="isFriend" comment="是否伙伴，0否，1是" />
+		<field type="String" name="name" comment="名字 " />
+		<field type="Integer" name="jobTypeId" comment="职业Id" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="position" comment="位置Id，从1开始计数" />
+		<field type="Integer" name="status" comment="状态，1队伍中，2暂离" />
+		<field type="Integer" name="equipWeaponId" comment="主将武器模板Id" />
+	</macro>
+	
+	<macro id="TeamInvitePlayerInfo" comment="组队邀请玩家信息">
+		<field type="Long" name="uuid" comment="玩家唯一Id" />
+		<field type="String" name="name" comment="名字 " />
+		<field type="Integer" name="jobTypeId" comment="职业Id" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="tplId" comment="模板Id" />
+	</macro>
+	
+	<macro id="PetFriendUnlockInfo" comment="伙伴解锁情况">
+		<field type="Integer" name="tplId" comment="伙伴模板Id" />
+		<field type="Long" name="leftTime" comment="剩余的有效时间， -1表示永久有效，0已过期" />
+	</macro>
+	
+	<macro id="PetFriendArrayInfo" comment="阵容信息">
+		<field type="Integer" name="tplIdList" list="true" comment="伙伴模板Id列表" />
+		<field type="Integer" name="arrLevel" comment="阵法等级" />
+		<field type="Integer" name="arrId" comment="阵法id" />
+	</macro>
+	
+	<macro id="MinePitInfo" comment="矿坑信息">
+		<field type="Integer" name="id" comment="矿坑ID" />
+		<field type="Integer" name="mineTypeId" comment="矿石种类" />
+		<field type="Integer" name="miningTypeId" comment="开采方式Id" />
+		<field type="String" name="minerName" comment="矿工名字" />
+		<field type="Long" name="minerId" comment="矿工Id" />
+		<field type="Integer" name="minerTplId" comment="矿工模型Id" />
+		<field type="Long" name="endTime" comment="结束时间 " />
+	</macro>
+	<macro id="TitleInfo" comment="称号相关信息">
+		<field type="String" name="titleName" comment="称号名称" />
+		<field type="Integer" name="templateId" comment="称号类型id" />
+		<field type="Long" name="titleEndTime" comment="称号过期时间" />
+	</macro>
+	<macro id="LowermanInfo" comment="徒弟相关信息">
+		<field type="Long" name="uuid" comment="玩家id" />
+		<field type="Long" name="createTime" comment="拜师时间"/>
+		<field type="String" name="humanName" comment="玩家名称" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="fightPower" comment="战力"/>
+		<field type="Integer" name="templateId" comment="模版id"/>
+		<field type="Boolean" name="isOnline" comment="是否在线,1是,0否"/>
+	</macro>
+		<macro id="WingInfo" comment="翅膀相关信息">
+		<field type="Integer" name="templateId" comment="翅膀类型id" />
+		<field type="Integer" name="isEquip" comment="是否已装备" />
+		<field type="Integer" name="wingLevel" comment="翅膀阶数" />
+		<field type="Integer" name="wingBless" comment="翅膀祝福值" />
+		<field type="Integer" name="wingPower" comment="翅膀战斗力" />
+	</macro>
+
+	<macro id="PromoteInfo" comment="提升信息">
+		<field type="Integer" name="protmoteId" comment="提升Id" />
+		<field type="Boolean" name="canPromote" comment="是否可以提升" />
+	</macro>
+	
+	<macro id="GuaJiInfo" comment="挂机信息">
+		<field type="Integer" name="encounterSecond" comment="遇敌间隔" />
+		<field type="Integer" name="humanExpTimes" comment="增加人物经验(1-1倍经验,2-2倍经验)" />
+		<field type="Integer" name="petExpTimes" comment="增加宠物经验(当前出战宠物会加上,(1-1倍经验,2-2倍经验)" />
+		<field type="Boolean" name="fullEnemy" comment="是否开启满怪" />
+		<field type="Boolean" name="switchScene" comment="切换场景暂停" />
+		<field type="Integer" name="guaJiMinute" comment="挂机分钟数" />
+		<field type="Long" name="leftTime" comment="剩余挂机时间,毫秒" />
+		<field type="Integer" name="needGuaJiPoint" comment="所需挂机点数" />
+		<field type="Boolean" name="guaJi" comment="是否挂机" />
+	</macro>
+		
+	<macro id="TowerInfo" comment="通天塔信息">
+		<field type="Integer" name="curTowerLevel" comment="当前玩家的通天塔层数" />
+	</macro>	
+	
+	<macro id="BehaviorInfo" comment="行为信息">
+		<field type="Integer" name="bType" comment="行为类型，默认0" />
+		<field type="Integer" name="bIndex" comment="行为id" />
+		<field type="Integer" name="max" comment="行为次数上限" />
+	</macro>
+	
+	<macro id="CorpsBossRankInfo" comment="帮派boss排行榜信息">
+		<field type="Long" name="corpsId" comment="军团id" />
+		<field type="String" name="name" comment="军团名称"/>
+		<field type="Integer" name="rank" comment="排名"/>
+		<field type="String" name="replay" comment="录像"/>
+		<field type="Integer" name="bossLevel" comment="最高纪录"/>
+		<field type="Integer" name="round" comment="回合数"/>
+	</macro>	
+	
+	<macro id="CorpsBossCountRankInfo" comment="帮派boss挑战次数排行榜信息">
+		<field type="Long" name="corpsId" comment="军团id" />
+		<field type="String" name="name" comment="军团名称"/>
+		<field type="Integer" name="rank" comment="排名"/>
+		<field type="Integer" name="count" comment="排名"/>
+		<field type="String" name="presidentName" comment="帮主名字"/>
+		<field type="Integer" name="curMemberCount" comment="当前成员数量"/>
+		<field type="Integer" name="maxMemberCount" comment="最大成员数量"/>
+	</macro>	
+	
+	<macro id="OpenRedEnveloperInfo" comment="帮派抢到红包的玩家信息">
+		<field type="Long" name="recId" comment="抢到红包玩家id" />
+		<field type="String" name="recName" comment="抢到红包玩家姓名"/>
+		<field type="Long" name="openTime" comment="抢到红包的时间"/>
+		<field type="Integer" name="gotBonus" comment="抢到的红包金额"/>
+	</macro>	
+	
+	<macro id="AllocateItemInfo" comment="已被分配到的奖励内容">
+		<field type="Integer" name="itemId" comment="已被分配到的奖励道具Id"/>
+		<field type="Integer" name="num" comment="已被分配到的奖励道具数量"/>
+	</macro>
+	
+	<macro id="ChatInfo" comment="聊天信息">
+		<field type="Integer" name="scope" comment="聊天范围" />
+		<field type="Integer" name="chatType" comment="类型，0默认，1语音" />
+		<field type="String" name="fromRoleUUID" comment="聊天消息发送者角色UUID" />
+		<field type="String" name="fromRoleName" comment="聊天消息发送者角色名称" />
+		<field type="Integer" name="fromRoleLevel" comment="聊天消息发送者等级" />
+		<field type="Integer" name="fromRoleCountry" comment="聊天消息发送者国家" />
+		<field type="Integer" name="fromRoleTplId" comment="聊天消息发送者模板Id" />
+		<field type="String" name="content" comment="经过过滤后的聊天消息" />
+		<field type="Long" name="chatTime" comment="聊天时间" />
+		<field type="String" name="toRoleUUID" comment="聊天消息接收者角色UUID" />
+		<field type="String" name="toRoleName" comment="聊天消息接收者角色名" />
+		<field type="Integer" name="toRoleTplId" comment="聊天消息接收者模板Id" />
+		<field type="Integer" name="fromRoleVipLevel" comment="发送者的vip等级" />
+		<field type="Integer" name="toRoleVipLevel" comment="接受者的vip等级" />
+		<field type="Integer" name="IsFriendOfToRole" comment="发送者是否接受者的好友" />
+		<field type="com.imop.lj.common.model.human.QQInfo" name="fromQQInfo" clientType="QQInfoData"
+			comment="发送者qq信息vip等数据" macro="QQInfo" />
+		<field type="com.imop.lj.common.model.human.QQInfo" name="toQQInfo" clientType="QQInfoData"
+			comment="接受者qq信息vip等数据" macro="QQInfo" />
+		<field type="String" name="ext" comment="额外扩展字段" />	
+	</macro>
+	
+	<macro id="CraftInfo" comment="打造信息">
+		<field type="Integer" name="baseAttrKey" comment="基础属性key" />
+		<field type="Integer" name="baseAttrValue" comment="基础属性数值" />
+		<field type="Integer" name="holeMaxNum" comment="最大孔数"/>
+		<field type="com.imop.lj.common.model.equip.CraftAttrInfo" name="craftAttrInfos" clientType="CraftAttrInfoData"
+			comment="大概率属性列表" macro="CraftAttrInfo" list="true" />
+		<field type="com.imop.lj.common.model.equip.CraftAttrNumInfo" name="craftAttrNumInfos" clientType="CraftAttrNumInfoData"
+			comment="属性条数列表" macro="CraftAttrNumInfo" list="true" />
+	</macro>
+	
+	<macro id="CraftAttrInfo" comment="打造属性信息">
+		<field type="Integer" name="attrKey" comment="属性key" />
+		<field type="Integer" name="min" comment="属性最小值" />
+		<field type="Integer" name="max" comment="属性最大值" />
+		<field type="Integer" name="prob" comment="属性概率*100" />
+	</macro>
+	
+	<macro id="CraftAttrNumInfo" comment="打造属性条数信息">
+		<field type="Integer" name="num" comment="属性个数" />
+		<field type="Integer" name="prob" comment="概率*100" />
+	</macro>
+	
+	<macro id="MainSkillInfo" comment="心法技能信息">
+		<field type="Integer" name="mindId" comment="心法Id"/>
+		<field type="Integer" name="mindLevel" comment="心法等级"/>
+	</macro>
+	
+	<macro id="MainSkillTipsInfo" comment="心法技能提示信息">
+		<field type="Integer" name="mindId" comment="心法Id"/>
+		<field type="Integer" name="skillId" comment="技能Id"/>
+	</macro>
+	
+	<macro id="LifeSkillInfo" comment="生活技能信息">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="level" comment="技能等级"/>
+		<field type="Integer" name="layer" comment="层数"/>
+		<field type="Long" name="proficiency" comment="熟练度"/>
+	</macro>
+	
+</macros>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<!-- 此ant脚本用于策划测试配置文件打成的jar放于ant_server/target中 -->
+
+<project name="porjectA" basedir="." default="jar">
+	
+	<property name="project.jar.dir" value="../ant_server/target/"/>
+	
+	<target name="ceo_probe_collector">
+		<echo message="In projectA calling ceo_probe_collector" />
+		<ant antfile="../probe_collector/build.xml" />
+	</target>
+	
+	<target name="ceo_core">
+		<echo message="In projectA calling ceo_core" />
+		<ant antfile="../core/build.xml" />
+	</target>
+	
+	<target name="ceo_game_db">
+		<echo message="In projectA calling ceo_game_db" />
+		<ant antfile="../game_db/build.xml" />
+	</target>
+	
+	<target name="ceo_log_server">
+		<echo message="In projectA calling ceo_log_server" />
+		<ant antfile="../log_server/build.xml" />
+	</target>
+	
+	<target name="ceo_game_server">
+		<echo message="In projectA calling ceo_game_server" />
+		<ant antfile="../game_server/build.xml" />
+	</target>
+	
+	<target name="clear">
+		<delete dir="${project.jar.dir}"/>
+	</target>
+	
+	<target name="copyjar">
+		<mkdir dir="${project.jar.dir}"/>
+		<copy todir="${project.jar.dir}">
+			<fileset dir="../probe_collector">
+				<include name="ceo_*.jar" />
+			</fileset>
+			<fileset dir="../core">
+				<include name="ceo_*.jar" />
+			</fileset>
+			<fileset dir="../game_db">
+				<include name="ceo_*.jar" />
+			</fileset>
+			<fileset dir="../log_server">
+				<include name="ceo_*.jar" />
+			</fileset>
+			<fileset dir="../game_server">
+				<include name="ceo_*.jar" />
+			</fileset>
+		</copy>
+		<delete file="../probe_collector/ceo_probe_collector.jar"></delete>
+		<delete file="../core/ceo_core.jar"></delete>
+		<delete file="../game_db/ceo_game_db.jar"></delete>
+		<delete file="../log_server/ceo_log_server.jar"></delete>
+		<delete file="../game_server/ceo_game_server.jar"></delete>
+	</target>
+
+	<target name="jar" depends="clear,ceo_probe_collector,ceo_core,ceo_game_db,ceo_log_server,ceo_game_server,copyjar">
+	</target>
+</project>

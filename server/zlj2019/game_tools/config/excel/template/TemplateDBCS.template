@@ -1,0 +1,107 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "String" )string#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )bool#else$type#end
+#end
+#macro( dbType $type)
+#if($type == "Short" || $type == "short" )Int16#elseif( $type == "Integer" || $type == "int")Int32#elseif( $type == "String" )String#elseif( $type == "Byte" || $type == "byte")Byte#elseif( $type == "Long" || $type == "long" )Int64#elseif( $type == "Float" ||$type == "float")Float#elseif( $type == "Double"||$type == "double" )Double#elseif( $type == "Boolean" || $type == "boolean" )Boolean#else$type#end
+#end
+#macro( toLowerCase $type)$type.toLowerCase()#end
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Mono.Data.Sqlite;
+
+namespace app.db
+{
+	/**
+	 * $comment
+	 * 
+	 * @author CodeGenerator, don't modify this file please.
+	 */
+	public abstract class ${fileName}Base : TemplateDBBase<${clientName}>
+	{
+		// key模板Id，value模板对象
+        protected Dictionary<int, ${clientName}> idKeyDic = new Dictionary<int, ${clientName}>();
+        
+		protected static ${fileName} _ins;
+        public static ${fileName} Instance
+        {
+            get
+            {
+                if (_ins == null)
+                {
+                    _ins = new ${fileName}();
+                }
+                return _ins;
+            }
+        }
+        
+        public override Dictionary<int, ${clientName}> getIdKeyDic()
+        {
+            return idKeyDic;
+        }
+
+        public override bool addTemplate(${clientName} #toLowerCase(${clientName}))
+        {
+            if (this.idKeyDic.ContainsKey(#toLowerCase(${clientName}).Id))
+            {
+                ClientLog.LogError("error! idKeyDic id is: " + #toLowerCase(${clientName}).Id);
+                return false;
+            }
+            this.idKeyDic.Add(#toLowerCase(${clientName}).Id, #toLowerCase(${clientName}));
+            return true;
+        }
+
+        public override ${clientName} getTemplate(int id)
+        {
+            ${clientName} data = null;
+            this.idKeyDic.TryGetValue(id, out data);
+            if (data == null)
+            {
+                ClientLog.LogError("get ${clientName} error!data is null! id=" + id);
+            }
+            return data;
+        }
+
+		public override void loadAllTemplate()
+		{
+			using (SqliteDataReader reader = DbAccess.Instance.ReadFullTable("$TablePrefix$clientName"))
+			{
+				while (reader.Read())
+				{
+				int startIndex = 0;
+				
+				$clientName #toLowerCase(${clientName}) = new $clientName();
+				//id，每个表都有
+				#toLowerCase(${clientName}).Id = reader.GetInt32(startIndex++);
+		
+#foreach($field in $fields)
+#if(!$field.notClient)
+#if($field.isBaseType())
+				#toLowerCase(${clientName}).${field.fieldName} = reader.Get#dbType($field.fieldType)(startIndex++);
+#elseif($field.isUserDef() && $field.isList())
+		        #toLowerCase(${clientName}).${field.fieldName} = new #smallType($field.clientType)($field.unitNum);
+		        for (int i = 0; i < $field.unitNum; i++)
+		        {
+		            #toLowerCase(${clientName}).${field.fieldName}.Add(new ${field.clientSubType}(reader, startIndex));
+		            startIndex += $field.unitFieldNum;
+		        }
+#elseif(!$field.isUserDef() && $field.isList())
+				#toLowerCase(${clientName}).${field.fieldName} = new List<#smallType(${field.clientSubType})>($field.unitNum);
+				for (int i = 0; i < $field.unitNum; i++)
+		        {
+		            #toLowerCase(${clientName}).${field.fieldName}.Add(reader.Get#dbType(${field.clientSubType})(startIndex++));
+		        }
+#elseif($field.isUserDef() && !$field.isList())
+				#toLowerCase(${clientName}).${field.fieldName} = new ${field.clientType}(reader, startIndex);
+				startIndex += $field.unitFieldNum;
+#end
+	
+#end
+#end
+				${fileName}.Instance.addTemplate(#toLowerCase(${clientName}));
+				}
+			}
+		}
+
+}
+}

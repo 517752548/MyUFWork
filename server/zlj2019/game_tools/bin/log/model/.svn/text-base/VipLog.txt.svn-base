@@ -1,0 +1,8 @@
+message com.imop.lj.logserver.model.VipLog(
+	long vipUuid; // VipUUID, 角色ID
+	long chargeDiamond; //当次充值数量
+	int cardId; //当前使用卡ID
+	long receiveOnceRewardId; //领取每日奖励ID
+   	String oldVipData; //旧vip数据
+   	String newVipData; //新vip数据
+)

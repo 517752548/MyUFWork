@@ -1,0 +1,21 @@
+<project name="performance" basedir="." default="default">
+	<target name="default" depends="buildwar,deploy"></target>
+	<target name="buildwar">
+		<war basedir="war" destfile="performance.war" webxml="war/WEB-INF/web.xml">
+			<exclude name="WEB-INF/**" />
+			<webinf dir="war/WEB-INF/" >
+				<include name="lib/*.jar" />
+			</webinf>
+			<webinf dir="war/WEB-INF" >
+				<include name="**/*.class" />
+			</webinf>
+			<webinf dir="war/WEB-INF">
+				<include name="**/*.xml" />
+			</webinf>
+		</war>
+	</target>
+	
+	<target name="deploy">
+		<copy file="performance.war" todir="." />
+	</target>
+</project>

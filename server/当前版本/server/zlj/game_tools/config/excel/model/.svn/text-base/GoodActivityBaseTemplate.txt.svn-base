@@ -1,0 +1,11 @@
+int goodActivityType;[notNull=true;minValue=1] // 活动类型
+int icon;[notNull=fasle] // 活动图标
+int nameIcon;[notNull=fasle] //名称图标
+int titleIcon;[notNull=fasle] //标题图标
+long nameLangId;[notNull=fasle] // 活动名称多语言id
+String name;[notNull=fasle] // 活动名称
+long descLangId;[notNull=fasle] // 活动描述多语言id
+String desc;[notNull=fasle] // 活动描述
+int updateDay;[notNull=false;minValue=0]//结算天数
+int updateHour;[notNull=false;minValue=0]//结算小时
+int showTargetType;[notNull=false;minValue=0]//目标类型（前端显示用）

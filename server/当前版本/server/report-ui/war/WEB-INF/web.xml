@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+	PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+	"http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<welcome-file-list>
+		<welcome-file>IndexChart.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>initPanel</servlet-name>
+		<servlet-class>com.opi.gibp.tools.performance.gwt.ui.server.AjaxDataServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>initPanel</servlet-name>
+		<url-pattern>/performance/initPanel</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>singlePerformance</servlet-name>
+		<servlet-class>com.opi.gibp.tools.performance.gwt.ui.server.PerfServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>singlePerformance</servlet-name>
+		<url-pattern>/performance/singlePerformance</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ping</servlet-name>
+		<servlet-class>com.opi.gibp.tools.performance.gwt.ui.server.PingServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ping</servlet-name>
+		<url-pattern>/performance/ping</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>sso</servlet-name>
+		<servlet-class>com.opi.gibp.tools.performance.gwt.ui.server.SSOServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sso</servlet-name>
+		<url-pattern>/performance/sso</url-pattern>
+	</servlet-mapping>
+	 
+	<servlet>
+		<servlet-name>ssoLogin</servlet-name>
+		<servlet-class>com.opi.gibp.tools.performance.gwt.ui.server.SSOLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ssoLogin</servlet-name>
+		<url-pattern>/performance/ssoLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.opi.gibp.tools.performance.gwt.ui.server.InitServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>InitServlet</servlet-name> -->
+<!-- 		<url-pattern>/</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+</web-app>

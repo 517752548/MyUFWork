@@ -1,0 +1,45 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "String" )string#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )bool#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( toLowerCase $type)$type.toLowerCase()#end
+
+namespace app.net
+{
+	public class ${module}CGHandler
+	{
+#foreach( $message in $msgs )
+	public static void send${message.className}(
+#if ($message.fieldSize>0)
+#foreach( $field in ${message.fields} )
+#if ($field.list) 
+			#smallType($field.clientType)[] ${field.smallName}#if($velocityCount != $message.fields.size()),
+#end
+#else
+			#smallType($field.clientType) $field.smallName#if($velocityCount != $message.fields.size()),
+#end
+#end
+#end
+#end)
+	{
+		${message.className} msg = new ${message.className}(
+#if ($message.fieldSize>0)
+#foreach( $field in ${message.fields} )
+#if ($field.list) 
+			${field.smallName}#if($velocityCount != $message.fields.size()),
+#end
+#else
+			$field.smallName#if($velocityCount != $message.fields.size()),
+#end
+#end
+#end
+#end);
+		GameConnection.Instance.sendMessage(msg);
+	}
+	
+#end
+	}
+}

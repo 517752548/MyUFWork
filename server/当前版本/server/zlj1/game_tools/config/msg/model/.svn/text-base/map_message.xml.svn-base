@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="map">
+	
+	<message type="CG_MAP_PLAYER_ENTER" comment="玩家进入地图">
+		<field type="Integer" name="mapId" comment="地图id" />
+	</message>
+	
+	<message type="GC_MAP_PLAYER_ENTER" comment="玩家进入地图">
+		<field type="Long" name="uuid" comment="角色id" />
+		<field type="Integer" name="mapId" comment="地图id" />
+		<field type="Integer" name="x" comment="玩家X坐标(像素)" />
+		<field type="Integer" name="y" comment="玩家Y坐标(像素)" />
+	</message>
+	
+	<message type="CG_MAP_PLAYER_MOVE" comment="玩家移动">
+		<field type="Integer" name="mapId" comment="地图id，校验用" />
+		<field type="Integer" name="x" comment="目标x坐标(像素)" />
+		<field type="Integer" name="y" comment="目标y坐标(像素)" />
+		<field type="Integer" name="fx" comment="目标最终x坐标(像素)" />
+		<field type="Integer" name="fy" comment="目标最终y坐标(像素)" />
+	</message>
+
+	<message type="GC_MAP_PLAYER_CHANGED_LIST" comment="地图中的玩家更新" compress="true">
+		<field type="Integer" name="mapId" comment="地图id" />
+		<field type="com.imop.lj.common.model.map.MapPlayerInfo" clientType="MapPlayerInfoData" list="true" 
+			name="MapPlayerInfoDataList" comment="地图玩家信息">
+			<field type="Long" name="uuid" comment="角色id" />
+			<field type="Integer" name="msgType" comment="1删除，2移动，3添加，4更新" />
+			<field type="String" name="name" comment="玩家名称" />
+			<field type="Integer" name="level" comment="玩家等级" />
+			<field type="String" name="model" comment="玩家模型" />
+			<field type="Integer" name="mapId" comment="地图Id" />
+			<field type="Integer" name="x" comment="玩家X坐标(像素)" />
+			<field type="Integer" name="y" comment="玩家Y坐标(像素)" />
+			<field type="Integer" name="isLeader" comment="0否，1是" />
+			<field type="Integer" name="isFighting" comment="0否，1是" />
+			<field type="Integer" name="isForaging" comment="是否运粮中，0否，1是" />
+			<field type="Integer" name="rideHorseTplId" comment="骑宠模板Id，0表示没骑" />
+			<field type="String" name="titleName" comment="称号名称" />
+			<field type="Long" name="corpsId" comment="帮派 id" />
+			<field type="Integer" name="wingTplId" comment="翅膀模板Id，0表示没装备" />
+			<field type="Integer" name="fashionTplId" comment="时装模板Id，-1表示没装备" />
+			<field type="Integer" name="equipWeaponId" comment="主将武器模板Id" />
+			<field type="Integer" name="vipLevel" comment="vip等级" />
+			<field type="String" name="extStr" comment="玩家扩展信息json串，备用" />
+		</field>
+	</message>
+	
+	<message type="GC_MAP_PLAYER_SET_POSITION" comment="直接设置玩家位置，用于非法时拉回玩家">
+		<field type="Long" name="uuid" comment="角色id" />
+		<field type="Integer" name="mapId" comment="地图id" />
+		<field type="Integer" name="x" comment="玩家X坐标(像素)" />
+		<field type="Integer" name="y" comment="玩家Y坐标(像素)" />
+	</message>
+	
+	<message type="CG_MAP_FIGHT_NPC" comment="玩家请求与npc战斗">
+		<field type="Integer" name="npcId" comment="npcId" />
+		<field type="String" name="uuid" comment="唯一Id" />
+	</message>
+	
+	<!-- 动态npc -->
+	<message type="GC_MAP_ADD_NPC" comment="地图增加一个npc">
+		<field type="com.imop.lj.common.model.NpcInfo" clientType="NpcInfoData"	
+			name="NpcInfoData" macro="NpcInfo" comment="npc信息" />
+	</message>
+	
+	<message type="GC_MAP_ADD_NPC_LIST" comment="地图附加的npc列表">
+		<field type="com.imop.lj.common.model.NpcInfo" clientType="NpcInfoData"	
+			name="NpcInfoDataList" macro="NpcInfo" list="true" comment="npc列表" />
+	</message>
+	
+	<message type="GC_MAP_REMOVE_ADD_NPC" comment="地图删除附加的npc">
+		<field type="String" name="removeUUIdList" list="true" comment="移除的npcUUId列表" />
+	</message>
+	
+	<message type="GC_MAP_UPDATE_ADD_NPC" comment="地图增加的npc更新">
+		<field type="com.imop.lj.common.model.NpcInfo" clientType="NpcInfoData"	
+			name="NpcInfoData" macro="NpcInfo" comment="npc信息" />
+	</message>
+	
+	<message type="GC_MAP_TEAM_LEADER_POSITION" comment="给玩家发队长位置信息">
+		<field type="Long" name="uuid" comment="队长角色id" />
+		<field type="Integer" name="mapId" comment="地图id" />
+		<field type="Integer" name="x" comment="玩家X坐标(像素)" />
+		<field type="Integer" name="y" comment="玩家Y坐标(像素)" />
+	</message>
+	
+</messages>

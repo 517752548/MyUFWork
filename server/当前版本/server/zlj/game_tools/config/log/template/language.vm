@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+#foreach($logType in $logTypeList)
+	<titles name="${logType.name}">
+		#foreach($field in ${logType.fields})
+		<title name="${field.fieldInfo}"/>
+		#end
+	</titles>
+#end
+</languages>

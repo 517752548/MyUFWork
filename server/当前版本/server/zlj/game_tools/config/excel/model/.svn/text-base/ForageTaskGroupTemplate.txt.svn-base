@@ -1,0 +1,4 @@
+int questGroupId;[minValue=0;notNull=false]//任务组Id
+int questId;[notNull=false;minValue=1]//任务Id
+int forageStar;[minValue=1;notNull=false]//粮草品质
+int weight;[minValue=0;notNull=false]//权重

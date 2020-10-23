@@ -1,0 +1,5 @@
+long descLangId;[minValue=0;notNull=false]//特权描述多语言ID
+String desc;//特权描述
+int sortId;[notNull=false]//排序ID
+boolean show;//是否显示到VIP面板
+List<com.imop.lj.common.model.template.VipItemTemplate> vipItemList;[collection(16,2);] //对应级别的VIP配置

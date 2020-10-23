@@ -1,0 +1,8 @@
+message com.imop.lj.logserver.model.HorseLog(
+   int preTrainStar;
+   long preTrainExp;
+   int afterTrainStar;
+   long afterTrainExp;
+   String preDrawSkill;
+   String afterDrawSkill;
+)

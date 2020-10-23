@@ -1,0 +1,4 @@
+int raidId;[notNull=false;minValue=1]//副本Id
+int raidType;[notNull=false;minValue=1]//单人或组队（1单人，2组队）
+int monsterNpcId;[notNull=false;minValue=1]//怪物NPCID
+int startTime;[notNull=false;minValue=0]//出现时间，毫秒，相对于活动开始时间

@@ -1,0 +1,18 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int preTargetId;[notNull=false;minValue=0]//前置目标Id
+int costMoneyType;[notNull=false;minValue=1]//花费货币类型
+int costMoneyNum;[notNull=false;minValue=1]//花费货币数
+int giveMoneyType;[notNull=false;minValue=1]//产出货币类型
+int giveMoneyMin;[notNull=false;minValue=1]//产出货币数下限
+int giveMoneyMax;[notNull=false;minValue=1]//产出货币数上限
+String logContent;[notNull=true] //日志内容

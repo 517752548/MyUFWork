@@ -1,0 +1,7 @@
+message com.imop.lj.logserver.model.DropItemLog(
+	int fromReason;// 来源处reason
+	int dropId;// 掉落id
+    int templateId;// 道具模板ID
+    String itemName;// 道具名称
+    String fromDetailReason 512;// 来源处detailReason
+)

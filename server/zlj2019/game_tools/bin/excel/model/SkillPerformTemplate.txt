@@ -1,0 +1,16 @@
+String composeId;[notNull=false]//技能组合Id
+String skillId;[notNull=false]//技能Id
+int effectId;[notNull=false]//效果Id
+String desc;[notNull=false]//技能表现说明
+String actionId;[notNull=false]//技能动作id
+int actionType;[notNull=false]//技能动作类型(1投掷子弹，2射击子弹，3平推子弹，4其它，5冲锋)
+int isNearAttack;[notNull=false]//是否近身攻击（1是，0否）
+float impactStartTime;[notNull=false]//技能影响开始的时间（秒）
+int impactTimes;[notNull=false]//技能影响的次数
+float impactInterval;[notNull=false]//技能影响的时间间隔（秒）
+float effectStopDelayTime;[notNull=false]//动作完成后除子弹外的特效延迟几秒完成
+List<com.imop.lj.gameserver.skill.template.SkillPerformEffectItemTemplate> effectItemList;[Collection(3,6)] //技能特效项列表
+String blowEffectId;[notNull=false]//受击特效
+int blowEffectPosId;[notNull=false]//被击特效出现位置（1头顶，2胸口，3脚下）
+List<com.imop.lj.gameserver.skill.template.SkillPerformSoundItemTemplate> soundItemList;[Collection(3,3)] //技能音效项列表
+float totalTime;[notNull=false]//总时长（秒）

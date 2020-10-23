@@ -1,0 +1,8 @@
+String name;//技能名称
+int mainSkillId;[minValue=1;notNull=true]//心法ID
+int subSkillId;[minValue=1;notNull=true]//技能ID
+String descInfo;[notNull=false]//描述
+float mindCoefDesc;[notNull=false]//心法系数
+float skillCoefDesc;[notNull=false]//技能系数
+float coef1Desc;[notNull=false]//系数1
+float coef2Desc;[notNull=false]//系数2

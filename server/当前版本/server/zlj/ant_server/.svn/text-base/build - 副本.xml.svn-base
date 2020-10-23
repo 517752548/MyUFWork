@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lj" basedir="." default="help">
+    <property environment="env"/>
+
+	<property name="propertiesFile" value="build.properties" />
+	
+	<property file="${propertiesFile}" />
+
+	<!-- 是否加密,可以通过-Dencrypt=false 取消加密 -->
+	<property name="encrypt" value="true" />
+	
+	<property name="encryptFlash" value="true" />
+	
+	<property name="encryptMysql" value="true" />
+	<!-- 是否加密资源  -->
+	<property name="encrypt.resource" value="true" />
+	<!-- 引入宏定义  -->
+	<import file="macro_build.xml" />
+
+	<!-- 版本语言 -->
+	<property name="language" value="zh_CN" />
+
+	<!-- svn的路径属性 -->
+	<property name="trunk.server.path" value="${server.trunk.url}" />
+	<property name="branch.server.path" value="${server.branch.url}/${version}" />
+	<property name="tag.server.path" value="${server.tag.url}/${version.prefix}${version}" />
+
+	<property name="trunk.client.path" value="${client.trunk.url}" />
+	<property name="branch.client.path" value="${client.branch.url}/${version}" />
+	<property name="tag.client.path" value="${client.tag.url}/${version.prefix}${version}" />
+
+	<property name="trunk.resource.path" value="${server.trunk.url}" />
+	<property name="trunk.resource.path.script" value="${server.trunk.url.script}" />
+	<property name="branch.resource.path" value="${server.branch.url}/${version}" />
+	<property name="tag.resource.path" value="${server.tag.url}/${version.prefix}${version}" />
+
+
+	<!--打 trunk 还是 branches 在此修改-->
+	<property name="server.path" value="${trunk.server.path}" />
+	<property name="client.path" value="${trunk.client.path}" />
+	<property name="resource.path" value="${trunk.resource.path}" />
+	<property name="resource.path.script" value="${trunk.resource.path.script}" />
+	<!--end 打 trunk 还是 branches 在此修改-->
+
+	<property name="release.client.flag" value="true" />
+	<property name="release.server.flag" value="true" />
+	<property name="release.resource.flag" value="true" />
+	<property name="release.deploy.flag" value="true" />
+	<property name="release.sql.flag" value="true" />
+	<property name="release.gm.flag" value="true" />
+	<property name="release.mergedb.flag" value="true" />
+
+    <!--=============web客户端打包=============-->
+    <property name="FLEX_HOME" value="${env.FLEX_HOME}"/>
+    <property name="client.src.dir" value="${basedir}/src"/>
+	<property name="client.abfuscator.src.dir" value="${basedir}/obfuscated_src"/>
+	<property name="client.libs.dir" value="${basedir}/libs"/>
+	<property name="client.resource.dir" value="${basedir}/resource"/>
+	<property name="client.main.file" value="R16bfbf9c462762cf1cba4134ec53c504"/>
+	<property name="client.embed.dir" value="${basedir}/embed"/>
+    <property name="client.embedclass.dir" value="${basedir}/embed_class"/>
+    <property name="client.packagefile.dir" value="${basedir}/_packagefile"/>
+    <property name="client.images.dir" value="${basedir}/images"/>
+    <property name="client.script.dir" value="${basedir}/script"/>
+
+    <property name="client.ftp.dir" value="${ftp.put.dir}/${language}/client/${client.version}"/>
+
+    <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>
+
+    <target name="client.init">
+		<delete dir="${client.release.resource.dir}/resource"></delete>
+		
+		<delete file="${client.release.resource.dir}/CreateRole.swf"></delete>
+		
+		<delete file="${client.release.resource.dir}/Login.swf"></delete>
+		
+		<delete dir="${client.src.dir}"></delete>
+    	<delete dir="${client.abfuscator.src.dir}"></delete>
+		<delete dir="${client.libs.dir}"></delete>
+		<delete dir="${client.resource.dir}"></delete>
+		<delete dir="${client.embed.dir}"></delete>
+        <delete dir="${client.embedclass.dir}"></delete>
+        <delete dir="${client.images.dir}"></delete>
+        <delete dir="${client.script.dir}"></delete>
+
+        <delete dir="${client.releasepkg.dir}" />
+        <mkdir dir="${client.releasepkg.dir}" />
+         <mkdir dir="${client.releasepkg.dir}/${client.version}" />
+         <mkdir dir="${client.releasepkg.dir}/${client.version}/script" />
+         <mkdir dir="${client.releasepkg.dir}/${client.version}/images" />
+       <delete dir="${client.release.dir}" />
+       <mkdir dir="${client.release.dir}" />
+	</target>
+
+	<target name="client.compile" depends="client.init,_update_client_resource,_update_client_src,_update_client_libs,_update_client_embed,_update_client_embedclass,_update_client_packagefile,_update_client_images,_update_client_script">
+		<if>
+			<equals arg1="${encryptFlash}" arg2="true"/>
+			<then>
+				<java classname="com.imop.lj.tools.client.code.obfuscate.FlashCodeAbfuscator" classpathref="tools.lib.path">
+					<arg value="${client.src.dir}" />
+					<arg value="${client.abfuscator.src.dir}" />
+				</java>
+				<property name="build.client.src.dir" value="${client.abfuscator.src.dir}" />
+			</then>
+			<else>
+				<property name="build.client.src.dir" value="${client.src.dir}" />
+			</else>
+		</if>
+		<echo>flash 编译目录为：${build.client.src.dir}</echo>
+		<!--编译Loading和GameWorld及LoginLayer和RegisterLayer-->
+		<mxmlc file="${build.client.src.dir}/${client.main.file}.as" incremental="true" actionscript-file-encoding="UTF-8" link-report="${build.client.src.dir}/report.xml">
+			<define name="CONFIG::WEB" value="true"/>
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+			<compiler.library-path dir="${basedir}" append="true">
+				<include name="libs"/>
+			</compiler.library-path>
+			<!-- <include-libraries file="${basedir}/libs"/>-->
+			<!-- <include-libraries file="${FLEX_HOME}/frameworks/libs/textLayout.swc"/>
+			<include-libraries file="${FLEX_HOME}/frameworks/libs/osmf.swc"/>
+			<include-libraries file="${FLEX_HOME}/frameworks/libs/authoringsupport.swc"/>
+			<include-libraries file="${FLEX_HOME}/frameworks/libs/core.swc"/>-->
+			<static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+			<compiler.source-path path-element="${build.client.src.dir}"/>
+			<!-- <load-config filename="${basedir}/flex-config.xml"/>-->
+		</mxmlc>
+		
+		<mxmlc file="${build.client.src.dir}/CreateRole.as" load-externs="${build.client.src.dir}/report.xml">
+			<define name="CONFIG::WEB" value="true"/>
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config-other.xml"/>
+			<compiler.library-path dir="${basedir}" append="true">
+				<include name="libs"/>
+			</compiler.library-path>
+			<static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+		</mxmlc>
+		
+		<mxmlc file="${build.client.src.dir}/Login.as" load-externs="${build.client.src.dir}/report.xml">
+			<define name="CONFIG::WEB" value="true"/>
+			<load-config filename="${FLEX_HOME}/frameworks/flex-config-other.xml"/>
+			<compiler.library-path dir="${basedir}" append="true">
+				<include name="libs"/>
+			</compiler.library-path>
+			<static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+		</mxmlc>
+		
+		<if>
+			<equals arg1="${encryptFlash}" arg2="true" />
+			<then>
+				<java classname="com.imop.lj.tools.client.resource.encryption.FlashResourceEncryption" classpathref="tools.lib.path">
+					<arg value="${client.resource.dir}" />
+				</java>
+			</then>
+		</if>
+	</target>
+
+	<target name="_update_client_resource">
+		<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="resource" out="${client.resource.dir}" />	
+	</target>
+	
+	<target name="_update_client_src">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="src" out="${client.src.dir}" />	
+	</target>
+	
+	<target name="_update_client_libs">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="libs" out="${client.libs.dir}" />	
+	</target>
+	
+	<target name="_update_client_embed">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="embed" out="${client.embed.dir}" />	
+	</target>
+
+    <target name="_update_client_embedclass">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="embed_class" out="${client.embedclass.dir}" />	
+	</target>
+
+    <target name="_update_client_packagefile">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="packagefile" out="${client.packagefile.dir}" />	
+	</target>
+
+    <target name="_update_client_images">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="images" out="${client.images.dir}" />	
+	</target>
+
+    <target name="_update_client_script">
+			<svn_update svnpath="${trunk.client.path}" project="LongJiangWeb" dir="script" out="${client.script.dir}" />	
+	</target>
+<!-- 	
+	<target name="encrypt_client_resource" depends="compile.server_lib">
+		<if>
+			<equals arg1="${encrypt}" arg2="true" />
+			<then>
+				<java classname="com.imop.lj.tools.client.resource.encryption.FlashResourceEncryption" classpathref="tools.lib.path">
+					<arg value="${client.resource.dir}" />
+				</java>
+			</then>
+		</if>
+	</target>
+-->
+	<target name="client.release" depends="client.compile">
+		<!--移动Loading.swf到release目录-->
+        <copy todir="${client.release.dir}" overwrite="true">
+			<fileset dir="${client.packagefile.dir}">
+				<include name="**/**" />
+			</fileset>
+		</copy>
+		<copy file="${build.client.src.dir}/${client.main.file}.swf" overwrite="true" tofile="${client.release.dir}/Loading.swf"/>
+        <copy file="${build.client.src.dir}/${client.main.file}.swf" overwrite="true" tofile="${client.release.dir}/Loading${client.version}.swf"/>
+		
+		<copy file="${build.client.src.dir}/CreateRole.swf" overwrite="true" tofile="${client.release.resource.dir}/CreateRole.swf"/>
+		
+		<copy file="${build.client.src.dir}/Login.swf" overwrite="true" tofile="${client.release.resource.dir}/Login.swf"/>
+		
+		<copy todir="${client.release.resource.dir}" overwrite="true">
+			<!-- 将${enc.lib.dir}中的jar和zip文件拷贝到Server的lib目录中  -->
+			<fileset dir="${client.resource.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+
+        <!-- 将客户端打包 -->
+        <copy todir="${client.releasepkg.dir}/${client.version}" overwrite="true">
+			<fileset dir="${client.release.dir}">
+				<include name="**/**" />
+			</fileset>
+		</copy>
+        <copy todir="${client.releasepkg.dir}/${client.version}/images" overwrite="true">
+			<fileset dir="${client.images.dir}">
+			</fileset>
+		</copy>
+        <copy todir="${client.releasepkg.dir}/${client.version}/script" overwrite="true">
+			<fileset dir="${client.script.dir}">
+			</fileset>
+		</copy>
+
+        <!-- 含配置文件的包 -->
+        <zip destfile="${client.releasepkg.dir}/client.zip">
+			<fileset dir="${client.releasepkg.dir}/${client.version}">
+				<include name="**/**" />
+			</fileset>
+		</zip>
+
+        <!-- 重命名资源目录-->
+        <move file="${client.releasepkg.dir}/${client.version}/${client.release.resource.version.tmp}" tofile="${client.releasepkg.dir}/${client.version}/${client.version}"/>  
+        <!-- 去除配置文件的包 -->
+         <zip destfile="${client.releasepkg.dir}/client-release-all.zip">
+            <fileset dir="${client.releasepkg.dir}/${client.version}">
+            <include name="**/**" />
+            <exclude name="config.xml" />
+            <exclude name="index.html" />
+            <exclude name="game.html" />
+            </fileset>
+		</zip>
+         <!-- 将客户端的包放到ftp上 -->
+        <ftp action="mkdir" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${client.ftp.dir}" />
+		<ftp server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${client.ftp.dir}">
+			<fileset dir="${client.releasepkg.dir}">
+				<include name="client.zip" />
+				<include name="client-release-all.zip" />
+			</fileset>
+		</ftp>
+
+	</target>
+    <!--=============web客户端打包end===========-->
+
+	<!-- 定义路径属性开始  -->
+	<!-- core工程的jar文件路径-->
+	<path id="lib.path">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- ant_server本库所使用到的工具jar路径 -->
+	<path id="ant.lib.path">
+		<fileset dir="${basedir}/ant_lib">
+			<include name="**/*.jar" />
+			<include name="**/*.zip" />
+		</fileset>
+	</path>
+	<!-- 定义路径属性结束 -->
+
+	<path id="tools.lib.path">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${tools.lib.dir}">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="resin.lib.path">
+		<fileset dir="${resin.lib.dir}">
+			<include name="**/*.zip" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- 引入ant contrib任务 -->
+	<taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="ant.lib.path" />
+
+	<!-- 公用target定义开始  -->
+	<target name="_update_project_src">
+		<svn_update project="${project}" dir="src" out="${src.dir}/java" />
+	</target>
+
+	<target name="_update_project_config">
+		<svn_update project="${project}" dir="config" out="${src.dir}/config" />
+	</target>
+	<!-- 公用target定义结束 -->
+
+	<target name="help">
+		<echo>Usage:ant [target]</echo>
+		<echo>where targets include:</echo>
+		<echo>clean  Delete the src,build and dist dir.</echo>
+		<echo>init_server Delete the src,build and dist dir and then create them again.</echo>
+		<echo>compile.server_lib compile and create the server_lib.jar</echo>
+		<echo>package.server_lib package the server_lib.zip </echo>
+		<echo>package.resource package the resource.zip</echo>
+		<echo>package.deploy_tools package the deploy_tool.zip</echo>
+		<echo>package.release package the release pkg</echo>
+		<echo>package.update dist release pkg to target</echo>
+	</target>
+
+	<!-- 在编译前清除所有资源 -->
+	<target name="clean" description="delete the src,build,dist dir">
+		<delete dir="${src.dir}" />
+		<delete dir="${build.dir}" />
+		<delete dir="${lib.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+
+	<!-- 建立所需要的目录 -->
+	<target name="initdir" depends="clean">
+		<tstamp />
+		<mkdir dir="${src.dir}" />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${lib.dir}" />
+		<mkdir dir="${build.dir}/tresource" />
+	</target>
+
+	<!-- 执行初始化操作 -->
+	<target name="init_server" depends="initdir" description="init">
+		<echo message="初始化..." />
+		<echo message="更新lib" />
+		<svn_update project="common-libs" dir="lib" out="${lib.dir}" />
+
+		<echo message="更新代码" />
+		<foreach list="core,game_db,game_server,log_server,probe_collector,game_tools" param="project" target="_update_project_src" />
+		<echo message="更新配置文件" />
+		<foreach list="game_server,log_server" param="project" target="_update_project_config" />
+		<echo message="初始化结束" />
+	</target>
+
+	<!-- 编译服务器jar包 -->
+	<target name="compile.server_lib" depends="init_server">
+		<patternset id="resource_config">
+			<include name="**/*.*" />
+			<exclude name="**/game_server.cfg.js" />
+			<exclude name="**/log_server.cfg.js" />
+			<exclude name="**/log4j.properties" />
+			<exclude name="**/hibernate.properties" />
+			<exclude name="**/log_ibatis_config.xml" />
+		</patternset>
+		<patternset id="src_config">
+			<include name="**/*.xml" />
+			<include name="*.xls" />
+		</patternset>
+		<compile_project encrypt="${encrypt}" destfile="server_lib" classpath="lib.path" resource-config="resource_config" source-config="src_config" jar-version-name="MMO-Server-Version" bakjardir="${tools.lib.dir}" />
+	</target>
+
+	<!-- 打包服务器程序包,包括所有依赖的包  -->
+	<target name="package.server_lib" depends="compile.server_lib">
+		<if>
+			<equals arg1="${encryptMysql}" arg2="true" />
+			<then>
+				<delete>
+					<fileset dir="${lib.dir}">
+						<include name="**/mysql*.jar" />
+						<include name="**/mysql*.zip" />
+					</fileset>
+				</delete>
+				<!-- 拷贝连接加密数据库的mysql jar包 -->
+				<copy todir="${lib.dir}">
+					<!-- 将${enc.lib.dir}中的jar和zip文件拷贝到Server的lib目录中  -->
+					<fileset dir="${enc.lib.dir}">
+						<include name="**/*.jar" />
+						<include name="**/*.zip" />
+					</fileset>
+				</copy>
+			</then>
+		</if>
+		<package_server servername="server_lib" />
+	</target>
+
+	<!-- 打包资源文件 -->
+	<target name="package.resource" depends="initdir">
+		<svn_update svnpath="${resource.path}" project="resources" dir="." out="${build.dir}/resources" />
+		<svn_update svnpath="${resource.path.script}" project="" dir="." out="${build.dir}/tresources" />
+		<copy todir="${build.dir}/resources/scripts" overwrite="true">
+			<!-- 将${enc.lib.dir}中的jar和zip文件拷贝到Server的lib目录中  -->
+			<fileset dir="${build.dir}/tresources">
+			</fileset>
+		</copy>
+
+		<echo message="${resource.version}" file="${build.dir}/resources/version" />
+		<!-- 生成最新的sys_lang.xls 
+		<java classname="com.imop.lj.tools.i18n.SysLangGenerator" classpathref="tools.lib.path">
+			<arg value="${build.dir}/resources/i18n/${language}/sys_lang.xls" />
+		</java>
+		-->
+		<if>
+			<equals arg1="${encrypt.resource}" arg2="true" />
+			<then>
+				<mkdir dir="${build.dir}/resources/temp_in/" />
+				<mkdir dir="${build.dir}/resources/temp_out/" />
+				<copy todir="${build.dir}/resources/temp_in/">
+					<fileset dir="${build.dir}/resources/scripts/">
+						<!-- 目前只加密xls配置表-->
+						<include name="**/*.xls" />
+					</fileset>
+				</copy>
+				<echo message="加密excel文件" />
+				<java classname="com.imop.lj.core.encrypt.EncryptFileGenerator" classpathref="tools.lib.path">
+					<arg value="${build.dir}/resources/temp_in/" />
+					<arg value="${build.dir}/resources/temp_out/" />
+				</java>
+				<!-- 先删掉原来xls的否则可能因为修改时间的问题覆盖不回去 -->
+				<delete>
+					<fileset dir="${build.dir}/resources/scripts/" includes="**/*.xls" />
+				</delete>
+				<copy todir="${build.dir}/resources/scripts/">
+					<fileset dir="${build.dir}/resources/temp_out/">
+						<include name="**/*.xls" />
+					</fileset>
+				</copy>
+				<delete dir="${build.dir}/resources/temp_in/" />
+				<delete dir="${build.dir}/resources/temp_out/" />
+			</then>
+		</if>
+		
+		<!-- 临时将android包放入resource中，以后要修改 
+		<echo message="ftp 临时将android包放入resource中，以后要修改，开始" />
+		<ftp action="get" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.release.dir}/${language}/client_android/${client.android.version}">
+			<fileset dir="${build.dir}/resources">
+				<include name="**/*.apk" />
+			</fileset>
+		</ftp>
+		
+		<echo message="ftp 临时将ios包放入resource中，以后要修改，开始" />
+		<ftp action="get" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.release.dir}/${language}/client_ios/${client.ios.version}">
+			<fileset dir="${build.dir}/resources">
+				<include name="**/*.ipa" />
+			</fileset>
+		</ftp>
+		 -->
+		
+		<zip destfile="${dist.dir}/resource.zip">
+			<fileset dir="${build.dir}/resources">
+				<include name="**/i18n/**" />
+				<include name="**/maps/**" />
+				<include name="**/scripts/**" />
+				<include name="*.apk" />
+				<include name="*.ipa" />
+				<include name="version" />
+			</fileset>
+		</zip>
+	</target>
+
+	<!-- 部署配置生成工具，需要使用非加密的方式 ant -Dencrypt=false package.deploy_tools-->
+	<target name="package.deploy_tools" depends="initdir">
+		<foreach list="deploy_tools" param="project" target="_update_project_src" />
+		<svn_update project="deploy_tools" dir="resource" out="${src.dir}/config" />
+	
+		<!-- 从game_db文件夹下拷贝 db_init.sql 和  db_update.sql 文件到deploy_tools/resource/sql中 -->
+		<mkdir dir="${release.pkg.deploy.dir}" />
+		<mkdir dir="${release.pkg.deploy.dir}/sql" />
+		<copy file="${release.pkg.db_init.dir}/db_init.sql" overwrite="true" todir="${src.dir}/config/sql"/>
+		<copy file="${release.pkg.sql.dir}/db_update.sql" overwrite="true" todir="${src.dir}/config/sql"/>
+						
+		<!-- 生成deploy_tool中的version -->
+		<replaceregexp file="${src.dir}/config/version.js" match="@server.version@" replace="${server.version}" byline="true" />
+		<replaceregexp file="${src.dir}/config/version.js" match="@resource.version@" replace="${resource.version}" byline="true" />
+		<replaceregexp file="${src.dir}/config/version.js" match="@db.version@" replace="${db.version}" byline="true" />
+		<replaceregexp file="${src.dir}/config/version.js" match="@client.version@" replace="${client.version}" byline="true" />
+		<replaceregexp file="${src.dir}/config/version.js" match="@encrypt.resource@" replace="${encrypt.resource}" byline="true" />
+		
+		<patternset id="deploy_config">
+			<include name="template/**/*" />
+			<include name="log4j.properties" />
+			<include name="version.js" />
+			<include name="sql/*.sql" />
+		</patternset>
+		<compile_project destfile="deploy_tool_only" classpath="ant.lib.path" resource-config="deploy_config" encrypt="false" jdkversion="1.6"/>
+		<tstamp>
+			<format property="build_date" pattern="yyyy-MM-dd HH:mm" />
+		</tstamp>
+		<!-- 将所有需要的类都打包到同一个jar中 -->
+		<jar destfile="${dist.dir}/deploy_tool.jar" duplicate="preserve">
+			<zipgroupfileset dir="${dist.dir}">
+				<include name="deploy_tool_only.jar" />
+			</zipgroupfileset>
+			<zipgroupfileset dir="${basedir}/ant_lib">
+				<include name="velocity-1.5.jar" />
+				<include name="commons-lang-2.1.jar" />
+				<include name="commons-collections-3.1.jar" />
+				<include name="commons-logging-1.0.4.jar" />
+				<include name="log4j-1.2.12.jar" />
+			</zipgroupfileset>
+			<manifest>
+				<attribute name="Version" value="${server.version}" />
+				<attribute name="Build-Date" value="${build_date}" />
+				<attribute name="Main-Class" value="com.imop.lj.deploy.Deploy" />
+			</manifest>
+		</jar>
+		<zip destfile="${dist.dir}/deploy_tools.zip">
+			<fileset dir="${dist.dir}">
+				<include name="deploy_tool.jar" />
+			</fileset>
+		</zip>
+	</target>
+
+	<!-- 一键打发布包 -->
+	<target name="package.release">
+		<delete dir="${release.pkg.dir}" />
+		<mkdir dir="${release.pkg.dir}" />
+		
+		<!-- 导出sql -->
+		<svn_update project="game_db" dir="sql/initsql" out="${release.pkg.db_init.dir}" />
+		<if>
+			<equals arg1="${release.sql.flag}" arg2="true" />
+			<then>
+				<svn_update project="game_db" dir="sql/${language}/${server.version}" out="${release.pkg.sql.dir}" />
+			</then>
+		</if>
+		<!-- 打包deploy_tool -->
+		<if>
+			<equals arg1="${release.deploy.flag}" arg2="true" />
+			<then>
+				<antcall target="package.deploy_tools" />
+				<mkdir dir="${release.pkg.deploy.dir}" />
+				<copy file="${dist.dir}/deploy_tools.zip" todir="${release.pkg.deploy.dir}" />
+			</then>
+		</if>
+		<!-- 打包server_lib -->
+		<if>
+			<equals arg1="${release.server.flag}" arg2="true" />
+			<then>
+				<antcall target="package.server_lib" />
+				<mkdir dir="${release.pkg.server.dir}" />
+				<copy file="${dist.dir}/server_lib.zip" todir="${release.pkg.server.dir}" />
+			</then>
+		</if>
+		<!-- 打包resource -->
+		<if>
+			<equals arg1="${release.resource.flag}" arg2="true" />
+			<then>
+				<if>
+					<equals arg1="${language}" arg2="zh_CN" />
+					<then>
+						<antcall target="package.resource" />
+					</then>
+					<else>
+						<!--// antcall target="package.multi.resource" //-->
+						<antcall target="package.resource" />
+					</else>
+				</if>
+				<mkdir dir="${release.pkg.server.dir}" />
+				<copy file="${dist.dir}/resource.zip" todir="${release.pkg.server.dir}" />
+			</then>
+		</if>
+		<!-- 打包GM -->
+		<if>
+			<equals arg1="${release.gm.flag}" arg2="true" />
+			<then>
+				<antcall target="package.gm" />
+				<mkdir dir="${release.pkg.gm.dir}" />
+				<copy file="${dist.dir}/gm_server.zip" todir="${release.pkg.gm.dir}" />
+			</then>
+		</if>
+		
+		<!-- 从ftp上取得client发布包 -->
+		<if>
+			<equals arg1="${release.client.flag}" arg2="true" />
+			<then>
+				<!-- 打client包开始 -->
+				<antcall target="client.release" />
+				<!-- 打client包结束-->
+				<mkdir dir="${release.pkg.client.dir}" />
+				<ftp action="get" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.put.dir}/${language}/client/${client.version}">
+					<fileset dir="${release.pkg.client.dir}">
+						<include name="**/client-release-all.zip" />
+					</fileset>
+				</ftp>
+				<!-- 打client包结束
+				<mkdir dir="${release.pkg.client.android.dir}" />
+				<ftp action="get" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.release.dir}/${language}/client_android/${client.android.version}">
+					<fileset dir="${release.pkg.client.android.dir}">
+						<include name="**/*.apk" />
+					</fileset>
+				</ftp>
+				
+				<mkdir dir="${release.pkg.client.ios.dir}" />
+				<ftp action="get" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.release.dir}/${language}/client_ios/${client.ios.version}">
+					<fileset dir="${release.pkg.client.ios.dir}">
+						<include name="**/*.ipa" />
+					</fileset>
+				</ftp>
+				-->
+			</then>
+		</if>
+		<!-- 编译合服工具 -->
+		<if>
+			<equals arg1="${release.mergedb.flag}" arg2="true" />
+			<then>
+				<antcall target="package.merge_db" />
+				<mkdir dir="${release.pkg.mergedb.dir}" />
+				<copy file="${dist.dir}/merge_db.zip" todir="${release.pkg.mergedb.dir}" />
+			</then>
+		</if>
+		<!-- 导出game.sh -->
+		<svn_update project="game_server" dir="sh" out="${release.pkg.dir}" />
+		
+		<!-- 生成版本号列表 -->
+		<echo file="${release.pkg.dir}/version">
+			server_version ${server.version}
+			client_version ${client.version}
+			client_android_version ${client.android.version}
+			db_version ${db.version}
+			resource_version ${resource.version}
+		</echo>
+		<!-- 打zip发布包 -->
+		<zip destfile="${release.pkg.dir}/zlj_release_${release.pkg.version}.zip">
+			<fileset dir="${release.pkg.dir}">
+				<include name="**/*" />
+			</fileset>
+		</zip>
+		<!-- MD5 -->
+		<checksum file="${release.pkg.dir}/zlj_release_${release.pkg.version}.zip" property="pkg.md5" />
+		<echo message="${pkg.md5}" file="${release.pkg.dir}/zlj_release_${release.pkg.version}_MD5.txt" />
+
+		<ftp action="mkdir" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.put.dir}/${language}/package/${release.pkg.version}" />
+		<ftp server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.put.dir}/${language}/package/${release.pkg.version}">
+			<fileset dir="${release.pkg.dir}">
+				<include name="zlj_release_${release.pkg.version}.zip" />
+				<include name="zlj_release_${release.pkg.version}_MD5.txt" />
+			</fileset>
+		</ftp>
+		<!--
+		<ftp action="mkdir" server="${ftp.qa.host}" userid="${ftp.qa.user}" password="${ftp.qa.pwd}" remotedir="${ftp.qa.put.dir}/${language}/package/${release.pkg.version}" />
+		<ftp server="${ftp.qa.host}" userid="${ftp.qa.user}" password="${ftp.qa.pwd}" remotedir="${ftp.qa.put.dir}/${language}/package/${release.pkg.version}">
+			<fileset dir="${release.pkg.dir}">
+				<include name="zlj_release_${release.pkg.version}.zip" />
+				<include name="zlj_release_${release.pkg.version}_MD5.txt" />
+			</fileset>
+		</ftp>
+		-->
+	</target>
+
+	<!-- GM打包开始 -->
+	<!-- 打包game_manager项目 -->
+	<target name="package.gm">
+		<antcall target="compile.game_manager">
+			<param name="pkg.zip" value="true" />
+		</antcall>
+	</target>
+
+	<!-- 执行初始化操作 -->
+	<target name="init.mmo_gm_export" depends="initdir" description="init" unless="inited">
+		<property name="inited" value="true" />
+		<echo message="开始初始化..." />
+		<svn_update project="common-libs" dir="lib" out="${lib.dir}" />
+		<echo message="更新代码" />
+
+		<foreach list="core,game_db,probe_collector" param="project" target="_update_project_src" />
+		<!-- 
+		<foreach list="probe_collector" param="project" target="_update_project_src" />
+		<mkdir dir="${src.dir}/java/com/imop/tr/core" />
+		<svn_update project="core" dir="src/com/imop/tr/core" out="${src.dir}/java/com/imop/tr/core" />
+		<mkdir dir="${src.dir}/java/com/imop/tr/common" />
+		<svn_update project="core" dir="src/com/imop/tr/common" out="${src.dir}/java/com/imop/tr/common" />
+		<mkdir dir="${src.dir}/java/com/imop/tr/db/model" />
+		<svn_update project="game_db" dir="src/com/imop/tr/db/model" out="${src.dir}/java/com/imop/tr/db/model" />
+		 -->
+	</target>
+
+	<target name="compile.mmo_gm_export" depends="init.mmo_gm_export">
+		<compile_project destfile="mmo_export" classpath="lib.path" encrypt="false" />
+		<delete dir="${src.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+
+	<!-- 编译game_manager项目 -->
+	<target name="compile.game_manager" depends="compile.mmo_gm_export">
+		<mkdir dir="${src.dir}/java" />
+		<foreach list="gm_server,probe_collector" param="project" target="_update_project_src" />
+		<foreach list="gm_server" param="project" target="_update_project_webresource" />
+		<copy todir="${src.dir}/gm_server/web/WEB-INF/lib">
+			<fileset dir="${dist.dir}">
+				<include name="**/mmo_export.jar" />
+			</fileset>
+		</copy>
+		<copy todir="${src.dir}/gm_server/web/WEB-INF/lib">
+			<fileset dir="${lib.dir}">
+				<include name="**/gibp-probe.jar" />
+				<include name="**/slf4j-log4j12-1.5.8.jar" />
+			</fileset>
+		</copy>
+		<!-- game manager平台的jar文件路径 -->
+		<path id="game_manager.lib.path">
+			<path refid="resin.lib.path" />
+			<path refid="lib.path" />
+			<fileset dir="${src.dir}/gm_server/web/WEB-INF/lib">
+				<include name="**/*.jar" />
+				<include name="**/*.zip" />
+			</fileset>
+		</path>
+		<patternset id="game_manager_resource_config">
+			<include name="**/i18n/**/*" />
+			<include name="**/scripts/exportdata/*" />
+			<include name="*.*" />
+			<exclude name="*.js" />
+		</patternset>
+
+		<patternset id="game_manager_web_resource">
+			<include name="**/*" />
+		</patternset>
+
+		<patternset id="game_manager_src_config">
+			<include name="com/**/*.xml" />
+		</patternset>
+		<compile_web_project project="gm_server" classpath="game_manager.lib.path" source-config="game_manager_src_config" webresource-config="game_manager_web_resource" resource-config="game_manager_resource_config" pkg-zip="${pkg.zip}" />
+	</target>
+
+	<target name="_update_project_webresource">
+		<mkdir dir="${src.dir}/${project}" />
+		<svn_update project="${project}" dir="web" out="${src.dir}/${project}/web" />
+		<svn_update project="${project}" dir="resource" out="${src.dir}/${project}/resource" />
+		<!-- 配置表暂时不打包
+            <if>
+                    <equals arg1="${language}" arg2="zh_CN" />
+                    <then>
+                            <svn_update svnpath="${resource.path}" project="game_server_resource" dir="." out="${src.dir}/${project}/resource" />
+                    </then>
+                    <else>
+                            <svn_update svnpath="${multi.resource.path}" project="game_server_resource" dir="." out="${src.dir}/${project}/resource" />
+                    </else>
+            </if>
+            -->
+	</target>
+	<!-- GM打包结束 -->
+
+	<!-- 合服工具打包开始 -->
+	<!-- 合服工具执行初始化操作 -->
+	<target name="init.merge_db_export" depends="initdir" description="init" unless="inited">
+		<property name="inited" value="true" />
+		<echo message="开始初始化..." />
+		<svn_update project="common-libs" dir="lib" out="${lib.dir}" />
+		<echo message="更新代码" />
+
+		<foreach list="core,game_db,probe_collector,MergeDb" param="project" target="_update_project_src" />
+		
+		<foreach list="MergeDb" param="project" target="_update_project_config" />
+	</target>
+	
+	<!-- 编译合服工具依赖包
+	<target name="compile.merge_db_export" depends="init.merge_db_export">
+		<compile_project destfile="merge_db_export" classpath="lib.path" encrypt="false" />
+		<delete dir="${src.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+	 -->
+	<target name="compile.merge_db" depends="init.merge_db_export">
+		<delete dir="${build.dir}/tresource" />
+		<patternset id="resource_config">
+			<include name="**/*.*" />
+			<exclude name="**/*.js" />
+			<exclude name="**/log4j.properties" />
+			<exclude name="**/from_db.cfg.xml" />
+			<exclude name="**/to_db.cfg.xml" />
+			<exclude name="**/new_db.cfg.xml" />
+		</patternset>
+		<patternset id="src_config">
+			<include name="**/*.xml" />
+			<include name="*.xls" />
+		</patternset>
+		<compile_project encrypt="false" destfile="merge_db" classpath="lib.path" resource-config="resource_config" source-config="src_config" />
+		<delete dir="${src.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+	
+	<target name="package.merge_db" depends="compile.merge_db">
+		<copy todir="${dist.dir}">
+			<!-- 将${lib.dir}中的jar和zip文件拷贝到Server的lib目录中 -->
+			<fileset dir="${lib.dir}">
+				<include name="**/*.jar" />
+				<include name="**/*.zip" />
+			</fileset>
+		</copy>
+		<if>
+			<equals arg1="${encryptMysql}" arg2="true" />
+			<then>
+				<delete>
+					<fileset dir="${dist.dir}">
+						<include name="**/mysql*.jar" />
+						<include name="**/mysql*.zip" />
+					</fileset>
+				</delete>
+				<!-- 拷贝加密的jar包 -->
+				<copy todir="${dist.dir}">
+					<!-- 将${enc.lib.dir}中的jar和zip文件拷贝到Server的lib目录中 -->
+					<fileset dir="${enc.lib.dir}">
+						<include name="**/*.jar" />
+						<include name="**/*.zip" />
+					</fileset>
+				</copy>
+			</then>
+		</if>
+		
+		<zip destfile="${dist.dir}/merge_db.zip">
+			<fileset dir="${dist.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</zip>
+	</target>
+	<!-- 合服工具打包结束 -->
+
+    <!-- 版本更新，需要先更新客户端 -->
+	<target name="package.update" depends="package.release">
+	</target>
+
+	<target name="package.update.only">
+
+		<delete dir="${update.pkg.dir}" />
+		<mkdir dir="${update.pkg.dir}" />
+		<delete dir="${update.server.todir}/game_server/lib" />
+        	<mkdir dir="${update.server.todir}/game_server/lib" />
+ 
+		<echo>下载版本包开始</echo>
+		<ftp action="get" server="${ftp.host}" userid="${ftp.user}" password="${ftp.pwd}" remotedir="${ftp.put.dir}/${language}/package/${release.pkg.version}">
+			<fileset dir="${update.pkg.dir}">
+				<include name="**/*.zip" />
+			</fileset>
+		</ftp>
+		<echo>下载版本包结束</echo>
+
+		<echo>解压版本包开始</echo>
+		<unzip src="${update.pkg.dir}/zlj_release_${release.pkg.version}.zip" dest="${update.pkg.dir}" />
+		<echo>解压版本包结束</echo>
+
+		<echo>解压各project文件开始</echo>
+		<if>
+			<equals arg1="${release.server.flag}" arg2="true" />
+			<then>
+				<unzip src="${update.pkg.dir}/server/server_lib.zip" dest="${update.pkg.dir}/lib" />
+				<unzip src="${update.pkg.dir}/lib/server_lib.jar" dest="${update.pkg.dir}/server/" />
+			</then>
+		</if>
+
+		<if>
+			<equals arg1="${release.deploy.flag}" arg2="true" />
+			<then>
+				<echo>${update.pkg.dir}/deploy_tools/deploy_tools.zip</echo>
+				<unzip src="${update.pkg.dir}/deploy_tools/deploy_tools.zip" dest="${update.pkg.dir}/deploy_tools/" />
+			</then>
+		</if>
+		<if>
+			<equals arg1="${release.resource.flag}" arg2="true" />
+			<then>
+				<unzip src="${update.pkg.dir}/server/resource.zip" dest="${update.pkg.dir}/resource/" />
+			</then>
+		</if>
+		<if>
+			<equals arg1="${release.client.flag}" arg2="true" />
+			<then>
+				<unzip src="${update.pkg.dir}/client_web/client-release-all.zip" dest="${update.pkg.dir}/client" />
+			</then>
+		</if>
+		<if>
+			<equals arg1="${release.gm.flag}" arg2="true" />
+			<then>
+				<unzip src="${update.pkg.dir}/gm_server/gm_server.zip" dest="${update.pkg.dir}/gm_server" />
+			</then>
+		</if>
+		<echo>解压各project文件结束</echo>
+     
+        <if>
+			<equals arg1="${release.deploy.flag}" arg2="true" />
+			<then>
+                <echo>运行deploy_tool</echo>
+				<java classpath="${update.pkg.dir}/deploy_tools/deploy_tool.jar" classname="com.imop.lj.deploy.Deploy" args="--ue" fork="true"/>
+			</then>
+		</if>
+
+        <!-- 拷贝客户端文件 -->
+        <copy todir="${update.client.todir}" overwrite="true">
+			<fileset dir="${update.pkg.dir}/client">
+				<include name="**/**" />
+			</fileset>
+		</copy>
+        <!-- 拷贝客户端配置文件 -->
+        <copy todir="${update.client.todir}" overwrite="true">
+			<fileset dir="${update.client.dir}">
+				<include name="**/*.*" />
+                <!-- 可能需要去除config.xml -->
+			</fileset>
+		</copy>
+
+        <!-- 拷贝服务器game_server文件 -->
+         <copy todir="${update.server.todir}/game_server/lib" overwrite="true">
+			<fileset dir="${update.pkg.dir}/lib">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+        <!-- 拷贝服务器resources中的文件 -->
+         <copy todir="${update.server.todir}/resources" overwrite="true">
+			<fileset dir="${update.pkg.dir}/resource">
+				<include name="**/**" />
+			</fileset>
+		</copy>
+         <!-- 拷贝服务器game_server配置文件 
+         <copy todir="${update.server.todir}/game_server" overwrite="true">
+			<fileset dir="${update.server.dir}">
+				<include name="**/**" />
+                <exclude name="*.bat" />
+			</fileset>
+		</copy>
+        -->
+		<copy todir="${update.server.todir}/game_server/config/" overwrite="true">
+			<fileset dir="${update.pkg.dir}/server/">
+				<include name="templates.xml" />
+                <include name="game_server_hibernate_query.xml" />
+                <include name="game_server_hibernate.cfg.xml" />
+			</fileset>
+		</copy>
+        <!-- 启动game_server服务器 
+        <exec executable="sh">
+            <arg value="${update.server.todir}/game_server/launch.sh" />
+            <arg value="start" />
+        </exec>
+        -->
+	</target>
+
+
+	<!-- 做全部的tag -->
+	<target name="tag.all">
+		<antcall target="tag.client" />
+		<antcall target="tag.servers" />
+		<antcall target="tag.shared" />
+	</target>
+
+	<target name="tag.client">
+		<echo>create client tag</echo>
+		<echo>${client.svn.url}</echo>
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="editor" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="EffectEditor" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="Encryption" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="longjiang" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="Obfuscator" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="PicCompresser" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${client.svn.url}" tagpath="${client.tag.url}" project="ploteditor" version="${release.pkg.version}" />
+	</target>
+
+	<target name="tag.servers">
+		<echo>create servers tag</echo>
+		<echo>${server.tag.url}</echo>
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="ant_server" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="common-libs" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="core" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="deploy_tools" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="game_db" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="game_server" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="game_tools" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="gm_server" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="log_server" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="MergeDb" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="probe_collector" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="qqapi" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="resources" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="robot" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${server.svn.url}" tagpath="${server.tag.url}" project="svndiff" version="${release.pkg.version}" />
+	</target>
+	
+	<target name="tag.shared">
+		<echo>create shared tag</echo>
+		<echo>${shared.trunk.url}</echo>
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="check_template" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="Effect_IOS" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="EffectEditor_IOS" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="EffectEditor_web" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="longjiang" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="longjiang_ios" version="${release.pkg.version}" />
+		<svn_tag trunkpath="${shared.svn.url}" tagpath="${shared.tag.url}" project="LongjiangPlot" version="${release.pkg.version}" />
+	</target>
+
+	<!-- 做全部的分支 -->
+	<target name="branch.all">
+		<antcall target="branch.client" />
+		<antcall target="branch.servers" />
+		<antcall target="branch.shared" />
+	</target>
+
+	<target name="branch.client">
+		<echo>create client branch</echo>
+		<echo>${client.branch.url}</echo>
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="editor" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="EffectEditor" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="Encryption" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="longjiang" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="Obfuscator" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="PicCompresser" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${client.svn.url}" branchpath="${client.branch.url}" project="ploteditor" version="${version.prefix}${client.version}" />
+	</target>
+
+	<target name="branch.servers">
+		<echo>create servers branch</echo>
+		<echo>${server.branch.url}</echo>
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="ant_server" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="common-libs" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="core" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="deploy_tools" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="game_db" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="game_server" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="game_tools" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="gm_server" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="log_server" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="MergeDb" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="probe_collector" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="qqapi" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="resources" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="robot" version="${version.prefix}${server.version}" />
+		<svn_branch tagpath="${server.svn.url}" branchpath="${server.tag.url}" project="svndiff" version="${version.prefix}${server.version}" />
+	</target>
+	
+	<target name="branch.shared">
+		<echo>create shared branch</echo>
+		<echo>${shared.trunk.url}</echo>
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="check_template" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="Effect_IOS" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="EffectEditor_IOS" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="EffectEditor_web" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="longjiang" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="longjiang_ios" version="${version.prefix}${client.version}" />
+		<svn_branch tagpath="${shared.trunk.url}" branchpath="${shared.tag.url}" project="LongjiangPlot" version="${version.prefix}${client.version}" />
+	</target>
+</project>

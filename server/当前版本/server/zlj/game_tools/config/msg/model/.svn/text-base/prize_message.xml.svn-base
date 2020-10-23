@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="prize">
+
+	<!--	领取平台奖励和gm奖励 协议  begin -->
+	<message type="CG_PRIZE_LIST" comment="查询平台玩家奖励列表和gm补偿列表">	
+	</message>
+	
+	<message type="GC_PRIZE_LIST" comment="返回平台玩家奖励列表和gm补偿列表">
+		<field type="com.imop.lj.gameserver.prize.UserPrizeInfo"
+			name="userPrizes" list="true" comment="奖励列表">
+			<field type="Integer" name="uniqueId" comment="平台奖励唯一编号"></field>
+			<field type="String" name="prizeId" comment="奖励ID"></field>
+			<field type="Integer" name="prizeType" comment="奖励类型  1 平台奖励还是 2 gm奖励 "></field>
+			<field type="String" name="prizeName" comment="奖励名称"></field>
+			<field type="Long" name="expireTime" comment="失效时间"></field>
+		</field>
+	</message>
+	
+	 <message type="CG_PRIZE_GET" comment="领取奖励">
+		<field type="Integer" name="uniqueId" comment="平台奖励唯一编号"></field>
+		<field type="Integer" name="prizeType" comment="奖励类型  1 平台奖励; 2 gm奖励 "></field>
+		<field type="String" name="prizeId" comment="奖励编号"></field>
+	</message>
+	
+	<message type="GC_PRIZE_SUCCESS" comment="领取奖励成功">
+		<field type="Integer" name="uniqueId" comment="平台奖励唯一编号"></field>
+		<field type="Integer" name="prizeType" comment="奖励类型  1 平台奖励还是 2 gm奖励 "></field>
+		<field type="String" name="prizeId" comment="奖励编号"></field>
+	</message>
+	
+	<message type="GC_PRIZE_EXIST" comment="返回当前玩家是否有奖励">
+		<field type="Boolean" name="exist" comment="判断玩家是否有礼包"></field>
+	</message>
+	
+	<message type="GC_PRIZE_LIST_TIP" comment="查询平台玩家奖励列表和gm补偿列表时，礼包内的具体物品信息">	
+		<field type="com.imop.lj.gameserver.prize.UserPrizeTipInfo" clientType="UserPrizeTipInfoData"
+			name="userPrizeTips" list="true" comment="奖励列表内的具体物品信息">
+			<field type="String" name="prizeId" comment="奖品id "></field>
+			<field type="com.imop.lj.gameserver.prize.UserPrizeItemTipInfo" clientType="UserPrizeMoneyTipInfoData"
+			name="moneys" list="true" comment="礼包内金钱信息">
+				<field type="Integer" name="num" comment="金钱数量" />
+				<field type="String" name="name" comment="金钱名称" />
+				<field type="String" name="color" comment="金钱颜色" />
+				<field type="Integer" name="moneyType" comment="货币类型" />
+			</field>
+			<field type="com.imop.lj.gameserver.prize.UserPrizeItemTipInfo" clientType="UserPrizeItemTipInfoData"	name="items" list="true" comment="礼包内物品信息">
+				<field type="Integer" name="num" comment="物品数量" />
+				<field type="String" name="name" comment="物品名称" />
+				<field type="String" name="color" comment="物品颜色" />
+			</field>
+			
+		</field>
+	</message>
+	
+	<message type="CG_PRIZE_ACTIVATIONCODE" comment="激活码激活">
+		<field type="String" name="activationCode" comment="激活码"></field>
+	</message>
+
+	<!-- 连续登陆 -->
+	<!-- 
+	<message type="GC_CONLOGIN_PRIZE_EXIST" comment="返回当前玩家是否有连续登陆奖励">
+		<field type="Integer" name="exist" comment="判断玩家是否有礼包"></field>
+	</message>
+	<message type="CG_CONLOGIN_PRIZE_LIST" comment="请求连续登陆奖励道具面板信息">		
+	</message>
+	<message type="GC_CONLOGIN_PRIZE_LIST" comment="连续登陆奖励道具面板信息">
+		<field type="com.imop.lj.common.model.item.CommonItem"
+			clientType="CommonItem" name="prizeCommonItem" list="true" comment="单个礼包道具信息" macro="CommonItem">			
+		</field>
+		<field type="com.imop.lj.gameserver.prize.ContinuousLoginInfo"
+			clientType="ContinuousLoginInfo" name="prizeGetStatus" list="true" comment="单个礼包领取信息" macro="ContinuousLoginInfo">
+		</field>		
+	</message>
+	<message type="CG_GET_CONLOGIN_PRIZE" comment="领取连续登陆奖励">
+		<field type="Integer" name="day" comment="领取那一天"></field>
+	</message>
+	<message type="GC_GET_CONLOGIN_PRIZE" comment="领取连续登陆奖励服务器返回">				
+	</message>
+	
+	<message type="GC_CAN_GET_PRIZE_NUM" comment="玩家可领取礼包的数量">
+		<field type="Integer" name="num" comment="可领取礼包数量" />
+	</message>
+	
+	-->
+</messages>

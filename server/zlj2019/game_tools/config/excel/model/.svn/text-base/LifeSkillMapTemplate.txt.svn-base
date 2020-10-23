@@ -1,0 +1,9 @@
+int mapId;[minValue=1;notNull=true]//地图ID
+int needHumanLevel;[minValue=1;notNull=true]//所需玩家等级
+int lifeSkillLevel;[minValue=1;notNull=true]//技能等级
+int resourceType;[minValue=1;notNull=true]//资源类型
+int resourceId;[minValue=1;notNull=true]//资源Id(npcId)
+String resourceName;//资源名称
+int showFlag;[notNull=false;maxValue=1]//是否显示
+int itemId;[notNull=false]//道具Id
+String itemName;//道具名称

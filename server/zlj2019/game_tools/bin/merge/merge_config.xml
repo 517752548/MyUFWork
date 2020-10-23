@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs xmlns="http://com.imop.lj.merge" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.merge merge.xsd">
+	<!-- xml标签含义
+	globals:全局表，保留to
+	deleted:获取数据时sql有deleted=0的条件
+	empty:不进行表数据的非空判断
+	bindCharName:与玩家角色名相关的数据，如果角色被重命名，则会关联重命名
+	bindCharId:与角色相关的数据，如果角色被删除则会关联删除
+	 -->
+	 
+	<!--忽略的表
+	t_sys_mail
+	t_time_notice
+	t_prize
+	t_qq_charge_return_world
+	t_qq_invite_world
+	 -->
+	 <!-- 忽略的数据表
+	<mergeEntityConfig className="com.imop.lj.db.model.EnemyArmyReportEntity" mergeModelName="敌人攻略信息" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.BestReportEntity" mergeModelName="首次击破和最佳击破战报记录" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.MallEntity" mergeModelName="商城数据" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.CorpsWarEntity" mergeModelName="军团战数据" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.CorpsWarJoinEntity" mergeModelName="军团战报名数据" globals="true"/>
+	 -->
+	
+	<!-- 活动表 -->
+	<mergeEntityConfig className="com.imop.lj.db.model.CardActivityEntity" mergeModelName="卡牌活动表" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.CardUserEntity" mergeModelName="卡牌活动玩家数据" empty="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.TurntableActivityEntity" mergeModelName="幸运转盘活动表" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.GoodActivityEntity" mergeModelName="精彩活动数据" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.GoodActivityUserEntity" mergeModelName="玩家的精彩活动数据" deleted="true" empty="true" bindCharId="true"/>
+	 
+	<!-- 有软删除的 -->
+	<mergeEntityConfig className="com.imop.lj.db.model.HumanEntity" mergeModelName="角色信息" deleted="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.PetEntity" mergeModelName="武将信息" deleted="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.HorseEntity" mergeModelName="坐骑信息" deleted="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.MailEntity" mergeModelName="邮件信息" deleted="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.ItemEntity" mergeModelName="物品信息" deleted="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.OfflineRewardEntity" mergeModelName="离线奖励信息" deleted="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.QQChargeOrderEntity" mergeModelName="充值订单信息" deleted="true" empty="true"/>
+	
+	<!-- 全局表，保留to -->
+	<mergeEntityConfig className="com.imop.lj.db.model.SceneEntity" mergeModelName="场景信息" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.DbVersion" mergeModelName="数据库版本信息" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.DirtyWordsTypeEntity" mergeModelName="过滤词配置信息" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.QQMarketTaskTargetEntity" mergeModelName="集市任务完成条件" globals="true" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.WorldBossEntity" mergeModelName="世界BOSS信息" globals="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.ModuleDataEntity" mergeModelName="模块数据" globals="true" empty="true"/>
+	
+	<!-- 普通表 -->
+	<mergeEntityConfig className="com.imop.lj.db.model.UserInfo" mergeModelName="用户信息"/>	
+	<mergeEntityConfig className="com.imop.lj.db.model.ArenaSnapEntity" mergeModelName="竞技场数据"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.ItemCostRecordEntity" mergeModelName="财报道具消耗记录" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.LandlordEntity" mergeModelName="斗地主表"/>
+	
+	<mergeEntityConfig className="com.imop.lj.db.model.RelationEntity" mergeModelName="关系表" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.DoingQuestEntity" mergeModelName="正在做的任务信息" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.FinishedQuestEntity" mergeModelName="已经完成的任务信息" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.CorpsEntity" mergeModelName="军团信息" bindCharName="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.CorpsMemberEntity" mergeModelName="军团成员信息" bindCharId="true" bindCharName="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.LandEntity" mergeModelName="领地数据" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.LoopTaskEntity" mergeModelName="环任务" bindCharId="true" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.MoneyTreeEntity" mergeModelName="摇钱树" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.PassTaskEntity" mergeModelName="内政任务" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.StepTaskEntity" mergeModelName="成长目标任务" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.UserSnapEntity" mergeModelName="离线数据" bindCharId="true" bindCharName="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.UserPrize" mergeModelName="礼包奖励" bindCharId="true" empty="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.VipEntity" mergeModelName="vip数据" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.ShipEntity" mergeModelName="渡江船只数据" empty="true" bindCharId="true"/>
+	<mergeEntityConfig className="com.imop.lj.db.model.IncomeEntity" mergeModelName="渡江抢夺收益" empty="true" bindCharId="true"/>
+</configs>

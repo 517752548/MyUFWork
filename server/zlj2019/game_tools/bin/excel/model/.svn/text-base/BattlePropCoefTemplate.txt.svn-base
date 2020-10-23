@@ -1,0 +1,11 @@
+int phArmor;[notNull=false;minValue=0]//物理防御系数
+int phHit;[notNull=false;minValue=0]//物理命中系数
+int phDodgy;[notNull=false;minValue=0]//物理闪避系数
+int phCrit;[notNull=false;minValue=0]//物理暴击系数
+int phAntiCrit;[notNull=false;minValue=0]//物理抗暴系数
+
+int maArmor;[notNull=false;minValue=0]//法术防御系数
+int maHit;[notNull=false;minValue=0]//法术命中系数
+int maDodgy;[notNull=false;minValue=0]//法术闪避系数
+int maCrit;[notNull=false;minValue=0]//法术暴击系数
+int maAntiCrit;[notNull=false;minValue=0]//法术抗暴系数

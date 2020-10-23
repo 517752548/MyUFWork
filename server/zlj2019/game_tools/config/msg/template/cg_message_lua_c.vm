@@ -1,0 +1,23 @@
+#macro( smallType $type)
+#if($type == "Byte")char#elseif( $type == "String" )const string&#elseif( $type == "Boolean" )bool#elseif( $type == "Short" )short#elseif( $type == "Integer" )int32#elseif( $type == "Long" )int64#else$type *#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( lowerCase $type)$type.toLowerCase()#end
+
+#foreach( $msg in $msgs )
+--
+-- $msg.comment
+#foreach( $field in $msg.fields )
+-- $field.smallName $field.comment
+#end
+--
+function msg.#lowerCase($msg.type)(#foreach( $field in $msg.fields )${field.smallName}#if($velocityCount != $msg.fields.size()),#end#end)
+	local buf = msg.start(msg.type.${msg.type})
+${msg.fieldLuaContent}
+	msg.send()
+	L_PRINT("[SEND][LUA] $msg.type")
+end
+#end
+

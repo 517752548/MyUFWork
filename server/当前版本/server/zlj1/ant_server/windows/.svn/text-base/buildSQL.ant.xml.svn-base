@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildSQL.ant" basedir="." default="root">
+	<!-- import -->
+	<import file="buildSQL.def.xml" />
+
+<!--
+// 版本号信息开始
+// 注意: 版本号信息由命令行参数给出!!
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 大版本号  -->
+	<property name="largeVer" value="cmdArgs" />
+	<!-- 代码版本号  -->
+	<property name="codeRev" value="cmdArgs" />
+	<!-- 语言版本 -->
+	<property name="langName" value="cmdArgs" />
+	<!-- 多语言资源版本号 -->
+	<property name="langRev" value="cmdArgs" />
+
+	<!-- 最终版本号及打包目录 -->
+	<property name="pubVer" 
+		value="${largeVer}.${codeRev}.${langName}.${langRev}"  />
+	<property name="tmpDir" 
+		value="${tempdir}/${pubVer}/temp" />
+	<property name="finalDir" 
+		value="${tempdir}/${pubVer}/final/db_init" />
+
+<!--
+// 开始构建
+///////////////////////////////////////////////////////////////////
+//-->
+	<target name="root">
+		<echo message="::: 构建数据库脚本" />
+		
+		<antcall target="clearTempDir" />
+		<antcall target="svnExport" />
+		<antcall target="updateDBVersion" />
+		<antcall target="onComplete" />
+	</target>
+
+	<!-- 清理临时目录 -->
+	<target name="clearTempDir">
+		<echo message="清理临时目录" />
+		<deltree dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}" />
+	</target>
+
+	<!-- svn 代码导出 -->
+	<target name="svnExport">
+		<!-- SQL -->
+		<echo message="从 svn 中导出 SQL 项目资源" />
+		<sqlBranchesExport 
+			branchesVer="${largeVer}" 
+			codeRev="${codeRev}" 
+			exportToDir="${tmpDir}" />
+	</target>
+
+	<!-- 修改数据版本号 -->
+	<target name="updateDBVersion">
+		<echo message="修改数据库脚本版本号" />
+		<!-- 通过正则表达式替换数据库版本号 -->
+		<replaceregexp 
+			file="${tmpDir}/war_db_init.sql"
+			byline="true"
+			flags="i"
+			  match="insert into (`)?t_db_version(`)? values (.*?);"
+			replace="insert into `t_db_version` values (\'1\', now(), \'${pubVer}\');"
+			encoding="utf-8" />
+	</target>
+
+	<!-- 完成脚本 -->
+	<target name="onComplete">
+		<!-- 复制 sql 文件到目标目录 -->
+		<move todir="${finalDir}">
+			<fileset dir="${tmpDir}">
+				<include name="**/*.sql" />
+			</fileset>
+		</move>
+	</target>
+</project>

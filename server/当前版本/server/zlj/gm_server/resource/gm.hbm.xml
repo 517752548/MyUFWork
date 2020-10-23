@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<query name="getSysUser"> 
+		<![CDATA[ from SysUser as u where u.username=:username and u.regionId=:regionId ]]>
+	</query>
+	<query name="getSysUserList"> 
+		<![CDATA[  from SysUser ]]>
+	</query>
+	<query name="searchSysUserByName"> 
+		<![CDATA[ from SysUser  where username=:username ]]>
+	</query>
+	<query name="searchSysUserByRole"> 
+		<![CDATA[ from SysUser  where  role=:role ]]>
+	</query>
+</hibernate-mapping>

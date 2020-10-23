@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="arena">
+
+	<message type="CG_SHOW_ARENA_PANEL" comment="请求显示竞技场面板">
+	</message>
+
+	<message type="GC_SHOW_ARENA_PANEL_MAIN" comment="显示竞技场面板主要信息">
+		<field type="Integer" name="rank" comment="当前排名" />
+		<field type="Integer" name="rankMax" comment="最高排名" />
+		<field type="Integer" name="conWinTimes" comment="连胜次数" />
+		<field type="Integer" name="challengeTimes" comment="当前可以挑战次数" />
+		<field type="Integer" name="canBuyChallengeTimes" comment="可否购买挑战次数，0否，1是" />
+		<field type="Integer" name="challengeCdTime" comment="挑战冷却时间，毫秒" />
+		<field type="Integer" name="canChallenge" comment="当前能否挑战，0否，1是" />
+		<field type="Integer" name="buyChallengeTimesCost" comment="购买竞技场次数消耗金票数" />
+		<field type="Integer" name="killCdCost" comment="清除冷却时间消耗银票数" />
+		
+		<field type="com.imop.lj.common.model.arena.ArenaMemberInfo" clientType="ArenaMemberData" 
+			name="arenaChallengeList" list="true" comment="挑战人员列表" macro="ArenaMemberInfo">
+		</field>
+	</message>
+	
+	<message type="CG_ARENA_BUY_CHALLENGE_TIME" comment="购买挑战次数">
+	</message>
+	
+	<message type="GC_ARENA_BUY_CHALLENGE_TIME" comment="购买挑战次数结果">
+		<field type="Integer" name="challengeTimes" comment="当前可以挑战挑战次数" />
+		<field type="Integer" name="buyChallengeTimesCost" comment="购买竞技场次数消耗金票数" />
+	</message>
+	
+	<message type="CG_ARENA_TOP_RANK_LIST" comment="显示竞技场榜首信息">
+	</message>
+	
+	<message type="GC_ARENA_TOP_RANK_LIST" comment="显示竞技场榜首信息">
+		<field type="Integer" name="myRank" comment="我的排名" />
+		<field type="Long" name="myCorpsId" comment="我的军团Id" />
+		<field type="String" name="myCorpsName" comment="我的军团名字" />
+		<field type="com.imop.lj.common.model.arena.ArenaMemberInfo" clientType="ArenaMemberData" 
+			name="arenaTopMemberList" list="true" comment="排行榜人员列表" macro="ArenaMemberInfo">
+		</field>
+	</message>
+	
+	<message type="CG_ARENA_ATTACK_OPPONENT" comment="攻击挑战列表对手">
+		<field type="Integer" name="targetNum" comment="对手序号，从1开始" />
+	</message>
+	
+	<message type="CG_ARENA_REFRESH_OPPONENT" comment="请求刷新对手列表">
+	</message>
+	
+	<message type="CG_ARENA_KILL_CD" comment="消除竞技场cd">
+	</message>
+	
+	<message type="GC_ARENA_KILL_CD" comment="消除竞技场cd成功">
+	</message>
+	
+	<message type="CG_ARENA_BATTLE_RECORD" comment="请求竞技场战斗记录">
+	</message>
+	
+	<message type="GC_ARENA_BATTLE_RECORD" comment="请求竞技场战斗记录">
+		<field type="Long" name="curTime" comment="当前时间" />
+		<field type="com.imop.lj.common.model.arena.ArenaReportHistoryInfo" clientType="ArenaReportHistoryData" 
+			name="arenaReportHistoryList" list="true" comment="竞技场战斗记录">
+			<field type="String" name="reportId" comment="战报Id" />
+			<field type="Long" name="reportTime" comment="战报时间" />
+			<field type="Long" name="targetRoleId" comment="对手Id" />
+			<field type="Integer" name="targetTplId" comment="对手模板Id" />
+			<field type="Integer" name="targetLevel" comment="对手等级" />
+			<field type="String" name="targetName" comment="对手名字" />
+			<field type="Integer" name="rankDelta" comment="名次变化" />
+			<field type="Integer" name="isWin" comment="是否胜利" />
+		</field>
+	</message>
+	
+	<message type="CG_ARENA_RANK_REWARD_LIST" comment="竞技场排名奖励列表">
+	</message>
+	
+	<message type="GC_ARENA_RANK_REWARD_LIST" comment="竞技场排名奖励列表">
+		<field type="String" name="rewardInfoList" list="true" comment="排名奖励列表" />
+		<field type="Integer" name="rank" list="true" comment="排名列表" />
+	</message>
+	
+</messages>

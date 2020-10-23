@@ -1,0 +1,1169 @@
+Index: gwt/ui/client/model/Bytes.java
+===================================================================
+--- gwt/ui/client/model/Bytes.java	(revision 143)
++++ gwt/ui/client/model/Bytes.java	(working copy)
+@@ -10,7 +10,6 @@
+ import com.rednels.ofcgwt.client.model.elements.LineChart;
+ import com.rednels.ofcgwt.client.model.elements.dot.BaseDot;
+ import com.rednels.ofcgwt.client.model.elements.dot.Dot;
+-import com.rednels.ofcgwt.client.model.elements.dot.SolidDot;
+ 
+ @SuppressWarnings("unchecked")
+ public class Bytes extends PerformanceChartPanel {
+@@ -61,7 +60,7 @@
+ 					"IN:" + perf.getBytes_in() + "B" +
+ 					"<br>USERS:" + perf.getUsers());
+ 			lc_in.addDots(inDot);
+-
++			
+ 			BaseDot outDot = new Dot(perf.getBytes_out());
+ 			outDot.setColour(PanelConstants.LC_AVG_COLOR);
+ 			outDot.setSize(PanelConstants.LINE_CHART_DOT_SIZE);
+Index: gwt/ui/client/model/MainSearchPanel.java
+===================================================================
+--- gwt/ui/client/model/MainSearchPanel.java	(revision 173)
++++ gwt/ui/client/model/MainSearchPanel.java	(working copy)
+@@ -126,6 +126,7 @@
+ 		searchBtn = new Button("查询");
+ 		searchBtn.setIconCls("");
+ 		
++		
+ //		advanceCheckBox = new Checkbox();
+ //		advanceCheckBox.setBoxLabel("高级查找");
+ //		advanceCheckBox.setWidth(200);
+@@ -264,7 +265,7 @@
+ 				List<String> gameSvcList = new ArrayList<String>();
+ 				// remove the current datas from svcStore
+ 				svcStore.removeAll();
+-
++				Window.alert("gameSvcList.Size():" +  result.size());
+ 				// add new Datas to svcStore
+ 				RecordDef recDef = new RecordDef(
+ 						new FieldDef[] { new StringFieldDef("svc") });
+@@ -280,12 +281,15 @@
+ 						Record rec = recDef.createRecord(new Object[] { svr
+ 								.getSvc_type() + "#" + svr.getSvcid() });
+ 						svcTypeRecord[i++] = rec;
++						Window.alert("add svcTypeRecord:" +  svr.getSvc_type()+"#" + svr.getSvcid() + "svcTypeRecord.size:" + svcTypeRecord.length);
+ 					}
+ 				}
+ 				
+ 				svcStore.insert(0, svcTypeRecord);
++				Window.alert("After svcStore insert svcTypeRecord: svcTypeRecord.size:" + svcTypeRecord.length );
+ 				// Commit the data changes of svcStore, to re-attach to cbServerC
+ 				svcStore.commitChanges();
++				Window.alert("After svcStore Commit changes:" );
+ 
+ 			}
+ 		});
+Index: gwt/ui/client/model/Performance.java
+===================================================================
+--- gwt/ui/client/model/Performance.java	(revision 134)
++++ gwt/ui/client/model/Performance.java	(working copy)
+@@ -854,4 +854,63 @@
+ 		this.arrays = arrays;
+ 	}
+ 	
++	public void setDefault(){
++		ts_end = new Timestamp(0);
++		users = 0;
++		mem_total = 0;
++		mem_usage = 0;
++		cpu_avg = 0;
++		cpu_max = 0;
++		req_reach = 0;
++		req_ok = 0;
++		req_flop = 0;
++		bytes_in = 0; 
++		bytes_out = 0 ;;
++		thr_cur = 0;
++		ygc_time = 0;
++		ygc_count = 0;
++		fgc_time = 0;
++		fgc_count = 0;
++		msg_profile = 0;
++		msg_0 = 0;
++		msg_1 = 0;
++		msg_2 = 0;
++		msg_3 = 0;
++		msg_4 = 0;
++		msg_5 = 0;
++		msg_6 = 0;
++		msg_7 = 0;
++		msg_8 = 0;
++		msg_flop = 0;
++		msg_avg = 0;
++		msg_max = 0;
++		db_profile = 0;
++		db_0 = 0;
++		db_1 = 0;
++		db_2 = 0;
++		db_3 = 0;
++		db_4 = 0;
++		db_5 = 0;
++		db_6 = 0;
++		db_7 = 0;
++		db_8 = 0;
++		db_flop = 0;
++		db_avg = 0;
++		db_max = 0;
++		rpc_profile = 0;
++		rpc_0 = 0;
++		rpc_1 = 0;
++		rpc_2 = 0;
++		rpc_3 = 0;
++		rpc_4 = 0;
++		rpc_5 = 0;
++		rpc_6 = 0;
++		rpc_7 = 0;
++		rpc_8 = 0;
++		rpc_flop = 0;
++		rpc_avg = 0;
++		rpc_max = 0;
++	}
++	
++	
+ }
+Index: gwt/ui/client/model/PerformanceChartPanel.java
+===================================================================
+--- gwt/ui/client/model/PerformanceChartPanel.java	(revision 173)
++++ gwt/ui/client/model/PerformanceChartPanel.java	(working copy)
+@@ -3,18 +3,17 @@
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+-import com.google.gwt.user.client.Window;
+ import com.gwtext.client.util.Format;
+ import com.opi.gibp.tools.performance.gwt.ui.client.PanelConstants;
+ import com.rednels.ofcgwt.client.model.ChartData;
+ import com.rednels.ofcgwt.client.model.Text;
+ import com.rednels.ofcgwt.client.model.ToolTip;
+-import com.rednels.ofcgwt.client.model.axis.Label;
+ import com.rednels.ofcgwt.client.model.axis.XAxis;
+-import com.rednels.ofcgwt.client.model.axis.XAxis.Labels;
+ import com.rednels.ofcgwt.client.model.axis.YAxis;
+ import com.rednels.ofcgwt.client.model.elements.LineChart;
++import com.rednels.ofcgwt.client.model.elements.dot.BaseDot;
+ import com.rednels.ofcgwt.client.model.elements.dot.Dot;
++import com.rednels.ofcgwt.client.model.elements.dot.Star;
+ 
+ @SuppressWarnings("unchecked")
+ public class PerformanceChartPanel extends ChartPanel {
+@@ -53,19 +52,31 @@
+ 		lc_user.setText("USER");
+ 		
+ 		long max_user = 0 ; 
+-		for( int i = perfList.size() - 1 ; i > 0 ; i -- ){
++		for( int i = perfList.size() - 1 ; i >= 0 ; i -- ){
+ 			Performance perf = perfList.get(i);	
+-			
+-			Dot userDot = new Dot(perf.getUsers());
+-			userDot.setColour(PanelConstants.LC_USER_COLOR);
+-			userDot.setSize(PanelConstants.LINE_CHART_DOT_SIZE);
+-			userDot.setHaloSize(PanelConstants.LINE_CHART_HALO_DOT_SIZE);
+-			userDot.setTooltip(Format.date(perf.getTs_end().toGMTString(),PanelConstants.dateTimePattern) +"<br>" +
+-					"<br>USERS:"+ perf.getUsers()  );
+-			
+-			
+-			lc_user.addDots(userDot);
+-			
++
++			if(perf.getSvrid() == null){
++				
++				BaseDot userDot = new Dot( 0 );
++				userDot.setColour("#CC3333");
++				userDot.setSize(PanelConstants.LINE_CHART_DOT_SIZE + 2);
++				userDot.setHaloSize(0);
++				userDot.setTooltip( "<h1>No Data Record!!</h1>" +"<br>" +
++						"<br>USERS:"+ 0  );
++				lc_user.addDots(userDot);
++				
++			}else{
++				
++				BaseDot userDot = new Dot(perf.getUsers());
++				userDot.setColour(PanelConstants.LC_USER_COLOR);
++				userDot.setSize(PanelConstants.LINE_CHART_DOT_SIZE);
++				userDot.setHaloSize(PanelConstants.LINE_CHART_HALO_DOT_SIZE);
++				userDot.setTooltip(Format.date(perf.getTs_end().toGMTString(),PanelConstants.dateTimePattern) +"<br>" +
++						"<br>USERS:"+ perf.getUsers()  );
++				
++				lc_user.addDots(userDot);
++			}
++
+ 			max_user = max_user > perf.getUsers() ? max_user : perf.getUsers();
+ 		}
+ 		
+@@ -82,6 +93,9 @@
+ 		
+ //		setToolTip(cd);
+ 		
++		XAxis xa = cd.getXAxis();
++		xa.setMax(queryData.size());
++		cd.setXAxis(xa);
+ 		
+ 		super.setData(queryData, cd);
+ 	}
+Index: gwt/ui/client/PanelConstants.java
+===================================================================
+--- gwt/ui/client/PanelConstants.java	(revision 173)
++++ gwt/ui/client/PanelConstants.java	(working copy)
+@@ -21,7 +21,7 @@
+ 	/**Panel中一些常量**/
+ 	
+ 	/**单条线的点数**/
+-	public final static long LINE_DOT_COUNT = 288;
++	public final static long LINE_DOT_COUNT = 2;
+ 	/**CHART 背景色**/
+ 	public final static String CHART_BACKGROUND_COLOR = "#F7F7F7";
+ 	/**CHART 图表宽**/
+Index: gwt/ui/server/PerfServiceImpl.java
+===================================================================
+--- gwt/ui/server/PerfServiceImpl.java	(revision 173)
++++ gwt/ui/server/PerfServiceImpl.java	(working copy)
+@@ -6,7 +6,6 @@
+ import java.sql.Timestamp;
+ import java.text.SimpleDateFormat;
+ import java.util.ArrayList;
+-import java.util.Date;
+ import java.util.Iterator;
+ import java.util.List;
+ import java.util.Map;
+@@ -23,35 +22,82 @@
+ @SuppressWarnings("serial")
+ public class PerfServiceImpl extends RemoteServiceServlet implements
+ 		PerfService {
+-	private static final SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+-	private static final SimpleDateFormat dateFormatter2 = new SimpleDateFormat("yyyy-MM-dd");
+ 	/* (non-Javadoc)
+ 	 * @see com.gogole.gwt.ui.test.client.PerfService#getLineChartDatas(java.util.Map)
+ 	 */
+-	@SuppressWarnings("unchecked")
++	@SuppressWarnings({ "unchecked"})
+ 	@Override
+ 	public List<Performance> getLineChartDatas(Map<String, Object> queryData) {
+-		
+-		String condition = buildCondition(queryData);
+-		String sql = "select * from perf where 1=1 ";
++
+ 		Timestamp begin = new Timestamp(System.currentTimeMillis() - 1000 * 60 * 60 * 24);
+ 		Timestamp end = new Timestamp(System.currentTimeMillis());
+-		String range = " and ts_end between '" + begin + "' and '" + end + "' ";
++		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
++		List<String> monthList = PerfUtil.fromMonths(begin.toString(), end.toString(), formatter) ;
+ 		
+-//		String limit = " limit 0 , 72 ";
+-//		sql += condition + limit ;
+-		sql += range + condition ;
++		StringBuilder sqlBuilder = new StringBuilder();
++		for(int i = 0 ; i < monthList.size() ; i++){
++			String fromTables = "perf_" +  monthList.get(i);
++			String select = "select * from ";
++			String whereTrue = " where 1=1 ";
++			String timeRange = " and ts_end between '" + begin + "' and '" + end + "' ";
++	
++			sqlBuilder.append("(")
++						.append( select ).append( fromTables ).append( whereTrue ).append(timeRange)
++						.append(")");
++			sqlBuilder.append(" union ");
++		}
++		String sql = sqlBuilder.toString();
++		if(sql.endsWith(" union ")){
++			sql = sql.substring(0,sql.length()- 7);
++		}
++		if(monthList.size()==1){//如果是单表，则删除前后因union 所需要的小括号
++			sql = sql.substring(1,sql.lastIndexOf(")"));
++		}
+ 		
++		String andCondition = buildCondition(queryData);
++		
++		sql += andCondition;
+ 		System.out.println(sql);
++		
+ 		List<Performance> perfList = null;
++		List<Performance> resultList = new ArrayList<Performance>();
+ 		try {
+ 			perfList = (List<Performance>)DbHelper.Select(sql, "com.opi.gibp.tools.performance.gwt.ui.client.model.Performance");
++			
++			if(perfList != null && perfList.size()>0){
++				long preTime = 0;
++				long nowTime = 0;
++				
++				for(int i = 0 ; i < perfList.size()-1 ; i++){
++					Performance perf = perfList.get(i);
++					
++					if(i==0){
++						preTime = perf.getTs_end().getTime();
++					}
++					nowTime = perf.getTs_end().getTime();
++					
++					if(nowTime - preTime >= 1000 * 60 * 5 * 2){//如果两点之间的时间大于了平均汇报时间5分钟的2倍，说明有点未记录,则将期间的点补充完整
++						
++						for(long j = preTime ; j <= nowTime ; j +=(1000 * 60 * 5) ){
++							Performance nullPerf = new Performance();
++							nullPerf.setDefault();
++							resultList.add(nullPerf);
++						}
++						
++					}else{
++						resultList.add(perf);
++					}
++					
++					preTime = perf.getTs_end().getTime();
++				}
++			}
++			
+ 		} catch (Exception e) {
+ 			// TODO Auto-generated catch block
+ 			e.printStackTrace();
+ 		}
+ 		
+-		return perfList;
++		return resultList;
+ 	}
+ 
+ 	private String buildCondition(Map<String, Object> queryData) {
+@@ -62,7 +108,10 @@
+ 			String key = keyIt.next();
+ 			if(key.contains("###")){
+ 				
+-				result = buildTimeCond(queryData, result, key);
++				List<String> timeCondList = getTimeCond(queryData.get(key).toString());
++				if(timeCondList!=null && timeCondList.size()>=2){
++					result += " and " + key.replace("###", "") + " between '" + timeCondList.get(0) + "' and '" + timeCondList.get(1) + "' ";
++				}
+ 				
+ 			}else if(key.contains("???")){
+ 				//???扩展用
+@@ -80,10 +129,41 @@
+ 			
+ 		}
+ 
+-		result += " order by id desc ";
++		result += " order by ts_end desc ";
+ 		return result;
+ 	}
+-
++	
++	/**
++	 * @param queryDataValue
++	 * @return list.size()<=2的list,list.get(0)为最小时间，list.get(1)为最大时间
++	 */
++	private List<String> getTimeCond(String queryDataValue){
++		
++		List<String> resultList = new ArrayList<String>();
++		//###时间处理 value ###beginDate###endDate
++		try{
++			
++			String[] dateRange = queryDataValue.split("###");
++			if(dateRange != null && dateRange.length > 0 ){
++				// 获得第一个时间，作为时间戳的开始
++				String begin = dateRange[0];
++				//获得list中的最后一个时间，作为时间戳的结束
++				String end = dateRange[dateRange.length - 1];
++				
++				resultList.add(begin);
++				resultList.add(end);
++			}
++			
++			
++		}catch (Exception e) {
++			e.printStackTrace();
++		}
++		
++		
++		return resultList;
++	}
++	
++	@SuppressWarnings("unused")
+ 	private String buildTimeCond(Map<String, Object> queryData, String result,
+ 			String key) {
+ 		//###时间处理 value ###beginDate###endDate
+@@ -91,7 +171,6 @@
+ 		try{
+ 			String realKey = key.replace("###", "");
+ 			String[] dateRange = ((String)queryData.get(key)).split("###");
+-			System.out.println(((String)queryData.get(key)));
+ 			if(dateRange != null && dateRange.length > 0){
+ 				// 获得第一个时间，作为时间戳的开始
+ 				String begin = dateRange[0];
+@@ -118,31 +197,64 @@
+ 	@SuppressWarnings({ "unchecked", "rawtypes" })
+ 	@Override
+ 	public List<Performance> getStatMaxLineChartDatas(Map<String, Object> queryData) {
++		List<String> monthList = null;
++		String begin = null;
++		String end = null;
++		if(queryData.containsKey("###ts_end")){
++			String timeRange = queryData.get("###ts_end").toString();
++			List<String> timeRangeList = getTimeCond(timeRange);
++			
++			if(timeRangeList != null && timeRangeList.size() >=2){
++				begin = timeRangeList.get(0);
++				end = timeRangeList.get(1);
++				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
++				monthList = PerfUtil.fromMonths(begin, end, formatter) ;
++			}
++		}
+ 		
+-		String SQL = "SELECT * FROM perf where 1=1 ";
+-		String cond = buildCondition(queryData);
+-		SQL += cond;
+-		System.out.println(SQL);
++		StringBuilder sqlBuilder = new StringBuilder();
++		for(int i = 0 ; i < monthList.size() ; i++){
++			String fromTables = "perf_" + monthList.get(i);
++			String select = "select * from ";
++			String whereTrue = " where 1=1 ";
++			String timeRange = " and ts_end between '" + begin + "' and '" + end + "' ";
++			String andCondition = buildCondition(queryData);
++	
++			sqlBuilder.append("(")
++						.append( select ).append( fromTables ).append( whereTrue ).append( timeRange ).append(andCondition)
++					.append(")");
++			sqlBuilder.append(" union ");
++		}
++		
++		String sql = sqlBuilder.toString();
++		if(sql.endsWith(" union ")){
++			sql = sql.substring(0,sql.length()- 7);
++		}
++		if(monthList.size()==1){//如果是单表，则删除前后因union 所需要的小括号
++			sql = sql.substring(1,sql.lastIndexOf(")"));
++		}
++		
++		System.out.println(sql);
+ 		List<Performance> rawDataList = null;
+ 		try {
+ 			
+-			rawDataList = DbHelper.Select(SQL, "com.opi.gibp.tools.performance.gwt.ui.client.model.Performance");
++			rawDataList = DbHelper.Select(sql, "com.opi.gibp.tools.performance.gwt.ui.client.model.Performance");
+ 			
+ 		} catch (Exception e) {
+ 			// TODO Auto-generated catch block
+ 			e.printStackTrace();
+ 		}
+ 		
+-		if(rawDataList == null){
+-			return null;
++		if(rawDataList == null || rawDataList.size() == 0 ){
++			return rawDataList;
+ 		}
+ 		
+ 		/**
+-		 * 1.获取选择出的数据的size，判断与72关系，如果rawDataSize/72<1,则直接返回rawData
+-		 * 										如果rawDataSize/72>1,则分成rawDataSize/72个区间，对区间内的点，取max
++		 * 1.获取选择出的数据的size，判断与288关系，如果rawDataSize/288<1,则直接返回rawData
++		 * 										如果rawDataSize/288>1,则分成rawDataSize/288个区间，对区间内的点，取max
+ 		 * 
+ 		 * **/
+-		int stepCount = 72;
++		int stepCount = 288;
+ 		int rawDataSize = rawDataList.size();
+ 		float step = ((float)rawDataSize)/stepCount;
+ 		if(step < 1){
+@@ -151,10 +263,23 @@
+ 		
+ 		List maxList = getMaxList(step,stepCount,rawDataList);
+ 		
+-		
+ 		return maxList;
++//		return rawDataList;
+ 	}
+ 
++	@SuppressWarnings("unused")
++	private List<Performance> fixList(List<Performance> maxList) {
++		
++		long maxTime = maxList.get(maxList.size()-1).getTs_end().getTime();
++		long minTime = maxList.get(0).getTs_end().getTime();
++		
++		long timeStep = ( maxTime - minTime ) / maxList.size();
++		
++		System.out.println(timeStep);
++		
++		return null;
++	}
++
+ 	/**
+ 	 * 按照baseStep~baseStep+step区间，从rawDataList中取出该区间中的最大值，并按照先后顺序依次存入List
+ 	 * 
+@@ -163,6 +288,7 @@
+ 	 * @param rawDataList 
+ 	 * @return
+ 	 */
++	@SuppressWarnings("rawtypes")
+ 	private List getMaxList(float step, int stepCount,
+ 			List<Performance> rawDataList) {
+ 		
+@@ -177,9 +303,10 @@
+ 			
+ 			for(int j = base ; j < top ; j++ ){
+ 				Performance perf = rawDataList.get(j);
+-				buildMax(perf,max);
++				PerfUtil.buildMax(perf,max);
+ 			}
+ 			
++			
+ 			maxList.add(max);
+ 			
+ 		}
+@@ -187,173 +314,6 @@
+ 		return maxList;
+ 	}
+ 
+-	/**
+-	 * 比对perf和max，将max中的所有字段，换成perf和max中该字段的最大值
+-	 * @param perf
+-	 * @param max
+-	 */
+-	private void buildMax(Performance perf, Performance max) {
+-		if(perf.getTs_end().after(max.getTs_end())){
+-			max.setTs_end(perf.getTs_end());
+-		}
+-		if(perf.getUsers()>max.getUsers()){
+-			max.setUsers(perf.getUsers());
+-		}
+-		if(perf.getMem_total()>max.getMem_total()){
+-			max.setMem_total(perf.getMem_total());
+-		}
+-		if(perf.getMem_usage()>max.getMem_usage()){
+-			max.setMem_usage(perf.getMem_usage());
+-		}
+-		if(perf.getCpu_avg()>max.getCpu_avg()){
+-			max.setCpu_avg(perf.getCpu_avg());
+-		}
+-		if(perf.getCpu_max()>max.getCpu_max()){
+-			max.setCpu_max(perf.getCpu_max());
+-		}
+-		if(perf.getReq_reach()>max.getReq_reach()){
+-			max.setReq_reach(perf.getReq_reach());
+-		}
+-		if(perf.getReq_flop()>max.getReq_flop()){
+-			max.setReq_flop(perf.getReq_flop());
+-		}
+-		if(perf.getReq_ok()>max.getReq_ok()){
+-			max.setReq_ok(perf.getReq_ok());
+-		}
+-		if(perf.getBytes_in()>max.getBytes_in()){
+-			max.setBytes_in(perf.getBytes_in());
+-		}
+-		if(perf.getBytes_out()>max.getBytes_out()){
+-			max.setBytes_out(perf.getBytes_out());
+-		}
+-		if(perf.getThr_cur()>max.getThr_cur()){
+-			max.setThr_cur(perf.getThr_cur());
+-		}
+-		if(perf.getYgc_count()>max.getYgc_count()){
+-			max.setYgc_count(perf.getYgc_count());
+-		}
+-		if(perf.getFgc_count()>max.getFgc_count()){
+-			max.setFgc_count(perf.getFgc_count());
+-		}
+-		if(perf.getMsg_profile()>max.getMsg_profile()){
+-			max.setMsg_profile(perf.getMsg_profile());
+-		}
+-		if(perf.getMsg_0()>max.getMsg_0()){
+-			max.setMsg_0(perf.getMsg_0());
+-		}
+-		if(perf.getMsg_1()>max.getMsg_1()){
+-			max.setMsg_1(perf.getMsg_1());
+-		}
+-		if(perf.getMsg_2()>max.getMsg_2()){
+-			max.setMsg_2(perf.getMsg_2());
+-		}
+-		if(perf.getMsg_3()>max.getMsg_3()){
+-			max.setMsg_3(perf.getMsg_3());
+-		}
+-		if(perf.getMsg_4()>max.getMsg_4()){
+-			max.setMsg_4(perf.getMsg_4());
+-		}
+-		if(perf.getMsg_5()>max.getMsg_5()){
+-			max.setMsg_5(perf.getMsg_5());
+-		}
+-		if(perf.getMsg_6()>max.getMsg_6()){
+-			max.setMsg_6(perf.getMsg_6());
+-		}
+-		if(perf.getMsg_7()>max.getMsg_7()){
+-			max.setMsg_7(perf.getMsg_7());
+-		}
+-		if(perf.getMsg_8()>max.getMsg_8()){
+-			max.setMsg_8(perf.getMsg_8());
+-		}
+-		if(perf.getMsg_flop()>max.getMsg_flop()){
+-			max.setMsg_flop(perf.getMsg_flop());
+-		}
+-		if(perf.getMsg_avg()>max.getMsg_avg()){
+-			max.setMsg_avg(perf.getMsg_avg());
+-		}
+-		if(perf.getMsg_max()>max.getMsg_max()){
+-			max.setMsg_max(perf.getMsg_max());
+-		}
+-		if(perf.getDb_profile()>max.getDb_profile()){
+-			max.setDb_profile(perf.getDb_profile());
+-		}
+-		if(perf.getDb_0()>max.getDb_0()){
+-			max.setDb_0(perf.getDb_0());
+-		}
+-		if(perf.getDb_1()>max.getDb_1()){
+-			max.setDb_1(perf.getDb_1());
+-		}
+-		if(perf.getDb_2()>max.getDb_2()){
+-			max.setDb_2(perf.getDb_2());
+-		}
+-		if(perf.getDb_3()>max.getDb_3()){
+-			max.setDb_3(perf.getDb_3());
+-		}
+-		if(perf.getDb_4()>max.getDb_4()){
+-			max.setDb_4(perf.getDb_4());
+-		}
+-		if(perf.getDb_5()>max.getDb_5()){
+-			max.setDb_5(perf.getDb_5());
+-		}
+-		if(perf.getDb_6()>max.getDb_6()){
+-			max.setDb_6(perf.getDb_6());
+-		}
+-		if(perf.getDb_7()>max.getDb_7()){
+-			max.setDb_7(perf.getDb_7());
+-		}
+-		if(perf.getDb_8()>max.getDb_8()){
+-			max.setDb_8(perf.getDb_8());
+-		}
+-		if(perf.getDb_flop()>max.getDb_flop()){
+-			max.setDb_flop(perf.getDb_flop());
+-		}
+-		if(perf.getDb_avg()>max.getDb_avg()){
+-			max.setDb_avg(perf.getDb_avg());
+-		}
+-		if(perf.getDb_max()>max.getDb_max()){
+-			max.setDb_max(perf.getDb_max());
+-		}
+-		if(perf.getRpc_profile()>max.getRpc_profile()){
+-			max.setRpc_profile(perf.getRpc_profile());
+-		}
+-		if(perf.getRpc_0()>max.getRpc_0()){
+-			max.setRpc_0(perf.getRpc_0());
+-		}
+-		if(perf.getRpc_1()>max.getRpc_1()){
+-			max.setRpc_1(perf.getRpc_1());
+-		}
+-		if(perf.getRpc_2()>max.getRpc_2()){
+-			max.setRpc_2(perf.getRpc_2());
+-		}
+-		if(perf.getRpc_3()>max.getRpc_3()){
+-			max.setRpc_3(perf.getRpc_3());
+-		}
+-		if(perf.getRpc_4()>max.getRpc_4()){
+-			max.setRpc_4(perf.getRpc_4());
+-		}
+-		if(perf.getRpc_5()>max.getRpc_5()){
+-			max.setRpc_5(perf.getRpc_5());
+-		}
+-		if(perf.getRpc_6()>max.getRpc_6()){
+-			max.setRpc_6(perf.getRpc_6());
+-		}
+-		if(perf.getRpc_7()>max.getRpc_7()){
+-			max.setRpc_7(perf.getRpc_7());
+-		}
+-		if(perf.getRpc_8()>max.getRpc_8()){
+-			max.setRpc_8(perf.getRpc_8());
+-		}
+-		if(perf.getRpc_flop()>max.getRpc_flop()){
+-			max.setRpc_flop(perf.getRpc_flop());
+-		}
+-		if(perf.getRpc_avg()>max.getRpc_avg()){
+-			max.setRpc_avg(perf.getRpc_avg());
+-		}
+-		if(perf.getRpc_max()>max.getRpc_max()){
+-			max.setRpc_max(perf.getRpc_max());
+-		}
+-		
+-	}
+ 
+ 
+ }
+Index: gwt/ui/server/PerfUtil.java
+===================================================================
+--- gwt/ui/server/PerfUtil.java	(revision 0)
++++ gwt/ui/server/PerfUtil.java	(revision 0)
+@@ -0,0 +1,271 @@
++package com.opi.gibp.tools.performance.gwt.ui.server;
++
++import java.sql.Timestamp;
++import java.text.ParseException;
++import java.text.SimpleDateFormat;
++import java.util.ArrayList;
++import java.util.Calendar;
++import java.util.Date;
++import java.util.List;
++
++import com.opi.gibp.tools.performance.gwt.ui.client.model.Performance;
++
++public class PerfUtil {
++
++	/**
++	 * 比对perf和max，将max中的所有字段，换成perf和max中该字段的最大值
++	 * @param perf
++	 * @param max
++	 */
++	public static void buildMax(Performance perf, Performance max) {
++		max.setId(perf.getId());
++		max.setLogversion(perf.getLogversion());
++		max.setGameid(perf.getGameid());
++		max.setSvrid(perf.getSvrid());
++		max.setSvcid(perf.getSvcid());
++		max.setSvc_type(perf.getSvc_type());
++		if(perf.getTs_end().after(max.getTs_end())){
++			max.setTs_end(perf.getTs_end());
++		}
++		if(perf.getUsers()>max.getUsers()){
++			max.setUsers(perf.getUsers());
++		}
++		if(perf.getMem_total()>max.getMem_total()){
++			max.setMem_total(perf.getMem_total());
++		}
++		if(perf.getMem_usage()>max.getMem_usage()){
++			max.setMem_usage(perf.getMem_usage());
++		}
++		if(perf.getCpu_avg()>max.getCpu_avg()){
++			max.setCpu_avg(perf.getCpu_avg());
++		}
++		if(perf.getCpu_max()>max.getCpu_max()){
++			max.setCpu_max(perf.getCpu_max());
++		}
++		if(perf.getReq_reach()>max.getReq_reach()){
++			max.setReq_reach(perf.getReq_reach());
++		}
++		if(perf.getReq_flop()>max.getReq_flop()){
++			max.setReq_flop(perf.getReq_flop());
++		}
++		if(perf.getReq_ok()>max.getReq_ok()){
++			max.setReq_ok(perf.getReq_ok());
++		}
++		if(perf.getBytes_in()>max.getBytes_in()){
++			max.setBytes_in(perf.getBytes_in());
++		}
++		if(perf.getBytes_out()>max.getBytes_out()){
++			max.setBytes_out(perf.getBytes_out());
++		}
++		if(perf.getThr_cur()>max.getThr_cur()){
++			max.setThr_cur(perf.getThr_cur());
++		}
++		if(perf.getYgc_count()>max.getYgc_count()){
++			max.setYgc_count(perf.getYgc_count());
++		}
++		if(perf.getFgc_count()>max.getFgc_count()){
++			max.setFgc_count(perf.getFgc_count());
++		}
++		if(perf.getMsg_profile()>max.getMsg_profile()){
++			max.setMsg_profile(perf.getMsg_profile());
++		}
++		if(perf.getMsg_0()>max.getMsg_0()){
++			max.setMsg_0(perf.getMsg_0());
++		}
++		if(perf.getMsg_1()>max.getMsg_1()){
++			max.setMsg_1(perf.getMsg_1());
++		}
++		if(perf.getMsg_2()>max.getMsg_2()){
++			max.setMsg_2(perf.getMsg_2());
++		}
++		if(perf.getMsg_3()>max.getMsg_3()){
++			max.setMsg_3(perf.getMsg_3());
++		}
++		if(perf.getMsg_4()>max.getMsg_4()){
++			max.setMsg_4(perf.getMsg_4());
++		}
++		if(perf.getMsg_5()>max.getMsg_5()){
++			max.setMsg_5(perf.getMsg_5());
++		}
++		if(perf.getMsg_6()>max.getMsg_6()){
++			max.setMsg_6(perf.getMsg_6());
++		}
++		if(perf.getMsg_7()>max.getMsg_7()){
++			max.setMsg_7(perf.getMsg_7());
++		}
++		if(perf.getMsg_8()>max.getMsg_8()){
++			max.setMsg_8(perf.getMsg_8());
++		}
++		if(perf.getMsg_flop()>max.getMsg_flop()){
++			max.setMsg_flop(perf.getMsg_flop());
++		}
++		if(perf.getMsg_avg()>max.getMsg_avg()){
++			max.setMsg_avg(perf.getMsg_avg());
++		}
++		if(perf.getMsg_max()>max.getMsg_max()){
++			max.setMsg_max(perf.getMsg_max());
++		}
++		if(perf.getDb_profile()>max.getDb_profile()){
++			max.setDb_profile(perf.getDb_profile());
++		}
++		if(perf.getDb_0()>max.getDb_0()){
++			max.setDb_0(perf.getDb_0());
++		}
++		if(perf.getDb_1()>max.getDb_1()){
++			max.setDb_1(perf.getDb_1());
++		}
++		if(perf.getDb_2()>max.getDb_2()){
++			max.setDb_2(perf.getDb_2());
++		}
++		if(perf.getDb_3()>max.getDb_3()){
++			max.setDb_3(perf.getDb_3());
++		}
++		if(perf.getDb_4()>max.getDb_4()){
++			max.setDb_4(perf.getDb_4());
++		}
++		if(perf.getDb_5()>max.getDb_5()){
++			max.setDb_5(perf.getDb_5());
++		}
++		if(perf.getDb_6()>max.getDb_6()){
++			max.setDb_6(perf.getDb_6());
++		}
++		if(perf.getDb_7()>max.getDb_7()){
++			max.setDb_7(perf.getDb_7());
++		}
++		if(perf.getDb_8()>max.getDb_8()){
++			max.setDb_8(perf.getDb_8());
++		}
++		if(perf.getDb_flop()>max.getDb_flop()){
++			max.setDb_flop(perf.getDb_flop());
++		}
++		if(perf.getDb_avg()>max.getDb_avg()){
++			max.setDb_avg(perf.getDb_avg());
++		}
++		if(perf.getDb_max()>max.getDb_max()){
++			max.setDb_max(perf.getDb_max());
++		}
++		if(perf.getRpc_profile()>max.getRpc_profile()){
++			max.setRpc_profile(perf.getRpc_profile());
++		}
++		if(perf.getRpc_0()>max.getRpc_0()){
++			max.setRpc_0(perf.getRpc_0());
++		}
++		if(perf.getRpc_1()>max.getRpc_1()){
++			max.setRpc_1(perf.getRpc_1());
++		}
++		if(perf.getRpc_2()>max.getRpc_2()){
++			max.setRpc_2(perf.getRpc_2());
++		}
++		if(perf.getRpc_3()>max.getRpc_3()){
++			max.setRpc_3(perf.getRpc_3());
++		}
++		if(perf.getRpc_4()>max.getRpc_4()){
++			max.setRpc_4(perf.getRpc_4());
++		}
++		if(perf.getRpc_5()>max.getRpc_5()){
++			max.setRpc_5(perf.getRpc_5());
++		}
++		if(perf.getRpc_6()>max.getRpc_6()){
++			max.setRpc_6(perf.getRpc_6());
++		}
++		if(perf.getRpc_7()>max.getRpc_7()){
++			max.setRpc_7(perf.getRpc_7());
++		}
++		if(perf.getRpc_8()>max.getRpc_8()){
++			max.setRpc_8(perf.getRpc_8());
++		}
++		if(perf.getRpc_flop()>max.getRpc_flop()){
++			max.setRpc_flop(perf.getRpc_flop());
++		}
++		if(perf.getRpc_avg()>max.getRpc_avg()){
++			max.setRpc_avg(perf.getRpc_avg());
++		}
++		if(perf.getRpc_max()>max.getRpc_max()){
++			max.setRpc_max(perf.getRpc_max());
++		}
++		
++	}
++
++	/**
++	 * 通过传入的b_yyyyMMdd,e_yyyyMMdd时间值,以及formatter 来获取这两个时间值之间的月份List
++	 * @param begin
++	 * @param end
++	 * @return
++	 */
++	public static List<String> fromMonths(String b_yyyyMMdd , String e_yyyyMMdd,SimpleDateFormat formatter){
++		SimpleDateFormat yearMonthFormatter = new SimpleDateFormat("yyyyMM");
++		List<String> monthList = new ArrayList<String>();
++		Calendar beginCal = Calendar.getInstance();
++		Calendar endCal = Calendar.getInstance();
++		
++		try {
++			beginCal.setTime(formatter.parse(b_yyyyMMdd));
++			endCal.setTime(formatter.parse(e_yyyyMMdd));
++		} catch (ParseException e) {
++			System.err.println("the formatter or the String parameters are not properly! " +
++					"[b_yyyyMMdd:" + b_yyyyMMdd + "][e_yyyyMMdd:" + e_yyyyMMdd + "][formatter:"+ formatter );
++			e.printStackTrace();
++			return null;
++		}
++		
++		while(beginCal.before(endCal)){
++			Date duringDate = beginCal.getTime();
++			String month = yearMonthFormatter.format(duringDate);
++			
++			monthList.add(month);
++
++			// add a month
++			beginCal.set(Calendar.MONTH, beginCal.get(Calendar.MONTH) + 1);
++		}
++		
++		Date date = endCal.getTime();
++		String month = yearMonthFormatter.format(date);
++		if(!monthList.contains(month)){
++			monthList.add(month);
++		}
++		
++		return monthList;
++	}
++	
++	/**
++	 * @param tablePre
++	 * @param monthList
++	 * @return
++	 */
++	public static String fromTables(String tablePre , List<String> monthList){
++		if(monthList ==  null || monthList.size()==0){
++			return null;
++		}
++		
++		StringBuilder sb = new StringBuilder();
++		
++		for(int i = 0 ; i < monthList.size() ; i ++){
++			String month = monthList.get(i);
++			sb.append( tablePre ).append( month ).append(",");
++		}
++		
++		String tables = sb.toString();
++		
++		return tables.substring(0,tables.length()-1);
++	}
++	
++	
++	public static void main(String[] args) {
++		
++		SimpleDateFormat a = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
++		Timestamp begin = new Timestamp(System.currentTimeMillis() - 1000 * 60 * 60 * 24);
++		System.out.println(a.format(begin));
++		Timestamp end = new Timestamp(System.currentTimeMillis());
++		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
++		List<String> monthList = PerfUtil.fromMonths("2010-08-03", "2011-01-02", formatter) ;
++		String fromTables = PerfUtil.fromTables("perf_", monthList);
++		
++		String sql = "select * from ";
++		String whereTrue = " where 1=1 ";
++		String range = " and ts_end between '" + begin + "' and '" + end + "' ";
++
++		sql = sql + fromTables + whereTrue +  range;
++		System.out.println(sql);
++		
++	}
++}
+Index: utils/db/InsertDataTest.java
+===================================================================
+--- utils/db/InsertDataTest.java	(revision 165)
++++ utils/db/InsertDataTest.java	(working copy)
+@@ -27,22 +27,22 @@
+ 		 try {
+ 			 Class.forName("com.mysql.jdbc.Driver");
+ //			 JdbcCon JC = JdbcCon.getInstance();
+-			 Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.0.222:3306/ogdw?useUnicode=true&characterEncoding=utf-8"
+-					 				,"root","root");
++			 Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.0.222:3306/ogdw_test?useUnicode=true&characterEncoding=utf-8"
++					 				,"root","123456");
+ 			 connection.setAutoCommit(false);
+ 			 
+ 			 Statement insert = connection.createStatement();
+              
+ 			 
+ 			 Date before = new Date(System.currentTimeMillis());
+-             for(int i = 0 ; i < 20000000 ; i ++){
++             for(int i = 0 ; i < 1000000 ; i ++){
+             	 System.out.println("IN : " + i);
+             	 insert.addBatch(insertRandomData(i));
+             	 
+-            	 if(i%100000 == 0){
++            	 if(i%10000 == 0){
++                     System.out.println("================================" );
+                      insert.executeBatch();
+                      connection.commit();
+-                     System.out.println("================================" );
+             	 }
+             	 
+              }             
+@@ -78,7 +78,7 @@
+ 		 insertData[i++] = "ts_begin;" + new Timestamp(System.currentTimeMillis()) + ";timestamp";
+ 		 Timestamp tsEnd = new Timestamp(System.currentTimeMillis());
+ 		 
+-		 tsEnd.setDate(tsEnd.getDate()-count/3000000);
++		 tsEnd.setDate(tsEnd.getDate()-count/300000);
+ 		 insertData[i++] = "ts_end;" + tsEnd + ";timestamp";
+ 		 
+ 		 insertData[i++] = "users;2000;long";
+@@ -155,9 +155,7 @@
+ 		 }
+ 		 String sql = sb.substring(0, sb.length()-1) + ")";
+ 		 System.out.println(tsEnd + ":" + sql);
+-//		 DbHelper.Insert2(sql);
+ 		 return sql;
+-//		 DbHelper.Insert(query, insertData);
+ 	}
+ 
+ }
+Index: utils/db/JdbcCon.java
+===================================================================
+--- utils/db/JdbcCon.java	(revision 165)
++++ utils/db/JdbcCon.java	(working copy)
+@@ -3,6 +3,11 @@
+ 
+ import java.io.File;
+ import java.net.MalformedURLException;
++import java.sql.Timestamp;
++import java.text.ParseException;
++import java.text.SimpleDateFormat;
++import java.util.ArrayList;
++import java.util.Date;
+ import java.util.Iterator;
+ import java.util.List;
+ 
+@@ -12,7 +17,9 @@
+ import org.dom4j.Element;
+ import org.dom4j.io.SAXReader;
+ 
++import com.gwtext.client.util.Format;
+ import com.opi.gibp.tools.performance.constants.ServerConstants;
++import com.opi.gibp.tools.performance.gwt.ui.client.PanelConstants;
+ 
+ 
+ 
+@@ -96,8 +103,12 @@
+ 		return url;
+ 		
+ 	}
++	@SuppressWarnings("deprecation")
+ 	public static void main(String[] args) {
+-		loadConfig();
++//		loadConfig();
++		Timestamp t  = new Timestamp(System.currentTimeMillis());
++		System.out.println(System.currentTimeMillis());
++		System.out.println(t.getTime());
+ 	}
+ 
+ }
+Index: utils/db/SelectTest.java
+===================================================================
+--- utils/db/SelectTest.java	(revision 166)
++++ utils/db/SelectTest.java	(working copy)
+@@ -23,20 +23,19 @@
+ 	 */
+ 	public static void main(String[] args) {
+ 		
+-		String sql = "select * from perf_test  limit 0 , 3000000";
++		String sql = "select * from perf_test limit 0 , 3000000";
+ 		 Date before = new Date(System.currentTimeMillis());
+ 		 try {
+ 			Connection con=null;
+ 			Statement stmt = null;
+ 			Class.forName("com.mysql.jdbc.Driver");
+ 			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/ogdw?useUnicode=true&characterEncoding=utf-8&useCursorFetch=true&defaultFetchSize=100"
+-				 				,"root","");
++				 				,"root","root");
+ 			
+-//			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+-//			ResultSet rs = stmt.executeQuery(sql);
++			stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
++			stmt.setFetchSize(Integer.MIN_VALUE);
++			ResultSet rs = stmt.executeQuery(sql);
+ 			
+-			PreparedStatement ps = con.prepareStatement(sql);
+-			ResultSet rs = ps.executeQuery();
+ 			
+ 		    ArrayList paraList=new ArrayList();
+ 		    int count = 0;
+@@ -45,86 +44,9 @@
+ 				 paraList=new ArrayList();
+ 				 ResultSetMetaData rsmd = rs.getMetaData();
+ 				 int columnCount = rsmd.getColumnCount();
+-				 while (rs.next()) {
+-					c1 = Class.forName("com.opi.gibp.tools.performance.gwt.ui.client.model.Performance").newInstance();
+-					for (int i = 1; i <= columnCount; i++) {
+-						String col = rsmd.getColumnName(i);
+-						int colType = rsmd.getColumnType(i);
+-						String nameOfGetMethod = "";
+-						Object recordValue = null;
+-						Class[] classAttr = null;
+-						if (colType == Types.INTEGER) {
+-							classAttr = new Class[] { Integer.TYPE };
+-							nameOfGetMethod = "getInt";
+-						}
+-						if (colType == Types.BIGINT) {
+-							classAttr = new Class[] { Long.TYPE };
+-							nameOfGetMethod = "getLong";
+-						}
+-						if (colType == Types.VARCHAR) {
+-							classAttr = new Class[] { String.class };
+-							nameOfGetMethod = "getString";
+-						}
+-						if (colType == Types.CHAR) {
+-							classAttr = new Class[] { String.class };
+-							nameOfGetMethod = "getString";
+-						}
+-						if (colType == Types.LONGVARCHAR) {
+-							classAttr = new Class[] { String.class };
+-							nameOfGetMethod = "getString";
+-						}
+-						if(colType == Types.DATE ) {
+-							classAttr = new Class[] { Date.class };
+-							nameOfGetMethod = "getDate";
+-						}
+-						if(colType == Types.TIMESTAMP ) {
+-							classAttr = new Class[] { Timestamp.class };
+-							nameOfGetMethod = "getTimestamp";
+-						}
+-						if(colType == Types.DECIMAL) {
+-							classAttr = new Class[] { Integer.TYPE };
+-							nameOfGetMethod = "getInt";
+-						}
+-						if(colType == Types.LONGVARBINARY){
+-							classAttr = new Class[] {Blob.class};
+-							nameOfGetMethod = "getBlob";
+-						}if(colType == Types.REAL){
+-							classAttr = new Class[]{Float.TYPE};
+-							nameOfGetMethod = "getFloat";
+-						}
+-						
+-						try {
+-							Method mm = rs.getClass().getMethod(nameOfGetMethod,
+-									new Class[] { String.class });
+-							recordValue = mm.invoke(rs, new Object[] { col });
+-							
+-							if(col.equals("exp_old") || col.equals("exp_delta")){
+-								classAttr = new Class[] { Long.TYPE };
+-							}
+-							Method m = c1.getClass().getMethod(getSetMethodName(col),
+-									classAttr);
+-							
+-							m.invoke(c1, new Object[] { recordValue });
+-						} catch (SecurityException e) {
+-							e.printStackTrace();
+-							//log.error(e.getMessage());
+-						} catch (IllegalArgumentException e) {
+-							e.printStackTrace();
+-						//	log.error(e.getMessage());
+-						} catch (NoSuchMethodException e) {
+-							e.printStackTrace();
+-						//	log.error(e.getMessage());
+-						} catch (IllegalAccessException e) {
+-							e.printStackTrace();
+-						//	log.error(e.getMessage());
+-						} catch (InvocationTargetException e) {
+-							e.printStackTrace();
+-						//	log.error(e.getMessage());
+-						}
+-
+-					}
+-					paraList.add(c1);
+-				 }
++//				 while (rs.next()) {
++//					 System.out.println(count++);
++//				 }
+ 			} catch (Exception e) {
+ 				e.printStackTrace();
+ 				//log.error(e.getMessage());

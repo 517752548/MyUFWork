@@ -1,0 +1,10 @@
+int showType;[notNull=false;minValue=0]//类型
+long typeNameLangId;[notNull=false] //类别名称多语言Id
+String typeName;//类别名称
+long nameLangId;[notNull=false] //名称多语言 Id
+String name;//名称
+long descLangId;[notNull=false] //描述多语言Id
+String desc;//描述
+int icon;[notNull=false;minValue=0]//图标
+long min;[notNull=false;minValue=0]//最小值
+long max;[notNull=false;minValue=-1]//最大值(-1表示无穷大)

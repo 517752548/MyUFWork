@@ -1,0 +1,140 @@
+#macro( bigType $type)
+#if( $type == "longstring" )String#else$type#end
+#end
+package com.imop.lj.gameserver.common.log;
+
+#foreach($logConfig in $logConfigs)
+import com.imop.lj.logserver.model.${logConfig.getLogFileName()};
+#end
+import com.imop.lj.core.log.UdpLoggerClient;
+import com.imop.lj.logserver.BaseLogMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.imop.lj.common.LogReasons;
+import com.imop.lj.gameserver.human.Human;
+import com.imop.lj.gameserver.common.Globals;
+
+/**
+ * This is an auto generated source,please don't modify it.
+ */
+public class LogService {
+	private static final Logger logger = LoggerFactory.getLogger(LogService.class);
+	/** 日志客户端 */
+	private final UdpLoggerClient udpLoggerClient = UdpLoggerClient.getInstance();
+	/**  游戏区ID */
+	private int regionID;
+	/** 游戏服务器ID */
+	private int serverID;
+
+	/**
+	 * 初始化
+	 * 
+	 * @param logServerIp
+	 *            日志服务器IP
+	 * @param logServerPort
+	 *            日志服务器端口
+	 * @param regionID
+	 *            游戏区ID
+	 * @param serverID
+	 *            游戏服务器ID
+	 */
+	public LogService(String logServerIp, int logServerPort, int regionID, int serverID) {
+		udpLoggerClient.initialize(logServerIp, logServerPort);
+		udpLoggerClient.setRegionId(regionID);
+		udpLoggerClient.setServerId(serverID);
+
+		this.regionID = regionID;
+		this.serverID = serverID;
+		
+		if (logger.isInfoEnabled()) {
+			logger.info("Connnect to Log server : " + logServerIp + " : " + logServerPort);
+		}
+	}
+	
+	public void sendLogMessage(BaseLogMessage msg) {
+		if (Globals.getServerConfig().getSelfLogServer()) {
+			Globals.getLogServerService().sendLogMessage(msg);
+		} else {
+			udpLoggerClient.sendMessage(msg);
+		}
+	}
+
+#foreach($logConfig in $logConfigs)
+	#set($fields = ${logConfig.getFields()})
+	/**
+	 * 发送${logConfig.logInfo}
+#foreach($field in $sharedFields)
+#if(($field.name != "logType") && ($field.name != "regionId") && ($field.name != "serverId"))
+	 * @param $field.name $field.fieldInfo
+#end 
+#end
+#foreach($field in $fields)
+	 * @param ${field.name} ${field.fieldInfo}
+#end
+	 */
+	public void send${logConfig.getLogFileName()}(Human human,
+#foreach($field in $sharedFields)
+#if($field.name=="reason")
+				LogReasons.${logConfig.getLogFileName()}Reason $field.name#if($velocityCount!=$sharedFields.size()),#end
+#elseif(($field.name == "param"))
+				String $field.name#if($velocityCount!=$sharedFields.size()),#end
+#end
+#end
+#foreach($field in $fields)
+			,#bigType($field.type) $field.name
+#end
+		) {
+		this.sendLogMessage(new ${logConfig.getLogFileName()}(
+#foreach($field in $sharedFields)
+#if($field.name == "logType")
+#elseif($field.name=="param")
+				$field.name#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="reason")
+				${field.name}.reason#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="regionId")
+				this.regionID#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="serverId")
+				this.serverID#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="accountId")
+				human == null ? "" : human.getPassportId()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="accountName")
+				human == null ? "" : human.getPassportName()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="charId")
+				human == null ? 0 : human.getUUID()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="charName")
+				human == null ? "" : human.getName()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="level")
+				human == null ? 0 : human.getLevel()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="countryId")
+				human == null ? 0 : human.getCountry()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="vipLevel")
+				human == null ? 0 : human.getVipLevel()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="totalCharge")
+				human == null ? 0 : human.getTotalCharge()#if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="deviceId")
+				human == null ? "-1" : human.getPlayer().getDeviceID() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="deviceType")
+				human == null ? "-1" : human.getPlayer().getDeviceType() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="deviceVersion")
+				human == null ? "-1" : human.getPlayer().getDeviceVersion() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="clientVersion")
+				human == null ? "-1" : human.getPlayer().getClientVersion() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="clientLanguage")
+				human == null ? "-1" : human.getPlayer().getClientLanguage() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="appid")
+				human == null ? "-1" : human.getPlayer().getAppid() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="fValue")
+				human == null ? "-1" : human.getPlayer().getfValue() #if($velocityCount!=$sharedFields.size()),#end
+#elseif($field.name=="logTime")
+				Globals.getTimeService().now()#if($velocityCount!=$sharedFields.size()),#end			
+#end
+			
+#end
+#foreach($field in $fields)
+			,$field.name
+#end
+		));
+	}
+#end
+
+}

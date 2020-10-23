@@ -1,0 +1,14 @@
+#macro( smallType $type)
+#if($type == "Byte")int#elseif( $type == "Boolean" )int#elseif( $type == "Short" )int#elseif( $type == "Integer" )int#elseif( $type == "Long" )Long#elseif( $type == "Float" )Number#elseif( $type == "Double" )Number#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+
+	// $field.comment
+	msgBody.writeShort(${newFieldName}.length);
+	var ${newFieldName}Index:int = 0;
+	var ${newFieldName}Size:int = ${newFieldName}.length;
+	for(${newFieldName}Index=0; ${newFieldName}Index<${newFieldName}Size; ${newFieldName}Index++){
+		

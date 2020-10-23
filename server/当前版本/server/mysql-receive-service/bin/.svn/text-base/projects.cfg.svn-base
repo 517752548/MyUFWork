@@ -1,0 +1,25 @@
+#生成msg日志的目录
+filepath = E:\\probe\\receive-service
+#分析后生成的csv文件目录
+destfilepath = E:\\probe\\receive-service\\anaysis
+# 每天早上的0时15分
+msg_analysis_start_time = 0 15 0 ? * *
+#邮箱服务器地址
+#smtp = smtp.renren-inc.com
+smtp = 192.168.0.1
+#用户名
+mailname = wenping.jiang
+#邮箱密码
+mailpassword = jwpttcg66
+#邮箱地方
+mailaddress = wenping.jiang@renren-inc.com
+#cpu负载
+cpuaver = 400
+#fullGC数量
+fullGCcount = 3
+#backdoor(排除警报)
+backdoor = 999,99
+#mailwarnningIntervaltime(邮件保健时间间隔)
+mailwarnningIntervaltime = 3600000
+#sendMailFlag
+sendMailFlag = false

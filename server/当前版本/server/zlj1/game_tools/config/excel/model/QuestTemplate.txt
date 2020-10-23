@@ -1,0 +1,30 @@
+long titleLangId;[notNull=false;minValue=0] // 标题多语言 Id
+String title;//标题
+int questType;[minValue=1;notNull=true]//任务主类型（区分主线和日常）
+boolean repeat;[notNull=false]//是否是重复任务
+int dailyTimes;[notNull=false]//每日完成的次数
+int preQuestId;[notNull=false]//必须完成的前置任务ID
+int acceptMinLevel;[minValue=1;notNull=true]//等级限制
+int minTeamMemberNum;[notNull=false]//要求组队最少人数，0表示不需要组队
+List<com.imop.lj.gameserver.task.template.SpecialCondition> specialCondition;[Collection(2,3)]//接任务的特殊任务条件 
+int rewardId;[notNull=true]//奖励ID
+int showRewardId;[notNull=false;minValue=0]//显示奖励Id
+String desc;[notNull=false]//任务描述
+long finishNpcTalkDescLangId;[notNull=false;minValue=0] // 任务完成npc说话内容多语言 Id
+String finishNpcTalkDesc;[notNull=false]//任务完成npc说话内容
+long requireDescLangId;[notNull=false;minValue=0] // 开启的条件描述多语言 Id
+String requireDesc;[notNull=false]//开启的条件描述
+long finishDescLangId;[notNull=false;minValue=0] // 任务完成信息多语言 Id
+String finishDesc;[notNull=false]//任务完成信息
+int startNpcMapId;[notNull=false;minValue=0]//接取任务NPC地图Id
+int startNpc;[notNull=false;minValue=0]//接取任务NPC
+int endNpcMapId;[notNull=false;minValue=0]//交付任务NPC地图ID
+int endNpc;[notNull=false;minValue=0]//交付任务NPC
+int autoAccept;[notNull=false;minValue=0;maxValue=1]//是否自动接取
+int autoFinish;[notNull=false;minValue=0;maxValue=1]//是否自动完成
+int storyId;[notNull=false;minValue=0]//剧情id
+String pathStr;[notNull=false]//寻路字符串
+com.imop.lj.gameserver.task.template.SpecialDestination specialDestination;[Object(6)]//特殊任务目标
+List<Integer> rewardIdOnCondition;[Collection(8,1)]//条件奖励ID
+List<Integer> enemyArmyIdList;[Collection(5,1)]//任务怪IdList
+int taskDropRewardId;[notNull=false;minValue=0]//任务物品掉落奖励

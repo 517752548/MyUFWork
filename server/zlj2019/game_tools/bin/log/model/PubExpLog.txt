@@ -1,0 +1,5 @@
+message com.imop.lj.logserver.model.PubExpLog(
+    long addExp;//增加经验
+    int pubLevel;//当前级别
+    long pubExp;//当前经验
+)

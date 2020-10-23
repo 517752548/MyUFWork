@@ -1,0 +1,8 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+List<com.imop.lj.gameserver.tower.template.TowerGetExpTemplate> expList;[Collection(20,1)]//获取经验列表
+int oneCoef;[notNull=false;minValue=0]//1人系数
+int twoCoef;[notNull=false;minValue=0]//2人系数
+int threeCoef;[notNull=false;minValue=0]//3人系数
+int fourCoef;[notNull=false;minValue=0]//4人系数
+int fiveCoef;[notNull=false;minValue=0]//5人系数

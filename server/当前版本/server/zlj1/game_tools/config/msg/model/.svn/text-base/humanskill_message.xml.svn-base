@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="humanskill">
+	
+	<message type="CG_HS_MAIN_CHANGE" comment="心法切换">
+		<field type="Integer" name="mainSkillType" comment="心法的类型"/>
+	</message>
+	
+	<message type="GC_HS_MAIN_CHANGE" comment="心法切换结果">
+		<field type="Integer" name="result" comment="结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_HS_MAIN_SKILL_UPGRADE" comment="心法升级">
+	</message>
+	
+	<message type="GC_HS_MAIN_SKILL_UPGRADE" comment="心法升级结果">
+		<field type="Integer" name="result" comment="结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_HS_SUB_SKILL_UPGRADE" comment="人物技能升级">
+		<field type="Integer" name="skillId" comment="技能ID"/>
+		<field type="Integer" name="isBatch" comment="是否为批量升级，1是，2否"/>
+	</message>
+	
+	<message type="GC_HS_SUB_SKILL_UPGRADE" comment="人物技能升级结果">
+		<field type="Integer" name="result" comment="结果 1成功,2失败"/>
+	</message>
+
+	<message type="CG_HS_OPEN_PANEL" comment="打开心法技能面板">
+	</message>
+	
+	<message type="GC_HS_OPEN_PANEL" comment="打开心法技能面板">
+		<field type="Integer" name="mindFlag" comment="心法页签红点，0没有，1有"/>
+		<field type="Integer" name="skillFlag" comment="技能页签红点，0没有，1有"/>
+		<field type="Integer" name="cultivateFlag" comment="修炼页签红点，0没有，1有"/>
+		<field type="Integer" name="assistFlag" comment="辅助页签红点，0没有，1有"/>
+	</message>
+	
+</messages>

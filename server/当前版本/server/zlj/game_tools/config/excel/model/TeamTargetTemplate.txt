@@ -1,0 +1,7 @@
+long nameLangId;[notNull=false]//名称多语言Id
+String name;[notNull=false]//名称
+int levelLimit;[notNull=false;minValue=1]//最低等级要求
+int memberNumLimit;[notNull=false;minValue=1]//最低人数要求
+long descLangId;[notNull=false]//描述多语言Id
+String desc;[notNull=false]//描述
+String typeName;[notNull=false]//所属大类名称

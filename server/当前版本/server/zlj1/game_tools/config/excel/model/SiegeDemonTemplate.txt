@@ -1,0 +1,3 @@
+int siegeTypeId;[notNull=false;]//副本类型（1普通，2困难）
+int taskId;[notNull=false;minValue=1]//任务ID
+int siegeNpcId;[notNull=false;minValue=1]//魔族NpcID

@@ -1,0 +1,5 @@
+String wingName;[notNull=false]//翅膀名称
+String icon;//翅膀图标
+String modelId;[notNull=false]//美术Id	
+int rarityId;[minValue=1;notNull=false]//品质ID
+List<com.imop.lj.gameserver.pet.template.PassiveTalentPropItem> propList;[Collection(6,3)] //技能属性列表

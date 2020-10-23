@@ -1,0 +1,7 @@
+int promoteType;[notNull=true;minValue=0]//提升方式
+int perceptLevel;[notNull=true;minValue=0]//悟性等级
+int singleExp;[notNull=false;minValue=0]//单次提供经验
+int singleSmallCritProp;[notNull=false;minValue=0]//单次小暴击概率
+int singleBigCritProp;[notNull=false;minValue=0]//单次大暴击概率
+int batchSmallCritProp;[notNull=false;minValue=0]//批量小暴击概率
+int batchBigCritProp;[notNull=false;minValue=0]//批量大暴击概率

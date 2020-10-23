@@ -1,0 +1,6 @@
+message com.imop.lj.logserver.model.GoodActivityLog(
+	long goodActivityId;//活动唯一Id
+	int tplId;//活动模板Id
+	int rewardId;//奖励Id
+	int targetId;//目标Id
+)

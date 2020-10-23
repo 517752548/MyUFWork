@@ -1,0 +1,7 @@
+int skillId;[notNull=false;minValue=1]//技能Id
+int mindId;[notNull=false;minValue=0]//心法Id
+int mindLevelMin;[notNull=false;minValue=0]//心法等级下限
+int mindLevelMax;[notNull=false;minValue=0]//心法等级上限
+int skillLevelMin;[notNull=false;minValue=0]//技能等级下限
+int skillLevelMax;[notNull=false;minValue=0]//技能等级上限
+List<Integer> effectIdList;[Collection(5,1)]//技能效果Id列表

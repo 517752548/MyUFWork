@@ -1,0 +1,5 @@
+int pubLevel;[notNull=false;minValue=0]//酒馆等级
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int questGroupId;[minValue=0;notNull=false]//任务组Id
+int weight;[minValue=0;notNull=false]//权重

@@ -1,0 +1,165 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<project name="gm_server" default="all" basedir=".">
+
+	<property name="project.name" value="gm_server" />
+	<property environment="env" />
+	<property name="war.dir" value="war" />
+	<property name="src1.dir" value="src" />
+	<property name="src2.dir" value="resource" />
+	<property name="dest.dir" value="web/WEB-INF/classes" />
+	<property name="weblib.dir" value="web/WEB-INF/lib" />
+	<property name="webroot.dir" value="web" />
+	<property name="JAVA_HOME" value="${env.JAVA_HOME}" />
+	<property name="j2eelib.dir" value="lib" />
+	
+	<property name="conf_path" value="/data/vhost/initfile_lj/gm_server" />
+	
+	<!--probe public define-->
+	<property name="probe_collector.project.name" value="probe_collector" />	
+	<property name="probe_collector.src" value="../${probe_collector.project.name}/${src1.dir}" />
+	<property name="probe_collector.bin" value="../${probe_collector.project.name}/bin" />
+	<property name="probe_collector.lib" value="../${probe_collector.project.name}/lib" />
+	<property name="probe_collector.jarName" value="probe_collector.jar" />
+	
+	<!--common-libs public define-->
+	<property name="common-libs.project.name" value="common-libs" />	
+	<property name="common-libs.src" value="../${common-libs.project.name}/${src1.dir}" />
+	<property name="common-libs.bin" value="../${common-libs.project.name}/bin" />
+	<property name="common-libs.lib" value="../${common-libs.project.name}/lib" />
+	<property name="common-libs.jarName" value="common-libs.jar" />
+	
+	<!--core public define-->
+	<property name="core.project.name" value="core" />	
+	<property name="core.src" value="../${core.project.name}/${src1.dir}" />
+	<property name="core.bin" value="../${core.project.name}/bin" />
+	<property name="core.jarName" value="core.jar" />
+	
+	<!--game_db public define-->
+	<property name="game_db.project.name" value="game_db" />	
+	<property name="game_db.src" value="../${game_db.project.name}/${src1.dir}" />
+	<property name="game_db.jarName" value="game_db.jar" />
+	<property name="game_db.bin" value="../${game_db.project.name}/bin" />
+	
+	<!--game_server public define-->
+	<property name="game_server.project.name" value="game_server" />	
+	<property name="game_server.src" value="../${game_server.project.name}/${src1.dir}" />
+	<property name="game_server.bin" value="../${game_server.project.name}/bin" />
+	<property name="game_server.jarName" value="game_server.jar" />
+	
+	<!--tmp dir -->			
+	<property name="jarDir" value="d:/jarDir" />
+	<path id="common-lib-classpath">			
+			<fileset dir="${common-libs.lib}" includes="*.jar"/>			
+	</path>
+	<path id="master-classpath">
+		<fileset dir="${j2eelib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${weblib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		
+	</path>
+
+	<target name="usage">
+
+		<echo message="" />
+		<echo message="${project.name} build file" />
+		<echo message="------------------------------------------------------" />
+		<echo message="" />
+		<echo message="Available targets are:" />
+		<echo message="" />
+		<echo message="clean    --> Clean output dirs" />
+		<echo message="build    --> Compile main Java sources and copy libraries" />
+		<echo message="warfile --> Build the web application archive" />
+		<echo message="all      --> Clean, build, warfile" />
+		<echo message="" />
+
+	</target>
+
+	<target name="clean" description="Clean output dirs(dist)">
+		<delete dir="${dest.dir}" />
+		<delete dir="${war.dir}" />
+		<delete dir="${dest.dir}" />
+	</target>
+	
+	<target name="makeCompile" >
+		
+		
+		<javac srcdir="${probe_collector.src}" destdir="${probe_collector.bin}" classpathref="common-lib-classpath" encoding="UTF-8">
+			
+		</javac>
+		<javac srcdir="${core.src}" destdir="${core.bin}"  classpathref="common-lib-classpath" encoding="UTF-8">
+			
+		</javac>
+				<echo message="${core.src}" />
+				<javac srcdir="${game_db.src}" destdir="${game_db.bin}" classpathref="common-lib-classpath" encoding="UTF-8">
+				
+				</javac>
+				<echo message="${game_db.src}" />
+				<javac srcdir="${game_server.src}" destdir="${game_server.bin}" classpathref="common-lib-classpath"  encoding="UTF-8">
+				
+				</javac>				
+		
+				<echo message="${game_server.src}" />
+				<echo message="编译结束" />
+		</target>
+	
+	<target name="build" description="Compile main source tree java files into class files, generate jar files">
+		<tstamp />
+		
+		<mkdir dir="${dest.dir}" />
+		<!--建立 临时文件 
+		<echo message="建立 临时文件" />
+		<mkdir dir="${jarDir}"/>-->
+		
+		<javac srcdir="${src1.dir}" destdir="${dest.dir}" encoding="UTF-8">
+			<classpath refid="master-classpath" />
+		</javac>
+		
+		<copy todir="${dest.dir}" preservelastmodified="true">
+			<fileset dir="${src2.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.js" />
+				<include name="**/*.xls" />
+				<include name="**/*.properties" />
+				<exclude name="conf/db1/*.xml"/>
+				<exclude name="conf/db_gm/*.xml"/>
+			</fileset>
+			
+			<fileset dir="${src1.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+			</fileset>
+			
+			<fileset dir="${conf_path}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+		
+	</target>
+	<target name="makeJar">
+		
+		<jar destfile="生成jar包" jarfile="${weblib.dir}/${probe_collector.jarName}" basedir="${probe_collector.bin}"></jar>
+		<jar destfile="生成jar包" jarfile="${weblib.dir}/${core.jarName}" basedir="${core.bin}"></jar>
+		
+		<jar destfile="生成jar包" jarfile="${weblib.dir}/${game_db.jarName}" basedir="${game_db.bin}"></jar>
+		<jar destfile="生成jar包" jarfile="${weblib.dir}/${game_server.jarName}" basedir="${game_server.bin}"></jar>
+		
+		
+	</target>
+	
+	<target name="warfile">
+		<mkdir dir="${war.dir}" />
+		
+		<war warfile="${war.dir}/${project.name}.war" basedir="${webroot.dir}/" webxml="${webroot.dir}/WEB-INF/web.xml">
+			<include name="**/**" />
+			<exclude name="WEB-INF/lib/${project.name}.jar" />
+		</war>
+
+	</target>
+	
+	<target name="all" depends="usage, clean, build,warfile" />
+
+</project>

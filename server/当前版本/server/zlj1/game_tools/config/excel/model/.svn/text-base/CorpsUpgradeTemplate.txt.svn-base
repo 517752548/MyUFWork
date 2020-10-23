@@ -1,0 +1,12 @@
+int corpsLevel;[minValue=1;notNull=false]//帮派级别
+int corpsBldgLevel;[minValue=1;notNull=false]//帮派建筑等级
+int maxMemberNum;[minValue=1;notNull=false]//成员上限
+int viceChairmanNum;[minValue=1;notNull=false]//副会长数量
+int hallmanNum;[minValue=1;notNull=false]//各堂堂主数量
+int viceHallmanNum;[minValue=1;notNull=false]//各堂副堂主数量
+int hallsNum;[minValue=1;notNull=false]//各堂堂众数量
+int eliteNum;[minValue=1;notNull=false]//精英数量
+int upgradeExp;[minValue=0;notNull=false]//升到下一等级所需经验
+int upgradeFund;[minValue=0;notNull=false]//升到下一等级所需资金
+int upgradeTime;[minValue=0;notNull=false]//升级所需时间
+int coprsMaintenanceCost;[minValue=1;notNull=false]//帮派日常维护费用	

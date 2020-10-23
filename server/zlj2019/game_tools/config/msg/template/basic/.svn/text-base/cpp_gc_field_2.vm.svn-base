@@ -1,0 +1,14 @@
+#macro( smallType $type)
+#if($type == "Byte")char#elseif( $type == "String" )string#elseif( $type == "Boolean" )bool#elseif( $type == "Short" )short#elseif( $type == "Integer" )int32#elseif( $type == "Long" )int64#else$type *#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )INT32#elseif( $type == "Short" )SHORT#elseif( $type == "Byte" )BYTE#elseif( $type == "Boolean" )BOOL#elseif( $type == "Long" )INT64#elseif( $type == "String" )STRING#else$type#end
+#end
+
+	// $field.comment
+	int ${newFieldName}Size = READ_USHORT;
+	vector<#smallType($field.clientType)>* $newFieldName = new vector<#smallType($field.clientType)>(${newFieldName}Size);
+	int ${newFieldName}Index = 0;
+	for(${newFieldName}Index=0; ${newFieldName}Index<${newFieldName}Size; ${newFieldName}Index++){
+		 ${newFieldName}->at(${newFieldName}Index) = READ_#bigType($field.clientType);
+	}//end

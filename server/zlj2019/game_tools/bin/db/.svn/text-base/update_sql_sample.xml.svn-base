@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs xmlns="http://com.imop.lj.merge" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	 
+	<!-- 版本号 -->
+	<version name="1.0.0.37" />
+	
+	<!-- 新增的字段 --> 
+	<addColumn tableName="t_character_info" columnName="sss" columnType="int"/>
+	<addColumn tableName="t_character_info" columnName="ddd" columnType="bigint"/>
+	<addColumn tableName="t_character_info" columnName="tt" columnType="text"/>
+	<addColumn tableName="t_character_info" columnName="gg" columnType="longtext"/>
+	<addColumn tableName="t_character_info" columnName="rr" columnType="varchar"/>
+	<addColumn tableName="t_character_info" columnName="bb" columnType="varchar" columnLen="1024"/>
+	<addColumn tableName="t_character_info" columnName="mm" columnType="varchar" columnLen="512" columnDefault="'aaa'"/>
+	
+	<!-- 特殊语句，直接写，例如建表等 -->
+	<special>INSERT INTO `t_qq_markettask_target` VALUES ('1', '1402901588442', '[{\"cid\":\"1101346127T320140609182330\",\"ctarget\":{\"step2\":{\"step\":2,\"target\":1,\"param1\":38},\"step3\":{\"step\":3,\"target\":1,\"param1\":50}}},{\"cid\":\"1101346127T320140610135012\",\"ctarget\":{\"step2\":{\"step\":2,\"target\":1,\"param1\":38},\"step3\":{\"step\":3,\"target\":2,\"param1\":7101}}}]');
+	</special>
+	
+	<special>
+-- ----------------------------
+-- Table structure for t_card_user
+-- ----------------------------
+CREATE TABLE `t_card_user` (
+  `id` bigint(20) NOT NULL,
+  `cardActivityId` bigint(20) NOT NULL DEFAULT '0',
+  `charId` bigint(20) NOT NULL DEFAULT '0',
+  `createTime` bigint(20) NOT NULL DEFAULT '0',
+  `exchangeRecord` text,
+  `gotDayReward` int(11) NOT NULL DEFAULT '0',
+  `gotTotalReward` int(11) NOT NULL DEFAULT '0',
+  `lastScoreTime` bigint(20) NOT NULL DEFAULT '0',
+  `todayScore` int(11) NOT NULL DEFAULT '0',
+  `totalScore` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `cardActivityId` (`cardActivityId`),
+  KEY `charId` (`charId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	</special>
+	
+</configs>

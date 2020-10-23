@@ -1,0 +1,16 @@
+<module rename-to="performance">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.gwtext.GwtExt"/>
+<!--	<inherits name="com.google.gwt.dev.util.collect"/>-->
+	<inherits name="com.google.gwt.user.theme.standard.Standard" />
+<!--	<inherits name="com.sensei.themes.mytheme.Mytheme"/>-->
+<!--	<inherits name='com.sensei.themes.mytheme.MythemeResources'/>-->
+
+<!-- Other Module inheritations -->	
+	<inherits name='com.rednels.ofcgwt.OFCGWT'/>
+	<stylesheet src="js/ext/resources/css/ext-all.css" /> 
+	<script src="js/ext/adapter/ext/ext-base.js" /> 
+	<script src="js/ext/ext-all.js" /> 
+
+	<entry-point class="com.opi.gibp.tools.performance.gwt.ui.client.IndexChart" />
+</module>

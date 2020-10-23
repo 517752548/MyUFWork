@@ -1,0 +1,6 @@
+int cultivateId;[minValue=1;notNull=false]//修炼技能ID
+String icon;[notNull=false]//技能icon
+int playerSkillFlag;[notNull=false] // 是否影响人物属性
+String cultivateName;[notNull=false]//修炼技能名称
+String cultivateDesc;[notNull=false]//修炼技能描述
+List<com.imop.lj.gameserver.pet.template.PassiveTalentPropItem> propList;[Collection(3,3)] //技能属性列表

@@ -1,0 +1,6 @@
+int assistId;[minValue=1;notNull=false]//辅助技能ID
+String icon;[notNull=false]//技能icon
+String assistName;[notNull=false]//辅助技能名称
+String assistDesc;[notNull=false]//辅助技能描述
+int isCrit;[notNull=false]//是否出暴击
+int genType;[notNull=false]//产出方式

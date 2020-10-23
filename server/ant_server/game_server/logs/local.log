@@ -1,0 +1,172 @@
+16:25:05 - #IMOP.LOCAL.LOGGER.INITLIZE...
+16:25:05 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+16:25:05 - start getting local jar version
+16:25:05 - Local Jar Version:3.3.35
+16:25:05 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:localhost
+16:25:05 - 154f2ce0-236c-45f8-b93a-49ea44c4de23	http://192.168.1.8:8080/qqapi/u.getversion.php?domain=localhost&currenttime=20190719162505&gamecode=csj&platformid=renren.com&domain=localhost
+16:25:07 - #PLATFORM.LOCAL.REQUEST.ERROR:
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at com.imop.platform.local.util.HttpUtil.getUrl(HttpUtil.java:59)
+	at com.imop.platform.local.request.AbstractRequest.doRequest(AbstractRequest.java:286)
+	at com.imop.platform.local.request.AbstractRequest.send(AbstractRequest.java:174)
+	at com.imop.platform.local.handler.LocalHandler.getVersion(LocalHandler.java:393)
+	at com.imop.platform.local.HandlerFactory.requestLocalVersion(HandlerFactory.java:106)
+	at com.imop.platform.local.HandlerFactory.createHandler(HandlerFactory.java:74)
+	at com.imop.lj.core.local.LocalService.initHandler(LocalService.java:140)
+	at com.imop.lj.core.local.LocalService.<init>(LocalService.java:70)
+	at com.imop.lj.gameserver.common.Globals.init(Globals.java:861)
+	at com.imop.lj.gameserver.GameServer.init(GameServer.java:112)
+	at com.imop.lj.gameserver.GameServer.main(GameServer.java:383)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+16:25:07 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION.ERROR:-1
+16:44:18 - #IMOP.LOCAL.LOGGER.INITLIZE...
+16:44:18 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+16:44:18 - start getting local jar version
+16:44:18 - Local Jar Version:3.3.35
+16:44:18 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:localhost
+16:44:18 - bcd7e139-4179-4012-a09d-bbb368d37903	http://192.168.1.8:8080/qqapi/u.getversion.php?domain=localhost&currenttime=20190719164418&gamecode=csj&platformid=renren.com&domain=localhost
+16:44:20 - #PLATFORM.LOCAL.REQUEST.ERROR:
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at com.imop.platform.local.util.HttpUtil.getUrl(HttpUtil.java:59)
+	at com.imop.platform.local.request.AbstractRequest.doRequest(AbstractRequest.java:286)
+	at com.imop.platform.local.request.AbstractRequest.send(AbstractRequest.java:174)
+	at com.imop.platform.local.handler.LocalHandler.getVersion(LocalHandler.java:393)
+	at com.imop.platform.local.HandlerFactory.requestLocalVersion(HandlerFactory.java:106)
+	at com.imop.platform.local.HandlerFactory.createHandler(HandlerFactory.java:74)
+	at com.imop.lj.core.local.LocalService.initHandler(LocalService.java:140)
+	at com.imop.lj.core.local.LocalService.<init>(LocalService.java:70)
+	at com.imop.lj.gameserver.common.Globals.init(Globals.java:861)
+	at com.imop.lj.gameserver.GameServer.init(GameServer.java:112)
+	at com.imop.lj.gameserver.GameServer.main(GameServer.java:383)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+16:44:20 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION.ERROR:-1
+16:46:13 - #IMOP.LOCAL.LOGGER.INITLIZE...
+16:46:13 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+16:46:13 - start getting local jar version
+16:46:13 - Local Jar Version:3.3.35
+16:46:13 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:localhost
+16:46:13 - 080a2e4f-cb0e-4eaf-8023-6ea879743a9f	http://192.168.1.8:8080/qqapi/u.getversion.php?domain=localhost&currenttime=20190719164613&gamecode=csj&platformid=renren.com&domain=localhost
+16:46:15 - #PLATFORM.LOCAL.REQUEST.ERROR:
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at com.imop.platform.local.util.HttpUtil.getUrl(HttpUtil.java:59)
+	at com.imop.platform.local.request.AbstractRequest.doRequest(AbstractRequest.java:286)
+	at com.imop.platform.local.request.AbstractRequest.send(AbstractRequest.java:174)
+	at com.imop.platform.local.handler.LocalHandler.getVersion(LocalHandler.java:393)
+	at com.imop.platform.local.HandlerFactory.requestLocalVersion(HandlerFactory.java:106)
+	at com.imop.platform.local.HandlerFactory.createHandler(HandlerFactory.java:74)
+	at com.imop.lj.core.local.LocalService.initHandler(LocalService.java:140)
+	at com.imop.lj.core.local.LocalService.<init>(LocalService.java:70)
+	at com.imop.lj.gameserver.common.Globals.init(Globals.java:861)
+	at com.imop.lj.gameserver.GameServer.init(GameServer.java:112)
+	at com.imop.lj.gameserver.GameServer.main(GameServer.java:383)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+16:46:16 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION.ERROR:-1
+16:47:39 - #IMOP.LOCAL.LOGGER.INITLIZE...
+16:47:39 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+16:47:39 - start getting local jar version
+16:47:40 - Local Jar Version:3.3.35
+16:47:40 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:localhost
+16:47:40 - 1e5a10c5-3ddc-46da-9537-29b7f9494ad5	http://192.168.1.8:8080/qqapi/u.getversion.php?domain=localhost&currenttime=20190719164740&gamecode=csj&platformid=renren.com&domain=localhost
+16:47:42 - #PLATFORM.LOCAL.REQUEST.ERROR:
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at com.imop.platform.local.util.HttpUtil.getUrl(HttpUtil.java:59)
+	at com.imop.platform.local.request.AbstractRequest.doRequest(AbstractRequest.java:286)
+	at com.imop.platform.local.request.AbstractRequest.send(AbstractRequest.java:174)
+	at com.imop.platform.local.handler.LocalHandler.getVersion(LocalHandler.java:393)
+	at com.imop.platform.local.HandlerFactory.requestLocalVersion(HandlerFactory.java:106)
+	at com.imop.platform.local.HandlerFactory.createHandler(HandlerFactory.java:74)
+	at com.imop.lj.core.local.LocalService.initHandler(LocalService.java:140)
+	at com.imop.lj.core.local.LocalService.<init>(LocalService.java:70)
+	at com.imop.lj.gameserver.common.Globals.init(Globals.java:861)
+	at com.imop.lj.gameserver.GameServer.init(GameServer.java:112)
+	at com.imop.lj.gameserver.GameServer.main(GameServer.java:383)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+16:47:42 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION.ERROR:-1

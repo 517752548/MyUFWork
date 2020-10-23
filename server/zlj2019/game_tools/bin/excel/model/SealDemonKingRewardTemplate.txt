@@ -1,0 +1,6 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+long threeExp;[minValue=1;notNull=false]//3人挑战经验
+long fourExp;[minValue=1;notNull=false]//4人挑战经验
+long fiveExp;[minValue=1;notNull=false]//5人挑战经验
+int itemId;[notNull=false;minValue=1]//成功封印5次魔王宝箱ID

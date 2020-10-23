@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="macro" basedir=".">
+	<!-- 定义宏开始 -->
+	<!-- 从svn导出代码 -->
+	<macrodef name="svn_update" description="update from the svn">
+		<attribute name="svnpath" default="${server.path}" />
+		<attribute name="project" />
+		<attribute name="dir" />
+		<attribute name="out" />
+		<sequential>
+			<!-- 检查是否设置了svn的用户名和密码 -->
+			<var name="svnuserpass" value="" />
+			<condition property="useSvnUserPass">
+				<and>
+					<isset property="svn.user" />
+					<isset property="svn.pass" />
+				</and>
+			</condition>
+			<if>
+				<equals arg1="${useSvnUserPass}" arg2="true" />
+				<then>
+					<var name="svnuserpass" value="--username=${svn.user} --password=${svn.pass}" />
+				</then>
+			</if>
+			<exec executable="cmd.exe" os="Windows XP">
+				<arg line="/c svn  ${svnuserpass} --force export @{svnpath}/@{project}/@{dir} @{out}" />
+			</exec>
+			
+			<echo message="svn export --force ${svnuserpass} @{svnpath}/@{project}/@{dir} @{out}" />
+						
+			<exec executable="/bin/bash" os="Linux">
+				<arg value="-c" />
+				<arg value="svn export --force ${svnuserpass} @{svnpath}/@{project}/@{dir} @{out}" />
+			</exec>
+
+		</sequential>
+	</macrodef>
+
+	<!-- 能过tag创建branch -->
+	<macrodef name="svn_branch" description="create the branch from the svn tag">
+		<attribute name="tagpath" />
+		<attribute name="branchpath" />
+		<attribute name="project" />
+		<attribute name="version" />
+		<sequential>
+			<exec executable="cmd.exe" os="Windows XP">
+				<arg line="/c branch_svn.bat @{tagpath} @{branchpath} @{project} @{version}" />
+			</exec>
+			<exec executable="/bin/bash" os="Linux">
+				<arg value="-c" />
+				<arg value="./branch_svn.sh '@{tagpath}' '@{branchpath}' '@{project}' '@{version}'" />
+			</exec>
+		</sequential>
+	</macrodef>
+
+	<!-- 创建tag -->
+	<macrodef name="svn_tag" description="create the tag from the svn trunk">
+		<attribute name="trunkpath" />
+		<attribute name="tagpath" />
+		<attribute name="project" />
+		<attribute name="version" />
+		<sequential>
+			<exec executable="cmd.exe" os="Windows XP">
+				<arg line="/c tag_svn.bat @{trunkpath} @{tagpath} @{project} @{version}" />
+			</exec>
+			<exec executable="/bin/bash" os="Linux">
+				<arg value="-c" />
+				<arg value="./tag_svn.sh '@{trunkpath}' '@{tagpath}' '@{project}' '@{version}'" />
+			</exec>
+		</sequential>
+	</macrodef>
+
+	<!-- 编译代码 -->
+	<macrodef name="compile" description="compile the specified source">
+		<attribute name="src" />
+		<attribute name="dest" />
+		<attribute name="classpath" />
+		<attribute name="debug" default="on" />
+		<attribute name="jdkversion" default="1.7"/>
+		<sequential>
+			<echo message="====================start compile @{src} to @{dest} jdkversion @{jdkversion}====================" />
+			<javac srcdir="@{src}" destdir="@{dest}" encoding="UTF-8"
+				debug="@{debug}" classpathref="@{classpath}" memoryMaximumSize="500M"
+				fork="true" source="@{jdkversion}" target="@{jdkversion}" />
+			<echo message="====================end compile @{src} to @{dest} jdkversion @{jdkversion}====================" />
+		</sequential>
+	</macrodef>
+
+	<!-- 编译一个项目,并打包为jar文件 -->
+	<macrodef name="compile_project">
+		<attribute name="destfile" />
+		<attribute name="classpath" />
+		<attribute name="src" default="src" />
+		<attribute name="resource-config" default="" />
+		<attribute name="source-config" default="" />
+		<attribute name="jdkversion" default="1.7" />
+		<!-- 是否加密 -->
+		<attribute name="encrypt" default="false" />
+		<!-- MANIFEST.MF 中的版本属性名 -->
+		<attribute name="jar-version-name" default="Version" />
+		
+		<attribute name="bakjardir" default="null" />
+		<sequential>
+			<mkdir dir="${build.dir}" />
+			<!-- 拷贝与项目的绑定的配置文件 -->
+			<if>
+				<equals arg1="@{resource-config}" arg2="" />
+				<then>
+				</then>
+				<else>
+					<copy todir="${build.dir}/">
+						<fileset dir="${src.dir}/config">
+							<patternset refid="@{resource-config}">
+							</patternset>
+						</fileset>
+					</copy>
+				</else>
+			</if>
+			<if>
+				<equals arg1="@{source-config}" arg2="" />
+				<then>
+				</then>
+				<else>
+					<copy todir="${build.dir}/">
+						<fileset dir="${src.dir}/java">
+							<patternset refid="@{source-config}">
+							</patternset>
+						</fileset>
+					</copy>
+				</else>
+			</if>
+
+			<tstamp>
+				<format property="build_date" pattern="yyyy-MM-dd HH:mm" />
+			</tstamp>
+			<compile src="${src.dir}/java" dest="${build.dir}" classpath="@{classpath}" jdkversion="@{jdkversion}"/>
+			<jar destfile="${dist.dir}/@{destfile}.jar" basedir="${build.dir}">
+				<manifest>
+					<attribute name="@{jar-version-name}" value="${server.version}" />
+					<attribute name="Build-Date" value="${build_date}" />
+				</manifest>
+			</jar>
+			
+			<!-- 拷贝jar包到调用者指定的备份目录-->
+			<if>
+				<equals arg1="@{bakjardir}" arg2="null" />
+				<then>
+				</then>
+				<else>
+					<copy todir="@{bakjardir}">
+						<fileset dir="${dist.dir}">
+							<include name="*.jar" />
+						</fileset>
+					</copy>
+				</else>
+			</if>
+			
+			<!-- 执行加密操作 -->
+			<if>
+				<equals arg1="@{encrypt}" arg2="false" />
+				<then>
+					<echo message="Skip encrypt" />
+				</then>
+				<else>
+					<echo message="Encrypt ${dist.dir}/@{destfile}.jar to ${dist.dir}/@{destfile}.encrypt" />
+					<!-- 加密 -->
+					<jarenc in="${dist.dir}/@{destfile}.jar" out="${dist.dir}/@{destfile}.encrypt" />
+					<!-- 删除原jar -->
+					<delete>
+						<fileset dir="${dist.dir}">
+							<include name="@{destfile}.jar" />
+						</fileset>
+					</delete>
+				</else>
+			</if>
+		</sequential>
+	</macrodef>
+
+	<!-- 编译一个项目,并打包为war文件 -->
+	<macrodef name="compile_web_project">
+		<attribute name="project" />
+		<attribute name="classpath" />
+		<attribute name="src" default="src" />
+		<attribute name="resource-config" default="" />
+		<attribute name="webresource-config" default="" />
+		<attribute name="source-config" default="" />
+		<attribute name="dependency-lib-config" default="" />
+		<attribute name="pkg-zip" default="false" />
+
+		<sequential>
+			<mkdir dir="${build.dir}/@{project}" />
+			<property name="web.classes.dir" value="${build.dir}/@{project}/WEB-INF/classes" />
+			<property name="web.lib.dir" value="${build.dir}/@{project}/WEB-INF/lib" />
+			<!-- 拷贝与项目的绑定的配置文件 -->
+			<if>
+				<equals arg1="@{webresource-config}" arg2="" />
+				<then>
+				</then>
+				<else>
+					<copy todir="${build.dir}/@{project}/">
+						<fileset dir="${src.dir}/@{project}/web">
+							<patternset refid="@{webresource-config}">
+							</patternset>
+						</fileset>
+					</copy>
+				</else>
+			</if>
+			<!-- 删除mysql驱动包 -->
+			<if>
+				<equals arg1="${encryptMysql}" arg2="true" />
+				<then>
+					<delete>
+						<fileset dir="${build.dir}/@{project}">
+							<include name="**/mysql*.jar" />
+							<include name="**/mysql*.zip" />
+						</fileset>
+					</delete>
+					<!-- 拷贝加密的jar包 -->
+					<copy todir="${web.lib.dir}">
+						<!-- 将${enc.lib.dir}中的jar和zip文件拷贝到Server的lib目录中 -->
+						<fileset dir="${enc.lib.dir}">
+							<include name="**/*.jar" />
+							<include name="**/*.zip" />
+						</fileset>
+					</copy>
+				</then>
+			</if>
+
+			<if>
+				<equals arg1="@{resource-config}" arg2="" />
+				<then>
+				</then>
+				<else>
+					<copy todir="${web.classes.dir}">
+						<fileset dir="${src.dir}/@{project}/resource">
+							<patternset refid="@{resource-config}">
+							</patternset>
+						</fileset>
+					</copy>
+				</else>
+			</if>
+
+			<if>
+				<equals arg1="@{source-config}" arg2="" />
+				<then>
+				</then>
+				<else>
+					<mkdir dir="${src.dir}/java" />
+					<copy todir="${web.classes.dir}">
+						<fileset dir="${src.dir}/java">
+							<patternset refid="@{source-config}">
+							</patternset>
+						</fileset>
+					</copy>
+				</else>
+			</if>
+			<compile src="${src.dir}/java" dest="${web.classes.dir}"
+				classpath="@{classpath}" />
+
+			<if>
+				<equals arg1="@{pkg-zip}" arg2="true" />
+				<then>
+					<zip destfile="${dist.dir}/@{project}.zip" basedir="${build.dir}/@{project}" />
+				</then>
+				<else>
+					<war destfile="${dist.dir}/@{project}.war" basedir="${build.dir}/@{project}" />
+				</else>
+			</if>
+		</sequential>
+	</macrodef>
+
+	<!-- 打包一个Server,打包为zip文件 -->
+	<macrodef name="package_server">
+		<!-- Server的工程名称,如game_server -->
+		<attribute name="servername" />
+		<sequential>
+			<property name="zip.dir" value="${dist.dir}/zip/@{servername}" />
+			<mkdir dir="${zip.dir}" />
+			<!-- 拷贝jar包 -->
+			<copy todir="${zip.dir}">
+				<!-- 将${lib.dir}中的jar和zip文件拷贝到Server的lib目录中 -->
+				<fileset dir="${lib.dir}">
+					<include name="**/*.jar" />
+					<include name="**/*.zip" />
+				</fileset>
+			</copy>
+
+			<!-- 根据是否加密选择需要的jar包:加密版本使用于总修改过的mysql驱动和加密后的服务器jar包 -->
+			<if>
+				<equals arg1="${encrypt}" arg2="true" />
+				<then>
+					<!-- 拷贝加密的jar包 -->
+					<copy todir="${zip.dir}">
+						<fileset dir="${dist.dir}">
+							<include name="*.encrypt" />
+						</fileset>
+					</copy>
+				</then>
+				<else>
+					<copy todir="${zip.dir}">
+						<fileset dir="${dist.dir}">
+							<include name="*.jar" />
+						</fileset>
+					</copy>
+				</else>
+			</if>
+			<zip destfile="${dist.dir}/@{servername}.zip">
+				<fileset dir="${zip.dir}">
+					<include name="**/*" />
+				</fileset>
+			</zip>
+		</sequential>
+	</macrodef>
+
+	<!-- 加密jar包 -->
+	<macrodef name="jarenc">
+		<attribute name="in" />
+		<attribute name="out" />
+		<sequential>
+			<exec executable="cmd.exe" os="Windows XP">
+				<arg line="/c jarenc @{in} @{out}" />
+			</exec>
+			<exec executable="/bin/bash" os="Linux">
+				<arg value="-c" />
+				<arg value="./jarenc '@{in}' '@{out}'" />
+			</exec>
+		</sequential>
+	</macrodef>
+	<!-- 定义宏结束 -->
+</project>

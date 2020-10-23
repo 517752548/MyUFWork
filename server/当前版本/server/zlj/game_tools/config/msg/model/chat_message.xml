@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="chat">
+
+	<message type="CG_CHAT_MSG" comment="服务器端向客户端发送的聊天消息">
+		<field type="Integer" name="scope" comment="聊天范围" />
+		<field type="String" name="destRoleName" comment="聊天消息接收的玩家" />
+		<field type="String" name="destRoleUUID" comment="消息接收玩家的UUID" />
+		<field type="String" name="content" comment="聊天消息" />
+		<field type="Integer" name="chatType" comment="类型，0默认，1语音" />
+	</message>
+
+	<message type="GC_CHAT_MSG" comment="服务器向客户端发送过滤后的聊天信息">
+		<field type="com.imop.lj.common.model.human.ChatInfo" name="chatInfo" clientType="ChatInfoData"
+			comment="聊天数据" macro="ChatInfo" />
+	</message>
+	
+	<message type="GC_CHAT_MSG_LIST" comment="聊天信息列表">
+		<field type="com.imop.lj.common.model.human.ChatInfo" name="chatInfos" clientType="ChatInfoData"
+			comment="聊天数据列表" macro="ChatInfo" list="true" />
+	</message>
+	
+</messages>

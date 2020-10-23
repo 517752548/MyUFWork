@@ -1,0 +1,5 @@
+int buildType;[minValue=1;notNull=false]//帮派建筑类型,朱雀,侍剑等
+int corpsBldgLevel;[minValue=1;notNull=false]//帮派建筑等级
+int upgradeExp;[minValue=0;notNull=false]//升到下一等级所需经验
+int upgradeFund;[minValue=0;notNull=false]//升到下一等级所需资金
+int upgradeTime;[minValue=0;notNull=false]//升级所需时间

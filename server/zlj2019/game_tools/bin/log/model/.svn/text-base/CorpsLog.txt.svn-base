@@ -1,0 +1,10 @@
+message com.imop.lj.logserver.model.CorpsLog(
+	long corpsId;// 商会ID
+	String corpsName;// 商会名
+	int corpsLevel;// 商会等级
+	int memberNum;// 商会人数
+	int operatorJob;//操作者职位
+	long targetId;// 被操作者玩家id
+	String targetName;//被操作者玩家名称
+	int targetJob;//被操作者职位
+)
