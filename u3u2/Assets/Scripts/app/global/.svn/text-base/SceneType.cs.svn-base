@@ -1,0 +1,1 @@
+﻿namespace app.global{	public enum SceneType	{		loading,		main,		battle	}}

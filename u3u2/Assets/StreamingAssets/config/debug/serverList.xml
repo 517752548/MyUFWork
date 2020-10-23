@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--通过评审的app Id列表-->
+    <passAppIds></passAppIds>
+    <!--线上用服务器列表-->
+    <serverurl>
+		  <url domain="ceshi" lan="CN" ishot="1" def="1" name="测试服" serverid="10001"/>
+        <url domain="cehua" lan="CN" ishot="1" def="1" name="策划服" serverid="9002"/>
+        <url domain="jishu" lan="CN" ishot="0" def="0" name="技术服" serverid="9101"/>
+        <url domain="zidingyi" lan="CN" ishot="0" def="0" name="自定义" serverid="9102"/>
+    </serverurl>
+    <!--评审用服务器列表-->
+    <noPassServerurl></noPassServerurl>
+</config>

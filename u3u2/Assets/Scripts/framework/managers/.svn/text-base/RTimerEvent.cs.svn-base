@@ -1,0 +1,3 @@
+using System;
+
+public class RTimerEvent : RMetaEvent    {        public RTimerEvent(String type = "ramework.utils.RTimerEvent", Object data = null):base(type, data)        {        }        public new String type        {            get            {                return "framework.utils.RTimerEvent";            }        }        private int _index = 0;        public int index        {            get            {                return _index;            }set            {                _index = value;            }        }    }

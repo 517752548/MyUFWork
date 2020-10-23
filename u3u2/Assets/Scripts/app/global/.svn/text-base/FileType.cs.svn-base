@@ -1,0 +1,2 @@
+﻿namespace app.global{	public enum FileType	{		assetsBundle_character,        assetsBundle_effect,        assetsBundle_weapon,        assetsBundle_battle_field,        assetsBundle_lightmap,        assetsBundle_ui,
+        image	}}

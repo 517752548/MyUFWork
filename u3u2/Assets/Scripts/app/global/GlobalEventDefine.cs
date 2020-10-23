@@ -1,0 +1,1 @@
+using System;namespace app.global{    public class GlobalEventDefine    {    }}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <server_list>http://patch.ts.wywlwx.com.cn/serverlist.xml</server_list>
+    <!--<reyun_appid>b23b88f7c83cf5c821caee1e7fc09ab7</reyun_appid>--><!--reyun的产品唯一Id-->
+    <!--<reyun_channel>devTest1Client</reyun_channel>--><!--reyun的渠道设置-->
+    <!--是否动态更新脚本只在非debug模式下生效，安卓默认是1，ios默认是0-->
+    <!--<external_scripts>0</external_scripts>-->
+    <!--是否动态更新美术资源只在非debug模式下生效，安卓默认是1，ios默认是1-->
+    <!--<external_arts>0</external_arts>-->
+    <!--是否启用debug模式，debug模式下使用本地资源和脚本-->
+    <debug>1</debug>
+</config>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.u3u2.main" 
+    android:theme="@android:style/Theme.NoTitleBar" 
+    android:versionName="tianshu" 
+    android:versionCode="50"
+    android:installLocation="preferExternal">
+  <supports-screens 
+      android:smallScreens="true" 
+      android:normalScreens="true" 
+      android:largeScreens="true" 
+      android:xlargeScreens="true" 
+      android:anyDensity="true" />
+  
+  <application 
+      android:icon="@drawable/app_icon" 
+      android:label="@string/app_name" >
+    
+    <!--<activity android:name="com.u3u2.main.VerifyActivity" 
+        android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+      
+        <intent-filter>
+		    <action android:name="android.intent.action.MAIN" />
+		    <category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+    </activity>-->
+    
+   <activity android:name="com.u3u2.main.UnityActivity" 
+             android:label="@string/app_name" 
+             android:screenOrientation="landscape" 
+             android:launchMode="singleTask" 
+             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale">
+     
+       <intent-filter>
+		    <action android:name="android.intent.action.MAIN" />
+		    <category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+     
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="false" />
+    </activity>
+    
+    <service android:name="com.u3u2.main.UpdateService" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.DEFAULT" >
+            </category>
+        </intent-filter>
+    </service>
+   
+    <meta-data android:name="com.reyun.KEY" android:value="b23b88f7c83cf5c821caee1e7fc09ab7" />
+    <meta-data android:name="com.reyun.CKEY" android:value="f_88888" />
+
+    <meta-data android:name="DC_APPID" android:value="315BCB49BB8A5130BD9171FEA6D230CF"/>
+    <meta-data android:name="DC_CHANNEL" android:value="f_88888"/>
+    
+  </application>
+  
+  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19" />
+  <uses-feature android:glEsVersion="0x00020000" />
+  <uses-feature android:name="android.hardware.touchscreen" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+  
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" /> 
+	<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> 
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> 
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.SEND_SMS"/>
+  
+</manifest>

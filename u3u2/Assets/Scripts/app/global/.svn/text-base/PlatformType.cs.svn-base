@@ -1,0 +1,1 @@
+﻿namespace app.global{    public enum PlatformType    {        ios,        android,        pc    }}
