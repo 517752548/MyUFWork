@@ -129,7 +129,7 @@ namespace app.model
             zoneGroundCamCam.depth = -1;
             zoneGroundCamCam.renderingPath = RenderingPath.UsePlayerSettings;
             zoneGroundCamCam.useOcclusionCulling = false;
-            zoneGroundCamCam.hdr = false;
+            zoneGroundCamCam.allowHDR = false;
 
             zone3DModelCam = new GameObject("ZoneModelCam");
             zone3DModelCam.layer = LayerMask.NameToLayer("Zone");
@@ -147,7 +147,7 @@ namespace app.model
             zoneModelCamCam.depth = 0;
             zoneModelCamCam.renderingPath = RenderingPath.UsePlayerSettings;
             zoneModelCamCam.useOcclusionCulling = false;
-            zoneModelCamCam.hdr = false;
+            zoneModelCamCam.allowHDR = false;
 
             ground = new GameObject();
             ground.name = "Ground";
@@ -205,7 +205,7 @@ namespace app.model
             battleModelCamCam.depth = 0;
             battleModelCamCam.renderingPath = RenderingPath.UsePlayerSettings;
             battleModelCamCam.useOcclusionCulling = false;
-            battleModelCamCam.hdr = false;
+            battleModelCamCam.allowHDR = false;
 
             battleGroundContainer = new GameObject("BattleGroundContainer");
             battleGroundContainer.layer = LayerMask.NameToLayer("BattleGround");

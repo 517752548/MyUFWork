@@ -34,11 +34,11 @@ public class GameSceneManager : MonoBehaviour
         }
     }
 
-    public GameSceneManager()
+    private void Start()
     {
         mCurrentUnitySceneName = Application.loadedLevelName;
-        //mCurrentUnitySceneName = SceneManager.GetActiveScene().name;
     }
+    
 
     /// <summary>
     /// 加载unity场景，返回true说明开始加载，返回false说明当前场景就是要加载的场景。

@@ -8,7 +8,10 @@ using System.Collections.Generic;
     /// </summary>
     public class TimerManager : MonoBehaviour
     {
-        public static readonly int FIXED_DELTA_TIME = (int)Math.Round(Time.fixedDeltaTime * 1000);
+        public int FIXED_DELTA_TIME
+        {
+            get { return (int) Math.Round(Time.fixedDeltaTime * 1000); }
+        }
 
         private static TimerManager _ins;
 
@@ -29,12 +32,12 @@ using System.Collections.Generic;
             }
         }
 
-        private TimerManager()
+        private void Start()
         {
             timerList = new List<RTimer>();
             ClientLog.Log("FIXED_DELTA_TIME=" + FIXED_DELTA_TIME);
         }
-
+        
         //所有的timer列表
         private List<RTimer> timerList;
         

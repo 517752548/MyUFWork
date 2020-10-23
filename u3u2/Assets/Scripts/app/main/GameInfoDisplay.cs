@@ -7,14 +7,16 @@ namespace app.main
 {
     public class GameInfoDisplay : MonoBehaviour
     {
-        private Texture2D mBg = Texture2D.blackTexture;
+        private Texture2D mBg;
         private float mScale = 1.0f;
 
         void Awake()
         {
+            mBg = Texture2D.blackTexture;
             mScale = (float)UGUIConfig.UISpaceHeight / (float)UGUIConfig.designHeight;
             mBg.Resize((int)(182.0f * mScale), (int)(20.0f * mScale));
         }
+        
 
         public static long MLastFps
         {
