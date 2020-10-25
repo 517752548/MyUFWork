@@ -1,0 +1,6 @@
+int assistId;[minValue=1;notNull=false]//辅助技能ID
+int assistLevel;[minValue=1;notNull=false]//需求技能等级
+int costEnergy;[minValue=1;notNull=false]//需要活力值
+int rewardId;[minValue=1;notNull=false]//奖励Id
+int itemId;[minValue=1;notNull=false]//道具Id
+String genDesc;[notNull=false]//道具产出描述

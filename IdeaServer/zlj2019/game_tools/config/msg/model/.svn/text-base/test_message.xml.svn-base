@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="test">
+	<!-- 背包道具部分 -->
+	<message type="CG_TEST" comment="更新单个道具信息，客户端受到此消息就替换原来此位置的道具">
+		<field type="Long" name="testLong" comment="测试Long型" />
+		<field type="Integer" name="testInteger" comment="测试Integer型" />
+		<field type="Short" name="testShort" comment="测试Short型" />
+		<field type="Byte" name="testByte" comment="测试Byte型" />
+		<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+		<field type="String" name="testString" comment="测试String型" />
+
+		<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+		<field type="Integer" name="testIntegers" comment="测试Integer型"
+			list="true" />
+		<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+		<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+		<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+			list="true" />
+		<field type="String" name="testStrings" comment="测试String型"
+			list="true" />
+
+		<field type="com.imop.lj.gameserver.test.model.Test1Model"
+			clientType="Test1Model" name="test1Model" comment="单个测试信息">
+			<field type="Long" name="testLong" comment="测试Long型" />
+			<field type="Integer" name="testInteger" comment="测试Integer型" />
+			<field type="Short" name="testShort" comment="测试Short型" />
+			<field type="Byte" name="testByte" comment="测试Byte型" />
+			<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+			<field type="String" name="testString" comment="测试String型" />
+
+			<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+			<field type="Integer" name="testIntegers" comment="测试Integer型"
+				list="true" />
+			<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+			<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+			<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+				list="true" />
+			<field type="String" name="testStrings" comment="测试String型"
+				list="true" />
+		</field>
+
+
+		<field type="com.imop.lj.gameserver.test.model.Test3Model"
+			clientType="Test3ModelList" name="test3Models" comment="单个测试信息" list="true">
+			<field type="Long" name="testLong" comment="测试Long型" />
+			<field type="Integer" name="testInteger" comment="测试Integer型" />
+			<field type="Short" name="testShort" comment="测试Short型" />
+			<field type="Byte" name="testByte" comment="测试Byte型" />
+			<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+			<field type="String" name="testString" comment="测试String型" />
+
+			<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+			<field type="Integer" name="testIntegers" comment="测试Integer型"
+				list="true" />
+			<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+			<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+			<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+				list="true" />
+			<field type="String" name="testStrings" comment="测试String型"
+				list="true" />
+
+			<field type="com.imop.lj.gameserver.test.model.Test2Model"
+				clientType="Test2Model" name="test2Models" comment="测试test2Models信息" list="true">
+				<field type="Long" name="testLong" comment="测试Long型" />
+				<field type="Integer" name="testInteger" comment="测试Integer型" />
+				<field type="Short" name="testShort" comment="测试Short型" />
+				<field type="Byte" name="testByte" comment="测试Byte型" />
+				<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+				<field type="String" name="testString" comment="测试String型" />
+
+				<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+				<field type="Integer" name="testIntegers" comment="测试Integer型"
+					list="true" />
+				<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+				<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+				<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+					list="true" />
+				<field type="String" name="testStrings" comment="测试String型"
+					list="true" />
+
+				<field type="com.imop.lj.gameserver.test.model.Test1Model"
+					clientType="Test1Model" name="test1Model" comment="测试test1Model信息" list="true">
+					<field type="Long" name="testLong" comment="测试Long型" />
+					<field type="Integer" name="testInteger" comment="测试Integer型" />
+					<field type="Short" name="testShort" comment="测试Short型" />
+					<field type="Byte" name="testByte" comment="测试Byte型" />
+					<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+					<field type="String" name="testString" comment="测试String型" />
+
+					<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+					<field type="Integer" name="testIntegers" comment="测试Integer型"
+						list="true" />
+					<field type="Short" name="testShorts" comment="测试Short型"
+						list="true" />
+					<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+					<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+						list="true" />
+					<field type="String" name="testStrings" comment="测试String型"
+						list="true" />
+				</field>
+			</field>
+			
+			<field type="com.imop.lj.gameserver.test.model.Test2Model"
+				clientType="Test2Model" name="test2Model" comment="测试test2Model信息">
+				<field type="Long" name="testLong" comment="测试Long型" />
+				<field type="Integer" name="testInteger" comment="测试Integer型" />
+				<field type="Short" name="testShort" comment="测试Short型" />
+				<field type="Byte" name="testByte" comment="测试Byte型" />
+				<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+				<field type="String" name="testString" comment="测试String型" />
+
+				<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+				<field type="Integer" name="testIntegers" comment="测试Integer型"
+					list="true" />
+				<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+				<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+				<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+					list="true" />
+				<field type="String" name="testStrings" comment="测试String型"
+					list="true" />
+
+				<field type="com.imop.lj.gameserver.test.model.Test1Model"
+					clientType="Test1Model" name="test1Model" comment="测试test1Model信息" list="true">
+					<field type="Long" name="testLong" comment="测试Long型" />
+					<field type="Integer" name="testInteger" comment="测试Integer型" />
+					<field type="Short" name="testShort" comment="测试Short型" />
+					<field type="Byte" name="testByte" comment="测试Byte型" />
+					<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+					<field type="String" name="testString" comment="测试String型" />
+
+					<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+					<field type="Integer" name="testIntegers" comment="测试Integer型"
+						list="true" />
+					<field type="Short" name="testShorts" comment="测试Short型"
+						list="true" />
+					<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+					<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+						list="true" />
+					<field type="String" name="testStrings" comment="测试String型"
+						list="true" />
+				</field>
+			</field>
+		</field>
+	</message>
+
+	<message type="GC_TEST" comment="更新单个道具信息，客户端受到此消息就替换原来此位置的道具">
+		<field type="Long" name="testLong" comment="测试Long型" />
+		<field type="Integer" name="testInteger" comment="测试Integer型" />
+		<field type="Short" name="testShort" comment="测试Short型" />
+		<field type="Byte" name="testByte" comment="测试Byte型" />
+		<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+		<field type="String" name="testString" comment="测试String型" />
+
+		<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+		<field type="Integer" name="testIntegers" comment="测试Integer型"
+			list="true" />
+		<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+		<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+		<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+			list="true" />
+		<field type="String" name="testStrings" comment="测试String型"
+			list="true" />
+
+		<field type="com.imop.lj.gameserver.test.model.Test1Model"
+			clientType="Test1Model" name="test1Model" comment="单个测试信息">
+			<field type="Long" name="testLong" comment="测试Long型" />
+			<field type="Integer" name="testInteger" comment="测试Integer型" />
+			<field type="Short" name="testShort" comment="测试Short型" />
+			<field type="Byte" name="testByte" comment="测试Byte型" />
+			<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+			<field type="String" name="testString" comment="测试String型" />
+
+			<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+			<field type="Integer" name="testIntegers" comment="测试Integer型"
+				list="true" />
+			<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+			<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+			<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+				list="true" />
+			<field type="String" name="testStrings" comment="测试String型"
+				list="true" />
+		</field>
+
+		<field type="com.imop.lj.gameserver.test.model.Test3Model"
+			clientType="Test3ModelList" name="test3Models" comment="测试Test3Model信息" list="true">
+			<field type="Long" name="testLong" comment="测试Long型" />
+			<field type="Integer" name="testInteger" comment="测试Integer型" />
+			<field type="Short" name="testShort" comment="测试Short型" />
+			<field type="Byte" name="testByte" comment="测试Byte型" />
+			<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+			<field type="String" name="testString" comment="测试String型" />
+
+			<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+			<field type="Integer" name="testIntegers" comment="测试Integer型"
+				list="true" />
+			<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+			<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+			<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+				list="true" />
+			<field type="String" name="testStrings" comment="测试String型"
+				list="true" />
+				
+			<field type="com.imop.lj.gameserver.test.model.Test2Model"
+				clientType="Test2Model" name="test2Models" comment="测试Test2Model信息" list="true">
+				<field type="Long" name="testLong" comment="测试Long型" />
+				<field type="Integer" name="testInteger" comment="测试Integer型" />
+				<field type="Short" name="testShort" comment="测试Short型" />
+				<field type="Byte" name="testByte" comment="测试Byte型" />
+				<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+				<field type="String" name="testString" comment="测试String型" />
+
+				<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+				<field type="Integer" name="testIntegers" comment="测试Integer型"
+					list="true" />
+				<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+				<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+				<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+					list="true" />
+				<field type="String" name="testStrings" comment="测试String型"
+					list="true" />
+
+				<field type="com.imop.lj.gameserver.test.model.Test1Model"
+					clientType="Test1Model" name="test1Model" comment="测试test1Model信息" list="true">
+					<field type="Long" name="testLong" comment="测试Long型" />
+					<field type="Integer" name="testInteger" comment="测试Integer型" />
+					<field type="Short" name="testShort" comment="测试Short型" />
+					<field type="Byte" name="testByte" comment="测试Byte型" />
+					<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+					<field type="String" name="testString" comment="测试String型" />
+
+					<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+					<field type="Integer" name="testIntegers" comment="测试Integer型"
+						list="true" />
+					<field type="Short" name="testShorts" comment="测试Short型"
+						list="true" />
+					<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+					<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+						list="true" />
+					<field type="String" name="testStrings" comment="测试String型"
+						list="true" />
+				</field>
+			</field>
+			
+			<field type="com.imop.lj.gameserver.test.model.Test2Model"
+				clientType="Test2Model" name="test2Model" comment="单个测试信息">
+				<field type="Long" name="testLong" comment="测试Long型" />
+				<field type="Integer" name="testInteger" comment="测试Integer型" />
+				<field type="Short" name="testShort" comment="测试Short型" />
+				<field type="Byte" name="testByte" comment="测试Byte型" />
+				<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+				<field type="String" name="testString" comment="测试String型" />
+
+				<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+				<field type="Integer" name="testIntegers" comment="测试Integer型"
+					list="true" />
+				<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+				<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+				<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+					list="true" />
+				<field type="String" name="testStrings" comment="测试String型"
+					list="true" />
+
+				<field type="com.imop.lj.gameserver.test.model.Test1Model"
+					clientType="Test1Model" name="test1Model" comment="测试test1Model信息" list="true">
+					<field type="Long" name="testLong" comment="测试Long型" />
+					<field type="Integer" name="testInteger" comment="测试Integer型" />
+					<field type="Short" name="testShort" comment="测试Short型" />
+					<field type="Byte" name="testByte" comment="测试Byte型" />
+					<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+					<field type="String" name="testString" comment="测试String型" />
+
+					<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+					<field type="Integer" name="testIntegers" comment="测试Integer型"
+						list="true" />
+					<field type="Short" name="testShorts" comment="测试Short型"
+						list="true" />
+					<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+					<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+						list="true" />
+					<field type="String" name="testStrings" comment="测试String型"
+						list="true" />
+				</field>
+			</field>
+		</field>
+	</message>
+	
+	<message type="CG_TEST_LONG" comment="测试">
+		<field type="Long" name="testLong" comment="测试Long型" />
+		<field type="String" name="testString" comment="测试String型"/>
+	</message>
+	
+	<message type="GC_TEST_LONG" comment="测试">
+		<field type="Long" name="testLong" comment="测试Long型" />
+		<field type="String" name="testString" comment="测试String型"/>
+	</message>
+	
+	<message type="WG_TEST" comment="跨服服务器到游戏服务器测试消息">
+		<field type="String" name="content" comment="测试内容" />
+	</message>
+	
+	<message type="GW_TEST" comment="游戏服务器到跨服服务器测试消息">
+		<field type="String" name="content" comment="测试内容" />
+	</message>
+	
+	<!-- test -->
+	<message type="CG_TEST1" comment="更新单个道具信息，客户端受到此消息就替换原来此位置的道具">
+		<field type="Long" name="testLong" comment="测试Long型" />
+		<field type="Integer" name="testInteger" comment="测试Integer型" />
+		<field type="Short" name="testShort" comment="测试Short型" />
+		<field type="Byte" name="testByte" comment="测试Byte型" />
+		<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+		<field type="String" name="testString" comment="测试String型" />
+		
+		<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+		<field type="Integer" name="testIntegers" comment="测试Integer型"
+			list="true" />
+		<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+		<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+		<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+			list="true" />
+		<field type="String" name="testStrings" comment="测试String型"
+			list="true" />
+			
+		<field type="com.imop.lj.gameserver.test.model.Test1Model"
+			clientType="Test1Model" name="test1Model" comment="单个测试信息">
+			<field type="Long" name="testLong" comment="测试Long型" />
+			<field type="Integer" name="testInteger" comment="测试Integer型" />
+			<field type="Short" name="testShort" comment="测试Short型" />
+			<field type="Byte" name="testByte" comment="测试Byte型" />
+			<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+			<field type="String" name="testString" comment="测试String型" />
+
+			<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+			<field type="Integer" name="testIntegers" comment="测试Integer型"
+				list="true" />
+			<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+			<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+			<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+				list="true" />
+			<field type="String" name="testStrings" comment="测试String型"
+				list="true" />
+		</field>
+	</message>
+	
+	<message type="GC_TEST1" comment="更新单个道具信息，客户端受到此消息就替换原来此位置的道具">
+		<field type="Long" name="testLong" comment="测试Long型" />
+		<field type="Integer" name="testInteger" comment="测试Integer型" />
+		<field type="Short" name="testShort" comment="测试Short型" />
+		<field type="Byte" name="testByte" comment="测试Byte型" />
+		<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+		<field type="String" name="testString" comment="测试String型" />
+		
+		<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+		<field type="Integer" name="testIntegers" comment="测试Integer型"
+			list="true" />
+		<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+		<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+		<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+			list="true" />
+		<field type="String" name="testStrings" comment="测试String型"
+			list="true" />
+		
+		<field type="com.imop.lj.gameserver.test.model.Test1Model"
+			clientType="Test1Model" name="test1Model" comment="单个测试信息">
+			<field type="Long" name="testLong" comment="测试Long型" />
+			<field type="Integer" name="testInteger" comment="测试Integer型" />
+			<field type="Short" name="testShort" comment="测试Short型" />
+			<field type="Byte" name="testByte" comment="测试Byte型" />
+			<field type="Boolean" name="testBoolean" comment="测试Boolean型" />
+			<field type="String" name="testString" comment="测试String型" />
+
+			<field type="Long" name="testLongs" comment="测试Long型" list="true" />
+			<field type="Integer" name="testIntegers" comment="测试Integer型"
+				list="true" />
+			<field type="Short" name="testShorts" comment="测试Short型" list="true" />
+			<field type="Byte" name="testBytes" comment="测试Byte型" list="true" />
+			<field type="Boolean" name="testBooleans" comment="测试Boolean型"
+				list="true" />
+			<field type="String" name="testStrings" comment="测试String型"
+				list="true" />
+		</field>	
+	</message>
+	
+</messages>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

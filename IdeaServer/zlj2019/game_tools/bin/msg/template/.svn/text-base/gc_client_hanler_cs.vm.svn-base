@@ -1,0 +1,34 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "String" )string#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )bool#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( toLowerCase $type)$type.toLowerCase()#end
+namespace app.net
+{
+	public class ${module}GCHandler : IGCHandler
+	{
+#foreach( $msg in $msgs )
+		public const string ${msg.className}Event = "${msg.className}Event";
+#end
+
+		public ${module}GCHandler()
+        {
+#foreach( $msg in $msgs )
+            EventCore.addRMetaEventListener(${msg.className}Event, ${msg.className}Handler);
+#end
+        }
+        
+#foreach( $msg in $msgs )
+        private void ${msg.className}Handler(RMetaEvent e)
+        {
+        	${msg.className} msg = e.data as ${msg.className};
+        	
+        }
+        
+#end
+
+	}
+}

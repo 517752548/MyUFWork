@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="player">
+
+	<message type="CG_PLAYER_LOGIN" comment="用户登录">
+		<field type="String" name="account" comment="玩家的账户"></field>
+		<field type="String" name="password" comment="玩家的密码 "></field>
+		<field type="String" name="source" comment="玩家的来源，web登陆，ipad，iphone"></field>
+	</message>
+
+	<message type="CG_PLAYER_COOKIE_LOGIN" comment="用户cookie登录">
+		<field type="String" name="cookieValue" comment="cookie值"></field>
+		<field type="String" name="source" comment="玩家的终端信息，web登陆，ipad，iphone"></field>
+	</message>
+	
+	<message type="GC_ROLE_LIST" comment="角色列表">
+		<field type="com.imop.lj.gameserver.player.model.RoleInfo"
+			clientType="RoleInfoData" list="true" name="roleList"
+			comment="多角色信息">
+			<field type="Long" name="roleUUID" comment="角色id" />
+			<field type="String" name="name" comment="名字" />
+			<field type="Integer" name="level" comment="角色等级" />
+			<field type="Integer" name="petTemplateId" comment="主将模板id" />
+			<field type="Integer" name="petPhotoId" comment="主将图片" />
+			<field type="Integer" name="petRarity" comment="主将资质" />
+			<field type="Integer" name="firstLogin" comment="是否首次登陆0首次登陆1非首次登陆" />
+		</field>
+		<field type="Integer" name="selectedIndex" comment="默认选中的角色索引" />
+		<field type="String" name="passportId" comment="账户Id" />
+	</message>
+
+	<message type="CG_ROLE_TEMPLATE" comment="向服务器端请求角色模板数据">
+	</message>
+
+	<message type="GC_ROLE_TEMPLATE" comment="角色模板数据">
+		<field type="com.imop.lj.gameserver.player.model.CreatePetInfo"
+			name="createPetInfoList" clientType="CreatePetInfoData"
+			list="true" comment="主将信息列表">
+			<field type="Integer" name="petTemplateId" comment="主将模板id" />
+			<field type="Integer" name="petPhotoId" comment="主将头像id" />
+			<field type="Integer" name="petJobType" comment="主将职业类型" />
+			<field type="String" name="petJobName" comment="主将职业名称" />
+			<field type="String" name="petDesc" comment="主将描述" />
+		</field>
+		<field type="Integer" name="activity" comment="1：已激活，0:未激活" />
+	</message>
+	
+	<message type="GC_GAME_ENTER_PLAYER_NUM" comment="进入玩家角色人数">
+		<field type="Integer" name="enterPlayerNum" comment="进入玩家角色人数" />
+	</message>
+
+	<message type="CG_ROLE_RANDOM_NAME" comment="请求随机角色名" >
+		<field type="Integer" name="sex" comment="发送选择主将男女性别0女1男"/>
+	</message>
+
+	<message type="GC_ROLE_RANDOM_NAME" comment="随机角色名">
+		<field type="String" name="name" comment="角色名字"/>
+	</message>
+
+	<message type="CG_CREATE_ROLE" comment="创建角色">
+		<field type="String" name="name" comment="角色名字"></field>
+		<field type="Integer" name="templateId" comment="选择的主将模板Id"></field>
+	</message>
+
+	<message type="GC_FAILED_MSG" comment="GS向CLIENT发送操作失败消息">
+		<field type="Short" name="errorNo" comment="错误号"></field>
+		<field type="String" name="errMsg" comment="错误提示信息"></field>
+	</message>
+
+	<!-- 加载角色数据 实际就是选角色 -->
+	<message type="CG_PLAYER_ENTER" comment="选择角色进入游戏场景">
+		<field type="Long" name="roleUUID" comment="角色的uuid"></field>
+	</message>
+
+	<!-- 服务器角色信息加载完毕 发送场景信息 客户端加载资源 -->
+	<message type="GC_SCENE_INFO" comment="玩家进入场景的信息">
+	</message>
+
+	<!-- 客户端加载资源加载完毕 -->
+	<message type="CG_ENTER_SCENE" comment="玩家可以进入场景">
+	</message>
+
+	<!-- 服务器进入gaming状态前,进入场景后,客户端收到消息 -->
+	<message type="GC_ENTER_SCENE" comment="玩家已经进入场景">
+		<field type="Integer" name="sceneId" comment="场景Id" />
+		<field type="String" name="sceneName" comment="场景名称" />
+	</message>
+
+	<message type="GC_NOTIFY_EXCEPTION" comment="通知客户端">
+		<field type="Integer" name="code" comment="错误码"></field>
+		<field type="String" name="errMsg" comment="错误信息，如果为空就显示默认的"></field>
+	</message>
+	
+	<message type="GC_POPUP_PANEL_END" comment="通知客户端登录需要弹出的面板已经都发完了，前台可以开始处理了">
+	</message>
+	
+	<!-- 充值相关 -->
+	<message type="CG_PLAYER_CHARGE_DIAMOND" comment="玩家充值平台币">
+		<field type="Integer" name="mmCost" comment="兑换的平台币数量" />
+	</message>
+
+	<message type="GC_PLAYER_CHARGE_DIAMOND" comment="兑换成功">
+		<field type="Integer" name="mmBalance" comment="平台币余额" />
+	</message>
+	
+	<message type="CG_PLAYER_QUERY_ACCOUNT" comment="查询账户余额">
+	</message>
+
+	<message type="GC_PLAYER_QUERY_ACCOUNT" comment="查询账户余额的结果">
+		<field type="Integer" name="mmBalance" comment="MM余额" />
+	</message>
+	
+	<message type="CG_REPORT_PLAYER" comment="举报">
+		<field type="Integer" name="scope" comment="聊天范围" />
+		<field type="Long" name="charId" comment="被举报的角色ID" />
+		<field type="String" name="charName" comment="被举报的角色名称" />
+		<field type="String" name="chatText" comment="举报的聊天内容" />
+		<field type="String" name="token" comment="消息令牌" />
+	</message>
+	
+	<!-- 帐号激活相关 -->	
+	<message type="CG_ACCOUNT_ACTIVATIONCODE" comment="激活帐号">
+		<field type="String" name="activationCode" comment="激活码" />
+	</message>
+		
+	<message type="CG_IOS_ANDROID_CHARGE" comment="IOS和android直冲查询">
+	</message>
+	
+	<message type="GC_WALLOW_LOGIN_NOTICE" comment="防沉迷登录提示">
+		<field type="String" name="noticeContent" comment="提示内容" />
+	</message>
+	
+	<!-- 手机验证 -->
+	<message type="CG_GET_SMS_CHECKCODE" comment="获取验证码">
+		<field type="String" name="phoneNum" comment="手机号" />
+	</message>
+	
+	<message type="GC_GET_SMS_CHECKCODE" comment="获取验证码结果">
+		<field type="Integer" name="result" comment="获取验证码结果，1成功，2失败" />
+	</message>
+	
+	<message type="CG_CHECK_SMS_CHECKCODE" comment="验证验证码">
+		<field type="String" name="qqNum" comment="QQ号" />
+		<field type="String" name="phoneNum" comment="手机号" />
+		<field type="String" name="checkCode" comment="验证码" />
+	</message>
+	
+	<message type="GC_CHECK_SMS_CHECKCODE" comment="验证验证码结果">
+		<field type="Integer" name="result" comment="验证结果，1成功，2失败" />
+		<field type="String" name="qqNum" comment="QQ号" />
+		<field type="String" name="phoneNum" comment="手机号" />
+	</message>
+	
+	<message type="CG_SMS_CHECKCODE_PANEL" comment="手机验证面板">
+	</message>
+	
+	<message type="GC_SMS_CHECKCODE_PANEL" comment="手机验证面板">
+		<field type="Integer" name="result" comment="是否已经通过验证，1已通过验证，2未通过验证" />
+		<field type="String" name="qqNum" comment="QQ号，已通过验证时有效" />
+		<field type="String" name="phoneNum" comment="手机号，已通过验证时有效" />
+		<field type="com.imop.lj.common.model.reward.RewardInfo"
+			clientType="RewardInfoData" name="rewardInfos" comment="手机验证奖励信息" macro="RewardInfo">
+		</field>
+	</message>
+	
+	<message type="CG_GET_SMS_CHECKCODE_REWARD" comment="领取手机验证奖励">
+	</message>
+	
+	<message type="GC_RELOGIN" comment="通知客户端需要重新登录（一般有openkey过期造成）">
+	</message>
+	
+	<message type="CG_PLAYER_TOKEN_LOGIN" comment="用户token登录">
+		<field type="String" name="pid" comment="passportId" />
+		<field type="Long" name="rid" comment="角色id" />
+		<field type="String" name="token" comment="token" />
+		<field type="String" name="source" comment="玩家的终端信息，web登陆，ipad，iphone"></field>
+	</message>
+	
+	<message type="GC_UPDATE_TOKEN" comment="更新token">
+		<field type="String" name="pid" comment="passportId" />
+		<field type="Long" name="rid" comment="角色id" />
+		<field type="String" name="token" comment="token" />
+	</message>
+	
+	<message type="GC_CHARGE_RECORD" comment="充值记录">
+		<field type="Integer" name="tplId" list="true" comment="已充值模板id" />
+	</message>
+	
+	<message type="CG_CHARGE_GEN_ORDERID" comment="生成充值订单Id">
+		<field type="String" name="channelCode" comment="渠道号" />
+		<field type="String" name="channelExt" comment="渠道附加值" />
+	</message>
+	
+	<message type="GC_CHARGE_GEN_ORDERID" comment="生成充值订单Id">
+		<field type="String" name="orderId" comment="充值订单Id" />
+	</message>
+	
+	<message type="GC_LOGIN_POP_PANEL" comment="登录弹出面板">
+		<field type="Integer" name="funcId" comment="面板功能Id" />
+		<field type="String" name="popParam" comment="其他参数" />
+	</message>
+	
+	<message type="CG_IOSCHARGE_CHECK" comment="ios充值check">
+		<field type="String" name="token" comment="充值token" />
+	</message>
+	
+	
+</messages>

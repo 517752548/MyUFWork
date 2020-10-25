@@ -1,0 +1,13 @@
+int groupId;[notNull=false]//组ID
+int ownerFuncType;[minValue=0;notNull=false]//所属功能
+long nameLangId;[minValue=0;notNull=false] //名称多语言Id
+String name;//名称
+int showBtn;[minValue=0;notNull=false]//是否有对应按钮
+int position;[minValue=0;notNull=false]//上下位置
+int order;[minValue=0;notNull=false]//顺序
+long descLangId;[minValue=0;notNull=false] //描述多语言Id
+String desc;//描述
+int effect;[minValue=0;notNull=false]//特效
+long effectNameLangId;[minValue=0;notNull=false] //特效时显示名称多语言Id
+String effectName;//特效时显示名称
+int musicId;[notNull=false]//音乐ID

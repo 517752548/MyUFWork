@@ -1,0 +1,10 @@
+int queueId;//限时队列ID
+int sortId;//排序
+List<com.imop.lj.common.model.template.ItemCostTemplate> normalItemList;[Collection(1,2)]//商城物品
+List<com.imop.lj.common.model.template.CurrencyTemplate> priceList;[Collection(1,2)]//购买价格
+long validPeriod;[notNull=false;minValue=1]//物品有效期
+boolean limitStock;//是否有库存限制
+int initStockNum;[notNull=false;minValue=0]//初始库存数量
+boolean limitPurchase;//是否限购
+int limitPurchaseNum;[notNull=false;minValue=0]//限购数量
+String marks;[notNull=false]//各种标识

@@ -1,0 +1,11 @@
+int goodActivityId;[notNull=true;minValue=1]//活动Id
+int order;[notNull=false;minValue=0]//排序
+int rewardId;[notNull=false;minValue=0]//目标奖励Id
+int panelType;[notNull=false;minValue=0] //目标面板类型
+int panelLink;[notNull=false;minValue=0] //目标面板ID	
+String linkName;[notNull=fasle] // 目标面板名称
+int showBtn;[notNull=false;minValue=0]//不能领奖时是否显示按钮
+String desc;[notNull=fasle] // 目标1描述
+String descSecond;[notNull=fasle] // 目标2描述
+String mailTitle;[notNull=fasle] //邮件发奖标题
+String mailContent;[notNull=fasle] //邮件发奖内容

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.imop.lj.db.model">
+
+	<!-- 合服相关 -->
+#foreach( $module in $modules )
+	<!-- 查询所有${module.mergeModelName} -->
+	<query name="queryAll${module.className}_merge">
+	<![CDATA[
+		from ${module.className} #if($module.deleted)where deleted = 0#end
+	]]>
+	</query>
+	
+	<!-- 删除所有${module.mergeModelName} -->
+	<query name="delAll${module.className}_merge">
+	<![CDATA[
+		delete from ${module.className}
+	]]>
+	</query>
+	
+#end
+</hibernate-mapping>

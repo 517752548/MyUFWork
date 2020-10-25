@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+	<menu id="1" name="游戏世界管理" url="" pid="0">
+		<submenu id="1_1" pid="1" name="用户账号" url="user.do?action=init" />
+		<submenu id="1_2" pid="1" name="角色管理" url="role.do?action=init" />
+		<submenu id="1_14" pid="1" name="武将" url="pet.do?action=init" />
+		<submenu id="1_18" pid="1" name="物品" url="item.do?action=init" />
+		<submenu id="1_19" pid="1" name="军团管理" url="corps.do?action=init" />
+		<!-- 
+		<submenu id="1_4" pid="1" name="分公司管理" url="branch.do?action=init" />
+		<submenu id="1_5" pid="1" name="员工" url="employee.do?action=init" />
+		<submenu id="1_6" pid="1" name="战斗" url="battle.do?action=init" />
+		<submenu id="1_7" pid="1" name="竞技场" url="arenSnap.do?action=init" />
+		<submenu id="1_9" pid="1" name="日常任务" url="dailyQuest.do?action=init" />
+		<submenu id="1_11" pid="1" name="协助护送" url="escortHelpSnap.do?action=init" />
+		<submenu id="1_12" pid="1" name="好友关系" url="relation.do?action=init" />
+		<submenu id="1_13" pid="1" name="护送取经" url="escortSnap.do?action=init" />
+		<submenu id="1_15" pid="1" name="在做任务" url="doingQuest.do?action=init" />
+		<submenu id="1_16" pid="1" name="完成任务" url="finishedQuest.do?action=init" />
+		<submenu id="1_17" pid="1" name="猎命师" url="hunter.do?action=init" />
+		<submenu id="1_19" pid="1" name="猎命临时背包" url="tempHuntBag.do?action=init" />
+		<submenu id="1_20" pid="1" name="连胜排行榜" url="sortArenaLevel.do?action=init" />
+		<submenu id="1_21" pid="1" name="声望排行榜" url="sortHonerLevel.do?action=init" />
+		<submenu id="1_22" pid="1" name="公司收入排行榜" url="sortCompanyInComeLevel.do?action=init" />
+		<submenu id="1_23" pid="1" name="商会" url="commerceController.do?action=init" />
+		<submenu id="1_24" pid="1" name="商会会员" url="commerceMemberController.do?action=init" />
+		<submenu id="1_25" pid="1" name="vip通讯录" url="addressBook.do?action=init" />
+		 -->
+		<!-- <submenu id="1_3" pid="1" name="军团管理" url="guildInfo.do?action=init" /> -->
+		<!-- <submenu id="1_10" pid="1" name="服务器版本" url="dbVersion.do?action=init" /> -->
+		<!-- <submenu id="1_8" pid="1" name="BOSS战" url="boss.do?action=init" /> -->
+		 <!-- <submenu id="1_19" pid="1" name="奖励" url="prizeInfo.do?action=init" />-->
+	</menu>
+	<menu id="2" name="活动与公告查询（运营）" url="" pid="0">
+		<submenu id="2_1" pid="2" name="定时公告管理" url="timeNotice.do?action=init&amp;type=0" />
+		<submenu id="2_2" pid="2" name="服务器同步" url="svrSYN.do?action=init" />
+		<submenu id="2_3" pid="2" name="GM补偿" url="userPrize.do?action=init" />
+		<submenu id="2_4" pid="2" name="发奖礼包" url="prize.do?action=init" />
+		<submenu id="2_5" pid="2" name="增加VIP经验" url="vipLevel.do?action=init" />
+		<submenu id="2_6" pid="2" name="商城物品管理" url="shopmall.do?action=init" />
+		<submenu id="2_7" pid="2" name="URL连接" url="borsor.do?action=init" />
+		<submenu id="2_8" pid="2" name="商城" url="mall.do?action=init" />
+		<submenu id="2_9" pid="2" name="精彩活动" url="mobileActivity.do?action=init" />
+		<submenu id="2_10" pid="2" name="游戏脏语言过滤设置" url="dirtyWorlds.do?action=init" />
+		<submenu id="2_11" pid="2" name="卡牌活动" url="cardActivity.do?action=init" />
+		<submenu id="2_12" pid="2" name="幸运转盘活动" url="turntableActivity.do?action=init" />
+		<submenu id="2_13" pid="2" name="统计信息" url="statistics.do?action=init" />
+		<submenu id="2_14" pid="2" name="充值统计信息" url="statistics.do?action=chargeinit" />
+		<!-- 集市任务先不用了，注掉 
+		<submenu id="2_14" pid="2" name="集市任务" url="qqMarketTaskTarget.do?action=init" />
+		 -->
+	 	<submenu id="2_15" pid="2" name="CDKEY礼包" url="worldGift.do?action=init" />
+	 	<submenu id="2_16" pid="2" name="CDKEY套餐" url="cdkeyPlans.do?action=init" />
+	 	<submenu id="2_17" pid="2" name="CDKEY管理" url="cdkeyManager.do?action=init" />
+	 	<submenu id="2_17" pid="2" name="CDKEY查询" url="cdkey.do?action=init" />
+	 	<submenu id="2_18" pid="2" name="游戏公告" url="gameNotice.do?action=init" />
+	</menu>
+	<!-- 
+	<menu id="3" name="游戏日志（客服）" url="" pid="0">
+
+		<submenu id="3_1" pid="3" name="GM操作日志" url="basicLog.do?action=init&amp;logType=gm_command_log" />
+		<submenu id="3_2" pid="3" name="物品产生日志" url="basicLog.do?action=init&amp;logType=item_gen_log" />
+		<submenu id="3_3" pid="3" name="道具日志" url="basicLog.do?action=init&amp;logType=item_log" />
+		<submenu id="3_4" pid="3" name="秘书日志" url="basicLog.do?action=init&amp;logType=secretary_log" />
+		<submenu id="3_5" pid="3" name="员工日志" url="basicLog.do?action=init&amp;logType=employee_log" />
+		<submenu id="3_6" pid="3" name="公司升级日志" url="basicLog.do?action=init&amp;logType=company_upgrade_log" />
+		<submenu id="3_7" pid="3" name="金钱日志" url="basicLog.do?action=init&amp;logType=money_log" />		
+		<submenu id="3_8" pid="3" name="征收日志" url="basicLog.do?action=init&amp;logType=levy_log" />
+		<submenu id="3_9" pid="3" name="竞技场日志" url="basicLog.do?action=init&amp;logType=arena_log" />
+		<submenu id="3_10" pid="3" name="战斗日志" url="basicLog.do?action=init&amp;logType=battle_log" />
+		<submenu id="3_11" pid="3" name="用户特定行为日志" url="basicLog.do?action=init&amp;logType=behavior_log" />
+		<submenu id="3_12" pid="3" name="充值日志" url="basicLog.do?action=init&amp;logType=charge_log" />
+		<submenu id="3_13" pid="3" name="聊天日志" url="basicLog.do?action=init&amp;logType=chat_log" />
+		<submenu id="3_14" pid="3" name="作弊日志" url="basicLog.do?action=init&amp;logType=cheat_log" />
+		<submenu id="3_15" pid="3" name="地域日志" url="basicLog.do?action=init&amp;logType=district_log" />
+		<submenu id="3_16" pid="3" name="掉落日志" url="basicLog.do?action=init&amp;logType=drop_item_log" />
+		<submenu id="3_17" pid="3" name="护航日志" url="basicLog.do?action=init&amp;logType=escort_log" />
+		<submenu id="3_18" pid="3" name="命格道具日志" url="basicLog.do?action=init&amp;logType=hunt_item_log" />
+		<submenu id="3_19" pid="3" name="猎命师日志" url="basicLog.do?action=init&amp;logType=hunter_log" />
+		<submenu id="3_20" pid="3" name="邮件日志" url="basicLog.do?action=init&amp;logType=mail_log" />
+		<submenu id="3_21" pid="3" name="推图日志" url="basicLog.do?action=init&amp;logType=mission_log" />
+		<submenu id="3_22" pid="3" name="玩家在线时间日志" url="basicLog.do?action=init&amp;logType=online_time_log" />
+		<submenu id="3_23" pid="3" name="用户登陆日志" url="basicLog.do?action=init&amp;logType=player_login_log" />
+		<submenu id="3_24" pid="3" name="登录奖励日志" url="basicLog.do?action=init&amp;logType=prize_log" />
+		<submenu id="3_25" pid="3" name="消息处理时间日志" url="basicLog.do?action=init&amp;logType=probe_log" /> 
+		<submenu id="3_26" pid="3" name="好友关系日志" url="basicLog.do?action=init&amp;logType=relation_log" />
+		<submenu id="3_27" pid="3" name="任务日志" url="basicLog.do?action=init&amp;logType=task_log" />
+		<submenu id="3_28" pid="3" name="用户操作日志" url="basicLog.do?action=init&amp;logType=user_action_log" />
+		<submenu id="3_29" pid="3" name="Vip日志" url="basicLog.do?action=init&amp;logType=vip_log" />
+		<submenu id="3_30" pid="3" name="排行榜日志" url="basicLog.do?action=init&amp;logType=sort_level_log" />
+		<submenu id="3_31" pid="3" name="扫荡日志" url="basicLog.do?action=init&amp;logType=clean_mission_log" />
+		<submenu id="3_32" pid="3" name="商会日志" url="basicLog.do?action=init&amp;logType=commerce_log" />
+		<submenu id="3_33" pid="3" name="新竞技场日志" url="basicLog.do?action=init&amp;logType=arena_recode_log" />
+		<submenu id="3_34" pid="3" name="贸易大会日志" url="basicLog.do?action=init&amp;logType=commercemeeting_log" />
+		<submenu id="3_35" pid="3" name="招财猫日志" url="basicLog.do?action=init&amp;logType=feed_cat_log" />
+		<submenu id="3_36" pid="3" name="珠宝商会联盟日志" url="basicLog.do?action=init&amp;logType=jewelry_allance_log" />
+		<submenu id="3_37" pid="3" name="宝石镶嵌日志" url="basicLog.do?action=init&amp;logType=embed_diamond_log" />
+		<submenu id="3_38" pid="3" name="宝石洗练日志" url="basicLog.do?action=init&amp;logType=wash_diamond_log" />
+		<submenu id="3_39" pid="3" name="鲜花日志" url="basicLog.do?action=init&amp;logType=flowers_log" />
+		<submenu id="3_40" pid="3" name="贸易争夺日志" url="basicLog.do?action=init&amp;logType=silverore_log" />
+		<submenu id="3_41" pid="3" name="物品合成日志" url="basicLog.do?action=init&amp;logType=materia_synthesis_log" />
+		<submenu id="3_42" pid="3" name="每日充值奖励日志" url="basicLog.do?action=init&amp;logType=day_chong_reward_log" />
+		<submenu id="3_43" pid="3" name="传承日志" url="basicLog.do?action=init&amp;logType=heritage_log" />
+		<submenu id="3_2" pid="3" name="角色基本日志" url="basicLog.do?action=init&amp;logType=basic_player_log" />		
+		<submenu id="3_3" pid="3" name="战役日志" url="basicLog.do?action=init&amp;logType=battle_log" />
+		<submenu id="3_4" pid="3" name="金币日志" url="basicLog.do?action=init&amp;logType=money_log&amp;moneyType=2" />
+		<submenu id="3_5" pid="3" name="兵力日志" url="basicLog.do?action=init&amp;logType=camp_log" />
+		<submenu id="3_6" pid="3" name="粮草日志" url="basicLog.do?action=init&amp;logType=grain_log" />
+		<submenu id="3_7" pid="3" name="军功日志" url="basicLog.do?action=init&amp;logType=exploit_log" />
+		<submenu id="3_8" pid="3" name="威望日志" url="basicLog.do?action=init&amp;logType=prestige_log" />
+		<submenu id="3_9" pid="3" name="任务日志" url="basicLog.do?action=init&amp;logType=task_log" />
+		<submenu id="3_10" pid="3" name="升级日志" url="basicLog.do?action=init&amp;logType=level_log" />				
+		<submenu id="3_11" pid="3" name="快照日志" url="basicLog.do?action=init&amp;logType=snap_log" />
+		<submenu id="3_12" pid="3" name="聊天日志" url="basicLog.do?action=init&amp;logType=chat_log&amp;scope=0" />
+		<submenu id="3_13" pid="3" name="武将日志" url="basicLog.do?action=init&amp;logType=pet_log" />
+		<submenu id="3_14" pid="3" name="邮件日志" url="basicLog.do?action=init&amp;logType=mail_log" />
+		<submenu id="3_15" pid="3" name="军团日志" url="basicLog.do?action=init&amp;logType=guild_log" />
+		<submenu id="3_17" pid="3" name="登录奖励日志" url="basicLog.do?action=init&amp;logType=prize_log" />
+		
+		<submenu id="3_20" pid="3" name="战争日志" url="basicLog.do?action=init&amp;logType=war_log" />
+	</menu>
+	 -->
+	<menu id="4" name="日常维护（运维）" url="" pid="0">
+		<submenu id="4_1" pid="4" name="服务器状态" url="svrStatus.do?action=init" />
+		<submenu id="4_2" pid="4" name="报警监控" url="svrMonitor.do?action=init" />
+		<submenu id="4_3" pid="4" name="命令管理" url="cmd.do?action=init" />
+		<submenu id="4_4" pid="4" name="访问控制" url="accessControl.do?action=init" />
+		<submenu id="4_5" pid="4" name="沉迷控制" url="wallowControl.do?action=init"/>
+		<submenu id="4_6" pid="4" name="活动管理" url="activity.do?action=init" />
+		<submenu id="4_7" pid="4" name="开关服" url="server.do?action=init" />
+		<submenu id="4_8" pid="4" name="SQL查询" url="sql.do?action=init" />
+	</menu>
+	<menu id="5" name="新服检测" url="" pid="0">
+		<submenu id="5_1" pid="5" name="同步清理" url="newSvrClear.do?action=init" />
+		<submenu id="5_2" pid="5" name="自检报告" url="newSvrCheck.do?action=init" />
+	</menu>
+	<menu id="6" name="系统管理" url="" pid="0">
+		<submenu id="6_1" pid="6" name="用户创建" url="sysUser.do?action=addInitSysUser" />
+		<submenu id="6_2" pid="6" name="用户管理" url="sysUser.do?action=init" />
+		<submenu id="6_3" pid="6" name="修改密码" url="sysUser.do?action=editInitPassword" />
+		<submenu id="6_4" pid="6" name="权限查看" url="sysUser.do?action=viewRight&amp;role=super_admin&amp;id=man_nav_1" />
+		<submenu id="6_5" pid="6" name="在线角色控制" url="onlinePlayerCommand.do?action=init" />
+		<submenu id="6_6" pid="6" name="GM全服补偿" url="userPrizeAll.do?action=addUserPrizeInit" />
+		<submenu id="6_7" pid="6" name="集市任务" url="qqMarketTaskTarget.do?action=init" />
+	</menu>
+	<menu id="7" name="自动游戏日志（客服）" url="" pid="0" macro="autolog"></menu>
+</menus>

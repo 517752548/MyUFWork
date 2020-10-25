@@ -1,0 +1,54 @@
+log4j.rootLogger=info,r,error,stdout
+log4j.logger.tr.mergedb=info,mergedb
+log4j.logger.tr.rename=info,rename
+log4j.logger.tr.delete=info,delete
+
+log4j.appender.r=org.apache.log4j.RollingFileAppender
+log4j.appender.r.encoding=UTF-8
+log4j.appender.r.append=false
+log4j.appender.r.File=logs/all.log
+log4j.appender.r.MaxFileSize=30mb
+log4j.appender.r.MaxBackupIndex=2
+log4j.appender.r.layout=org.apache.log4j.PatternLayout
+log4j.appender.r.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.mergedb=org.apache.log4j.RollingFileAppender
+log4j.appender.mergedb.encoding=UTF-8
+log4j.appender.mergedb.append=false
+log4j.appender.mergedb.File=logs/mergedb.log
+log4j.appender.mergedb.MaxFileSize=30mb
+log4j.appender.mergedb.MaxBackupIndex=2
+log4j.appender.mergedb.layout=org.apache.log4j.PatternLayout
+log4j.appender.mergedb.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.rename=org.apache.log4j.RollingFileAppender
+log4j.appender.rename.encoding=UTF-8
+log4j.appender.rename.append=false
+log4j.appender.rename.File=logs/rename.log
+log4j.appender.rename.MaxFileSize=30mb
+log4j.appender.rename.MaxBackupIndex=2
+log4j.appender.rename.layout=org.apache.log4j.PatternLayout
+log4j.appender.rename.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.delete=org.apache.log4j.RollingFileAppender
+log4j.appender.delete.encoding=UTF-8
+log4j.appender.delete.append=false
+log4j.appender.delete.File=logs/delete.log
+log4j.appender.delete.MaxFileSize=30mb
+log4j.appender.delete.MaxBackupIndex=2
+log4j.appender.delete.layout=org.apache.log4j.PatternLayout
+log4j.appender.delete.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.error=org.apache.log4j.RollingFileAppender
+log4j.appender.error.encoding=UTF-8
+log4j.appender.error.append=false
+log4j.appender.error.File=logs/error.log
+log4j.appender.error.MaxFileSize=30mb
+log4j.appender.error.MaxBackupIndex=2
+log4j.appender.error.layout=org.apache.log4j.PatternLayout
+log4j.appender.error.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.encoding=UTF-8
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{HH:mm:ss} [%-5p] - %C{1}.%M - %m%n

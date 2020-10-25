@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roles>
+    <role id="1" name="super_admin" lev="1"/><!-- 超级管理员 -->
+	<role id="2" name="admin" lev="2"/><!-- 普通管理员 -->
+	<role id="3" name="maintain"  lev="3"/><!-- 运维 -->
+	<role id="4" name="normal_custom_service" lev="4"/><!-- 普通客服  -->
+	<role id="5" name="advanced_custom_service"  lev="5"/><!-- 高级客服 -->
+	<role id="6" name="operation"  lev="6"/><!-- 运营 -->
+	<role id="7" name="advanced_operation" lev="7"/><!-- 高级运营 -->
+	<role id="8" name="kaiying" lev="8"/><!-- 恺英 -->
+	<role id="9" name="developer" lev="9"/><!--开发者 -->
+</roles>

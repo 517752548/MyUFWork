@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildLangUpdateSQL.def" basedir="." default="">
+	<!-- 导入文件 -->
+	<import file="globals.def.xml" />
+
+<!--
+// 从 svn 导出代码
+///////////////////////////////////////////////////////////////////
+//-->
+	<macrodef name="langSqlTrunkExport">
+		<!-- 语言名称 -->
+		<attribute name="langName" />
+		<!-- 发布版本 -->
+		<attribute name="pubVer" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!--// 从 svn 中导出资源
+				// 注意: defaultSvnSetting 定义在 globals.def.xml -->
+			<svn refid="defaultSvnSetting">
+				<export force="true" 
+					srcurl="${svn.serverTrunkURL}/game_db/sql/@{langName}/@{pubVer}/war_db_update.sql" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="langSqlBranchesExport">
+		<!-- branches 版本号 -->
+		<attribute name="branchesVer" />
+		<!-- 语言名称 -->
+		<attribute name="langName" />
+		<!-- 发布版本 -->
+		<attribute name="pubVer" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!--// 从 svn 中导出资源
+				// 注意: defaultSvnSetting 定义在 globals.def.xml -->
+			<svn refid="defaultSvnSetting">
+				<export force="true" 
+					srcurl="${svn.serverBranchesURL}/@{branchesVer}/game_db/sql/@{langName}/@{pubVer}/war_db_update.sql" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+</project>

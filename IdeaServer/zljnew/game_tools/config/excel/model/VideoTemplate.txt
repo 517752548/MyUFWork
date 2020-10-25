@@ -1,0 +1,13 @@
+int videoId;[minValue=0;notNull=false]//剧情id
+int timePoint;[minValue=0;notNull=false]//时间点,毫秒
+String targetId;[notNull=false]//对象
+int targetType;[minValue=0;notNull=false]//对象类型
+int eventType;[minValue=1;notNull=false]//事件类型
+String model3DId;[notNull=false]//3d模型名称
+String playerName;[notNull=false]//角色名称
+int pixelPoint;[minValue=0;notNull=false]//是否像素点
+int xPoint;[minValue=0;notNull=false]//位置x
+int yPoint;[minValue=0;notNull=false]//位置y
+String action;[notNull=false]//动作
+int direction;[notNull=false]//方向
+String talk;[notNull=false]//说话

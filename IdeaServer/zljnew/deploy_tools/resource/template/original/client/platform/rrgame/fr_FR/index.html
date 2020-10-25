@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${deployConfig.clientConfig.title}</title>
+<style type="text/css">
+body{background-color:#000;}
+*{margin:0px; padding:0px;}
+a{color:#fff;}
+#main{margin:auto;}
+#container{vertical-align:middle; width:100%; height:100%;}
+#wrap{height:600px; width:1000px;}
+#nav_bar{display: inner-line; height:20px; margin:0px auto; text-align:right; font-size:12px; font-family:"tahoma";}
+#nav_bar a{margin:0px 5px; text-decoration:none;}
+#nav_bar a:hover{text-decoration:underline;}
+#time {display: inner-line; color:#ffffff;font-size:12px; font-family:"tahoma";margin:0px;height:20;}
+#link_info {text-align: right};
+</style>
+<script type="text/javascript" src="script/swfobject.js"></script>
+<script type="text/javascript" src="script/platform/rrgame/fr_FR/notice.js"></script>
+<script type="text/javascript" src="script/core.js"></script>
+</head>
+<body>
+	<table id="container">
+		<tr>
+			<td>
+				<center>
+					<div id="wrap">
+						<div id="main">&nbsp;</div>
+						<div id="link_info">
+							<span id="nav_bar">&nbsp;</span>
+						</div>
+					</div>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var so = new SWFObject("Loading_${versionConfig.clientVersion}.swf", "Loading",getUrlcookie('swfW')=='fail'?1000:getUrlcookie('swfW'), getUrlcookie('swfH')=='fail'?600:getUrlcookie('swfH'), "10", "#000000");
+		so.addParam("quality", "best");
+		so.addVariable("name", "Loading");
+		so.addParam("id", "Loading");
+		so.addParam("algin", "middle");
+		so.addParam("AllowScriptAccess", "sameDomain");
+		so.addParam("menu", "false");
+		so.addParam("pluginspage", "http://www.adobe.com/go/getflashplayer");
+		so.write("main");
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+message com.imop.lj.logserver.model.MissionLog(
+	int missionEnemyId;// 关卡Id
+	int enemyArmyIndex;// 敌人索引
+	int enemyArmyId;// 敌人Id
+    int totalRround;// 总轮数
+    int leftRound;// 剩余轮数
+)

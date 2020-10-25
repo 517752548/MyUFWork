@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="bin:template:37wanwan:mergedb:from_db.cfg.xml" />
+          <unit-entry name="bin:template:37wanwan:mergedb:new_db.cfg.xml" />
+          <unit-entry name="bin:template:37wanwan:mergedb:to_db.cfg.xml" />
+          <unit-entry name="bin:template:original:mergedb:from_db.cfg.xml" />
+          <unit-entry name="bin:template:original:mergedb:new_db.cfg.xml" />
+          <unit-entry name="bin:template:original:mergedb:to_db.cfg.xml" />
+          <unit-entry name="bin:template:qzone:mergedb:from_db.cfg.xml" />
+          <unit-entry name="bin:template:qzone:mergedb:new_db.cfg.xml" />
+          <unit-entry name="bin:template:qzone:mergedb:to_db.cfg.xml" />
+          <unit-entry name="bin:template:renren:mergedb:from_db.cfg.xml" />
+          <unit-entry name="bin:template:renren:mergedb:new_db.cfg.xml" />
+          <unit-entry name="bin:template:renren:mergedb:to_db.cfg.xml" />
+          <unit-entry name="resource:template:37wanwan:mergedb:from_db.cfg.xml" />
+          <unit-entry name="resource:template:37wanwan:mergedb:new_db.cfg.xml" />
+          <unit-entry name="resource:template:37wanwan:mergedb:to_db.cfg.xml" />
+          <unit-entry name="resource:template:original:mergedb:from_db.cfg.xml" />
+          <unit-entry name="resource:template:original:mergedb:new_db.cfg.xml" />
+          <unit-entry name="resource:template:original:mergedb:to_db.cfg.xml" />
+          <unit-entry name="resource:template:qzone:mergedb:from_db.cfg.xml" />
+          <unit-entry name="resource:template:qzone:mergedb:new_db.cfg.xml" />
+          <unit-entry name="resource:template:qzone:mergedb:to_db.cfg.xml" />
+          <unit-entry name="resource:template:renren:mergedb:from_db.cfg.xml" />
+          <unit-entry name="resource:template:renren:mergedb:new_db.cfg.xml" />
+          <unit-entry name="resource:template:renren:mergedb:to_db.cfg.xml" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/37wanwan/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/37wanwan/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/37wanwan/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/original/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/original/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/original/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/qzone/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/qzone/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/qzone/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/renren/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/renren/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/bin/template/renren/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/37wanwan/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/37wanwan/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/37wanwan/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/original/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/original/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/original/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/qzone/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/qzone/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/qzone/mergedb/to_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/renren/mergedb/from_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/renren/mergedb/new_db.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/resource/template/renren/mergedb/to_db.cfg.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="lib3" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="lib.deployTools" level="project" />
+    <orderEntry type="library" name="ant_lib" level="project" />
+    <orderEntry type="library" name="lib6" level="project" />
+    <orderEntry type="library" name="lib4" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="lib.deployTools" level="project" />
+    <orderEntry type="library" name="lib3" level="project" />
+    <orderEntry type="library" name="lib4" level="project" />
+    <orderEntry type="library" name="ant_lib" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="lib6" level="project" />
+  </component>
+</module>

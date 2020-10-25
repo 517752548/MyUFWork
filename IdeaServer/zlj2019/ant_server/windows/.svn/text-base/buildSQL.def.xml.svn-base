@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildSQL.def" basedir="." default="">
+	<!-- 导入文件 -->
+	<import file="globals.def.xml" />
+
+<!--
+// 从 svn 导出代码
+///////////////////////////////////////////////////////////////////
+//-->
+	<macrodef name="sqlTrunkExport">
+		<!-- 代码版本号 -->
+		<attribute name="codeRev" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!-- 从 svn 中导出资源 -->
+			<svn username="${svn.u}" password="${svn.p}" 
+				javahl="false">
+				<export force="true" 
+					srcurl="${svn.serverTrunkURL}/game_db/sql/initsql" 
+					revision="@{codeRev}" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="sqlBranchesExport">
+		<!-- branches 版本号 -->
+		<attribute name="branchesVer" />
+		<!-- 代码版本号 -->
+		<attribute name="codeRev" />
+		<!-- 导出到目录 -->
+		<attribute name="exportToDir" />
+
+		<sequential>
+			<!--// 从 svn 中导出资源
+				// 注意: defaultSvnSetting 定义在 globals.def.xml -->
+			<svn refid="defaultSvnSetting">
+				<export force="true" 
+					srcurl="${svn.serverBranchesURL}/@{branchesVer}/game_db/sql/initsql" 
+					revision="@{codeRev}" 
+					destpath="@{exportToDir}" />
+			</svn>
+		</sequential>
+	</macrodef>
+
+</project>

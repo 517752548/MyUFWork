@@ -1,0 +1,14 @@
+String productIdPostfix;[notNull=true]//充值档次后缀
+String appid;[notNull=false]//产品id
+long nameLangId;[notNull=false]//礼包名称多语言id
+String name;[notNull=true]//礼包名称
+long descLangId;[notNull=false]//礼包描述多语言id
+String desc;[notNull=true]//礼包描述
+String icon;[notNull=true]//钻石图标
+int costRMB;[notNull=true]//花费钻石RMB
+int coins;[notNull=true]//兑换平台币数量
+int areaId;[notNull=true]//地区编号
+String appType;[notNull=true]//app类型 
+float amount;[notNull=true]//对应充值货币值（美元）
+
+

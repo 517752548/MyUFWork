@@ -1,0 +1,9 @@
+message com.imop.lj.logserver.model.CorpsBenefitLog(
+	long corpsId;// 帮派ID
+	String corpsName;// 帮派名
+	int corpsLevel;// 帮派等级
+	int memberNum;// 帮派人数
+	long operatorId;//操作者玩家id
+	int operatorJob;//操作者职位
+	long benefitCount;//获得福利数量
+)

@@ -1,0 +1,11 @@
+int equipId;[minValue=1;notNull=false]//装备ID
+int equipTypeId;[minValue=1;notNull=false]//装备类别Id
+int canCraftFlag;[minValue=0;maxValue=1;notNull=false]//是否可打造（0不可，1可以）
+int levelMin;[minValue=1;notNull=false]//装备等级下限
+int levelMax;[minValue=1;notNull=false]//装备等级上限
+int colorGroupId;[minValue=1;notNull=false]//颜色概率-组Id	
+int costGold;[minValue=1;notNull=false]//花费银票	
+List<com.imop.lj.gameserver.equip.template.CraftEquipCostItem> costItemList;[Collection(3,2)] //消耗道具列表
+int recipeId;[minValue=1;notNull=false]//配方Id
+int fixedAttrGroupId;[minValue=1;notNull=false]//固定属性组Id
+int itemProbGroupId;[minValue=1;notNull=false]//材料提升概率组id

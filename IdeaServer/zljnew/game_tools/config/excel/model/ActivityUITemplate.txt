@@ -1,0 +1,18 @@
+int behaviorId;[notNull=false;minValue=0]//活动计数ID
+String name;[notNull=false]//活动名称
+int energyNumPerTime;[notNull=false] // 奖励的活力值(单次)
+int activityNumPerTime;[notNull=false] // 奖励的活跃度(单次)
+int activityTotalTime;[notNull=false] // 可以获得活力值的次数
+int funcId;[notNull=true] // 活动对应功能Id
+int activityTimeEventId;[notNull=false] // 定时任务Id
+int participateRecommendRandom;[notNull=false] // 参与推荐随机
+String hyperlink;[notNull=false] // 参加活动的超链接
+String activityTimeDesc;[notNull=false] // 活动时间说明
+String startTimeDesc;[notNull=false] // 开始时间
+String taskMemberDesc;[notNull=false] // 任务形式
+String desc;[notNull=false] // 活动描述
+int showRewardId;[notNull=false] // 任务奖励展示
+String icon;[notNull=false] // 活动图标
+int timeLimitActivityId;[notNull=false] // 限时活动Id
+String superScript;[notNull=false] // 活动角标
+String openConditionDesc;[notNull=false] // 活动开启条件描述

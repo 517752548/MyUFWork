@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="marry">
+
+    <message type="CG_FIRST_MARRY" comment="申请结婚,弹框" />
+    <message type="GC_FIRST_MARRY" comment="申请结婚,弹框，两人都弹" />
+
+    <message type="CG_MARRY" comment="结婚 ,2发出" >
+        <field type="Integer" name="canMarry" comment="是否同意 1是同意" />
+    </message>
+
+    <message type="CG_MARRY_INFO" comment="获取当前用户的结婚信息"/>
+    <message type="GC_MARRY_INFO" comment="结婚相关信息">
+        <field type="Long" name="husband" comment="丈夫" />
+        <field type="String" name="husbandName" comment="丈夫" />
+        <field type="Long" name="wife" comment="妻子" />
+        <field type="String" name="wifeName" comment="妻子" />
+    </message>
+
+
+    <message type="CG_FIRST_FIRE_MARRY" comment="申请离婚" />
+    <message type="GC_FIRST_FIRE_MARRY" comment="申请离婚,2个人都发" />
+    <message type="CG_FIRE_MARRY" comment="离婚" >
+        <field type="Integer" name="canFire" comment="是否同意 1是同意" />
+    </message>
+
+    <message type="CG_FORCE_FIRE_MARRY" comment="强制离婚" />
+</messages>

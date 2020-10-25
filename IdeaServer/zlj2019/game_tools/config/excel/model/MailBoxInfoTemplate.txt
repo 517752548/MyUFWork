@@ -1,0 +1,4 @@
+long infoLangId;[notNull=false;minValue=0] //多语言id
+String info;[notNull=true] //内容
+int weight;[notNull=false;minValue=0] //tips宽度
+int icon;[notNull=false;minValue=0] //小信封图标

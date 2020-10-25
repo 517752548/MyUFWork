@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+        <server_ip>${deployConfig.gameServer.wanIp}</server_ip>
+        <server_port>${deployConfig.gameServer.wanPort}</server_port><!-- 端口 -->
+        <language>CN</language> <!-- 语言版本 -->
+        <version>${versionConfig.clientVersion}</version><!-- 版本号 -->
+        <operation_com>renren</operation_com>
+        <web_platform>http://wan.renren.com/login/?gc=zlj&url=http://${deployConfig.name}</web_platform>
+        <auto_login>${deployConfig.clientConfig.autoLogin}</auto_login>
+        <debug>0</debug>
+        <!-- log输出面板是否显示 1：true,0：false-->
+		<logPanel>0</logPanel>
+        <operation_com>renren</operation_com>
+        <web_fangchenmi>http://wan.renren.com/safe/wallowreg.html</web_fangchenmi>
+        <resource_static>${deployConfig.clientConfig.resourceUrl}</resource_static>
+        <sound_url>${deployConfig.clientConfig.resourceUrl}</sound_url>
+        <!--充值地址链接	-->
+		<webChargeLink>http://pay.renren.com/index.do</webChargeLink>
+</config>

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scripts>
+
+	<file name="npc.xls">
+		<sheet class="com.imop.lj.gameserver.npc.template.NpcTemplate"/>
+		<sheet class="com.imop.lj.gameserver.npc.template.NpcTemplate"/>
+		<sheet class="com.imop.lj.gameserver.npc.template.NpcTemplate"/>
+		<sheet class="com.imop.lj.gameserver.npc.template.NpcTemplate"/>
+	</file>
+	
+	<file name="item.xls"
+		parser="com.imop.lj.gameserver.item.template.ItemTemplateFileParser" />
+	
+	<file name="pet.xls">
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPropTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.BattleTypeTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetLevelTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetGrowthTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTalentSkillNumTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTalentSkillPackTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTalentSkillLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetRejuvenationTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetVariationTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetArtificeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTrainCostTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTrainPropTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPerceptLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPerceptTypeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPerceptPromoteTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetFightPowerTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPassiveTalentSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPassiveNormalSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetPropItemTemplate"/>
+	</file>
+	
+	<file name="pethorse.xls">
+		<sheet class="com.imop.lj.gameserver.pet.template.PetTemplate" />
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseGrowthTemplate" />
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseTalentSkillNumTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseTalentSkillPackTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseTalentSkillLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseRejuvenationTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseArtificeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseTrainCostTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseTrainPropTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorsePerceptLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorsePerceptTypeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorsePerceptPromoteTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorsePassiveTalentSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorsePassiveNormalSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorsePropItemTemplate"/>
+		<sheet class="com.imop.lj.gameserver.pet.template.PetHorseCloAddTemplate" notclient="true"/>
+	</file>
+	
+	
+	<file name="friend.xls">
+		<sheet class="com.imop.lj.gameserver.pet.template.PetFriendTemplate"/>
+	</file>
+	
+	<file name="skill.xls">
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillEffectTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillEffectDescTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillPerformTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillBuffTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillLabelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillAddTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillEffectItemLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillEffectOpenTemplate"/>
+		<sheet class="com.imop.lj.gameserver.skill.template.SkillPetHorseAddTemplate"/>
+	</file>
+	
+	<file name="battle.xls">
+		<sheet class="com.imop.lj.gameserver.battle.template.BattlePropCoefTemplate"/>
+	</file>
+	
+	
+	<file name="map.xls">
+		<sheet class="com.imop.lj.gameserver.map.template.MapTemplate"/>
+		<sheet class="com.imop.lj.gameserver.map.template.MapNpcTemplate"/>
+		<sheet class="com.imop.lj.gameserver.map.template.MapMeetMonsterTemplate"/>
+		<sheet class="com.imop.lj.gameserver.map.template.PetIslandTemplate" notclient="true"/>
+	</file>
+	
+	<file name="equip.xls"  >
+		<sheet class="com.imop.lj.gameserver.equip.template.UpgradeEquipStarTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipDecomposeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipRecastLockAttrTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipHoleTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipHoleCostTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipHoleRefreshTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipHoleColorTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.EquipGemLimitTemplate"/>
+	</file>
+	
+	<file name="enemy.xls">
+		<sheet class="com.imop.lj.gameserver.enemy.template.EnemyTemplate"/>
+		<sheet class="com.imop.lj.gameserver.enemy.template.EnemyCoefTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.enemy.template.EnemyArmyTemplate"/>
+		<sheet class="com.imop.lj.gameserver.enemy.template.EnemyNumTemplate"/>
+		<sheet class="com.imop.lj.gameserver.enemy.template.EnemyGuaJiNumTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.enemy.template.EnemyGuaJiValueTemplate"/>
+	</file>
+	<file name="mission.xls">
+		<sheet class="com.imop.lj.gameserver.mission.template.MissionTemplate"/>
+		<sheet class="com.imop.lj.gameserver.mission.template.MissionEnemyGroupTemplate"/>
+	</file>
+	
+	<file name="rolename.xls">
+		<sheet class="com.imop.lj.gameserver.role.template.RoleNameXingTemplate" />
+		<sheet class="com.imop.lj.gameserver.role.template.RoleNameMaleMingTemplate" />
+		<sheet class="com.imop.lj.gameserver.role.template.RoleNameFemaleMingTemplate" />
+	</file>
+	
+	<file name="dirtywords.xls" notclient="true">
+		<sheet class="com.imop.lj.common.model.template.DirtyWordsTemplate" />
+		<sheet class="com.imop.lj.common.model.template.NameDirtyWordsTemplate" />
+	</file>
+	
+	<file name="world.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.scene.template.SceneTemplate" />
+	</file>
+	
+	<file name="quest.xls">
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+		<sheet class="com.imop.lj.gameserver.task.template.QuestTemplate" />
+	</file>
+	
+	<file name="timeevent.xls" notclient="true">
+		<sheet class="com.imop.lj.common.model.template.TimeEventTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.SysPowerGiveTimeTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.ScribedLogTimeEventTemplate" />
+		<sheet class="com.imop.lj.gameserver.activity.template.ActivityTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.RefreshActivityStateTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.RefreshArenaTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.EnhanceActivityTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.TimeNoticeTemplate" />
+		<sheet class="com.imop.lj.gameserver.timeevent.template.RefreshDevilIncarnateTemplate" />
+	</file>
+	
+	<file name="cdqueue.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.cd.template.CdTemplate" />
+		<sheet class="com.imop.lj.gameserver.cd.template.CdTiredRatioTemplate" />
+		<sheet class="com.imop.lj.gameserver.cd.template.CdOpenCondTemplate" />
+	</file>
+	
+	<file name="behavior.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.behavior.template.BehaviorTemplate" />
+		<sheet class="com.imop.lj.gameserver.behavior.template.BehaviorBuyPowerCostTemplate" />
+		<sheet class="com.imop.lj.gameserver.behavior.template.BehaviorBuySkillPointCostTemplate" />
+		<sheet class="com.imop.lj.gameserver.behavior.template.BindIdBehaviorTemplate" />
+	</file>
+	
+	<file name="broadcast.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.broadcast.template.BroadcastTemplate" />
+	</file>
+	
+	<file name="func.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.func.template.FuncTemplate" />
+		<sheet class="com.imop.lj.gameserver.func.template.FuncOpenTemplate" />
+	</file>
+
+	<file name="showcurrency.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.constant.template.ShowCurrencyTemplate" />
+	</file>
+	
+	<file name="reward.xls">
+		<sheet class="com.imop.lj.gameserver.reward.template.RewardSetTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.reward.template.RewardConfigTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.reward.template.GradeRewardTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.reward.template.ShowRewardTemplate" />
+		<sheet class="com.imop.lj.gameserver.reward.template.LevelGiftPackTemplate" notclient="true"/>
+	</file>
+	
+	<file name="craftequip.xls">
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipTypeTemplate" />
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipCostTemplate" />
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipColorTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipItemProbTemplate" />
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipFixedAttrTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipPropTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.CraftEquipGradeColorTemplate" notclient="true"/>
+	</file>
+	
+	<file name="exam.xls">
+		<sheet class="com.imop.lj.gameserver.exam.template.ExamTemplate" />
+		<sheet class="com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate" />
+		<sheet class="com.imop.lj.gameserver.exam.template.ExamTemplate" />
+		<sheet class="com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate" />
+	</file>
+	
+	<file name="pubtask.xls" >
+		<sheet class="com.imop.lj.gameserver.pubtask.template.PubTaskTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.pubtask.template.PubTaskGroupTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.pubtask.template.PubLevelTemplate" />
+	</file>
+	
+	<file name="humanskill.xls" >
+		<sheet class="com.imop.lj.gameserver.humanskill.template.HumanMainSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.humanskill.template.HumanMainSkillLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.humanskill.template.HumanSubSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.humanskill.template.HumanSubSkillLevelTemplate"/>
+		<sheet class="com.imop.lj.gameserver.humanskill.template.HumanMainSkillToSubSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.humanskill.template.HumanSubPassiveSkillTemplate"/>
+	</file>
+	
+	<file name="gem.xls" >
+		<sheet class="com.imop.lj.gameserver.equip.template.GemOpenTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.GemCostTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.GemForPropValueTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.GemSynthesisTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.GemUpTemplate"/>
+		<sheet class="com.imop.lj.gameserver.equip.template.GemDownTemplate"/>
+	</file>
+	
+	<file name="trade.xls" >
+		<sheet class="com.imop.lj.gameserver.trade.template.TradeSaleableTemplate"/>
+		<sheet class="com.imop.lj.gameserver.trade.template.TradeCommodityTypeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.trade.template.TradeMainTagTemplate"/>
+		<sheet class="com.imop.lj.gameserver.trade.template.TradeSubTagTemplate"/>
+		<sheet class="com.imop.lj.gameserver.trade.template.TradeSortableFieldTemplate"/>
+	</file>
+	
+	<file name="mailbox.xls">
+		<sheet class="com.imop.lj.gameserver.human.template.MailBoxInfoTemplate" />
+	</file>
+
+	<file name="corps.xls">
+		<sheet class="com.imop.lj.gameserver.corps.template.CorpsUpgradeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corps.template.CorpsBenifitTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corps.template.CorpsBuildingUpgradeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateCostTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpsassist.template.CorpsAssistTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpsassist.template.CorpsAssistCostTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpsassist.template.CorpsAssistGenTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpsassist.template.CorpsAssistCritTemplate" notclient="true" />
+	</file>
+		
+	<file name="activityui.xls">
+		<sheet class="com.imop.lj.gameserver.activityui.template.ActivityUITemplate" />
+		<sheet class="com.imop.lj.gameserver.activityui.template.ActivityUIRewardTemplate" />
+	</file>
+	
+	<file name="team.xls">
+		<sheet class="com.imop.lj.gameserver.team.template.TeamTargetTemplate" />
+	</file>
+	
+	<file name="onlinegift.xls">
+		<sheet class="com.imop.lj.gameserver.onlinegift.template.OnlineGiftTemplate" />
+		<sheet class="com.imop.lj.gameserver.onlinegift.template.SpecOnlineGiftTemplate" />
+		<sheet class="com.imop.lj.gameserver.onlinegift.template.DailySignGiftTemplate" />
+	</file>
+	
+	<file name="mine.xls">
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillMineTemplate" />
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillMineLevelTemplate" />
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillMinePitTemplate" />
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillMineCostTemplate" />
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillMineMinerTemplate" />
+	</file>
+	
+	<file name="mall.xls">
+		<sheet class="com.imop.lj.gameserver.mall.template.MallCatalogTemplate" />
+		<sheet class="com.imop.lj.gameserver.mall.template.MallNormalItemTemplate" />
+		<sheet class="com.imop.lj.gameserver.mall.template.MallTimeLimitQueueTemplate" notclient="true" />
+		<sheet class="com.imop.lj.gameserver.mall.template.MallTimeLimitItemTemplate" notclient="true" />
+		<sheet class="com.imop.lj.gameserver.mall.template.MallEndBoradcastTimeTemplate" notclient="true" />
+	</file>
+	
+	<file name="wizardraid.xls">
+		<sheet class="com.imop.lj.gameserver.wizardraid.template.WizardRaidTemplate" />
+		<sheet class="com.imop.lj.gameserver.wizardraid.template.WizardRaidWaveTemplate" />
+		<sheet class="com.imop.lj.gameserver.wizardraid.template.WizardRaidMonsterTemplate" />
+		<sheet class="com.imop.lj.gameserver.wizardraid.template.WizardRaidPositionTemplate" />
+	</file>
+	
+	<file name="thesweeneytask.xls">
+		<sheet class="com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskTemplate" />
+		<sheet class="com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskGroupTemplate" />
+	</file>
+	
+	<file name="treasuremap.xls">
+		<sheet class="com.imop.lj.gameserver.treasuremap.template.TreasureMapTemplate" />
+		<sheet class="com.imop.lj.gameserver.treasuremap.template.TreasureMapGroupTemplate" />
+		<sheet class="com.imop.lj.gameserver.treasuremap.template.TreasureMapRewardTemplate"  notclient="true" />
+	</file>
+
+	<file name="title.xls">
+        <sheet class="com.imop.lj.gameserver.title.template.TitleTemplate"/>
+    </file>
+
+	<file name="foragetask.xls" >
+		<sheet class="com.imop.lj.gameserver.foragetask.template.ForageTaskTemplate" />
+		<sheet class="com.imop.lj.gameserver.foragetask.template.ForageTaskGroupTemplate" />
+		<sheet class="com.imop.lj.gameserver.foragetask.template.ForageTaskRewardTemplate" />
+	</file>
+
+	<file name="corpswar.xls">
+        <sheet class="com.imop.lj.gameserver.corpswar.template.CorpsWarRankRewardTemplate" notclient="true" />
+    </file>
+
+
+	<file name="overman.xls">
+		<sheet class="com.imop.lj.gameserver.overman.template.OvermanTemplate"/>
+	</file>
+
+    <file name="nvn.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.nvn.template.NvnRankRewardTemplate"/>
+		<sheet class="com.imop.lj.gameserver.nvn.template.NvnConWinScoreTemplate"/>
+		<sheet class="com.imop.lj.gameserver.nvn.template.NvnEndConWinScoreTemplate"/>
+		<sheet class="com.imop.lj.gameserver.nvn.template.NvnMatchRankTemplate"/>
+	</file>
+	
+	<file name="story.xls">
+		<sheet class="com.imop.lj.gameserver.story.template.StoryTemplate"/>
+		<sheet class="com.imop.lj.gameserver.story.template.StoryBattleTemplate"/>
+	</file>
+	
+	<file name="goodactivity.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.goodactivity.template.GoodActivityBaseTemplate" />
+	</file>
+	
+	<file name="goodactivity.xls" 
+		  parser="com.imop.lj.gameserver.goodactivity.template.GoodActivityTargetTemplateFileParser" notclient="true"/>
+		  
+	<file name="wing.xls">
+		<sheet class="com.imop.lj.gameserver.wing.template.WingTemplate" />
+		<sheet class="com.imop.lj.gameserver.wing.template.WingUpgradeTemplate" />
+	</file>
+		  
+	<file name="arena.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaRankChallengeTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaBattleRewardTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaRankRewardTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaBuyTimesTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaConWinNoticeTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaLeaderSkillWeightTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaPetSkillWeightTemplate" />
+		<sheet class="com.imop.lj.gameserver.arena.template.ArenaRobotTemplate" />
+	</file>
+	
+	<file name="corpstask.xls">
+		<sheet class="com.imop.lj.gameserver.corpstask.template.CorpsTaskTemplate" />
+	</file>
+	
+	<file name="promote.xls">
+		<sheet class="com.imop.lj.gameserver.promote.template.PromoteTemplate"/>
+	</file>
+	
+	<file name="mysteryshop.xls">
+		<sheet class="com.imop.lj.gameserver.mysteryshop.template.MysteryShopItemTemplate"/>
+	</file>
+	
+	<file name="tower.xls">
+		<sheet class="com.imop.lj.gameserver.tower.template.TowerExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.tower.template.TowerRewardTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.tower.template.TowerMapTemplate"/>
+	</file>
+	
+	<file name="charge.xls">
+		<sheet class="com.imop.lj.gameserver.charge.template.ChargeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.charge.template.MonthCardTemplate"/>
+	</file>
+	
+	<file name="exchange.xls">
+		<sheet class="com.imop.lj.gameserver.exchange.template.ExchangeTemplate"/>
+	</file>
+	
+	<file name="vip.xls">
+		<sheet class="com.imop.lj.gameserver.vip.template.VipUpgradeTemplate"/>
+		<sheet class="com.imop.lj.gameserver.vip.template.VipConfigTemplate"/>
+	</file>
+	
+	<file name="corpsboss.xls">
+		<sheet class="com.imop.lj.gameserver.corpsboss.template.CorpsBossTemplate"/>
+		<sheet class="com.imop.lj.gameserver.corpsboss.template.CorpsBossRankTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.corpsboss.template.CorpsBossCountRankTemplate" notclient="true"/>
+	</file>
+	
+	<file name="store.xls">
+		<sheet class="com.imop.lj.gameserver.item.template.StoreOpenTemplate"/>
+	</file>
+	
+	<file name="sealdemon.xls">
+		<sheet class="com.imop.lj.gameserver.sealdemon.template.SealDemonMapTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.sealdemon.template.SealDemonNpcTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.sealdemon.template.SealDemonRewardTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.sealdemon.template.SealDemonKingRewardTemplate" notclient="true"/>
+	</file>
+	
+	<file name="devilincarnate.xls">
+		<sheet class="com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateMapTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateNpcTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateRewardTemplate" notclient="true"/>
+	</file>
+	
+	<file name="timelimit.xls">
+		<sheet class="com.imop.lj.gameserver.timelimit.template.TimeLimitPushTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.timelimit.template.TimeLimitMonsterTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.timelimit.template.TimeLimitNpcTemplate" notclient="true"/>
+	</file>
+	
+	<file name="day7target.xls">
+		<sheet class="com.imop.lj.gameserver.day7target.template.Day7TargetTemplate"/>
+	</file>
+	
+	<file name="plotdungeon.xls">
+		<sheet class="com.imop.lj.gameserver.plotdungeon.template.PlotDungeonTemplate"/>
+	</file>
+	
+	<file name="video.xls">
+		<sheet class="com.imop.lj.gameserver.video.template.VideoTemplate"/>
+	</file>
+	
+	<file name="siegedemon.xls">
+		<sheet class="com.imop.lj.gameserver.siegedemon.template.SiegeDemonTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.siegedemon.template.SiegeDemonPositionTemplate" notclient="true"/>
+	</file>
+	
+	<file name="xianhu.xls" notclient="true">
+		<sheet class="com.imop.lj.gameserver.xianhu.template.XianhuRankRewardTemplate"/>
+	</file>
+	
+	<file name="lifeskill.xls">
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillMapTemplate"/>
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillTemplate"/>
+		<sheet class="com.imop.lj.gameserver.lifeskill.template.LifeSkillLevelTemplate"/>
+	</file>
+	
+	<file name="ringtask.xls">
+		<sheet class="com.imop.lj.gameserver.ringtask.template.RingTaskTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.ringtask.template.RingTaskRewardTemplate"/>
+	</file>
+	
+	<file name="exp.xls">
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate" notclient="true"/>
+		<sheet class="com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate" notclient="true"/>
+	</file>
+	
+	
+</scripts>

@@ -1,0 +1,3 @@
+int lowlimit;[minValue=100;maxValue=150000;notNull=false] //充值下限
+int highlimit;[minValue=999;maxValue=2147483647;notNull=false] //充值上限
+int extraPrize;[minValue=5;maxValue=38000;notNull=false]//充值额外奖励

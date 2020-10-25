@@ -1,0 +1,11 @@
+long cdTypeNameLangId;[minValue=0;notNull=false] // 冷却类型名称多语言 Id 
+String cdTypeName; // 冷却类型名称
+String icon; // 冷却队列图标
+int cdQueueMax;[minValue=1;notNull=false] // 冷却队列最大数量
+int cdQueueDefault;[minValue=1;notNull=false] // 默认开启数量
+long cdTimeThreshold;[minValue=1;notNull=false] // 冷却时间阈值
+long killCdSpaceTime;[minValue=1000;notNull=false] // 清除 Cd 间隔时间(毫秒)
+int killCdNeedGold;[minValue=1;notNull=true] // 清除 Cd 所需金币
+int gameFuncType;[minValue=0;notNull=false]	//cd所需功能模块
+int gameIsKillType;[minValue=0;maxValue=1;notNull=false] //是否可以清除冷却队列0不可以,1可以
+

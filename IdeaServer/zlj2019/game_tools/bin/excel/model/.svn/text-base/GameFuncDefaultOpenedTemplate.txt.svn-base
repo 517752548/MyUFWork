@@ -1,0 +1,5 @@
+int opened;[minValue=0;notNull=false] // 是否开启
+int num;[minValue=0;notNull=false] // 序号
+String icon;[notNull=false] // 图标
+long descLangId;[notNull=false;minValue=0] //多语言id
+String desc; // 说明

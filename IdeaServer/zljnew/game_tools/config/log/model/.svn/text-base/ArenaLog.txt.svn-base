@@ -1,0 +1,13 @@
+message com.imop.lj.logserver.model.ArenaLog(
+	String battleResult;//战斗结果
+	long attackerId;//攻击者id
+	int attackerBeforeCwinTimes;//攻击者战斗前连胜数
+	int attackerAfterCwinTimes;//攻击者战斗后连胜数
+	int attackerBeforeRank;//攻击者战斗前名次
+	int attackerAfterRank;//攻击者战斗后名次
+	long defenderId;//防御方id
+	int defenderBeforeCwinTimes;//防御方战斗前连胜数
+	int defenderAfterCwinTimes;//防御方战斗后连胜数
+	int defenderBeforeRank;//防御方战斗前名次
+	int defenderAfterRank;//防御方战斗后名次
+)

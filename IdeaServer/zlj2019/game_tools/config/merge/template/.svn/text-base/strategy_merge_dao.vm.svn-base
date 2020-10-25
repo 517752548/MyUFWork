@@ -1,0 +1,63 @@
+package com.imop.lj.mergedb.db.dao;
+
+import java.util.List;
+
+import com.imop.lj.core.orm.BaseEntity;
+import com.imop.lj.core.orm.DBService;
+#foreach( $module in $modules )
+import ${module.fullClassName};
+#end
+import com.imop.lj.mergedb.db.MergeDbType;
+
+/**
+ * 合服MergeDao
+ * 
+ * @author CodeGenerator, don't modify this file please.
+ */
+public class MergeDao {
+	
+	private DBService dbService;
+	/**
+	 * 合服数据库类型
+	 */
+	private MergeDbType type;
+	
+#foreach( $module in $modules )
+	/** 查询所有${module.mergeModelName} */
+	public static final String queryAll${module.className}_merge = "queryAll${module.className}_merge";
+	
+	/** 删除所有${module.mergeModelName} */
+	public static final String delAll${module.className}_merge = "delAll${module.className}_merge";
+
+#end
+	
+	public MergeDao(DBService dbService,MergeDbType type) {
+		this.dbService = dbService;
+		this.type = type;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public void saveAll(List<BaseEntity> entityList){
+		if(type == MergeDbType.FROM || type == MergeDbType.TO){
+			throw new IllegalArgumentException("不能更新此类型数据库");
+		}
+		dbService.saveAll(entityList);
+	}
+
+#foreach( $module in $modules )
+	/** 查询所有${module.mergeModelName} */
+	@SuppressWarnings("unchecked")
+	public List<${module.className}> queryAll${module.className}() {
+		return dbService.findByNamedQuery(queryAll${module.className}_merge);
+	}
+	
+	/** 删除所有${module.mergeModelName} */
+	public void delAll${module.className}(){
+		if(type == MergeDbType.FROM || type == MergeDbType.TO){
+			throw new IllegalArgumentException("不能更新此类型数据库");
+		}
+		this.dbService.queryForUpdate(delAll${module.className}_merge, null, null);
+	}
+	
+#end
+}

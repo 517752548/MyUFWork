@@ -1,0 +1,37 @@
+long nameLangId;[notNull=false]//名称多语言Id
+String name;[notNull=false]//名称
+int attackTypeId;[notNull=false]//攻击类型Id
+int sexId;[notNull=false]//性别
+int jobId;[notNull=false;minValue=1]//职业
+String modelId;[notNull=false]//美术Id	
+String musicIds;[notNull=false]//音乐Id串
+float modelHeight;[notNull=false]//模型高度
+int level;[notNull=false;minValue=0]//等级
+int petTplId;[notNull=false;minValue=0]//宠物Id（武将表Id）
+long hp;[notNull=false] //生命
+int mp;[notNull=false] //法力
+int speed;[notNull=false] //速度
+int physicalAttack;[notNull=false] //物理攻击
+int physicalArmor;[notNull=false] //物理护甲
+int physicalHit;[notNull=false] //物理命中
+int physicalDodgy;[notNull=false] //物理闪避
+int physicalCrit;[notNull=false] //物理暴击
+int phsicalAntiCrit;[notNull=false] //物理抗暴
+int magicAttack;[notNull=false] //法术强度
+int magicArmor;[notNull=false] //法术抗性
+int magicHit;[notNull=false] //法术命中
+int magicDodgy;[notNull=false] //法术抵抗
+int magicCrit;[notNull=false] //法术暴击
+int magicAntiCrit;[notNull=false] //法术抗暴
+int sp;[notNull=false] //怒气
+int xw;[notNull=false] //修为
+int life;[notNull=false] //寿命
+
+int strengthGrowth;[notNull=false] //强壮成长基础值
+int agilityGrowth;[notNull=false] //敏捷成长基础值
+int intellectGrowth;[notNull=false] //智力成长基础值
+int faithGrowth;[notNull=false] //信仰成长基础值
+int staminaGrowth;[notNull=false] //耐力成长基础值
+
+List<com.imop.lj.gameserver.enemy.template.SkillItem> skillList;[Collection(5,3)]//技能列表
+List<String> speakList;[Collection(3,1)]//说话列表

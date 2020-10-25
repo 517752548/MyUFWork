@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="rank">
+	
+	<message type="CG_RANK_APPLY" comment="申请排行榜信息">
+		<field type="Integer" name="rankType" comment="申请的排行榜信息类型(1等级排行,2战力排行,3宠物评分排行,4职业战力排行)"/>
+		<field type="Long" name="timeId" comment="申请对应排行榜信息的时间戳"/>
+	</message>
+	
+	<message type="GC_RANK_APPLY" comment="申请排行榜信息结果">
+		<field type="Integer" name="rankType" comment="申请的排行榜信息类型(1等级排行,2战力排行,3宠物评分排行,4职业战力排行)"/>
+		<field type="Long" name="timeId" comment="申请对应排行榜信息的时间戳"/>
+		<field type="com.imop.lj.gameserver.rank.RankInfo" name="rankInfoList" clientType="RankInfo"
+					comment="排行榜信息" list="true" >
+			<field type="Integer" name="rank" comment="排名"/>
+			<field type="String" name="humanName" comment="玩家姓名"/>
+			<field type="String" name="petName" comment="宠物姓名"/>
+			<field type="String" name="corpsName" comment="所属帮派"/>
+			<field type="Integer" name="level" comment="级别"/>
+			<field type="Integer" name="humanJob" comment="玩家职业"/>
+			<field type="Integer" name="fightPower" comment="战力"/>
+			<field type="Integer" name="score" comment="评分"/>
+			<field type="Long" name="humanId" comment="玩家ID"/>
+			<field type="Long" name="petId" comment="宠物ID"/>
+		</field>
+	</message>
+	
+
+</messages>

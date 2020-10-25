@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="siegedemon">
+
+	<!-- 任务相关 ,注意有副本类型区别-->
+	<message type="GC_OPEN_SIEGEDEMONTASK_PANEL" comment="打开围剿魔族副本任务面板">
+		<field type="com.imop.lj.common.model.quest.QuestPanelInfo"
+			clientType="QuestPanelInfo" name="questPanelInfo" comment="任务面板信息" macro="QuestPanelInfo" list="true" >
+		</field>
+	</message>
+
+	<message type="GC_SIEGEDEMONTASK_DONE" comment="已完成所有任务">
+		<field type="Integer" name="questType" comment="任务类型" />
+	</message>
+	
+	<message type="GC_SIEGEDEMONTASK_UPDATE" comment="围剿魔族副本任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+		<field type="Integer" name="questType" comment="任务类型" />
+	</message>
+	
+	<message type="CG_GIVE_UP_SIEGEDEMONTASK" comment="放弃已接任务">
+		<field type="Integer" name="questType" comment="任务类型" />
+	</message>
+	
+	<!-- 副本相关 -->
+	
+	<message type="CG_SIEGEDEMON_ASK_ENTER_TEAM" comment="队长请求进入组队副本">
+		<field type="Integer" name="siegeType" comment="副本类型,12-正常,13-困难" />
+	</message>
+	
+	<message type="GC_SIEGEDEMON_ASK_ENTER_TEAM" comment="队长请求进入组队副本">
+		<field type="Integer" name="siegeType" comment="副本类型,12-正常,13-困难" />
+	</message>
+	
+	<message type="CG_SIEGEDEMON_ANSWER_ENTER_TEAM" comment="应答进入组队副本的请求">
+		<field type="Integer" name="agree" comment="是否同意进入，0不同意，1同意" />
+		<field type="Integer" name="siegeType" comment="副本类型,12-正常,13-困难" />
+	</message>
+
+	<message type="GC_SIEGEDEMON_ENTER_TEAM" comment="进入组队副本">
+		<field type="Integer" name="siegeType" comment="副本类型,12-正常,13-困难" />
+	</message>
+	
+	<message type="CG_SIEGEDEMON_LEAVE" comment="离开副本">
+	</message>
+
+</messages>

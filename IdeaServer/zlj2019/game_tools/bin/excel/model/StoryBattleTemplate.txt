@@ -1,0 +1,17 @@
+int storyId;[notNull=false;minValue=0]//剧情id
+int time;[notNull=false;minValue=0]//时间点ms
+int round;[notNull=false;minValue=0]//回合数
+int eventType;[notNull=false;minValue=0]//特殊事件类型
+int status;[notNull=false;minValue=0]//状态
+int targetType;[notNull=false;minValue=0]//对象类型
+String targetId;[notNull=false]//对象编号
+String targetName;[notNull=false]//角色名称
+String modelName;[notNull=false]//3d模型名称/音乐名
+int skillId;[notNull=false;minValue=0]//释放技能id
+String skillTargets;[notNull=false]//技能目标的对象编号,多个目标用英文逗号隔开
+int posX;[notNull=false]//位置x 
+int posY;[notNull=false;minValue=0;maxValue=10]//位置y 
+int hp;[notNull=false]//血量
+String action;[notNull=false]//动作
+int direction;[notNull=false;minValue=0;maxValue=8]//朝向
+String speak;[notNull=false]//说话

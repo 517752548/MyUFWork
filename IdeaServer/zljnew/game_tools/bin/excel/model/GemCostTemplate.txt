@@ -1,0 +1,10 @@
+int humanLevel;[notNull=true;minValue=1]//人物等级
+int value;[notNull=true]//单颗价值
+int currencyType1;[notNull=true;minValue=1]//镶嵌花费货币类型
+int currencyNum1;[notNull=false]//镶嵌花费货币数量
+int currencyType2;[notNull=true;minValue=1]//取下花费货币类型
+int currencyNum2;[notNull=false]//取下花费货币数量
+int synthesisCostGemNum;[notNull=false]//合成消耗宝石数量
+int synthesisCostCurrencyType;[notNull=true;minValue=1]//合成花费货币类型
+int synthesisCostCurrencyNum;[notNull=false]//合成花费货币数量
+int synthesisProb;[notNull=false]//合成成功概率

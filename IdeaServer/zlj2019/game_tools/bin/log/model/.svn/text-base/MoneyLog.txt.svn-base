@@ -1,0 +1,11 @@
+message com.imop.lj.logserver.model.MoneyLog(
+	int mainCurrency;// 主货币类型
+    long mainDelta  default 0;// 主货币钱数变化值
+    long mainCurrLeft;// 主货币剩余金钱
+    int altCurrency;// 辅助货币类型
+    long altDelta default 0;// 辅助货币变化值
+    long altCurrLeft;// 辅助货币剩余金钱
+    int thirdCurrency;// 第三货币类型
+    long thirdDelta default 0;// 第三货币变化值
+    long thirdCurrLeft;// 第三货币剩余金钱
+)

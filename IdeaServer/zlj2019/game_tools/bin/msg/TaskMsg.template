@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="${lowModelName}">
+
+	<message type="GC_OPEN_${bigModelName}_PANEL" comment="打开${comment}面板">
+		<field type="Integer" name="finishTimes" comment="今日已完成任务数" />
+		<field type="Integer" name="totalTimes" comment="总任务数" />
+	</message>
+
+	<message type="GC_${bigModelName}_DONE" comment="已完成所有任务">
+	</message>
+	
+	<message type="GC_${bigModelName}_UPDATE" comment="${comment}更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_${bigModelName}_ACCEPT" comment="接受任务">
+	</message>
+	
+	<message type="CG_GIVE_UP_${bigModelName}" comment="放弃已接任务">
+	</message>
+	
+	<message type="CG_FINISH_${bigModelName}" comment="完成任务">
+	</message>
+
+</messages>

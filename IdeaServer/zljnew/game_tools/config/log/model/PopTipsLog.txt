@@ -1,0 +1,7 @@
+message com.imop.lj.logserver.model.PopTipsLog(
+	long humanUuid;//角色id
+	int poptipLintType;//poptip类型
+	int poptipsLinkId;//poptipid
+	int humanOrignalValue;//角色poptip操作前原始值
+	int humanAfterOperatorValue;//角色poptip操作后的值
+)

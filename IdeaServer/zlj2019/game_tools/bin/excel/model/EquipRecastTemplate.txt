@@ -1,0 +1,5 @@
+int isAbleToRecast;[notNull=false;minValue=0;maxValue=1;]//是否能够被重铸（1开启，0关闭）
+int currencyType;[notNull=true;minValue=1]//重铸消耗货币类型
+int currencyNum;[notNull=false]//重铸消耗货币数量
+int itemId;[notNull=true;minValue=1]//重铸消耗道具模板ID
+int itemNum;[notNull=false]//重铸消耗道具数量

@@ -1,0 +1,5 @@
+int trainTypeId;[minValue=1;notNull=false]//培养方式Id
+int minusFlag;[minValue=0;notNull=false]//是否负数，0否1是
+int propMin;[minValue=0;notNull=false]//数值下限
+int propMax;[minValue=0;notNull=false]//数值上限
+int weight;[minValue=0;notNull=false]//权重

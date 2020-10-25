@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	主要配置 
+	insertNumOnce:表示一次性更新数据库的条数
+	fromDbSuffix:当合服时两个重名的角色名称时，需要将角色重新命名，fromDbSuffix表示在后面加的后缀标志;如fromDbSuffix="x1"，新的角色名叫"张三.x1"
+	
+	数据库配置说明：
+	如果将x1服务器合并到x2，即:x1->x2，则：from_db是x1 数据库；to_db是x2数据库； new_db是合并以后的新的数据库
+	合服工具只对x1与x2进行只读操作，不进行写操作
+-->
+<merge_config insertNumOnce="1000" fromDbSuffix="x1">
+	<!-- 
+	from_db 表示被合并的服务器
+	 -->
+	<from_db username="root" password="" ip="192.168.1.20"
+		port="3306" database="tr_x1"/> 
+	<!-- 
+	to_db 表示合并的数据库
+	 -->
+	<to_db username="root" password="" ip="192.168.1.20"
+		port="3306" database="tr_x2"/> 
+	<!-- 
+	new_db 表示合并后新的数据库
+	 -->	
+	<new_db username="root" password="" ip="192.168.0.189"
+		port="3306" database="tr"/> 
+</merge_config>

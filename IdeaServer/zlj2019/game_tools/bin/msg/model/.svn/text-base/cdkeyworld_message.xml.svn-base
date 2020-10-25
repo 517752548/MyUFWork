@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="cdkeyworld">
+	
+	<message type="GW_CDKEY_CHECK_MSG" comment="向worldserver请求验证激活码是否可用">
+		<field type="String" name="openId" comment="玩家的passportId" />
+		<field type="Long" name="charUUId" comment="角色UUId" />
+		<field type="String" name="cdKeyStr" comment="激活码" />
+		<field type="String" name="onServerId" comment="所在服务器" />
+	</message>
+	
+	<message type="WG_CDKEY_CHECK_RESULT_MSG" comment="向gameserver请求验证结果">
+		<field type="Long" name="charUUId" comment="角色UUId" />
+		<field type="Integer" name="canUse" comment="是否可用：1可以用，0不可用" />
+		<field type="String" name="rewardStr" comment="奖励字符串" />
+		<field type="Integer" name="failReason" comment="不可以领取原因：1输入码错误，2已经领取 " />
+	</message>
+	
+</messages>

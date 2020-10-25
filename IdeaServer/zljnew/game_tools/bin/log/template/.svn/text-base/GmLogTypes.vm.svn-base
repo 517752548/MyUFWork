@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+#foreach($logType in $logTypeList)
+		<type id="${logType.id}" name="${logType.name}" class="com.imop.lj.gm.autolog.model.${logType.className}" comment="${logType.comment}"/>
+#end
+</types>

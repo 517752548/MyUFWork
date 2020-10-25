@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="guide">
+	
+	<message type="GC_SHOW_GUIDE_INFO" comment="显示新手引导">
+		<field type="Integer" name="guideTypeId" comment="引导类型id"/>
+		<field type="String" name="guideStepStr" comment="引导步骤json串" />
+	</message>
+
+	<message type="CG_SHOW_GUIDE_BY_FUNC" comment="根据功能Id显示新手引导">
+		<field type="Integer" name="funcTypeId" comment="功能类型id"/>
+	</message>
+	
+	<message type="GC_FUNC_HAS_GUIDE" comment="通知前台某功能模块有新手引导了">
+		<field type="Integer" name="funcTypeId" comment="功能类型id"/>
+	</message>
+	
+	<message type="GC_FUNC_HAS_GUIDE_LIST" comment="通知前台一些功能模块有新手引导了，功能id列表，登录时发">
+		<field type="Integer" name="funcTypeId" list="true" comment="功能类型id"/>
+	</message>
+	
+	<message type="GC_FINISHED_GUIDE_LIST_BY_FUNC" comment="已全部完成新手引导的功能模块列表">
+		<field type="Integer" name="funcTypeIdList" list="true" comment="功能类型id"/>
+	</message>
+	
+	<message type="GC_FINISHED_GUIDE_BY_FUNC" comment="已全部完成新手引导的功能模块Id，当某完成某新手引导后给前台发送更新">
+		<field type="Integer" name="funcTypeId" comment="功能类型id"/>
+	</message>
+	
+	<message type="CG_FINISH_GUIDE" comment="完成新手引导，一些特殊的地方需要前台主动发完成才算完成，如欢迎的新手、vip体验卡的新手">
+		<field type="Integer" name="guideTypeId" comment="新手引导类型id"/>
+	</message>
+	
+</messages>

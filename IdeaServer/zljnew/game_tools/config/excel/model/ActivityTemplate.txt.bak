@@ -1,0 +1,16 @@
+int isOpen;[notNull=true;minValue=0;maxValue=1]//活动是否开启（1开启，0关闭）
+long nameLangId;[notNull=fasle] // 活动名称多语言id
+String name;[notNull=true] // 活动名称
+long timeDescLangId;[notNull=fasle] // 活动时间描述多语言id
+String timeDesc;[notNull=true] // 活动时间描述
+long descLangId;[notNull=fasle] // 活动描述多语言id
+String desc;[notNull=true] // 活动描述
+int funcTypeId;[notNull=false]//对应功能类型Id
+int noticeActivityTimeEventId;[notNull=false;minValue=0] //活动提醒时间
+int readyActivityTimeEventId;[notNull=false;minValue=0] // 活动准备时间
+int startActivityTimeEventId;[notNull=true] // 活动开始时间
+int endActivityTimeEventId;[notNull=true] // 活动结束时间
+int icon;[notNull=true] // 活动图标
+com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate activityFunctionTemplate;[Object(6)] //活动执行函数
+List<com.imop.lj.gameserver.activity.template.ActivityMessageTemplate> activityMessageTemplateList;[collection(4,6)] //活动个阶段函数
+

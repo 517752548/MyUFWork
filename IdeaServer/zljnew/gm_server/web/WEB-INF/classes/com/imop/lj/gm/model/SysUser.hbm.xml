@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.imop.lj.gm.model">
+<class name="SysUser" table="t_sys_user">
+ <id name="id" column="id" type="int">
+	<generator class="native"/>
+</id>
+<property name="username" type="string" />
+<property name="password" type="string" />
+<property name="regionId" type="string"/>
+<property name="serverIds" type="string"/>
+<property name="role" type="string"/>
+<property name="lastLogonDate" type="timestamp"/>
+</class>
+</hibernate-mapping>

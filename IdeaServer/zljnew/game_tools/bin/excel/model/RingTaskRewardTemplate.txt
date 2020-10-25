@@ -1,0 +1,6 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int ringNum;[minValue=1;notNull=false]//环数
+int normalRewardId;[minValue=1;notNull=false]//普通玩家奖励Id
+int vipLevelLimit;[minValue=1;notNull=false]//要求vip等级
+int vipRewardId;[minValue=1;notNull=false]//vip玩家奖励Id

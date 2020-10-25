@@ -1,0 +1,3 @@
+int currencyTypeId;[minValue=1;notNull=false]//消耗货币类型
+int currencyNum;[minValue=1;notNull=false]//消耗货币数值
+int needVipLevel;[minValue=0;notNull=false]//开启VIP等级限制

@@ -1,0 +1,5 @@
+long nameLangId;[notNull=false]//名称多语言Id
+String name;[notNull=false]//名称
+String effect;[notNull=false;]//特效(str)
+int effectShowType;[notNull=false;minValue=0]//特效显示方式(int)1、头上，2、脚下
+int buffCatalogId;[notNull=false;minValue=1]//公式类型Id

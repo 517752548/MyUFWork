@@ -1,0 +1,4 @@
+int storyId;[notNull=false;minValue=0]//剧情id
+int storyType;[notNull=false;minValue=0]//剧情类型
+String content;[notNull=false]//剧情内容
+int isNpc;[notNull=false;minValue=0;maxValue=1]//是否npc

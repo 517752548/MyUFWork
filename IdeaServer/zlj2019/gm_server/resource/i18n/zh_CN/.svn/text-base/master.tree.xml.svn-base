@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trees>
+	<tree role_id="super_admin">
+		<tnode menu_id="*"/>
+	</tree>
+	
+	<tree role_id="admin">
+		<tnode menu_id="1_*"/>
+		<tnode menu_id="2_*"/>
+		<tnode menu_id="3_*"/>
+		<tnode menu_id="4_1"/>
+		<tnode menu_id="7_*"/>
+	</tree>
+	
+	<tree role_id="maintain">
+		<tnode menu_id="4_*"/>
+		<tnode menu_id="5_*"/>
+	</tree>
+	
+	<tree role_id="normal_custom_service">
+		<tnode menu_id="1_*"/>
+		<tnode menu_id="3_*"/>
+		<tnode menu_id="7_*"/>
+	</tree>
+	
+	<tree role_id="advanced_custom_service">
+		<tnode menu_id="1_*"/>
+		<tnode menu_id="3_*"/>
+		<tnode menu_id="7_*"/>
+	</tree>
+	
+	<tree role_id="operation">
+		<tnode menu_id="1_*"/>
+		<tnode menu_id="2_*"/>
+		<tnode menu_id="3_*"/>
+		<tnode menu_id="4_1"/>
+		<tnode menu_id="4_5"/>
+		<tnode menu_id="7_*"/>
+	</tree>
+	
+	<tree role_id="advanced_operation">
+		<tnode menu_id="1_*"/>
+		<tnode menu_id="2_*"/>
+		<tnode menu_id="3_*"/>
+		<tnode menu_id="4_1"/>
+		<tnode menu_id="4_4"/>
+		<tnode menu_id="4_5"/>
+		<tnode menu_id="7_*"/>
+	</tree>
+	
+	<tree role_id="kaiying">
+		<tnode menu_id="1_1"/>
+		<tnode menu_id="1_2"/>
+		<tnode menu_id="2_1"/>
+		<tnode menu_id="2_3"/>
+	</tree>
+	
+	<tree role_id="developer">
+		<tnode menu_id="*"/>
+	</tree>
+</trees>

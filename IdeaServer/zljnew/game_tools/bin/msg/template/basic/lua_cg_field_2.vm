@@ -1,0 +1,13 @@
+#macro( smallType $type)
+#if($type == "Byte")char#elseif( $type == "String" )string#elseif( $type == "Boolean" )bool#elseif( $type == "Short" )short#elseif( $type == "Integer" )int32#elseif( $type == "Long" )int64#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int32#elseif( $type == "Short" )Short#elseif( $type == "Byte" )Byte#elseif( $type == "Boolean" )Bool#elseif( $type == "Long" )Int64S#elseif( $type == "String" )String#else$type#end
+#end
+	-- $field.comment
+	local ${newFieldName}Size = #${newFieldName}
+	buf:writeUShort(${newFieldName}Size)
+	local ${newFieldName}Index
+	for ${newFieldName}Index=1, ${newFieldName}Size do
+		buf:write#bigType($field.clientType)(${newFieldName}[${newFieldName}Index])
+	end

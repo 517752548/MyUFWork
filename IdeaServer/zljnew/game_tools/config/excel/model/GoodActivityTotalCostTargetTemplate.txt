@@ -1,0 +1,14 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int currencyId;[notNull=true;minValue=1]//货币类型
+int costNum;[notNull=true;minValue=1]//消耗数量
+int sourceId;[notNull=false;minValue=0]//消耗来源

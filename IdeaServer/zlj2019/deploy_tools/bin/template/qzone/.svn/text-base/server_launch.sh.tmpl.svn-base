@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ulimit -n 65535
+#find the jars
+jar_lib=`ls -1 lib/*.jar`
+jar_lib=`echo $jar_lib | sed 's/ /:/g'`
+
+java -Dserver.name=${server.serverName}_${deployConfig.localHostId} -server -Xmx${server.Xmx}M -Xms${server.Xms}M -Xss${server.Xss}K ${server.gcOpt} -cp config:${jar_lib} com.imop.lj.gameserver.GameServer 

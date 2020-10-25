@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<resultset name="queryUserInfo">
+		<return-scalar  column="id" type="string"  />
+		<return-scalar column="name" type="string" />
+		<return-scalar column="password" type="string" />
+		<return-scalar column="question" type="string" />
+		<return-scalar column="answer" type="string" />
+		<return-scalar column="lastLoginIp" type="string" />
+		<return-scalar column="lastLogoutTime" type="timestamp" />
+		<return-scalar column="role" type="int" />
+		<return-scalar column="lockStatus" type="int" />
+		<return-scalar column="props" type="string" />
+		<return-scalar column="foribedTalkTime" type="long" />
+</resultset>
+<resultset name="queryHumanEntity">
+		<return-scalar  column="id" type="long"  />
+		<return-scalar column="passportId" type="string" />
+		<return-scalar column="level" type="int" />
+		<return-scalar column="lastLoginTime" type="timestamp" />
+		<return-scalar column="lastLoginIp" type="string" />
+		<return-scalar column="name" type="string" />
+		<return-scalar column="onlineStatus" type="int" />
+		<return-scalar column="createTime" type="timestamp" />
+		<return-scalar column="bond" type="int" />
+		<return-scalar column="sysBond" type="int" />
+		<return-scalar column="honor" type="int" />
+</resultset>
+	<query name="getUserInfoList"> 
+		<![CDATA[ from UserInfo  ]]>
+	</query>
+	<query name="searchUserInfoById"> 
+		<![CDATA[ from UserInfo  where id=:id ]]>
+	</query>
+	<query name="searchUserInfoByName"> 
+		<![CDATA[ from UserInfo  where name like :name ]]>
+	</query>
+	<query name="getRoleByUserName"> 
+		<![CDATA[ from HumanEntity where name=:name]]>
+	</query>
+	<query name="searchRoleName"> 
+		<![CDATA[ from PetEntity where id=:id]]>
+	</query>
+	<query name="getCharacterInfo"> 
+		<![CDATA[ from HumanEntity where id=:id]]>
+	</query>
+	<query name="getPets"> 
+		<![CDATA[ from PetEntity where charId=:id]]>
+	</query>
+	<query name="getStoreItems"> 
+		<![CDATA[ from ItemEntity where charId=:id]]>
+	</query>
+	<query name="getDBVersion"> 
+		<![CDATA[ select version from DbVersion ]]>
+	</query>
+	<query name="getTimeNoticeList"> 
+		<![CDATA[ from TimeNotice where type=:type ]]>
+	</query>
+	<query name="getAllTimeNoticeList"> 
+		<![CDATA[ from TimeNotice ]]>
+	</query> 
+	
+	<query name="getGameNoticeList"> 
+		<![CDATA[ from GameNotice ]]>
+	</query>
+	
+	<query name="getTimeNoticeNum"> 
+		<![CDATA[ select count(*) from TimeNotice ]]>
+	</query>
+	<query name="getGameNoticeNum"> 
+		<![CDATA[ select count(*) from GameNotice ]]>
+	</query>
+	<query name="delALLTimeNotice"> 
+		<![CDATA[ delete from TimeNotice ]]>
+	</query>
+	<query name="delALLGameNotices"> 
+		<![CDATA[ delete from GameNotice ]]>
+	</query>
+	 <query name="getPrizeNum"> 
+		<![CDATA[select count(*) from PrizeInfo ]]>
+	</query>
+	<query name="getPrizeList"> 
+		<![CDATA[ from PrizeInfo ]]>
+	</query>
+	<query name="queryPrize"> 
+		<![CDATA[ from PrizeInfo where prizeId=:prizeId ]]>
+	</query>
+	<query name="delALLPrizes"> 
+		<![CDATA[ delete from PrizeInfo ]]>
+	</query>
+	<query name="getAllMall"> 
+		<![CDATA[ from MallEntity ]]>
+	</query>
+<!--	<query name="getGuildInfo"> -->
+<!--		<![CDATA[ from CommerceEntity where id=:id]]>-->
+<!--	</query> -->
+	<!--  <query name="getRank"> 
+		<![CDATA[ select rank from GuildMemberEntity where guildId=:guildId and roleId=:roleId]]>
+	</query>
+	<query name="getGuildName"> 
+		<![CDATA[ select guildName from GuildEntity where id=:id]]>
+	</query>-->		
+	<query name="getValidTimeNoticeList"> 
+		<![CDATA[ from TimeNotice where endTime>now()]]>
+	</query> 
+	<!-- 游戏世界管理 -->
+<!--	<query name="getBranchList"> -->
+<!--		<![CDATA[ from BranchEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getEmployeeList"> -->
+<!--		<![CDATA[ from EmployeeEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllBattleSnapList"> -->
+<!--		<![CDATA[ from BattleSnapEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllArenaSnapList"> -->
+<!--		<![CDATA[ from ArenaSnapEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllBossList"> -->
+<!--		<![CDATA[ from BossEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllDailyQuestList"> -->
+<!--		<![CDATA[ from DailyQuestEntity  ]]>-->
+<!--	</query>-->
+	<query name="getAllDbVersionList"> 
+		<![CDATA[ from DbVersion  ]]>
+	</query>
+<!--	<query name="getAllEscortHelpSnapList"> -->
+<!--		<![CDATA[ from EscortHelpSnapEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllRelationEntityList"> -->
+<!--		<![CDATA[ from RelationEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllEscortSnapList"> -->
+<!--		<![CDATA[ from EscortSnapEntity  ]]>-->
+<!--	</query> -->
+	<query name="getAllItemList"> 
+		<![CDATA[ from ItemEntity  ]]>
+	</query>
+<!--	<query name="getAllSecretaryList"> -->
+<!--		<![CDATA[ from SecretaryEntity  ]]>-->
+<!--	</query> -->
+<!--	<query name="getAllDoingQuestList"> -->
+<!--		<![CDATA[ from DoingQuestEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllFinishedQuestList"> -->
+<!--		<![CDATA[ from FinishedQuestEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllHunterEntityList"> -->
+<!--		<![CDATA[ from HunterEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllTempHuntBagList"> -->
+<!--		<![CDATA[ from TempHuntBagEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllSortArenaLevelEntityList"> -->
+<!--		<![CDATA[ from SortArenaLevelEntity  ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllBroserList"> -->
+<!--		<![CDATA[ from BroserEntity  ]]>-->
+<!--	</query>-->
+<!--		<query name="delALLBroserList"> -->
+<!--		<![CDATA[ delete from BroserEntity ]]>-->
+<!--	</query>-->
+<!--	<query name="getAllAddressBookList"> -->
+<!--		<![CDATA[ from AddressBookEntity ]]>-->
+<!--	</query>-->
+	<query name="getMobileActivityEntityList">
+		<![CDATA[ from GoodActivityEntity order by id desc]]>
+	</query>
+	<query name="getDirtyWorldsList"> 
+		<![CDATA[ from DirtyWordsTypeEntity ]]>
+	</query>
+	<!-- 
+	<query name="getCardActivityEntityList">
+		<![CDATA[ from CardActivityEntity order by id desc]]>
+	</query>
+	
+	<query name="getTurntableActivityEntityList">
+		<![CDATA[ from TurntableActivityEntity order by id desc]]>
+	</query>
+	<query name="getQQMarketTaskTargetEntity">
+		<![CDATA[ from QQMarketTaskTargetEntity order by id asc]]>
+	</query>
+	 -->
+	<query name="getAllCDKeyList">
+		<![CDATA[ from CDKeyEntity where isDel = 0 order by plansId, giftId, groupId  ]]>
+	</query>
+	<query name="getCDKeyEntityListByGroupId">
+		<![CDATA[ from CDKeyEntity where plansId=:plansId and giftId=:giftId and groupId=:groupId and state = 0 ]]>
+	</query>
+	<query name="getCDKeyListByCDKeyId">
+		<![CDATA[ from CDKeyEntity where id like :id ]]>
+	</query>
+	<query name="getCDKeyListByCDKeyIdOrCreateTime">
+		<![CDATA[ from CDKeyEntity where cdkey like :id or createTime=:createTime ]]>
+	</query>
+	<query name="getCDKeyEntityListByOpenId">
+		<![CDATA[ from CDKeyEntity where openId like:openId]]>
+	</query>
+	<query name="getMaxGroupId">
+		<![CDATA[ select max(groupId) from CDKeyEntity where plansId=:plansId and giftId =:giftId ]]>
+	</query>
+	<query name="getWorldGift" >
+		<![CDATA[ from WorldGiftEntity where isDel = 0 order by id ]]>
+	</query>
+	<query name="queryWorldGiftByGiftId"> 
+		<![CDATA[ from WorldGiftEntity where giftId=:giftId ]]>
+	</query>
+	<query name="queryCDKeyPlansByPlansId"> 
+		<![CDATA[ from CDKeyPlansEntity where cdkeyPlansId=:plansId ]]>
+	</query>
+	<query name="getCDKeyPlans"> 
+		<![CDATA[ from CDKeyPlansEntity where isDel = 0 order by id ]]>
+	</query>
+	<query name="getByPlansNameOrCreateTime">
+		<![CDATA[ from CDKeyPlansEntity where cdkeyPlansName like :plansName or (createTime>:createTimeStart and createTime <:createTimeEnd) ]]>
+	</query>
+	<query name="getByPlansName">
+		<![CDATA[ from CDKeyPlansEntity where cdkeyPlansName like :plansName ]]>
+	</query>
+	<query name="getAllCDKeyListNoEcho">
+		<![CDATA[ from CDKeyEntity where isDel = 0 and state = 0 group by plansId, giftId, groupId order by plansId, giftId,groupId ]]>
+	</query>
+	<query name="delCDKey"> 
+		<![CDATA[ update CDKeyEntity set isDel = 1 where plansId=:plansId and giftId=:giftId and groupId=:groupId ]]>
+	</query>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mop.webzt.db.model">
+	<query name="getuserbyname">
+		<![CDATA[
+			from TUserInfoEntity where name =:name
+		]]>
+	</query>
+	<query name="gettcdkeylistbycdtype">
+		<![CDATA[
+			from TCDKeyEntity where cdtype=:cdtype and userid=:userid
+		]]>
+	</query>
+
+	<query name="getuserchargeorder">
+		<![CDATA[
+			from QueryOrderEntity where userid=:userid and status in (10)
+		]]>
+	</query>
+
+	<query name="getuserchargebycharid">
+		<![CDATA[
+			from QueryOrderEntity where char_id=:char_id and status in (10)
+		]]>
+	</query>
+
+
+
+	<query name="getchargeorderbyid">
+		<![CDATA[
+			from QueryOrderEntity  where id=:id
+		]]>
+	</query>
+
+	<query name="getchargeorderbyorderid">
+		<![CDATA[
+			from QueryOrderEntity  where orderid=:orderid
+		]]>
+	</query>
+
+
+
+</hibernate-mapping>

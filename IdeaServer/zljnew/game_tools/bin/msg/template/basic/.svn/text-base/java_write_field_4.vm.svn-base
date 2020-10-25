@@ -1,0 +1,11 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )boolean#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+
+#if ($subField.list)
+	#smallType($subField.type)[] ${newFieldName}_${subField.smallName} = ${newFieldName}.get${subField.bigName} ();
+#else
+	#smallType($subField.type) ${newFieldName}_${subField.smallName} = ${newFieldName}.get${subField.bigName} ();
+#end

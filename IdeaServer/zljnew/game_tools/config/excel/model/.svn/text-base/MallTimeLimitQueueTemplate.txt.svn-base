@@ -1,0 +1,6 @@
+long delayTime;[notNull=false;minValue=0]//延迟时间
+boolean loop;//是否可循环
+boolean effective;//是否生效
+int startBroadcastId;[notNull=false;minValue=0]//开始公告ID
+int endBroadCastId;[notNull=false;minValue=0]//结束公告ID
+long intervalTime;[notNull=false;minValue=0]//间隔时间

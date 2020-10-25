@@ -1,0 +1,8 @@
+message com.imop.lj.logserver.model.RewardLog(
+	long createRewardCharId;//生成奖励对应玩家角色id
+	String rewardUuid;//奖励标示
+	int exp;//经验
+	longstring currencyInfos;//货币奖励
+	String itemInfos;//物品奖励
+	longstring otherInfos;//其他参数
+)

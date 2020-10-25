@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.imop.lj.gm.model.notice">
+<class name="com.imop.lj.gm.model.notice.TimeNotice" table="t_time_notice">
+ <id name="id" column="id" type="int">
+	<generator class="native"/>
+</id>
+<property name="startTime" column="startTime" type="timestamp" />
+<property name="endTime"  column="endTime" type="timestamp" />
+<property name="intervalTime" column="intervalTime" type="int" />
+<property name="serverIds" column="serverIds" type="string"/>
+<property name="content" column="content" type="string" length="5000" />
+<property name="operator" column="operator" type="string"/>
+<property name="openType" column="openType" type="byte"/>
+<property name="type" column="type" type="byte"/>
+<property name="subType" column="subType" type="byte"/>
+</class>
+</hibernate-mapping>

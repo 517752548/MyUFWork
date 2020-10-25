@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="wing">
+
+	<message type="CG_WING_PANEL" comment="打开翅膀面板">
+	</message>
+	
+	<message type="GC_WING_PANEL" comment="返回翅膀列表">
+	    <field type="com.imop.lj.gameserver.wing.WingInfo"
+	           clientType="WingInfo"
+	           name="wingList" list="true" macro="WingInfo" comment="翅膀信息页面">
+	    </field>
+	</message>
+	
+	<message type="CG_WING_TAKEDOWN" comment="卸下翅膀">
+	 	<field type="Integer" name="templateId" comment="翅膀模板Id"/>
+	</message>
+	
+	<message type="CG_WING_SET" comment="装备翅膀">
+	    <field type="Integer" name="templateId" comment="翅膀模板Id"/>
+	</message>
+	
+	<message type="CG_WING_UPGRADE" comment="升阶翅膀">
+	    <field type="Integer" name="templateId" comment="翅膀模板Id"/>
+		<field type="Integer" name="upgradeType" comment="升阶方式 1手动2自动"/>
+	</message>
+	
+	<message type="GC_WING_UPGRADE" comment="升阶翅膀结果">
+	    <field type="com.imop.lj.gameserver.wing.WingInfo"
+	           clientType="WingInfo"
+	           name="wing" macro="WingInfo" comment="翅膀">
+	    </field>
+		<field type="Integer" name="result" comment="升阶翅膀结果 1成功 2失败"/>
+	</message>
+	
+	
+</messages>

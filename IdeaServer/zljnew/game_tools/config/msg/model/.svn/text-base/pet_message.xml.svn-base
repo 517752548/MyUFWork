@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="pet">
+	
+	<message type="GC_ADD_PET" comment="添加武将">
+		<field type="com.imop.lj.common.model.pet.PetInfo" name="petInfo" comment="武将基础信息" 
+			clientType="PetInfo" macro="PetInfo"/>
+	</message>
+	
+	<message type="GC_PET_LIST" comment="返回武将列表">
+		<field type="com.imop.lj.common.model.pet.PetInfo" name="petInfoList" comment="返回武将列表" 
+			clientType="PetInfo" macro="PetInfo" list="true"/>
+	</message>
+	
+	<message type="GC_PET_INFO" comment="返回单个武将信息">
+		<field type="com.imop.lj.common.model.pet.PetInfo" name="petInfo" comment="返回武将信息" 
+			clientType="PetInfo" macro="PetInfo"/>
+	</message>
+	
+	<message type="CG_PET_ADD_POINT" comment="武将加点">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" list="true" name="addArr" comment="加点数组，按照一级属性的顺序加"/>
+	</message>
+	
+	<message type="GC_PET_ADD_POINT" comment="武将加点结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+		<field type="Integer" list="true" name="aPropAddArr" comment="一级属性附加值"/>
+	</message>
+	
+	<message type="CG_PET_CHANGE_FIGHT_STATE" comment="宠物出战or休息">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="state" comment="出战状态，0休息，1出战"/>
+	</message>
+	
+	<message type="GC_PET_CHANGE_FIGHT_STATE" comment="宠物出战or休息结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="state" comment="出战状态，0休息，1出战"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_CHANGE_NAME" comment="武将改名">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="String" name="newName" comment="名字"/>
+	</message>
+	
+	<message type="GC_PET_CHANGE_NAME" comment="武将改名结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_FIRE" comment="武将解雇">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_FIRE" comment="武将解雇结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_REFRESH_TALENT_SKILL" comment="宠物刷新天赋技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_REFRESH_TALENT_SKILL" comment="宠物刷新天赋技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_STUDY_NORMAL_SKILL" comment="宠物学习普通技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="itemTplId" comment="技能书道具Id"/>
+	</message>
+	
+	<message type="GC_PET_STUDY_NORMAL_SKILL" comment="宠物学习普通技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="itemTplId" comment="技能书道具Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_REJUVEN" comment="还童">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_REJUVEN" comment="还童结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_VARIATION" comment="变异">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="isBatch" comment="是否批量，0否，1是"/>
+	</message>
+	
+	<message type="GC_PET_VARIATION" comment="变异结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="isBatch" comment="是否批量，0否，1是"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_ARTIFICE" comment="炼化">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_ARTIFICE" comment="炼化结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_TRAIN" comment="宠物培养">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="trainTypeId" comment="1初级2中级3高级"/>
+	</message>
+	
+	<message type="CG_PET_TRAIN_UPDATE" comment="宠物培养确认更新">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_TRAIN_UPDATE" comment="宠物培养确认更新">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="1成功,2失败"/>
+	</message>
+	
+	<message type="CG_PET_PERCEPT_ADD_EXP" comment="宠物悟性提升">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="addType" comment="提升方式,1初级,2中级,3高级"/>
+		<field type="Integer" name="isBatch" comment="是否批量,1是,2否"/>
+	</message>
+	
+	<message type="GC_PET_PERCEPT_ADD_EXP" comment="宠物悟性提升结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="smallCritNum" comment="小暴击触发次数"/>
+		<field type="Long" name="smallCritSumExp" comment="小暴击触发共获得经验和"/>
+		<field type="Integer" name="bigCritNum" comment="大暴击触发次数"/>
+		<field type="Long" name="normalSumExp" comment="普通获得经验和"/>
+		<field type="Integer" name="result" comment="1成功,2失败"/>
+	</message>
+	
+	<!-- 骑宠 -->
+	<message type="CG_PET_HORSE_RIDE" comment="骑宠出战or休息">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="state" comment="出战状态，0休息，1出战"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_RIDE" comment="骑宠出战or休息结果">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="state" comment="出战状态，0休息，1出战"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+		<message type="CG_PET_HORSE_CHANGE_NAME" comment="骑宠改名">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="String" name="newName" comment="名字"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_CHANGE_NAME" comment="骑宠改名结果">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_HORSE_FIRE" comment="骑宠放生">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_FIRE" comment="骑宠放生结果">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	<!--返回pet列表消息和武将,宠物一致,直接复用-->
+	
+	<message type="CG_PET_HORSE_REJUVEN" comment="还童">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_REJUVEN" comment="还童结果">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<!-- 骑宠没有变异 -->	
+	
+	<message type="CG_PET_HORSE_ARTIFICE" comment="炼化">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_ARTIFICE" comment="炼化结果">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_HORSE_TRAIN" comment="骑宠培养">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="trainTypeId" comment="1初级2中级3高级"/>
+	</message>
+	
+	<message type="CG_PET_HORSE_TRAIN_UPDATE" comment="骑宠培养确认更新">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_TRAIN_UPDATE" comment="骑宠培养确认更新">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="result" comment="1成功,2失败"/>
+	</message>
+	
+	<message type="CG_PET_HORSE_PERCEPT_ADD_EXP" comment="骑宠悟性提升">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="addType" comment="提升方式,1初级,2中级,3高级"/>
+		<field type="Integer" name="isBatch" comment="是否批量,1是,2否"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_PERCEPT_ADD_EXP" comment="骑宠悟性提升结果">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="smallCritNum" comment="小暴击触发次数"/>
+		<field type="Long" name="smallCritSumExp" comment="小暴击触发共获得经验和"/>
+		<field type="Integer" name="bigCritNum" comment="大暴击触发次数"/>
+		<field type="Long" name="normalSumExp" comment="普通获得经验和"/>
+		<field type="Integer" name="result" comment="1成功,2失败"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_CUR_PROP_UPDATE" comment="骑宠忠诚度,亲密度,生命值当前值更新">
+		<field type="Long" name="petId" comment="骑宠唯一Id"/>
+		<field type="Integer" name="loy" comment="当前忠诚度"/>
+		<field type="Integer" name="clo" comment="当前亲密度"/>
+		<field type="Integer" name="life" comment="当前生命"/>
+		<field type="Long" name="deadline" comment="到期时间"/>
+	</message>
+	
+	<!-- 伙伴 -->
+	<message type="CG_PET_OPEN_FRIEND_PANEL" comment="打开伙伴面板">
+	</message>
+	
+	<message type="GC_PET_FRIEND_UNLOCK_LIST" comment="伙伴解锁情况列表">
+		<field type="com.imop.lj.common.model.pet.PetFriendUnlockInfo" name="petFriendUnlockInfoList" comment="伙伴解锁情况列表" 
+			clientType="PetFriendUnlockInfo" macro="PetFriendUnlockInfo" list="true"/>
+	</message>
+	
+	<message type="GC_PET_FRIEND_ARRAY_LIST" comment="伙伴阵容列表">
+		<field type="Integer" name="curArrayIndex" comment="当前使用的阵容索引，从0开始计数"/>
+		<field type="com.imop.lj.common.model.pet.PetFriendArrayInfo" name="petFriendArrayInfoList" comment="伙伴阵容列表" 
+			clientType="PetFriendArrayInfo" macro="PetFriendArrayInfo" list="true"/>
+	</message>
+	
+	<message type="CG_PET_FRIEND_INFO" comment="请求单个伙伴的信息">
+		<field type="Integer" name="tplId" comment="伙伴模板Id"/>
+	</message>
+	
+	<message type="GC_PET_FRIEND_INFO" comment="单个伙伴的信息">
+		<field type="Integer" name="tplId" comment="伙伴模板Id"/>
+		<field type="Integer" name="level" comment="伙伴等级"/>
+		<field type="String" name="props" comment="属性json"/>
+		<field type="com.imop.lj.common.model.pet.SkillInfo" name="skillList" clientType="PetSkillInfo"
+			comment="技能列表" macro="PetSkillInfo" list="true"/>
+	</message>
+	
+	<message type="CG_PET_FRIEND_CHANGE_ARRAY" comment="切换正在使用的阵容">
+		<field type="Integer" name="arrayIndex" comment="切换的阵容索引，从0开始计数"/>
+	</message>
+	
+	<message type="CG_PET_FRIEND_PUTON_ARRAY" comment="伙伴上阵">
+		<field type="Integer" name="arrayIndex" comment="阵容索引，从0开始计数"/>
+		<field type="Integer" name="tplId" comment="伙伴模板Id"/>
+		<field type="Integer" name="targetPosIndex" comment="目标位置索引，从0开始计数"/>
+	</message>
+	
+	<message type="CG_PET_FRIEND_OFF_ARRAY" comment="伙伴下阵">
+		<field type="Integer" name="arrayIndex" comment="阵容索引，从0开始计数"/>
+		<field type="Integer" name="targetPosIndex" comment="目标位置索引，从0开始计数"/>
+	</message>
+	
+	<message type="CG_PET_FRIEND_CHANGE_POSITION" comment="伙伴调整位置">
+		<field type="Integer" name="arrayIndex" comment="阵容索引，从0开始计数"/>
+		<field type="Integer" name="tplId" comment="伙伴模板Id"/>
+		<field type="Integer" name="targetPosIndex" comment="目标位置索引，从0开始计数"/>
+	</message>
+	
+	<message type="CG_PET_FRIEND_UNLOCK" comment="伙伴解锁">
+		<field type="Integer" name="tplId" comment="伙伴模板Id"/>
+		<field type="Integer" name="unlockId" comment="解锁方式，分别为1(7d)，2(30d)，3(forever)"/>
+	</message>
+	
+	<message type="GC_PET_ADD_EXP" comment="武将增加经验，目前只有主将才发">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Long" name="addExp" comment="增加的经验"/>
+	</message>
+	
+	<message type="GC_PET_CUR_PROP_UPDATE" comment="武将hp、mp、life、sp当前值更新">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="hp" comment="当前血"/>
+		<field type="Integer" name="mp" comment="当前蓝"/>
+		<field type="Integer" name="life" comment="当前寿命"/>
+		<field type="Integer" name="sp" comment="当前怒气"/>
+	</message>
+	
+	<message type="GC_PET_POOL_UPDATE" comment="武将池数值更新">
+		<field type="Long" name="hpPool" comment="当前血池"/>
+		<field type="Long" name="mpPool" comment="当前蓝池"/>
+		<field type="Long" name="lifePool" comment="当前寿命池"/>
+	</message>
+		
+	<message type="CG_PET_RESET_POINT" comment="武将洗点">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+		
+	<message type="GC_PET_RESET_POINT" comment="武将洗点结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<!-- 新技能系统相关 -->
+	<message type="CG_PET_LEADER_STUDY_SKILL" comment="主将学习技能">
+		<field type="Integer" name="itemTplId" comment="技能书道具Id"/>
+	</message>
+	
+	<message type="GC_PET_LEADER_STUDY_SKILL" comment="主将学习技能结果">
+		<field type="Integer" name="itemTplId" comment="技能书道具Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_SKILL_EFFECT_OPEN_POSITION" comment="主将技能开启仙符格子">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+	</message>
+	
+	<message type="CG_PET_EMBED_SKILL_EFFECT" comment="主将技能镶嵌仙符或更换仙符">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="posId" comment="镶嵌位置，从1开始计数"/>
+		<field type="Integer" name="itemIndex" comment="要镶嵌的技能书道具索引"/>
+	</message>
+	
+	<message type="CG_PET_SKILL_EFFECT_UPLEVEL" comment="主将技能仙符升级">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="posId" comment="要升级的位置，从1开始计数"/>
+		<field type="Integer" name="itemIndexList" list="true" comment="选择的技能书道具索引列表"/>
+	</message>
+	
+	<message type="GC_PET_SKILL_EFFECT_UPLEVEL" comment="主将技能仙符升级结果">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="posId" comment="要升级的位置，从1开始计数"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="GC_PET_SKILL_EFFECT_UPDATE" comment="主将技能镶嵌仙符信息">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="com.imop.lj.common.model.pet.SkillEffectInfo" name="embedSkillEffectList" clientType="PetSkillEffectInfo"
+			comment="技能镶嵌的效果列表，效果id为0表示空格子" list="true">
+			<field type="Integer" name="effectItemId" comment="技能效果道具Id"/>
+			<field type="Integer" name="level" comment="技能效果等级"/>
+			<field type="Integer" name="exp" comment="技能效果经验"/>
+		</field>
+	</message>
+	
+	<message type="CG_PET_UNEMBED_SKILL_EFFECT" comment="主将技能卸下仙符">
+		<field type="Integer" name="skillId" comment="技能Id"/>
+		<field type="Integer" name="posId" comment="镶嵌位置，从1开始计数"/>
+	</message>
+	<!-- 新技能系统相关 -->
+	
+	<!-- 新宠物系统-->
+	<message type="CG_PET_AFFINATION" comment="宠物洗炼">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	<message type="GC_PET_AFFINATION" comment="宠物洗炼结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_ADD_PET_SKILLBAR_NUM" comment="扩充宠物技能栏">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	<message type="GC_ADD_PET_SKILLBAR_NUM" comment="扩充宠物技能栏结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PUTON_PET_PROP_ITEM" comment="设置宠物资质丹">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="targetIndex" comment="6强壮,7敏捷,8智力,9信仰,10耐力"/>
+		<field type="Integer" name="propItemIndex" comment="资质丹索引"/>
+	</message>
+
+	<message type="CG_PET_SKILL_PUTON_SHORTCUT" comment="设置技能快捷栏">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="skillId" comment="技能ID"/>
+		<field type="Integer" name="targetPosIndex" comment="目标位置索引，从0开始计数"/>
+	</message>
+	
+	<message type="CG_PET_SKILL_OFF_SHORTCUT" comment="取消技能快捷栏">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="targetPosIndex" comment="目标位置索引，从0开始计数"/>
+	</message>
+	
+	<message type="CG_PET_SKILL_SHORTCUT_CHANGE_POSITION" comment="人物技能快捷栏调整位置">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="skillId" comment="技能ID"/>
+		<field type="Integer" name="targetPosIndex" comment="目标位置索引，从0开始计数"/>
+	</message>
+	
+	<!-- 新骑宠系统-->
+	<message type="CG_PET_HORSE_AFFINATION" comment="骑宠洗炼">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	<message type="GC_PET_HORSE_AFFINATION" comment="骑宠洗炼结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_ADD_PET_HORSE_SKILLBAR_NUM" comment="扩充骑宠技能栏">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	<message type="GC_ADD_PET_HORSE_SKILLBAR_NUM" comment="扩充骑宠技能栏结果">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PUTON_PET_HORSE_PROP_ITEM" comment="设置骑宠资质丹">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="targetIndex" comment="6强壮,7敏捷,8智力,9信仰,10耐力"/>
+		<field type="Integer" name="propItemIndex" comment="资质丹索引"/>
+	</message>
+
+	<message type="CG_PET_HORSE_REFRESH_TALENT_SKILL" comment="骑宠刷新天赋技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_REFRESH_TALENT_SKILL" comment="骑宠刷新天赋技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PET_HORSE_STUDY_NORMAL_SKILL" comment="骑宠学习普通技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="itemTplId" comment="技能书道具Id"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_STUDY_NORMAL_SKILL" comment="骑宠学习普通技能">
+		<field type="Long" name="petId" comment="武将唯一Id"/>
+		<field type="Integer" name="itemTplId" comment="技能书道具Id"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+		
+	<message type="CG_PET_HORSE_SOUL_LINK_PET" comment="骑宠灵魂链接宠物">
+		<field type="Long" name="petHorseId" comment="骑宠Id"/>
+		<field type="Long" list="true" name="petId" comment="宠物Id"/>
+		<field type="Integer" list="true" name="flag" comment="1增加,0取消"/>
+	</message>
+	
+	<message type="GC_PET_HORSE_SOUL_LINK_PET" comment="骑宠灵魂链接宠物">
+	<field type="com.imop.lj.common.model.pet.PetSoulLinkInfo" name="petSoulLinkInfoList" comment="宠物灵魂链接信息" 
+			clientType="PetSoulLinkInfo" macro="PetSoulLinkInfo" list="true"/>
+	</message>
+	
+	<!-- 骑宠不参与战斗,没有快捷技能栏 -->
+	
+	
+	
+	
+</messages>

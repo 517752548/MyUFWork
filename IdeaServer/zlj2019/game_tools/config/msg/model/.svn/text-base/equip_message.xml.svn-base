@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="equip">
+	
+	<message type="CG_EQP_CRAFT" comment="打造装备">
+		<field type="Integer" name="costTplId" comment="打造花费模板Id"/>
+		<field type="Integer" name="gradeId" comment="阶数"/>
+		<field type="Integer" name="itemNumList" list="true" comment="材料数量列表"/>
+		<field type="Integer" name="isSimulate" comment="是否模拟，0否，1是"/>
+	</message>
+	
+	<message type="GC_EQP_CRAFT" comment="返回打造结果">
+		<field type="Integer" name="equipmentID" comment="装备模板ID"/>
+		<field type="String" name="itemUUId" comment="道具唯一ID"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="GC_EQP_CRAFT_INFO" comment="打造信息">
+		<field type="Integer" name="costTplId" comment="打造花费模板Id"/>
+		<field type="Integer" name="gradeId" comment="阶数"/>
+		<field type="com.imop.lj.common.model.equip.CraftInfo" name="craftInfo" clientType="CraftInfoData"
+			comment="打造数据" macro="CraftInfo" />
+	</message>
+	
+	<message type="CG_EQP_UPSTAR" comment="升星装备位">
+		<field type="Integer" name="equipPosition" comment="装备位"/>
+		<field type="Integer" name="useExtraItem" comment="是否使用物品提升概率，1使用，2不使用"/>
+	</message>
+	
+	<message type="GC_EQP_UPSTAR" comment="返回升星结果">
+		<field type="Integer" name="equipPosition" comment="装备位"/>
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+	</message>
+	
+	<message type="CG_EQP_GEM_TAKEDOWN" comment="摘除宝石">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+		<field type="Integer" name="holeNum" comment="摘除的孔位置，从1开始计数"/>
+		<field type="Integer" name="extraItemId" comment="摘除符文模板Id"/>
+	</message>
+	
+	<message type="GC_EQP_GEM_TAKEDOWN" comment="摘除宝石结果">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+		<field type="Integer" name="gemItemId" comment="要摘除的宝石模板Id"/>
+		<field type="Integer" name="finalGemItemId" comment="摘除的宝石模板Id，为0表示失败扣除"/>
+	</message>
+	
+	<message type="CG_EQP_GEM_SET" comment="镶嵌宝石">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+		<field type="Integer" name="holeNum" comment="镶嵌的孔位置，从1开始计数"/>
+		<field type="Integer" name="gemItemId" comment="宝石模板Id"/>
+		<field type="Integer" name="extraItemId" comment="镶嵌符文模板Id"/>
+	</message>
+	
+	<message type="GC_EQP_GEM_SET" comment="镶嵌宝石结果">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+		<field type="Integer" name="gemItemId" comment="要镶嵌的宝石模板Id"/>
+		<field type="Integer" name="finalGemItemId" comment="镶嵌上的宝石模板Id，为0表示失败扣除"/>
+	</message>
+	
+	<message type="CG_EQP_GEM_SYNTHESIS" comment="合成宝石">
+		<field type="Integer" name="gemTplId" comment="宝石模板Id"/>
+		<field type="Integer" name="synthesisBase" comment="合成基数 3 三合一 4 四合一 5 五合一"/>
+		<field type="Integer" name="synthesisType" comment="合成方式 0单个1全部"/>
+	</message>
+	
+	<message type="GC_EQP_GEM_SYNTHESIS" comment="合成结果">
+		<field type="Integer" name="sucNum" comment="合成成功数量"/>
+		<field type="Integer" name="failNum" comment="合成失败数量"/>
+		<field type="Integer" name="rewardNum" comment="合成失败返回道具数量"/>
+		
+	</message>
+	
+	<message type="CG_EQP_RECAST" comment="重铸装备">
+		<field type="String" name="equipUuid" comment="装备UUID"/>
+		<field type="Integer" name="EquipRecastInfo" list="true" comment="重铸时锁定装备列表" >
+		</field>
+	</message>
+	
+	<message type="GC_EQP_RECAST" comment="重铸装备结果">
+		<field type="Integer" name="result" comment="1成功2失败"/>
+	</message>
+	
+	<message type="CG_EQP_DECOMPOSE" comment="分解装备">
+		<field type="String" name="equipList" comment="装备UUIDList" list="true"/>
+	</message>
+	
+	<message type="GC_EQP_DECOMPOSE" comment="分解装备结果">
+		<field type="Integer" name="result" comment="1成功2失败"/>
+	</message>
+	
+	
+	<message type="CG_EQP_HOLE" comment="装备打孔/洗孔">
+		<field type="String" name="equipUUId" comment="装备UUID" />
+		<field type="Integer" name="holeNum" comment="孔数" />
+		<field type="Integer" name="holeItemId" comment="打孔道具Id" />
+		<field type="Integer" name="isRefresh" comment="0打孔，1洗孔" />
+	</message>
+	
+	<message type="GC_EQP_HOLE" comment="装备打孔/洗孔结果">
+		<field type="String" name="equipUUId" comment="装备UUID" />
+		<field type="Integer" name="isRefresh" comment="0打孔，1洗孔" />
+		<field type="Integer" name="result" comment="1成功2失败"/>
+	</message>
+	
+</messages>

@@ -1,0 +1,3 @@
+int equipmentID;[notNull=true]//装备ID
+int rarity;[notNull=true;minValue=1]//装备颜色
+int rarityProb;[notNull=false]//概率

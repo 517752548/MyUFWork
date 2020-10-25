@@ -1,0 +1,14 @@
+long cd;[minValue=1;notNull=false]//CD
+int rewardId;//奖励ID
+String iconId;//头像ID
+int resType;[notNull=false]// 资源类型
+String resId;[notNull=false]//资源ID
+int offsetX;[notNull=false]//X轴偏移量
+int offsetY;[notNull=false]//Y轴偏移量
+int artFontId;[notNull=false]//美术字ID
+int menuDescLangId;[notNull=false]// 按钮信息多语言ID
+String menuDesc;//按钮信息
+int rewardDescLangId;[notNull=false]//奖励描述多语言ID
+String rewardDesc;//奖励描述
+int receiveDescLangId;[notNull=false]//领取描述多语言ID
+String receiveDesc;//领取描述

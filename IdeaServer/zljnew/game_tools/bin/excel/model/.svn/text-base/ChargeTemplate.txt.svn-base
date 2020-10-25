@@ -1,0 +1,4 @@
+int rmb;[notNull=true;minValue=1;]//充值RMB数量	
+int bond;[notNull=true;minValue=1;]//获得金子数量	
+int firstSysBond;[notNull=false;minValue=0;]//首充额外获得金子	
+int giftSysBond;[notNull=false;minValue=0;]//赠送金子

@@ -1,0 +1,43 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "String" )string#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )bool#else$type#end
+#end
+#macro( sqlType $type)
+#if($type == "Short" || $type == "short" || $type == "Integer" || $type == "int"||$type == "Long" || $type == "long")INTEGER#elseif( $type == "String" )VARCHAR#elseif( $type == "Byte" || $type == "byte")INTEGER#elseif( $type == "Float" ||$type == "float")REAL#elseif( $type == "Double"||$type == "double" )REAL#elseif( $type == "Boolean" || $type == "boolean" )BOOL#else$type#end
+#end
+#macro( toLowerCase $type)$type.toLowerCase()#end
+
+#set ($dbName = "main")
+#set ($tableName = "#toLowerCase($clientName)")
+----------------
+--Table structure for "${dbName}"."t_${tableName}"
+----------------
+DROP TABLE "${dbName}"."t_$tableName";
+CREATE TABLE "${dbName}"."t_$tableName" (
+#foreach($field in $fields)
+#if(!$field.notClient)
+#if($field.isBaseType())
+	"${field.fieldName}" #sqlType($field.fieldType) NOT NULL DEFAULT (0)#if($velocityCount != $fields.size()),
+#end
+#elseif($field.isUserDef() && $field.isList())
+	#foreach($m in [0..${field.unitNum}])
+	#set($tt = "${field.fieldName}_$m")
+		#foreach($n in [0..${field.unitFieldNum}])
+"${tt}_$n" VARCHAR NOT NULL DEFAULT (0)#if($velocityCount != $fields.size()),
+#end
+		#end
+	#end
+#elseif(!$field.isUserDef() && $field.isList())
+	#foreach($i in [0..${field.unitNum}])
+"${field.fieldName}_$i" #sqlType(${field.clientSubType}) NOT NULL DEFAULT (0)#if($velocityCount != $fields.size()),
+#end
+	#end
+#elseif($field.isUserDef() && !$field.isList())
+	#foreach($j in [0..${field.unitFieldNum}])
+"${field.fieldName}_$j" VARCHAR NOT NULL DEFAULT (0)#if($velocityCount != $fields.size()),
+#end
+	#end
+#end
+#end
+#end
+
+);

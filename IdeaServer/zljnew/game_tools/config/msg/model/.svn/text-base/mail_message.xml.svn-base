@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="mail">
+
+	<message type="CG_MAIL_LIST" comment="查询邮件列表">
+		<field type="Integer" name="queryIndex" comment="查询的页面索引" />
+		<field type="Integer" name="boxType" comment="邮箱类型1-inbox,2-sended,3-savebox" />
+	</message>
+	
+	<message type="GC_MAIL_LIST" comment="邮件列表">
+		<field type="Integer" name="boxType" comment="邮箱类型1-inbox,2-sended,3-savebox" />
+		<field type="Integer" name="queryIndex" comment="查询的页面索引" />
+		<field type="Integer" name="totalNums" comment="总数" />
+		<field type="com.imop.lj.common.model.mail.MailInfo"
+			clientType="MailInfoData" name="mailInfos" list="true" comment="邮件列表" macro="MailInfo">
+		</field>
+	</message>
+	
+	<message type="CG_READ_MAIL" comment="阅读邮件">
+		<field type="String" name="uuid" comment="要阅读的邮件uuid" />
+	</message>
+	
+	<message type="GC_MAIL_UPDATE" comment="单个邮件更新">
+		<field type="com.imop.lj.common.model.mail.MailInfo" name="mail" comment="邮件" 
+			macro="MailInfo" clientType="MailInfoData" />
+	</message>
+	
+	<message type="CG_SEND_MAIL" comment="发送邮件">
+		<field type="String" name="recName" comment="收件人名称" />
+		<field type="String" name="title" comment="邮件标题" />
+		<field type="String" name="content" comment="邮件内容" />
+	</message>
+
+	<message type="GC_SEND_MAIL" comment="发送邮件结果">
+		<field type="Integer" name="result" comment="发送结果，1成功，2失败" />
+		<field type="String" name="errorMsg" comment="错误结果" />
+		<field type="String" name="title" comment="邮件标题" />
+		<field type="String" name="content" comment="邮件内容" />
+	</message>
+	
+	<message type="CG_DEL_MAIL" comment="删除邮件">
+		<field type="String" name="uuid" comment="要删除的邮件uuid" />
+	</message>
+	
+	<message type="CG_DEL_ALL_MAIL" comment="删除所有邮件">
+		<field type="String" name="uuidlist" list="true" comment="要删除的所有邮件uuid" />
+	</message>
+	
+	<message type="GC_DEL_MAIL" comment="删除结果">
+		<field type="Integer" name="result" comment="删除结果，1成功，2失败" />
+	</message>
+	
+	<message type="CG_SAVE_MAIL" comment="保存邮件">
+		<field type="String" name="uuid" comment="要保存的邮件uuid" />
+	</message>
+	
+	<message type="CG_SAVE_MAIL_BATCH" comment="批量保存邮件">
+		<field type="String" name="uuidlist" list="true" comment="要保存的所有邮件uuid" />
+	</message>
+	
+	<message type="CG_SEND_GUILD_MAIL" comment="发送军团邮件">
+		<field type="String" name="title" comment="邮件标题" />
+		<field type="String" name="content" comment="邮件内容" />
+	</message>
+	
+	<message type="CG_GET_MAIL_ATTACHMENT" comment="领取邮件附件">
+		<field type="String" name="uuid" comment="要阅读的邮件uuid" />
+	</message>
+	
+	<message type="GC_GET_MAIL_ATTACHMENT" comment="领取邮件附件结果">
+		<field type="Integer" name="result" comment="结果" />
+	</message>
+	
+</messages>

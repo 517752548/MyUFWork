@@ -1,0 +1,7 @@
+int raidTypeId;[notNull=false;minValue=1;maxValue=2]//单人或组队（1单人，2组队）
+int levelMin;[notNull=false;minValue=1]//副本等级下限
+int levelMax;[notNull=false;minValue=1]//副本等级上限
+int pumpkinNpcId;[notNull=false;minValue=1]//南瓜怪NpcID
+List<Integer> bossNpcIdList;[Collection(3,1)]//BOSSNpcID
+List<Integer> bossRewardIdList;[Collection(3,1)]//BOSS奖励Id
+int rewardId;[notNull=false;minValue=1]//活动奖励ID

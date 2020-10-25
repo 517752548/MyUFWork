@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="goodactivity">
+
+	<message type="CG_GOOD_ACTIVITY_LIST" comment="打开精彩活动面板">
+		<field type="Integer" name="funcId" comment="功能id" />
+	</message>
+	
+	<message type="GC_GOOD_ACTIVITY_LIST" comment="打开精彩活动列表">
+		<field type="Integer" name="funcId" comment="功能id" />
+		<field type="com.imop.lj.common.model.goodactivity.GoodActivityInfo"
+			name="goodActivityList" clientType="GoodActivityInfo" macro="GoodActivityInfo" list="true" comment="精彩活动信息列表">
+		</field>
+	</message>
+	
+	<message type="GC_GOOD_ACTIVITY_UPDATE" comment="精彩活动更新">
+		<field type="Integer" name="funcId" comment="功能id" />
+		<field type="com.imop.lj.common.model.goodactivity.GoodActivityInfo"
+			name="goodActivityInfo" clientType="GoodActivityInfo" macro="GoodActivityInfo" comment="精彩活动信息">
+		</field>
+	</message>
+	
+	<message type="CG_GOOD_ACTIVITY_GET_BONUS" comment="领取活动奖励">
+		<field type="Long" name="activityId" comment="活动id" />
+		<field type="Integer" name="bonusId" comment="奖励id" />
+	</message>
+	
+</messages>

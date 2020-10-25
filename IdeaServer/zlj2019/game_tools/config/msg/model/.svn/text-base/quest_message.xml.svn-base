@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="quest">
+
+	<message type="CG_COMMON_QUEST_LIST" comment="请求成长任务列表">
+	</message>
+	
+	<message type="GC_COMMON_QUEST_LIST" comment="返回成长任务列表" compress="true">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfos" list="true" comment="任务列表" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="GC_QUEST_UPDATE" comment="任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_ACCEPT_QUEST" comment="接受任务">
+		<field type="Integer" name="questId" comment="任务Id"></field>
+	</message>
+	
+	<message type="CG_GIVE_UP_QUEST" comment="放弃已接任务">
+		<field type="Integer" name="questId" comment="任务Id"></field>
+	</message>
+	
+	<message type="CG_FINISH_QUEST" comment="完成任务">
+		<field type="Integer" name="questId" comment="任务Id"></field>
+	</message>
+	
+	<message type="GC_FINISH_QUEST" comment="完成任务用于客户端动画">		
+	</message>
+	
+	<message type="GC_REMOVE_QUEST" comment="删除一个任务">
+		<field type="Integer" name="questId" comment="任务Id"></field>
+	</message>
+	
+	<message type="GC_ACCEPT_QUEST" comment="接受任务客户端动画">		
+		<field type="Integer" name="questId" comment="任务Id"></field>
+	</message>
+</messages>

@@ -1,0 +1,6 @@
+int equipmentID;[notNull=true]//装备ID
+int grade;[notNull=true;minValue=1]//装备等阶
+int gradeProb;[notNull=false]//概率
+int itemId;[notNull=true;minValue=1]//洗练消耗道具ID
+int itemNum;[notNull=false]//洗炼消耗道具数量
+int currencyNum;[notNull=false]//洗炼消耗银票

@@ -1,0 +1,4 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int roundNum;[minValue=1;notNull=false]//轮数
+List<Integer> ringTaskList;[Collection(10,1)]//跑环任务列表

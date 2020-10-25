@@ -1,0 +1,66 @@
+#macro( smallType $type)
+#if($type == "Byte")int#elseif( $type == "Boolean" )int#elseif( $type == "Short" )int#elseif( $type == "Integer" )int#elseif( $type == "Long" )Long#elseif( $type == "Float" )Number#elseif( $type == "Double" )Number#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+
+#macro( toField $currentField $parentFieldName)
+	#set($newFieldName = "${currentField.smallName}")
+	#if($parentFieldName != "")
+		#set($newFieldName = "${parentFieldName}_${currentField.smallName}")
+	#end
+	#if ($currentField.isNewType)
+		#if($currentField.list)
+		#else
+			var $newFieldName:${field.type} = new ${field.type}();
+			#foreach( $subCurrentField in $currentField.subFields )
+				//old $newFieldName
+				#toField($subCurrentField $newFieldName)
+				//new $newFieldName
+				$newFieldName.${subCurrentField.smallName} = ${newFieldName}_${subCurrentField.smallName};
+			#end
+		#end
+	#else
+		#if($currentField.list)
+			#set($fieldSize = "${newFieldName}_size")
+			#set($fieldIndex = "${newFieldName}_index")
+			#if(${currentField.type} == "Long")
+				var $newFieldName:Vector.<#smallType($currentField.type)> = new Vector.<#smallType($currentField.type)>();
+				var $fieldIndex:int;
+				var $fieldSize:int = data.readShort();
+				for($fieldIndex = 0; $fieldIndex < $fieldSize:int; $fieldIndex++){
+					$newFieldName[$fieldIndex] = Long.read(data);//$currentField.comment
+				}
+			#else
+				var $newFieldName:Vector.<#smallType($currentField.type)> = new Vector.<#smallType($currentField.type)>();
+				var $fieldIndex:int;
+				var $fieldSize:int = data.readShort();
+				for($fieldIndex = 0; $fieldIndex < $fieldSize:int; $fieldIndex++){
+					$newFieldName[$fieldIndex] = data.read#bigType($currentField.type)();//$currentField.comment
+				}
+			#end
+		#else
+			#if($currentField.type=="Long")
+				var $newFieldName:#smallType($currentField.type) = Long.read(data);//$currentField.comment
+			#else
+				var $newFieldName:#smallType($currentField.type) = data.read#bigType($currentField.type)();//$currentField.comment
+			#end
+		#end
+	#end
+	//end
+#end
+
+
+
+
+
+#foreach( $msg in $msgs )
+#foreach( $field in $msg.fields )
+	#set($fieldName = "")
+	#toField($field $fieldName)
+#end
+#end
+
+

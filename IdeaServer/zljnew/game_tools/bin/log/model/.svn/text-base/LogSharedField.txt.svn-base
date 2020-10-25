@@ -1,0 +1,21 @@
+int logType not null default -100; //日志类型
+long logTime not null; //日志产生时间
+int regionId; // 服务器区ID
+int serverId; // 服务器ID
+String accountId 128 key; //玩家账号Id
+String accountName 128 key; //玩家的账号名
+long charId not null key; //角色ID
+String charName 128 key; //玩家的角色名
+int level; //玩家等级
+int countryId; //国家Id
+int vipLevel; //玩家VIP等级
+int totalCharge; //总充值数量
+String deviceId;//终端id
+String deviceType;//设备类型
+String deviceVersion;//设备版本号 
+String clientVersion;//客户端版本号
+String clientLanguage;//客户端语言类型 
+String appid;//客户端appid 
+String fValue;//f值
+int reason; //原因
+longstring param; //其他参数

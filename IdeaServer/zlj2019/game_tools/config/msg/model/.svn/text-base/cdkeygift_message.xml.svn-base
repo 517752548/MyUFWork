@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="cdkeygift">
+	
+	<message type="CG_CDKEY_GET_GIFT_MSG" comment="通过cdkey领礼包">
+		<field type="String" name="cdKeyStr" comment="cdkey激活码" />
+	</message>
+
+</messages>

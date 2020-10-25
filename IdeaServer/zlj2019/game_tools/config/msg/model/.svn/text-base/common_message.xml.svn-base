@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="common">
+	<message type="GC_SYSTEM_MESSAGE" comment="系统提示消息">
+		<field type="String" name="content" comment="消息内容"></field>
+		<field type="Short" name="showType" comment="消息显示类型"></field>
+	</message>
+
+	<message type="GC_SYSTEM_NOTICE" comment="系统公告">
+		<field type="String" name="content" comment="消息内容"></field>
+		<field type="Short" name="speed" comment="速度"></field>
+	</message>
+
+	<message type="CG_SET_CONSUME_CONFIRM" comment="设置消费确认提示">
+		<field type="com.imop.lj.gameserver.human.ConsumeConfirmInfo"
+			name="consumeConfirmInfoList" list="true"
+			clientType="com.imop.game.nceo.net.message.data.ConsumeConfirmData"
+			comment="消费信息">
+			<field type="Integer" name="confirmType" comment="提示类型" />
+			<field type="Integer" name="isSelected" comment="是否选中不提示框0 不选择 1选择" />
+		</field>
+	</message>
+
+	<message type="GC_SHOW_OPTION_DLG" comment="显示确认对话框">
+		<field type="String" name="title" comment="窗口标题,如果是空字符窜没有提示信息" />
+		<field type="String" name="content" comment="窗口内容" />
+		<field type="String" name="tag" comment="操作标识，标示此操作是否合法" />
+		<field type="String" name="confirmText" comment="默认是不再提示,如果是空字符窜表示没有提示框选项" />
+		<field type="String" name="okText"  comment="默认是确定,如果是空字符窜表示没有此确认按钮"/>
+		<field type="String" name="cancelText"  comment="默认是取消,如果是空字符窜表示没有此取消按钮"/>
+	</message>
+
+	<message type="CG_SELECT_OPTION" comment="选择确认对话框 ok 或 cancel 选项">
+		<field type="String" name="tag" comment="操作标识" />
+		<field type="Integer" name="isSelected" comment="如果没有提示框默认是0，是否选中不提示框1选中1不选中" />
+		<field type="Integer" name="seletctedValue" comment="选项值,选择确认返回1，选择取消返回0" />
+	</message>
+	
+	<message type="CG_PING" comment="客户端用于时间同步的消息">
+	</message>
+
+	<message type="GC_PING" comment="服务器端响应的时间同步的消息">
+		<field type="Long" name="timestamp" comment="服务器当前时间戳" />
+	</message>
+	
+	<!-- 登录时给前台发送的常量相关消息 -->
+	<message type="GC_SHOW_CURRENCY" comment="货币显示配置">
+		<field type="com.imop.lj.common.model.constant.ShowCurrencyInfo"
+			name="showCurrencyInfoList" list="true" clientType="ShowCurrencyInfo"	comment="显示货币信息">
+			<field type="Integer" name="showType" comment="类型" />
+			<field type="String" name="typeName" comment="类别名称" />
+			<field type="String" name="name" comment="名称" />
+			<field type="String" name="desc" comment="描述" />
+			<field type="Integer" name="icon" comment="图标" />
+			<field type="Long" name="min" comment="最小值" />
+			<field type="Long" name="max" comment="最大值" />
+		</field>
+	</message>
+	
+	<message type="GC_CONSTANT_LIST" comment="常量列表">
+		<field type="com.imop.lj.common.model.constant.ConstantInfo"
+			name="constantInfoList" list="true" clientType="ConstantInfo"	comment="常量信息">
+			<field type="String" name="key" comment="常量的键" />
+			<field type="String" name="value" comment="常量的值" />
+		</field>
+	</message>
+	
+	<message type="GC_MUSIC_CONFIG_LIST" comment="音乐常量配置列表">
+		<field type="com.imop.lj.common.model.constant.MusicConfigInfo"
+			name="musicConfigInfoList" list="true" clientType="MusicConfigInfoData"	comment="音乐配置列表">
+			<field type="Integer" name="id" comment="ID" />
+			<field type="Integer" name="resId" comment="资源ID" />
+			<field type="Integer" name="loop" comment="是否循环" />
+		</field>
+		
+		<field type="com.imop.lj.common.model.constant.MusicInfo" name="musicInfoList" list="true" clientType="MusicInfoData"	comment="音乐与功能对应列表">
+			<field type="Integer" name="moduleId" comment="模块ID,1:公共场景，2：功能面板，3：战斗类型" />
+			<field type="com.imop.lj.common.model.KeyValueInfo"
+				name="keyValueList" list="true" clientType="KeyValueData"	comment="键值对" macro="KeyValueInfo">
+			</field>
+		</field>
+	</message>
+	
+	<message type="GC_SYSTEM_MESSAGE_LIST" comment="系统提示消息列表" compress="true">
+		<field type="com.imop.lj.common.model.SysMsgInfo" name="sysMsgInfoList" list="true" clientType="SysMsgInfoData"	comment="系统提示消息列表">
+			<field type="String" name="content" comment="消息内容" />
+			<field type="Short" name="showType" comment="消息显示类型" />
+		</field>
+	</message>
+	
+	<message type="GC_NOTICE_TIPS_INFO_LIST" comment="小信封功能信息列表">
+		<field type="com.imop.lj.common.model.human.NoticeTipsInfo"
+			clientType="NoticeTipsInfoData" name="noticeTipsInfoList" comment="小信封功能信息列表"
+			list="true">
+			<field type="String" name="content" comment="窗口内容" />
+			<field type="String" name="tag" comment="操作标识" />
+			<field type="Integer" name="type" comment="小信封1无选择项2有选择框" />
+			<field type="Integer" name="icon" comment="小信封icon" />
+			<field type="Integer" name="showAnimation" comment="点完确定之后播放的动画类型，暂留" />
+			<field type="Long" name="fromRoleId" comment="来源角色ID" />
+			<field type="String" name="fromRoleName" comment="来源名称" />
+			<field type="Integer" name="fromRoleLevel" comment="等级" />
+			<field type="Integer" name="fromRoleJobType" comment="角色职业" />
+			<field type="Integer" name="fromRoleTplId" comment="角色模板Id" />
+			<field type="Long" name="chatTime" comment="聊天时间" />
+		</field>
+	</message>
+
+	<message type="GC_NOTICE_TIPS_INFO_ADD" comment="增加小信封信息">
+		<field type="com.imop.lj.common.model.human.NoticeTipsInfo"
+			clientType="NoticeTipsInfoData" name="noticeTipsInfo" comment="增加小信封信息">
+			<field type="String" name="content" comment="窗口内容" />
+			<field type="String" name="tag" comment="操作标识" />
+			<field type="Integer" name="type" comment="小信封1无选择项2有选择框" />
+			<field type="Integer" name="icon" comment="小信封icon" />
+			<field type="Integer" name="showAnimation" comment="点完确定之后播放的动画类型，暂留" />
+			<field type="Long" name="fromRoleId" comment="来源角色ID" />
+			<field type="String" name="fromRoleName" comment="来源名称" />
+			<field type="Integer" name="fromRoleLevel" comment="等级" />
+			<field type="Integer" name="fromRoleJobType" comment="角色职业" />
+			<field type="Integer" name="fromRoleTplId" comment="角色模板Id" />
+			<field type="Long" name="chatTime" comment="聊天时间" />
+		</field>
+	</message>
+
+	<message type="CG_CLICK_NOTICE_TIPS_INFO" comment="选择确认小信封">
+		<field type="String" name="tag" comment="操作标识" />
+		<field type="String" name="value" comment="选项值" />
+	</message>
+	
+	<message type="CG_SEND_NOTICE_TIPS" comment="发送小信封">
+		<field type="String" name="content" comment="内容" />
+		<field type="Long" name="roleId" comment="发送目标" />
+	</message>
+	
+	<message type="GC_POP_FLAG" comment="冒泡开关">
+		<field type="Integer" name="flag" comment="是否冒泡，0不冒，1冒" />
+	</message>
+	
+	<!-- 查看他人离线数据 -->
+	<message type="CG_OFFLINE_USER_BASE_INFO" comment="查看他人基础信息">
+		<field type="Long" name="roleId" comment="玩家角色Id" />
+	</message>
+	
+	<message type="GC_OFFLINE_USER_BASE_INFO" comment="查看他人基础信息">
+		<field type="Long" name="roleId" comment="玩家角色Id" />
+		<field type="String" name="roleBaseInfoJson" comment="玩家角色基础信息json" />
+	</message>
+	
+	<message type="CG_OFFLINE_USER_LEADER_INFO" comment="查看他人主将信息">
+		<field type="Long" name="roleId" comment="玩家角色Id" />
+	</message>
+	
+	<message type="GC_OFFLINE_USER_LEADER_INFO" comment="查看他人主将信息">
+		<field type="Long" name="roleId" comment="玩家角色Id" />
+		<field type="String" name="roleInfoJson" comment="主将信息json" />
+	</message>
+	
+	<message type="CG_OFFLINE_USER_PET_INFO" comment="查看他人宠物信息">
+		<field type="Long" name="roleId" comment="玩家角色Id" />
+		<field type="Long" name="petId" comment="宠物Id" />
+	</message>
+	
+	<message type="GC_OFFLINE_USER_PET_INFO" comment="查看他人宠物信息">
+		<field type="Long" name="roleId" comment="玩家角色Id" />
+		<field type="Long" name="petId" comment="宠物Id" />
+		<field type="String" name="petInfoJson" comment="宠物信息json" />
+	</message>
+	
+</messages>

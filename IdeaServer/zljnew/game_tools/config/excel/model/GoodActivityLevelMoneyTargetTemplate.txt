@@ -1,0 +1,17 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+int costBond;[notNull=false;minValue=0]//花费金子数
+int preTargetId;[notNull=false;minValue=0]//前置目标Id
+int needLevel;[notNull=false;minValue=0]//等级要求
+int groupId;[notNull=false;minValue=0]//分组Id
+int vipLimitId;[notNull=false;minValue=0]//vip要求（vip表id，21中级，22高级）
+int timeLimitNum;[notNull=false;minValue=0]//购买时限（活动开始后n小时内）

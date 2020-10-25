@@ -1,0 +1,5 @@
+int rewardId;[minValue=1;notNull=false]//奖励Id
+String mailTitle;[notNull=false]//奖励邮件标题
+String mailContent;[notNull=false]//奖励邮件内容
+String showRewardName;[notNull=false]//显示奖励名字
+int showRewardId;[minValue=1;notNull=false]//显示奖励Id

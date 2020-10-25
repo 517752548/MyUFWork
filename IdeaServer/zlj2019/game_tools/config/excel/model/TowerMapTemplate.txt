@@ -1,0 +1,7 @@
+int towerLevelId;[minValue=1;notNull=false]//层数ID
+int mapId;[minValue=1;notNull=false]//地图ID
+int rewardId;[minValue=1;notNull=false]//奖励Id
+String showRewardName;[notNull=false]//显示奖励名字
+int showRewardId;[minValue=1;notNull=false]//显示奖励Id
+String model3DId;[notNull=false]//3D模型
+String recommendLevel;[notNull=false]//推荐等级

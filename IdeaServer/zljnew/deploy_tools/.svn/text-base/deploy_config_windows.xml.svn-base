@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	主要配置 
+	name:一般为服的对应域名（生成的zip包的名称，向local汇报服务器域名使用）
+	language:多语言；如：zh_CN、en_US等 
+	regionId:大区ID 
+	serverGroupId:第几组服ID (hostId= regionId * 1000 + serverGroupId) 
+	localDomain:平台接口URL
+-->
+<deploy_config name="s1.war.renren.com" language="zh_CN" regionId="1" serverGroupId="1" localDomain="local.tr.imop.com">
+
+    <!--  资源文件相关配置
+    	dir：资源文件的主目录
+    -->
+	<resource dir="d:\\tr_make\\resource"/> 
+	
+	<!--  战报文件相关配置
+    	dir：战报生成文件的主目录
+    -->
+	<battleReport dir="/data/tr_make/reports"/> 
+	
+	<!-- 游戏数据库 
+		username：DB的账号
+        password：DB的密码
+        ip：DB的IP地址
+        port：数据库所在机器的内网地址
+        database：要连接的库名称-->
+	<mmo_db username="root" password="password" ip="localhost"
+		port="3306" database="tr" />
+		
+	<!-- 战报数据库 属性同游戏数据库配置 -->
+	<battle_report_db username="root" password="password" ip="localhost"
+		port="3306" database="tr_battle_report" />
+		
+	<!-- 战报生成目录 -->
+	<battle_report_dir dir="d:\\tr_make\\report" />	
+
+	<!-- 日志数据库 属性同游戏数据库配置 -->
+	<log_db username="root" password="password" ip="localhost"
+		port="3306" database="tr_log" />
+
+	<!-- 日志服配置
+        id：内部使用的ID，不必更改
+        name：服务器名称，不必更改
+        lanip：日志服的内网绑定IP，既服务所在机器的IP
+        lanport：内网端口
+        xmx，xms：Java启动的相关内存参数，两值相同，推荐设置1024，参见内存参数设置-->
+	<log_server id="13" name="LogServer" lanip="192.168.1.162"
+		lanport="8083" xmx="512" xms="512" />
+
+	<!-- 游戏服配置属性说明
+        id：gameserver的id，与线对应
+        name：选线时显示的名称
+        lanip：游戏服所在机器的IP，生成目录用
+        wanip：外网的绑定IP
+        wanport：外网端口，支持多端口,如："80,8080,7070,443"
+     	xmx，xms：Java启动的相关内存参数，两值相同，推荐设置1536，参见内存参数设置-->
+	<game_server operation_com="renren" probeTurnOn="false" id="1" name="GameServer1" lanip="192.168.1.162"
+		lanport="8084" wanip="192.168.1.162" wanport="8084" xmx="1536" xms="1536" />
+	
+	<!--
+		client 配置属性说明
+        ip：客户端所在机器的IP，创建目录使用
+        title：浏览器中显示的名称，即服的名称
+        resource_url：资源文件的url路径，可不添写
+        sound_url：声音文件的url路径，可不添写
+        auto_login：自己登录的配置	-->
+	<client ip="192.168.1.162" title="WAR_162策划" resource_url=""
+		sound_url="" auto_login="" operation_com="" report_url=""/>
+</deploy_config>

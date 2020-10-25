@@ -1,0 +1,45 @@
+# !/bin/bash
+
+# 定义
+#
+# /////////////////////////////
+
+ROOT_DIR="/home/tradmin/encrypt"
+
+sourceDir="$ROOT_DIR/source"
+targetDir="$ROOT_DIR/target"
+currJar=""
+currEnc=""
+
+# 开始执行
+#
+# /////////////////////////////
+
+for i in `find $sourceDir -type f -name '*.jar'`
+do
+    echo "process $i"
+
+    # 删除 "./source" 字符串, 保留相对文件名
+    currJar=`echo $i | cut -c30-`
+    # 删除 ".jar" 字符串
+    currEnc=`echo ${currJar%.*}.encrypt`
+
+    currJar="$sourceDir/$currJar"
+    currEnc="$targetDir/$currEnc"
+
+#   echo $currJar
+#   echo $currEnc
+
+    # log
+    echo "将文件 $currJar 加密为 $currEnc"
+    # 加密 .jar 文件
+    /usr/sbin/jarenc "$currJar" "$currEnc"
+
+    # log
+    echo "删除文件 $currJar"
+    # 删除 .jar 文件
+    rm -rf "$currJar"
+
+    # log
+    echo "-- finished --"
+done

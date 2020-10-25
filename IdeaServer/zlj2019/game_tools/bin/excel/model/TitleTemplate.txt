@@ -1,0 +1,5 @@
+String descname;//称号类型描述
+String gettype;//获得方式
+int deadtime;[notNull=false]//时效
+String desc;//称号描述
+List<com.imop.lj.gameserver.item.template.EquipItemAttribute> basePropList;[Collection(6,2)] //基础属性列表，目前只有一组

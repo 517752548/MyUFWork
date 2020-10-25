@@ -1,0 +1,8 @@
+message com.imop.lj.logserver.model.ChargeLog(
+    int moneyType; //货币类型
+    int currencyBefore ; //充值前数量
+    int currencyAfter default -100 ; //充值后数量
+    int mmCost; //要兑换多少MM
+    String result; //接口返回的充值结果
+   	String transfer;//订单号即平台orderId
+)

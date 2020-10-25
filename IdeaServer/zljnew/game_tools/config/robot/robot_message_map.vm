@@ -1,0 +1,30 @@
+package com.imop.lj.robot.startup;
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )boolean#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+#macro( lowerSecondChar $type)$type.substring(0,2).toLowerCase()$type.substring(2)#end
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.imop.lj.core.msg.MessageType;
+import com.imop.lj.common.MessageMappingProvider;
+#foreach($msgObj in $msgs)
+import com.imop.lj.gameserver.${modulename}.msg.${msgObj.className};
+#end
+
+public class Robot#upperFirstChar(${modulename})ClientMsgRecognizer implements MessageMappingProvider {
+	
+	private Map<Short, Class<?>> msgs = new HashMap<Short, Class<?>>();
+	
+	@Override
+	public Map<Short, Class<?>> getMessageMapping() {
+		Map<Short, Class<?>> msgs = new HashMap<Short, Class<?>>();
+#foreach($msgObj in $msgs)
+		msgs.put(MessageType.${msgObj.type}, ${msgObj.className}.class);
+#end
+		return msgs;
+	}
+}

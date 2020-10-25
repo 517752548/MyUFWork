@@ -1,0 +1,8 @@
+18:15:31,361 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:15:31,534 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:15:39,485 - GameServer.main - Failed to start server
+java.lang.NullPointerException
+	at com.imop.lj.gameserver.common.Globals.initServers(Globals.java:1927)
+	at com.imop.lj.gameserver.common.Globals.init(Globals.java:886)
+	at com.imop.lj.gameserver.GameServer.init(GameServer.java:74)
+	at com.imop.lj.gameserver.GameServer.main(GameServer.java:345)

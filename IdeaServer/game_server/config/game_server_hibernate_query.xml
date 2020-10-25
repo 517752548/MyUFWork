@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.imop.lj.db.model">
+
+	<!-- 查询玩家角色当前最大的UUID -->
+	<query name="queryUUID_HUMAN">
+	<![CDATA[
+		select max(id) from HumanEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 查询武将当前最大的UUID -->
+	<query name="queryUUID_PET">
+	<![CDATA[
+		select max(id) from PetEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 查询交易行当前最大的UUID -->
+	<query name="queryUUID_TRADE">
+	<![CDATA[
+		select max(id) from TradeEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 查询场景当前最大的UUID -->
+	<query name="queryUUID_SCENE">
+	<![CDATA[
+		select max(id) from SceneEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	<!-- 根据PassportId查询所有CharacterInfo -->
+	<query name="queryCharactersByPid">
+	<![CDATA[
+		from HumanEntity where passportId = :passportId and deleted = 0 order by createTime
+	]]>
+	</query>
+	
+	<!-- 得到角色的所有宠物  -->
+	<query name="queryPlayerPets">
+		from PetEntity where charId = :charId and deleted = 0
+	</query>
+	
+	
+
+	<!-- 根据Name查询CharacterInfo -->
+	<query name="queryCharacterByName">
+	<![CDATA[
+		from HumanEntity where name = :name
+	]]>
+	</query>
+
+	<!-- 查询所有玩家 -->
+	<query name="queryAllCharacter">
+	<![CDATA[
+		from HumanEntity
+	]]>
+	</query>
+
+	<!-- 根据场景 Id 查询玩家列表 -->
+	<query name="queryHumansBySceneId">
+	<![CDATA[
+		from HumanEntity where sceneId = :sceneId
+	]]>
+	</query>
+
+	<!-- 查询玩家权限 -->
+	<query name="queryPlayerRole">
+		select name,role,todayOnlineTime,lastLogoutTime from
+		UserInfo where id = :id
+	</query>
+
+	<query name="queryCharacterByUUID">
+	<![CDATA[
+		from HumanEntity where id = :id and deleted = 0
+	]]>
+	</query>
+
+	<!-- 查询数据库的版本号 -->
+	<query name="queryDbVersion">
+		from DbVersion
+ 	</query>
+
+	<!-- 登陆用 ： 根据 用户名，密码查询 User -->
+	<query name="queryUserByNameAndPwd">
+		from UserInfo where name = :name and password = :password
+	</query>
+
+	<query name="updateUserOnlineTime">
+	<![CDATA[
+		update UserInfo set todayOnlineTime = :onlineTime,lastLoginTime = :lastLoginTime,todayOnlineUpdateTime = :todayOnlineUpdateTime,lastLogoutTime = NOW(),qqData = :qqData where id = :passportId
+	]]>
+	</query>
+	
+	<query name="updateActivity">
+	<![CDATA[
+		update UserInfo set activity = :activity where id = :passportId
+	]]>
+	</query>
+
+	<query name="updateUserName">
+	<![CDATA[
+		update UserInfo set name = :name where id = :passportId
+	]]>
+	</query>
+
+	<!-- 查询所有VIP -->
+	<query name="queryAllVip">
+		<![CDATA[from VipEntity]]>
+	</query>
+
+	<query name="queryAllLeftBond">
+	<![CDATA[
+		select sum(bond) from HumanEntity
+	]]>
+	</query>
+	
+	<query name="queryAllEternalCostMoneyBond">
+	<![CDATA[
+		select sum(eternalCostMoney) from HumanEntity
+	]]>
+	</query>
+	
+	<query name="queryAllLeftItemBond">
+	<![CDATA[
+		select sum(actualCost) from ItemCostRecordEntity
+	]]>
+	</query>
+	
+	<query name="queryUUID_MONEY_REPORT_ITEM_COST">
+	<![CDATA[
+		select max(id) from ItemCostRecordEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	<!-- 获得所有玩家道具消耗记录 -->
+	<query name="queryAllItemCostRecord">
+	<![CDATA[
+		from ItemCostRecordEntity
+	]]>
+	</query>
+	
+	<!-- 根据模版 Id 获取场景实体 -->
+	<query name="getSceneByTemplateId">
+		from SceneEntity where templateId = :templateId
+	</query>
+	
+	<!-- 得到角色的所有物品 -->
+	<query name="queryPlayerItem">
+		from ItemEntity where charId = :charId and deleted = 0
+	</query>
+	
+	<!-- 得到角色的所有装备包物品 -->
+	<query name="queryPlayerEquip">
+		from ItemEntity where charId = :charId and bagId = 3 and deleted = 0
+	</query>
+	
+	<!-- 查询玩家所有的普通任务 -->
+	<query name="queryCommonTaskByCharId">
+		from CommonTaskEntity where charId = :charId
+	</query>
+	
+	<query name="queryPubTaskByCharId">
+		from PubTaskEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询除暴安良的任务 -->
+	<query name="queryTheSweeneyTaskByCharId">
+		from TheSweeneyTaskEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+		<!-- 查询藏宝图的任务 -->
+	<query name="queryTreasureMapByCharId">
+		from TreasureMapEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询护送粮草的任务 -->
+	<query name="queryForageTaskByCharId">
+		from ForageTaskEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询帮派的任务 -->
+	<query name="queryCorpsTaskByCharId">
+		from CorpsTaskEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询跑环的任务 -->
+	<query name="queryRingTaskByCharId">
+		from RingTaskEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询限时杀怪的任务 -->
+	<query name="queryTimeLimitMonsterByCharId">
+		from TimeLimitMonsterEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询限时挑战Npc的任务 -->
+	<query name="queryTimeLimitNpcByCharId">
+		from TimeLimitNpcEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	<!-- 查询围剿魔族的任务 -->
+	<query name="querySiegeDemonTaskByCharId">
+		from SiegeDemonTaskEntity where charId = :charId order by startTime desc limit 1
+	</query>
+	
+	
+	<!-- 查询玩家挂在交易行内的商品 -->
+	<query name="queryCommodityBySellerId">
+		from TradeEntity where sellerId = :sellerId
+	</query>
+	
+	<!-- 查询交易行内的所有商品 -->
+	<query name="queryAllTradeCommodity">
+		from TradeEntity where deleted=0
+	</query>
+	
+	<!-- 查询玩家所有的关系 -->
+	<query name="queryRelationByRoleId">
+		from RelationEntity where charId = :charId order by	createTime asc
+	</query>
+	
+	<!--//查询所有玩家离线数据 // -->
+	<query name="queryAllUserSnapEntity">
+		<![CDATA[from UserSnapEntity]]>
+	</query>
+	
+	<!--//查询所有玩家离线数据2 // -->
+	<query name="queryAllUserOfflineEntity">
+		<![CDATA[from UserOfflineDataEntity]]>
+	</query>
+	
+	<!-- 查询所有功能数据 -->
+	<query name="queryALlModuleData">
+		<![CDATA[from ModuleDataEntity]]>
+	</query>
+	
+	
+	<!-- 得到角色的所有邮件  -->
+	<query name="queryPlayerMail">
+		from MailEntity where charId = :charId and deleted=0 order by createTime asc
+	</query>
+	
+	<query name="queryUUID_SYSMAIL">
+	<![CDATA[
+		select max(id) from SysMailEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	<!-- 得到所有的全服邮件  -->
+	<query name="queryAllSysMail">
+		from SysMailEntity where deleted=0 order by createTime asc
+	</query>
+	
+	<!-- 查询离线奖励 -->
+	<query name="queryUUID_OFFLINEREWARD">
+	<![CDATA[
+		select max(id) from OfflineRewardEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	<!-- 查询玩家离线奖励 -->
+	<query name="queryPlayerOfflineReward">
+		from OfflineRewardEntity where charId = :charId and deleted=0 order by id desc
+	</query>
+	
+	<!-- 查询奖励补偿名称列表 -->
+	<query name="queryUserPrizeNameListByCharId">
+	<![CDATA[
+		from UserPrize where charId = :charId and status = 0 and expireTime > NOW() order by id
+	]]>
+	</query>
+
+	<!-- 查询奖励补偿内容 -->
+	<query name="queryUserPrizeByPrizeId">
+	<![CDATA[
+		from UserPrize where id=:prizeId and charId =:charId and status = 0 and expireTime > NOW()
+	]]>
+	</query>
+
+	<!-- 更新奖励状态为0的变成状态为1,如果更新条目数量不为1,则应该是已经领取过 -->
+	<query name="updateUserPrizeStatus">
+	<![CDATA[
+		update UserPrize set status = 1,updateTime = NOW() where id = :prizeId and status = 0
+	]]>
+	</query>
+	
+	<!-- 查询奖品详细信息 -->
+	<query name="queryPrizeInfo">
+	<![CDATA[
+		select id,prizeId,prizeName,coin,item,pet from PrizeInfo where prizeId = :prizeId
+	]]>
+	</query>
+	
+	<!-- 删除物品 -->
+	<query name="delItem">
+	<![CDATA[
+		update ItemEntity set deleted = 1, deleteDate = NOW() where id = :itemId and charId = :charId and deleted = 0
+	]]>
+	</query>
+	
+	<query name="queryUUID_GOOD_ACTIVITY">
+	<![CDATA[
+		select max(id) from GoodActivityEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	<query name="queryUUID_GOOD_ACTIVITY_USER">
+	<![CDATA[
+		select max(id) from GoodActivityUserEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 查询所有未关闭的精彩活动 -->
+	<query name="queryAllGoodActivity">
+	<![CDATA[
+		from GoodActivityEntity where isClosed=0
+	]]>
+	</query>
+	<!-- 查询所有玩家的精彩活动 -->
+	<query name="queryAllUserGoodActivity">
+	<![CDATA[
+		from GoodActivityUserEntity where deleted = 0 order by id desc
+	]]>
+	</query>
+	
+	<!-- 查询商城信息 -->
+	<query name="getMallById">
+	<![CDATA[
+		from MallEntity where id = :id
+	]]>
+	</query>
+	
+	<query name="queryAllDirtyWords">
+	<![CDATA[
+		from DirtyWordsTypeEntity
+	]]>
+ 	</query>
+ 	
+ 	<query name="queryAllCountry">
+	<![CDATA[
+		select country from HumanEntity
+	]]>
+	</query>
+	
+	
+	
+	<!-- 查询CDKEY -->
+	<query name="queryCDKeyById">
+	<![CDATA[
+ 		from CDKeyEntity where id like :id
+ 	]]>
+	</query>
+	<query name="queryCDKeyIsTakeTheSame">
+	<![CDATA[
+  		from CDKeyEntity where plansId=:plansId and giftId=:giftId and charId=:charId
+  	]]> 
+	</query>
+	<query name="queryCDKeyPlansByCDKeyPlansId">
+	<![CDATA[
+ 		from CDKeyPlansEntity where cdkeyPlansId =:cdkeyPlansId
+ 	]]>
+	</query>
+	<!-- 查询cdkey礼包 -->
+	<query name="queryWorldGiftByGiftId">
+	<![CDATA[
+ 		from WorldGiftEntity where giftId =:giftId
+ 	]]>
+	</query>
+	
+	<!-- 根据军团ID查询所有成员 -->
+	<query name="queryMembersByCorpsId">
+		<![CDATA[from CorpsMemberEntity where corpsId = :corpsId]]>
+	</query>
+	
+	<!-- 查询所有军团 -->
+	<query name="queryAllCorps">
+		<![CDATA[from CorpsEntity]]>
+	</query>
+	
+	<!-- 查询所有帮派红包 -->
+	<query name="queryAllRedEnvelope">
+		<![CDATA[from RedEnvelopeEntity]]>
+	</query>
+	
+	<!-- 查询所有活动仓库 -->
+	<query name="queryAllocateActivityStorage">
+		<![CDATA[from AllocateActivityStorageEntity]]>
+	</query>
+	
+	<!-- 军团 -->
+	<query name="queryUUID_CORPS">
+	<![CDATA[
+		select max(id) from CorpsEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 军团成员 -->
+	<query name="queryUUID_CORPS_MEMBER">
+	<![CDATA[
+		select max(id) from CorpsMemberEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+
+	<!-- 得到角色的所有title  -->
+	<query name="queryalltitle">
+		from TitleEntity
+	</query>
+
+	<!-- 查询所有军团战排名数据 -->
+	<query name="queryAllCorpsWarRank">
+		<![CDATA[from CorpsWarRankEntity]]>
+	</query>
+	
+	<!-- 军团战排名数据 -->
+	<query name="queryUUID_CORPSWAR_RANK">
+	<![CDATA[
+		select max(id) from CorpsWarRankEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 查询所有帮派boss进度排名数据 -->
+	<query name="queryAllCorpsBossRank">
+		<![CDATA[from CorpsBossRankEntity]]>
+	</query>
+	
+	<!-- 帮派boss进度排名数据 -->
+	<query name="queryUUID_CORPSBOSS_RANK">
+	<![CDATA[
+		select max(id) from CorpsBossRankEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 查询所有帮派boss挑战次数排名数据 -->
+	<query name="queryAllCorpsBossCountRank">
+		<![CDATA[from CorpsBossCountRankEntity]]>
+	</query>
+	
+	<!-- 帮派boss挑战次数排名数据 -->
+	<query name="queryUUID_CORPSBOSS_COUNT_RANK">
+	<![CDATA[
+		select max(id) from CorpsBossCountRankEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<!-- 分配活动仓库数据 -->
+	<query name="queryUUID_ALLOCATE_ACTIVITY_STORAGE">
+	<![CDATA[
+		select max(id) from AllocateActivityStorageEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+
+	<query name="queryAllOverman">
+		<![CDATA[
+			from OvermanEntity
+		]]>
+	</query>
+
+	<query name="queryAllmarry">
+		<![CDATA[
+			from MarryEntity
+		]]>
+	</query>
+	
+	<!-- nvn排名数据 -->
+	<query name="queryUUID_NVN_RANK">
+	<![CDATA[
+		select max(id) from NvnRankEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+
+	<!-- 查询所有nvn排名数据 -->
+	<query name="queryAllNvnRank">
+		<![CDATA[from NvnRankEntity]]>
+	</query>
+	
+	<!-- 查询所有通天塔数据 -->
+	<query name="queryAllTower">
+		<![CDATA[from TowerEntity]]>
+	</query>
+	
+	<!-- 查询所有翅膀数据 -->
+	<query name="queryPlayerWings">
+		<![CDATA[from WingEntity where charId = :charId]]>
+	</query>
+	
+	<!-- 查询所有竞技场成员快照 -->
+	<query name="queryAllArenaSnap">
+		from ArenaSnapEntity order by rank
+	</query>
+
+	<query name="queryDaySevenTaskByCharId">
+		from Day7TaskEntity where charId = :charId
+	</query>
+	
+	<query name="updateHumanBond">
+	<![CDATA[
+		update HumanEntity set bond = :bond where id = :id
+	]]>
+	</query>
+	
+	<query name="queryUUID_XIANHU_RANK">
+	<![CDATA[
+		select max(id) from XianhuRankEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<query name="queryUUID_XIANHU">
+	<![CDATA[
+		select max(id) from XianhuEntity where id >=:minId and id <= :maxId
+	]]>
+	</query>
+	
+	<query name="queryAllXianhu">
+		<![CDATA[from XianhuEntity]]>
+	</query>
+	
+	<query name="queryAllXianhuRank">
+		<![CDATA[from XianhuRankEntity]]>
+	</query>
+	
+</hibernate-mapping>

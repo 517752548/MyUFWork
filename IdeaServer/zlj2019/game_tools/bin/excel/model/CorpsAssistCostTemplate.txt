@@ -1,0 +1,6 @@
+int assistLevel;[minValue=0;notNull=false]//当前辅助技能等级
+int playerLevel;[minValue=0;notNull=false]//需求玩家等级
+int corpsLevel;[minValue=0;notNull=false]//需求帮派等级
+int sjLevel;[minValue=0;notNull=false]//需求侍剑堂等级
+int costCurrency;[minValue=1;notNull=false]//升级消耗银票
+int costContri;[minValue=0;notNull=false]//修炼1次消耗帮贡

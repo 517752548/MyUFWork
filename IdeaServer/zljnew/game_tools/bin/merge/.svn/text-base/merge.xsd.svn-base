@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://com.imop.lj.merge"
+	xmlns:tns="http://com.imop.lj.merge" elementFormDefault="qualified">
+	<element name="configs" type="tns:configs"></element>
+
+	<complexType name="configs">
+		<sequence>
+			<element name="mergeEntityConfig" type="tns:mergeEntityConfig" maxOccurs="unbounded"
+				minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="mergeEntityConfig">
+		<attribute name="globals" type="tns:onlytrue"></attribute>
+		<attribute name="empty" type="tns:onlytrue"></attribute>
+		<attribute name="deleted" type="tns:onlytrue"></attribute>
+		<attribute name="bindCharId" type="tns:onlytrue"></attribute>
+		<attribute name="bindCharName" type="tns:onlytrue"></attribute>
+		<attribute name="className" type="string"></attribute>
+		<attribute name="mergeModelName" type="string"></attribute>
+	</complexType>
+	
+	<simpleType name="onlytrue">
+		<restriction base="string">
+			<enumeration value="true"></enumeration>
+		</restriction>
+	</simpleType>
+</schema>

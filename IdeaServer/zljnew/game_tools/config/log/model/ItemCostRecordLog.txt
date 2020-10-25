@@ -1,0 +1,10 @@
+message com.imop.lj.logserver.model.ItemCostRecordLog(
+	long originalFreeNum;//原始免费的个数
+	long originalItemNum;//原始道具个数
+	long originalTotalCost;//原始物品总价值
+	long originalActualCost;//原始实际花费金钱
+	long freeNum;//修改后免费的个数
+	long itemNum;//修改后道具个数
+	long totalCost;//修改后物品总价值
+	long actualCost;//修改后实际花费金钱
+)

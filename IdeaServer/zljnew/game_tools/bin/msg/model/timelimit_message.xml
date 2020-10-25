@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="timelimit">
+
+	<message type="GC_OPEN_TL_MONSTER_PANEL" comment="打开限时杀怪任务面板">
+		<field type="Integer" name="finishTimes" comment="今日已完成任务数" />
+		<field type="Integer" name="totalTimes" comment="总任务数" />
+	</message>
+
+	<message type="GC_TL_MONSTER_DONE" comment="已完成所有任务">
+	</message>
+	
+	<message type="GC_TL_MONSTER_UPDATE" comment="限时杀怪任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_TL_MONSTER_ACCEPT" comment="接受任务">
+	</message>
+	
+	<message type="CG_GIVE_UP_TL_MONSTER" comment="放弃已接任务">
+	</message>
+	
+	<message type="CG_FINISH_TL_MONSTER" comment="完成任务">
+	</message>
+	
+		<message type="GC_OPEN_TL_NPC_PANEL" comment="打开限时挑战npc任务面板">
+		<field type="Integer" name="finishTimes" comment="今日已完成任务数" />
+		<field type="Integer" name="totalTimes" comment="总任务数" />
+	</message>
+
+	<message type="GC_TL_NPC_DONE" comment="已完成所有任务">
+	</message>
+	
+	<message type="GC_TL_NPC_UPDATE" comment="限时挑战npc任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_TL_NPC_ACCEPT" comment="接受任务">
+	</message>
+	
+	<message type="CG_GIVE_UP_TL_NPC" comment="放弃已接任务">
+	</message>
+	
+	<message type="CG_FINISH_TL_NPC" comment="完成任务">
+	</message>
+
+</messages>

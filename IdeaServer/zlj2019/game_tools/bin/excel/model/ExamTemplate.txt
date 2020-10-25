@@ -1,0 +1,13 @@
+String name;[notNull=false]//题目
+int typeId;[notNull=false]//科举类型
+int rightAnswerID;[notNull=true;minValue=1]//正确答案ID
+int firstAnswerID;[notNull=true;minValue=1]//答案ID1
+String firstAnswer;//答案1
+int secendAnswerID;[notNull=true;minValue=1]//答案ID2
+String secendAnswer;//答案2
+int thirdAnswerID;[notNull=true;minValue=1]//答案ID3
+String thirdAnswer;//答案3
+int fourthAnswerID;[notNull=true;minValue=1]//答案ID4
+String fourthAnswer;//答案4
+int rightAnswerRewardId;[notNull=false]//正确奖励ID
+int wrongAnswerRewardId;[notNull=false]//错误奖励ID

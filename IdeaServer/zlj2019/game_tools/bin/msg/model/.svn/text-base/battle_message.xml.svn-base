@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="battle">
+
+	<message type="CG_PLAY_BATTLE_REPORT" comment="客户端请求播放战报">
+		<field type="Long" name="id" comment="战报id，Long格式，包含日期信息" />
+		<field type="Integer" name="toBackType" comment="战报读取完毕以后，前端返回场景id" />
+	</message>
+	
+	<message type="CG_PLAY_BATTLE_REPORT_BY_STR_ID" comment="客户端请求播放战报">
+		<field type="String" name="idStr" comment="战报id字符串类型" />
+		<field type="Integer" name="toBackType" comment="战报读取完毕以后，前端返回场景id" />
+	</message>
+	
+	<message type="GC_PLAY_BATTLE_REPORT" comment="服务器下发战报" compress="true">
+		<field type="Long" name="id" comment="战报id，Long格式，包含日期信息" />
+		<field type="String" name="reportPack" comment="战报数据包" />
+		<field type="Integer" name="canClose" comment="是否可以立即结束" />
+		<field type="Integer" name="hasUrl" comment="是否显示Url" />
+		<field type="Integer" name="toBackType" comment="战报读取完毕以后，前端返回场景id" />
+		<field type="String" name="additionPack" comment="战斗附加json串，主要是奖励等信息" />
+	</message>
+	
+	<message type="GC_BATTLE_REPORT_PART" comment="战斗的战报" compress="true">
+		<field type="Integer" name="playType" comment="0战斗开始，1每轮战报" />
+		<field type="String" name="reportPack" comment="战报数据包" />
+		<field type="String" name="additionPack" comment="战斗附加json串，主要是奖励等信息" />
+	</message>
+	
+	<message type="CG_BATTLE_NEXT_ROUND" comment="请求下一轮战斗">
+		<field type="Integer" name="isAuto" comment="是否自动战斗，0否，1是" />
+		<field type="Integer" name="selSkillId" comment="玩家选择的技能Id" />
+		<field type="Integer" name="selTarget" comment="玩家选择的技能目标" />
+		<field type="Integer" name="selItemId" comment="玩家选择的道具Id" />
+		<field type="Integer" name="petSelSkillId" comment="宠物选择的技能Id" />
+		<field type="Integer" name="petSelTarget" comment="宠物选择的技能目标" />
+		<field type="Integer" name="petSelItemId" comment="宠物选择的道具Id" />
+		<field type="Long" name="summonPetId" comment="召唤宠物Id" />
+	</message>
+	
+	<message type="GC_BATTLE_FORCE_END" comment="战斗被强制结束">
+	</message>
+	
+	<!-- pvp的消息 -->
+	<message type="CG_BATTLE_START_PVP" comment="请求PVP战斗">
+		<field type="Long" name="targetPlayerId" comment="目标玩家Id" />
+	</message>
+	
+	<message type="CG_BATTLE_PVP_CANCEL_AUTO" comment="PVP请求需要手动战斗">
+	</message>
+	
+	<message type="CG_BATTLE_NEXT_ROUND_PVP" comment="请求下一轮战斗">
+		<field type="Integer" name="isAuto" comment="是否自动战斗，0否，1是" />
+		<field type="Integer" name="selSkillId" comment="玩家选择的技能Id" />
+		<field type="Integer" name="selTarget" comment="玩家选择的技能目标" />
+		<field type="Integer" name="selItemId" comment="玩家选择的道具Id" />
+		<field type="Integer" name="petSelSkillId" comment="宠物选择的技能Id" />
+		<field type="Integer" name="petSelTarget" comment="宠物选择的技能目标" />
+		<field type="Integer" name="petSelItemId" comment="宠物选择的道具Id" />
+		<field type="Long" name="summonPetId" comment="召唤宠物Id" />
+	</message>
+	
+	<message type="GC_BATTLE_REPORT_PVP" comment="PVP战斗的战报" compress="true">
+		<field type="Integer" name="playType" comment="0战斗开始，1每轮战报" />
+		<field type="String" name="reportPack" comment="战报数据包" />
+		<field type="Long" name="attackerId" comment="攻击方玩家Id" />
+		<field type="Long" name="defenderId" comment="防守方玩家Id" />
+		<field type="Long" name="roundStartTime" comment="该轮开始时间" />
+		<field type="Long" name="curTime" comment="当前时间" />
+		<field type="Integer" name="lastAutoFlag" comment="最近一次战斗是否自动，0否，1是" />
+	</message>
+	<!-- pvp的消息 end -->
+	
+	<message type="CG_BATTLE_UPDATE_AUTO_ACTION" comment="更新自动战斗">
+		<field type="Integer" name="petTypeId" comment="武将类型，1主将，2宠物" />
+		<field type="Integer" name="selSkillId" comment="技能Id" />
+	</message>
+	
+	<!-- 组队的消息 -->
+	<message type="CG_BATTLE_TEAM_CANCEL_AUTO" comment="组队请求需要手动战斗">
+	</message>
+	
+	<message type="CG_BATTLE_NEXT_ROUND_TEAM" comment="请求下一轮战斗">
+		<field type="Integer" name="isAuto" comment="是否自动战斗，0否，1是" />
+		<field type="Integer" name="selSkillId" comment="玩家选择的技能Id" />
+		<field type="Integer" name="selTarget" comment="玩家选择的技能目标" />
+		<field type="Integer" name="selItemId" comment="玩家选择的道具Id" />
+		<field type="Integer" name="petSelSkillId" comment="宠物选择的技能Id" />
+		<field type="Integer" name="petSelTarget" comment="宠物选择的技能目标" />
+		<field type="Integer" name="petSelItemId" comment="宠物选择的道具Id" />
+		<field type="Long" name="summonPetId" comment="召唤宠物Id" />
+	</message>
+	
+	<message type="GC_BATTLE_REPORT_TEAM" comment="组队战斗的战报" compress="true">
+		<field type="Integer" name="playType" comment="0战斗开始，1每轮战报" />
+		<field type="String" name="reportPack" comment="战报数据包" />
+		<field type="Integer" name="teamId" comment="队伍Id" />
+		<field type="Long" name="roundStartTime" comment="该轮开始时间" />
+		<field type="Long" name="curTime" comment="当前时间" />
+		<field type="Integer" name="lastAutoFlag" comment="最近一次战斗是否自动，0否，1是" />
+		<field type="Integer" name="isAttacker" comment="攻击方1，防守方2" />
+		<field type="String" name="additionPack" comment="战斗附加json串，存储funcId等信息" />
+	</message>
+	<!-- 组队的消息 end -->
+	
+	<!-- 准备中状态变化消息 -->
+	<message type="CG_BATTLE_LEADER_READY_PVP" comment="主将准备中状态已完毕pvp">
+	</message>
+	
+	<message type="GC_BATTLE_READY_CHANGED_PVP" comment="武将准备中状态已完毕pvp">
+		<field type="Long" name="leaderPetUUId" comment="主将唯一id" />
+		<field type="Long" name="petPetUUId" comment="宠物唯一id" />
+	</message>
+	
+	<message type="CG_BATTLE_LEADER_READY_TEAM" comment="主将准备中状态已完毕team">
+	</message>
+	
+	<message type="GC_BATTLE_READY_CHANGED_TEAM" comment="武将准备中状态已完毕team">
+		<field type="Long" name="leaderPetUUId" comment="主将唯一id" />
+		<field type="Long" name="petPetUUId" comment="宠物唯一id" />
+	</message>
+	
+	<!-- 战斗结束相关消息 -->
+	<message type="CG_BATTLE_READ_REPORT_END" comment="播放最后一轮战报结束">
+	</message>
+	
+	<message type="GC_BATTLE_END" comment="战斗结束">
+	</message>
+	
+	<!-- 组队pvp战斗 -->
+	<message type="CG_BATTLE_START_TEAMPVP" comment="请求组队PVP战斗">
+		<field type="Long" name="targetPlayerId" comment="目标玩家Id" />
+	</message>
+	
+	<!-- pvp消息补充 -->
+	<message type="GC_BATTLE_START_PVP_INVITE" comment="目标玩家收到的请求PVP战斗">
+		<field type="Long" name="sourcePlayerId" comment="发起切磋玩家Id" />
+		<field type="String" name="sourcePlayerName" comment="发起切磋玩家名字" />
+	</message>
+	
+	<message type="CG_BATTLE_START_PVP_CONFIRM" comment="应答请求PVP战斗">
+		<field type="Integer" name="agree" comment="是否同意切磋，0不同意，1同意" />
+		<field type="Long" name="sourcePlayerId" comment="发起切磋玩家Id" />
+	</message>
+	
+	<!-- 战斗加速 -->
+	<message type="CG_BATTLE_SPEEDUP" comment="战斗加速">
+		<field type="Integer" name="speed" comment="速度倍数" />
+	</message>
+	
+	<message type="GC_BATTLE_SPEEDUP" comment="战斗加速结果">
+		<field type="Integer" name="speed" comment="速度倍数" />
+		<field type="Integer" name="canSpeedup" comment="能否使用加速，0否，1是" />
+	</message>
+	
+</messages>

@@ -1,0 +1,59 @@
+log4j.rootLogger=ERROR,R
+log4j.logger.db=DEBUG,dblog
+log4j.logger.telnet=DEBUG,telnetlog
+log4j.logger.vitRecLog=DEBUG,vitRecLog
+log4j.logger.activityLog=DEBUG,activityLog
+log4j.additivity.db = false
+log4j.additivity.telnet=false
+log4j.additivity.vitRecLog=false
+log4j.additivity.activityLog=false
+log4j.logger.com.imop.platform.gm=debug,platform
+#--------------------R--------------------------------
+log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.R.File=${gm.root}/logs/gm_server.log
+log4j.appender.R.datePattern='.'yyyy-MM-dd
+log4j.appender.R.append=true
+log4j.appender.R.encoding=UTF-8
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+#--------------------telnetlog--------------------------------
+log4j.appender.telnetlog=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.telnetlog.File=${gm.root}/logs/gm_telnet.log
+log4j.appender.telnetlog.datePattern='.'yyyy-MM-dd
+log4j.appender.telnetlog.append=true
+log4j.appender.telnetlog.encoding=UTF-8
+log4j.appender.telnetlog.layout=org.apache.log4j.PatternLayout
+log4j.appender.telnetlog.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+#--------------------dblog--------------------------------
+log4j.appender.dblog=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.dblog.File=${gm.root}/logs/gm_db.log
+log4j.appender.dblog.datePattern='.'yyyy-MM-dd
+log4j.appender.dblog.append=true
+log4j.appender.dblog.encoding=UTF-8
+log4j.appender.dblog.layout=org.apache.log4j.PatternLayout
+log4j.appender.dblog.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+#--------------------vitRecLog--------------------------------
+log4j.appender.vitRecLog=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.vitRecLog.File=${gm.root}/logs/gm_vitRec.log
+log4j.appender.vitRecLog.datePattern='.'yyyy-MM-dd
+log4j.appender.vitRecLog.append=true
+log4j.appender.vitRecLog.encoding=UTF-8
+log4j.appender.vitRecLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.vitRecLog.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+#--------------------platform--------------------------------
+log4j.appender.platform=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.platform.File=${gm.root}/logs/gm_platform.log
+log4j.appender.platform.datePattern='.'yyyy-MM-dd
+log4j.appender.platform.append=true
+log4j.appender.platform.encoding=UTF-8
+log4j.appender.platform.layout=org.apache.log4j.PatternLayout
+log4j.appender.platform.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+#--------------------activityLog--------------------------------
+log4j.appender.activityLog=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.activityLog.File=${gm.root}/logs/gm_activityLog.log
+log4j.appender.activityLog.datePattern='.'yyyy-MM-dd
+log4j.appender.activityLog.append=true
+log4j.appender.activityLog.encoding=UTF-8
+log4j.appender.activityLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.activityLog.layout.ConversionPattern=[%-5p] %d{yyyy-MM-dd HH:mm:ss} %c - %m%n
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="onlinegift">
+	
+	<message type="CG_DALIY_GIFT_LIST_APPLY" comment="申请每日签到奖励信息">
+	</message>
+	
+	<message type="GC_DALIY_GIFT_LIST_APPLY" comment="申请每日签到奖励信息">
+		<field type="com.imop.lj.common.model.reward.RewardInfo" list="true" clientType="com.imop.lj.data.RewardInfoData" name="rewardInfoList" comment="返回可以获得的奖励的信息" macro="RewardInfo"/>
+	</message>
+	
+	<message type="CG_DALIY_GIFT_PANNEL_APPLY" comment="申请每日签到面板信息">
+	</message>
+	
+	<message type="GC_DALIY_GIFT_PANNEL_APPLY" comment="申请每日签到面板信息结果">
+		<field type="Integer" name="signedNum" comment="本月累计签到天数"/>
+		<field type="Integer" name="restRetroactiveNum" comment="剩余补签次数"/>
+		<field type="Integer" name="canUseRetroacte" comment="是否可用补签(1是2否)"/>
+		<field type="Integer" name="isAlreadySign" comment="今天是否已经签到(1是2否)"/>
+		<field type="Integer" name="daysOfMonth" comment="本月应该有多少天"/>
+	</message>
+	
+	<message type="CG_DALIY_GIFT_SIGN" comment="申请签到">
+	</message>
+	
+	<message type="GC_DALIY_GIFT_SIGN" comment="申请签到结果">
+		<field type="Integer" name="result" comment="申请签到结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_DALIY_GIFT_RETROACTIVE" comment="申请补签">
+	</message>
+	
+	<message type="GC_DALIY_GIFT_RETROACTIVE" comment="申请补签结果">
+		<field type="Integer" name="result" comment="申请补签结果 1成功,2失败"/>
+	</message>
+	
+	
+	<!-- 在线礼包  -->
+	<message type="CG_GET_ONLINEGIFT_INFO" comment="获取在线礼包信息"/>
+	
+	<message type="GC_ONLINEGIFT_INFO" comment="返回在线礼包信息">
+		<field type="Integer" name="rewardId" comment="该领取到的id" />
+		<field type="Long" name="cdTime" comment="计时开始的时间" />
+		<field type="com.imop.lj.common.model.reward.RewardInfo" list="true" name="rewardInfo" clientType="RewardInfoData" comment="礼包信息" macro="RewardInfo"/>
+	</message>
+	
+	<message type="CG_RECEIVE_ONLINEGIFT" comment="领取在线礼包"/>
+	
+	<!-- 特殊在线礼包  -->
+	<message type="CG_GET_SPEC_ONLINE_GIFT_SHOW_INFO" comment="获取在线礼物展示信息">
+	</message>
+	
+	<message type="GC_SPEC_ONLINE_GIFT_SHOW_INFO" comment="返回在线礼物展示信息">
+		<field type="Integer" name="offsetX" comment="X轴偏移量" />
+		<field type="Integer" name="offsetY" comment="Y轴偏移量" />
+		<field type="Long" name="cd" comment="领取倒计时" />
+		<field type="Integer" name="resType" comment="资源类型; 1：动画；2：图片" />
+		<field type="String" name="resId" comment="资源ID" />
+		<field type="Integer" name="artFontId" comment="美术字ID" />
+		<field type="String" name="showDesc" comment="展示描述，不可领取时显示"/>
+		<field type="String" name="receiveDesc" comment="领取描述，可领取时显示"/>
+	</message>
+	
+	<message type="CG_RECEIVE_SPEC_ONLINE_GIFT" comment="领取在线礼物包">
+	</message>	
+	
+
+</messages>

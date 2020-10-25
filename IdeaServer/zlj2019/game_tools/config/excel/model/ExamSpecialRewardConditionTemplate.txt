@@ -1,0 +1,3 @@
+int typeId;[notNull=false]//科举类型
+int rightAnswerNum;[notNull=true;minValue=1]//正确答案数量
+int rewardId;[notNull=true;minValue=0]//奖励ID

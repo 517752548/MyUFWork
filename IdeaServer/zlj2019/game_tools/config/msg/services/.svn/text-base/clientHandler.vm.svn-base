@@ -1,0 +1,41 @@
+#macro( smallType $type)
+#if($type == "Byte")int#elseif( $type == "Boolean" )int#elseif( $type == "Short" )int#elseif( $type == "Integer" )int#elseif( $type == "Long" )Long#elseif( $type == "Float" )Number#elseif( $type == "Double" )Number#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+package com.imop.game.nceo.net.handler
+{
+	import com.renren.framework.net.message.data.*;
+	
+	public class ${module}Handler
+	{
+		/**
+	 * 链接服务器--->
+	 * 		链接成功后--->
+	 * 			CG_HANDSHAKE--->
+	 * 				GC_HANDSHAKE--->
+	 * 					CG_PLAYER_LOGIN || CG_PLAYER_COOKIE_LOGIN--->
+	 * 						GC_ROLE_LIST--->
+	 * 							选择角色CG_PLAYER_ENTER--->
+	 * 								收到初始化数据.....--->
+	 * 									GC_SCENE_INFO--->
+	 * 										CG_ENTER_SCENE登陆完成.
+	 *
+	 */
+		public function ${module}Handler()
+		{
+		}
+		 #foreach( $msg in $msgs ) 
+		
+ 		/**
+		 * $msg.comment
+		 */
+		public static function ${msg.type}(#foreach( $field in $msg.fields )${field.smallName}:#if ($field.list)Array#else#smallType($field.type)#end#if($velocityCount != $msg.fields.size()),#end#end):void
+		{
+			//TODO
+		}
+	
+		#end		
+}

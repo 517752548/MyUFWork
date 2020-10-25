@@ -1,0 +1,107 @@
+<project name="platformlocal" default="all" basedir=".">
+
+	<property name="project.name" value="qqapi" />
+	<property environment="env" />
+	<property name="war.dir" value="war" />
+	<property name="src.dir" value="src" />
+	<property name="config.dir" value="config" />
+	<property name="resource.dir" value="resource" />
+	<property name="webroot.dir" value="WebContent" />
+	<property name="webdest.dir" value="${webroot.dir}/WEB-INF/classes" />
+	<property name="weblib.dir" value="${webroot.dir}/WEB-INF/lib" />
+	<property name="JAVA_HOME" value="${env.JAVA_HOME}" />
+	<property name="builddest.dir" value="classes" />
+	<property name="conf_path" value="D:\\workspace\\test\\qqapi\\resource" />
+
+	<!--tmp dir -->
+	<path id="master-classpath">
+		<fileset dir="${weblib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="usage">
+		<echo message="" />
+		<echo message="${project.name} build file" />
+		<echo message="------------------------------------------------------" />
+		<echo message="" />
+		<echo message="Available targets are:" />
+		<echo message="" />
+		<echo message="clean    --> Clean output dirs" />
+		<echo message="build    --> Compile main Java sources and copy libraries" />
+		<echo message="warfile --> Build the web application archive" />
+		<echo message="all      --> Clean, build, warfile" />
+		<echo message="" />
+	</target>
+
+	<target name="clean" description="Clean output dirs(dist)">
+		<delete dir="${webdest.dir}" />
+		<delete dir="${war.dir}" />
+		<delete dir="${webdest.dir}" />
+		<delete dir="${builddest.dir}" />
+	</target>
+
+	<target name="end" description="Clean output dirs(dist)">
+		<delete dir="${builddest.dir}" />
+		<delete file="${weblib.dir}/${project.name}.jar"></delete>
+	</target>
+
+	<target name="build"
+		description="Compile main source tree java files into class files, generate jar files">
+		<tstamp />
+
+		<mkdir dir="${webdest.dir}" />
+
+		<mkdir dir="${builddest.dir}" />
+
+		<javac srcdir="${src.dir}" destdir="${builddest.dir}" encoding="UTF-8">
+			<classpath refid="master-classpath" />
+		</javac>
+
+		<copy todir="${builddest.dir}" preservelastmodified="true">
+			<fileset dir="${src.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+			</fileset>
+			<fileset dir="${config.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+
+		<jar destfile="${weblib.dir}/${project.name}.jar" basedir="${builddest.dir}">
+		</jar>
+
+		<copy todir="${webdest.dir}" preservelastmodified="true">
+			<fileset dir="${resource.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.js" />
+				<include name="**/*.xls" />
+				<include name="**/*.properties" />
+			</fileset>
+			<fileset dir="${conf_path}">
+				<include name="**/*.xml" />
+				<include name="**/*.js" />
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="warfile">
+		<mkdir dir="${war.dir}" />
+		<war warfile="${war.dir}/${project.name}.war" basedir="${webroot.dir}/"
+			webxml="WebContent/WEB-INF/web.xml">
+			<include name="**/**" />
+		</war>
+	</target>
+	
+	<target name="zipWeb">
+		<zip destfile="${war.dir}/${project.name}.zip">
+			<fileset dir="${webroot.dir}">
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="all" depends="usage, clean, build,warfile,zipWeb,end" />
+
+</project>

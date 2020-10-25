@@ -1,0 +1,34 @@
+#macro( toField $template_field $template_index)
+	#if ($field.list)
+		var ${field.smallName}_$template_index:int;
+		for(${field.smallName}_$template_index=0; ${field.smallName}_$template_index<${field.smallName}.length; ${field.smallName}_$template_index++){
+			#set($template_index=$template_index + 1)
+			#foreach( $template_subfield in $template_field.subFields )
+			#toField($template_subfield $template_index)
+			#end
+		}
+	#else
+		${template_field.smallName}_$template_index
+	#end
+#end
+#set($field=$field)
+#set($count=$count+1)
+#if ($field.list)
+	var ${field.smallName}_$count:int;
+	for(${field.smallName}_$count=0; ${field.smallName}_$count<${field.smallName}.length; ${field.smallName}_$count++){
+		#foreach( $field in $field.subFields )
+		#toField($template_subfield $template_index)
+		#end
+	}
+#else
+	${field.smallName}
+#end
+
+#if ($field.list)
+#set($count=$count - 1)
+$count
+#if($count > 0)<br>
+#parse("parsefoo.vm")
+#else
+<br>All done will parsefoo.vm!
+#end

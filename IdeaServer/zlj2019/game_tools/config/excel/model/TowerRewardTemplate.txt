@@ -1,0 +1,6 @@
+int levelMin;[minValue=1;notNull=false]//主将等级下限
+int levelMax;[minValue=1;notNull=false]//主将等级上限
+int fixedRewardId;[notNull=false]//固定奖励ID,可以为空
+int randomRewardId;[notNull=false;minValue=1]//概率奖励ID
+int rewardProb;[notNull=false;minValue=0]//概率
+int assistRewardId;[notNull=false;minValue=1]//玩家助战奖励ID

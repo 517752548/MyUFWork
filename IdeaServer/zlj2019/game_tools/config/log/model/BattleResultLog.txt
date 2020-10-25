@@ -1,0 +1,5 @@
+message com.imop.lj.logserver.model.BattleResultLog(
+	String battleResult;//战斗结果
+	int battleType; //战斗类型
+	String target;//战斗目标
+)

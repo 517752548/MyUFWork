@@ -1,0 +1,32 @@
+namespace app.net
+{
+	public class MessageType{
+		// /////////////
+		// 服务器内部状态
+		// ////////////
+		public const int STAUS_BEGIN = 400;
+		public const int BASE_NUMBER = 500;
+		//客户端第一次登陆命令，服务器进行连接初始化
+		public const int CG_HANDSHAKE = 490;
+		public const int CG_HANDSHAKE2 = 492;
+	
+#foreach($key in $msgMap.keySet())
+#set($msgList = $msgMap.get($key))
+		// /////////////
+		// ${key}
+		// ////////////
+#set($msgOpKey = $key.toLowerCase())
+#set($msgOp = $message.get($msgOpKey))	
+    	private const int ${key}_NUMBER = $msgOp.get("start");	
+#set($tmp=$msgOp.get("start"))
+#set($tmpInt = 0)
+#set($tmpInt = $tmpInt.parseInt($tmp))
+
+#foreach( $msg in $msgList )
+#set($tmpInt=$tmpInt+1)
+		public const int ${msg} = $tmpInt;
+#end
+
+#end
+	}
+}

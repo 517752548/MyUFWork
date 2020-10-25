@@ -1,0 +1,10 @@
+int lifeSkillId;[minValue=1;notNull=true]//技能ID
+String name;//技能名称
+int needHumanLevel;[minValue=1;notNull=true]//所需玩家等级
+int lifeSkillLevel;[minValue=1;notNull=true]//技能等级
+List<com.imop.lj.gameserver.humanskill.template.HumanSubSkillCost> lifeSkillCostList;[Collection(8,1)]//升级技能层数熟练度列表
+int maxResNum;[minValue=1;notNull=true]//单次可获资源最大值
+int itemId;[minValue=1;notNull=true]//道具Id
+String itemName;//道具名称
+int lifeSkillBookId;[notNull=false]//消耗技能书Id
+String upgradeDes;//升级描述

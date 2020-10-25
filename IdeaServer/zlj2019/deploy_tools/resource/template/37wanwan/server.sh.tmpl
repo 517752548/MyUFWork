@@ -1,0 +1,34 @@
+#!/bin/bash
+#set($_p1="$")
+#set($_p2=$_p1+"!")
+start(){
+	ulimit -n 65535
+	#find the jars
+	jar_lib=`ls -1 lib/*.jar lib/*.zip`
+	jar_lib=`echo $jar_lib | sed 's/ /:/g'`
+	#init logs
+	if [ ! -d 'logs' ] ; then  mkdir logs ; fi
+	java -Dserver.name=${server.serverName}_${server.id} -server -Xmx${server.Xmx}M -Xms${server.Xms}M -Xss${server.Xss}K ${server.gcOpt} -cp config:${jar_lib} ${server.mainClass} 1>>logs/stdout 2>>logs/stderr &
+	pid=$_p2	
+	echo "$pid" > pid
+	echo "${server.name} Process Id:$pid"
+}
+
+stop(){
+	pid=`cat pid`
+	echo "Stop ${server.name} Process Id:$pid"
+	kill $pid
+	rm -f pid
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  *)
+        echo $"Usage: {start|stop}"
+        exit 1
+esac

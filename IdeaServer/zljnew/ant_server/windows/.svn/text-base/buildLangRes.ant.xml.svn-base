@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildRes.ant" basedir="." default="root">
+	<!-- import -->
+	<import file="buildLangRes.def.xml" />
+
+<!--
+// 版本号信息开始
+// 注意: 版本号信息由命令行参数给出!!
+///////////////////////////////////////////////////////////////////
+//-->
+	<!-- 大版本号  -->
+	<property name="largeVer" value="cmdArgs" />
+	<!-- 代码版本号  -->
+	<property name="codeRev" value="cmdArgs" />
+	<!-- 语言版本 -->
+	<property name="langName" value="cmdArgs" />
+	<!-- 多语言资源版本号 -->
+	<property name="langRev" value="cmdArgs" />
+
+	<!-- 最终版本号及打包目录 -->
+	<property name="pubVer" 
+		value="${largeVer}.${codeRev}.${langName}.${langRev}"  />
+	<property name="tmpDir" 
+		value="${tempdir}/${pubVer}/temp" />
+	<property name="finalDir" 
+		value="${tempdir}/${pubVer}/final/lang/" />
+
+<!--
+// 开始构建
+///////////////////////////////////////////////////////////////////
+//-->
+	<target name="root">
+		<echo message="::: 构建多语言资源" />
+
+		<antcall target="clearTempDir" />
+		<antcall target="svnExport" />
+		<antcall target="createZip" />
+		<antcall target="onComplete" />
+	</target>
+
+	<!-- 清理临时目录 -->
+	<target name="clearTempDir">
+		<echo message="清理临时目录" />
+		<deltree dir="${tmpDir}" />
+		<mkdir dir="${tmpDir}" />
+	</target>
+
+	<!-- svn 代码导出 -->
+	<target name="svnExport">
+		<!-- res -->
+		<echo message="从 svn 中导出多语言资源" />
+		<langResBranchesExport 
+			langName="${langName}"
+			branchesVer="${largeVer}" 
+			langRev="${langRev}" 
+			exportToDir="${tmpDir}/${langName}" />
+	</target>
+	
+	<!-- 创建 ZIP 文件 -->
+	<target name="createZip">
+		<!-- 创建压缩包 -->
+		<echo message="创建压缩包 lang.zip" />
+		<zip destfile="${tmpDir}/lang.zip">
+			<fileset dir="${tmpDir}">
+				<include name="**/*.xls" />
+			</fileset>
+		</zip>
+	</target>
+
+	<!-- 完成脚本 -->
+	<target name="onComplete">
+		<move file="${tmpDir}/lang.zip" tofile="${finalDir}/lang.zip" />
+	</target>
+</project>

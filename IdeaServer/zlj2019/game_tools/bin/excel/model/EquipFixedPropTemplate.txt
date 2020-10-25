@@ -1,0 +1,3 @@
+int positionId;[notNull=false;minValue=1]//装备部位Id
+int colorId;[notNull=false;minValue=1]//颜色Id
+List<Integer> jobPropList;[Collection(4,1)] //按职业固定属性列表

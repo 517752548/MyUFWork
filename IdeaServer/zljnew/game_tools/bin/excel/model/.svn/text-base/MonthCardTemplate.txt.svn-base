@@ -1,0 +1,6 @@
+int monthCurrId;[notNull=true;minValue=1;]//月卡货币类型
+int monthCurrNum;[notNull=true;minValue=1;]//月卡货币数量
+int rebateCurrId;[notNull=false;minValue=1;]//立返货币类型	
+int rebateCurrNum;[notNull=false;minValue=0;]//立返货币数量
+int dayRebateCurrId;[notNull=false;minValue=1;]//每日返利货币类型
+int dayRebateCurrNum;[notNull=false;minValue=0;]//每日返利货币数量

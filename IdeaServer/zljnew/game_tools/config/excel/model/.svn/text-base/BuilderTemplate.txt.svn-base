@@ -1,0 +1,3 @@
+int targetItemId;[notNull=false]//目标道具id
+List<com.imop.lj.common.model.template.CurrencyTemplate> consumeCurrTempList;[Collection(1,2)]//打造消耗货币
+List<com.imop.lj.common.model.template.ItemCostTemplate> consumeItemList;[Collection(6,2)] //消耗物品数组

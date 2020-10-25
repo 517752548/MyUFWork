@@ -1,0 +1,8 @@
+int wingTplId;[minValue=1;notNull=false]//翅膀模板id
+int wingLevel;[notNull=false]//翅膀阶数
+int itemId;[minValue=1;notNull=false]//道具id
+int itemNum;[minValue=1;notNull=false]//道具数量
+int currencyType;[minValue=1;notNull=false]//货币类型
+int currencyNum;[minValue=1;notNull=false]//货币数量
+int upgradeProp;[notNull=false]//升阶概率
+int blessMaxValue;[minValue=1;notNull=false]//祝福满值

@@ -1,0 +1,8 @@
+message com.imop.lj.logserver.model.CorpsBuildLog(
+	long corpsId;// 帮派ID
+	String corpsName;// 帮派名
+	int corpsLevel;// 帮派等级
+	int memberNum;// 帮派人数
+	long currExp;// 帮派当前经验
+	long curFund;// 帮派当前资金
+)

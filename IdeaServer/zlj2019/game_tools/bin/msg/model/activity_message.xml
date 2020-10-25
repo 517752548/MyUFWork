@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="activity">
+
+	<message type="CG_ACTIVITY_LIST" comment="打开活动面板">
+	</message>
+	
+	<message type="GC_ACTIVITY_LIST" comment="打开活动列表">
+		<field type="com.imop.lj.gameserver.activity.ActivityInfo"
+			name="activityList" clientType="ActivityInfoData" list="true" macro="ActivityInfo" comment="打开活动列表">
+		</field>
+	</message>
+	
+	<message type="GC_ACTIVITY_UPDATE" comment="活动状态更新">
+		<field type="com.imop.lj.gameserver.activity.ActivityInfo"
+			name="activityList" clientType="ActivityInfoData" macro="ActivityInfo" comment="活动开始">
+		</field>
+	</message>
+	
+	<message type="CG_CLICK_ACITVITY" comment="点击活动">
+		<field type="Integer" name="activityId" comment="活动id" />
+	</message>
+	
+</messages>

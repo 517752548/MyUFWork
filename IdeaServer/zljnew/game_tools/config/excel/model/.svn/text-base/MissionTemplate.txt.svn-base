@@ -1,0 +1,7 @@
+;
+String mapId;[notNull=false] //地形Id
+String bornPos;[notNull=false] //出生点
+String music;[notNull=false] //背景音乐
+int isBoss;[notNull=false] //是否boss
+int missionPrizeId;[notNull=false] //奖励Id
+List<com.imop.lj.gameserver.mission.template.MissionUnitTemplate> enemyGroupList;[Collection(5,4)] //敌人组id、位置、出场顺序、出场延迟（秒）的列表

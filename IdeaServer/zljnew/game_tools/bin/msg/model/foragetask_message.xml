@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="foragetask">
+
+	<message type="CG_OPEN_FORAGETASK_PANEL" comment="打开护送粮草任务面板">
+	</message>
+	
+	<message type="GC_OPEN_FORAGETASK_PANEL" comment="打开护送粮草任务面板">
+		<field type="com.imop.lj.common.model.BackupForageTaskInfo"
+			clientType="BackupForageTaskInfoData" name="backupForageTaskInfos" list="true" comment="备选任务列表" >
+			<field type="Integer" name="questId" comment="任务Id" />
+			<field type="Integer" name="star" comment="粮草品质" />
+			<field type="Integer" name="status" comment="任务状态" />
+		</field>
+		<field type="Integer" name="finishTimes" comment="今日已完成任务数" />
+		<field type="Integer" name="totalTimes" comment="总任务数" />
+	</message>
+	
+	<message type="GC_FORAGETASK_DONE" comment="已完成所有任务">
+	</message>
+	
+	<message type="GC_FORAGETASK_UPDATE" comment="护送粮草任务更新消息">
+		<field type="com.imop.lj.common.model.quest.QuestInfo"
+			clientType="QuestInfoData" name="questInfo" comment="单个任务" macro="QuestInfo">
+		</field>
+	</message>
+	
+	<message type="CG_FORAGETASK_ACCEPT" comment="接受任务">
+		<field type="Integer" name="questId" comment="任务Id" />
+	</message>
+	
+	<message type="CG_GIVE_UP_FORAGETASK" comment="放弃已接任务">
+	</message>
+	
+	<message type="CG_FINISH_FORAGETASK" comment="完成任务">
+	</message>
+
+	<message type="CG_FORAGETASK_REFRESH" comment="护送粮草任务手动刷新">
+	</message>
+
+</messages>

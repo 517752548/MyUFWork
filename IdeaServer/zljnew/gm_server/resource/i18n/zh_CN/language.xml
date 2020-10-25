@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+	<titles name="arena_log">
+				<title name="战斗结果"/>
+				<title name="攻击者id"/>
+				<title name="攻击者战斗前连胜数"/>
+				<title name="攻击者战斗后连胜数"/>
+				<title name="攻击者战斗前名次"/>
+				<title name="攻击者战斗后名次"/>
+				<title name="防御方id"/>
+				<title name="防御方战斗前连胜数"/>
+				<title name="防御方战斗后连胜数"/>
+				<title name="防御方战斗前名次"/>
+				<title name="防御方战斗后名次"/>
+			</titles>
+	<titles name="behavior_log">
+				<title name="行为类型"/>
+				<title name="旧行为次数"/>
+				<title name="新行为次数"/>
+				<title name="旧附加次数"/>
+				<title name="新附加次数"/>
+			</titles>
+	<titles name="charge_log">
+				<title name="货币类型"/>
+				<title name="充值前数量"/>
+				<title name="充值后数量"/>
+				<title name="要兑换多少MM"/>
+				<title name="接口返回的充值结果"/>
+				<title name="订单号即平台orderId"/>
+			</titles>
+	<titles name="chat_log">
+				<title name="聊天范围"/>
+				<title name="如果为私聊，则记录私聊消息的接收玩家角色名称,否则该字段无意义"/>
+				<title name="聊天的内容"/>
+			</titles>
+	<titles name="drop_item_log">
+				<title name="来源处reason"/>
+				<title name="掉落id"/>
+				<title name="道具模板ID"/>
+				<title name="道具名称"/>
+				<title name="来源处detailReason"/>
+			</titles>
+	<titles name="gm_command_log">
+				<title name="操作者姓名"/>
+				<title name="目标机器"/>
+				<title name="命令"/>
+				<title name="命令描述"/>
+				<title name="命令内容"/>
+				<title name="返回结果"/>
+			</titles>
+	<titles name="item_gen_log">
+				<title name="道具模板ID"/>
+				<title name="道具名称"/>
+				<title name="道具数量"/>
+				<title name="使用有限期限"/>
+				<title name="物品其他属性"/>
+				<title name="物品产生ID"/>
+			</titles>
+	<titles name="item_log">
+				<title name="包裹id"/>
+				<title name="在包裹中的位置索引"/>
+				<title name="道具模板ID"/>
+				<title name="道具实例ID"/>
+				<title name="变化值"/>
+				<title name="操作后的最终叠加数"/>
+				<title name="道具产生ID：对应ItemGenLog"/>
+				<title name="道具大字段信息，用于在删除贵重道具时将道具二进制信息备份"/>
+			</titles>
+	<titles name="mail_log">
+				<title name="唯一Id"/>
+				<title name="发件人ID"/>
+				<title name="发件人姓名"/>
+				<title name="收件人ID"/>
+				<title name="收件人姓名"/>
+				<title name="标题"/>
+				<title name="阅读状态"/>
+				<title name="发件时间"/>
+			</titles>
+	<titles name="money_log">
+				<title name="主货币类型"/>
+				<title name="主货币钱数变化值"/>
+				<title name="主货币剩余金钱"/>
+				<title name="辅助货币类型"/>
+				<title name="辅助货币变化值"/>
+				<title name="辅助货币剩余金钱"/>
+				<title name="第三货币类型"/>
+				<title name="第三货币变化值"/>
+				<title name="第三货币剩余金钱"/>
+			</titles>
+	<titles name="online_time_log">
+				<title name="当天累计在线时间(分钟)"/>
+				<title name="累计在线时间(分钟)"/>
+				<title name="最后一次登录时间"/>
+				<title name="最后一次登出时间"/>
+			</titles>
+	<titles name="player_login_log">
+				<title name="登陆终端"/>
+				<title name="登陆时间"/>
+				<title name="登陆信息--设备来源|终端id|设备类型|设备版本号|客户端版本号|客户端语言类型"/>
+			</titles>
+	<titles name="vip_log">
+				<title name="VipUUID, 角色ID"/>
+				<title name="当次充值数量"/>
+				<title name="当前使用卡ID"/>
+				<title name="领取每日奖励ID"/>
+				<title name="旧vip数据"/>
+				<title name="新vip数据"/>
+			</titles>
+	<titles name="task_log">
+				<title name="任务id"/>
+			</titles>
+	<titles name="formation_log">
+				<title name="当前布阵情况"/>
+			</titles>
+	<titles name="mission_log">
+				<title name="关卡Id"/>
+				<title name="敌人索引"/>
+				<title name="敌人Id"/>
+				<title name="总轮数"/>
+				<title name="剩余轮数"/>
+			</titles>
+	<titles name="reward_log">
+				<title name="生成奖励对应玩家角色id"/>
+				<title name="奖励标示"/>
+				<title name="经验"/>
+				<title name="货币奖励"/>
+				<title name="物品奖励"/>
+				<title name="其他参数"/>
+			</titles>
+	<titles name="equip_log">
+				<title name="UUID"/>
+				<title name="模版ID"/>
+				<title name="装备强化等级"/>
+				<title name="装备附魔等级"/>
+				<title name="武器技能ID"/>
+				<title name="附加属性"/>
+				<title name="宝石"/>
+				<title name="备用"/>
+			</titles>
+	<titles name="pet_log">
+				<title name="武将模板ID"/>
+				<title name="武将实例ID"/>
+				<title name="是否初始生成"/>
+			</titles>
+	<titles name="prize_log">
+				<title name="登录时间"/>
+				<title name="奖励物品"/>
+				<title name="领取次数"/>
+			</titles>
+	<titles name="mystery_shop_log">
+				<title name=""/>
+			</titles>
+	<titles name="pet_exp_log">
+				<title name="武将模板ID"/>
+				<title name="武将实例ID"/>
+				<title name="增加经验"/>
+				<title name="当前级别"/>
+				<title name="武将当前经验"/>
+			</titles>
+	<titles name="horse_log">
+				<title name=""/>
+				<title name=""/>
+				<title name=""/>
+				<title name=""/>
+				<title name=""/>
+				<title name=""/>
+			</titles>
+	<titles name="mall_log">
+				<title name="当前队列组"/>
+				<title name="当前队列UUID"/>
+				<title name="当前队列模版ID"/>
+				<title name="当前队列开始时间"/>
+				<title name="库存"/>
+			</titles>
+	<titles name="item_cost_record_log">
+				<title name="原始免费的个数"/>
+				<title name="原始道具个数"/>
+				<title name="原始物品总价值"/>
+				<title name="原始实际花费金钱"/>
+				<title name="修改后免费的个数"/>
+				<title name="修改后道具个数"/>
+				<title name="修改后物品总价值"/>
+				<title name="修改后实际花费金钱"/>
+			</titles>
+	<titles name="pop_tips_log">
+				<title name="角色id"/>
+				<title name="poptip类型"/>
+				<title name="poptipid"/>
+				<title name="角色poptip操作前原始值"/>
+				<title name="角色poptip操作后的值"/>
+			</titles>
+	<titles name="good_activity_log">
+				<title name="活动唯一Id"/>
+				<title name="活动模板Id"/>
+				<title name="奖励Id"/>
+				<title name="目标Id"/>
+			</titles>
+	<titles name="battle_result_log">
+				<title name="战斗结果"/>
+				<title name="战斗类型"/>
+				<title name="战斗目标"/>
+			</titles>
+	<titles name="pub_task_log">
+				<title name="备选任务状态字符串"/>
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+	<titles name="pub_exp_log">
+				<title name="增加经验"/>
+				<title name="当前级别"/>
+				<title name="当前经验"/>
+			</titles>
+	<titles name="exam_log">
+				<title name="试题ID"/>
+				<title name="第几道题"/>
+				<title name="答题结果 1,正确 2,错误"/>
+			</titles>
+	<titles name="corps_log">
+				<title name="商会ID"/>
+				<title name="商会名"/>
+				<title name="商会等级"/>
+				<title name="商会人数"/>
+				<title name="操作者职位"/>
+				<title name="被操作者玩家id"/>
+				<title name="被操作者玩家名称"/>
+				<title name="被操作者职位"/>
+			</titles>
+	<titles name="the_sweeney_task_log">
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+	<titles name="treasure_map_log">
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+	<titles name="title_log">
+				<title name="称号id"/>
+			</titles>
+	<titles name="forage_task_log">
+				<title name="备选任务状态字符串"/>
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+	<titles name="overman_log">
+				<title name="称号id"/>
+				<title name=""/>
+				<title name=""/>
+			</titles>
+	<titles name="wing_log">
+				<title name="模版ID"/>
+				<title name="翅膀阶数"/>
+				<title name="翅膀祝福值"/>
+				<title name="翅膀战斗力"/>
+			</titles>
+	<titles name="commodity_sell_log">
+				<title name="出售商品详细信息"/>
+			</titles>
+	<titles name="commodity_buy_log">
+				<title name="购买商品详细信息"/>
+			</titles>
+	<titles name="corps_task_log">
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+	<titles name="corps_build_log">
+				<title name="帮派ID"/>
+				<title name="帮派名"/>
+				<title name="帮派等级"/>
+				<title name="帮派人数"/>
+				<title name="帮派当前经验"/>
+				<title name="帮派当前资金"/>
+			</titles>
+	<titles name="corps_benefit_log">
+				<title name="帮派ID"/>
+				<title name="帮派名"/>
+				<title name="帮派等级"/>
+				<title name="帮派人数"/>
+				<title name="操作者玩家id"/>
+				<title name="操作者职位"/>
+				<title name="获得福利数量"/>
+			</titles>
+	<titles name="tower_log">
+				<title name="当前玩家的通天塔层数"/>
+				<title name="当前双倍点数"/>
+				<title name="是否开启双倍,1:是,0:否"/>
+			</titles>
+	<titles name="corps_boss_log">
+				<title name="当前玩家的帮派boss进度"/>
+			</titles>
+	<titles name="time_limit_monster_log">
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+	<titles name="time_limit_npc_log">
+				<title name="当前任务Id"/>
+				<title name="当前任务状态"/>
+			</titles>
+</languages>

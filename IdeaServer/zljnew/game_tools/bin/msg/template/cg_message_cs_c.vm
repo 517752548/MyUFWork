@@ -1,0 +1,85 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "String" )string#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )bool#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+using System;
+using System.IO;
+namespace app.net
+{
+
+/**
+ * $message.comment
+ * 
+ * @author CodeGenerator, don't modify this file please.
+ */
+public class ${message.className} :BaseMessage
+{
+	
+#foreach( $field in $list )
+	/** ${field.comment} */
+#if ($field.list) 
+	private #smallType($field.clientType)[] ${field.smallName};
+#else
+	private #smallType($field.clientType) $field.smallName;
+#end
+#end	
+	
+	public $message.className ()
+	{
+	}
+	
+#if ($message.fieldSize>0)
+	public $message.className (
+#foreach( $field in $list )
+#if ($field.list) 
+			#smallType($field.clientType)[] ${field.smallName}#if($velocityCount != $list.size()),
+#end	
+#else
+			#smallType($field.clientType) $field.smallName#if($velocityCount != $list.size()),
+#end	
+#end
+#end )
+	{
+#foreach( $field in $list )
+			this.${field.smallName} = ${field.smallName};
+#end		
+	}
+#end
+	
+	protected override void ReadImpl() 
+	{
+		return;
+	}
+	
+	protected override void WriteImpl() 
+	{
+${message.fieldCsWriteContent}
+	}
+	
+	public override short GetMessageType()
+	{
+		return (short)MessageType.$message.type;
+	}
+	
+	public override string getEventType()
+	{
+		return "";
+	}
+	
+#foreach( $field in $list )
+#if ($field.list)
+
+	public #smallType($field.clientType)[] get${field.bigName}()
+	{
+		return ${field.smallName};
+	}
+
+	public void set${field.bigName}(#smallType($field.clientType)[] ${field.smallName})
+	{
+		this.${field.smallName} = ${field.smallName};
+	}
+#end
+#end
+	}
+}

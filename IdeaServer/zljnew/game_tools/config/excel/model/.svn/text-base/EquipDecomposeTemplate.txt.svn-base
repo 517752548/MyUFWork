@@ -1,0 +1,7 @@
+int color;[notNull=false;minValue=0]//装备颜色
+int lowLevel;[notNull=false;minValue=0]//等级下限
+int hightLevel;[notNull=false;minValue=0]//等级上限
+int currencyType;[notNull=true;minValue=1]//消耗货币类型
+int currencyNum;[notNull=false;minValue=0;]//消耗货币数量
+int rewardId;[notNull=true;minValue=0]//奖励ID
+int isAvailable;[notNull=false;minValue=0;maxValue=1]//是否有效

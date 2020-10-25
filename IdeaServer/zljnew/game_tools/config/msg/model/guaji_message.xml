@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="guaji">
+
+	<message type="CG_GUA_JI_PANEL" comment="打开挂机面板"/>
+	<message type="GC_GUA_JI_PANEL" comment="返回挂机信息">
+	    <field type="com.imop.lj.common.model.human.GuaJiInfo"
+	           clientType="GuaJiInfo"
+	           name="guaJiInfo" macro="GuaJiInfo" comment="挂机信息">
+	    </field>
+	</message>
+	
+	<message type="CG_START_GUA_JI" comment="开始挂机">
+		<field type="Integer" name="encounterSecond" comment="遇敌间隔" />
+		<field type="Integer" name="humanExpTimes" comment="增加人物经验(1-1倍经验,2-2倍经验)" />
+		<field type="Integer" name="petExpTimes" comment="增加宠物经验(当前出战宠物会加上,(1-1倍经验,2-2倍经验)" />
+		<field type="Integer" name="fullEnemy" comment="1开启，0关闭" />
+		<field type="Integer" name="switchScene" comment="1开启，0关闭" />
+		<field type="Integer" name="guaJiMinute" comment="挂机分钟数" />
+		<field type="Integer" name="needGuaJiPoint" comment="所需挂机点数" />
+	</message>
+	<message type="GC_START_GUA_JI" comment="返回挂机结果">
+			<field type="Integer" name="result" comment="1成功，2失败"/>
+	</message>
+	
+	<message type="CG_PAUSE_GUA_JI" comment="暂停挂机"/>
+	
+</messages>

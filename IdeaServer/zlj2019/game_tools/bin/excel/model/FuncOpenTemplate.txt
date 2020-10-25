@@ -1,0 +1,6 @@
+int limitQuestId;[minValue=0;notNull=false]//任务限制Id
+int limitLevel;[minValue=0;notNull=false]//等级限制
+int limitMissionId;[minValue=0;notNull=false]//关卡限制
+int limitVipLevel;[minValue=0;notNull=false]//vip等级限制
+int limitEnemyArmyId;[minValue=0;notNull=false]//enemyArmy限制
+int andor;[minValue=0;maxValue=1;notNull=false]//并且or或者（0并且，1或者）

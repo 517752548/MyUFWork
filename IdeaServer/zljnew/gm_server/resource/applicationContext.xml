@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
+	default-autowire="byName">
+	<bean id="pagerUtil" class="com.imop.lj.gm.page.PaginationHelperScrollableImpl">
+	</bean>
+	<bean id="pager" class="com.imop.lj.gm.page.Pager" scope="request">
+		<aop:scoped-proxy />
+	</bean>
+	<!-- ******************************* -->
+	<bean id="privilegeService" class="com.imop.lj.gm.service.db.PrivilegeService" />
+	<bean id="dbFactoryService" class="com.imop.lj.gm.service.db.DBFactoryService" >
+		<property name="gmConfig" ref="gmConfig" />
+	</bean>
+	<!--<bean id="loginUserService" class="com.imop.lj.gm.service.LoginUserService" />-->
+	<bean id="excelLangManagerService" class="com.imop.lj.gm.service.xls.ExcelLangManagerService" />
+	<bean id="xlsItemLoadService" class="com.imop.lj.gm.service.xls.XlsItemLoadService" >
+		<property name="gmConfig" ref="gmConfig" />
+	</bean>
+	<bean id="gmConfig" class="com.imop.lj.gm.config.GmConfig" factory-method="GetInstance" />
+	<bean id="xlsSecretaryLoadService" class="com.imop.lj.gm.service.xls.XlsSecretaryLoadService" >
+		<property name="gmConfig" ref="gmConfig" ></property>
+	</bean>
+	<bean id="userInfoService" class="com.imop.lj.gm.service.UserInfoService" />
+	<bean id="branchService" class="com.imop.lj.gm.service.BranchService" />
+	<bean id="employeeService" class="com.imop.lj.gm.service.EmployeeService" />
+	<bean id="roleService" class="com.imop.lj.gm.service.RoleService" />
+	<bean id="guildInfoService" class="com.imop.lj.gm.service.GuildInfoService" />
+	<bean id="petService" class="com.imop.lj.gm.service.PetService" />
+	<bean id="shopmallInfoService" class="com.imop.lj.gm.service.ShopmallInfoService" />
+	<bean id="mobileActivityGmService" class="com.imop.lj.gm.service.notice.MobileActivityGmService" />
+	<bean id="corpsInfoService" class="com.imop.lj.gm.service.CorpsInfoService" />
+	<bean id="onlinePlayerCommandService" class="com.imop.lj.gm.service.OnlinePlayerCommandService" />
+	<bean id="cdkeyGMSerivce" class="com.imop.lj.gm.service.cdkey.CDKeyGMService">
+		<property name="gmConfig" ref="gmConfig"></property>
+	</bean>	
+	<!-- *************gameWorldManage Service****************** -->
+	<bean id="battleServie" class="com.imop.lj.gm.service.BattleServie" />
+	<bean id="arenaSnapService" class="com.imop.lj.gm.service.ArenaSnapService" />
+	<bean id="bossService" class="com.imop.lj.gm.service.BossService" />
+	<bean id="dailyQuestService" class="com.imop.lj.gm.service.DailyQuestService" />
+	<bean id="dbVersionService" class="com.imop.lj.gm.service.DbVersionService" />
+	<bean id="escortHelpSnapService" class="com.imop.lj.gm.service.EscortHelpSnapService" />
+	<bean id="relationService" class="com.imop.lj.gm.service.RelationService" />
+	<bean id="escortSnapService" class="com.imop.lj.gm.service.EscortSnapService" />
+	<bean id="secretaryService" class="com.imop.lj.gm.service.SecretaryService" />
+	<bean id="doingQuestService" class="com.imop.lj.gm.service.DoingQuestService" />
+	<bean id="finishedQuestService" class="com.imop.lj.gm.service.FinishedQuestService" />
+	<bean id="hunterService" class="com.imop.lj.gm.service.HunterService" />
+	<bean id="itemService" class="com.imop.lj.gm.service.ItemService" />
+	<bean id="tempHuntBagService" class="com.imop.lj.gm.service.TempHuntBagService" />
+	<bean id="sortArenaLevelService" class="com.imop.lj.gm.service.SortArenaLevelService" />
+	<bean id="sortHonorLevelService" class="com.imop.lj.gm.service.SortHonorLevelService" />
+	<bean id="sortCompanyInComeLevelService" class="com.imop.lj.gm.service.SortCompanyInComeLevelService" />
+	<bean id="commerceGMService" class="com.imop.lj.gm.service.CommerceGMService" />
+	<bean id="commerceMemberService" class="com.imop.lj.gm.service.CommerceMemberService" />
+	<bean id="addressBookService" class="com.imop.lj.gm.service.AddressBookService" />
+	
+	
+	<bean id="brosorUrlService" class="com.imop.lj.gm.service.notice.BrosorUrlService" />
+	
+	<bean id="userPrizeAllService" class="com.imop.lj.gm.service.maintenance.UserPrizeAllService">
+		<property name="gmConfig" ref="gmConfig"></property>
+	</bean>
+	<bean id="worldGiftService" class="com.imop.lj.gm.service.WorldGiftService" >
+		<property name="gmConfig" ref="gmConfig"></property>
+	</bean>
+
+	<bean id="cdkeyPlansService" class="com.imop.lj.gm.service.cdkey.CDKeyPlansService" >
+		<property name="gmConfig" ref="gmConfig"></property>
+	</bean>	
+	
+	<!-- **********notice Service******************** -->
+	<bean id="timeNoticeService" class="com.imop.lj.gm.service.notice.TimeNoticeService" >
+		<property name="gmConfig" ref="gmConfig" />
+	</bean>
+	<bean id="gameNoticeService" class="com.imop.lj.gm.service.notice.GameNoticeService" >
+		<property name="gmConfig" ref="gmConfig" />	
+	</bean>
+	<bean id="svrSYNService" class="com.imop.lj.gm.service.notice.SvrSYNService" />
+	<bean id="regionSYNService" class="com.imop.lj.gm.service.notice.RegionSYNService" />
+	
+	<!-- **********log  Service******************** -->
+	<bean id="basicLogService" class="com.imop.lj.gm.service.log.BasicLogService"/>
+	<bean id="logReasonService" class="com.imop.lj.gm.service.log.LogReasonService" />
+	<bean id="petLogService" class="com.imop.lj.gm.service.log.PetLogService" />
+	<bean id="battleLogService" class="com.imop.lj.gm.service.log.BattleLogService" />
+	<bean id="exportService" class="com.imop.lj.gm.service.log.ExportService" >
+		<property name="exportDAO" ref="exportDAO" />
+	</bean>
+	
+	
+	
+	<!-- **********job  Service******************** -->
+	<bean id="jobManageService" class="com.imop.lj.gm.service.job.JobManageService" />
+	<bean id="schedulerService" class="com.imop.lj.gm.service.job.SchedulerServiceImpl" />
+	
+	<!-- **********maintenance  Service******************** -->
+	<bean id="cmdManageService" class="com.imop.lj.gm.service.maintenance.CmdManageService" />
+	<bean id="svrStatusService" class="com.imop.lj.gm.service.maintenance.SvrStatusService" />
+	<bean id="userPrizeService" class="com.imop.lj.gm.service.maintenance.UserPrizeService" >
+		<property name="gmConfig" ref="gmConfig" />
+	</bean>
+	<bean id="prizeService" class="com.imop.lj.gm.service.maintenance.PrizeService" >
+		<property name="gmConfig" ref="gmConfig"></property>
+	</bean>
+	<bean id="accessControlService" class="com.imop.lj.gm.service.maintenance.AccessControlService" />
+	<bean id="svrMonitorService" class="com.imop.lj.gm.service.maintenance.SvrMonitorService" />
+	<bean id="wallowControlService" class="com.imop.lj.gm.service.maintenance.WallowControlService"/>
+	<bean id="mallService" class="com.imop.lj.gm.service.maintenance.MallService"/>
+	
+	<!-- **********check  Service******************** -->
+	<bean id="newSvrCheckService" class="com.imop.lj.gm.service.check.NewSvrCheckService" />
+	<bean id="newSvrClearService" class="com.imop.lj.gm.service.check.NewSvrClearService" />
+	
+	<!-- **********sys  Service******************** -->
+	<bean id="sysUserService" class="com.imop.lj.gm.service.sys.SysUserService" />
+	<bean id="genericDAO" class="com.imop.lj.gm.dao.GenericDAO" />
+	<bean id="paramGenericDAO" class="com.imop.lj.gm.dao.ParamGenericDAO" />
+	<bean id="userInfoDAO" class="com.imop.lj.gm.dao.UserInfoDAO" />
+	<bean id="branchDAO" class="com.imop.lj.gm.dao.BranchDAO" />
+	<bean id="employeeDAO" class="com.imop.lj.gm.dao.EmployeeDAO" />
+	<bean id="roleDAO" class="com.imop.lj.gm.dao.RoleDAO" />
+	<bean id="petDAO" class="com.imop.lj.gm.dao.PetDAO" />
+	<bean id="guildInfoDAO" class="com.imop.lj.gm.dao.GuildInfoDAO" />
+	<bean id="shopmallInfoDAO" class="com.imop.lj.gm.dao.ShopmallInfoDAO" />
+	<bean id="corpsInfoDAO" class="com.imop.lj.gm.dao.CorpsInfoDAO" />
+	<!-- **********GM Conf  Service******************** -->
+	
+	
+	<!-- **********notice dao******************** -->
+	<bean id="timeNoticeDAO" class="com.imop.lj.gm.dao.notice.TimeNoticeDAO" />
+	<bean id="gameNoticeDAO" class="com.imop.lj.gm.dao.notice.GameNoticeDAO" />
+	
+	<!-- **********log dao******************** -->
+	<bean id="basicLogDAO" class="com.imop.lj.gm.dao.log.BasicLogDAO"/>
+	<bean id="logReasonDAO" class="com.imop.lj.gm.dao.log.LogReasonDAO" />
+	<bean id="moneyLogDAO" class="com.imop.lj.gm.dao.log.MoneyLogDAO" />
+	<bean id="taskLogDAO" class="com.imop.lj.gm.dao.log.TaskLogDAO" />	
+	<bean id="prizeLogDAO" class="com.imop.lj.gm.dao.log.PrizeLogDAO" />
+	<bean id="chatLogDAO" class="com.imop.lj.gm.dao.log.ChatLogDAO" />	
+	<bean id="battleLogDAO" class="com.imop.lj.gm.dao.log.BattleLogDAO" />
+	<bean id="itemLogDAO" class="com.imop.lj.gm.dao.log.ItemLogDAO" />
+	<bean id="itemGenLogDAO" class="com.imop.lj.gm.dao.log.ItemGenLogDAO" />
+	<bean id="gmCommandLogDAO" class="com.imop.lj.gm.dao.log.GmCommandLogDAO" />
+	<bean id="exportDAO" class="com.imop.lj.gm.dao.log.ExportDAO" />
+	
+	<!--  <bean id="campLogDAO" class="com.imop.lj.gm.dao.log.CampLogDAO" />
+	<bean id="grainLogDAO" class="com.imop.lj.gm.dao.log.GrainLogDAO" />
+	<bean id="exploitLogDAO" class="com.imop.lj.gm.dao.log.ExploitLogDAO" />
+	<bean id="prestigeLogDAO" class="com.imop.lj.gm.dao.log.PrestigeLogDAO" />
+	<bean id="petLogDAO" class="com.imop.lj.gm.dao.log.PetLogDAO" />
+	<bean id="warLogDAO" class="com.imop.lj.gm.dao.log.WarLogDAO" />
+	<bean id="petLevelLogDAO" class="com.imop.lj.gm.dao.log.PetLevelLogDAO" />
+	<bean id="petExpLogDAO" class="com.imop.lj.gm.dao.log.PetExpLogDAO" />
+	<bean id="chargeLogDAO" class="com.imop.lj.gm.dao.log.ChargeLogDAO" />
+	<bean id="exportDAO" class="com.imop.lj.gm.dao.log.ExportDAO" />
+	<bean id="arenaLogDAO" class="com.imop.lj.gm.dao.log.ArenaLogDAO" />
+	<bean id="behaviorLogDAO" class="com.imop.lj.gm.dao.log.BehaviorLogDAO" />
+	<bean id="districtLogDAO" class="com.imop.lj.gm.dao.log.DistrictLogDAO" />
+	<bean id="escortLogDAO" class="com.imop.lj.gm.dao.log.EscortLogDAO" />
+	<bean id="huntItemLogDAO" class="com.imop.lj.gm.dao.log.HuntItemLogDAO" />
+	<bean id="hunterLogDAO" class="com.imop.lj.gm.dao.log.HunterLogDAO" />
+	<bean id="mailLogDAO" class="com.imop.lj.gm.dao.log.MailLogDAO" />
+	<bean id="missionLogDAO" class="com.imop.lj.gm.dao.log.MissionLogDAO" />
+	<bean id="onlineTimeLogDAO" class="com.imop.lj.gm.dao.log.OnlineTimeLogDAO" />
+	<bean id="playerLoginLogDAO" class="com.imop.lj.gm.dao.log.PlayerLoginLogDAO" />
+	<bean id="relationLogDAO" class="com.imop.lj.gm.dao.log.RelationLogDAO" />
+	<bean id="probeLogDAO" class="com.imop.lj.gm.dao.log.ProbeLogDAO" />-->
+	
+	<!-- **********check  dao******************** -->
+	<bean id="newSvrCheckDAO" class="com.imop.lj.gm.dao.check.NewSvrCheckDAO" />
+	<bean id="newSvrClearDAO" class="com.imop.lj.gm.dao.check.NewSvrClearDAO" />
+	
+	<!-- ********** sys dao******************** -->
+	<bean id="userPrizeDAO" class="com.imop.lj.gm.dao.maintenance.UserPrizeDAO" />
+	<bean id="prizeDAO" class="com.imop.lj.gm.dao.maintenance.PrizeDAO" />
+	<bean id="mallDAO" class="com.imop.lj.gm.dao.maintenance.MallDao" />
+	<!-- ********** sys dao******************** -->
+	<bean id="sysUserDAO" class="com.imop.lj.gm.dao.sys.SysUserDAO" />	
+	
+	<!-- *************gameWorldManage DAO****************** -->
+	<bean id="battleDao" class="com.imop.lj.gm.dao.BattleDAO" />
+	<bean id="arenaSnapDAO" class="com.imop.lj.gm.dao.ArenaSnapDAO" />
+	<bean id="bossDao" class="com.imop.lj.gm.dao.BossDAO" />
+	<bean id="dailyQuestDAO" class="com.imop.lj.gm.dao.DailyQuestDAO" />
+	<bean id="dbVersionDAO" class="com.imop.lj.gm.dao.DbVersionDAO" />
+	<bean id="escortHelpSnapDAO" class="com.imop.lj.gm.dao.EscortHelpSnapDAO" />
+	<bean id="relationDAO" class="com.imop.lj.gm.dao.RelationDAO" />
+	<bean id="escortSnapDAO" class="com.imop.lj.gm.dao.EscortSnapDAO" />
+	<bean id="secretaryDAO" class="com.imop.lj.gm.dao.SecretaryDAO" />
+	<bean id="doingQuestDAO" class="com.imop.lj.gm.dao.DoingQuestDAO" />
+	<bean id="finishedQuestDAO" class="com.imop.lj.gm.dao.FinishedQuestDAO" />
+	<bean id="hunterDAO" class="com.imop.lj.gm.dao.HunterDAO" />
+	<bean id="itemDAO" class="com.imop.lj.gm.dao.ItemDAO" />
+	<bean id="tempHuntBagDAO" class="com.imop.lj.gm.dao.TempHuntBagDAO" />
+	<bean id="sortArenaLevelDAO" class="com.imop.lj.gm.dao.SortArenaLevelDAO" />
+	<!-- <bean id="prizeInfoDAO" class="com.imop.lj.gm.dao.PrizeInfoDAO" /> -->
+	<bean id="sortHonerLevelDAO" class="com.imop.lj.gm.dao.SortHonerLevelDAO" />
+	<bean id="sortCompanyInComeLevelDAO" class="com.imop.lj.gm.dao.SortCompanyInComeLevelDAO" />
+	<bean id="commerceGMDAO" class="com.imop.lj.gm.dao.CommerceGMDAO" />
+	<bean id="commerceMemberDAO" class="com.imop.lj.gm.dao.CommerceMemberDAO" />
+	<bean id="addressBookDAO" class="com.imop.lj.gm.dao.AddressBookDAO" />
+	<bean id="queryDAO" class="com.imop.lj.gm.dao.QueryDAO" />
+	
+	<bean id="brosorDAO" class="com.imop.lj.gm.dao.notice.BrosorDAO" />
+	<bean id="mobileActivityDAO" class="com.imop.lj.gm.dao.notice.MobileActivityDAO" />
+	<!-- 过滤词 -->
+	<bean id="dirtyWorldsTypeDAO" class="com.imop.lj.gm.dao.notice.DirtyWorldsTypeDAO" />
+	<bean id="dirtyWorldsTypeService" class="com.imop.lj.gm.service.notice.DirtyWorldsTypeService" />
+	
+	<!--
+	<bean id="cardActivityDAO" class="com.imop.lj.gm.dao.CardActivityDAO" />
+	<bean id="turntableActivityDAO" class="com.imop.lj.gm.dao.TurntableActivityDAO" />
+	-->
+	<bean id="qqMarketTaskTargetDAO" class="com.imop.lj.gm.dao.QQMarketTaskTargetDAO" />
+	<bean id="cdkeyDAO" class="com.imop.lj.gm.dao.cdkey.CDKeyDAO" />
+	<bean id="worldGiftDAO" class="com.imop.lj.gm.dao.WorldGiftDAO" />
+	<bean id="cdkeyPlansDAO" class="com.imop.lj.gm.dao.cdkey.CDKeyPlansDAO" />
+</beans>

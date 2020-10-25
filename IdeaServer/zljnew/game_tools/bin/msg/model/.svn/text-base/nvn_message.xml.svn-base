@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="nvn">
+
+	<message type="CG_NVN_ENTER" comment="请求进入nvn联赛">
+	</message>
+	
+	<message type="CG_NVN_OPEN_PANEL" comment="请求nvn面板信息">
+	</message>
+	
+	<message type="GC_NVN_MY_INFO" comment="nvn联赛我的信息">
+		<field type="Integer" name="rank" comment="排名" />
+		<field type="Integer" name="conWinNum" comment="连胜数" />
+		<field type="Integer" name="score" comment="积分" />
+		<field type="Integer" name="teamScore" comment="队伍积分" />
+		<field type="Integer" name="teamStatus" comment="队伍状态" />
+		<field type="String" list="true" name="myLog" comment="积分日志列表" />
+	</message>
+
+	<message type="GC_NVN_RANK_LIST" comment="nvn联赛排行榜">
+		<field type="Integer" name="myRank" comment="我的排名"/>
+		<field type="Integer" name="myScore" comment="我的积分"/>
+		<field type="Integer" name="myConWinNum" comment="我的连胜数" />
+		<field type="com.imop.lj.common.model.nvn.NvnRankInfo" name="nvnRankInfoList" clientType="NvnRankInfo"
+					comment="nvn联赛排行榜信息" list="true" >
+			<field type="Long" name="roleId" comment="玩家id" />
+			<field type="Integer" name="tplId" comment="玩家模板id" />
+			<field type="String" name="name" comment="玩家名称"/>
+			<field type="Integer" name="rank" comment="排名"/>
+			<field type="Integer" name="score" comment="积分"/>
+			<field type="Integer" name="conWinNum" comment="连胜数" />
+		</field>
+	</message>
+	
+	<message type="GC_NVN_MATCHED_TEAM_INFO" comment="nvn联赛匹配到的队伍信息">
+		<field type="Integer" name="teamScore" comment="队伍积分" />
+		<field type="com.imop.lj.common.model.team.TeamMemberInfo" name="teamMemberInfos"
+			clientType="TeamMemberInfo" macro="TeamMemberInfo" list="true" comment="队员信息列表" >
+		</field>
+	</message>
+	
+	<message type="CG_NVN_CANCLE_MATCH" comment="nvn取消匹配">
+	</message>
+	
+	<message type="CG_NVN_START_MATCH" comment="nvn开始匹配">
+	</message>
+	
+	<message type="GC_NVN_MATCH_STATUS" comment="nvn队伍状态变化">
+		<field type="Integer" name="teamStatus" comment="队伍状态" />
+	</message>
+	
+	<message type="CG_NVN_LEAVE" comment="退出nvn联赛">
+	</message>
+	
+	<message type="GC_NVN_LEAVE" comment="退出nvn联赛">
+	</message>
+	
+	<message type="CG_NVN_RULE" comment="nvn联赛规则">
+	</message>
+	
+	<message type="GC_NVN_RULE" comment="nvn联赛规则">
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="memberNum" comment="人数最低" />
+		<field type="String" name="showRewardNameList" list="true" comment="奖励名称" />
+		<field type="String" name="showRewardList" list="true" comment="奖励内容" />
+	</message>
+	
+	<message type="CG_NVN_TOP_RANK_LIST" comment="请求nvn联赛排行榜">
+	</message>
+	
+</messages>

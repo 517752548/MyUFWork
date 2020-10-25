@@ -1,0 +1,8 @@
+int itemId;[notNull=true;minValue=0]//消耗物品ID
+int itemNum;[notNull=true;minValue=0]//消耗物品数量
+int currencyNum;[notNull=false;minValue=0]//消耗金币
+int currencyType;[notNull=false;minValue=0]//货币种类
+int perceptionLevel;[notNull=false;minValue=0]//开启悟性等级
+int minQuality;[notNull=true;minValue=1]//品质下限
+int maxQuality;[notNull=true;minValue=1]//品质上限
+String name;//名称

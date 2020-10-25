@@ -1,0 +1,11 @@
+#macro( smallType $type)
+#if($type == "Short")short#elseif( $type == "Integer" )int#elseif( $type == "String" )string#elseif( $type == "Byte" )byte#elseif( $type == "Long" )long#elseif( $type == "Float" )float#elseif( $type == "Double" )double#elseif( $type == "Boolean" )bool#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+#macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+
+	// $field.comment
+	WriteShort((short)${newFieldName}.Length);
+	int ${newFieldName}Index = 0;
+	int ${newFieldName}Size = ${newFieldName}.Length;
+	for(${newFieldName}Index=0; ${newFieldName}Index<${newFieldName}Size; ${newFieldName}Index++){

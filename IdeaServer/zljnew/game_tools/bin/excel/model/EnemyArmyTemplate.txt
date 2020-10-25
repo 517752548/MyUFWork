@@ -1,0 +1,6 @@
+long nameLangId;[notNull=false]//名称多语言Id
+String name;[notNull=false]//名称
+List<com.imop.lj.gameserver.enemy.template.EnemyProbTemplate> enemyIdAndProbList;[Collection(10,2)]//敌人Id列表
+int rewardId;[notNull=false;minValue=0]//胜利奖励Id
+int doublePointCost;[notNull=false;minValue=0]//扣除双倍点
+int isTower;[notNull=false;minValue=0]//是否是通天塔

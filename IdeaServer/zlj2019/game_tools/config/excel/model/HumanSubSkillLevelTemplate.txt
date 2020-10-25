@@ -1,0 +1,7 @@
+int subSkillId;[minValue=1;notNull=true]//技能ID
+String name;//技能名称
+int subSkillLevel;[minValue=1;notNull=true]//技能等级
+int needMainSkillLevel;[minValue=1;notNull=true]//所需心法等级
+int needHumanLevel;[minValue=1;notNull=true]//所需玩家等级
+List<com.imop.lj.gameserver.humanskill.template.HumanSubSkillCost> humanSubSkillCostList;[Collection(10,1)]//升级技能层数熟练度列表
+int subSkillBookId;[minValue=1;notNull=true]//消耗技能书Id

@@ -1,0 +1,5 @@
+message com.imop.lj.logserver.model.TowerLog(
+	int curTowerLevel;//当前玩家的通天塔层数
+	int curDoublePoint;//当前双倍点数
+	int isOpenDouble;//是否开启双倍,1:是,0:否
+)

@@ -1,0 +1,112 @@
+log4j.rootLogger=info,stdout
+log4j.logger.tr=info,all,stdout,error
+log4j.logger.tr.msg=debug,all,stdout,error
+log4j.logger.tr.scene=info,S
+log4j.logger.tr.client=info,C
+log4j.logger.tr.logout=info,LO
+log4j.logger.tr.login=info,LI
+log4j.logger.tr.charge=debug,charge
+log4j.logger.tr.battle=debug
+
+log4j.additivity.tr=false
+log4j.additivity.tr.msg=false
+log4j.additivity.tr.scene=false
+log4j.additivity.tr.client=false
+
+log4j.logger.scribe-data=debug,scribe-data
+log4j.logger.scribe-finance=debug,scribe-finance
+log4j.additivity.scribe-finance=true
+log4j.additivity.scribe-data=true
+log4j.logger.local=debug,local
+
+#--------------------stdout--------------------------------
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.encoding=UTF-8
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{HH:mm:ss} [%-5p] - %C{1}.%M - %m%n
+
+#--------------------all--------------------------------
+log4j.appender.all=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.all.encoding=UTF-8
+log4j.appender.all.append=true
+log4j.appender.all.datePattern='.'yyyy-MM-dd
+log4j.appender.all.File=logs/all.log
+log4j.appender.all.layout=org.apache.log4j.PatternLayout
+log4j.appender.all.layout.ConversionPattern=%d{HH:mm:ss,SSS} - %C{1}.%M - %m%n
+
+#--------------------error--------------------------------
+log4j.appender.error=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.error.Threshold=WARN
+log4j.appender.error.encoding=UTF-8
+log4j.appender.error.append=true
+log4j.appender.error.datePattern='.'yyyy-MM-dd
+log4j.appender.error.File=logs/error.log
+log4j.appender.error.layout=org.apache.log4j.PatternLayout
+log4j.appender.error.layout.ConversionPattern=%d{HH:mm:ss,SSS} - %C{1}.%M - %m%n
+
+log4j.appender.S=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.S.encoding=UTF-8
+log4j.appender.S.append=true
+log4j.appender.S.datePattern='.'yyyy-MM-dd
+log4j.appender.S.File=logs/game_server.scene.log
+log4j.appender.S.layout=org.apache.log4j.PatternLayout
+log4j.appender.S.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.C=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.C.encoding=UTF-8
+log4j.appender.C.append=true
+log4j.appender.C.datePattern='.'yyyy-MM-dd
+log4j.appender.C.File=logs/game_server.client.log
+log4j.appender.C.layout=org.apache.log4j.PatternLayout
+log4j.appender.C.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.LO=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.LO.encoding=UTF-8
+log4j.appender.LO.append=true
+log4j.appender.LO.datePattern='.'yyyy-MM-dd
+log4j.appender.LO.File=logs/game_server.logout.log
+log4j.appender.LO.layout=org.apache.log4j.PatternLayout
+log4j.appender.LO.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.LI=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.LI.encoding=UTF-8
+log4j.appender.LI.append=true
+log4j.appender.LI.datePattern='.'yyyy-MM-dd
+log4j.appender.LI.File=logs/game_server.login.log
+log4j.appender.LI.layout=org.apache.log4j.PatternLayout
+log4j.appender.LI.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+#----------------debug-info [scribe-data] -------------
+log4j.appender.scribe-data=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.scribe-data.encoding=UTF-8
+log4j.appender.scribe-data.append=true
+log4j.appender.scribe-data.datePattern='.'yyyy-MM-dd
+log4j.appender.scribe-data.File=logs/scribe-data.log
+log4j.appender.scribe-data.layout=org.apache.log4j.PatternLayout
+log4j.appender.scribe-data.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+#----------------finance-info [scribe-finance] -------------
+log4j.appender.scribe-finance=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.scribe-finance.encoding=UTF-8
+log4j.appender.scribe-finance.append=true
+log4j.appender.scribe-finance.datePattern='.'yyyy-MM-dd
+log4j.appender.scribe-finance.File=logs/scribe-finance.log
+log4j.appender.scribe-finance.layout=org.apache.log4j.PatternLayout
+log4j.appender.scribe-finance.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+
+log4j.appender.local=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.local.encoding=UTF-8
+log4j.appender.local.append=true
+log4j.appender.local.datePattern='.'yyyy-MM-dd
+log4j.appender.local.File=logs/local.log
+log4j.appender.local.layout=org.apache.log4j.PatternLayout
+log4j.appender.local.layout.ConversionPattern=%d{HH:mm:ss} - %m%n
+
+log4j.appender.charge=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.charge.encoding=UTF-8
+log4j.appender.charge.append=true
+log4j.appender.charge.datePattern='.'yyyy-MM-dd
+log4j.appender.charge.File=logs/charge.log
+log4j.appender.charge.layout=org.apache.log4j.PatternLayout
+log4j.appender.charge.layout.ConversionPattern=%d{HH:mm:ss} - %m%n

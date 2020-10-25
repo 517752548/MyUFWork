@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="pop_tips_log" type="com.imop.lj.logserver.model.PopTipsLog" />
+    <insert id="insert_pop_tips_log" parameterClass="pop_tips_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,char_id,char_name,level,country_id,vip_level,total_charge,device_id,device_type,device_version,client_version,client_language,appid,f_value,reason,param,human_uuid,poptip_lint_type,poptips_link_id,human_orignal_value,human_after_operator_value, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#charId#,#charName#,#level#,#countryId#,#vipLevel#,#totalCharge#,#deviceId#,#deviceType#,#deviceVersion#,#clientVersion#,#clientLanguage#,#appid#,#fValue#,#reason#,#param#,#humanUuid#,#poptipLintType#,#poptipsLinkId#,#humanOrignalValue#,#humanAfterOperatorValue#, #createTime#)</insert>
+    <statement id="createTable_pop_tips_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id varchar(128),
+	account_name varchar(128),
+	char_id bigint not null,
+	char_name varchar(128),
+	level int(11) ,
+	country_id int(11) ,
+	vip_level int(11) ,
+	total_charge int(11) ,
+	device_id varchar(256),
+	device_type varchar(256),
+	device_version varchar(256),
+	client_version varchar(256),
+	client_language varchar(256),
+	appid varchar(256),
+	f_value varchar(256),
+	reason int(11) ,
+	param text ,
+	human_uuid bigint ,
+	poptip_lint_type int(11) ,
+	poptips_link_id int(11) ,
+	human_orignal_value int(11) ,
+	human_after_operator_value int(11) ,
+createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+	,key char_id (char_id)
+	,key char_name (char_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

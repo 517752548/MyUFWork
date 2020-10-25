@@ -1,0 +1,4 @@
+int groupId;[minValue=1;notNull=false]//材料提升概率组id
+int gradeId;[minValue=1;notNull=false]//阶数Id
+List<Integer> propList;[Collection(5,1)] //影响概率值
+int maxNum;[minValue=1;notNull=false]//材料最大数量

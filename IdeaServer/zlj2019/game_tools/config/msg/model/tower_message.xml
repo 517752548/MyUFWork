@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="tower">
+	
+	<message type="CG_TOWER_INFO" comment="请求打开通天塔面板"/>
+	
+	<message type="GC_TOWER_INFO" comment="返回通天塔面板信息">
+		<field type="com.imop.lj.common.model.tower.TowerInfo"
+			clientType="TowerInfo" 
+			name="towerInfo"  macro="TowerInfo" comment="通天塔面板信息">
+		</field>
+	</message>
+	
+	<message type="CG_OPEN_DOUBLE_STATUS" comment="请求开启双倍状态">
+		<field type="Integer" name="openOrClose" comment="1开启，0关闭"/>
+	</message>
+	<message type="GC_OPEN_DOUBLE_STATUS" comment="返回结果">
+		<field type="Integer" name="result" comment="操作结果，1成功，2失败"/>
+		<field type="Integer" name="curDoublePoint" comment="剩余双倍点数"/>
+	</message>
+	
+	<message type="CG_WATCH_FIRST_KILLER_REPLAY" comment="请求查看最先击败者">
+		<field type="Integer" name="towerLevel" comment="通天塔层数"/>
+	</message>
+	<message type="GC_WATCH_FIRST_KILLER_REPLAY" comment="返回最先击败者战报" compress="true">
+		<field type="Long" name="charId" comment="玩家Id"/>
+		<field type="Integer" name="round" comment="玩家挑战回合数"/>
+		<field type="Integer" name="level" comment="玩家等级"/>
+		<field type="Long" name="battleEndTime" comment="玩家挑战结束时间"/>
+		<field type="String" name="firstKillerInfo" comment="最先击败者战报"></field>
+	</message>
+	
+	<message type="CG_WATCH_BEST_KILLER_REPLAY" comment="请求查看最优击败者">
+		<field type="Integer" name="towerLevel" comment="通天塔层数"/>
+	</message>
+	<message type="GC_WATCH_BEST_KILLER_REPLAY" comment="返回最优击败者战报" compress="true">
+		<field type="Long" name="charId" comment="玩家Id"/>
+		<field type="Integer" name="round" comment="玩家挑战回合数"/>
+		<field type="Integer" name="level" comment="玩家等级"/>
+		<field type="Long" name="battleDuration" comment="玩家挑战持续时间"/>
+		<field type="String" name="bestKillerInfo" comment="最优击败者战报"></field>
+	</message>
+	
+	<message type="CG_TOWER_REWARD" comment="请求查看通天塔每层的奖励">
+	</message>
+	
+	<message type="GC_TOWER_REWARD" comment="返回查看通天塔每层的奖励">
+		<field type="String" name="showRewardNameList" list="true" comment="奖励名称" />
+		<field type="String" name="showRewardList" list="true" comment="奖励内容" />
+	</message>
+	
+	<message type="CG_GUAJI" comment="请求挂机">
+		<field type="Integer" name="mapId" comment="玩家所在地图Id"/>
+	</message>
+	
+	<message type="GC_GUAJI" comment="返回挂机结果">
+			<field type="Integer" name="result" comment="1成功，2失败"/>
+	</message>
+	
+	<message type="GC_STOP_GUAJI" comment="停止挂机">
+		<field type="Integer" name="mapId" comment="玩家所在地图Id"/>
+	</message>
+	
+</messages>

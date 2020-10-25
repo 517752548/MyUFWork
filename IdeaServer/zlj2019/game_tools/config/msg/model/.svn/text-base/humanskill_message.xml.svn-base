@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.imop.lj.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.imop.lj.message message.xsd" module="humanskill">
+	
+	<message type="GC_HS_MAIN_SKILL_INFO" comment="心法信息">
+		<field type="com.imop.lj.common.model.humanskill.MainSkillInfo" name="mainSkillInfos" clientType="MainSkillInfo"
+			comment="心法信息列表" macro="MainSkillInfo" list="true"/>
+	</message>
+	
+	<message type="CG_HS_MAIN_SKILL_UPGRADE" comment="心法升级">
+		<field type="Integer" name="mindId" comment="心法ID"/>
+		<field type="Integer" name ="isBatch" comment="修炼方式是否批量,0-否,1-是"/>
+	</message>
+	
+	<message type="GC_HS_MAIN_SKILL_UPGRADE" comment="心法升级结果">
+		<field type="Integer" name="result" comment="结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_HS_SUB_SKILL_UPGRADE" comment="人物技能升级">
+		<field type="Integer" name="itemId" comment="技能书道具Id"/>
+	</message>
+	
+	<message type="GC_HS_SUB_SKILL_UPGRADE" comment="人物技能升级结果">
+		<field type="Integer" name="result" comment="结果 1成功,2失败"/>
+	</message>
+	
+	<message type="CG_HS_SUB_SKILL_ADD_PROFICIENCY" comment="人物技能增加熟练度">
+		<field type="Integer" name="skillId" comment="技能ID"/>
+	</message>
+	
+	<message type="CG_HS_OPEN_PANEL" comment="打开心法技能面板">
+	</message>
+	
+	<message type="GC_HS_OPEN_PANEL" comment="打开心法技能面板">
+		<field type="Integer" name="mindFlag" comment="心法页签红点，0没有，1有"/>
+		<field type="Integer" name="skillFlag" comment="技能页签红点，0没有，1有"/>
+		<field type="com.imop.lj.common.model.humanskill.MainSkillTipsInfo" name="mainSkillTipsInfo" clientType="MainSkillTipsInfo"
+			comment="心法技能提升列表" macro="MainSkillTipsInfo"/>
+		<field type="Integer" name="cultivateFlag" comment="修炼页签红点，0没有，1有"/>
+		<field type="Integer" name="assistFlag" comment="辅助页签红点，0没有，1有"/>
+		<field type="Integer" name="lifeSkillFlag" comment="生活技能页签红点，0没有，1有"/>
+	</message>
+	
+	
+	
+</messages>

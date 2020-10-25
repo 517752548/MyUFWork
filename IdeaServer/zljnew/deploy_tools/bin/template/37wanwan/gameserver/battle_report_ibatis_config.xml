@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-config-2.dtd" >
+<sqlMapConfig>
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="64" maxSessions="30"
+		maxTransactions="100" useStatementNamespaces="false" />
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+			<property name="JDBC.ConnectionURL"
+				value="jdbc:mysql://127.0.0.1:${battle_report_db.port}/${battle_report_db.database}?useUnicode=true&amp;characterEncoding=utf-8" />
+			<property name="JDBC.Username" value="${mmo_db.username}" />
+			<property name="JDBC.Password" value="${mmo_db.password}" />
+			<property name="Pool.MaximumActiveConnections" value="50" />
+			<property name="Pool.MaximumIdleConnections" value="1" />
+		</dataSource>
+	</transactionManager>
+	<!-- 配置开始 -->
+	<sqlMap resource="com/imop/lj/gameserver/battlereport/battle_report.xml" />
+	<!-- 配置结束 -->
+</sqlMapConfig>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>qqapi</display-name>
+	<welcome-file-list>
+		<welcome-file>api/index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/applicationContext*.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>com.renren.games.api.listener.LifeCycleListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<display-name>TestServlet</display-name>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.TestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/api/index.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>GroovyServlet</display-name>
+		<servlet-name>GroovyServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.GroovyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GroovyServlet</servlet-name>
+		<url-pattern>/api/groovy</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LocalLoginServlet</display-name>
+		<servlet-name>LocalLoginServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalLoginServlet</servlet-name>
+		<url-pattern>/u.login.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LocalActiviteUserServlet</display-name>
+		<servlet-name>LocalActiviteUserServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalActiviteUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalActiviteUserServlet</servlet-name>
+		<url-pattern>/u.activeusecode.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LocalGetVersionServlet</display-name>
+		<servlet-name>LocalGetVersionServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalGetVersionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LocalGetVersionServlet</servlet-name>
+		<url-pattern>/u.getversion.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LocalStatusServlet</display-name>
+		<servlet-name>LocalStatusServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalStatusServlet</servlet-name>
+		<url-pattern>/u.status.php</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>LocalOnlineServlet</display-name>
+		<servlet-name>LocalOnlineServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalOnlineServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalOnlineServlet</servlet-name>
+		<url-pattern>/u.online.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LocalQueryRechargeServlet</display-name>
+		<servlet-name>LocalQueryRechargeServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalQueryRechargeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalQueryRechargeServlet</servlet-name>
+		<url-pattern>/u.queryrecharge.php</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>LocalGenerateOrderServlet</display-name>
+		<servlet-name>LocalGenerateOrderServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalGenerateOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalGenerateOrderServlet</servlet-name>
+		<url-pattern>/u.generateorder.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>LocalExchangeChargeServlet</display-name>
+		<servlet-name>LocalExchangeChargeServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.LocalExchangeRechargeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LocalExchangeChargeServlet</servlet-name>
+		<url-pattern>/u.exchangerecharge.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ChannelAnySdkOauthLoginServlet</display-name>
+		<servlet-name>ChannelAnySdkOauthLoginServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.ChannelAnySdkOauthLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelAnySdkOauthLoginServlet</servlet-name>
+		<url-pattern>/channel/anysdk/oauthlogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ChannelAnySdkPayServlet</display-name>
+		<servlet-name>ChannelAnySdkPayServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.ChannelAnySdkPayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelAnySdkPayServlet</servlet-name>
+		<url-pattern>/channel/anysdk/pay</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ChannelZZPayServlet</display-name>
+		<servlet-name>ChannelZZPayServlet</servlet-name>
+		<servlet-class>com.renren.games.api.channel.zz.ZZPayCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelZZPayServlet</servlet-name>
+		<url-pattern>/channel/zz/pay</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ChannelUCPayServlet</display-name>
+		<servlet-name>ChannelUCPayServlet</servlet-name>
+		<servlet-class>com.renren.games.api.channel.uc.UCPayCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelUCPayServlet</servlet-name>
+		<url-pattern>/channel/uc/pay</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>ChannelYJLogin</display-name>
+		<servlet-name>ChannelYJLogin</servlet-name>
+		<servlet-class>com.renren.games.api.channel.yj.YJLoginCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelYJLogin</servlet-name>
+		<url-pattern>/channel/yj/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>ChannelYJPay</display-name>
+		<servlet-name>ChannelYJPay</servlet-name>
+		<servlet-class>com.renren.games.api.channel.yj.YJPayCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelYJPay</servlet-name>
+		<url-pattern>/channel/yj/pay</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>ChannelTCDKeyServlet</display-name>
+		<servlet-name>ChannelTCDKeyServlet</servlet-name>
+		<servlet-class>com.renren.games.api.servlet.ChannelTCDkeyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelTCDKeyServlet</servlet-name>
+		<url-pattern>/channel/tcdkey/create</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>ChannelTSZLoginServlet</display-name>
+		<servlet-name>ChannelTSZLoginServlet</servlet-name>
+		<servlet-class>com.renren.games.api.channel.tsz.TSZLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelTSZLoginServlet</servlet-name>
+		<url-pattern>/channel/tsz/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ChannelMIPayServlet</display-name>
+		<servlet-name>ChannelMIPayServlet</servlet-name>
+		<servlet-class>com.renren.games.api.channel.mi.MIPayCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelMIPayServlet</servlet-name>
+		<url-pattern>/channel/mi/pay</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ChangeTest3000User</display-name>
+		<servlet-name>ChangeTest3000User</servlet-name>
+		<servlet-class>com.renren.games.api.channel.wingloong.ChangeTest3000User</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangeTest3000User</servlet-name>
+		<url-pattern>/channel/wingloong/changetest3000</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<display-name>ChannelTSZPayCallBackServlet</display-name>
+		<servlet-name>ChannelTSZPayCallBackServlet</servlet-name>
+		<servlet-class>com.renren.games.api.channel.tsz.TSZPayCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChannelTSZPayCallBackServlet</servlet-name>
+		<url-pattern>/channel/tsz/payCallback</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>RuntimeFilter</filter-name>
+		<filter-class>com.renren.games.api.filter.RuntimeFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>RuntimeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

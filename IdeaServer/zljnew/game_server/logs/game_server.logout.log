@@ -1,0 +1,31 @@
+19:29:42 - #OnlinePlayerService#addPlayer#addFlag=true;playerId=-1;passportId=175
+22:31:00 - true;
+22:31:00 - 192.168.1.219:51517 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):192.168.1.219:51517
+22:31:00 - 192.168.1.219:515176、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+22:31:00 - 8、Player logout offlineMsg.execute  player passportId player stateconnected
+22:31:00 - offline player passport=
+22:31:00 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=192.168.1.219:51517;pPlayer=null
+22:31:00 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=192.168.1.219:51517;pPlayer=null;player.getRoleUUID()=-1
+22:31:00 - 192.168.1.219:51517 9、Player logout OnlinePlayerService.offlinePlayer  player passportId player statelogouted
+22:42:45 - #OnlinePlayerService#addPlayer#addFlag=true;playerId=-1;passportId=175
+22:43:27 - 192.168.1.219:52085 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):192.168.1.219:52085
+22:43:27 - 192.168.1.219:520856、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId175
+22:43:27 - 8、Player logout offlineMsg.execute  player passportId175 player stategaming
+22:43:27 - 192.168.1.219:52085 11、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stategaming
+22:43:27 - 192.168.1.219:52085 14、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stateleaving
+22:43:27 - 192.168.1.219:52085 12、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player statelogouting
+22:43:27 - 192.168.1.219:52085 15、Player logout SavePlayerRoleOperation.doStop  player passportId175 player statelogouting
+22:43:27 - offline player passport=175
+22:43:27 - #removePlayer#passportIdPlayers#offline player passportId=175;player=192.168.1.219:52085;pPlayer=192.168.1.219:52085
+22:43:27 - #removePlayer#onlinePlayersMap#offline player passportId=175;player=192.168.1.219:52085;pPlayer=192.168.1.219:52085;player.getRoleUUID()=288516249174948623
+22:43:34 - #OnlinePlayerService#addPlayer#addFlag=true;playerId=-1;passportId=175
+22:43:47 - 192.168.1.219:52124 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):192.168.1.219:52124
+22:43:47 - 192.168.1.219:521246、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId175
+22:43:47 - 8、Player logout offlineMsg.execute  player passportId175 player stategaming
+22:43:47 - 192.168.1.219:52124 11、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stategaming
+22:43:47 - 192.168.1.219:52124 14、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stateleaving
+22:43:47 - 192.168.1.219:52124 12、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player statelogouting
+22:43:47 - 192.168.1.219:52124 15、Player logout SavePlayerRoleOperation.doStop  player passportId175 player statelogouting
+22:43:47 - offline player passport=175
+22:43:47 - #removePlayer#passportIdPlayers#offline player passportId=175;player=192.168.1.219:52124;pPlayer=192.168.1.219:52124
+22:43:47 - #removePlayer#onlinePlayersMap#offline player passportId=175;player=192.168.1.219:52124;pPlayer=192.168.1.219:52124;player.getRoleUUID()=288516249174948623

@@ -1,0 +1,5 @@
+message com.imop.lj.logserver.model.ForageTaskLog(
+	String backupMap;//备选任务状态字符串
+	int curQuestId;//当前任务Id
+	int curQuestStatus;//当前任务状态
+)

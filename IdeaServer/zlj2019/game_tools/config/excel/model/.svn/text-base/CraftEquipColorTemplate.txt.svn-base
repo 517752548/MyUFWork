@@ -1,0 +1,3 @@
+int groupId;[minValue=1;notNull=false]//组Id	
+int gradeId;[minValue=1;notNull=false]//阶数
+List<Integer> propList;[Collection(5,1)] //颜色概率列表

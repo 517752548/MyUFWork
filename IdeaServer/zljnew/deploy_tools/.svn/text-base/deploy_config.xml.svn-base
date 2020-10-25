@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--主要配置 channelName 平台名称根据这个名称找生成模板，如果空则用renren模板生成 -->
+<deploy_config name="s1.zlj.renren.com" language="zh_CN" regionId="2" 
+	serverGroupId="3" localDomain="local.csj.mop.com" channelName="qzone" apiDomain="127.0.0.1:8080" scribeIp="192.168.1.20">
+
+    <!-- 游戏资源路径 -->
+    <resource dir="/data/resource/csj/1.0.0.35.2"/> 
+
+
+
+    <battleReport dir="/data/www_index/reports"/> 
+
+        <!-- 游戏数据库主库信息 -->
+        <mmo_db username="tr_admin" password="123456" ip="10.30.36.160" port="3306" database="tr" />
+
+        <!-- 战报数据库主库信息 -->
+        <battle_report_db username="tr_admin" password="123456" ip="10.30.36.160" port="3306" database="tr_battle_report" />
+
+        <!-- 日志数据库主库信息 -->
+        <log_db username="tr_admin" password="123456" ip="10.30.36.160" port="3306" database="tr_log" />
+
+        <!-- 日志服配置 -->
+        <log_server id="13" name="log_server" lanip="10.30.36.160" lanport="9001" xmx="2048" xms="2048" telnetPort="7001"/>
+
+        <!-- 游戏服配置 -->
+        <game_server serverType="1" kaiyingLog="false" id="1" name="game_server_2" telnetPort="7000" lanip="10.30.36.160" lanport="9002" wanip="60.29.249.160" wanport="8080" xmx="6144" xms="6144" gcOpt="-Xmn4096m -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError" probeTurnOn="ture" operation_com="qzone" chargeEnabled="true" />
+
+        <!-- client配置 -->
+        <client ip="10.22.227.139" title="商战创世纪 - 人人 - 如日中天 - x3.csj.renren.com" resource_url="http://app11111.imgcache.qzone.com" sound_url="http://app11111.imgcache.qzone.com" auto_login="1" operation_com="qzone" clientDomain="s1.zlj.37wanwan.com" show_renren_logo="1" report_url="0" login_url="" />
+
+
+</deploy_config>
