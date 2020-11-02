@@ -1,6 +1,29 @@
 syntax = "proto3";
 package ETHotfix;
 
+message C2R_JTips // IRequest
+{
+	int32 RpcId = 90;
+}
+message R2C_JTips // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+message C2R_JLogin // IRequest
+{
+	int32 RpcId = 90;
+	string userid = 1;  //用户唯一标识
+}
+message R2C_JLogin // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string Address = 1;
+}
+	
 message C2R_Login // IRequest
 {
 	int32 RpcId = 90;

@@ -1,6 +1,18 @@
 using ETModel;
 namespace ETHotfix
 {
+	[Message(HotfixOpcode.C2R_JTips)]
+	public partial class C2R_JTips : IRequest {}
+
+	[Message(HotfixOpcode.R2C_JTips)]
+	public partial class R2C_JTips : IResponse {}
+
+	[Message(HotfixOpcode.C2R_JLogin)]
+	public partial class C2R_JLogin : IRequest {}
+
+	[Message(HotfixOpcode.R2C_JLogin)]
+	public partial class R2C_JLogin : IResponse {}
+
 	[Message(HotfixOpcode.C2R_Login)]
 	public partial class C2R_Login : IRequest {}
 
@@ -36,15 +48,19 @@ namespace ETHotfix
 {
 	public static partial class HotfixOpcode
 	{
-		 public const ushort C2R_Login = 10001;
-		 public const ushort R2C_Login = 10002;
-		 public const ushort C2G_LoginGate = 10003;
-		 public const ushort G2C_LoginGate = 10004;
-		 public const ushort G2C_TestHotfixMessage = 10005;
-		 public const ushort C2M_TestActorRequest = 10006;
-		 public const ushort M2C_TestActorResponse = 10007;
-		 public const ushort PlayerInfo = 10008;
-		 public const ushort C2G_PlayerInfo = 10009;
-		 public const ushort G2C_PlayerInfo = 10010;
+		 public const ushort C2R_JTips = 10001;
+		 public const ushort R2C_JTips = 10002;
+		 public const ushort C2R_JLogin = 10003;
+		 public const ushort R2C_JLogin = 10004;
+		 public const ushort C2R_Login = 10005;
+		 public const ushort R2C_Login = 10006;
+		 public const ushort C2G_LoginGate = 10007;
+		 public const ushort G2C_LoginGate = 10008;
+		 public const ushort G2C_TestHotfixMessage = 10009;
+		 public const ushort C2M_TestActorRequest = 10010;
+		 public const ushort M2C_TestActorResponse = 10011;
+		 public const ushort PlayerInfo = 10012;
+		 public const ushort C2G_PlayerInfo = 10013;
+		 public const ushort G2C_PlayerInfo = 10014;
 	}
 }
