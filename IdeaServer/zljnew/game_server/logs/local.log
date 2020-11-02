@@ -1,22 +1,24 @@
-18:15:31 - #IMOP.LOCAL.LOGGER.INITLIZE...
-18:15:31 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
-18:15:31 - start getting local jar version
-18:15:31 - Local Jar Version:3.3.35
-18:15:31 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:s1.csj.renren.com
-18:15:32 - 55c636df-292b-4553-9709-c33279685e0c	http://39.96.37.184:8081/qqapi/u.getversion.php?domain=s1.csj.renren.com&currenttime=20201025181531&gamecode=csj&platformid=renren.com&domain=s1.csj.renren.com
-18:15:32 - #PLATFORM.LOCAL.REQUEST.ERROR:
-java.io.FileNotFoundException: http://39.96.37.184:8081/qqapi/u.getversion.php?domain=s1.csj.renren.com&currenttime=20201025181531&gamecode=csj&platformid=renren.com&domain=s1.csj.renren.com
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1890)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
-	at com.imop.platform.local.util.HttpUtil.getUrl(HttpUtil.java:60)
-	at com.imop.platform.local.request.AbstractRequest.doRequest(AbstractRequest.java:286)
-	at com.imop.platform.local.request.AbstractRequest.send(AbstractRequest.java:174)
-	at com.imop.platform.local.handler.LocalHandler.getVersion(LocalHandler.java:393)
-	at com.imop.platform.local.HandlerFactory.requestLocalVersion(HandlerFactory.java:106)
-	at com.imop.platform.local.HandlerFactory.createHandler(HandlerFactory.java:74)
-	at com.imop.lj.core.local.LocalService.initHandler(LocalService.java:140)
-	at com.imop.lj.core.local.LocalService.<init>(LocalService.java:70)
-	at com.imop.lj.gameserver.common.Globals.init(Globals.java:861)
-	at com.imop.lj.gameserver.GameServer.init(GameServer.java:74)
-	at com.imop.lj.gameserver.GameServer.main(GameServer.java:345)
-18:15:32 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION.ERROR:-1
+18:29:48 - #IMOP.LOCAL.LOGGER.INITLIZE...
+18:29:48 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+18:29:48 - start getting local jar version
+18:29:48 - Local Jar Version:3.3.35
+18:29:48 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:s1.csj.renren.com
+18:29:48 - 2920b27b-b550-4632-b9d5-5c3858f61a9c	http://39.96.37.184:8082/qqapi/u.getversion.php?domain=s1.csj.renren.com&currenttime=20201027182948&gamecode=csj&platformid=renren.com&domain=s1.csj.renren.com
+18:29:48 - 2920b27b-b550-4632-b9d5-5c3858f61a9c	ok:local_uniform3.3.18	Time:25ms
+18:29:48 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION:local_uniform3.3.18	JAR.VERSION:Unknown
+18:40:08 - #IMOP.LOCAL.LOGGER.INITLIZE...
+18:40:08 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+18:40:08 - start getting local jar version
+18:40:08 - Local Jar Version:3.3.35
+18:40:08 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:s1.csj.renren.com
+18:40:08 - 0c9cc5fc-cbd5-4e9d-8b92-f3f18728e055	http://39.96.37.184:8082/qqapi/u.getversion.php?domain=s1.csj.renren.com&currenttime=20201027184008&gamecode=csj&platformid=renren.com&domain=s1.csj.renren.com
+18:40:08 - 0c9cc5fc-cbd5-4e9d-8b92-f3f18728e055	ok:local_uniform3.3.18	Time:18ms
+18:40:08 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION:local_uniform3.3.18	JAR.VERSION:Unknown
+18:50:52 - #IMOP.LOCAL.LOGGER.INITLIZE...
+18:50:52 - #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+18:50:52 - start getting local jar version
+18:50:52 - Local Jar Version:3.3.35
+18:50:52 - #IMOP.LOCAL.START:AREAID:1 SERVERID:9010 DOMAIN:s1.csj.renren.com
+18:50:52 - e6d3d344-305f-4339-9f15-0721c751b153	http://39.96.37.184:8082/qqapi/u.getversion.php?domain=s1.csj.renren.com&currenttime=20201027185052&gamecode=csj&platformid=renren.com&domain=s1.csj.renren.com
+18:50:52 - e6d3d344-305f-4339-9f15-0721c751b153	ok:local_uniform3.3.18	Time:16ms
+18:50:52 - #IMOP.LOCAL.REQUEST.LOCAL.VERSION:local_uniform3.3.18	JAR.VERSION:Unknown

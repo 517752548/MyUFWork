@@ -69,8 +69,8 @@ config.turnOnLocalInterface=true; //是否开服
 //config.reportDomain="http://local.game.io8.org/";
 //config.localKey="c762000b3eb6955de0862f435b28a8eb"
 
-config.requestDomain="http://39.96.37.184:8081/qqapi/";
-config.reportDomain="http://39.96.37.184:8081/qqapi/";
+config.requestDomain="http://39.96.37.184:8082/qqapi/";
+config.reportDomain="http://39.96.37.184:8082/qqapi/";
 config.localKey="2D940190C62CD4EE64D206E8A4B1148A";
 config.gameId="csj";
 	

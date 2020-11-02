@@ -13,7 +13,7 @@ config.serverGroupId="1";
 config.serverIndex=1;
 config.serverId="9010";
 config.bindIp="0.0.0.0";
-config.ports="8081";
+config.ports="8085";
 config.serverName="GameServer";
 config.serverHost="0.0.0.0";
 config.serverDomain="s1.csj.renren.com";
@@ -69,8 +69,8 @@ config.turnOnLocalInterface=true; //是否开服
 //config.reportDomain="http://local.game.io8.org/";
 //config.localKey="c762000b3eb6955de0862f435b28a8eb"
 
-config.requestDomain="http://192.168.1.219:8080/qqapi/";
-config.reportDomain="http://192.168.1.219:8080/qqapi/";
+config.requestDomain="http://192.168.1.219:8082/qqapi/";
+config.reportDomain="http://192.168.1.219:8082/qqapi/";
 config.localKey="2D940190C62CD4EE64D206E8A4B1148A";
 config.gameId="csj";
 	

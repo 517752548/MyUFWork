@@ -1,31 +1,96 @@
-19:29:42 - #OnlinePlayerService#addPlayer#addFlag=true;playerId=-1;passportId=175
-22:31:00 - true;
-22:31:00 - 192.168.1.219:51517 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):192.168.1.219:51517
-22:31:00 - 192.168.1.219:515176、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
-22:31:00 - 8、Player logout offlineMsg.execute  player passportId player stateconnected
-22:31:00 - offline player passport=
-22:31:00 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=192.168.1.219:51517;pPlayer=null
-22:31:00 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=192.168.1.219:51517;pPlayer=null;player.getRoleUUID()=-1
-22:31:00 - 192.168.1.219:51517 9、Player logout OnlinePlayerService.offlinePlayer  player passportId player statelogouted
-22:42:45 - #OnlinePlayerService#addPlayer#addFlag=true;playerId=-1;passportId=175
-22:43:27 - 192.168.1.219:52085 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):192.168.1.219:52085
-22:43:27 - 192.168.1.219:520856、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId175
-22:43:27 - 8、Player logout offlineMsg.execute  player passportId175 player stategaming
-22:43:27 - 192.168.1.219:52085 11、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stategaming
-22:43:27 - 192.168.1.219:52085 14、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stateleaving
-22:43:27 - 192.168.1.219:52085 12、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player statelogouting
-22:43:27 - 192.168.1.219:52085 15、Player logout SavePlayerRoleOperation.doStop  player passportId175 player statelogouting
-22:43:27 - offline player passport=175
-22:43:27 - #removePlayer#passportIdPlayers#offline player passportId=175;player=192.168.1.219:52085;pPlayer=192.168.1.219:52085
-22:43:27 - #removePlayer#onlinePlayersMap#offline player passportId=175;player=192.168.1.219:52085;pPlayer=192.168.1.219:52085;player.getRoleUUID()=288516249174948623
-22:43:34 - #OnlinePlayerService#addPlayer#addFlag=true;playerId=-1;passportId=175
-22:43:47 - 192.168.1.219:52124 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):192.168.1.219:52124
-22:43:47 - 192.168.1.219:521246、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId175
-22:43:47 - 8、Player logout offlineMsg.execute  player passportId175 player stategaming
-22:43:47 - 192.168.1.219:52124 11、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stategaming
-22:43:47 - 192.168.1.219:52124 14、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player stateleaving
-22:43:47 - 192.168.1.219:52124 12、Player logout OnlinePlayerService.offlinePlayer  player passportId175 player statelogouting
-22:43:47 - 192.168.1.219:52124 15、Player logout SavePlayerRoleOperation.doStop  player passportId175 player statelogouting
-22:43:47 - offline player passport=175
-22:43:47 - #removePlayer#passportIdPlayers#offline player passportId=175;player=192.168.1.219:52124;pPlayer=192.168.1.219:52124
-22:43:47 - #removePlayer#onlinePlayersMap#offline player passportId=175;player=192.168.1.219:52124;pPlayer=192.168.1.219:52124;player.getRoleUUID()=288516249174948623
+18:43:59 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:43:59 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:43:59 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:43:59 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:43:59 - 14、Player passportId is zero!
+18:43:59 - offline player passport=
+18:43:59 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:43:59 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:44:36 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:44:36 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:44:36 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:44:36 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:44:36 - 14、Player passportId is zero!
+18:44:36 - offline player passport=
+18:44:36 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:44:36 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:45:36 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:45:36 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:45:36 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:45:36 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:45:36 - 14、Player passportId is zero!
+18:45:36 - offline player passport=
+18:45:36 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:45:36 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:49:05 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:49:05 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:49:05 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:49:05 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:49:05 - 14、Player passportId is zero!
+18:49:05 - offline player passport=
+18:49:05 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:49:05 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:51:23 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:51:23 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:51:23 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:51:23 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:51:23 - 14、Player passportId is zero!
+18:51:23 - offline player passport=
+18:51:23 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:51:23 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:51:55 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:51:55 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:51:55 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:51:55 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:51:55 - 14、Player passportId is zero!
+18:51:55 - offline player passport=
+18:51:55 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:51:55 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:52:57 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:52:57 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:52:57 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:52:57 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:52:57 - 14、Player passportId is zero!
+18:52:57 - offline player passport=
+18:52:57 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:52:57 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:21:58 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+19:21:58 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+19:21:58 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+19:21:58 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+19:21:58 - 14、Player passportId is zero!
+19:21:58 - offline player passport=
+19:21:58 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:21:58 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:51:58 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+19:51:58 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+19:51:58 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+19:51:58 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+19:51:58 - 14、Player passportId is zero!
+19:51:58 - offline player passport=
+19:51:58 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:51:58 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:53:01 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+19:53:01 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+19:53:01 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+19:53:01 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+19:53:01 - 14、Player passportId is zero!
+19:53:01 - offline player passport=
+19:53:01 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:53:01 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+20:22:58 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+20:22:58 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+20:22:58 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+20:22:58 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+20:22:58 - 14、Player passportId is zero!
+20:22:58 - offline player passport=
+20:22:58 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+20:22:58 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+20:33:48 - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+20:33:48 - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+20:33:48 - 8、Player logout offlineMsg.execute  player passportId player stateinit
+20:33:48 - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+20:33:48 - 14、Player passportId is zero!
+20:33:48 - offline player passport=
+20:33:48 - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+20:33:48 - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1

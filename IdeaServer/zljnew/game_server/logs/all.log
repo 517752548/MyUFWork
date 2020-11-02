@@ -1,169 +1,1159 @@
-17:34:02,809 - GameServer.main - Starting Game Server
-17:34:02,818 - GameServer.main - Free memory 3597 Mb of 3612 Mb
-17:34:16,870 - GameServer.init - Begin to initialize Globals
-17:34:17,832 - LogServerService.init - #LogServerService#init#log server cfg url=file:/G:/MyUnityFrameWork/MyUF/IdeaServer/zljnew/game_server/out/production/game_server/log_server.cfg.js
-17:34:17,919 - LogServerService.init - #LogServerService#init#log server _ibatisConfigFile url=file:/G:/MyUnityFrameWork/MyUF/IdeaServer/zljnew/game_server/out/production/game_server/log_ibatis_config.xml
-17:34:18,787 - LogServerService.init - Table creator class:com.imop.lj.logserver.createtable.TodayAndTommorowTableCreator@5cf87cfd
-17:34:18,787 - LogServerService.init - Create log tables
-17:34:41,760 - GameServer.main - Starting Game Server
-17:34:41,763 - GameServer.main - Free memory 3598 Mb of 3612 Mb
-17:34:42,653 - GameServer.init - Begin to initialize Globals
-17:34:43,385 - LogServerService.init - #LogServerService#init#log server cfg url=file:/G:/MyUnityFrameWork/MyUF/IdeaServer/zljnew/game_server/out/production/game_server/log_server.cfg.js
-17:34:43,433 - LogServerService.init - #LogServerService#init#log server _ibatisConfigFile url=file:/G:/MyUnityFrameWork/MyUF/IdeaServer/zljnew/game_server/out/production/game_server/log_ibatis_config.xml
-17:34:44,088 - LogServerService.init - Table creator class:com.imop.lj.logserver.createtable.TodayAndTommorowTableCreator@5ee2b6f9
-17:34:44,089 - LogServerService.init - Create log tables
-18:15:20,006 - GameServer.main - Starting Game Server
-18:15:20,010 - GameServer.main - Free memory 3598 Mb of 3612 Mb
-18:15:20,843 - GameServer.init - Begin to initialize Globals
-18:15:21,595 - LogServerService.init - #LogServerService#init#log server cfg url=file:/G:/MyUnityFrameWork/MyUF/IdeaServer/zljnew/game_server/out/production/game_server/log_server.cfg.js
-18:15:21,643 - LogServerService.init - #LogServerService#init#log server _ibatisConfigFile url=file:/G:/MyUnityFrameWork/MyUF/IdeaServer/zljnew/game_server/out/production/game_server/log_ibatis_config.xml
-18:15:22,292 - LogServerService.init - Table creator class:com.imop.lj.logserver.createtable.TodayAndTommorowTableCreator@5ee2b6f9
-18:15:22,292 - LogServerService.init - Create log tables
-18:15:26,451 - LogServerService.init - Schedule create new log table task [Delay:1440000ms,period:1440000ms]
-18:15:27,207 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate], fileName=npc.xls]
-18:15:27,207 - TemplateService.init - loading template npc.xls
-18:15:27,362 - TemplateService.init - TemplateConfig [classes=[], fileName=item.xls]
-18:15:27,362 - TemplateService.init - loading template item.xls
-18:15:28,332 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetPropTemplate, class com.imop.lj.gameserver.pet.template.BattleTypeTemplate, class com.imop.lj.gameserver.pet.template.PetLevelTemplate, class com.imop.lj.gameserver.pet.template.PetGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetVariationTemplate, class com.imop.lj.gameserver.pet.template.PetArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetFightPowerTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPropItemTemplate], fileName=pet.xls]
-18:15:28,332 - TemplateService.init - loading template pet.xls
-18:15:28,477 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetHorseLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetHorseArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePropItemTemplate, class com.imop.lj.gameserver.pet.template.PetHorseCloAddTemplate], fileName=pethorse.xls]
-18:15:28,477 - TemplateService.init - loading template pethorse.xls
-18:15:28,515 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetFriendTemplate], fileName=friend.xls]
-18:15:28,516 - TemplateService.init - loading template friend.xls
-18:15:28,537 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.skill.template.SkillTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectDescTemplate, class com.imop.lj.gameserver.skill.template.SkillPerformTemplate, class com.imop.lj.gameserver.skill.template.SkillBuffTemplate, class com.imop.lj.gameserver.skill.template.SkillLabelTemplate, class com.imop.lj.gameserver.skill.template.SkillAddTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectItemLevelTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectOpenTemplate, class com.imop.lj.gameserver.skill.template.SkillPetHorseAddTemplate], fileName=skill.xls]
-18:15:28,538 - TemplateService.init - loading template skill.xls
-18:15:28,996 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.battle.template.BattlePropCoefTemplate], fileName=battle.xls]
-18:15:28,996 - TemplateService.init - loading template battle.xls
-18:15:29,030 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.map.template.MapTemplate, class com.imop.lj.gameserver.map.template.MapNpcTemplate, class com.imop.lj.gameserver.map.template.MapMeetMonsterTemplate, class com.imop.lj.gameserver.map.template.PetIslandTemplate], fileName=map.xls]
-18:15:29,030 - TemplateService.init - loading template map.xls
-18:15:29,063 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.UpgradeEquipStarTemplate, class com.imop.lj.gameserver.equip.template.EquipDecomposeTemplate, class com.imop.lj.gameserver.equip.template.EquipRecastLockAttrTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleCostTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleRefreshTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleColorTemplate, class com.imop.lj.gameserver.equip.template.EquipGemLimitTemplate], fileName=equip.xls]
-18:15:29,064 - TemplateService.init - loading template equip.xls
-18:15:29,106 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.enemy.template.EnemyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyCoefTemplate, class com.imop.lj.gameserver.enemy.template.EnemyArmyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiValueTemplate], fileName=enemy.xls]
-18:15:29,106 - TemplateService.init - loading template enemy.xls
-18:15:29,419 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mission.template.MissionTemplate, class com.imop.lj.gameserver.mission.template.MissionEnemyGroupTemplate], fileName=mission.xls]
-18:15:29,419 - TemplateService.init - loading template mission.xls
-18:15:29,430 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.role.template.RoleNameXingTemplate, class com.imop.lj.gameserver.role.template.RoleNameMaleMingTemplate, class com.imop.lj.gameserver.role.template.RoleNameFemaleMingTemplate], fileName=rolename.xls]
-18:15:29,430 - TemplateService.init - loading template rolename.xls
-18:15:29,558 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.DirtyWordsTemplate, class com.imop.lj.common.model.template.NameDirtyWordsTemplate], fileName=dirtywords.xls]
-18:15:29,559 - TemplateService.init - loading template dirtywords.xls
-18:15:29,669 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.scene.template.SceneTemplate], fileName=world.xls]
-18:15:29,669 - TemplateService.init - loading template world.xls
-18:15:29,682 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate], fileName=quest.xls]
-18:15:29,682 - TemplateService.init - loading template quest.xls
-18:15:29,977 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.TimeEventTemplate, class com.imop.lj.gameserver.timeevent.template.SysPowerGiveTimeTemplate, class com.imop.lj.gameserver.timeevent.template.ScribedLogTimeEventTemplate, class com.imop.lj.gameserver.activity.template.ActivityTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshActivityStateTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshArenaTemplate, class com.imop.lj.gameserver.timeevent.template.EnhanceActivityTemplate, class com.imop.lj.gameserver.timeevent.template.TimeNoticeTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshDevilIncarnateTemplate], fileName=timeevent.xls]
-18:15:29,977 - TemplateService.init - loading template timeevent.xls
-18:15:30,008 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.cd.template.CdTemplate, class com.imop.lj.gameserver.cd.template.CdTiredRatioTemplate, class com.imop.lj.gameserver.cd.template.CdOpenCondTemplate], fileName=cdqueue.xls]
-18:15:30,008 - TemplateService.init - loading template cdqueue.xls
-18:15:30,100 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.behavior.template.BehaviorTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuyPowerCostTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuySkillPointCostTemplate, class com.imop.lj.gameserver.behavior.template.BindIdBehaviorTemplate], fileName=behavior.xls]
-18:15:30,100 - TemplateService.init - loading template behavior.xls
-18:15:30,107 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.broadcast.template.BroadcastTemplate], fileName=broadcast.xls]
-18:15:30,107 - TemplateService.init - loading template broadcast.xls
-18:15:30,111 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.func.template.FuncTemplate, class com.imop.lj.gameserver.func.template.FuncOpenTemplate], fileName=func.xls]
-18:15:30,111 - TemplateService.init - loading template func.xls
-18:15:30,129 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.constant.template.ShowCurrencyTemplate], fileName=showcurrency.xls]
-18:15:30,129 - TemplateService.init - loading template showcurrency.xls
-18:15:30,147 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.reward.template.RewardSetTemplate, class com.imop.lj.gameserver.reward.template.RewardConfigTemplate, class com.imop.lj.gameserver.reward.template.GradeRewardTemplate, class com.imop.lj.gameserver.reward.template.ShowRewardTemplate, class com.imop.lj.gameserver.reward.template.LevelGiftPackTemplate], fileName=reward.xls]
-18:15:30,147 - TemplateService.init - loading template reward.xls
-18:15:30,468 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.CraftEquipTypeTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipCostTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipColorTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipItemProbTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipFixedAttrTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipPropTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipGradeColorTemplate], fileName=craftequip.xls]
-18:15:30,468 - TemplateService.init - loading template craftequip.xls
-18:15:30,570 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate, class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate], fileName=exam.xls]
-18:15:30,571 - TemplateService.init - loading template exam.xls
-18:15:30,585 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pubtask.template.PubTaskTemplate, class com.imop.lj.gameserver.pubtask.template.PubTaskGroupTemplate, class com.imop.lj.gameserver.pubtask.template.PubLevelTemplate], fileName=pubtask.xls]
-18:15:30,585 - TemplateService.init - loading template pubtask.xls
-18:15:30,605 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.humanskill.template.HumanMainSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillToSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubPassiveSkillTemplate], fileName=humanskill.xls]
-18:15:30,605 - TemplateService.init - loading template humanskill.xls
-18:15:30,745 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.GemOpenTemplate, class com.imop.lj.gameserver.equip.template.GemCostTemplate, class com.imop.lj.gameserver.equip.template.GemForPropValueTemplate, class com.imop.lj.gameserver.equip.template.GemSynthesisTemplate, class com.imop.lj.gameserver.equip.template.GemUpTemplate, class com.imop.lj.gameserver.equip.template.GemDownTemplate], fileName=gem.xls]
-18:15:30,745 - TemplateService.init - loading template gem.xls
-18:15:30,754 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.trade.template.TradeSaleableTemplate, class com.imop.lj.gameserver.trade.template.TradeCommodityTypeTemplate, class com.imop.lj.gameserver.trade.template.TradeMainTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSubTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSortableFieldTemplate], fileName=trade.xls]
-18:15:30,754 - TemplateService.init - loading template trade.xls
-18:15:30,780 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.human.template.MailBoxInfoTemplate], fileName=mailbox.xls]
-18:15:30,780 - TemplateService.init - loading template mailbox.xls
-18:15:30,782 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corps.template.CorpsUpgradeTemplate, class com.imop.lj.gameserver.corps.template.CorpsBenifitTemplate, class com.imop.lj.gameserver.corps.template.CorpsBuildingUpgradeTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistGenTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCritTemplate], fileName=corps.xls]
-18:15:30,782 - TemplateService.init - loading template corps.xls
-18:15:30,809 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.activityui.template.ActivityUITemplate, class com.imop.lj.gameserver.activityui.template.ActivityUIRewardTemplate], fileName=activityui.xls]
-18:15:30,809 - TemplateService.init - loading template activityui.xls
-18:15:30,823 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.team.template.TeamTargetTemplate], fileName=team.xls]
-18:15:30,824 - TemplateService.init - loading template team.xls
-18:15:30,826 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.onlinegift.template.OnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.SpecOnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.DailySignGiftTemplate], fileName=onlinegift.xls]
-18:15:30,826 - TemplateService.init - loading template onlinegift.xls
-18:15:30,840 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineLevelTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMinePitTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineCostTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineMinerTemplate], fileName=mine.xls]
-18:15:30,840 - TemplateService.init - loading template mine.xls
-18:15:30,845 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mall.template.MallCatalogTemplate, class com.imop.lj.gameserver.mall.template.MallNormalItemTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitQueueTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitItemTemplate, class com.imop.lj.gameserver.mall.template.MallEndBoradcastTimeTemplate], fileName=mall.xls]
-18:15:30,845 - TemplateService.init - loading template mall.xls
-18:15:30,892 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wizardraid.template.WizardRaidTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidWaveTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidMonsterTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidPositionTemplate], fileName=wizardraid.xls]
-18:15:30,892 - TemplateService.init - loading template wizardraid.xls
-18:15:30,903 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskTemplate, class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskGroupTemplate], fileName=thesweeneytask.xls]
-18:15:30,904 - TemplateService.init - loading template thesweeneytask.xls
-18:15:30,918 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.treasuremap.template.TreasureMapTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapGroupTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapRewardTemplate], fileName=treasuremap.xls]
-18:15:30,918 - TemplateService.init - loading template treasuremap.xls
-18:15:30,929 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.title.template.TitleTemplate], fileName=title.xls]
-18:15:30,930 - TemplateService.init - loading template title.xls
-18:15:30,934 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.foragetask.template.ForageTaskTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskGroupTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskRewardTemplate], fileName=foragetask.xls]
-18:15:30,934 - TemplateService.init - loading template foragetask.xls
-18:15:30,949 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpswar.template.CorpsWarRankRewardTemplate], fileName=corpswar.xls]
-18:15:30,950 - TemplateService.init - loading template corpswar.xls
-18:15:30,953 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.overman.template.OvermanTemplate], fileName=overman.xls]
-18:15:30,953 - TemplateService.init - loading template overman.xls
-18:15:30,955 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.nvn.template.NvnRankRewardTemplate, class com.imop.lj.gameserver.nvn.template.NvnConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnEndConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnMatchRankTemplate], fileName=nvn.xls]
-18:15:30,955 - TemplateService.init - loading template nvn.xls
-18:15:30,958 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.story.template.StoryTemplate, class com.imop.lj.gameserver.story.template.StoryBattleTemplate], fileName=story.xls]
-18:15:30,958 - TemplateService.init - loading template story.xls
-18:15:31,025 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.goodactivity.template.GoodActivityBaseTemplate], fileName=goodactivity.xls]
-18:15:31,025 - TemplateService.init - loading template goodactivity.xls
-18:15:31,031 - TemplateService.init - TemplateConfig [classes=[], fileName=goodactivity.xls]
-18:15:31,031 - TemplateService.init - loading template goodactivity.xls
-18:15:31,058 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wing.template.WingTemplate, class com.imop.lj.gameserver.wing.template.WingUpgradeTemplate], fileName=wing.xls]
-18:15:31,058 - TemplateService.init - loading template wing.xls
-18:15:31,168 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.arena.template.ArenaRankChallengeTemplate, class com.imop.lj.gameserver.arena.template.ArenaBattleRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaRankRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaBuyTimesTemplate, class com.imop.lj.gameserver.arena.template.ArenaConWinNoticeTemplate, class com.imop.lj.gameserver.arena.template.ArenaLeaderSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaPetSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaRobotTemplate], fileName=arena.xls]
-18:15:31,168 - TemplateService.init - loading template arena.xls
-18:15:31,178 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpstask.template.CorpsTaskTemplate], fileName=corpstask.xls]
-18:15:31,179 - TemplateService.init - loading template corpstask.xls
-18:15:31,188 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.promote.template.PromoteTemplate], fileName=promote.xls]
-18:15:31,188 - TemplateService.init - loading template promote.xls
-18:15:31,190 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mysteryshop.template.MysteryShopItemTemplate], fileName=mysteryshop.xls]
-18:15:31,190 - TemplateService.init - loading template mysteryshop.xls
-18:15:31,196 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.tower.template.TowerExpTemplate, class com.imop.lj.gameserver.tower.template.TowerRewardTemplate, class com.imop.lj.gameserver.tower.template.TowerMapTemplate], fileName=tower.xls]
-18:15:31,197 - TemplateService.init - loading template tower.xls
-18:15:31,207 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.charge.template.ChargeTemplate, class com.imop.lj.gameserver.charge.template.MonthCardTemplate], fileName=charge.xls]
-18:15:31,207 - TemplateService.init - loading template charge.xls
-18:15:31,209 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exchange.template.ExchangeTemplate], fileName=exchange.xls]
-18:15:31,210 - TemplateService.init - loading template exchange.xls
-18:15:31,211 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.vip.template.VipUpgradeTemplate, class com.imop.lj.gameserver.vip.template.VipConfigTemplate], fileName=vip.xls]
-18:15:31,211 - TemplateService.init - loading template vip.xls
-18:15:31,224 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpsboss.template.CorpsBossTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossRankTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossCountRankTemplate], fileName=corpsboss.xls]
-18:15:31,224 - TemplateService.init - loading template corpsboss.xls
-18:15:31,230 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.item.template.StoreOpenTemplate], fileName=store.xls]
-18:15:31,230 - TemplateService.init - loading template store.xls
-18:15:31,232 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.sealdemon.template.SealDemonMapTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonNpcTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonRewardTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonKingRewardTemplate], fileName=sealdemon.xls]
-18:15:31,232 - TemplateService.init - loading template sealdemon.xls
-18:15:31,238 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateMapTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateNpcTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateRewardTemplate], fileName=devilincarnate.xls]
-18:15:31,238 - TemplateService.init - loading template devilincarnate.xls
-18:15:31,242 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.timelimit.template.TimeLimitPushTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitMonsterTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitNpcTemplate], fileName=timelimit.xls]
-18:15:31,242 - TemplateService.init - loading template timelimit.xls
-18:15:31,249 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.day7target.template.Day7TargetTemplate], fileName=day7target.xls]
-18:15:31,249 - TemplateService.init - loading template day7target.xls
-18:15:31,256 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.plotdungeon.template.PlotDungeonTemplate], fileName=plotdungeon.xls]
-18:15:31,256 - TemplateService.init - loading template plotdungeon.xls
-18:15:31,262 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.video.template.VideoTemplate], fileName=video.xls]
-18:15:31,263 - TemplateService.init - loading template video.xls
-18:15:31,280 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.siegedemon.template.SiegeDemonTemplate, class com.imop.lj.gameserver.siegedemon.template.SiegeDemonPositionTemplate], fileName=siegedemon.xls]
-18:15:31,281 - TemplateService.init - loading template siegedemon.xls
-18:15:31,285 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.xianhu.template.XianhuRankRewardTemplate], fileName=xianhu.xls]
-18:15:31,285 - TemplateService.init - loading template xianhu.xls
-18:15:31,288 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMapTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillLevelTemplate], fileName=lifeskill.xls]
-18:15:31,288 - TemplateService.init - loading template lifeskill.xls
-18:15:31,299 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.ringtask.template.RingTaskTemplate, class com.imop.lj.gameserver.ringtask.template.RingTaskRewardTemplate], fileName=ringtask.xls]
-18:15:31,299 - TemplateService.init - loading template ringtask.xls
-18:15:31,318 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate], fileName=exp.xls]
-18:15:31,319 - TemplateService.init - loading template exp.xls
-18:15:31,361 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
-18:15:31,534 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
-18:15:31,658 - TemplateCacheService.init - all template and template cache load finished.
-18:15:31,863 - LocalService.initLocalConfig - Local config init success
-18:15:38,301 - GameDaoService$DaoHelper.<init> - DBService instance:com.imop.lj.core.orm.HibernateDBServcieImpl@28237492
-18:15:39,485 - GameServer.main - Failed to start server
+18:29:39,801 - GameServer.main - Starting Game Server
+18:29:39,804 - GameServer.main - Free memory 7253 Mb of 7271 Mb
+18:29:40,275 - GameServer.init - Begin to initialize Globals
+18:29:40,692 - LogServerService.init - #LogServerService#init#log server cfg url=file:/D:/OtherGitProjects/UFramework/IdeaServer/zljnew/game_server/out/production/game_server/log_server.cfg.js
+18:29:40,722 - LogServerService.init - #LogServerService#init#log server _ibatisConfigFile url=file:/D:/OtherGitProjects/UFramework/IdeaServer/zljnew/game_server/out/production/game_server/log_ibatis_config.xml
+18:29:41,109 - LogServerService.init - Table creator class:com.imop.lj.logserver.createtable.TodayAndTommorowTableCreator@23d1e5d0
+18:29:41,109 - LogServerService.init - Create log tables
+18:29:45,147 - LogServerService.init - Schedule create new log table task [Delay:1440000ms,period:1440000ms]
+18:29:45,509 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate], fileName=npc.xls]
+18:29:45,510 - TemplateService.init - loading template npc.xls
+18:29:45,587 - TemplateService.init - TemplateConfig [classes=[], fileName=item.xls]
+18:29:45,587 - TemplateService.init - loading template item.xls
+18:29:46,245 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetPropTemplate, class com.imop.lj.gameserver.pet.template.BattleTypeTemplate, class com.imop.lj.gameserver.pet.template.PetLevelTemplate, class com.imop.lj.gameserver.pet.template.PetGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetVariationTemplate, class com.imop.lj.gameserver.pet.template.PetArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetFightPowerTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPropItemTemplate], fileName=pet.xls]
+18:29:46,245 - TemplateService.init - loading template pet.xls
+18:29:46,334 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetHorseLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetHorseArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePropItemTemplate, class com.imop.lj.gameserver.pet.template.PetHorseCloAddTemplate], fileName=pethorse.xls]
+18:29:46,335 - TemplateService.init - loading template pethorse.xls
+18:29:46,361 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetFriendTemplate], fileName=friend.xls]
+18:29:46,361 - TemplateService.init - loading template friend.xls
+18:29:46,362 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.skill.template.SkillTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectDescTemplate, class com.imop.lj.gameserver.skill.template.SkillPerformTemplate, class com.imop.lj.gameserver.skill.template.SkillBuffTemplate, class com.imop.lj.gameserver.skill.template.SkillLabelTemplate, class com.imop.lj.gameserver.skill.template.SkillAddTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectItemLevelTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectOpenTemplate, class com.imop.lj.gameserver.skill.template.SkillPetHorseAddTemplate], fileName=skill.xls]
+18:29:46,363 - TemplateService.init - loading template skill.xls
+18:29:46,638 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.battle.template.BattlePropCoefTemplate], fileName=battle.xls]
+18:29:46,639 - TemplateService.init - loading template battle.xls
+18:29:46,649 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.map.template.MapTemplate, class com.imop.lj.gameserver.map.template.MapNpcTemplate, class com.imop.lj.gameserver.map.template.MapMeetMonsterTemplate, class com.imop.lj.gameserver.map.template.PetIslandTemplate], fileName=map.xls]
+18:29:46,649 - TemplateService.init - loading template map.xls
+18:29:46,682 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.UpgradeEquipStarTemplate, class com.imop.lj.gameserver.equip.template.EquipDecomposeTemplate, class com.imop.lj.gameserver.equip.template.EquipRecastLockAttrTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleCostTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleRefreshTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleColorTemplate, class com.imop.lj.gameserver.equip.template.EquipGemLimitTemplate], fileName=equip.xls]
+18:29:46,683 - TemplateService.init - loading template equip.xls
+18:29:46,733 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.enemy.template.EnemyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyCoefTemplate, class com.imop.lj.gameserver.enemy.template.EnemyArmyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiValueTemplate], fileName=enemy.xls]
+18:29:46,733 - TemplateService.init - loading template enemy.xls
+18:29:46,968 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mission.template.MissionTemplate, class com.imop.lj.gameserver.mission.template.MissionEnemyGroupTemplate], fileName=mission.xls]
+18:29:46,968 - TemplateService.init - loading template mission.xls
+18:29:46,974 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.role.template.RoleNameXingTemplate, class com.imop.lj.gameserver.role.template.RoleNameMaleMingTemplate, class com.imop.lj.gameserver.role.template.RoleNameFemaleMingTemplate], fileName=rolename.xls]
+18:29:46,975 - TemplateService.init - loading template rolename.xls
+18:29:47,032 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.DirtyWordsTemplate, class com.imop.lj.common.model.template.NameDirtyWordsTemplate], fileName=dirtywords.xls]
+18:29:47,033 - TemplateService.init - loading template dirtywords.xls
+18:29:47,116 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.scene.template.SceneTemplate], fileName=world.xls]
+18:29:47,116 - TemplateService.init - loading template world.xls
+18:29:47,118 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate], fileName=quest.xls]
+18:29:47,118 - TemplateService.init - loading template quest.xls
+18:29:47,302 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.TimeEventTemplate, class com.imop.lj.gameserver.timeevent.template.SysPowerGiveTimeTemplate, class com.imop.lj.gameserver.timeevent.template.ScribedLogTimeEventTemplate, class com.imop.lj.gameserver.activity.template.ActivityTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshActivityStateTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshArenaTemplate, class com.imop.lj.gameserver.timeevent.template.EnhanceActivityTemplate, class com.imop.lj.gameserver.timeevent.template.TimeNoticeTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshDevilIncarnateTemplate], fileName=timeevent.xls]
+18:29:47,302 - TemplateService.init - loading template timeevent.xls
+18:29:47,318 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.cd.template.CdTemplate, class com.imop.lj.gameserver.cd.template.CdTiredRatioTemplate, class com.imop.lj.gameserver.cd.template.CdOpenCondTemplate], fileName=cdqueue.xls]
+18:29:47,318 - TemplateService.init - loading template cdqueue.xls
+18:29:47,405 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.behavior.template.BehaviorTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuyPowerCostTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuySkillPointCostTemplate, class com.imop.lj.gameserver.behavior.template.BindIdBehaviorTemplate], fileName=behavior.xls]
+18:29:47,405 - TemplateService.init - loading template behavior.xls
+18:29:47,413 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.broadcast.template.BroadcastTemplate], fileName=broadcast.xls]
+18:29:47,413 - TemplateService.init - loading template broadcast.xls
+18:29:47,416 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.func.template.FuncTemplate, class com.imop.lj.gameserver.func.template.FuncOpenTemplate], fileName=func.xls]
+18:29:47,416 - TemplateService.init - loading template func.xls
+18:29:47,438 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.constant.template.ShowCurrencyTemplate], fileName=showcurrency.xls]
+18:29:47,438 - TemplateService.init - loading template showcurrency.xls
+18:29:47,443 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.reward.template.RewardSetTemplate, class com.imop.lj.gameserver.reward.template.RewardConfigTemplate, class com.imop.lj.gameserver.reward.template.GradeRewardTemplate, class com.imop.lj.gameserver.reward.template.ShowRewardTemplate, class com.imop.lj.gameserver.reward.template.LevelGiftPackTemplate], fileName=reward.xls]
+18:29:47,444 - TemplateService.init - loading template reward.xls
+18:29:47,672 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.CraftEquipTypeTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipCostTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipColorTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipItemProbTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipFixedAttrTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipPropTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipGradeColorTemplate], fileName=craftequip.xls]
+18:29:47,672 - TemplateService.init - loading template craftequip.xls
+18:29:47,729 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate, class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate], fileName=exam.xls]
+18:29:47,729 - TemplateService.init - loading template exam.xls
+18:29:47,737 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pubtask.template.PubTaskTemplate, class com.imop.lj.gameserver.pubtask.template.PubTaskGroupTemplate, class com.imop.lj.gameserver.pubtask.template.PubLevelTemplate], fileName=pubtask.xls]
+18:29:47,737 - TemplateService.init - loading template pubtask.xls
+18:29:47,751 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.humanskill.template.HumanMainSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillToSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubPassiveSkillTemplate], fileName=humanskill.xls]
+18:29:47,751 - TemplateService.init - loading template humanskill.xls
+18:29:47,934 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.GemOpenTemplate, class com.imop.lj.gameserver.equip.template.GemCostTemplate, class com.imop.lj.gameserver.equip.template.GemForPropValueTemplate, class com.imop.lj.gameserver.equip.template.GemSynthesisTemplate, class com.imop.lj.gameserver.equip.template.GemUpTemplate, class com.imop.lj.gameserver.equip.template.GemDownTemplate], fileName=gem.xls]
+18:29:47,934 - TemplateService.init - loading template gem.xls
+18:29:47,940 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.trade.template.TradeSaleableTemplate, class com.imop.lj.gameserver.trade.template.TradeCommodityTypeTemplate, class com.imop.lj.gameserver.trade.template.TradeMainTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSubTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSortableFieldTemplate], fileName=trade.xls]
+18:29:47,940 - TemplateService.init - loading template trade.xls
+18:29:47,959 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.human.template.MailBoxInfoTemplate], fileName=mailbox.xls]
+18:29:47,959 - TemplateService.init - loading template mailbox.xls
+18:29:47,961 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corps.template.CorpsUpgradeTemplate, class com.imop.lj.gameserver.corps.template.CorpsBenifitTemplate, class com.imop.lj.gameserver.corps.template.CorpsBuildingUpgradeTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistGenTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCritTemplate], fileName=corps.xls]
+18:29:47,961 - TemplateService.init - loading template corps.xls
+18:29:47,973 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.activityui.template.ActivityUITemplate, class com.imop.lj.gameserver.activityui.template.ActivityUIRewardTemplate], fileName=activityui.xls]
+18:29:47,973 - TemplateService.init - loading template activityui.xls
+18:29:47,978 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.team.template.TeamTargetTemplate], fileName=team.xls]
+18:29:47,978 - TemplateService.init - loading template team.xls
+18:29:47,979 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.onlinegift.template.OnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.SpecOnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.DailySignGiftTemplate], fileName=onlinegift.xls]
+18:29:47,980 - TemplateService.init - loading template onlinegift.xls
+18:29:47,983 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineLevelTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMinePitTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineCostTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineMinerTemplate], fileName=mine.xls]
+18:29:47,983 - TemplateService.init - loading template mine.xls
+18:29:47,987 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mall.template.MallCatalogTemplate, class com.imop.lj.gameserver.mall.template.MallNormalItemTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitQueueTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitItemTemplate, class com.imop.lj.gameserver.mall.template.MallEndBoradcastTimeTemplate], fileName=mall.xls]
+18:29:47,987 - TemplateService.init - loading template mall.xls
+18:29:48,021 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wizardraid.template.WizardRaidTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidWaveTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidMonsterTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidPositionTemplate], fileName=wizardraid.xls]
+18:29:48,021 - TemplateService.init - loading template wizardraid.xls
+18:29:48,028 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskTemplate, class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskGroupTemplate], fileName=thesweeneytask.xls]
+18:29:48,028 - TemplateService.init - loading template thesweeneytask.xls
+18:29:48,033 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.treasuremap.template.TreasureMapTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapGroupTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapRewardTemplate], fileName=treasuremap.xls]
+18:29:48,034 - TemplateService.init - loading template treasuremap.xls
+18:29:48,042 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.title.template.TitleTemplate], fileName=title.xls]
+18:29:48,042 - TemplateService.init - loading template title.xls
+18:29:48,044 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.foragetask.template.ForageTaskTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskGroupTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskRewardTemplate], fileName=foragetask.xls]
+18:29:48,044 - TemplateService.init - loading template foragetask.xls
+18:29:48,047 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpswar.template.CorpsWarRankRewardTemplate], fileName=corpswar.xls]
+18:29:48,048 - TemplateService.init - loading template corpswar.xls
+18:29:48,049 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.overman.template.OvermanTemplate], fileName=overman.xls]
+18:29:48,049 - TemplateService.init - loading template overman.xls
+18:29:48,050 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.nvn.template.NvnRankRewardTemplate, class com.imop.lj.gameserver.nvn.template.NvnConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnEndConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnMatchRankTemplate], fileName=nvn.xls]
+18:29:48,050 - TemplateService.init - loading template nvn.xls
+18:29:48,052 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.story.template.StoryTemplate, class com.imop.lj.gameserver.story.template.StoryBattleTemplate], fileName=story.xls]
+18:29:48,052 - TemplateService.init - loading template story.xls
+18:29:48,093 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.goodactivity.template.GoodActivityBaseTemplate], fileName=goodactivity.xls]
+18:29:48,094 - TemplateService.init - loading template goodactivity.xls
+18:29:48,096 - TemplateService.init - TemplateConfig [classes=[], fileName=goodactivity.xls]
+18:29:48,097 - TemplateService.init - loading template goodactivity.xls
+18:29:48,109 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wing.template.WingTemplate, class com.imop.lj.gameserver.wing.template.WingUpgradeTemplate], fileName=wing.xls]
+18:29:48,109 - TemplateService.init - loading template wing.xls
+18:29:48,165 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.arena.template.ArenaRankChallengeTemplate, class com.imop.lj.gameserver.arena.template.ArenaBattleRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaRankRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaBuyTimesTemplate, class com.imop.lj.gameserver.arena.template.ArenaConWinNoticeTemplate, class com.imop.lj.gameserver.arena.template.ArenaLeaderSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaPetSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaRobotTemplate], fileName=arena.xls]
+18:29:48,165 - TemplateService.init - loading template arena.xls
+18:29:48,172 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpstask.template.CorpsTaskTemplate], fileName=corpstask.xls]
+18:29:48,172 - TemplateService.init - loading template corpstask.xls
+18:29:48,179 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.promote.template.PromoteTemplate], fileName=promote.xls]
+18:29:48,179 - TemplateService.init - loading template promote.xls
+18:29:48,180 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mysteryshop.template.MysteryShopItemTemplate], fileName=mysteryshop.xls]
+18:29:48,180 - TemplateService.init - loading template mysteryshop.xls
+18:29:48,184 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.tower.template.TowerExpTemplate, class com.imop.lj.gameserver.tower.template.TowerRewardTemplate, class com.imop.lj.gameserver.tower.template.TowerMapTemplate], fileName=tower.xls]
+18:29:48,184 - TemplateService.init - loading template tower.xls
+18:29:48,189 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.charge.template.ChargeTemplate, class com.imop.lj.gameserver.charge.template.MonthCardTemplate], fileName=charge.xls]
+18:29:48,189 - TemplateService.init - loading template charge.xls
+18:29:48,191 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exchange.template.ExchangeTemplate], fileName=exchange.xls]
+18:29:48,191 - TemplateService.init - loading template exchange.xls
+18:29:48,192 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.vip.template.VipUpgradeTemplate, class com.imop.lj.gameserver.vip.template.VipConfigTemplate], fileName=vip.xls]
+18:29:48,192 - TemplateService.init - loading template vip.xls
+18:29:48,200 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpsboss.template.CorpsBossTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossRankTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossCountRankTemplate], fileName=corpsboss.xls]
+18:29:48,200 - TemplateService.init - loading template corpsboss.xls
+18:29:48,204 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.item.template.StoreOpenTemplate], fileName=store.xls]
+18:29:48,204 - TemplateService.init - loading template store.xls
+18:29:48,206 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.sealdemon.template.SealDemonMapTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonNpcTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonRewardTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonKingRewardTemplate], fileName=sealdemon.xls]
+18:29:48,206 - TemplateService.init - loading template sealdemon.xls
+18:29:48,211 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateMapTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateNpcTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateRewardTemplate], fileName=devilincarnate.xls]
+18:29:48,211 - TemplateService.init - loading template devilincarnate.xls
+18:29:48,214 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.timelimit.template.TimeLimitPushTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitMonsterTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitNpcTemplate], fileName=timelimit.xls]
+18:29:48,214 - TemplateService.init - loading template timelimit.xls
+18:29:48,219 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.day7target.template.Day7TargetTemplate], fileName=day7target.xls]
+18:29:48,219 - TemplateService.init - loading template day7target.xls
+18:29:48,225 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.plotdungeon.template.PlotDungeonTemplate], fileName=plotdungeon.xls]
+18:29:48,225 - TemplateService.init - loading template plotdungeon.xls
+18:29:48,230 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.video.template.VideoTemplate], fileName=video.xls]
+18:29:48,230 - TemplateService.init - loading template video.xls
+18:29:48,243 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.siegedemon.template.SiegeDemonTemplate, class com.imop.lj.gameserver.siegedemon.template.SiegeDemonPositionTemplate], fileName=siegedemon.xls]
+18:29:48,243 - TemplateService.init - loading template siegedemon.xls
+18:29:48,246 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.xianhu.template.XianhuRankRewardTemplate], fileName=xianhu.xls]
+18:29:48,246 - TemplateService.init - loading template xianhu.xls
+18:29:48,248 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMapTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillLevelTemplate], fileName=lifeskill.xls]
+18:29:48,248 - TemplateService.init - loading template lifeskill.xls
+18:29:48,255 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.ringtask.template.RingTaskTemplate, class com.imop.lj.gameserver.ringtask.template.RingTaskRewardTemplate], fileName=ringtask.xls]
+18:29:48,255 - TemplateService.init - loading template ringtask.xls
+18:29:48,270 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate], fileName=exp.xls]
+18:29:48,270 - TemplateService.init - loading template exp.xls
+18:29:48,382 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:29:48,389 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:29:48,438 - TemplateCacheService.init - all template and template cache load finished.
+18:29:48,503 - LocalService.initLocalConfig - Local config init success
+18:29:51,510 - GameDaoService$DaoHelper.<init> - DBService instance:com.imop.lj.core.orm.HibernateDBServcieImpl@6badba10
+18:29:52,238 - GameServer.main - Failed to start server
 java.lang.NullPointerException
 	at com.imop.lj.gameserver.common.Globals.initServers(Globals.java:1927)
 	at com.imop.lj.gameserver.common.Globals.init(Globals.java:886)
 	at com.imop.lj.gameserver.GameServer.init(GameServer.java:74)
 	at com.imop.lj.gameserver.GameServer.main(GameServer.java:345)
+18:40:01,139 - GameServer.main - Starting Game Server
+18:40:01,142 - GameServer.main - Free memory 7253 Mb of 7271 Mb
+18:40:01,608 - GameServer.init - Begin to initialize Globals
+18:40:02,005 - LogServerService.init - #LogServerService#init#log server cfg url=file:/D:/OtherGitProjects/UFramework/IdeaServer/zljnew/game_server/out/production/game_server/log_server.cfg.js
+18:40:02,040 - LogServerService.init - #LogServerService#init#log server _ibatisConfigFile url=file:/D:/OtherGitProjects/UFramework/IdeaServer/zljnew/game_server/out/production/game_server/log_ibatis_config.xml
+18:40:02,417 - LogServerService.init - Table creator class:com.imop.lj.logserver.createtable.TodayAndTommorowTableCreator@23d1e5d0
+18:40:02,417 - LogServerService.init - Create log tables
+18:40:05,179 - LogServerService.init - Schedule create new log table task [Delay:1440000ms,period:1440000ms]
+18:40:05,443 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate], fileName=npc.xls]
+18:40:05,444 - TemplateService.init - loading template npc.xls
+18:40:05,524 - TemplateService.init - TemplateConfig [classes=[], fileName=item.xls]
+18:40:05,524 - TemplateService.init - loading template item.xls
+18:40:06,160 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetPropTemplate, class com.imop.lj.gameserver.pet.template.BattleTypeTemplate, class com.imop.lj.gameserver.pet.template.PetLevelTemplate, class com.imop.lj.gameserver.pet.template.PetGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetVariationTemplate, class com.imop.lj.gameserver.pet.template.PetArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetFightPowerTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPropItemTemplate], fileName=pet.xls]
+18:40:06,160 - TemplateService.init - loading template pet.xls
+18:40:06,238 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetHorseLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetHorseArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePropItemTemplate, class com.imop.lj.gameserver.pet.template.PetHorseCloAddTemplate], fileName=pethorse.xls]
+18:40:06,238 - TemplateService.init - loading template pethorse.xls
+18:40:06,260 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetFriendTemplate], fileName=friend.xls]
+18:40:06,260 - TemplateService.init - loading template friend.xls
+18:40:06,262 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.skill.template.SkillTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectDescTemplate, class com.imop.lj.gameserver.skill.template.SkillPerformTemplate, class com.imop.lj.gameserver.skill.template.SkillBuffTemplate, class com.imop.lj.gameserver.skill.template.SkillLabelTemplate, class com.imop.lj.gameserver.skill.template.SkillAddTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectItemLevelTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectOpenTemplate, class com.imop.lj.gameserver.skill.template.SkillPetHorseAddTemplate], fileName=skill.xls]
+18:40:06,262 - TemplateService.init - loading template skill.xls
+18:40:06,526 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.battle.template.BattlePropCoefTemplate], fileName=battle.xls]
+18:40:06,526 - TemplateService.init - loading template battle.xls
+18:40:06,535 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.map.template.MapTemplate, class com.imop.lj.gameserver.map.template.MapNpcTemplate, class com.imop.lj.gameserver.map.template.MapMeetMonsterTemplate, class com.imop.lj.gameserver.map.template.PetIslandTemplate], fileName=map.xls]
+18:40:06,535 - TemplateService.init - loading template map.xls
+18:40:06,561 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.UpgradeEquipStarTemplate, class com.imop.lj.gameserver.equip.template.EquipDecomposeTemplate, class com.imop.lj.gameserver.equip.template.EquipRecastLockAttrTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleCostTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleRefreshTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleColorTemplate, class com.imop.lj.gameserver.equip.template.EquipGemLimitTemplate], fileName=equip.xls]
+18:40:06,562 - TemplateService.init - loading template equip.xls
+18:40:06,610 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.enemy.template.EnemyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyCoefTemplate, class com.imop.lj.gameserver.enemy.template.EnemyArmyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiValueTemplate], fileName=enemy.xls]
+18:40:06,611 - TemplateService.init - loading template enemy.xls
+18:40:06,828 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mission.template.MissionTemplate, class com.imop.lj.gameserver.mission.template.MissionEnemyGroupTemplate], fileName=mission.xls]
+18:40:06,829 - TemplateService.init - loading template mission.xls
+18:40:06,833 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.role.template.RoleNameXingTemplate, class com.imop.lj.gameserver.role.template.RoleNameMaleMingTemplate, class com.imop.lj.gameserver.role.template.RoleNameFemaleMingTemplate], fileName=rolename.xls]
+18:40:06,833 - TemplateService.init - loading template rolename.xls
+18:40:06,888 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.DirtyWordsTemplate, class com.imop.lj.common.model.template.NameDirtyWordsTemplate], fileName=dirtywords.xls]
+18:40:06,888 - TemplateService.init - loading template dirtywords.xls
+18:40:06,959 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.scene.template.SceneTemplate], fileName=world.xls]
+18:40:06,959 - TemplateService.init - loading template world.xls
+18:40:06,960 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate], fileName=quest.xls]
+18:40:06,960 - TemplateService.init - loading template quest.xls
+18:40:07,150 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.TimeEventTemplate, class com.imop.lj.gameserver.timeevent.template.SysPowerGiveTimeTemplate, class com.imop.lj.gameserver.timeevent.template.ScribedLogTimeEventTemplate, class com.imop.lj.gameserver.activity.template.ActivityTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshActivityStateTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshArenaTemplate, class com.imop.lj.gameserver.timeevent.template.EnhanceActivityTemplate, class com.imop.lj.gameserver.timeevent.template.TimeNoticeTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshDevilIncarnateTemplate], fileName=timeevent.xls]
+18:40:07,151 - TemplateService.init - loading template timeevent.xls
+18:40:07,164 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.cd.template.CdTemplate, class com.imop.lj.gameserver.cd.template.CdTiredRatioTemplate, class com.imop.lj.gameserver.cd.template.CdOpenCondTemplate], fileName=cdqueue.xls]
+18:40:07,165 - TemplateService.init - loading template cdqueue.xls
+18:40:07,242 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.behavior.template.BehaviorTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuyPowerCostTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuySkillPointCostTemplate, class com.imop.lj.gameserver.behavior.template.BindIdBehaviorTemplate], fileName=behavior.xls]
+18:40:07,242 - TemplateService.init - loading template behavior.xls
+18:40:07,249 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.broadcast.template.BroadcastTemplate], fileName=broadcast.xls]
+18:40:07,249 - TemplateService.init - loading template broadcast.xls
+18:40:07,251 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.func.template.FuncTemplate, class com.imop.lj.gameserver.func.template.FuncOpenTemplate], fileName=func.xls]
+18:40:07,252 - TemplateService.init - loading template func.xls
+18:40:07,272 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.constant.template.ShowCurrencyTemplate], fileName=showcurrency.xls]
+18:40:07,272 - TemplateService.init - loading template showcurrency.xls
+18:40:07,277 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.reward.template.RewardSetTemplate, class com.imop.lj.gameserver.reward.template.RewardConfigTemplate, class com.imop.lj.gameserver.reward.template.GradeRewardTemplate, class com.imop.lj.gameserver.reward.template.ShowRewardTemplate, class com.imop.lj.gameserver.reward.template.LevelGiftPackTemplate], fileName=reward.xls]
+18:40:07,277 - TemplateService.init - loading template reward.xls
+18:40:07,513 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.CraftEquipTypeTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipCostTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipColorTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipItemProbTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipFixedAttrTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipPropTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipGradeColorTemplate], fileName=craftequip.xls]
+18:40:07,513 - TemplateService.init - loading template craftequip.xls
+18:40:07,567 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate, class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate], fileName=exam.xls]
+18:40:07,567 - TemplateService.init - loading template exam.xls
+18:40:07,575 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pubtask.template.PubTaskTemplate, class com.imop.lj.gameserver.pubtask.template.PubTaskGroupTemplate, class com.imop.lj.gameserver.pubtask.template.PubLevelTemplate], fileName=pubtask.xls]
+18:40:07,575 - TemplateService.init - loading template pubtask.xls
+18:40:07,587 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.humanskill.template.HumanMainSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillToSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubPassiveSkillTemplate], fileName=humanskill.xls]
+18:40:07,587 - TemplateService.init - loading template humanskill.xls
+18:40:07,770 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.GemOpenTemplate, class com.imop.lj.gameserver.equip.template.GemCostTemplate, class com.imop.lj.gameserver.equip.template.GemForPropValueTemplate, class com.imop.lj.gameserver.equip.template.GemSynthesisTemplate, class com.imop.lj.gameserver.equip.template.GemUpTemplate, class com.imop.lj.gameserver.equip.template.GemDownTemplate], fileName=gem.xls]
+18:40:07,770 - TemplateService.init - loading template gem.xls
+18:40:07,775 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.trade.template.TradeSaleableTemplate, class com.imop.lj.gameserver.trade.template.TradeCommodityTypeTemplate, class com.imop.lj.gameserver.trade.template.TradeMainTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSubTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSortableFieldTemplate], fileName=trade.xls]
+18:40:07,775 - TemplateService.init - loading template trade.xls
+18:40:07,793 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.human.template.MailBoxInfoTemplate], fileName=mailbox.xls]
+18:40:07,793 - TemplateService.init - loading template mailbox.xls
+18:40:07,794 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corps.template.CorpsUpgradeTemplate, class com.imop.lj.gameserver.corps.template.CorpsBenifitTemplate, class com.imop.lj.gameserver.corps.template.CorpsBuildingUpgradeTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistGenTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCritTemplate], fileName=corps.xls]
+18:40:07,794 - TemplateService.init - loading template corps.xls
+18:40:07,807 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.activityui.template.ActivityUITemplate, class com.imop.lj.gameserver.activityui.template.ActivityUIRewardTemplate], fileName=activityui.xls]
+18:40:07,807 - TemplateService.init - loading template activityui.xls
+18:40:07,812 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.team.template.TeamTargetTemplate], fileName=team.xls]
+18:40:07,812 - TemplateService.init - loading template team.xls
+18:40:07,813 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.onlinegift.template.OnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.SpecOnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.DailySignGiftTemplate], fileName=onlinegift.xls]
+18:40:07,813 - TemplateService.init - loading template onlinegift.xls
+18:40:07,816 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineLevelTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMinePitTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineCostTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineMinerTemplate], fileName=mine.xls]
+18:40:07,816 - TemplateService.init - loading template mine.xls
+18:40:07,819 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mall.template.MallCatalogTemplate, class com.imop.lj.gameserver.mall.template.MallNormalItemTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitQueueTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitItemTemplate, class com.imop.lj.gameserver.mall.template.MallEndBoradcastTimeTemplate], fileName=mall.xls]
+18:40:07,819 - TemplateService.init - loading template mall.xls
+18:40:07,855 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wizardraid.template.WizardRaidTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidWaveTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidMonsterTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidPositionTemplate], fileName=wizardraid.xls]
+18:40:07,855 - TemplateService.init - loading template wizardraid.xls
+18:40:07,863 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskTemplate, class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskGroupTemplate], fileName=thesweeneytask.xls]
+18:40:07,863 - TemplateService.init - loading template thesweeneytask.xls
+18:40:07,868 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.treasuremap.template.TreasureMapTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapGroupTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapRewardTemplate], fileName=treasuremap.xls]
+18:40:07,868 - TemplateService.init - loading template treasuremap.xls
+18:40:07,874 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.title.template.TitleTemplate], fileName=title.xls]
+18:40:07,874 - TemplateService.init - loading template title.xls
+18:40:07,876 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.foragetask.template.ForageTaskTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskGroupTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskRewardTemplate], fileName=foragetask.xls]
+18:40:07,876 - TemplateService.init - loading template foragetask.xls
+18:40:07,879 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpswar.template.CorpsWarRankRewardTemplate], fileName=corpswar.xls]
+18:40:07,879 - TemplateService.init - loading template corpswar.xls
+18:40:07,880 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.overman.template.OvermanTemplate], fileName=overman.xls]
+18:40:07,880 - TemplateService.init - loading template overman.xls
+18:40:07,881 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.nvn.template.NvnRankRewardTemplate, class com.imop.lj.gameserver.nvn.template.NvnConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnEndConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnMatchRankTemplate], fileName=nvn.xls]
+18:40:07,881 - TemplateService.init - loading template nvn.xls
+18:40:07,882 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.story.template.StoryTemplate, class com.imop.lj.gameserver.story.template.StoryBattleTemplate], fileName=story.xls]
+18:40:07,882 - TemplateService.init - loading template story.xls
+18:40:07,922 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.goodactivity.template.GoodActivityBaseTemplate], fileName=goodactivity.xls]
+18:40:07,922 - TemplateService.init - loading template goodactivity.xls
+18:40:07,925 - TemplateService.init - TemplateConfig [classes=[], fileName=goodactivity.xls]
+18:40:07,925 - TemplateService.init - loading template goodactivity.xls
+18:40:07,937 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wing.template.WingTemplate, class com.imop.lj.gameserver.wing.template.WingUpgradeTemplate], fileName=wing.xls]
+18:40:07,937 - TemplateService.init - loading template wing.xls
+18:40:07,995 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.arena.template.ArenaRankChallengeTemplate, class com.imop.lj.gameserver.arena.template.ArenaBattleRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaRankRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaBuyTimesTemplate, class com.imop.lj.gameserver.arena.template.ArenaConWinNoticeTemplate, class com.imop.lj.gameserver.arena.template.ArenaLeaderSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaPetSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaRobotTemplate], fileName=arena.xls]
+18:40:07,995 - TemplateService.init - loading template arena.xls
+18:40:08,001 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpstask.template.CorpsTaskTemplate], fileName=corpstask.xls]
+18:40:08,002 - TemplateService.init - loading template corpstask.xls
+18:40:08,008 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.promote.template.PromoteTemplate], fileName=promote.xls]
+18:40:08,008 - TemplateService.init - loading template promote.xls
+18:40:08,009 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mysteryshop.template.MysteryShopItemTemplate], fileName=mysteryshop.xls]
+18:40:08,009 - TemplateService.init - loading template mysteryshop.xls
+18:40:08,014 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.tower.template.TowerExpTemplate, class com.imop.lj.gameserver.tower.template.TowerRewardTemplate, class com.imop.lj.gameserver.tower.template.TowerMapTemplate], fileName=tower.xls]
+18:40:08,014 - TemplateService.init - loading template tower.xls
+18:40:08,019 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.charge.template.ChargeTemplate, class com.imop.lj.gameserver.charge.template.MonthCardTemplate], fileName=charge.xls]
+18:40:08,019 - TemplateService.init - loading template charge.xls
+18:40:08,020 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exchange.template.ExchangeTemplate], fileName=exchange.xls]
+18:40:08,020 - TemplateService.init - loading template exchange.xls
+18:40:08,021 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.vip.template.VipUpgradeTemplate, class com.imop.lj.gameserver.vip.template.VipConfigTemplate], fileName=vip.xls]
+18:40:08,021 - TemplateService.init - loading template vip.xls
+18:40:08,028 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpsboss.template.CorpsBossTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossRankTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossCountRankTemplate], fileName=corpsboss.xls]
+18:40:08,029 - TemplateService.init - loading template corpsboss.xls
+18:40:08,033 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.item.template.StoreOpenTemplate], fileName=store.xls]
+18:40:08,033 - TemplateService.init - loading template store.xls
+18:40:08,034 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.sealdemon.template.SealDemonMapTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonNpcTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonRewardTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonKingRewardTemplate], fileName=sealdemon.xls]
+18:40:08,035 - TemplateService.init - loading template sealdemon.xls
+18:40:08,039 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateMapTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateNpcTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateRewardTemplate], fileName=devilincarnate.xls]
+18:40:08,039 - TemplateService.init - loading template devilincarnate.xls
+18:40:08,042 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.timelimit.template.TimeLimitPushTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitMonsterTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitNpcTemplate], fileName=timelimit.xls]
+18:40:08,042 - TemplateService.init - loading template timelimit.xls
+18:40:08,046 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.day7target.template.Day7TargetTemplate], fileName=day7target.xls]
+18:40:08,046 - TemplateService.init - loading template day7target.xls
+18:40:08,050 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.plotdungeon.template.PlotDungeonTemplate], fileName=plotdungeon.xls]
+18:40:08,051 - TemplateService.init - loading template plotdungeon.xls
+18:40:08,055 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.video.template.VideoTemplate], fileName=video.xls]
+18:40:08,055 - TemplateService.init - loading template video.xls
+18:40:08,067 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.siegedemon.template.SiegeDemonTemplate, class com.imop.lj.gameserver.siegedemon.template.SiegeDemonPositionTemplate], fileName=siegedemon.xls]
+18:40:08,067 - TemplateService.init - loading template siegedemon.xls
+18:40:08,070 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.xianhu.template.XianhuRankRewardTemplate], fileName=xianhu.xls]
+18:40:08,070 - TemplateService.init - loading template xianhu.xls
+18:40:08,071 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMapTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillLevelTemplate], fileName=lifeskill.xls]
+18:40:08,071 - TemplateService.init - loading template lifeskill.xls
+18:40:08,078 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.ringtask.template.RingTaskTemplate, class com.imop.lj.gameserver.ringtask.template.RingTaskRewardTemplate], fileName=ringtask.xls]
+18:40:08,078 - TemplateService.init - loading template ringtask.xls
+18:40:08,091 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate], fileName=exp.xls]
+18:40:08,091 - TemplateService.init - loading template exp.xls
+18:40:08,201 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:40:08,204 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:40:08,251 - TemplateCacheService.init - all template and template cache load finished.
+18:40:08,293 - LocalService.initLocalConfig - Local config init success
+18:40:11,249 - GameDaoService$DaoHelper.<init> - DBService instance:com.imop.lj.core.orm.HibernateDBServcieImpl@5e9f73b
+18:40:12,288 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerChargeDiamondEvent listener:com.imop.lj.gameserver.common.listener.PlayerChargeDiamondListener]
+18:40:12,288 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerFinishQuest listener:com.imop.lj.gameserver.common.listener.PlayerFinishQuestListener]
+18:40:12,288 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:GiveMoney listener:com.imop.lj.gameserver.common.listener.GiveMoneyListener]
+18:40:12,289 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:MainBagGetItem listener:com.imop.lj.gameserver.common.listener.MainBagGetItemListener]
+18:40:12,289 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:MainBagRemoveItem listener:com.imop.lj.gameserver.common.listener.MainBagRemoveItemListener]
+18:40:12,289 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:LeaderLevelUp listener:com.imop.lj.gameserver.common.listener.LeaderLevelUpListener]
+18:40:12,289 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:OpenFunc listener:com.imop.lj.gameserver.common.listener.OpenFuncListener]
+18:40:12,290 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:LoginDaysAdd listener:com.imop.lj.gameserver.common.listener.LoginDaysAddListener]
+18:40:12,290 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerSceneDataChange listener:com.imop.lj.gameserver.common.listener.PlayerSceneDataChangeListener]
+18:40:12,290 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:FightPowerChange listener:com.imop.lj.gameserver.common.listener.FightPowerChangeListener]
+18:40:12,291 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:MallBuyItem listener:com.imop.lj.gameserver.common.listener.MallBuyItemListener]
+18:40:12,291 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:BattleEscape listener:com.imop.lj.gameserver.common.listener.BattleEscapeListener]
+18:40:12,291 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:TeamMemberChange listener:com.imop.lj.gameserver.common.listener.TeamMemberChangeListener]
+18:40:12,291 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerCorpsChanged listener:com.imop.lj.gameserver.common.listener.PlayerCorpsChangedListener]
+18:40:12,292 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:ArenaRefresh listener:com.imop.lj.gameserver.common.listener.ArenaRefreshListener]
+18:40:12,292 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:CostMoney listener:com.imop.lj.gameserver.common.listener.CostMoneyListener]
+18:40:12,293 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:VipStateChange listener:com.imop.lj.gameserver.common.listener.VipStateChangeListener]
+18:40:12,293 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:GoodActivityFinishTarget listener:com.imop.lj.gameserver.common.listener.GoodActivityFinishTargetListener]
+18:40:13,542 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.constant.ConstantDef$ConstantEnum中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:40:13,719 - ExamService.refreshExam - refreshExam source=init
+18:40:14,457 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+18:40:14,457 - GameServer.init - Globals initialized
+18:40:14,458 - GameServer.init - initGameServer()
+18:40:14,901 - LogServerService.start - #LogServerService#start#ok!
+18:40:14,901 - SceneService.start - begin start heartBeatThread
+18:40:14,902 - SceneService.start - end start heartBeatThread
+18:40:14,902 - GameServer.start - Begin to start Server Process
+18:40:14,902 - ServerProcess.log - Server process [GameServer]:Message processor thread starting...
+18:40:14,902 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+18:40:14,909 - CorpsService.clearCorpsWeekContributionChecker - #CorpsService#upgradeCorpsChecker get all corps lst is null!
+18:40:14,909 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+18:40:14,915 - ServerProcess.log - Server process [GameServer]:Listening on /0.0.0.0:8085 , io prcessors:1
+18:40:14,936 - GameServer.start - Begin to start http Server Process
+18:40:14,936 - GameServer.start - Begin to start Globals
+18:40:14,941 - GameMessageProcessor.put - 【Receive】SysTimeEventServiceStart[]0
+18:40:14,941 - TimeQueueService.start - begin start timeEventHeartbeatThread
+18:40:14,942 - GameMessageProcessor.put - 【Receive】SysWallowTickerServiceStart[]0
+18:40:14,942 - GameServer.start - Globals started
+18:40:14,942 - GameServer.start - Begin to schedule fixed rate task
+18:40:14,943 - GameServer.start - Scheduled fixed rate task
+18:40:14,943 - GameServer.main - Free memory 7164 Mb of 7271 Mb
+18:40:14,943 - GameServer.main - Game Server started
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshArenaTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：sendScribedLogTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：AddLoginDaysTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateArmyTitleSalaryDaysTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateBankDaysTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayTargetTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateGemMazeEnergy:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateLoopTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayChargeGift:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateSpecialActivityUI:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateRank:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateCorpsMaintenanceCost:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshExamTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshActivityTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossRankTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossCountRankTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshNvnRankTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshXianhuRank:加入队列中
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：ResetZeroTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 共有29个定时任务加入时间队列中
+18:40:14,954 - TimeQueueService.start - end start timeEventHeartbeatThread
+18:40:14,954 - QueueMessageProcessor.process - Message:SysTimeEventServiceStart:SysTimeEventServiceStart Type:0 Time:12ms Total:1
+18:40:14,954 - QueueMessageProcessor.process - Message:SysTimeEventServiceStart:SysTimeEventServiceStart;f=com.imop.lj.gameserver.timeevent.msg.SysTimeEventServiceStart;msg=SysTimeEventServiceStart[]0 Type:0 Time:12ms
+18:41:14,946 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:42:14,944 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:43:14,943 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:43:38,958 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:43:38,958 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:43:59,142 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:43:59,142 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:43:59,143 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@73bae8c4 the session connected:false
+18:43:59,145 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:43:59,145 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@3db41499]0
+18:43:59,145 - QueueMessageProcessor.process - Message:SYS_SESSION_CLOSE:GameClientSessionClosedMsg Type:2 Time:2ms Total:20
+18:43:59,145 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:43:59,146 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:43:59,146 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:43:59,146 - OnlinePlayerService.removePlayer - offline player passport=
+18:43:59,147 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:43:59,148 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:43:59,149 - QueueMessageProcessor.process - Message:PlayerOfflineMessage:PlayerOfflineMessage Type:0 Time:3ms Total:21
+18:43:59,149 - QueueMessageProcessor.process - Message:PlayerOfflineMessage:PlayerOfflineMessage;f=com.imop.lj.gameserver.player.msg.PlayerOfflineMessage;msg=PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@3db41499]0 Type:0 Time:3ms
+18:44:03,973 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:44:14,944 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:44:36,441 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:44:36,441 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:44:36,441 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@3ff309d the session connected:false
+18:44:36,441 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:44:36,441 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@1eca1d32]0
+18:44:36,441 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:44:36,441 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:44:36,441 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:44:36,441 - OnlinePlayerService.removePlayer - offline player passport=
+18:44:36,441 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:44:36,441 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:44:36,443 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:45:14,943 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+18:45:14,946 - QueueMessageProcessor.process - Message:SYS_SCHEDULE:ScheduleReportOnlines Type:3 Time:2ms Total:32
+18:45:14,946 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:45:36,516 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:45:36,516 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:45:36,516 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@75009421 the session connected:false
+18:45:36,516 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:45:36,516 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@6a8faebb]0
+18:45:36,516 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:45:36,516 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:45:36,516 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:45:36,516 - OnlinePlayerService.removePlayer - offline player passport=
+18:45:36,516 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:45:36,517 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:46:14,944 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:47:14,943 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:48:14,944 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:49:05,230 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:49:05,230 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:49:05,231 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@527293bb the session connected:false
+18:49:05,231 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:49:05,231 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@679e2261]0
+18:49:05,231 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:49:05,231 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:49:05,231 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:49:05,231 - OnlinePlayerService.removePlayer - offline player passport=
+18:49:05,231 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:49:05,231 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:49:14,943 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:50:14,944 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+18:50:14,944 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:50:45,422 - GameServer.main - Starting Game Server
+18:50:45,424 - GameServer.main - Free memory 7253 Mb of 7271 Mb
+18:50:45,874 - GameServer.init - Begin to initialize Globals
+18:50:46,256 - LogServerService.init - #LogServerService#init#log server cfg url=file:/D:/OtherGitProjects/UFramework/IdeaServer/zljnew/game_server/out/production/game_server/log_server.cfg.js
+18:50:46,286 - LogServerService.init - #LogServerService#init#log server _ibatisConfigFile url=file:/D:/OtherGitProjects/UFramework/IdeaServer/zljnew/game_server/out/production/game_server/log_ibatis_config.xml
+18:50:46,648 - LogServerService.init - Table creator class:com.imop.lj.logserver.createtable.TodayAndTommorowTableCreator@23d1e5d0
+18:50:46,648 - LogServerService.init - Create log tables
+18:50:49,071 - LogServerService.init - Schedule create new log table task [Delay:1440000ms,period:1440000ms]
+18:50:49,324 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate, class com.imop.lj.gameserver.npc.template.NpcTemplate], fileName=npc.xls]
+18:50:49,324 - TemplateService.init - loading template npc.xls
+18:50:49,401 - TemplateService.init - TemplateConfig [classes=[], fileName=item.xls]
+18:50:49,401 - TemplateService.init - loading template item.xls
+18:50:50,008 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetPropTemplate, class com.imop.lj.gameserver.pet.template.BattleTypeTemplate, class com.imop.lj.gameserver.pet.template.PetLevelTemplate, class com.imop.lj.gameserver.pet.template.PetGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetVariationTemplate, class com.imop.lj.gameserver.pet.template.PetArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetPerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetFightPowerTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetPropItemTemplate], fileName=pet.xls]
+18:50:50,009 - TemplateService.init - loading template pet.xls
+18:50:50,085 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetTemplate, class com.imop.lj.gameserver.pet.template.PetHorseLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseGrowthTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillNumTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillPackTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTalentSkillLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorseRejuvenationTemplate, class com.imop.lj.gameserver.pet.template.PetHorseArtificeTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainCostTemplate, class com.imop.lj.gameserver.pet.template.PetHorseTrainPropTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptLevelTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptTypeTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePerceptPromoteTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveTalentSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePassiveNormalSkillTemplate, class com.imop.lj.gameserver.pet.template.PetHorsePropItemTemplate, class com.imop.lj.gameserver.pet.template.PetHorseCloAddTemplate], fileName=pethorse.xls]
+18:50:50,086 - TemplateService.init - loading template pethorse.xls
+18:50:50,108 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pet.template.PetFriendTemplate], fileName=friend.xls]
+18:50:50,109 - TemplateService.init - loading template friend.xls
+18:50:50,109 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.skill.template.SkillTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectDescTemplate, class com.imop.lj.gameserver.skill.template.SkillPerformTemplate, class com.imop.lj.gameserver.skill.template.SkillBuffTemplate, class com.imop.lj.gameserver.skill.template.SkillLabelTemplate, class com.imop.lj.gameserver.skill.template.SkillAddTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectItemLevelTemplate, class com.imop.lj.gameserver.skill.template.SkillEffectOpenTemplate, class com.imop.lj.gameserver.skill.template.SkillPetHorseAddTemplate], fileName=skill.xls]
+18:50:50,109 - TemplateService.init - loading template skill.xls
+18:50:50,372 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.battle.template.BattlePropCoefTemplate], fileName=battle.xls]
+18:50:50,372 - TemplateService.init - loading template battle.xls
+18:50:50,381 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.map.template.MapTemplate, class com.imop.lj.gameserver.map.template.MapNpcTemplate, class com.imop.lj.gameserver.map.template.MapMeetMonsterTemplate, class com.imop.lj.gameserver.map.template.PetIslandTemplate], fileName=map.xls]
+18:50:50,381 - TemplateService.init - loading template map.xls
+18:50:50,410 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.UpgradeEquipStarTemplate, class com.imop.lj.gameserver.equip.template.EquipDecomposeTemplate, class com.imop.lj.gameserver.equip.template.EquipRecastLockAttrTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleCostTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleRefreshTemplate, class com.imop.lj.gameserver.equip.template.EquipHoleColorTemplate, class com.imop.lj.gameserver.equip.template.EquipGemLimitTemplate], fileName=equip.xls]
+18:50:50,410 - TemplateService.init - loading template equip.xls
+18:50:50,453 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.enemy.template.EnemyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyCoefTemplate, class com.imop.lj.gameserver.enemy.template.EnemyArmyTemplate, class com.imop.lj.gameserver.enemy.template.EnemyNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiNumTemplate, class com.imop.lj.gameserver.enemy.template.EnemyGuaJiValueTemplate], fileName=enemy.xls]
+18:50:50,453 - TemplateService.init - loading template enemy.xls
+18:50:50,668 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mission.template.MissionTemplate, class com.imop.lj.gameserver.mission.template.MissionEnemyGroupTemplate], fileName=mission.xls]
+18:50:50,668 - TemplateService.init - loading template mission.xls
+18:50:50,672 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.role.template.RoleNameXingTemplate, class com.imop.lj.gameserver.role.template.RoleNameMaleMingTemplate, class com.imop.lj.gameserver.role.template.RoleNameFemaleMingTemplate], fileName=rolename.xls]
+18:50:50,673 - TemplateService.init - loading template rolename.xls
+18:50:50,728 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.DirtyWordsTemplate, class com.imop.lj.common.model.template.NameDirtyWordsTemplate], fileName=dirtywords.xls]
+18:50:50,728 - TemplateService.init - loading template dirtywords.xls
+18:50:50,801 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.scene.template.SceneTemplate], fileName=world.xls]
+18:50:50,801 - TemplateService.init - loading template world.xls
+18:50:50,802 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate, class com.imop.lj.gameserver.task.template.QuestTemplate], fileName=quest.xls]
+18:50:50,802 - TemplateService.init - loading template quest.xls
+18:50:50,976 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.common.model.template.TimeEventTemplate, class com.imop.lj.gameserver.timeevent.template.SysPowerGiveTimeTemplate, class com.imop.lj.gameserver.timeevent.template.ScribedLogTimeEventTemplate, class com.imop.lj.gameserver.activity.template.ActivityTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshActivityStateTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshArenaTemplate, class com.imop.lj.gameserver.timeevent.template.EnhanceActivityTemplate, class com.imop.lj.gameserver.timeevent.template.TimeNoticeTemplate, class com.imop.lj.gameserver.timeevent.template.RefreshDevilIncarnateTemplate], fileName=timeevent.xls]
+18:50:50,976 - TemplateService.init - loading template timeevent.xls
+18:50:50,990 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.cd.template.CdTemplate, class com.imop.lj.gameserver.cd.template.CdTiredRatioTemplate, class com.imop.lj.gameserver.cd.template.CdOpenCondTemplate], fileName=cdqueue.xls]
+18:50:50,990 - TemplateService.init - loading template cdqueue.xls
+18:50:51,055 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.behavior.template.BehaviorTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuyPowerCostTemplate, class com.imop.lj.gameserver.behavior.template.BehaviorBuySkillPointCostTemplate, class com.imop.lj.gameserver.behavior.template.BindIdBehaviorTemplate], fileName=behavior.xls]
+18:50:51,055 - TemplateService.init - loading template behavior.xls
+18:50:51,059 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.broadcast.template.BroadcastTemplate], fileName=broadcast.xls]
+18:50:51,059 - TemplateService.init - loading template broadcast.xls
+18:50:51,061 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.func.template.FuncTemplate, class com.imop.lj.gameserver.func.template.FuncOpenTemplate], fileName=func.xls]
+18:50:51,061 - TemplateService.init - loading template func.xls
+18:50:51,079 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.constant.template.ShowCurrencyTemplate], fileName=showcurrency.xls]
+18:50:51,080 - TemplateService.init - loading template showcurrency.xls
+18:50:51,084 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.reward.template.RewardSetTemplate, class com.imop.lj.gameserver.reward.template.RewardConfigTemplate, class com.imop.lj.gameserver.reward.template.GradeRewardTemplate, class com.imop.lj.gameserver.reward.template.ShowRewardTemplate, class com.imop.lj.gameserver.reward.template.LevelGiftPackTemplate], fileName=reward.xls]
+18:50:51,084 - TemplateService.init - loading template reward.xls
+18:50:51,308 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.CraftEquipTypeTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipCostTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipColorTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipItemProbTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipFixedAttrTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipPropTemplate, class com.imop.lj.gameserver.equip.template.CraftEquipGradeColorTemplate], fileName=craftequip.xls]
+18:50:51,308 - TemplateService.init - loading template craftequip.xls
+18:50:51,358 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate, class com.imop.lj.gameserver.exam.template.ExamTemplate, class com.imop.lj.gameserver.exam.template.ExamSpecialRewardConditionTemplate], fileName=exam.xls]
+18:50:51,358 - TemplateService.init - loading template exam.xls
+18:50:51,365 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.pubtask.template.PubTaskTemplate, class com.imop.lj.gameserver.pubtask.template.PubTaskGroupTemplate, class com.imop.lj.gameserver.pubtask.template.PubLevelTemplate], fileName=pubtask.xls]
+18:50:51,365 - TemplateService.init - loading template pubtask.xls
+18:50:51,377 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.humanskill.template.HumanMainSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubSkillLevelTemplate, class com.imop.lj.gameserver.humanskill.template.HumanMainSkillToSubSkillTemplate, class com.imop.lj.gameserver.humanskill.template.HumanSubPassiveSkillTemplate], fileName=humanskill.xls]
+18:50:51,377 - TemplateService.init - loading template humanskill.xls
+18:50:51,518 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.equip.template.GemOpenTemplate, class com.imop.lj.gameserver.equip.template.GemCostTemplate, class com.imop.lj.gameserver.equip.template.GemForPropValueTemplate, class com.imop.lj.gameserver.equip.template.GemSynthesisTemplate, class com.imop.lj.gameserver.equip.template.GemUpTemplate, class com.imop.lj.gameserver.equip.template.GemDownTemplate], fileName=gem.xls]
+18:50:51,518 - TemplateService.init - loading template gem.xls
+18:50:51,523 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.trade.template.TradeSaleableTemplate, class com.imop.lj.gameserver.trade.template.TradeCommodityTypeTemplate, class com.imop.lj.gameserver.trade.template.TradeMainTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSubTagTemplate, class com.imop.lj.gameserver.trade.template.TradeSortableFieldTemplate], fileName=trade.xls]
+18:50:51,523 - TemplateService.init - loading template trade.xls
+18:50:51,538 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.human.template.MailBoxInfoTemplate], fileName=mailbox.xls]
+18:50:51,538 - TemplateService.init - loading template mailbox.xls
+18:50:51,539 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corps.template.CorpsUpgradeTemplate, class com.imop.lj.gameserver.corps.template.CorpsBenifitTemplate, class com.imop.lj.gameserver.corps.template.CorpsBuildingUpgradeTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateTemplate, class com.imop.lj.gameserver.corpscultivate.template.CorpsCultivateCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCostTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistGenTemplate, class com.imop.lj.gameserver.corpsassist.template.CorpsAssistCritTemplate], fileName=corps.xls]
+18:50:51,539 - TemplateService.init - loading template corps.xls
+18:50:51,551 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.activityui.template.ActivityUITemplate, class com.imop.lj.gameserver.activityui.template.ActivityUIRewardTemplate], fileName=activityui.xls]
+18:50:51,551 - TemplateService.init - loading template activityui.xls
+18:50:51,555 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.team.template.TeamTargetTemplate], fileName=team.xls]
+18:50:51,556 - TemplateService.init - loading template team.xls
+18:50:51,556 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.onlinegift.template.OnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.SpecOnlineGiftTemplate, class com.imop.lj.gameserver.onlinegift.template.DailySignGiftTemplate], fileName=onlinegift.xls]
+18:50:51,556 - TemplateService.init - loading template onlinegift.xls
+18:50:51,560 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineLevelTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMinePitTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineCostTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillMineMinerTemplate], fileName=mine.xls]
+18:50:51,560 - TemplateService.init - loading template mine.xls
+18:50:51,563 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mall.template.MallCatalogTemplate, class com.imop.lj.gameserver.mall.template.MallNormalItemTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitQueueTemplate, class com.imop.lj.gameserver.mall.template.MallTimeLimitItemTemplate, class com.imop.lj.gameserver.mall.template.MallEndBoradcastTimeTemplate], fileName=mall.xls]
+18:50:51,563 - TemplateService.init - loading template mall.xls
+18:50:51,593 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wizardraid.template.WizardRaidTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidWaveTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidMonsterTemplate, class com.imop.lj.gameserver.wizardraid.template.WizardRaidPositionTemplate], fileName=wizardraid.xls]
+18:50:51,593 - TemplateService.init - loading template wizardraid.xls
+18:50:51,599 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskTemplate, class com.imop.lj.gameserver.thesweeneytask.template.TheSweeneyTaskGroupTemplate], fileName=thesweeneytask.xls]
+18:50:51,600 - TemplateService.init - loading template thesweeneytask.xls
+18:50:51,604 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.treasuremap.template.TreasureMapTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapGroupTemplate, class com.imop.lj.gameserver.treasuremap.template.TreasureMapRewardTemplate], fileName=treasuremap.xls]
+18:50:51,604 - TemplateService.init - loading template treasuremap.xls
+18:50:51,611 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.title.template.TitleTemplate], fileName=title.xls]
+18:50:51,611 - TemplateService.init - loading template title.xls
+18:50:51,613 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.foragetask.template.ForageTaskTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskGroupTemplate, class com.imop.lj.gameserver.foragetask.template.ForageTaskRewardTemplate], fileName=foragetask.xls]
+18:50:51,613 - TemplateService.init - loading template foragetask.xls
+18:50:51,616 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpswar.template.CorpsWarRankRewardTemplate], fileName=corpswar.xls]
+18:50:51,616 - TemplateService.init - loading template corpswar.xls
+18:50:51,617 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.overman.template.OvermanTemplate], fileName=overman.xls]
+18:50:51,617 - TemplateService.init - loading template overman.xls
+18:50:51,617 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.nvn.template.NvnRankRewardTemplate, class com.imop.lj.gameserver.nvn.template.NvnConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnEndConWinScoreTemplate, class com.imop.lj.gameserver.nvn.template.NvnMatchRankTemplate], fileName=nvn.xls]
+18:50:51,618 - TemplateService.init - loading template nvn.xls
+18:50:51,619 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.story.template.StoryTemplate, class com.imop.lj.gameserver.story.template.StoryBattleTemplate], fileName=story.xls]
+18:50:51,619 - TemplateService.init - loading template story.xls
+18:50:51,658 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.goodactivity.template.GoodActivityBaseTemplate], fileName=goodactivity.xls]
+18:50:51,659 - TemplateService.init - loading template goodactivity.xls
+18:50:51,660 - TemplateService.init - TemplateConfig [classes=[], fileName=goodactivity.xls]
+18:50:51,660 - TemplateService.init - loading template goodactivity.xls
+18:50:51,672 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.wing.template.WingTemplate, class com.imop.lj.gameserver.wing.template.WingUpgradeTemplate], fileName=wing.xls]
+18:50:51,672 - TemplateService.init - loading template wing.xls
+18:50:51,726 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.arena.template.ArenaRankChallengeTemplate, class com.imop.lj.gameserver.arena.template.ArenaBattleRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaRankRewardTemplate, class com.imop.lj.gameserver.arena.template.ArenaBuyTimesTemplate, class com.imop.lj.gameserver.arena.template.ArenaConWinNoticeTemplate, class com.imop.lj.gameserver.arena.template.ArenaLeaderSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaPetSkillWeightTemplate, class com.imop.lj.gameserver.arena.template.ArenaRobotTemplate], fileName=arena.xls]
+18:50:51,727 - TemplateService.init - loading template arena.xls
+18:50:51,736 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpstask.template.CorpsTaskTemplate], fileName=corpstask.xls]
+18:50:51,736 - TemplateService.init - loading template corpstask.xls
+18:50:51,743 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.promote.template.PromoteTemplate], fileName=promote.xls]
+18:50:51,743 - TemplateService.init - loading template promote.xls
+18:50:51,743 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.mysteryshop.template.MysteryShopItemTemplate], fileName=mysteryshop.xls]
+18:50:51,743 - TemplateService.init - loading template mysteryshop.xls
+18:50:51,747 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.tower.template.TowerExpTemplate, class com.imop.lj.gameserver.tower.template.TowerRewardTemplate, class com.imop.lj.gameserver.tower.template.TowerMapTemplate], fileName=tower.xls]
+18:50:51,747 - TemplateService.init - loading template tower.xls
+18:50:51,751 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.charge.template.ChargeTemplate, class com.imop.lj.gameserver.charge.template.MonthCardTemplate], fileName=charge.xls]
+18:50:51,751 - TemplateService.init - loading template charge.xls
+18:50:51,752 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exchange.template.ExchangeTemplate], fileName=exchange.xls]
+18:50:51,752 - TemplateService.init - loading template exchange.xls
+18:50:51,753 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.vip.template.VipUpgradeTemplate, class com.imop.lj.gameserver.vip.template.VipConfigTemplate], fileName=vip.xls]
+18:50:51,753 - TemplateService.init - loading template vip.xls
+18:50:51,759 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.corpsboss.template.CorpsBossTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossRankTemplate, class com.imop.lj.gameserver.corpsboss.template.CorpsBossCountRankTemplate], fileName=corpsboss.xls]
+18:50:51,760 - TemplateService.init - loading template corpsboss.xls
+18:50:51,763 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.item.template.StoreOpenTemplate], fileName=store.xls]
+18:50:51,763 - TemplateService.init - loading template store.xls
+18:50:51,764 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.sealdemon.template.SealDemonMapTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonNpcTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonRewardTemplate, class com.imop.lj.gameserver.sealdemon.template.SealDemonKingRewardTemplate], fileName=sealdemon.xls]
+18:50:51,764 - TemplateService.init - loading template sealdemon.xls
+18:50:51,768 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateMapTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateNpcTemplate, class com.imop.lj.gameserver.devilincarnate.template.DevilIncarnateRewardTemplate], fileName=devilincarnate.xls]
+18:50:51,768 - TemplateService.init - loading template devilincarnate.xls
+18:50:51,770 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.timelimit.template.TimeLimitPushTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitMonsterTemplate, class com.imop.lj.gameserver.timelimit.template.TimeLimitNpcTemplate], fileName=timelimit.xls]
+18:50:51,770 - TemplateService.init - loading template timelimit.xls
+18:50:51,774 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.day7target.template.Day7TargetTemplate], fileName=day7target.xls]
+18:50:51,774 - TemplateService.init - loading template day7target.xls
+18:50:51,778 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.plotdungeon.template.PlotDungeonTemplate], fileName=plotdungeon.xls]
+18:50:51,778 - TemplateService.init - loading template plotdungeon.xls
+18:50:51,782 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.video.template.VideoTemplate], fileName=video.xls]
+18:50:51,782 - TemplateService.init - loading template video.xls
+18:50:51,795 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.siegedemon.template.SiegeDemonTemplate, class com.imop.lj.gameserver.siegedemon.template.SiegeDemonPositionTemplate], fileName=siegedemon.xls]
+18:50:51,795 - TemplateService.init - loading template siegedemon.xls
+18:50:51,798 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.xianhu.template.XianhuRankRewardTemplate], fileName=xianhu.xls]
+18:50:51,798 - TemplateService.init - loading template xianhu.xls
+18:50:51,800 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.lifeskill.template.LifeSkillMapTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillTemplate, class com.imop.lj.gameserver.lifeskill.template.LifeSkillLevelTemplate], fileName=lifeskill.xls]
+18:50:51,800 - TemplateService.init - loading template lifeskill.xls
+18:50:51,807 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.ringtask.template.RingTaskTemplate, class com.imop.lj.gameserver.ringtask.template.RingTaskRewardTemplate], fileName=ringtask.xls]
+18:50:51,807 - TemplateService.init - loading template ringtask.xls
+18:50:51,820 - TemplateService.init - TemplateConfig [classes=[class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate, class com.imop.lj.gameserver.exp.template.CalculateExpAddTemplate], fileName=exp.xls]
+18:50:51,820 - TemplateService.init - loading template exp.xls
+18:50:51,925 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:50:51,928 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:50:51,973 - TemplateCacheService.init - all template and template cache load finished.
+18:50:52,013 - LocalService.initLocalConfig - Local config init success
+18:50:55,041 - GameDaoService$DaoHelper.<init> - DBService instance:com.imop.lj.core.orm.HibernateDBServcieImpl@5e9f73b
+18:50:55,960 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerChargeDiamondEvent listener:com.imop.lj.gameserver.common.listener.PlayerChargeDiamondListener]
+18:50:55,960 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerFinishQuest listener:com.imop.lj.gameserver.common.listener.PlayerFinishQuestListener]
+18:50:55,961 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:GiveMoney listener:com.imop.lj.gameserver.common.listener.GiveMoneyListener]
+18:50:55,961 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:MainBagGetItem listener:com.imop.lj.gameserver.common.listener.MainBagGetItemListener]
+18:50:55,961 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:MainBagRemoveItem listener:com.imop.lj.gameserver.common.listener.MainBagRemoveItemListener]
+18:50:55,961 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:LeaderLevelUp listener:com.imop.lj.gameserver.common.listener.LeaderLevelUpListener]
+18:50:55,962 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:OpenFunc listener:com.imop.lj.gameserver.common.listener.OpenFuncListener]
+18:50:55,962 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:LoginDaysAdd listener:com.imop.lj.gameserver.common.listener.LoginDaysAddListener]
+18:50:55,962 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerSceneDataChange listener:com.imop.lj.gameserver.common.listener.PlayerSceneDataChangeListener]
+18:50:55,963 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:FightPowerChange listener:com.imop.lj.gameserver.common.listener.FightPowerChangeListener]
+18:50:55,963 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:MallBuyItem listener:com.imop.lj.gameserver.common.listener.MallBuyItemListener]
+18:50:55,963 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:BattleEscape listener:com.imop.lj.gameserver.common.listener.BattleEscapeListener]
+18:50:55,963 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:TeamMemberChange listener:com.imop.lj.gameserver.common.listener.TeamMemberChangeListener]
+18:50:55,964 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:PlayerCorpsChanged listener:com.imop.lj.gameserver.common.listener.PlayerCorpsChangedListener]
+18:50:55,964 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:ArenaRefresh listener:com.imop.lj.gameserver.common.listener.ArenaRefreshListener]
+18:50:55,965 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:CostMoney listener:com.imop.lj.gameserver.common.listener.CostMoneyListener]
+18:50:55,965 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:VipStateChange listener:com.imop.lj.gameserver.common.listener.VipStateChangeListener]
+18:50:55,965 - EventService.addListener - [#GS.HumanEventService.addListener] [Register event listener (event:GoodActivityFinishTarget listener:com.imop.lj.gameserver.common.listener.GoodActivityFinishTargetListener]
+18:50:57,221 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.constant.ConstantDef$ConstantEnum中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:50:57,373 - ExamService.refreshExam - refreshExam source=init
+18:50:58,044 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+18:50:58,045 - GameServer.init - Globals initialized
+18:50:58,045 - GameServer.init - initGameServer()
+18:50:58,449 - LogServerService.start - #LogServerService#start#ok!
+18:50:58,449 - SceneService.start - begin start heartBeatThread
+18:50:58,450 - SceneService.start - end start heartBeatThread
+18:50:58,450 - GameServer.start - Begin to start Server Process
+18:50:58,450 - ServerProcess.log - Server process [GameServer]:Message processor thread starting...
+18:50:58,450 - QueueMessageProcessor.start - Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+18:50:58,454 - CorpsService.clearCorpsWeekContributionChecker - #CorpsService#upgradeCorpsChecker get all corps lst is null!
+18:50:58,454 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+18:50:58,463 - ServerProcess.log - Server process [GameServer]:Listening on /0.0.0.0:8085 , io prcessors:1
+18:50:58,483 - GameServer.start - Begin to start http Server Process
+18:50:58,483 - GameServer.start - Begin to start Globals
+18:50:58,487 - GameMessageProcessor.put - 【Receive】SysTimeEventServiceStart[]0
+18:50:58,487 - TimeQueueService.start - begin start timeEventHeartbeatThread
+18:50:58,487 - GameMessageProcessor.put - 【Receive】SysWallowTickerServiceStart[]0
+18:50:58,487 - GameServer.start - Globals started
+18:50:58,487 - GameServer.start - Begin to schedule fixed rate task
+18:50:58,488 - GameServer.start - Scheduled fixed rate task
+18:50:58,488 - GameServer.main - Free memory 7166 Mb of 7271 Mb
+18:50:58,488 - GameServer.main - Game Server started
+18:50:58,489 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshArenaTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：sendScribedLogTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：AddLoginDaysTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateArmyTitleSalaryDaysTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateBankDaysTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayTargetTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateGemMazeEnergy:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateLoopTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayChargeGift:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateSpecialActivityUI:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateRank:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateCorpsMaintenanceCost:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshExamTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshActivityTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossRankTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossCountRankTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshNvnRankTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshXianhuRank:加入队列中
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：ResetZeroTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 共有29个定时任务加入时间队列中
+18:50:58,498 - TimeQueueService.start - end start timeEventHeartbeatThread
+18:50:58,498 - QueueMessageProcessor.process - Message:SysTimeEventServiceStart:SysTimeEventServiceStart Type:0 Time:11ms Total:1
+18:50:58,498 - QueueMessageProcessor.process - Message:SysTimeEventServiceStart:SysTimeEventServiceStart;f=com.imop.lj.gameserver.timeevent.msg.SysTimeEventServiceStart;msg=SysTimeEventServiceStart[]0 Type:0 Time:11ms
+18:51:14,444 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:51:14,444 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:51:23,977 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:51:23,977 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:51:23,977 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@6f048fe8 the session connected:false
+18:51:23,980 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:51:23,980 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@536827e6]0
+18:51:23,980 - QueueMessageProcessor.process - Message:SYS_SESSION_CLOSE:GameClientSessionClosedMsg Type:2 Time:2ms Total:6
+18:51:23,980 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:51:23,981 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:51:23,981 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:51:23,981 - OnlinePlayerService.removePlayer - offline player passport=
+18:51:23,981 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:51:23,981 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:51:27,777 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:51:55,425 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:51:55,425 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:51:55,425 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@1fdd6d63 the session connected:false
+18:51:55,426 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:51:55,426 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@1f2972b]0
+18:51:55,426 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:51:55,426 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:51:55,426 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:51:55,426 - OnlinePlayerService.removePlayer - offline player passport=
+18:51:55,426 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:51:55,426 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:51:55,427 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+18:51:58,490 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:52:57,516 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+18:52:57,516 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+18:52:57,516 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@b1e14df the session connected:false
+18:52:57,516 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+18:52:57,516 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@45dd8b5e]0
+18:52:57,516 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+18:52:57,516 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+18:52:57,516 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:52:57,516 - OnlinePlayerService.removePlayer - offline player passport=
+18:52:57,516 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:52:57,517 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:52:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:53:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:54:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:55:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+18:55:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:56:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:57:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:58:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+18:59:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:00:00,655 - TimeEventHeartbeatThread.run - 共有3个定时任务在此心跳任务执行
+19:00:00,655 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+19:00:00,656 - Scene.putMessage - CommonScene【Receive】[]0
+19:00:00,656 - Scene.putMessage - CommonScene【Receive】[]0
+19:00:00,719 - Scene.processMsg - CommonScene【execute】[]0
+19:00:00,721 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=1;mapName=新月村;npcId=3065;npcPoint=java.awt.Point[x=39,y=64]
+19:00:00,721 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=1;mapName=新月村;npcId=3065;npcPoint=java.awt.Point[x=35,y=33]
+19:00:00,721 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=1;mapName=新月村;npcId=3065;npcPoint=java.awt.Point[x=30,y=25]
+19:00:00,721 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=2;mapName=影月森林;npcId=3067;npcPoint=java.awt.Point[x=9,y=13]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=2;mapName=影月森林;npcId=3067;npcPoint=java.awt.Point[x=4,y=33]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=2;mapName=影月森林;npcId=3067;npcPoint=java.awt.Point[x=10,y=11]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=3;mapName=黑色水域;npcId=3073;npcPoint=java.awt.Point[x=11,y=17]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=3;mapName=黑色水域;npcId=3073;npcPoint=java.awt.Point[x=6,y=33]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=3;mapName=黑色水域;npcId=3073;npcPoint=java.awt.Point[x=2,y=24]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=14;mapName=灵昌城;npcId=3076;npcPoint=java.awt.Point[x=36,y=82]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=14;mapName=灵昌城;npcId=3076;npcPoint=java.awt.Point[x=31,y=40]
+19:00:00,722 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=14;mapName=灵昌城;npcId=3076;npcPoint=java.awt.Point[x=35,y=33]
+19:00:00,723 - Scene.processMsg - Scene Message process is too long: Type:0 Time:3ms
+19:00:00,723 - Scene.processMsg - CommonScene【execute】[]0
+19:00:01,121 - BroadcastService.checkWorldBroadcast - GCSystemMessageList size=1
+19:00:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:00:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:01:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:02:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:03:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:04:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:05:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:05:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:06:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:07:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:08:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:09:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:10:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:10:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:11:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:12:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:13:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:14:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:15:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:15:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:16:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:17:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:18:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:19:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:20:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:20:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:20:58,506 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+19:21:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:21:58,490 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+19:21:58,490 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+19:21:58,490 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@4f41226a the session connected:false
+19:21:58,490 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+19:21:58,490 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@170fbab4]0
+19:21:58,490 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+19:21:58,490 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+19:21:58,491 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+19:21:58,491 - OnlinePlayerService.removePlayer - offline player passport=
+19:21:58,491 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:21:58,491 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:21:58,491 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+19:22:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:23:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:24:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:25:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:25:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:26:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:27:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:28:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:29:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:30:00,297 - TimeEventHeartbeatThread.run - 共有1个定时任务在此心跳任务执行
+19:30:00,297 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+19:30:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:30:58,491 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:31:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:32:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:33:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:34:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:35:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:35:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:36:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:37:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:38:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:39:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:40:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:40:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:41:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:42:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:43:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:44:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:45:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:45:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:46:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:47:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:48:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:49:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:50:00,593 - TimeEventHeartbeatThread.run - 共有1个定时任务在此心跳任务执行
+19:50:00,593 - Scene.putMessage - CommonScene【Receive】NvnNoticeMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=42600000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=7,HOUR_OF_DAY=19,MINUTE=50,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+19:50:00,593 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+19:50:00,632 - Scene.processMsg - CommonScene【execute】NvnNoticeMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=42600000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=7,HOUR_OF_DAY=19,MINUTE=50,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+19:50:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:50:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:50:58,568 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+19:51:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:51:58,489 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+19:51:58,489 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+19:51:58,489 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@4d3698 the session connected:false
+19:51:58,489 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+19:51:58,489 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@73c513af]0
+19:51:58,489 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+19:51:58,489 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+19:51:58,489 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+19:51:58,489 - OnlinePlayerService.removePlayer - offline player passport=
+19:51:58,490 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:51:58,490 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:51:59,519 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+19:51:59,519 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+19:52:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:53:01,518 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+19:53:01,518 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+19:53:01,518 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@65b6c530 the session connected:false
+19:53:01,518 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+19:53:01,518 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@6b0d201a]0
+19:53:01,518 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+19:53:01,519 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+19:53:01,519 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+19:53:01,519 - OnlinePlayerService.removePlayer - offline player passport=
+19:53:01,519 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:53:01,519 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:53:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:54:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:55:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+19:55:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:56:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:57:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:58:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+19:59:00,747 - TimeEventHeartbeatThread.run - 共有1个定时任务在此心跳任务执行
+19:59:00,747 - Scene.putMessage - CommonScene【Receive】NvnReadyMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=43140000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=7,HOUR_OF_DAY=19,MINUTE=59,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+19:59:00,748 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+19:59:00,831 - Scene.processMsg - CommonScene【execute】NvnReadyMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=43140000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=7,HOUR_OF_DAY=19,MINUTE=59,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+19:59:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:00:00,764 - TimeEventHeartbeatThread.run - 共有4个定时任务在此心跳任务执行
+20:00:00,764 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+20:00:00,765 - Scene.putMessage - CommonScene【Receive】[]0
+20:00:00,765 - Scene.putMessage - CommonScene【Receive】[]0
+20:00:00,765 - Scene.putMessage - CommonScene【Receive】NvnStartMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=43200000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=8,HOUR_OF_DAY=20,MINUTE=0,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+20:00:00,765 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+20:00:00,796 - Scene.processMsg - CommonScene【execute】[]0
+20:00:00,796 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=1;mapName=新月村;npcId=3063;npcPoint=java.awt.Point[x=41,y=55]
+20:00:00,796 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=1;mapName=新月村;npcId=3063;npcPoint=java.awt.Point[x=14,y=47]
+20:00:00,796 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=1;mapName=新月村;npcId=3063;npcPoint=java.awt.Point[x=9,y=55]
+20:00:00,796 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=2;mapName=影月森林;npcId=3068;npcPoint=java.awt.Point[x=13,y=29]
+20:00:00,796 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=2;mapName=影月森林;npcId=3068;npcPoint=java.awt.Point[x=12,y=33]
+20:00:00,796 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=2;mapName=影月森林;npcId=3068;npcPoint=java.awt.Point[x=18,y=25]
+20:00:00,797 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=3;mapName=黑色水域;npcId=3075;npcPoint=java.awt.Point[x=7,y=24]
+20:00:00,797 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=3;mapName=黑色水域;npcId=3075;npcPoint=java.awt.Point[x=5,y=8]
+20:00:00,797 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=3;mapName=黑色水域;npcId=3075;npcPoint=java.awt.Point[x=13,y=39]
+20:00:00,797 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=14;mapName=灵昌城;npcId=3079;npcPoint=java.awt.Point[x=53,y=17]
+20:00:00,797 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=14;mapName=灵昌城;npcId=3079;npcPoint=java.awt.Point[x=60,y=21]
+20:00:00,797 - DevilIncarnateService.randAddDevilNpc - gen a devil incarnate npc!mapId=14;mapName=灵昌城;npcId=3079;npcPoint=java.awt.Point[x=62,y=22]
+20:00:00,797 - Scene.processMsg - CommonScene【execute】[]0
+20:00:00,797 - Scene.processMsg - CommonScene【execute】NvnStartMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=43200000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=8,HOUR_OF_DAY=20,MINUTE=0,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+20:00:00,798 - BroadcastService.checkWorldBroadcast - GCSystemMessageList size=1
+20:00:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:00:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:01:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:02:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:03:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:04:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:05:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:05:58,490 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:06:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:07:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:08:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:09:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:10:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:10:58,490 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:11:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:12:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:13:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:14:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:15:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:15:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:16:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:17:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:18:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:19:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:20:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:20:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:20:58,578 - XianhuService.refreshCurRank - refreshCurRank isGM=false
+20:21:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:22:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:22:58,490 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+20:22:58,490 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+20:22:58,490 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@7a658d7 the session connected:false
+20:22:58,490 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+20:22:58,490 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@74cc07d9]0
+20:22:58,490 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+20:22:58,490 - GameMessageProcessor.put - 【Receive】SessionOpenedMessage
+20:22:58,491 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+20:22:58,491 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+20:22:58,491 - OnlinePlayerService.removePlayer - offline player passport=
+20:22:58,491 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+20:22:58,491 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+20:23:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:24:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:25:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:25:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:26:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:27:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:28:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:29:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:30:00,234 - TimeEventHeartbeatThread.run - 共有2个定时任务在此心跳任务执行
+20:30:00,234 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+20:30:00,235 - Scene.putMessage - CommonScene【Receive】NvnEndMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=45000000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=8,HOUR_OF_DAY=20,MINUTE=30,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+20:30:00,235 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+20:30:00,291 - Scene.processMsg - CommonScene【execute】NvnEndMessage[ActivityTemplateVO[isOpen=1,nameLangId=0,name=nvn联赛,timeDescLangId=0,timeDesc=nvn联赛 20:00-20:30,descLangId=0,desc=nvn联赛,funcTypeId=0,weekLimitStr=1,3,5,noticeActivityTimeEventId=1074,readyActivityTimeEventId=2121,startActivityTimeEventId=1041,endActivityTimeEventId=1042,icon=4,activityFunctionTemplate=com.imop.lj.gameserver.activity.template.ActivityFunctionTemplate@4fa06f52,activityMessageTemplateList=[com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@602c4656, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@5ffc5491, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@705202d1, com.imop.lj.gameserver.activity.template.ActivityMessageTemplate@3c443976],],java.util.GregorianCalendar[time=45000000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="GMT+08:00",offset=28800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1970,MONTH=0,WEEK_OF_YEAR=1,WEEK_OF_MONTH=1,DAY_OF_MONTH=1,DAY_OF_YEAR=1,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=8,HOUR_OF_DAY=20,MINUTE=30,SECOND=0,MILLISECOND=0,ZONE_OFFSET=28800000,DST_OFFSET=0]]0
+20:30:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:30:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:31:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:32:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:33:48,349 - GameServerIoHandler.sessionClosed - #CLOSE.SESSION.PASSIVE:0:0:0:0:0:0:0:1;
+20:33:48,349 - GameServerIoHandler.sessionClosed - 0:0:0:0:0:0:0:1 4、Player logout GameServerIoHandler.sessionClosed msgProcessor.put(msg):0:0:0:0:0:0:0:1
+20:33:48,349 - GameMessageProcessor.put - 【Receive】SessionClosedMessage com.imop.lj.gameserver.startup.MinaGameClientSession@11d5d380 the session connected:false
+20:33:48,349 - PlayerMessageHandler.handlePlayerCloseSession - 0:0:0:0:0:0:0:16、Player logout PlayerMessageHandler.handlePlayerCloseSession Globals.getMessageProcessor().put(offlineMsg) player passportId
+20:33:48,350 - GameMessageProcessor.put - 【Receive】PlayerOfflineMessage[org.slf4j.impl.Log4jLoggerAdapter(tr.logout),com.imop.lj.gameserver.player.Player@dee44eb]0
+20:33:48,350 - PlayerOfflineMessage.execute - 8、Player logout offlineMsg.execute  player passportId player stateinit
+20:33:48,350 - OnlinePlayerService.offlinePlayer - 0:0:0:0:0:0:0:1 13、Player logout OnlinePlayerService.offlinePlayer  player passportId player stateinit
+20:33:48,350 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+20:33:48,350 - OnlinePlayerService.removePlayer - offline player passport=
+20:33:48,350 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+20:33:48,350 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+20:33:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:34:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:35:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:35:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:36:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:37:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:38:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:39:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:40:58,489 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:40:58,490 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:41:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:42:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:43:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:44:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:45:58,488 - LocalScribeService.sendScribeGameOnlineReport - #GS.LocalScribeService.sendScribeGameOnlineReport: is return;
+20:45:58,488 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0
+20:46:58,489 - GameMessageProcessor.put - 【Receive】CheckSessionMsg[]0

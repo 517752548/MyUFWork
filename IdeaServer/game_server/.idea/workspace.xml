@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4eaa2f-ad27-4be7-93bc-5bc4e406c659" name="Default Changelist" comment="" />
+    <list default="true" id="8b4eaa2f-ad27-4be7-93bc-5bc4e406c659" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_server/com/imop/lj/core/msg/IMessage$Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_server/com/imop/lj/core/msg/IMessage$Packet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_server/com/imop/lj/core/template/TemplateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_server/com/imop/lj/core/template/TemplateService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zljnew/game_server" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -50,19 +55,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.59" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.59" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8082/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="game_server">
@@ -145,6 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603534495091</updated>
       <workItem from="1603534496288" duration="9188000" />
+      <workItem from="1603713243543" duration="172000" />
     </task>
     <servers />
   </component>
@@ -161,24 +155,31 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="351" y="121" key="#Project_Structure" timestamp="1603536321018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="351" y="121" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1603536321017" />
-    <state x="325" y="182" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603536328473">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="645" y="460" key="#Tomcat_Server" timestamp="1603713366883">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="645" y="460" key="#Tomcat_Server/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603713366883" />
+    <state x="325" y="184" width="1092" height="760" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603713371466">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="325" y="182" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603536328473" />
+    <state x="325" y="184" width="1092" height="760" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603713371466" />
     <state x="489" y="205" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603537222580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="489" y="205" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603537222580" />
-    <state x="651" y="242" key="FileChooserDialogImpl" timestamp="1603549723132">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="651" y="244" key="FileChooserDialogImpl" timestamp="1603713414316">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="651" y="242" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603549723132" />
+    <state x="651" y="244" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603713414316" />
     <state x="511" y="230" width="746" height="593" key="NewModule_or_Project.wizard" timestamp="1603549774784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

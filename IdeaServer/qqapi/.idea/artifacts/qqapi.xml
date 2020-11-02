@@ -4,6 +4,15 @@
     <root id="archive" name="qqapi.war">
       <element id="library" level="project" name="lib" />
       <element id="module-source" name="qqapi" />
+      <element id="javaee-facet-resources" facet="qqapi/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="qqapi/web/Web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jackson-all-1.9.1" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

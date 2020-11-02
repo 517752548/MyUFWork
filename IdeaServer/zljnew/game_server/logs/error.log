@@ -1,8 +1,323 @@
-18:15:31,361 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
-18:15:31,534 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
-18:15:39,485 - GameServer.main - Failed to start server
+18:29:48,382 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:29:48,389 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:29:52,238 - GameServer.main - Failed to start server
 java.lang.NullPointerException
 	at com.imop.lj.gameserver.common.Globals.initServers(Globals.java:1927)
 	at com.imop.lj.gameserver.common.Globals.init(Globals.java:886)
 	at com.imop.lj.gameserver.GameServer.init(GameServer.java:74)
 	at com.imop.lj.gameserver.GameServer.main(GameServer.java:345)
+18:40:08,201 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:40:08,204 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:40:13,542 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.constant.ConstantDef$ConstantEnum中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:40:14,909 - CorpsService.clearCorpsWeekContributionChecker - #CorpsService#upgradeCorpsChecker get all corps lst is null!
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,945 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshArenaTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,946 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,947 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：sendScribedLogTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：AddLoginDaysTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateArmyTitleSalaryDaysTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateBankDaysTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayTargetTask:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateGemMazeEnergy:delay<0
+18:40:14,948 - TimeEventHeartbeatThread.startPrepare - 任务：updateLoopTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayChargeGift:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateSpecialActivityUI:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateRank:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：updateCorpsMaintenanceCost:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshExamTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshActivityTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,949 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,950 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossRankTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossCountRankTask:加入队列中
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshNvnRankTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,951 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshXianhuRank:加入队列中
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,952 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 任务：ResetZeroTask:加入队列中
+18:40:14,953 - TimeEventHeartbeatThread.startPrepare - 共有29个定时任务加入时间队列中
+18:43:59,146 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:43:59,147 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:43:59,148 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:44:36,441 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:44:36,441 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:44:36,441 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:45:36,516 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:45:36,516 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:45:36,517 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:49:05,231 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:49:05,231 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:49:05,231 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:50:51,925 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.common.model.human.TipsInfoDef$MailBoxInfoType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:50:51,928 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.activity.function.ActivityDef$ActivitySysMessageType中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:50:57,221 - IndexedEnum$IndexedEnumUtil.toIndexes - 警告：枚举类com.imop.lj.gameserver.constant.ConstantDef$ConstantEnum中有索引超过1000的索引，如果有很多索引空缺，可能会造成空间浪费
+18:50:58,454 - CorpsService.clearCorpsWeekContributionChecker - #CorpsService#upgradeCorpsChecker get all corps lst is null!
+18:50:58,489 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshArenaTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,490 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,491 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：sendScribedLogTask:delay<0
+18:50:58,492 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：AddLoginDaysTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateArmyTitleSalaryDaysTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateBankDaysTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayTargetTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateGemMazeEnergy:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateLoopTask:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateEveryDayChargeGift:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateSpecialActivityUI:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateRank:delay<0
+18:50:58,493 - TimeEventHeartbeatThread.startPrepare - 任务：updateCorpsMaintenanceCost:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshExamTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshActivityTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,494 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,495 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossRankTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshCorpsBossCountRankTask:加入队列中
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshNvnRankTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,496 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshXianhuRank:加入队列中
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:加入队列中
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：ActivityTask:delay<0
+18:50:58,497 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：SysGivePowerTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：RefreshDevilTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：pushTimeLimitAct:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 任务：ResetZeroTask:加入队列中
+18:50:58,498 - TimeEventHeartbeatThread.startPrepare - 共有29个定时任务加入时间队列中
+18:51:23,981 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:51:23,981 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:51:23,981 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:51:55,426 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:51:55,426 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:51:55,426 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+18:52:57,516 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+18:52:57,516 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+18:52:57,517 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:00:00,655 - TimeEventHeartbeatThread.run - 共有3个定时任务在此心跳任务执行
+19:00:00,655 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+19:00:00,723 - Scene.processMsg - Scene Message process is too long: Type:0 Time:3ms
+19:21:58,491 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+19:21:58,491 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:21:58,491 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:30:00,297 - TimeEventHeartbeatThread.run - 共有1个定时任务在此心跳任务执行
+19:30:00,297 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+19:50:00,593 - TimeEventHeartbeatThread.run - 共有1个定时任务在此心跳任务执行
+19:50:00,593 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+19:51:58,489 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+19:51:58,490 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:51:58,490 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:53:01,519 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+19:53:01,519 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+19:53:01,519 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+19:59:00,747 - TimeEventHeartbeatThread.run - 共有1个定时任务在此心跳任务执行
+19:59:00,748 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+20:00:00,764 - TimeEventHeartbeatThread.run - 共有4个定时任务在此心跳任务执行
+20:00:00,764 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+20:00:00,765 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+20:22:58,491 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+20:22:58,491 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+20:22:58,491 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
+20:30:00,234 - TimeEventHeartbeatThread.run - 共有2个定时任务在此心跳任务执行
+20:30:00,234 - TimeQueueService$SysGivePowerTask.run - 任务：SysGivePowerTask:执行所需时间:0ms
+20:30:00,235 - ActivityTask.run - 任务：ActivityTask:执行所需时间:0ms
+20:33:48,350 - OnlinePlayerService.offlinePlayer - 14、Player passportId is zero!
+20:33:48,350 - OnlinePlayerService.removePlayer - #removePlayer#passportIdPlayers#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null
+20:33:48,350 - OnlinePlayerService.removePlayer - #removePlayer#onlinePlayersMap#not same!offline player passportId=;player=0:0:0:0:0:0:0:1;pPlayer=null;player.getRoleUUID()=-1
