@@ -10,6 +10,12 @@ namespace ETHotfix
 		protected override async ETTask Run(Session session, C2R_JTips request, R2C_JTips response, Action reply)
 		{
 			response.Message = "shoudao";
+			DBProxyComponent db = Game.Scene.GetComponent<DBProxyComponent>();
+			if (db == null)
+			{
+				Log.Info("db数据库是空");
+			}
+			await db.Save(ComponentFactory.CreateWithId<Entity>(1223));
 			reply();
 			await ETTask.CompletedTask;
 		}

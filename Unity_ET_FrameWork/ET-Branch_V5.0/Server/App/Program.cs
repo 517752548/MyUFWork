@@ -94,8 +94,8 @@ namespace App
 						// 发送location actor消息
 						Game.Scene.AddComponent<ActorLocationSenderComponent>();
 
-						//Game.Scene.AddComponent<DBComponent>();
-						//Game.Scene.AddComponent<DBProxyComponent>();
+						Game.Scene.AddComponent<DBComponent>();
+						Game.Scene.AddComponent<DBProxyComponent>();
 
 						//协程锁组件
 						Game.Scene.AddComponent<CoroutineLockComponent>();
@@ -143,6 +143,11 @@ namespace App
 						Game.Scene.AddComponent<NetOuterComponent>();
 						Game.Scene.AddComponent<WebSocketBenchmarkComponent, string>(clientConfig.Address);
 						break;
+					 case AppType.DB:
+					// 	Log.Info("添加db数据库组件");
+					// 	Game.Scene.AddComponent<DBComponent>();
+					// 	Game.Scene.AddComponent<DBProxyComponent>();
+					 	break;
 					default:
 						throw new Exception($"命令行参数没有设置正确的AppType: {startConfig.AppType}");
 				}
