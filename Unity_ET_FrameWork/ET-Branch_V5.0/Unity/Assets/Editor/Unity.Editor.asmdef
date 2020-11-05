@@ -2,12 +2,19 @@
     "name": "Unity.Editor",
     "references": [
         "Unity.Model",
-        "Unity.ThirdParty"
+        "Unity.ThirdParty",
+        "Unity.Addressables.Editor",
+        "Unity.ScriptableBuildPipeline.Editor"
     ],
-    "optionalUnityReferences": [],
     "includePlatforms": [
         "Editor"
     ],
     "excludePlatforms": [],
-    "allowUnsafeCode": true
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
