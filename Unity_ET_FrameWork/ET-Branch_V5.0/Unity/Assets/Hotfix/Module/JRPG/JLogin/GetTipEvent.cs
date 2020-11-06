@@ -10,10 +10,15 @@ namespace ETHotfix
     {
         public override void Run()
         {
+            ShowPanel().Coroutine();
+        }
+
+        private async ETVoid ShowPanel()
+        {
             GameObject player  = new GameObject("Player");
-            UI ui = UILobbyFactory.Create();
-            ui.AddComponent<Entity>();
-            ui.AddComponent<JLoginCompoent>().GetTip().Coroutine();
+            UI ui = await UIFactory.Create();
+            //ui.AddComponent<Entity>();
+            ui.GetComponent<JLoginCompoent>().GetTip().Coroutine(); 
         }
     }  
 }

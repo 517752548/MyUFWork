@@ -31,12 +31,14 @@ namespace ETModel
 				// 下载ab包
 				await BundleHelper.DownloadBundle();
 
-				Game.Hotfix.LoadHotfixAssembly();
+				await Game.Hotfix.LoadHotfixAssembly();
 
+				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle("UnitConfig.txt");
+				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle("BuffConfig.txt");
+				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle("GlobalProto.txt");
+				
 				// 加载配置
-				Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
 				Game.Scene.AddComponent<ConfigComponent>();
-				Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 

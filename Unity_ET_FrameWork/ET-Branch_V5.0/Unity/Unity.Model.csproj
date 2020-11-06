@@ -146,7 +146,6 @@
      <Compile Include="Assets\Model\ILBinding\ETModel_ActionHelper_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_AnimatorComponent_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_AppTypeHelper_Binding.cs" />
-     <Compile Include="Assets\Model\ILBinding\ETModel_AssetBundleHelper_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_AsyncETVoidMethodBuilder_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_ByteHelper_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_C2G_EnterMap_Binding.cs" />
@@ -1076,6 +1075,9 @@
  </Reference>
  <Reference Include="Unity.Addressables">
  <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ResourceManager">
+ <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

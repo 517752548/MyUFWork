@@ -112,7 +112,6 @@ namespace ILRuntime.Runtime.Generated
             ReferenceCollector_Binding.Register(app);
             UnityEngine_UI_Button_Binding.Register(app);
             ETModel_ActionHelper_Binding.Register(app);
-            ETModel_AssetBundleHelper_Binding.Register(app);
             UnityEngine_UI_InputField_Binding.Register(app);
             Google_Protobuf_ProtoPreconditions_Binding.Register(app);
             Google_Protobuf_CodedOutputStream_Binding.Register(app);
