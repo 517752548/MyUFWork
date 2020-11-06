@@ -27,6 +27,7 @@ namespace ETHotfix
 				ETModel.Game.Hotfix.OnApplicationQuit = () => { OnApplicationQuit(); };
 				Game.Scene.AddComponent<DataManagerComponent>();
 				Game.Scene.AddComponent<UIComponent>();
+				Game.Scene.AddComponent<UIManagerComponent>();
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 

@@ -15,9 +15,15 @@ namespace ETHotfix
             self.userid = SystemInfo.deviceUniqueIdentifier;
         }
     }
-    public class JLoginCompoent: Component
+    public class JLoginCompoent: UIBaseComponent
     {
         public string userid;
+
+        public override void OnOpen()
+        {
+            base.OnOpen();
+            GetTip().Coroutine();
+        }
 
         public async  ETVoid GetTip()
         {

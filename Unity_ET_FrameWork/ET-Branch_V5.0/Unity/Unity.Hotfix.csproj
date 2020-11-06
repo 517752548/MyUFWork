@@ -93,7 +93,6 @@
      <Compile Include="Assets\Hotfix\Module\Demo\M2C_PathfindingResultHandler.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\OperaComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\TestHotfixSubscribMonoEvent_LogString.cs" />
-     <Compile Include="Assets\Hotfix\Module\Demo\UI\UIFactory.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\UI\UILobby\Component\UILobbyComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\UI\UILobby\System\EnterMapFinish_RemoveLobbyUI.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\UI\UILobby\System\LoginFinish_CreateLobbyUI.cs" />
@@ -120,6 +119,10 @@
      <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
      <Compile Include="Assets\Hotfix\Module\UI\UIComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\UI\UIType.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIBase.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIBaseComponent.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIHelper.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIManagerComponent.cs" />
      <Compile Include="Assets\Hotfix\ViewConst.cs" />
      <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
  <Reference Include="UnityEngine">

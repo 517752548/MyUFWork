@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using ETModel;
+using Hotfix;
 using UnityEngine;
 
 namespace ETHotfix
@@ -15,11 +16,10 @@ namespace ETHotfix
 
         private async ETVoid ShowPanel()
         {
-            GameObject player  = new GameObject("Player");
-            UI ui = await UIFactory.Create();
+            await Game.Scene.GetComponent<UIManagerComponent>().OpenUIAsync<JLoginCompoent>(ViewConst.prefab_UIJLogin);
+            //UI ui = await UIFactory.Create();
             //ui.AddComponent<Entity>();
-            ui.GetComponent<JLoginCompoent>().GetTip().Coroutine(); 
+            //ui.GetComponent<JLoginCompoent>().GetTip().Coroutine(); 
         }
-    }  
+    }
 }
-
