@@ -7,9 +7,10 @@ namespace ETHotfix
 {
     public class BundleComponent :Component
     {
-        public ETTask<T> LoadBundleAsync<T>(string assetBundleName)
+        public ETTask<UnityEngine.Object> LoadBundleAsync<T>(string assetBundleName)
         {
-           return ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync(assetBundleName);
+            ETTaskCompletionSource<T> back = new ETTaskCompletionSource<T>();
+          return ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync(assetBundleName);
         }
     }
 }
