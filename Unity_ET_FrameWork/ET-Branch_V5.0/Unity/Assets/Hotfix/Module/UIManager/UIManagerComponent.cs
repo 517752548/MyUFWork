@@ -38,7 +38,7 @@ namespace ETHotfix
 
 		public async ETTask OpenUIAsync<T>(string UIName,UILayer layer = UILayer.Normal,UIOpenType openType = UIOpenType.Stack) where T : UIBaseComponent, new()
 		{
-			GameObject obj = await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync<GameObject>(UIName);
+			GameObject obj =(GameObject) await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync(UIName);
 			UIBase c_ui = UIHelper.Create<T>(UIName, obj);
 			UIHelper.HandlerUI(c_ui,layer,openType,this.ui_base);
 		}

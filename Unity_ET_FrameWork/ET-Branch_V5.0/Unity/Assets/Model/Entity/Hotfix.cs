@@ -41,9 +41,9 @@ namespace ETModel
 
 		public async ETTask LoadHotfixAssembly()
 		{
-			TextAsset dll = await Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync<TextAsset>("Hotfix.dll.bytes");
+			TextAsset dll =(TextAsset) await Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync("Hotfix.dll.bytes");
 			byte[] assBytes = dll.bytes;
-			TextAsset pdb = await Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync<TextAsset>("Hotfix.pdb.bytes");
+			TextAsset pdb =(TextAsset) await Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync("Hotfix.pdb.bytes");
 			byte[] pdbBytes = pdb.bytes;
 			
 #if ILRuntime

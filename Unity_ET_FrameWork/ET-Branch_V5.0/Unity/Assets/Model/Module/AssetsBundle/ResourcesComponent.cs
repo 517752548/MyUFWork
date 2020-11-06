@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using NPOI.SS.Formula.Functions;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace ETModel
 {
@@ -16,7 +16,7 @@ namespace ETModel
 		
 		public async ETTask PreloadBundle(string assetBundleName)
 		{
-			UnityEngine.Object bundle = await LoadBundleAsync<UnityEngine.Object>(assetBundleName);
+			UnityEngine.Object bundle = await LoadBundleAsync(assetBundleName);
 			this.preloadBundle.Add(assetBundleName,bundle);
 		}
 
@@ -36,9 +36,15 @@ namespace ETModel
 		/// </summary>
 		/// <param name="assetBundleName"></param>
 		/// <returns></returns>
-		public async ETTask<T> LoadBundleAsync<T>(string assetBundleName)
+		public ETTask<UnityEngine.Object> LoadBundleAsync(string assetBundleName)
 		{
-			return await Addressables.LoadAssetAsync<T>(assetBundleName).Task;
+			Log.Info(assetBundleName);
+			ETTaskCompletionSource<UnityEngine.Object> back = new ETTaskCompletionSource<UnityEngine.Object>();
+			Addressables.LoadAssetAsync<UnityEngine.Object>(assetBundleName).Completed += op =>
+			{
+				back.SetResult(op.Result);
+			};
+			return back.Task;
 		}
 
 	}

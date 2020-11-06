@@ -17,7 +17,7 @@ namespace ETEditor
 			ProcessHelper.Run("dotnet", "FileServer.dll", "../FileServer/");
 		}
 
-		public static void Build(PlatformType type, BuildAssetBundleOptions buildAssetBundleOptions, BuildOptions buildOptions, bool isBuildExe, bool isContainAB)
+		public static void Build(PlatformType type, BuildOptions buildOptions, bool isBuildExe, bool isContainAB)
 		{
 			BuildTarget buildTarget = BuildTarget.StandaloneWindows;
 			string exeName = "ET";
@@ -44,9 +44,6 @@ namespace ETEditor
 			{
 				Directory.CreateDirectory(fold);
 			}
-			
-			Log.Info("开始资源打包");
-			BuildPipeline.BuildAssetBundles(fold, buildAssetBundleOptions, buildTarget);
 			
 			GenerateVersionInfo(fold);
 			Log.Info("完成资源打包");

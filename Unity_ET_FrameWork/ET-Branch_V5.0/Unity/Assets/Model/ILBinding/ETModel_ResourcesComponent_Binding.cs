@@ -69,7 +69,7 @@ namespace ILRuntime.Runtime.Generated
             ETModel.ResourcesComponent instance_of_this_method = (ETModel.ResourcesComponent)typeof(ETModel.ResourcesComponent).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
-            var result_of_this_method = instance_of_this_method.LoadBundleAsync<UnityEngine.Object>(@assetBundleName);
+            var result_of_this_method = instance_of_this_method.LoadBundleAsync(@assetBundleName);
 
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
