@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
@@ -12,6 +13,13 @@ namespace ETModel
         {
         }
 
+        public ETTask<TextAsset> PreloadConfig()
+        {
+            ETTaskCompletionSource<UnityEngine.TextAsset> backconfig = new ETTaskCompletionSource<UnityEngine.TextAsset>();
+            Addressables.LoadAssetAsync<TextAsset>("Config").Completed += op => { backconfig.SetResult(op.Result); };
+            return backconfig.Task;
+           
+        }
         public async ETTask PreloadBundle(string assetBundleName)
         {
             UnityEngine.Object bundle = await LoadBundleAsync(assetBundleName);
@@ -52,6 +60,7 @@ namespace ETModel
         
         public ETTask<UnityEngine.TextAsset> LoadTextAssetBundleAsync(string assetBundleName)
         {
+            Log.Info(assetBundleName + "---");
             ETTaskCompletionSource<UnityEngine.TextAsset> back = new ETTaskCompletionSource<UnityEngine.TextAsset>();
             Addressables.LoadAssetAsync<UnityEngine.TextAsset>(assetBundleName).Completed += op => { back.SetResult(op.Result); };
             return back.Task;

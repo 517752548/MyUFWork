@@ -53,7 +53,7 @@ public class ExcelExporterEditor : EditorWindow
 	{
 		try
 		{
-			const string clientPath = "./Assets/Res/Config";
+			const string clientPath = "./Assets/Bundles/Config";
 
 			if (GUILayout.Button("导出客户端配置"))
 			{
@@ -253,6 +253,11 @@ public class ExcelExporterEditor : EditorWindow
 			{
 				continue;
 			}
+			if (GetCellString(sheet, i, 2).StartsWith("#"))
+			{
+				continue;
+			}
+			
 			StringBuilder sb = new StringBuilder();
 			sb.Append("{");
 			IRow row = sheet.GetRow(i);
@@ -275,10 +280,12 @@ public class ExcelExporterEditor : EditorWindow
 				{
 					continue;
 				}
-
+				
 				string fieldValue = GetCellString(row, j);
 				if (fieldValue == "")
 				{
+					Log.Info(GetCellString(sheet, i, 2));
+					Log.Info(desc);
 					throw new Exception($"sheet: {sheet.SheetName} 中有空白字段 {i},{j}");
 				}
 

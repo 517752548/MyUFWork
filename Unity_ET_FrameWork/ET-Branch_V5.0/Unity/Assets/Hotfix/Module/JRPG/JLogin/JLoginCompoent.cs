@@ -12,6 +12,7 @@ namespace ETHotfix
     {
         public override void Awake(JLoginCompoent self)
         {
+            self.GameObject.Get<GameObject>("LoginBtn").GetComponent<Button>().onClick.AddListener(self.ClickLogin);
             self.userid = SystemInfo.deviceUniqueIdentifier;
         }
     }
@@ -24,6 +25,7 @@ namespace ETHotfix
             base.OnOpen();
             GetTip().Coroutine();
         }
+        
 
         public async  ETVoid GetTip()
         {
@@ -33,6 +35,11 @@ namespace ETHotfix
             Session realmSession = ComponentFactory.Create<Session, ETModel.Session>(session);
             R2C_JTips jtips = (R2C_JTips) await realmSession.Call(new C2R_JTips());
             Log.Info($"receive:{jtips.Message}");
+        }
+
+        public void ClickLogin()
+        {
+            ETHotfix.Game.Scene.GetComponent<MapManagerComponent>().LoadMapAsync(1).Coroutine();
         }
     }
 }

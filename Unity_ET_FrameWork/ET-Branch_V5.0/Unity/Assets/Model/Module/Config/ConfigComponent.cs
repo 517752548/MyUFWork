@@ -67,6 +67,14 @@ namespace ETModel
 			}
 		}
 
+		public async ETTask LoadConfig()
+		{
+			foreach (var keyValuePair in this.allConfig.Keys)
+			{
+				await Game.Scene.GetComponent<ResourcesComponent>().LoadTextAssetBundleAsync(keyValuePair.GetType() + ".txt");
+			}
+		}
+
 		public IConfig GetOne(Type type)
 		{
 			ACategory configCategory;

@@ -24,6 +24,7 @@ namespace ETModel
 				Game.Scene.AddComponent<GlobalConfigComponent>();
 				Game.Scene.AddComponent<NetOuterComponent>();
 				Game.Scene.AddComponent<ResourcesComponent>();
+				await Game.Scene.GetComponent<ResourcesComponent>().PreloadConfig();
 				Game.Scene.AddComponent<PlayerComponent>();
 				Game.Scene.AddComponent<UnitComponent>();
 				Game.Scene.AddComponent<UIComponent>();
@@ -39,6 +40,7 @@ namespace ETModel
 				
 				// 加载配置
 				Game.Scene.AddComponent<ConfigComponent>();
+				await Game.Scene.AddComponent<ConfigComponent>().LoadConfig();
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 
