@@ -7,21 +7,14 @@ using UnityEngine.UI;
 
 namespace ETHotfix
 {
-    [ObjectSystem]
-    public class JLoginCompoentAwakeSystem : AwakeSystem<JLoginCompoent>
-    {
-        public override void Awake(JLoginCompoent self)
-        {
-            self.GameObject.Get<GameObject>("LoginBtn").GetComponent<Button>().onClick.AddListener(self.ClickLogin);
-            self.userid = SystemInfo.deviceUniqueIdentifier;
-        }
-    }
     public class JLoginCompoent: UIBaseComponent
     {
         public string userid;
-
+        
         public override void OnOpen()
         {
+            GameObject.Get<GameObject>("LoginBtn").GetComponent<Button>().onClick.AddListener(ClickLogin);
+            userid = SystemInfo.deviceUniqueIdentifier;
             base.OnOpen();
             GetTip().Coroutine();
         }
@@ -39,7 +32,9 @@ namespace ETHotfix
 
         public void ClickLogin()
         {
+            Log.Info("click");
             ETHotfix.Game.Scene.GetComponent<MapManagerComponent>().LoadMapAsync(1).Coroutine();
+            this.GetParent<UIBase>().CloseSelf();
         }
     }
 }

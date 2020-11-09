@@ -35,7 +35,17 @@ namespace ETModel
 		
 		public static T ToObject<T>(string str)
 		{
-			return JsonHelper.FromJson<T>(str);
+			try
+			{
+				return JsonHelper.FromJson<T>(str);
+			}
+			catch (Exception e)
+			{
+				Log.Error(str);
+				Console.WriteLine(e);
+				throw;
+			}
+			
 		}
 	}
 }

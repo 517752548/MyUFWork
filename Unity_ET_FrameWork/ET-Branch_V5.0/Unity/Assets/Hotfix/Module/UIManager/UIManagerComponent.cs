@@ -43,7 +43,7 @@ namespace ETHotfix
 			UIHelper.HandlerUI(c_ui,layer,openType,this.ui_base);
 		}
 
-		public async ETVoid CloseUI(UIBase UIName)
+		public void CloseUI(UIBase UIName)
 		{
 			UIHelper.CloseUI(UIName,ui_base);
 		}

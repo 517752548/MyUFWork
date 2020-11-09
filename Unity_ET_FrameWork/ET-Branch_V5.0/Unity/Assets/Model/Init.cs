@@ -24,23 +24,22 @@ namespace ETModel
 				Game.Scene.AddComponent<GlobalConfigComponent>();
 				Game.Scene.AddComponent<NetOuterComponent>();
 				Game.Scene.AddComponent<ResourcesComponent>();
-				await Game.Scene.GetComponent<ResourcesComponent>().PreloadConfig();
+				
 				Game.Scene.AddComponent<PlayerComponent>();
 				Game.Scene.AddComponent<UnitComponent>();
 				Game.Scene.AddComponent<UIComponent>();
-
+				
 				// 下载ab包
 				await BundleHelper.DownloadBundle();
 
 				await Game.Hotfix.LoadHotfixAssembly();
 
-				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle("UnitConfig.txt");
-				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle("BuffConfig.txt");
 				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle("GlobalProto.txt");
 				
 				// 加载配置
 				Game.Scene.AddComponent<ConfigComponent>();
-				await Game.Scene.AddComponent<ConfigComponent>().LoadConfig();
+				await Game.Scene.GetComponent<ConfigComponent>().Load();
+				//await Game.Scene.AddComponent<ConfigComponent>().LoadConfig();
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 

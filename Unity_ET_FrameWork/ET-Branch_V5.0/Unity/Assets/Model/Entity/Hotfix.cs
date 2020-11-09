@@ -68,7 +68,7 @@ namespace ETModel
 			this.hotfixTypes = this.assembly.GetTypes().ToList();
 #endif
 			
-			Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle($"code.unity3d");
+			//Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle($"code.unity3d");
 		}
 	}
 }

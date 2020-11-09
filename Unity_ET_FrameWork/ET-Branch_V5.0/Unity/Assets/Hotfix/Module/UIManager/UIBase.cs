@@ -17,6 +17,7 @@ namespace ETHotfix
 	[HideInHierarchy]
 	public sealed class UIBase: Entity
 	{
+		public string UIGuid;
 		public Action OnOpenInvoke;
 		public Action ReEnableInvoke;
 		public Action HiddenInvoke;
@@ -101,6 +102,10 @@ namespace ETHotfix
 			ui.Dispose();
 		}
 
+		public void CloseSelf()
+		{
+			Game.Scene.GetComponent<UIManagerComponent>().CloseUI(this);
+		}
 		public UIBase Get(string name)
 		{
 			UIBase child;

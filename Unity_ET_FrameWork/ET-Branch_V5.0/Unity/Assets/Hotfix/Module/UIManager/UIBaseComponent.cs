@@ -13,8 +13,9 @@ namespace ETHotfix
 		private GameObject loginBtn;
 		protected ReferenceCollector rc;
 
-		public void Init()
+		public virtual void Init(GameObject obj)
 		{
+			this.GameObject = obj;
 			rc = this.GetParent<UIBase>().GameObject.GetComponent<ReferenceCollector>();
 			this.GetParent<UIBase>().OnOpenInvoke += this.OnOpen;
 			this.GetParent<UIBase>().ReEnableInvoke += this.ReEnable;

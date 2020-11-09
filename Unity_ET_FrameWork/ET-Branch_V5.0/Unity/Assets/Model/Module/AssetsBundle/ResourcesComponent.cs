@@ -12,14 +12,7 @@ namespace ETModel
         public override void Dispose()
         {
         }
-
-        public ETTask<TextAsset> PreloadConfig()
-        {
-            ETTaskCompletionSource<UnityEngine.TextAsset> backconfig = new ETTaskCompletionSource<UnityEngine.TextAsset>();
-            Addressables.LoadAssetAsync<TextAsset>("Config").Completed += op => { backconfig.SetResult(op.Result); };
-            return backconfig.Task;
-           
-        }
+        
         public async ETTask PreloadBundle(string assetBundleName)
         {
             UnityEngine.Object bundle = await LoadBundleAsync(assetBundleName);

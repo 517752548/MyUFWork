@@ -222,7 +222,7 @@ public class ExcelExporterEditor : EditorWindow
 		Log.Info($"{protoName}导表开始");
 		string exportPath = Path.Combine(exportDir, $"{protoName}.txt");
 		using (FileStream txt = new FileStream(exportPath, FileMode.Create))
-		using (StreamWriter sw = new StreamWriter(txt))
+		using (StreamWriter sw = new StreamWriter(txt,Encoding.UTF8))
 		{
 			for (int i = 0; i < xssfWorkbook.NumberOfSheets; ++i)
 			{

@@ -14,7 +14,14 @@ namespace ETHotfix
             {
                 GameObject gameObject = UnityEngine.Object.Instantiate(uiGameObject);
                 UIBase ui = ComponentFactory.Create<UIBase, string, GameObject>(UIName, gameObject, false);
-                ui.AddComponent<T>().Init();
+                ui.UIGuid = System.Guid.NewGuid().ToString();
+                RectTransform uirecttransform = ui.GameObject.GetComponent<RectTransform>();
+                uirecttransform.anchorMax = Vector2.one;
+                uirecttransform.pivot = Vector2.one * 0.5f;
+                ui.GameObject.transform.localScale = Vector3.one;
+                uirecttransform.offsetMax = Vector2.zero;
+                uirecttransform.offsetMin = Vector2.zero;
+                ui.AddComponent<T>().Init(gameObject);
                 return ui;
             }
             catch (Exception e)
@@ -28,9 +35,9 @@ namespace ETHotfix
         {
             foreach (var uilayer in ui_base.Keys)
             {
-                if (ui_base[uilayer].Contains(UIName))
+                if (ui_base[uilayer].Find(x=>x.UIGuid == UIName.UIGuid) != null)
                 {
-                    if (ui_base[uilayer][ui_base[uilayer].Count - 1] == UIName)
+                    if (ui_base[uilayer][ui_base[uilayer].Count - 1].UIGuid == UIName.UIGuid)
                     {
                         ui_base[uilayer].Remove(UIName);
                         if (ui_base[uilayer].Count > 0)
@@ -42,6 +49,7 @@ namespace ETHotfix
                     {
                         ui_base[uilayer].Remove(UIName);
                     }
+                    UIName.OnClose();
                     break;
                 }
             }
@@ -99,6 +107,18 @@ namespace ETHotfix
                         layerQueue.Add(_uibase);
                         break;
                 }
+            }
+            else
+            {
+                switch (openType)
+                {
+                    case UIOpenType.Stack:
+                        layerQueue.Add(_uibase);
+                        break;
+                    case UIOpenType.Replace:
+                        layerQueue.Add(_uibase);
+                        break;
+                } 
             }
         }
     }
