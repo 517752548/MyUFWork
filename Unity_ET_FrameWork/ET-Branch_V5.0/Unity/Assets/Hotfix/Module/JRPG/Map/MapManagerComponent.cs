@@ -20,7 +20,7 @@ namespace ETHotfix
         public MapComponent currentMapConponent;
         public async ETTask LoadMapAsync(int mapid)
         {
-          GameObject map = await  ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadGameObjectBundleAsync(ViewConst.prefab_Game);
+          GameObject map = await  ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadGameObjectBundleAsync(ViewConst.prefab_GameMap);
           UnityEngine.GameObject mapInstance = UnityEngine.Object.Instantiate(map, this.GameComtainer.transform, false);
           if (this.currentMapConponent != null)
           {

@@ -8,7 +8,7 @@ namespace Hotfix {public class ViewConst{
 //Group：PackTogether ;Label:prefab;
      public const string pdb_Hotfix = "Hotfix.pdb.bytes";
 //Group：PackTogether ;Label:prefab;
-     public const string prefab_Game = "Game.prefab";
+     public const string prefab_GameMap = "GameMap.prefab";
 //Group：PackTogether ;Label:Config;
      public const string txt_BuffConfig = "BuffConfig.txt";
 //Group：PackTogether ;Label:Config;
