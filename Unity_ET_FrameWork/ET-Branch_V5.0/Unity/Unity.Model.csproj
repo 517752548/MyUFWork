@@ -290,6 +290,7 @@
      <Compile Include="Assets\Model\Module\Demo\Config\mapinfo.cs" />
      <Compile Include="Assets\Model\Module\Demo\Config\mondef.cs" />
      <Compile Include="Assets\Model\Module\Demo\Config\mondrop.cs" />
+     <Compile Include="Assets\Model\Module\Demo\Config\npcgen.cs" />
      <Compile Include="Assets\Model\Module\Demo\MoveComponent.cs" />
      <Compile Include="Assets\Model\Module\Demo\Player.cs" />
      <Compile Include="Assets\Model\Module\Demo\PlayerComponent.cs" />
@@ -706,6 +707,9 @@
      </Reference>
      <Reference Include="NPOI.OpenXmlFormats">
      <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
+     </Reference>
+     <Reference Include="UDP">
+     <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Library/PackageCache/com.unity.purchasing.udp@2.1.0/Runtime/UDP.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>E:/Unity/2019.4.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

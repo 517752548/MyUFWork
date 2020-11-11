@@ -44,7 +44,7 @@ namespace ETHotfix
 				//await ETModel.Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle($"{iCategory.ConfigType.Name}.txt");
 				iCategory.BeginInit();
 				iCategory.EndInit();
-
+				Log.Info(iCategory.ConfigType.ToString());
 				this.allConfig[iCategory.ConfigType] = iCategory;
 			}
 		}

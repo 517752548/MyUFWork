@@ -12,6 +12,8 @@ namespace ETHotfix
 		public long Id { get; set; }
 		public string mapname;
 		public string showname;
+		public int width;
+		public int height;
 		public int mapid;
 		public int type;
 		public int minlv;

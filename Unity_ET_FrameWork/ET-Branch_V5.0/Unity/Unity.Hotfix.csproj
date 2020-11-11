@@ -80,6 +80,7 @@
      <Compile Include="Assets\Hotfix\Module\Demo\Config\mapinfo.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\mondef.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\mondrop.cs" />
+     <Compile Include="Assets\Hotfix\Module\Demo\Config\npcgen.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\G2C_TestHotfixHandler.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Helper\LoginHelper.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Helper\MapHelper.cs" />
@@ -96,6 +97,9 @@
      <Compile Include="Assets\Hotfix\Module\JRPG\JLogin\JLoginCompoent.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\Map\MapComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\Map\MapManagerComponent.cs" />
+     <Compile Include="Assets\Hotfix\Module\JRPG\Map\MapMoveComponent.cs" />
+     <Compile Include="Assets\Hotfix\Module\JRPG\Map\MapNPCComponent.cs" />
+     <Compile Include="Assets\Hotfix\Module\JRPG\Map\NPCComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\AMHandler.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\HotfixMessage.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\HotfixMessageDispatcher.cs" />
@@ -338,6 +342,9 @@
      </Reference>
      <Reference Include="NPOI.OpenXmlFormats">
      <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
+     </Reference>
+     <Reference Include="UDP">
+     <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Library/PackageCache/com.unity.purchasing.udp@2.1.0/Runtime/UDP.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>D:/OtherGitProjects/UFramework/Unity_ET_FrameWork/ET-Branch_V5.0/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
