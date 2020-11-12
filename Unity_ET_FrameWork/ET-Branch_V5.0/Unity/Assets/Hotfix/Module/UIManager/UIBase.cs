@@ -17,6 +17,7 @@ namespace ETHotfix
 	[HideInHierarchy]
 	public sealed class UIBase: Entity
 	{
+		public object[] paras = null;
 		public string UIGuid;
 		public Action OnOpenInvoke;
 		public Action ReEnableInvoke;
@@ -64,6 +65,7 @@ namespace ETHotfix
 			this.OnCloseInvoke = null;
 			this.HiddenInvoke = null;
 			this.ReEnableInvoke = null;
+			this.paras = null;
 			if (this.IsDisposed)
 			{
 				return;

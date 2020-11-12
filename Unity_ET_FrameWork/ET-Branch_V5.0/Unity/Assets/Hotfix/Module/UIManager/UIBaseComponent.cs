@@ -9,6 +9,7 @@ namespace ETHotfix
 	
 	public class UIBaseComponent: Component
 	{
+		public object[] objs = null;
 		private GameObject account;
 		private GameObject loginBtn;
 		protected ReferenceCollector rc;
@@ -16,6 +17,7 @@ namespace ETHotfix
 		public virtual void Init(GameObject obj)
 		{
 			this.GameObject = obj;
+			this.objs = this.GetParent<UIBase>().paras;
 			rc = this.GetParent<UIBase>().GameObject.GetComponent<ReferenceCollector>();
 			this.GetParent<UIBase>().OnOpenInvoke += this.OnOpen;
 			this.GetParent<UIBase>().ReEnableInvoke += this.ReEnable;

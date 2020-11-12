@@ -8,12 +8,13 @@ namespace ETHotfix
 {
     public static class UIHelper
     {
-        public static UIBase Create<T>(string UIName, GameObject uiGameObject) where T : UIBaseComponent, new()
+        public static UIBase Create<T>(string UIName, GameObject uiGameObject,params object[] objs) where T : UIBaseComponent, new()
         {
             try
             {
                 GameObject gameObject = UnityEngine.Object.Instantiate(uiGameObject);
                 UIBase ui = ComponentFactory.Create<UIBase, string, GameObject>(UIName, gameObject, false);
+                ui.paras = objs;
                 ui.UIGuid = System.Guid.NewGuid().ToString();
                 RectTransform uirecttransform = ui.GameObject.GetComponent<RectTransform>();
                 uirecttransform.anchorMax = Vector2.one;

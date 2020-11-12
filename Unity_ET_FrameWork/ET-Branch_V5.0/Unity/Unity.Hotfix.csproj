@@ -77,6 +77,10 @@
      <Compile Include="Assets\Hotfix\Module\Config\IConfig.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\Levelinfo.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\UnitConfig.cs" />
+     <Compile Include="Assets\Hotfix\Module\Demo\Config\defendMonster.cs" />
+     <Compile Include="Assets\Hotfix\Module\Demo\Config\directfly.cs" />
+     <Compile Include="Assets\Hotfix\Module\Demo\Config\itemStack.cs" />
+     <Compile Include="Assets\Hotfix\Module\Demo\Config\itemdef.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\mapinfo.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\mondef.cs" />
      <Compile Include="Assets\Hotfix\Module\Demo\Config\mondrop.cs" />
@@ -94,6 +98,7 @@
      <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\UILoginFactory.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\Data\DataManagerComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\JLogin\GetTipEvent.cs" />
+     <Compile Include="Assets\Hotfix\Module\JRPG\JLogin\JFlyCompoent.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\JLogin\JLoginCompoent.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\Map\MapComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\JRPG\Map\MapManagerComponent.cs" />

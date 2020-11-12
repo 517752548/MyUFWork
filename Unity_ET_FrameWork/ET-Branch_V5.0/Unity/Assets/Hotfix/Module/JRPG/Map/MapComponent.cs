@@ -48,5 +48,11 @@ namespace ETHotfix
             this.AddComponent<MapMoveComponent>();
             this.AddComponent<MapNPCComponent>();
         }
+
+        public override void Dispose()
+        {
+            UnityEngine.Object.Destroy(this.GameObject);
+            base.Dispose();
+        }
     }
 }

@@ -1,5 +1,7 @@
 namespace Hotfix {public class ViewConst{
 //Group：PackTogether ;Label:prefab;
+     public const string prefab_UIJFly = "UIJFly.prefab";
+//Group：PackTogether ;Label:prefab;
      public const string prefab_UIJLogin = "UIJLogin.prefab";
 //Group：PackTogether ;Label:prefab;
      public const string prefab_UIManager = "UIManager.prefab";
@@ -14,7 +16,15 @@ namespace Hotfix {public class ViewConst{
 //Group：PackTogether ;Label:Config;
      public const string txt_BuffConfig = "BuffConfig.txt";
 //Group：PackTogether ;Label:Config;
+     public const string txt_defendMonster = "defendMonster.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_directfly = "directfly.txt";
+//Group：PackTogether ;Label:Config;
      public const string txt_GlobalProto = "GlobalProto.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_itemdef = "itemdef.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_itemStack = "itemStack.txt";
 //Group：PackTogether ;Label:Config;
      public const string txt_Levelinfo = "Levelinfo.txt";
 //Group：PackTogether ;Label:Config;
@@ -23,6 +33,8 @@ namespace Hotfix {public class ViewConst{
      public const string txt_mondef = "mondef.txt";
 //Group：PackTogether ;Label:Config;
      public const string txt_mondrop = "mondrop.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_npcgen = "npcgen.txt";
 //Group：PackTogether ;Label:Config;
      public const string txt_UnitConfig = "UnitConfig.txt";
 }}

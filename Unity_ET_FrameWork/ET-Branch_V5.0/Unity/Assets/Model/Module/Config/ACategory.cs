@@ -25,7 +25,6 @@ namespace ETModel
 			this.dict = new Dictionary<long, IConfig>();
 
 			string configStr = ConfigHelper.GetText(typeof(T).Name);
-
 			foreach (string str in configStr.Split(new[] { "\n" }, StringSplitOptions.None))
 			{
 				try

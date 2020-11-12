@@ -12,9 +12,8 @@ namespace ETModel
 		public string mMapid;
 		public int mPosx;
 		public int mPosy;
-		public string mResModel;
 		public int mDirect;
-		public int mFlyID;
+		public string CustomPara;
 		public string mDefalutTalk;
 	}
 }

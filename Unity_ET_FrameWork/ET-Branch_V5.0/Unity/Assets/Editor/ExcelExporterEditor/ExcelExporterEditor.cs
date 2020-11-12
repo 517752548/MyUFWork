@@ -323,9 +323,9 @@ public class ExcelExporterEditor : EditorWindow
 			case "int[]":
 			case "int32[]":
 			case "long[]":
-				return $"[{value}]";
+				return $"[{value.Replace(";",",")}]";
 			case "string[]":
-				return $"[{value}]";
+				return $"[{value.Replace(";",",")}]";
 			case "int":
 			case "int32":
 			case "int64":

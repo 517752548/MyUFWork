@@ -55,6 +55,7 @@ namespace ETHotfix
         public override void Dispose()
         {
             base.Dispose();
+            currentNpcgenConfig.Clear();
             foreach (KeyValuePair<string,NPCComponent> npcComponent in this.npcDict)
             {
                 npcComponent.Value.Dispose();
