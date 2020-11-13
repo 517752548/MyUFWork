@@ -36,11 +36,12 @@ namespace ETHotfix
 		
 		private Dictionary<UILayer,List<UIBase>> ui_base = new Dictionary<UILayer, List<UIBase>>();
 
-		public async ETTask OpenUIAsync<T>(string UIName,UILayer layer = UILayer.Normal,UIOpenType openType = UIOpenType.Stack,params object[] objs) where T : UIBaseComponent, new()
+		public async ETTask<T> OpenUIAsync<T>(string UIName,UILayer layer = UILayer.Normal,UIOpenType openType = UIOpenType.Stack,params object[] objs) where T : UIBaseComponent, new()
 		{
 			GameObject obj =(GameObject) await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync(UIName);
 			UIBase c_ui = UIHelper.Create<T>(UIName, obj,objs);
 			UIHelper.HandlerUI(c_ui,layer,openType,this.ui_base);
+			return c_ui.GetComponent<T>();
 		}
 
 		public void CloseUI(UIBase UIName)

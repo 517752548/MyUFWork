@@ -9,6 +9,7 @@ namespace ETModel
 	{
 		public long Id { get; set; }
 		public string mapname;
+		public int mongroup;
 		public string showname;
 		public int width;
 		public int height;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using ETModel;
+using Hotfix;
 using UnityEngine;
 
 namespace ETHotfix
@@ -32,6 +33,7 @@ namespace ETHotfix
         public int width = 25;
         public int height = 18;
         public ETModel.mapinfo currentMapinfo;
+        public JMapControllerCompoent _jmapControllerComponent;
         public void Awake(GameObject map)
         {
             Log.Error(this.Id.ToString());
@@ -44,6 +46,13 @@ namespace ETHotfix
             {
                 new Vector2(0, this.height), new Vector2(0, 0), new Vector2(this.width, 0), new Vector2(this.width, this.height)
             };
+            
+            CreatUIController();
+        }
+        
+        private async ETTask CreatUIController()
+        {
+            _jmapControllerComponent = await  ETHotfix.Game.Scene.GetComponent<UIManagerComponent>().OpenUIAsync<JMapControllerCompoent>(ViewConst.prefab_MapController,UILayer.GameUI,UIOpenType.Replace);
             //移动组件
             this.AddComponent<MapMoveComponent>();
             this.AddComponent<MapNPCComponent>();

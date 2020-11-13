@@ -36,6 +36,7 @@ namespace ETHotfix
         private Dictionary<string,NPCComponent> npcDict = new Dictionary<string, NPCComponent>();
         private ETModel.mapinfo currentMap;
         private List<ETModel.npcgen> currentNpcgenConfig = new List<ETModel.npcgen>();
+        public JMapControllerCompoent _jmapControllerComponent;
         public void Awake()
         {
             this.npcRoot = this.GetParent<MapComponent>().GameObject.transform.Find("NPCRoot");
@@ -49,12 +50,58 @@ namespace ETHotfix
                     currentNpcgenConfig.Add((ETModel.npcgen)currentMapinfo[i]);
                 }
             }
+
+            
             LoadNPC().Coroutine();
         }
+        private void CreatUIController()
+        {
+            _jmapControllerComponent = this.GetParent<MapComponent>()._jmapControllerComponent;
+            _jmapControllerComponent.pointDown += PointDown;
+            _jmapControllerComponent.pointUp += PointUp;
+        }
 
+        public void PointDown()
+        {
+            if (currentGameObject == null)
+            {
+                ray.origin = this._camera.ScreenToWorldPoint(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, int.MaxValue, 1 << LayerMask.NameToLayer("NPC")))
+                {
+                    this.currentGameObject = this.hit.collider.gameObject;
+                    return;
+                }
+            }
+        }
+
+        public void PointUp()
+        {
+            if (currentGameObject != null)
+            {
+                ray.origin = this._camera.ScreenToWorldPoint(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, int.MaxValue, 1 << LayerMask.NameToLayer("NPC")))
+                {
+                    if (this.currentGameObject.name != this.hit.collider.gameObject.name)
+                    {
+                        return;
+                    }
+                }
+                if (this.npcDict.ContainsKey(this.currentGameObject.name))
+                {
+                    npcDict[this.currentGameObject.name].OnClick();
+                    this.currentGameObject = null;
+                }
+                else
+                {
+                    Log.Info("不包含这个npc");
+                }
+            }
+        }
         public override void Dispose()
         {
             base.Dispose();
+            _jmapControllerComponent.pointDown -= PointDown;
+            _jmapControllerComponent.pointUp -= PointUp;
             currentNpcgenConfig.Clear();
             foreach (KeyValuePair<string,NPCComponent> npcComponent in this.npcDict)
             {
@@ -75,10 +122,12 @@ namespace ETHotfix
             }
 
             loadFinish = true;
+            CreatUIController();
         }
 
         public void Updata()
         {
+            return;
             if (!loadFinish)
             {
                 return;

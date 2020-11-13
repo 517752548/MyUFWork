@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using ETModel;
+using Hotfix;
 using UnityEngine;
 
 namespace ETHotfix
@@ -43,22 +44,42 @@ namespace ETHotfix
         private bool IsNeedMove = false; //是否需要移动
         private Ray ray = new Ray(Vector3.forward, Vector3.forward);
         private RaycastHit hit;
+        private JMapControllerCompoent _jmapControllerComponent;
 
         public void Awake()
         {
             this.point = this.GetParent<MapComponent>().point;
             this._mapconpoent = GetParent<MapComponent>();
             this._camera = this._mapconpoent.mapComera;
-
             _min = GetParent<MapComponent>().polygonCollider2D.bounds.min; //包围盒
             _max = GetParent<MapComponent>().polygonCollider2D.bounds.max;
             first.x = point.position.x; //初始化
             first.y = point.position.y;
+            CreatUIController();
         }
 
+        private void CreatUIController()
+        {
+            _jmapControllerComponent = this.GetParent<MapComponent>()._jmapControllerComponent;
+            _jmapControllerComponent.pointDown += PointDown;
+        }
+
+        public override void Dispose()
+        {
+            base.Dispose();
+            _jmapControllerComponent.pointDown -= PointDown;
+        }
+
+        private void PointDown()
+        {
+            first = Input.mousePosition;
+        }
         public void GUI()
         {
-            if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
+            if(_jmapControllerComponent == null)
+                return;
+            //if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
+            if(_jmapControllerComponent.GetMouseButtonDownZero)
             {
                 ray.origin = this._camera.ScreenToWorldPoint(Input.mousePosition);
                 // if (Physics.Raycast(ray, out hit, int.MaxValue))
@@ -72,13 +93,15 @@ namespace ETHotfix
                 }
             }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                //记录鼠标按下的位置 　　
-                first = Input.mousePosition;
-            }
+            //if (Input.GetMouseButtonDown(0))
+            // if(_jmapControllerComponent.GetMouseButtonDownZero)
+            // {
+            //     //记录鼠标按下的位置 　　
+            //     first = Input.mousePosition;
+            // }
 
-            if (Input.GetMouseButton(0))
+            //if (Input.GetMouseButton(0))
+            if(_jmapControllerComponent.GetMouseButtonDownZero)
             {
                 //记录鼠标拖动的位置 　　
                 second = Input.mousePosition;
@@ -96,11 +119,12 @@ namespace ETHotfix
 
         public void Move()
         {
+            if(_jmapControllerComponent == null)
+                return;
             if (IsNeedMove == false)
             {
                 return;
             }
-
             var x = point.position.x;
             var y = point.position.y;
             x = x - vecPos.x; //向量偏移

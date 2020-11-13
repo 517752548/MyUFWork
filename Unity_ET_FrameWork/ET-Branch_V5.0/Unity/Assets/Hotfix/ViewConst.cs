@@ -1,5 +1,7 @@
 namespace Hotfix {public class ViewConst{
 //Group：PackTogether ;Label:prefab;
+     public const string prefab_MapController = "MapController.prefab";
+//Group：PackTogether ;Label:prefab;
      public const string prefab_UIJFly = "UIJFly.prefab";
 //Group：PackTogether ;Label:prefab;
      public const string prefab_UIJLogin = "UIJLogin.prefab";
