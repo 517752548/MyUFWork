@@ -1,0 +1,30 @@
+namespace Hotfix {public class ViewConst{
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_MapController = "MapController.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_UIJFly = "UIJFly.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_UIJLogin = "UIJLogin.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_UILobby = "UILobby.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_UILogin = "UILogin.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_UIManager = "UIManager.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_GameMap = "GameMap.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_NPC = "NPC.prefab";
+//Group：PackTogether ;Label:Config;
+     public const string txt_BuffConfig = "BuffConfig.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_StartMachineConfig = "StartMachineConfig.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_StartProcessConfig = "StartProcessConfig.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_StartSceneConfig = "StartSceneConfig.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_StartZoneConfig = "StartZoneConfig.txt";
+//Group：PackTogether ;Label:Config;
+     public const string txt_UnitConfig = "UnitConfig.txt";
+}}
