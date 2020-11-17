@@ -58,6 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Hotfix\JRPG\Data\DataManagerComponent.cs" />
+     <Compile Include="Assets\Hotfix\JRPG\ETConst.cs" />
      <Compile Include="Assets\Hotfix\Module\Config\ConfigComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\NetOuterComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\Numeric\NumericChangeEvent_NotifyWatcher.cs" />

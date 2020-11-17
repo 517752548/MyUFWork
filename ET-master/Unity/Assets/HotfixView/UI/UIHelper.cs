@@ -1,6 +1,6 @@
 namespace ET
 {
-    public static class UIHelper
+    public static partial class UIHelper
     {
         public static async ETTask<UI> Create(Scene scene, string uiType)
         {

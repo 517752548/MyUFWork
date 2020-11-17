@@ -240,6 +240,7 @@ namespace ET
                     ISheet sheet = xssfWorkbook.GetSheetAt(i);
                     ExportSheet(sheet, sw);
                 }
+
                 sw.WriteLine(']');
             }
 
@@ -263,6 +264,11 @@ namespace ET
             for (int i = 5; i <= sheet.LastRowNum; ++i)
             {
                 if (GetCellString(sheet, i, 2) == "")
+                {
+                    continue;
+                }
+
+                if (GetCellString(sheet, i, 2).StartsWith("#"))
                 {
                     continue;
                 }
@@ -309,7 +315,13 @@ namespace ET
                     }
 
                     string fieldType = cellInfos[j].Type;
-                    sb.Append($"\"{fieldName}\":{Convert(fieldType, fieldValue)}");
+                    string handlevalue = fieldValue;
+                    if (fieldType.Contains("[]"))
+                    {
+                        handlevalue = handlevalue.Replace(";", ",");
+                    }
+
+                    sb.Append($"\"{fieldName}\":{Convert(fieldType, handlevalue)}");
                 }
 
                 sb.Append("}],");

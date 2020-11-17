@@ -16,8 +16,171 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 5d3d8154d5e0afc4cbdab8959d8bc390
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4967e52fcc3b12746814c64a19cacb22
+    m_Address: MapController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b62e732a12a66644f8b806e6c6f414f1
+    m_Address: UIJFly.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2a6df37693152d34b86fd317ffb1ee7b
+    m_Address: UIJLogin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d8d87e53d93e234448658c9a801a9967
+    m_Address: UILobby.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9f6d9adc6f537764fa0fea29671e77bf
+    m_Address: UILogin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1ef0a68dad9ad1d42ad3088eb5904eac
+    m_Address: UIManager.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 19f69a5167f53e04a9e43ca0be41dbe6
+    m_Address: GameMap.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 39d37b0d8defb244fb649a6d8075ac73
+    m_Address: NPC.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0f3540faabf2b7e4c83e81cb7ba6a096
+    m_Address: BuffConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7b39853d8c29e4f34855245bb82d8470
+    m_Address: StartMachineConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7ab151f52cd2d474fbcbbfd59355fbb9
+    m_Address: StartProcessConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 656280210d67e1a4981e2300efa9177b
+    m_Address: StartSceneConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e8584de077a43b4489271bfda6e979c2
+    m_Address: StartZoneConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c245c7dda13b3ad43b2278925e922899
+    m_Address: UnitConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: edd05666792a81e48bf6e13e9f151bdb
+    m_Address: defendMonster.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a63911110a78ec74a941b5bde3a16544
+    m_Address: directfly.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: e65072d542ecac7409222850caf18a78
+    m_Address: itemdef.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fd9167eb2f3a94b409fc92e13fc0af56
+    m_Address: itemStack.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bc671d6bd19a48640ad7bbc534536a3d
+    m_Address: Levelinfo.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b1e21181882f0a345ab3035ea2b5ff10
+    m_Address: mapinfo.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 55680f07fab3b214aa4c928ffb030af0
+    m_Address: mondef.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 056fdaadcb552cc4eb26820fa2432be5
+    m_Address: mondrop.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b9d30307d981dae439a5767e319e4a9c
+    m_Address: npcgen.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: bb3c6a24cafec744689cfb4b641e6fc5, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: 9523ca8bdc8fbd04599bf9e15ca92d6f, type: 2}
+    - {fileID: 11400000, guid: f859ee2311ae4d34a857c4c1d6edc720, type: 2}

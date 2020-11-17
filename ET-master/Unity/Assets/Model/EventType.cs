@@ -45,5 +45,10 @@
         {
             public Unit Unit;
         }
+
+        public struct JGetTips
+        {
+            
+        }
     }
 }

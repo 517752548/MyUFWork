@@ -19,7 +19,7 @@ namespace ET
 
         public override void OnRemove(UIComponent uiComponent)
         {
-            ResourcesComponent.Instance.UnloadBundle(ViewConst.prefab_UILobby);
+            //ResourcesComponent.Instance.UnloadBundle(ViewConst.prefab_UILobby);
         }
     }
 }

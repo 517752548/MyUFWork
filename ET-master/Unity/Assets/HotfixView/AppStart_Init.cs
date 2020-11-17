@@ -18,6 +18,8 @@ namespace ET
             Game.Scene.AddComponent<OpcodeTypeComponent>();
             Game.Scene.AddComponent<MessageDispatcherComponent>();
             Game.Scene.AddComponent<UIEventComponent>();
+            Game.Scene.AddComponent<UIManagerComponent>();
+            Game.Scene.AddComponent<MapManagerComponent>();
 
             //ResourcesComponent.Instance.LoadBundle("unit.unity3d");
 
