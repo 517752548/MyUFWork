@@ -28,7 +28,7 @@ namespace ET
           {
               this.currentMapConponent.Dispose();
           }
-          this.currentMapConponent = EntityFactory.CreateWithParentAndId<MapComponent,GameObject>(this.Domain,mapid,mapInstance);
+          this.currentMapConponent = EntityFactory.CreateWithParentAndId<MapComponent,GameObject>(this,mapid,mapInstance);
           
         }
     }

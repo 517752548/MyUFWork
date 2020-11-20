@@ -43,7 +43,6 @@ namespace ET
         private Ray ray = new Ray(Vector3.forward, Vector3.forward);
         private RaycastHit hit;
         private JMapControllerCompoent _jmapControllerComponent;
-        public bool reg = true;
 
         public void Awake()
         {
@@ -56,7 +55,6 @@ namespace ET
             first.x = point.position.x; //初始化
             first.y = point.position.y;
             CreatUIController();
-            reg = this.IsRegister;
         }
 
         private void CreatUIController()

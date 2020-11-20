@@ -33,7 +33,6 @@ namespace ET
         }
         private void MouseButtonDown(BaseEventData data)
         {
-            Log.Info("point MouseButtonDown");
             GetMouseButtonDownZero = true;
             pointDown?.Invoke();
         }

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\HotfixView\AppStart_Init.cs" />
+     <Compile Include="Assets\HotfixView\CustomScripts\HPUIManager.cs" />
      <Compile Include="Assets\HotfixView\Module\Resource\GameObjectHelper.cs" />
      <Compile Include="Assets\HotfixView\Module\UI\UIComponentSystem.cs" />
      <Compile Include="Assets\HotfixView\Module\UI\UIEventComponentSystem.cs" />
@@ -327,6 +328,9 @@
  </Reference>
  <Reference Include="clipper_library">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>E:/Unity/2019.4.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

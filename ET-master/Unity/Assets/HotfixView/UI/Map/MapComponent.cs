@@ -35,7 +35,6 @@ namespace ET
         public int height = 18;
         public mapinfo currentMapinfo;
         public JMapControllerCompoent _jmapControllerComponent;
-        public bool reg = true;
         public void Awake(GameObject map)
         {
             Log.Error(this.Id.ToString());
@@ -49,9 +48,18 @@ namespace ET
             {
                 new Vector2(0, this.height), new Vector2(0, 0), new Vector2(this.width, 0), new Vector2(this.width, this.height)
             };
+            Log.Info(currentMapinfo.type.ToString());
+            if (currentMapinfo.type == 1)
+            {
+                Log.Info("地图");
+                //地图
+                CreatUIController();
+            }else if (currentMapinfo.type == 2)
+            {
+                Log.Info("战斗");
+                CreatBattleUIController();
+            }
             
-            CreatUIController();
-            reg = this.IsRegister;
         }
         
         private async ETTask CreatUIController()
@@ -60,6 +68,13 @@ namespace ET
             //移动组件
             this.AddComponent<MapMoveComponent>();
             this.AddComponent<MapNPCComponent>();
+        }
+
+        private async ETTask CreatBattleUIController()
+        {
+            _jmapControllerComponent = await  Game.Scene.GetComponent<UIManagerComponent>().OpenUIAsync<JMapControllerCompoent>(ViewConst.prefab_MapController,UILayerNew.GameUI,UIOpenType.Replace);
+            //移动组件
+            this.AddComponent<MapMoveComponent>();
         }
 
         public override void Dispose()

@@ -12,10 +12,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B4BF9894-F5D9-41C4-13E3-3F26F7700E29}</ProjectGuid>
+    <ProjectGuid>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.Model</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -58,171 +58,136 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Model\Base\Async\AsyncETTaskCompletedMethodBuilder.cs" />
-     <Compile Include="Assets\Model\Base\Async\AsyncETTaskMethodBuilder.cs" />
-     <Compile Include="Assets\Model\Base\Async\AsyncETVoidMethodBuilder.cs" />
-     <Compile Include="Assets\Model\Base\Async\AsyncMethodBuilderAttribute.cs" />
-     <Compile Include="Assets\Model\Base\Async\ETCancellationToken.cs" />
-     <Compile Include="Assets\Model\Base\Async\ETTask.cs" />
-     <Compile Include="Assets\Model\Base\Async\ETTaskCompleted.cs" />
-     <Compile Include="Assets\Model\Base\Async\ETTaskCompletionSource.cs" />
-     <Compile Include="Assets\Model\Base\Async\ETTaskHelper.cs" />
-     <Compile Include="Assets\Model\Base\Async\ETVoid.cs" />
-     <Compile Include="Assets\Model\Base\Async\IAwaiter.cs" />
-     <Compile Include="Assets\Model\Base\DoubleMap.cs" />
-     <Compile Include="Assets\Model\Base\Entity\EntitySceneFactory.cs" />
-     <Compile Include="Assets\Model\Base\Entity\Game.cs" />
-     <Compile Include="Assets\Model\Base\Entity\Scene.cs" />
-     <Compile Include="Assets\Model\Base\Entity\SceneType.cs" />
-     <Compile Include="Assets\Model\Base\Entity\TimerComponent.cs" />
-     <Compile Include="Assets\Model\Base\Event\EventAttribute.cs" />
-     <Compile Include="Assets\Model\Base\Event\IEvent.cs" />
-     <Compile Include="Assets\Model\Base\Helper\ByteHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\EnumHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\FileHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\IdGenerater.cs" />
-     <Compile Include="Assets\Model\Base\Helper\JsonHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\MD5Helper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\MethodInfoHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\MongoHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\NetHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\ObjectHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\RandomHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\StringHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\TimeHelper.cs" />
-     <Compile Include="Assets\Model\Base\Helper\ZipHelper.cs" />
-     <Compile Include="Assets\Model\Base\ListComponent.cs" />
-     <Compile Include="Assets\Model\Base\Log.cs" />
-     <Compile Include="Assets\Model\Base\LogType.cs" />
-     <Compile Include="Assets\Model\Base\MultiMap.cs" />
-     <Compile Include="Assets\Model\Base\MultiMapSet.cs" />
-     <Compile Include="Assets\Model\Base\Object\BaseAttribute.cs" />
-     <Compile Include="Assets\Model\Base\Object\ComponentView.cs" />
-     <Compile Include="Assets\Model\Base\Object\Entity.cs" />
-     <Compile Include="Assets\Model\Base\Object\EntityCreateComponet.cs" />
-     <Compile Include="Assets\Model\Base\Object\EntityEventAttribute.cs" />
-     <Compile Include="Assets\Model\Base\Object\EntityFactory.cs" />
-     <Compile Include="Assets\Model\Base\Object\EventSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\HideInHierarchy.cs" />
-     <Compile Include="Assets\Model\Base\Object\IAwakeSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\IChangeSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\IDeserializeSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\IDestroySystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\ILateUpdateSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\ILoadSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\ISerializeToEntity.cs" />
-     <Compile Include="Assets\Model\Base\Object\IStartSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\IUpdateSystem.cs" />
-     <Compile Include="Assets\Model\Base\Object\NoMemoryCheck.cs" />
-     <Compile Include="Assets\Model\Base\Object\NoObjectPool.cs" />
-     <Compile Include="Assets\Model\Base\Object\Object.cs" />
-     <Compile Include="Assets\Model\Base\Object\ObjectPool.cs" />
-     <Compile Include="Assets\Model\Base\Object\ObjectSystemAttribute.cs" />
-     <Compile Include="Assets\Model\Base\OneThreadSynchronizationContext.cs" />
-     <Compile Include="Assets\Model\Base\Pool.cs" />
-     <Compile Include="Assets\Model\Base\ProcessHelper.cs" />
-     <Compile Include="Assets\Model\Base\QueueDictionary.cs" />
-     <Compile Include="Assets\Model\Base\RecyclableMemoryStream\Events.cs" />
-     <Compile Include="Assets\Model\Base\RecyclableMemoryStream\RecyclableMemoryStream.cs" />
-     <Compile Include="Assets\Model\Base\RecyclableMemoryStream\RecyclableMemoryStreamManager.cs" />
-     <Compile Include="Assets\Model\Base\StructBsonSerialize.cs" />
-     <Compile Include="Assets\Model\Base\UnOrderMultiMap.cs" />
-     <Compile Include="Assets\Model\Base\UnOrderMultiMapSet.cs" />
-     <Compile Include="Assets\Model\Config\Levelinfo.cs" />
-     <Compile Include="Assets\Model\Config\StartMachineConfig.cs" />
-     <Compile Include="Assets\Model\Config\StartProcessConfig.cs" />
-     <Compile Include="Assets\Model\Config\StartSceneConfig.cs" />
-     <Compile Include="Assets\Model\Config\StartZoneConfig.cs" />
-     <Compile Include="Assets\Model\Config\UnitConfig.cs" />
-     <Compile Include="Assets\Model\Config\defendMonster.cs" />
-     <Compile Include="Assets\Model\Config\directfly.cs" />
-     <Compile Include="Assets\Model\Config\itemStack.cs" />
-     <Compile Include="Assets\Model\Config\itemdef.cs" />
-     <Compile Include="Assets\Model\Config\mapinfo.cs" />
-     <Compile Include="Assets\Model\Config\mondef.cs" />
-     <Compile Include="Assets\Model\Config\mondrop.cs" />
-     <Compile Include="Assets\Model\Config\npcgen.cs" />
-     <Compile Include="Assets\Model\Define.cs" />
-     <Compile Include="Assets\Model\EventType.cs" />
-     <Compile Include="Assets\Model\Helper\BundleHelper.cs" />
-     <Compile Include="Assets\Model\Helper\PathHelper.cs" />
-     <Compile Include="Assets\Model\Helper\PositionHelper.cs" />
-     <Compile Include="Assets\Model\Module\Actor\IActorMessage.cs" />
-     <Compile Include="Assets\Model\Module\ActorLocation\IActorLocationMessage.cs" />
-     <Compile Include="Assets\Model\Module\Config\ACategory.cs" />
-     <Compile Include="Assets\Model\Module\Config\AConfigComponent.cs" />
-     <Compile Include="Assets\Model\Module\Config\ConfigAttribute.cs" />
-     <Compile Include="Assets\Model\Module\Config\ConfigComponent.cs" />
-     <Compile Include="Assets\Model\Module\Config\ConfigHelper.cs" />
-     <Compile Include="Assets\Model\Module\Config\IConfig.cs" />
-     <Compile Include="Assets\Model\Module\CoroutineLock\CoroutineLock.cs" />
-     <Compile Include="Assets\Model\Module\CoroutineLock\CoroutineLockComponent.cs" />
-     <Compile Include="Assets\Model\Module\CoroutineLock\CoroutineLockQueue.cs" />
-     <Compile Include="Assets\Model\Module\CoroutineLock\CoroutineLockQueueType.cs" />
-     <Compile Include="Assets\Model\Module\CoroutineLock\CoroutineLockType.cs" />
-     <Compile Include="Assets\Model\Module\Message\AMHandler.cs" />
-     <Compile Include="Assets\Model\Module\Message\ErrorCode.cs" />
-     <Compile Include="Assets\Model\Module\Message\IMHandler.cs" />
-     <Compile Include="Assets\Model\Module\Message\IMessage.cs" />
-     <Compile Include="Assets\Model\Module\Message\IMessageDispatcher.cs" />
-     <Compile Include="Assets\Model\Module\Message\MessageAttribute.cs" />
-     <Compile Include="Assets\Model\Module\Message\MessageDispatcherComponent.cs" />
-     <Compile Include="Assets\Model\Module\Message\MessageHandlerAttribute.cs" />
-     <Compile Include="Assets\Model\Module\Message\MessageInfo.cs" />
-     <Compile Include="Assets\Model\Module\Message\MessagePackHelper.cs" />
-     <Compile Include="Assets\Model\Module\Message\MessageProxy.cs" />
-     <Compile Include="Assets\Model\Module\Message\NetOuterComponent.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\AChannel.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\AService.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\Circularbuffer.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\KCP\KChannel.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\KCP\KService.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\KCP\Kcp.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\NetworkHelper.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\TCP\PacketParser.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\TCP\TChannel.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\TCP\TService.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\WebSocket\WChannel.cs" />
-     <Compile Include="Assets\Model\Module\Message\Network\WebSocket\WService.cs" />
-     <Compile Include="Assets\Model\Module\Message\NetworkComponent.cs" />
-     <Compile Include="Assets\Model\Module\Message\Opcode.cs" />
-     <Compile Include="Assets\Model\Module\Message\OpcodeHelper.cs" />
-     <Compile Include="Assets\Model\Module\Message\OpcodeTypeComponent.cs" />
-     <Compile Include="Assets\Model\Module\Message\OuterMessage.cs" />
-     <Compile Include="Assets\Model\Module\Message\OuterMessageDispatcher.cs" />
-     <Compile Include="Assets\Model\Module\Message\OuterOpcode.cs" />
-     <Compile Include="Assets\Model\Module\Message\ProtobufHelper.cs" />
-     <Compile Include="Assets\Model\Module\Message\RpcException.cs" />
-     <Compile Include="Assets\Model\Module\Message\Session.cs" />
-     <Compile Include="Assets\Model\Module\Message\SessionCallbackComponent.cs" />
-     <Compile Include="Assets\Model\Module\Message\SessionIdleCheckComponent.cs" />
-     <Compile Include="Assets\Model\Module\Numeric\INumericWatcher.cs" />
-     <Compile Include="Assets\Model\Module\Numeric\NumericComponent.cs" />
-     <Compile Include="Assets\Model\Module\Numeric\NumericType.cs" />
-     <Compile Include="Assets\Model\Module\Numeric\NumericWatcherAttribute.cs" />
-     <Compile Include="Assets\Model\Module\Numeric\NumericWatcherComponent.cs" />
-     <Compile Include="Assets\Model\Module\Resource\AssetsBundleLoaderAsync.cs" />
-     <Compile Include="Assets\Model\Module\Resource\AssetsLoaderAsync.cs" />
-     <Compile Include="Assets\Model\Module\Resource\ResourcesComponent.cs" />
-     <Compile Include="Assets\Model\Module\Resource\VersionConfig.cs" />
-     <Compile Include="Assets\Model\Module\UnityWebRequest\UnityWebRequestAsync.cs" />
-     <Compile Include="Assets\Model\Module\UnityWebRequest\UnityWebRequestRenewalAsync.cs" />
-     <Compile Include="Assets\Model\Session\SessionComponent.cs" />
-     <Compile Include="Assets\Model\Unit\TurnComponent.cs" />
-     <Compile Include="Assets\Model\Unit\Unit.cs" />
-     <Compile Include="Assets\Model\Unit\UnitComponent.cs" />
-     <None Include="Assets\Model\Unity.Model.asmdef" />
- <Reference Include="Unity.Addressables">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
+     <Compile Include="Assets\HpNumNew\Script\HPUIManager.cs" />
+     <None Include="Assets\StreamingAssets\Version.txt" />
+     <None Include="Assets\Bundles\Config\mapinfo.txt" />
+     <None Include="Assets\Bundles\Config\UnitConfig.txt" />
+     <None Include="Assets\Bundles\Config\mondrop.txt" />
+     <None Include="Assets\Bundles\Config\mondef.txt" />
+     <None Include="Assets\Bundles\Config\StartSceneConfig.txt" />
+     <None Include="Assets\Bundles\Config\directfly.txt" />
+     <None Include="Assets\Bundles\Config\itemdef.txt" />
+     <None Include="Assets\Resources\Config\GlobalProto.txt" />
+     <None Include="Assets\Bundles\AddressablesRules.txt" />
+     <None Include="Assets\Bundles\Config\StartZoneConfig.txt" />
+     <None Include="Assets\Bundles\Config\npcgen.txt" />
+     <None Include="Assets\Bundles\Config\StartProcessConfig.txt" />
+     <None Include="Assets\link.xml" />
+     <None Include="Assets\Bundles\Config\StartMachineConfig.txt" />
+     <None Include="Assets\Bundles\Config\Levelinfo.txt" />
+     <None Include="Assets\Bundles\Config\defendMonster.txt" />
+     <None Include="Assets\Bundles\Config\itemStack.txt" />
+     <None Include="Assets\Bundles\Config\BuffConfig.txt" />
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.CacheServer">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Monetization">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ResourceManager">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.AssetBundleBrowser.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ScriptableBuildPipeline">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>E:/Unity/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -401,21 +366,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>E:/Unity/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.VR">
- <HintPath>E:/Unity/2019.4.10f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>E:/Unity/2019.4.10f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>E:/Unity/2019.4.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>E:/Unity/2019.4.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions">
- <HintPath>E:/Unity/2019.4.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
@@ -428,18 +378,6 @@
  <Reference Include="Pathfinding.Poly2Tri">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
  </Reference>
- <Reference Include="NPOI">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.dll</HintPath>
- </Reference>
- <Reference Include="NPOI.OOXML">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.OOXML.dll</HintPath>
- </Reference>
- <Reference Include="NPOI.OpenXml4Net">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXml4Net.dll</HintPath>
- </Reference>
- <Reference Include="NPOI.OpenXmlFormats">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -451,9 +389,6 @@
  </Reference>
  <Reference Include="clipper_library">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
- </Reference>
- <Reference Include="ICSharpCode.NRefactory">
- <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>E:/Unity/2019.4.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -820,6 +755,26 @@
     <ProjectReference Include="Unity.ThirdParty.csproj">
       <Project>{E15BADD2-3A26-309A-AB0F-DC5B08044350}</Project>
       <Name>Unity.ThirdParty</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Editor.csproj">
+      <Project>{CD311104-1830-B119-81B6-5DBEE2467FFB}</Project>
+      <Name>Unity.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Hotfix.csproj">
+      <Project>{1066F652-6A89-D1C4-9881-1A19DF7AB80E}</Project>
+      <Name>Unity.Hotfix</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Model.csproj">
+      <Project>{B4BF9894-F5D9-41C4-13E3-3F26F7700E29}</Project>
+      <Name>Unity.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.HotfixView.csproj">
+      <Project>{D31345DE-9B88-525C-8E9C-744C99AE7509}</Project>
+      <Name>Unity.HotfixView</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ModelView.csproj">
+      <Project>{2F8409C1-DA01-D464-DBF2-00C6449E459E}</Project>
+      <Name>Unity.ModelView</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
