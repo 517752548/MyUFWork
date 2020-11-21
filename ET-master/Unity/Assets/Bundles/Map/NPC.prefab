@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152653292704215435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.527, y: 0.285, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 9.43, y: 8.06, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3516264211489670426}
   m_RootOrder: 0
@@ -81,7 +81,7 @@ TextMesh:
   m_GameObject: {fileID: 152653292704215435}
   m_Text: "\u6211\u662FNPC"
   m_OffsetZ: -1
-  m_CharacterSize: 1
+  m_CharacterSize: 2
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 1
@@ -119,8 +119,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2457992850122919088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.527, y: 0.62, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 10.24, y: 12.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3516264211489670426}
   m_RootOrder: 1
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3516264211489670426}
   - component: {fileID: 1442665930052069833}
-  - component: {fileID: 4838489605417100323}
+  - component: {fileID: 6890630807869045779}
   m_Layer: 10
   m_Name: NPC
   m_TagString: Untagged
@@ -264,13 +264,13 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1.061062, y: 0.41189247}
+  m_Size: {x: 20, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &4838489605417100323
+--- !u!65 &6890630807869045779
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,5 +281,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.061062, y: 0.41189247, z: 0.2}
-  m_Center: {x: 0.530531, y: 0.20594624, z: 0}
+  m_Size: {x: 20, y: 10, z: 0.2}
+  m_Center: {x: 10, y: 5, z: 0}

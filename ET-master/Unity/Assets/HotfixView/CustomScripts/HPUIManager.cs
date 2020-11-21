@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HPUIManager : MonoBehaviour {
     [Header("当前血量显示名称")]
-    public Text _CurretHpNumName;
+    public TextMesh _CurretHpNumName;
     [Header("当前血量层名称")]
-    public Text _CurretHpLayerName;
+    public TextMesh _CurretHpLayerName;
     [Header("输入当前血量显示名称")]
     public string _CurretHpNumNameString;
     [Header("输入当前血量层名称")]
     public string _CurretHpLayerNameString;
     [Header("当前血量显示值")]
-    public Text _CurretHpNum;
+    public TextMesh _CurretHpNum;
     [Header("当前血量层值")]
-    public Text _CurretHpLayer;
+    public TextMesh _CurretHpLayer;
     [Header("当前血量图片")]
     public Image _CurretHpImage;
     [Header("空血底图")]
