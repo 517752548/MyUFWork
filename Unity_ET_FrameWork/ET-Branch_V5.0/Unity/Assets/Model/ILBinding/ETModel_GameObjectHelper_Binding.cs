@@ -35,12 +35,12 @@ namespace ILRuntime.Runtime.Generated
                     lst.Add(m);
                 }
             }
-            args = new Type[]{typeof(UnityEngine.TextAsset)};
+            args = new Type[]{typeof(UnityEngine.GameObject)};
             if (genericMethods.TryGetValue("Get", out lst))
             {
                 foreach(var m in lst)
                 {
-                    if(m.MatchGenericParameters(args, typeof(UnityEngine.TextAsset), typeof(UnityEngine.GameObject), typeof(System.String)))
+                    if(m.MatchGenericParameters(args, typeof(UnityEngine.GameObject), typeof(UnityEngine.GameObject), typeof(System.String)))
                     {
                         method = m.MakeGenericMethod(args);
                         app.RegisterCLRMethodRedirection(method, Get_0);
@@ -69,7 +69,7 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
 
-            var result_of_this_method = ETModel.GameObjectHelper.Get<UnityEngine.TextAsset>(@gameObject, @key);
+            var result_of_this_method = ETModel.GameObjectHelper.Get<UnityEngine.GameObject>(@gameObject, @key);
 
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }

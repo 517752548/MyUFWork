@@ -143,6 +143,7 @@
      <Compile Include="Assets\Model\Config\mondrop.cs" />
      <Compile Include="Assets\Model\Config\npcgen.cs" />
      <Compile Include="Assets\Model\Define.cs" />
+     <Compile Include="Assets\Model\EntityAdapter.cs" />
      <Compile Include="Assets\Model\EventType.cs" />
      <Compile Include="Assets\Model\Helper\BundleHelper.cs" />
      <Compile Include="Assets\Model\Helper\PathHelper.cs" />
@@ -217,6 +218,9 @@
  </Reference>
  <Reference Include="Unity.ResourceManager">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
+ </Reference>
+ <Reference Include="ILRuntime">
+ <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/ET-master/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

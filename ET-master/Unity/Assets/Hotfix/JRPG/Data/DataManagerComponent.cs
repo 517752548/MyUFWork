@@ -22,7 +22,7 @@ namespace ET
             }
         }
     }
-    public class DataManagerComponent: Component
+    public class DataManagerComponent: Entity
     {
         public string userId;
     }

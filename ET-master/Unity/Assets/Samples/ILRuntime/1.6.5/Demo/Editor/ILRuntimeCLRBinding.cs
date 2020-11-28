@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Text;
 using System.Collections.Generic;
+using ET;
 using ILRuntimeDemo;
 [System.Reflection.Obfuscation(Exclude = true)]
 public class ILRuntimeCLRBinding
@@ -13,7 +14,7 @@ public class ILRuntimeCLRBinding
     {
         //用新的分析热更dll调用引用来生成绑定代码
         ILRuntime.Runtime.Enviorment.AppDomain domain = new ILRuntime.Runtime.Enviorment.AppDomain();
-        using (System.IO.FileStream fs = new System.IO.FileStream("Assets/StreamingAssets/HotFix_Project.dll", System.IO.FileMode.Open, System.IO.FileAccess.Read))
+        using (System.IO.FileStream fs = new System.IO.FileStream("Library/ScriptAssemblies/Unity.Hotfix.dll", System.IO.FileMode.Open, System.IO.FileAccess.Read))
         {
             domain.LoadAssembly(fs);
 
@@ -31,6 +32,7 @@ public class ILRuntimeCLRBinding
         domain.RegisterCrossBindingAdaptor(new MonoBehaviourAdapter());
         domain.RegisterCrossBindingAdaptor(new CoroutineAdapter());
         domain.RegisterCrossBindingAdaptor(new TestClassBaseAdapter());
+        domain.RegisterCrossBindingAdaptor(new EntityAdapter());
         domain.RegisterValueTypeBinder(typeof(Vector3), new Vector3Binder());
     }
 }
