@@ -9,7 +9,7 @@ namespace ETEditor
     public class Startup
     {
         private const string ScriptAssembliesDir = "Library/ScriptAssemblies";
-        private const string CodeDir = "Assets/Bundles/All/";
+        private const string CodeDir = "Assets/Bundles/HotDll/";
         private const string HotfixDll = "Unity.Hotfix.dll";
         private const string HotfixPdb = "Unity.Hotfix.pdb";
 

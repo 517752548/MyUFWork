@@ -27,7 +27,17 @@
                 return ObjectPool.Instance;
             }
         }
-		
+
+        private static Hotfix hotfix;
+
+        public static Hotfix Hotfix
+        {
+            get
+            {
+                return hotfix ?? (hotfix = new Hotfix());
+            }
+        }
+
         public static void Close()
         {
             scene?.Dispose();

@@ -10,6 +10,12 @@ namespace ET
 	{
 		private void Start()
 		{
+			InitAsync();
+		}
+
+		private async void  InitAsync()
+		{
+			
 			try
 			{
 				SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);
@@ -27,13 +33,18 @@ namespace ET
 					}
 					Game.EventSystem.Add(assembly);	
 				}
+				// 加载配置
+				Game.Scene.AddComponent<ResourcesComponent>();
+				await Game.Hotfix.LoadHotfixAssembly();
+				Game.Hotfix.GotoHotfix();
 				
-				Game.EventSystem.Publish(new EventType.AppStart());
+				//Game.EventSystem.Publish(new EventType.AppStart());
 			}
 			catch (Exception e)
 			{
 				Log.Error(e);
 			}
+			
 		}
 
 		private void Update()

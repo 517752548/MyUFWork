@@ -10,7 +10,7 @@ namespace ET
             //await BundleHelper.DownloadBundle("1111");
 
             // 加载配置
-            Game.Scene.AddComponent<ResourcesComponent>();
+            //Game.Scene.AddComponent<ResourcesComponent>();
 
             await ResourcesComponent.Instance.LoadAllConfig();
             Game.Scene.AddComponent<ConfigComponent>();

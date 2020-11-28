@@ -12,17 +12,6 @@ canupdate=false
 
 [AddressablesRuleData]
 ID=2
-searchPath=Assets/Bundles/All
-searchPattern=*.*
-searchOption=AllDirectories
-GroupName=PackTogether
-Lable=prefab
-ResType=local
-PackageType=PackTogether
-canupdate=false
-
-[AddressablesRuleData]
-ID=3
 searchPath=Assets/Bundles/Map
 searchPattern=*.*
 searchOption=AllDirectories
@@ -33,8 +22,19 @@ PackageType=PackTogether
 canupdate=false
 
 [AddressablesRuleData]
-ID=4
+ID=3
 searchPath=Assets/Bundles/Config
+searchPattern=*.*
+searchOption=AllDirectories
+GroupName=PackTogether
+Lable=Config
+ResType=local
+PackageType=PackTogether
+canupdate=false
+
+[AddressablesRuleData]
+ID=4
+searchPath=Assets/Bundles/HotDll
 searchPattern=*.*
 searchOption=AllDirectories
 GroupName=PackTogether

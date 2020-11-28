@@ -1,5 +1,7 @@
 namespace Hotfix {public class ViewConst{
 //Group：PackTogether ;Label:prefab;
+     public const string prefab_HP = "HP.prefab";
+//Group：PackTogether ;Label:prefab;
      public const string prefab_MapController = "MapController.prefab";
 //Group：PackTogether ;Label:prefab;
      public const string prefab_UIJFly = "UIJFly.prefab";
@@ -13,6 +15,8 @@ namespace Hotfix {public class ViewConst{
      public const string prefab_UIManager = "UIManager.prefab";
 //Group：PackTogether ;Label:prefab;
      public const string prefab_GameMap = "GameMap.prefab";
+//Group：PackTogether ;Label:prefab;
+     public const string prefab_NormalEnemy = "NormalEnemy.prefab";
 //Group：PackTogether ;Label:prefab;
      public const string prefab_NPC = "NPC.prefab";
 //Group：PackTogether ;Label:Config;
