@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Book\\Example\\Example2_3_2\\Example2_3_2.csproj": {}
+  },
+  "projects": {
+    "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Book\\Example\\Example2_3_2\\Example2_3_2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Book\\Example\\Example2_3_2\\Example2_3_2.csproj",
+        "projectName": "Example2_3_2",
+        "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Book\\Example\\Example2_3_2\\Example2_3_2.csproj",
+        "packagesPath": "C:\\Users\\lvjibin\\.nuget\\packages\\",
+        "outputPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Book\\Example\\Example2_3_2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lvjibin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

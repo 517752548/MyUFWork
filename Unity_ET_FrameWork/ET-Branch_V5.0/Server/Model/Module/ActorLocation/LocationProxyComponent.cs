@@ -1,21 +1,9 @@
 ﻿using System.Net;
 
-namespace ET
+namespace ETModel
 {
-	public class LocationProxyComponent : Entity
+	public class LocationProxyComponent : Component
 	{
-		public static LocationProxyComponent Instance;
-
-		public override void Dispose()
-		{
-			if (this.IsDisposed)
-			{
-				return;
-			}
-			
-			base.Dispose();
-
-			Instance = null;
-		}
+		public IPEndPoint LocationAddress;
 	}
 }

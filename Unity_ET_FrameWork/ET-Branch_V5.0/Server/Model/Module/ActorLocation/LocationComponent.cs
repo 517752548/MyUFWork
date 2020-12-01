@@ -1,23 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace ET
+namespace ETModel
 {
+	[ObjectSystem]
 	public class LockInfoAwakeSystem : AwakeSystem<LockInfo, long, CoroutineLock>
 	{
 		public override void Awake(LockInfo self, long lockInstanceId, CoroutineLock coroutineLock)
 		{
-			self.CoroutineLock = coroutineLock;
 			self.LockInstanceId = lockInstanceId;
+			self.CoroutineLock = coroutineLock;
 		}
 	}
 	
-	public class LockInfo: Entity
+	public class LockInfo: Component
 	{
 		public long LockInstanceId;
 		
 		public CoroutineLock CoroutineLock;
 
+		public override void Dispose()
+		{
+			this.LockInstanceId = 0;
+			this.CoroutineLock.Dispose();
+		}
+	}
+	
+	public class LocationComponent : Component
+	{
+		private readonly Dictionary<long, long> locations = new Dictionary<long, long>();
+
+		private readonly Dictionary<long, LockInfo> lockInfos = new Dictionary<long, LockInfo>();
+		
 		public override void Dispose()
 		{
 			if (this.IsDisposed)
@@ -27,21 +40,19 @@ namespace ET
 			
 			base.Dispose();
 			
-			this.CoroutineLock.Dispose();
-			this.CoroutineLock = null;
-			LockInstanceId = 0;
+			this.locations.Clear();
+
+			foreach (LockInfo lockInfo in this.lockInfos.Values)
+			{
+				lockInfo.Dispose();
+			}
+			
+			this.lockInfos.Clear();
 		}
-	}
-	
-	public class LocationComponent : Entity
-	{
-		private readonly Dictionary<long, long> locations = new Dictionary<long, long>();
-		
-		private readonly Dictionary<long, LockInfo> lockInfos = new Dictionary<long, LockInfo>();
 
 		public async ETTask Add(long key, long instanceId)
 		{
-			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.Location, key))
+			using (await CoroutineLockComponent.Instance.Wait(key + (int)AppType.Location))
 			{
 				this.locations[key] = instanceId;
 				Log.Info($"location add key: {key} instanceId: {instanceId}");
@@ -50,32 +61,51 @@ namespace ET
 
 		public async ETTask Remove(long key)
 		{
-			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.Location, key))
+			using (await CoroutineLockComponent.Instance.Wait(key + (int)AppType.Location))
 			{
 				this.locations.Remove(key);
 				Log.Info($"location remove key: {key}");
 			}
 		}
 
+		public async ETTask<long> Get(long key)
+		{
+			using (await CoroutineLockComponent.Instance.Wait(key + (int)AppType.Location))
+			{
+				this.locations.TryGetValue(key, out long instanceId);
+				Log.Info($"location get key: {key} {instanceId}");
+				return instanceId;
+			}
+
+		}
+
 		public async ETVoid Lock(long key, long instanceId, int time = 0)
 		{
-			CoroutineLock coroutineLock = await CoroutineLockComponent.Instance.Wait(CoroutineLockType.Location, key);
+			if (!this.locations.TryGetValue(key, out long saveInstanceId))
+			{
+				Log.Error($"actor没有注册, key: {key} InstanceId: {instanceId}");
+				return;
+			}
+			
+			if (saveInstanceId != instanceId)
+			{
+				Log.Error($"actor注册的instanceId与lock的不一致, key: {key} InstanceId: {instanceId} saveInstanceId: {saveInstanceId}");
+				return;
+			}
+			
+			CoroutineLock coroutineLock = await CoroutineLockComponent.Instance.Wait(key + (int)AppType.Location);
 
-			LockInfo lockInfo = EntityFactory.Create<LockInfo, long, CoroutineLock>(this.Domain, instanceId, coroutineLock);
-			lockInfo.Parent = this;
+			LockInfo lockInfo = ComponentFactory.Create<LockInfo, long, CoroutineLock>(instanceId, coroutineLock);
+			
 			this.lockInfos.Add(key, lockInfo);
 			
-			Log.Info($"location lock key: {key} instanceId: {instanceId}");
+			Log.Info($"location lock key: {key} InstanceId: {instanceId}");
 
+			// 超时则解锁
 			if (time > 0)
 			{
-				long lockInfoInstanceId = lockInfo.InstanceId;
-				await TimerComponent.Instance.WaitAsync(time);
-				if (lockInfo.InstanceId != lockInfoInstanceId)
-				{
-					return;
-				}
-				UnLock(key, instanceId, instanceId);
+				await Game.Scene.GetComponent<TimerComponent>().WaitAsync(time);
+				this.UnLock(key, instanceId, instanceId);
 			}
 		}
 
@@ -83,46 +113,17 @@ namespace ET
 		{
 			if (!this.lockInfos.TryGetValue(key, out LockInfo lockInfo))
 			{
-				Log.Error($"location unlock not found key: {key} {oldInstanceId}");
 				return;
 			}
-			
-			if (oldInstanceId != lockInfo.LockInstanceId)
+			if (lockInfo.LockInstanceId != oldInstanceId)
 			{
-				Log.Error($"location unlock oldInstanceId is different: {key} {oldInstanceId}");
+				Log.Error($"unlock appid is different {lockInfo.LockInstanceId} {oldInstanceId}" );
 				return;
 			}
+			Log.Info($"location unlock key: {key} oldInstanceId: {oldInstanceId} new: {newInstanceId}");
 			
-			Log.Info($"location unlock key: {key} instanceId: {oldInstanceId} newInstanceId: {newInstanceId}");
-
 			this.locations[key] = newInstanceId;
-			
-			this.lockInfos.Remove(key);
-			
-			// 解锁
 			lockInfo.Dispose();
-		}
-
-		public async ETTask<long> Get(long key)
-		{
-			using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.Location, key))
-			{
-				this.locations.TryGetValue(key, out long instanceId);
-				Log.Info($"location get key: {key} instanceId: {instanceId}");
-				return instanceId;
-			}
-		}
-
-		public override void Dispose()
-		{
-			if (this.IsDisposed)
-			{
-				return;
-			}
-			base.Dispose();
-			
-			this.locations.Clear();
-			this.lockInfos.Clear();
 		}
 	}
 }

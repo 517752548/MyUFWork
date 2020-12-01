@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ET
+namespace ETModel
 {
 	public static class JsonHelper
 	{

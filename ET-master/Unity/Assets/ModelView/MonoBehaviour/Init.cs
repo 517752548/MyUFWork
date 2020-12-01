@@ -22,16 +22,25 @@ namespace ET
 				
 				DontDestroyOnLoad(gameObject);
 
-				string[] assemblyNames = { "Unity.Model.dll", "Unity.Hotfix.dll", "Unity.ModelView.dll", "Unity.HotfixView.dll" };
+				string[] assemblyNames = { "Unity.Model", "Unity.Hotfix", "Unity.ModelView", "Unity.HotfixView" };
 				
 				foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
 				{
-					string assemblyName = assembly.ManifestModule.Name;
-					if (!assemblyNames.Contains(assemblyName))
+					bool assemblyHotDll = false;
+					string assemblyName = assembly.FullName;
+					for (int i = 0; i < assemblyNames.Length; i++)
 					{
-						continue;
+						if (assemblyName.StartsWith(assemblyNames[i]))
+						{
+							assemblyHotDll = true;
+						}
 					}
-					Game.EventSystem.Add(assembly);	
+
+					if (assemblyHotDll)
+					{
+						Game.EventSystem.Add(assembly.FullName,assembly);	
+					}
+					
 				}
 				// 加载配置
 				Game.Scene.AddComponent<ResourcesComponent>();

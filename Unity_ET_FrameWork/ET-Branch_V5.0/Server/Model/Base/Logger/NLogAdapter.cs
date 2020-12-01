@@ -1,6 +1,6 @@
 ﻿using NLog;
 
-namespace ET
+namespace ETModel
 {
 	public class NLogAdapter: ILog
 	{

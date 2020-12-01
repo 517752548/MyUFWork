@@ -32,7 +32,7 @@ public class ILRuntimeCLRBinding
         domain.RegisterCrossBindingAdaptor(new MonoBehaviourAdapter());
         domain.RegisterCrossBindingAdaptor(new CoroutineAdapter());
         domain.RegisterCrossBindingAdaptor(new TestClassBaseAdapter());
-        domain.RegisterCrossBindingAdaptor(new EntityAdapter());
+        //domain.RegisterCrossBindingAdaptor(new EntityAdapter());
         domain.RegisterValueTypeBinder(typeof(Vector3), new Vector3Binder());
     }
 }

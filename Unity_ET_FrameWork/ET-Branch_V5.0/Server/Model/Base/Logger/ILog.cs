@@ -1,4 +1,4 @@
-﻿namespace ET
+﻿namespace ETModel
 {
 	public interface ILog
 	{

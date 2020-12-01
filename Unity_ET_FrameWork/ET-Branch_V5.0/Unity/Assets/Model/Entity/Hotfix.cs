@@ -39,12 +39,13 @@ namespace ETModel
 			return this.hotfixTypes;
 		}
 
-		public async ETTask LoadHotfixAssembly()
+		public void LoadHotfixAssembly()
 		{
-			TextAsset dll =(TextAsset) await Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync("Hotfix.dll.bytes");
-			byte[] assBytes = dll.bytes;
-			TextAsset pdb =(TextAsset) await Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync("Hotfix.pdb.bytes");
-			byte[] pdbBytes = pdb.bytes;
+			Game.Scene.GetComponent<ResourcesComponent>().LoadBundle($"code.unity3d");
+			GameObject code = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("code.unity3d", "Code");
+			
+			byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
+			byte[] pdbBytes = code.Get<TextAsset>("Hotfix.pdb").bytes;
 			
 #if ILRuntime
 			Log.Debug($"当前使用的是ILRuntime模式");
@@ -68,7 +69,7 @@ namespace ETModel
 			this.hotfixTypes = this.assembly.GetTypes().ToList();
 #endif
 			
-			//Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle($"code.unity3d");
+			Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle($"code.unity3d");
 		}
 	}
 }

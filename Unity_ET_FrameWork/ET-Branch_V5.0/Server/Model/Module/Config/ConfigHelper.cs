@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ET
+namespace ETModel
 {
 	public static class ConfigHelper
 	{

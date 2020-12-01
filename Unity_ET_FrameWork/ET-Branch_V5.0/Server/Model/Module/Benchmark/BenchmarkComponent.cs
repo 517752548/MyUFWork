@@ -1,6 +1,6 @@
-﻿namespace ET
+﻿namespace ETModel
 {
-	public class BenchmarkComponent: Entity
+	public class BenchmarkComponent: Component
 	{
 		public int k;
 

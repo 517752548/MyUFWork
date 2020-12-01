@@ -8,13 +8,14 @@ namespace ET
 	{
 		public override void Awake(UIManagerComponent self)
 		{
-			self.Camera = Entity.Global.transform.Find("UIManager/DefaultUI/UICamera").gameObject;
-			self.GameUI = Entity.Global.transform.Find("UIManager/DefaultUI/GameUI");
-			self.Fixed = Entity.Global.transform.Find("UIManager/DefaultUI/Fixed");
-			self.Normal = Entity.Global.transform.Find("UIManager/DefaultUI/Normal");
-			self.TopBar = Entity.Global.transform.Find("UIManager/DefaultUI/TopBar");
-			self.PopUp = Entity.Global.transform.Find("UIManager/DefaultUI/PopUp");
-			self.GuideUI = Entity.Global.transform.Find("UIManager/DefaultUI/GuideUi");
+			Transform globle = GameObject.Find("/Global").transform;
+			self.Camera = globle.Find("UIManager/DefaultUI/UICamera").gameObject;
+			self.GameUI = globle.Find("UIManager/DefaultUI/GameUI");
+			self.Fixed = globle.Find("UIManager/DefaultUI/Fixed");
+			self.Normal = globle.Find("UIManager/DefaultUI/Normal");
+			self.TopBar = globle.Find("UIManager/DefaultUI/TopBar");
+			self.PopUp = globle.Find("UIManager/DefaultUI/PopUp");
+			self.GuideUI = globle.Find("UIManager/DefaultUI/GuideUi");
 		}
 	}
 	/// <summary>

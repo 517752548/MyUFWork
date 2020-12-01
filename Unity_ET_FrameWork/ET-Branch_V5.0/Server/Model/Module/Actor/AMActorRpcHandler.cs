@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ET
+namespace ETModel
 {
 	public abstract class AMActorRpcHandler<E, Request, Response>: IMActorHandler where E: Entity where Request: class, IActorRequest where Response : class, IActorResponse
 	{

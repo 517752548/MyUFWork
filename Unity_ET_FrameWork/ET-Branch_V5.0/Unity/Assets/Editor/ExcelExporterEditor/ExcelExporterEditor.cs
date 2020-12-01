@@ -53,7 +53,7 @@ public class ExcelExporterEditor : EditorWindow
 	{
 		try
 		{
-			const string clientPath = "./Assets/Bundles/Config";
+			const string clientPath = "./Assets/Res/Config";
 
 			if (GUILayout.Button("导出客户端配置"))
 			{
@@ -222,7 +222,7 @@ public class ExcelExporterEditor : EditorWindow
 		Log.Info($"{protoName}导表开始");
 		string exportPath = Path.Combine(exportDir, $"{protoName}.txt");
 		using (FileStream txt = new FileStream(exportPath, FileMode.Create))
-		using (StreamWriter sw = new StreamWriter(txt,Encoding.UTF8))
+		using (StreamWriter sw = new StreamWriter(txt))
 		{
 			for (int i = 0; i < xssfWorkbook.NumberOfSheets; ++i)
 			{
@@ -253,11 +253,6 @@ public class ExcelExporterEditor : EditorWindow
 			{
 				continue;
 			}
-			if (GetCellString(sheet, i, 2).StartsWith("#"))
-			{
-				continue;
-			}
-			
 			StringBuilder sb = new StringBuilder();
 			sb.Append("{");
 			IRow row = sheet.GetRow(i);
@@ -280,12 +275,10 @@ public class ExcelExporterEditor : EditorWindow
 				{
 					continue;
 				}
-				
+
 				string fieldValue = GetCellString(row, j);
 				if (fieldValue == "")
 				{
-					Log.Info(GetCellString(sheet, i, 2));
-					Log.Info(desc);
 					throw new Exception($"sheet: {sheet.SheetName} 中有空白字段 {i},{j}");
 				}
 
@@ -323,9 +316,9 @@ public class ExcelExporterEditor : EditorWindow
 			case "int[]":
 			case "int32[]":
 			case "long[]":
-				return $"[{value.Replace(";",",")}]";
+				return $"[{value}]";
 			case "string[]":
-				return $"[{value.Replace(";",",")}]";
+				return $"[{value}]";
 			case "int":
 			case "int32":
 			case "int64":

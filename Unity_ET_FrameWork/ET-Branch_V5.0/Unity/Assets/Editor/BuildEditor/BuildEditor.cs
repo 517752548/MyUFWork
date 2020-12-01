@@ -37,6 +37,7 @@ namespace ETEditor
 		private bool isContainAB;
 		private BuildType buildType;
 		private BuildOptions buildOptions = BuildOptions.AllowDebugging | BuildOptions.Development;
+		private BuildAssetBundleOptions buildAssetBundleOptions = BuildAssetBundleOptions.None;
 
 		[MenuItem("Tools/打包工具")]
 		public static void ShowWindow()
@@ -60,6 +61,8 @@ namespace ETEditor
 					this.buildOptions = BuildOptions.None;
 					break;
 			}
+			
+			this.buildAssetBundleOptions = (BuildAssetBundleOptions)EditorGUILayout.EnumFlagsField("BuildAssetBundleOptions(可多选): ", this.buildAssetBundleOptions);
 
 			if (GUILayout.Button("开始打包"))
 			{
@@ -68,7 +71,7 @@ namespace ETEditor
 					Log.Error("请选择打包平台!");
 					return;
 				}
-				BuildHelper.Build(this.platformType,this.buildOptions, this.isBuildExe, this.isContainAB);
+				BuildHelper.Build(this.platformType, this.buildAssetBundleOptions, this.buildOptions, this.isBuildExe, this.isContainAB);
 			}
 		}
 

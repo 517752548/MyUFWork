@@ -1,0 +1,78 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\Model\\Server.Model.csproj",
+    "projectName": "Model",
+    "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\Model\\Server.Model.csproj",
+    "outputPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\Model\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj"
+          },
+          "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\KcpLib\\KcpLib.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\KcpLib\\KcpLib.csproj"
+          },
+          "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj"
+          },
+          "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj"
+          },
+          "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver\\MongoDB.Driver.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver\\MongoDB.Driver.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "CommandLineParser": {
+          "target": "Package",
+          "version": "[2.2.1, )"
+        },
+        "Microsoft.CodeAnalysis.Scripting": {
+          "target": "Package",
+          "version": "[2.9.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        },
+        "NLog": {
+          "target": "Package",
+          "version": "[4.5.4, )"
+        },
+        "SharpZipLib": {
+          "target": "Package",
+          "version": "[1.0.0-alpha2, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

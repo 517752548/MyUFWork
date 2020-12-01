@@ -1,19 +1,19 @@
-﻿using System;
+﻿using System.Net;
 
-namespace ET
+namespace ETModel
 {
 	// 知道对方的instanceId，使用这个类发actor消息
 	public struct ActorMessageSender
 	{
-		// 最近接收或者发送消息的时间
-		public long CreateTime { get; }
 		// actor的地址
-		public Action<IActorResponse> Callback { get; }
+		public IPEndPoint Address { get; }
 
-		public ActorMessageSender(Action<IActorResponse> callback)
+		public long ActorId { get; }
+
+		public ActorMessageSender(long actorId, IPEndPoint address)
 		{
-			this.CreateTime = TimeHelper.Now();
-			this.Callback = callback;
+			this.ActorId = actorId;
+			this.Address = address;
 		}
 	}
 }

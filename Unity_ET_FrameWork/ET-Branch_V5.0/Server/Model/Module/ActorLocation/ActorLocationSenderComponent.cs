@@ -1,14 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace ET
+namespace ETModel
 {
-    public class ActorLocationSenderComponent: Entity
-    {
-        [NoMemoryCheck]
-        public static long TIMEOUT_TIME = 10 * 1000;
-        
-        public static ActorLocationSenderComponent Instance { get; set; }
+	public class ActorLocationSenderComponent: Component
+	{
+		public readonly Dictionary<long, ActorLocationSender> ActorLocationSenders = new Dictionary<long, ActorLocationSender>();
 
-        public long CheckTimer;
-    }
+		public override void Dispose()
+		{
+			if (this.IsDisposed)
+			{
+				return;
+			}
+			
+			base.Dispose();
+			
+			foreach (ActorLocationSender actorLocationSender in this.ActorLocationSenders.Values)
+			{
+				actorLocationSender.Dispose();
+			}
+			this.ActorLocationSenders.Clear();
+		}
+	}
 }

@@ -3,6 +3,24 @@ using System.Collections.Generic;
 
 namespace ETModel
 {
+	[ObjectSystem]
+	public class ConfigComponentAwakeSystem : AwakeSystem<ConfigComponent>
+	{
+		public override void Awake(ConfigComponent self)
+		{
+			self.Awake();
+		}
+	}
+
+	[ObjectSystem]
+	public class ConfigComponentLoadSystem : LoadSystem<ConfigComponent>
+	{
+		public override void Load(ConfigComponent self)
+		{
+			self.Load();
+		}
+	}
+
 	/// <summary>
 	/// Config组件会扫描所有的有ConfigAttribute标签的配置,加载进来
 	/// </summary>
@@ -10,9 +28,12 @@ namespace ETModel
 	{
 		private Dictionary<Type, ACategory> allConfig = new Dictionary<Type, ACategory>();
 
+		public void Awake()
+		{
+			this.Load();
+		}
 
-
-		public async ETTask Load()
+		public void Load()
 		{
 			this.allConfig.Clear();
 			List<Type> types = Game.EventSystem.GetTypes(typeof(ConfigAttribute));
@@ -31,7 +52,7 @@ namespace ETModel
 				{
 					continue;
 				}
-
+				
 				object obj = Activator.CreateInstance(type);
 
 				ACategory iCategory = obj as ACategory;
@@ -39,14 +60,12 @@ namespace ETModel
 				{
 					throw new Exception($"class: {type.Name} not inherit from ACategory");
 				}
-				await Game.Scene.GetComponent<ResourcesComponent>().PreloadBundle($"{iCategory.ConfigType.Name}.txt");
 				iCategory.BeginInit();
 				iCategory.EndInit();
-				Log.Info(iCategory.ConfigType.ToString());
+
 				this.allConfig[iCategory.ConfigType] = iCategory;
 			}
 		}
-		
 
 		public IConfig GetOne(Type type)
 		{

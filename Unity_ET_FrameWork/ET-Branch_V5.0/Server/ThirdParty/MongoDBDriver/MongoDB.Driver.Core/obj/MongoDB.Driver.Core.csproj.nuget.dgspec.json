@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj": {}
+  },
+  "projects": {
+    "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
+      "version": "0.0.0-local",
+      "restore": {
+        "projectUniqueName": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj",
+        "projectName": "MongoDB.Bson",
+        "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj",
+        "packagesPath": "C:\\Users\\lvjibin\\.nuget\\packages\\",
+        "outputPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lvjibin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.6.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj": {
+      "version": "0.0.0-local",
+      "restore": {
+        "projectUniqueName": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj",
+        "projectName": "MongoDB.Driver.Core",
+        "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj",
+        "packagesPath": "C:\\Users\\lvjibin\\.nuget\\packages\\",
+        "outputPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lvjibin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
+                "projectPath": "D:\\OtherGitProjects\\UFramework\\Unity_ET_FrameWork\\ET-Branch_V5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "DnsClient": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.6.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

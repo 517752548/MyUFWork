@@ -40,11 +40,6 @@ namespace ETModel
 				{
 					continue;
 				}
-
-				for (int i = 0; i < attrs.Length; i++)
-				{
-					Debug.Log("adatper:" + attrs[i]);
-				}
 				object obj = Activator.CreateInstance(type);
 				CrossBindingAdaptor adaptor = obj as CrossBindingAdaptor;
 				if (adaptor == null)

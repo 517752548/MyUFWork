@@ -279,7 +279,7 @@ namespace MongoDB.Bson.IO
                 bsonWriter.WriteEndDocument();
 
                 byte[] memoryStreamBuffer;
-#if NETSTANDARD1_5 || NETSTANDARD1_6 || NETCOREAPP
+#if NETSTANDARD1_5 || NETSTANDARD1_6
                 memoryStreamBuffer = memoryStream.ToArray();
 #else
                 memoryStreamBuffer = memoryStream.GetBuffer();

@@ -1,8 +1,9 @@
 ﻿using System;
+using ETModel;
 
-
-namespace ET
+namespace ETHotfix
 {
+	[ObjectSystem]
 	public class WebSocketBenchmarkComponentSystem : AwakeSystem<WebSocketBenchmarkComponent, string>
 	{
 		public override void Awake(WebSocketBenchmarkComponent self, string address)
