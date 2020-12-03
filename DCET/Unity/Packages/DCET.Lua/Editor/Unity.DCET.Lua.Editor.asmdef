@@ -1,0 +1,29 @@
+{
+    "name": "Unity.DCET.Lua.Editor",
+    "references": [
+        "Unity.DCET.Core.Editor",
+        "Unity.DCET.Core.Runtime",
+        "Unity.DCET.Pathfinding.Runtime",
+        "Unity.BehaviorDesigner.Runtime",
+        "Unity.MongoDB.Runtime",
+        "Unity.DCET.BehaviorTree.Editor",
+        "Unity.DCET.Config.Editor",
+        "Unity.DCET.FairyGUI.Editor",
+        "Unity.DCET.Message.Editor",
+        "Unity.FairyGUI.Runtime",
+        "Unity.DCET.Core.Hotfix",
+        "Unity.DCET.Message.Hotfix",
+        "Unity.DCET.Lua.Runtime",
+        "Unity.ProtoBuf.Runtime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

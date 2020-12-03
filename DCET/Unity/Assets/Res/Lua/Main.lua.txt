@@ -1,0 +1,17 @@
+--luaide Debug
+--require("LuaDebug")("localhost",7003)
+--LuaPanda Debug
+require("LuaPanda").start("127.0.0.1",8818)
+
+require("CSharpLua.Classloader")
+require("xLuaAdapter")
+require("ProtobufAdapter")
+require("Core.manifest")("Core")
+require("AssetBundle.manifest")("AssetBundle")
+require("Message.manifest")("Message")
+require("Config.manifest")("Config")
+require("BehaviorTree.manifest")("BehaviorTree")
+require("FairyGUI.manifest")("FairyGUI")
+require("Hotfix.manifest")("Hotfix")
+
+DCET.Init.Start()

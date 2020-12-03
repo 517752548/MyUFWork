@@ -1,0 +1,607 @@
+﻿
+
+<linker>
+
+	<assembly fullname="mscorlib">
+	    <type fullname="System.Object" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[System.Int32]" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[System.String]" preserve="all"/>
+		<type fullname="System.Type" preserve="all"/>
+		<type fullname="System.SerializableAttribute" preserve="all"/>
+		<type fullname="System.IO.Path" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[BehaviorDesigner.Runtime.Tasks.HotfixAction]" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[BehaviorDesigner.Runtime.Tasks.HotfixComposite]" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[BehaviorDesigner.Runtime.Tasks.HotfixConditional]" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[BehaviorDesigner.Runtime.Tasks.HotfixDecorator]" preserve="all"/>
+		<type fullname="System.IO.IOException" preserve="all"/>
+		<type fullname="System.Text.Encoding" preserve="all"/>
+		<type fullname="System.IO.Stream" preserve="all"/>
+		<type fullname="System.IO.MemoryStream" preserve="all"/>
+		<type fullname="System.Convert" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.CoreModule">
+	    <type fullname="UnityEngine.Object" preserve="all"/>
+		<type fullname="UnityEngine.Vector2" preserve="all"/>
+		<type fullname="UnityEngine.Vector3" preserve="all"/>
+		<type fullname="UnityEngine.Vector4" preserve="all"/>
+		<type fullname="UnityEngine.Quaternion" preserve="all"/>
+		<type fullname="UnityEngine.Color" preserve="all"/>
+		<type fullname="UnityEngine.Ray" preserve="all"/>
+		<type fullname="UnityEngine.Bounds" preserve="all"/>
+		<type fullname="UnityEngine.Ray2D" preserve="all"/>
+		<type fullname="UnityEngine.Time" preserve="all"/>
+		<type fullname="UnityEngine.GameObject" preserve="all"/>
+		<type fullname="UnityEngine.Component" preserve="all"/>
+		<type fullname="UnityEngine.Behaviour" preserve="all"/>
+		<type fullname="UnityEngine.Transform" preserve="all"/>
+		<type fullname="UnityEngine.Resources" preserve="all"/>
+		<type fullname="UnityEngine.TextAsset" preserve="all"/>
+		<type fullname="UnityEngine.Keyframe" preserve="all"/>
+		<type fullname="UnityEngine.AnimationCurve" preserve="all"/>
+		<type fullname="UnityEngine.MonoBehaviour" preserve="all"/>
+		<type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all"/>
+		<type fullname="UnityEngine.Renderer" preserve="all"/>
+		<type fullname="UnityEngine.Light" preserve="all"/>
+		<type fullname="UnityEngine.Mathf" preserve="all"/>
+		<type fullname="UnityEngine.Debug" preserve="all"/>
+		<type fullname="UnityEngine.Camera" preserve="all"/>
+		<type fullname="UnityEngine.SceneManagement.SceneManager" preserve="all"/>
+		<type fullname="UnityEngine.AsyncOperation" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.AnimationModule">
+	    <type fullname="UnityEngine.AnimationClip" preserve="all"/>
+		<type fullname="UnityEngine.Animator" preserve="all"/>
+		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="all"/>
+		<type fullname="UnityEngine.AnimatorControllerParameter" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.ParticleSystemModule">
+	    <type fullname="UnityEngine.ParticleSystem" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.PhysicsModule">
+	    <type fullname="UnityEngine.RaycastHit" preserve="all"/>
+		<type fullname="UnityEngine.Physics" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.InputLegacyModule">
+	    <type fullname="UnityEngine.Input" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="System">
+	    <type fullname="System.Net.Sockets.Socket" preserve="all"/>
+		<type fullname="System.Net.IPEndPoint" preserve="all"/>
+		<type fullname="System.Net.EndPoint" preserve="all"/>
+		<type fullname="System.Net.IPAddress" preserve="all"/>
+		<type fullname="System.Net.Sockets.AddressFamily" preserve="all"/>
+		<type fullname="System.Net.Sockets.SocketType" preserve="all"/>
+		<type fullname="System.Net.Sockets.ProtocolType" preserve="all"/>
+		<type fullname="System.Net.Sockets.SocketAsyncEventArgs" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.AssetBundleModule">
+	    <type fullname="UnityEngine.AssetBundleManifest" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.ProtoBuf.Runtime">
+	    <type fullname="ProtoBuf.ProtoMemberAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoContractAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoConverterAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoEnumAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoIgnoreAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoIncludeAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoPartialIgnoreAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoPartialMemberAttribute" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.MongoDB.Runtime">
+	    <type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreExtraElementsAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreIfDefaultAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonDefaultValueAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonElementAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIdAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreIfNullAttribute" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.DCET.AssetBundle.Runtime">
+	    <type fullname="DCETRuntime.BundleDownloader" preserve="all"/>
+		<type fullname="DCETRuntime.GlobalConfigComponent" preserve="all"/>
+		<type fullname="DCETRuntime.GlobalProto" preserve="all"/>
+		<type fullname="DCETRuntime.FileVersionInfo" preserve="all"/>
+		<type fullname="DCETRuntime.VersionConfig" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.DCET.Message.Runtime">
+	    <type fullname="DCETRuntime.Kcp" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.BehaviorDesigner.Runtime">
+	    <type fullname="BehaviorDesigner.Runtime.BehaviorTree" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.BehaviorTreeController" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.ExternalBehaviorTree" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.HotfixAction" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.EntryTask" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.HotfixComposite" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.Parallel" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.ParallelComplete" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.ParallelSelector" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.PrioritySelector" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.RandomSelector" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.RandomSequence" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.Selector" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.SelectorEvaluator" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.Sequence" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.UtilitySelector" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.HotfixConditional" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.ConditionalEvaluator" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.HotfixDecorator" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.Interrupt" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.Inverter" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.Repeater" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.ReturnFailure" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.ReturnSuccess" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.TaskGuard" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.UntilFailure" preserve="all"/>
+		<type fullname="BehaviorDesigner.Runtime.Tasks.UntilSuccess" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.DCET.FairyGUI.Runtime">
+	    <type fullname="DCETRuntime.FUIPackage" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.DCET.Pathfinding.Runtime">
+	    <type fullname="AstarPath" preserve="all"/>
+		<type fullname="PF.AStarConfig" preserve="all"/>
+		<type fullname="PF.ListExtensions" preserve="all"/>
+		<type fullname="PF.Checksum" preserve="all"/>
+		<type fullname="PF.AstarDeserializer" preserve="all"/>
+		<type fullname="PF.VectorMath" preserve="all"/>
+		<type fullname="PF.AstarMath" preserve="all"/>
+		<type fullname="PF.Polygon" preserve="all"/>
+		<type fullname="PF.Memory" preserve="all"/>
+		<type fullname="PF.BBTree" preserve="all"/>
+		<type fullname="PF.BinaryHeap" preserve="all"/>
+		<type fullname="PF.HeuristicOptimizationMode" preserve="all"/>
+		<type fullname="PF.EuclideanEmbedding" preserve="all"/>
+		<type fullname="PF.Funnel" preserve="all"/>
+		<type fullname="PF.Connection" preserve="all"/>
+		<type fullname="PF.GraphNode" preserve="all"/>
+		<type fullname="PF.MeshNode" preserve="all"/>
+		<type fullname="PF.IMovementPlane" preserve="all"/>
+		<type fullname="PF.ITransform" preserve="all"/>
+		<type fullname="PF.GraphTransform" preserve="all"/>
+		<type fullname="PF.Guid" preserve="all"/>
+		<type fullname="PF.INavmesh" preserve="all"/>
+		<type fullname="PF.Int3" preserve="all"/>
+		<type fullname="PF.Int2" preserve="all"/>
+		<type fullname="PF.IntRect" preserve="all"/>
+		<type fullname="PF.NNConstraint" preserve="all"/>
+		<type fullname="PF.PathNNConstraint" preserve="all"/>
+		<type fullname="PF.NNInfoInternal" preserve="all"/>
+		<type fullname="PF.NNInfo" preserve="all"/>
+		<type fullname="PF.IGraphInternals" preserve="all"/>
+		<type fullname="PF.NavGraph" preserve="all"/>
+		<type fullname="PF.GraphHitInfo" preserve="all"/>
+		<type fullname="PF.IRaycastableGraph" preserve="all"/>
+		<type fullname="PF.ITransformedGraph" preserve="all"/>
+		<type fullname="PF.NavmeshBase" preserve="all"/>
+		<type fullname="PF.NavmeshTile" preserve="all"/>
+		<type fullname="PF.IAstarPooledObject" preserve="all"/>
+		<type fullname="PF.GraphUpdateThreading" preserve="all"/>
+		<type fullname="PF.ThreadCount" preserve="all"/>
+		<type fullname="PF.PathState" preserve="all"/>
+		<type fullname="PF.PathCompleteState" preserve="all"/>
+		<type fullname="PF.CloseToDestinationMode" preserve="all"/>
+		<type fullname="PF.Side" preserve="all"/>
+		<type fullname="PF.InspectorGridMode" preserve="all"/>
+		<type fullname="PF.ITraversalProvider" preserve="all"/>
+		<type fullname="PF.DefaultITraversalProvider" preserve="all"/>
+		<type fullname="PF.Path" preserve="all"/>
+		<type fullname="PF.GraphDebugMode" preserve="all"/>
+		<type fullname="PF.PathLog" preserve="all"/>
+		<type fullname="PF.Heuristic" preserve="all"/>
+		<type fullname="PF.PathFindHelper" preserve="all"/>
+		<type fullname="PF.PathNode" preserve="all"/>
+		<type fullname="PF.PathHandler" preserve="all"/>
+		<type fullname="PF.PathPool" preserve="all"/>
+		<type fullname="PF.PathProcessor" preserve="all"/>
+		<type fullname="PF.PathReturnQueue" preserve="all"/>
+		<type fullname="PF.ABPath" preserve="all"/>
+		<type fullname="PF.ConstantPath" preserve="all"/>
+		<type fullname="PF.EndingConditionDistance" preserve="all"/>
+		<type fullname="PF.FleePath" preserve="all"/>
+		<type fullname="PF.FloodPath" preserve="all"/>
+		<type fullname="PF.FloodPathConstraint" preserve="all"/>
+		<type fullname="PF.FloodPathTracer" preserve="all"/>
+		<type fullname="PF.MultiTargetPath" preserve="all"/>
+		<type fullname="PF.RandomPath" preserve="all"/>
+		<type fullname="PF.XPath" preserve="all"/>
+		<type fullname="PF.PathEndingCondition" preserve="all"/>
+		<type fullname="PF.ABPathEndingCondition" preserve="all"/>
+		<type fullname="PF.EndingConditionProximity" preserve="all"/>
+		<type fullname="PF.RecastGraph" preserve="all"/>
+		<type fullname="PF.GraphSerializationContext" preserve="all"/>
+		<type fullname="PF.AstarSerializer" preserve="all"/>
+		<type fullname="PF.GraphMeta" preserve="all"/>
+		<type fullname="PF.SerializeSettings" preserve="all"/>
+		<type fullname="PF.JsonMemberAttribute" preserve="all"/>
+		<type fullname="PF.JsonOptInAttribute" preserve="all"/>
+		<type fullname="PF.TinyJsonSerializer" preserve="all"/>
+		<type fullname="PF.TinyJsonDeserializer" preserve="all"/>
+		<type fullname="PF.INavmeshHolder" preserve="all"/>
+		<type fullname="PF.TriangleMeshNode" preserve="all"/>
+		<type fullname="PF.WindowsStoreCompatibility" preserve="all"/>
+		<type fullname="Pathfinding.AIDestinationSetter" preserve="all"/>
+		<type fullname="Pathfinding.Patrol" preserve="all"/>
+		<type fullname="Pathfinding.AIBase" preserve="all"/>
+		<type fullname="Pathfinding.AILerp" preserve="all"/>
+		<type fullname="Pathfinding.AIPath" preserve="all"/>
+		<type fullname="Pathfinding.IAstarAI" preserve="all"/>
+		<type fullname="Pathfinding.Seeker" preserve="all"/>
+		<type fullname="Pathfinding.AstarData" preserve="all"/>
+		<type fullname="Pathfinding.GraphUpdateScene" preserve="all"/>
+		<type fullname="Pathfinding.GraphUpdateShape" preserve="all"/>
+		<type fullname="Pathfinding.AstarDebugger" preserve="all"/>
+		<type fullname="Pathfinding.GraphEditorBase" preserve="all"/>
+		<type fullname="Pathfinding.GraphModifier" preserve="all"/>
+		<type fullname="Pathfinding.GraphUtilities" preserve="all"/>
+		<type fullname="Pathfinding.NodeLink" preserve="all"/>
+		<type fullname="Pathfinding.AstarWorkItem" preserve="all"/>
+		<type fullname="Pathfinding.IWorkItemContext" preserve="all"/>
+		<type fullname="Pathfinding.AstarColor" preserve="all"/>
+		<type fullname="Pathfinding.Progress" preserve="all"/>
+		<type fullname="Pathfinding.GraphUpdateObject" preserve="all"/>
+		<type fullname="Pathfinding.RecastTileUpdate" preserve="all"/>
+		<type fullname="Pathfinding.RecastTileUpdateHandler" preserve="all"/>
+		<type fullname="Pathfinding.TargetMover" preserve="all"/>
+		<type fullname="Pathfinding.ObjImporter" preserve="all"/>
+		<type fullname="Pathfinding.RecastBBTree" preserve="all"/>
+		<type fullname="Pathfinding.RecastBBTreeBox" preserve="all"/>
+		<type fullname="Pathfinding.RecastMeshObj" preserve="all"/>
+		<type fullname="Pathfinding.MathHelper" preserve="all"/>
+		<type fullname="Pathfinding.AdvancedSmooth" preserve="all"/>
+		<type fullname="Pathfinding.AlternativePath" preserve="all"/>
+		<type fullname="Pathfinding.FunnelModifier" preserve="all"/>
+		<type fullname="Pathfinding.IPathModifier" preserve="all"/>
+		<type fullname="Pathfinding.PathModifier" preserve="all"/>
+		<type fullname="Pathfinding.MonoModifier" preserve="all"/>
+		<type fullname="Pathfinding.RadiusModifier" preserve="all"/>
+		<type fullname="Pathfinding.RaycastModifier" preserve="all"/>
+		<type fullname="Pathfinding.SimpleSmoothModifier" preserve="all"/>
+		<type fullname="Pathfinding.StartEndModifier" preserve="all"/>
+		<type fullname="Pathfinding.RelevantGraphSurface" preserve="all"/>
+		<type fullname="Pathfinding.EnumFlagAttribute" preserve="all"/>
+		<type fullname="Pathfinding.UniqueComponentAttribute" preserve="all"/>
+		<type fullname="Pathfinding.IVersionedMonoBehaviourInternal" preserve="all"/>
+		<type fullname="Pathfinding.VersionedMonoBehaviour" preserve="all"/>
+		<type fullname="Pathfinding.BlockManager" preserve="all"/>
+		<type fullname="Pathfinding.SingleNodeBlocker" preserve="all"/>
+		<type fullname="Pathfinding.UnityHelper" preserve="all"/>
+		<type fullname="Pathfinding.AstarProfiler" preserve="all"/>
+		<type fullname="Pathfinding.GraphUpdateUtilities" preserve="all"/>
+		<type fullname="Pathfinding.PathUtilities" preserve="all"/>
+		<type fullname="Pathfinding.Profile" preserve="all"/>
+		<type fullname="Pathfinding.UnityReferenceHelper" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.VoxelArea" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.LinkedVoxelSpan" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.RasterizationMesh" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.VoxelContourSet" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.VoxelContour" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.VoxelMesh" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.VoxelCell" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.CompactVoxelCell" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.CompactVoxelSpan" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.VoxelSpan" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.Voxelize" preserve="all"/>
+		<type fullname="Pathfinding.Voxels.Utility" preserve="all"/>
+		<type fullname="Pathfinding.RVO.ObstacleVertex" preserve="all"/>
+		<type fullname="Pathfinding.RVO.IAgent" preserve="all"/>
+		<type fullname="Pathfinding.RVO.MovementPlane" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOLayer" preserve="all"/>
+		<type fullname="Pathfinding.RVO.Simulator" preserve="all"/>
+		<type fullname="Pathfinding.RVO.Line" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOQuadtree" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOController" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVONavmesh" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOObstacle" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOSimulator" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOSquareObstacle" preserve="all"/>
+		<type fullname="Pathfinding.RVO.Sampled.Agent" preserve="all"/>
+		<type fullname="Pathfinding.Util.Draw" preserve="all"/>
+		<type fullname="Pathfinding.Util.MovementUtilities" preserve="all"/>
+		<type fullname="Pathfinding.Util.PathInterpolator" preserve="all"/>
+		<type fullname="Pathfinding.Util.GraphGizmoHelper" preserve="all"/>
+		<type fullname="Pathfinding.Util.RetainedGizmos" preserve="all"/>
+		<type fullname="Pathfinding.Examples.TurnBasedAI" preserve="all"/>
+		<type fullname="Pathfinding.Examples.MecanimBridge" preserve="all"/>
+		<type fullname="Pathfinding.Examples.MineBotAnimation" preserve="all"/>
+		<type fullname="AstarPath+AstarDistribution" preserve="all"/>
+		<type fullname="PF.Funnel+FunnelPortals" preserve="all"/>
+		<type fullname="PF.Funnel+PathPart" preserve="all"/>
+		<type fullname="PF.PathProcessor+GraphUpdateLock" preserve="all"/>
+		<type fullname="PF.MultiTargetPath+HeuristicMode" preserve="all"/>
+		<type fullname="PF.RecastGraph+RelevantGraphSurfaceMode" preserve="all"/>
+		<type fullname="Pathfinding.Seeker+ModifierPass" preserve="all"/>
+		<type fullname="Pathfinding.GraphModifier+EventType" preserve="all"/>
+		<type fullname="Pathfinding.AdvancedSmooth+MaxTurn" preserve="all"/>
+		<type fullname="Pathfinding.AdvancedSmooth+ConstantTurn" preserve="all"/>
+		<type fullname="Pathfinding.AdvancedSmooth+TurnConstructor" preserve="all"/>
+		<type fullname="Pathfinding.AdvancedSmooth+Turn" preserve="all"/>
+		<type fullname="Pathfinding.RaycastModifier+Quality" preserve="all"/>
+		<type fullname="Pathfinding.SimpleSmoothModifier+SmoothType" preserve="all"/>
+		<type fullname="Pathfinding.StartEndModifier+Exactness" preserve="all"/>
+		<type fullname="Pathfinding.BlockManager+BlockMode" preserve="all"/>
+		<type fullname="Pathfinding.BlockManager+TraversalProvider" preserve="all"/>
+		<type fullname="Pathfinding.AstarProfiler+ProfilePoint" preserve="all"/>
+		<type fullname="Pathfinding.RVO.RVOObstacle+ObstacleVertexWinding" preserve="all"/>
+		<type fullname="Pathfinding.Util.RetainedGizmos+Hasher" preserve="all"/>
+		<type fullname="Pathfinding.Util.RetainedGizmos+Builder" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.FairyGUI.Runtime">
+	    <type fullname="FairyGUI.BlendMode" preserve="all"/>
+		<type fullname="FairyGUI.BlendModeUtils" preserve="all"/>
+		<type fullname="FairyGUI.CaptureCamera" preserve="all"/>
+		<type fullname="FairyGUI.Container" preserve="all"/>
+		<type fullname="FairyGUI.DisplayObject" preserve="all"/>
+		<type fullname="FairyGUI.DisplayObjectInfo" preserve="all"/>
+		<type fullname="FairyGUI.DisplayOptions" preserve="all"/>
+		<type fullname="FairyGUI.GoWrapper" preserve="all"/>
+		<type fullname="FairyGUI.ColliderHitTest" preserve="all"/>
+		<type fullname="FairyGUI.HitTestContext" preserve="all"/>
+		<type fullname="FairyGUI.HitTestMode" preserve="all"/>
+		<type fullname="FairyGUI.IHitTest" preserve="all"/>
+		<type fullname="FairyGUI.MeshColliderHitTest" preserve="all"/>
+		<type fullname="FairyGUI.PixelHitTestData" preserve="all"/>
+		<type fullname="FairyGUI.PixelHitTest" preserve="all"/>
+		<type fullname="FairyGUI.RectHitTest" preserve="all"/>
+		<type fullname="FairyGUI.Image" preserve="all"/>
+		<type fullname="FairyGUI.MaterialManager" preserve="all"/>
+		<type fullname="FairyGUI.CompositeMesh" preserve="all"/>
+		<type fullname="FairyGUI.EllipseMesh" preserve="all"/>
+		<type fullname="FairyGUI.FillMesh" preserve="all"/>
+		<type fullname="FairyGUI.LineMesh" preserve="all"/>
+		<type fullname="FairyGUI.IMeshFactory" preserve="all"/>
+		<type fullname="FairyGUI.PolygonMesh" preserve="all"/>
+		<type fullname="FairyGUI.RectMesh" preserve="all"/>
+		<type fullname="FairyGUI.RegularPolygonMesh" preserve="all"/>
+		<type fullname="FairyGUI.RoundedRectMesh" preserve="all"/>
+		<type fullname="FairyGUI.VertexBuffer" preserve="all"/>
+		<type fullname="FairyGUI.MovieClip" preserve="all"/>
+		<type fullname="FairyGUI.NAudioClip" preserve="all"/>
+		<type fullname="FairyGUI.NGraphics" preserve="all"/>
+		<type fullname="FairyGUI.NMaterial" preserve="all"/>
+		<type fullname="FairyGUI.DestroyMethod" preserve="all"/>
+		<type fullname="FairyGUI.NTexture" preserve="all"/>
+		<type fullname="FairyGUI.ShaderConfig" preserve="all"/>
+		<type fullname="FairyGUI.Shape" preserve="all"/>
+		<type fullname="FairyGUI.Stage" preserve="all"/>
+		<type fullname="FairyGUI.StageCamera" preserve="all"/>
+		<type fullname="FairyGUI.StageEngine" preserve="all"/>
+		<type fullname="FairyGUI.Stats" preserve="all"/>
+		<type fullname="FairyGUI.BaseFont" preserve="all"/>
+		<type fullname="FairyGUI.GlyphInfo" preserve="all"/>
+		<type fullname="FairyGUI.BitmapFont" preserve="all"/>
+		<type fullname="FairyGUI.CopyPastePatch" preserve="all"/>
+		<type fullname="FairyGUI.DynamicFont" preserve="all"/>
+		<type fullname="FairyGUI.Emoji" preserve="all"/>
+		<type fullname="FairyGUI.FontManager" preserve="all"/>
+		<type fullname="FairyGUI.IKeyboard" preserve="all"/>
+		<type fullname="FairyGUI.InputTextField" preserve="all"/>
+		<type fullname="FairyGUI.RTLSupport" preserve="all"/>
+		<type fullname="FairyGUI.RichTextField" preserve="all"/>
+		<type fullname="FairyGUI.SelectionShape" preserve="all"/>
+		<type fullname="FairyGUI.TextField" preserve="all"/>
+		<type fullname="FairyGUI.TextFormat" preserve="all"/>
+		<type fullname="FairyGUI.TouchScreenKeyboard" preserve="all"/>
+		<type fullname="FairyGUI.TypingEffect" preserve="all"/>
+		<type fullname="FairyGUI.UpdateContext" preserve="all"/>
+		<type fullname="FairyGUI.EventContext" preserve="all"/>
+		<type fullname="FairyGUI.EventDispatcher" preserve="all"/>
+		<type fullname="FairyGUI.EventListener" preserve="all"/>
+		<type fullname="FairyGUI.IEventDispatcher" preserve="all"/>
+		<type fullname="FairyGUI.InputEvent" preserve="all"/>
+		<type fullname="FairyGUI.BlurFilter" preserve="all"/>
+		<type fullname="FairyGUI.ColorFilter" preserve="all"/>
+		<type fullname="FairyGUI.IFilter" preserve="all"/>
+		<type fullname="FairyGUI.LongPressGesture" preserve="all"/>
+		<type fullname="FairyGUI.PinchGesture" preserve="all"/>
+		<type fullname="FairyGUI.RotationGesture" preserve="all"/>
+		<type fullname="FairyGUI.SwipeGesture" preserve="all"/>
+		<type fullname="FairyGUI.EaseType" preserve="all"/>
+		<type fullname="FairyGUI.GPathPoint" preserve="all"/>
+		<type fullname="FairyGUI.GPath" preserve="all"/>
+		<type fullname="FairyGUI.GTween" preserve="all"/>
+		<type fullname="FairyGUI.ITweenListener" preserve="all"/>
+		<type fullname="FairyGUI.GTweener" preserve="all"/>
+		<type fullname="FairyGUI.TweenPropType" preserve="all"/>
+		<type fullname="FairyGUI.TweenValue" preserve="all"/>
+		<type fullname="FairyGUI.ChangePageAction" preserve="all"/>
+		<type fullname="FairyGUI.ControllerAction" preserve="all"/>
+		<type fullname="FairyGUI.PlayTransitionAction" preserve="all"/>
+		<type fullname="FairyGUI.AsyncCreationHelper" preserve="all"/>
+		<type fullname="FairyGUI.Controller" preserve="all"/>
+		<type fullname="FairyGUI.DragDropManager" preserve="all"/>
+		<type fullname="FairyGUI.EMRenderTarget" preserve="all"/>
+		<type fullname="FairyGUI.EMRenderSupport" preserve="all"/>
+		<type fullname="FairyGUI.PackageItemType" preserve="all"/>
+		<type fullname="FairyGUI.ObjectType" preserve="all"/>
+		<type fullname="FairyGUI.AlignType" preserve="all"/>
+		<type fullname="FairyGUI.VertAlignType" preserve="all"/>
+		<type fullname="FairyGUI.OverflowType" preserve="all"/>
+		<type fullname="FairyGUI.FillType" preserve="all"/>
+		<type fullname="FairyGUI.AutoSizeType" preserve="all"/>
+		<type fullname="FairyGUI.ScrollType" preserve="all"/>
+		<type fullname="FairyGUI.ScrollBarDisplayType" preserve="all"/>
+		<type fullname="FairyGUI.RelationType" preserve="all"/>
+		<type fullname="FairyGUI.ListLayoutType" preserve="all"/>
+		<type fullname="FairyGUI.ListSelectionMode" preserve="all"/>
+		<type fullname="FairyGUI.ProgressTitleType" preserve="all"/>
+		<type fullname="FairyGUI.ButtonMode" preserve="all"/>
+		<type fullname="FairyGUI.TransitionActionType" preserve="all"/>
+		<type fullname="FairyGUI.GroupLayoutType" preserve="all"/>
+		<type fullname="FairyGUI.ChildrenRenderOrder" preserve="all"/>
+		<type fullname="FairyGUI.PopupDirection" preserve="all"/>
+		<type fullname="FairyGUI.FlipType" preserve="all"/>
+		<type fullname="FairyGUI.FillMethod" preserve="all"/>
+		<type fullname="FairyGUI.OriginHorizontal" preserve="all"/>
+		<type fullname="FairyGUI.OriginVertical" preserve="all"/>
+		<type fullname="FairyGUI.Origin90" preserve="all"/>
+		<type fullname="FairyGUI.Origin180" preserve="all"/>
+		<type fullname="FairyGUI.Origin360" preserve="all"/>
+		<type fullname="FairyGUI.GButton" preserve="all"/>
+		<type fullname="FairyGUI.GComboBox" preserve="all"/>
+		<type fullname="FairyGUI.GComponent" preserve="all"/>
+		<type fullname="FairyGUI.GGraph" preserve="all"/>
+		<type fullname="FairyGUI.GGroup" preserve="all"/>
+		<type fullname="FairyGUI.GImage" preserve="all"/>
+		<type fullname="FairyGUI.GLabel" preserve="all"/>
+		<type fullname="FairyGUI.GList" preserve="all"/>
+		<type fullname="FairyGUI.GLoader" preserve="all"/>
+		<type fullname="FairyGUI.GMovieClip" preserve="all"/>
+		<type fullname="FairyGUI.GObject" preserve="all"/>
+		<type fullname="FairyGUI.GObjectPool" preserve="all"/>
+		<type fullname="FairyGUI.GProgressBar" preserve="all"/>
+		<type fullname="FairyGUI.GRichTextField" preserve="all"/>
+		<type fullname="FairyGUI.GRoot" preserve="all"/>
+		<type fullname="FairyGUI.GScrollBar" preserve="all"/>
+		<type fullname="FairyGUI.GSlider" preserve="all"/>
+		<type fullname="FairyGUI.GTextField" preserve="all"/>
+		<type fullname="FairyGUI.GTextInput" preserve="all"/>
+		<type fullname="FairyGUI.GearAnimation" preserve="all"/>
+		<type fullname="FairyGUI.GearBase" preserve="all"/>
+		<type fullname="FairyGUI.GearTweenConfig" preserve="all"/>
+		<type fullname="FairyGUI.GearColor" preserve="all"/>
+		<type fullname="FairyGUI.GearDisplay" preserve="all"/>
+		<type fullname="FairyGUI.GearIcon" preserve="all"/>
+		<type fullname="FairyGUI.GearLook" preserve="all"/>
+		<type fullname="FairyGUI.GearSize" preserve="all"/>
+		<type fullname="FairyGUI.GearText" preserve="all"/>
+		<type fullname="FairyGUI.GearXY" preserve="all"/>
+		<type fullname="FairyGUI.IAnimationGear" preserve="all"/>
+		<type fullname="FairyGUI.IColorGear" preserve="all"/>
+		<type fullname="FairyGUI.ITextColorGear" preserve="all"/>
+		<type fullname="FairyGUI.IUISource" preserve="all"/>
+		<type fullname="FairyGUI.Margin" preserve="all"/>
+		<type fullname="FairyGUI.PackageItem" preserve="all"/>
+		<type fullname="FairyGUI.PageOption" preserve="all"/>
+		<type fullname="FairyGUI.PopupMenu" preserve="all"/>
+		<type fullname="FairyGUI.Relations" preserve="all"/>
+		<type fullname="FairyGUI.ScrollPane" preserve="all"/>
+		<type fullname="FairyGUI.Transition" preserve="all"/>
+		<type fullname="FairyGUI.TranslationHelper" preserve="all"/>
+		<type fullname="FairyGUI.TreeNode" preserve="all"/>
+		<type fullname="FairyGUI.TreeView" preserve="all"/>
+		<type fullname="FairyGUI.UIConfig" preserve="all"/>
+		<type fullname="FairyGUI.UIContentScaler" preserve="all"/>
+		<type fullname="FairyGUI.UIObjectFactory" preserve="all"/>
+		<type fullname="FairyGUI.UIPackage" preserve="all"/>
+		<type fullname="FairyGUI.UIPainter" preserve="all"/>
+		<type fullname="FairyGUI.FitScreen" preserve="all"/>
+		<type fullname="FairyGUI.UIPanel" preserve="all"/>
+		<type fullname="FairyGUI.Window" preserve="all"/>
+		<type fullname="FairyGUI.Timers" preserve="all"/>
+		<type fullname="FairyGUI.Utils.ByteBuffer" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlButton" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlElementType" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlElement" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlImage" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlInput" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlLink" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlPageContext" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlParseOptions" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlParser" preserve="all"/>
+		<type fullname="FairyGUI.Utils.HtmlSelect" preserve="all"/>
+		<type fullname="FairyGUI.Utils.IHtmlObject" preserve="all"/>
+		<type fullname="FairyGUI.Utils.IHtmlPageContext" preserve="all"/>
+		<type fullname="FairyGUI.Utils.ToolSet" preserve="all"/>
+		<type fullname="FairyGUI.Utils.UBBParser" preserve="all"/>
+		<type fullname="FairyGUI.Utils.XML" preserve="all"/>
+		<type fullname="FairyGUI.Utils.XMLTagType" preserve="all"/>
+		<type fullname="FairyGUI.Utils.XMLIterator" preserve="all"/>
+		<type fullname="FairyGUI.Utils.XMLList" preserve="all"/>
+		<type fullname="FairyGUI.Utils.XMLUtils" preserve="all"/>
+		<type fullname="FairyGUI.Utils.ZipReader" preserve="all"/>
+		<type fullname="FairyGUI.BlendModeUtils+BlendFactor" preserve="all"/>
+		<type fullname="FairyGUI.MovieClip+Frame" preserve="all"/>
+		<type fullname="FairyGUI.ShaderConfig+PropertyIDs" preserve="all"/>
+		<type fullname="FairyGUI.BitmapFont+BMGlyph" preserve="all"/>
+		<type fullname="FairyGUI.RTLSupport+DirectionType" preserve="all"/>
+		<type fullname="FairyGUI.TextField+LineInfo" preserve="all"/>
+		<type fullname="FairyGUI.TextField+CharPosition" preserve="all"/>
+		<type fullname="FairyGUI.TextFormat+SpecialStyle" preserve="all"/>
+		<type fullname="FairyGUI.UpdateContext+ClipInfo" preserve="all"/>
+		<type fullname="FairyGUI.GPathPoint+CurveType" preserve="all"/>
+		<type fullname="FairyGUI.ControllerAction+ActionType" preserve="all"/>
+		<type fullname="FairyGUI.UIConfig+ConfigKey" preserve="all"/>
+		<type fullname="FairyGUI.UIConfig+ConfigValue" preserve="all"/>
+		<type fullname="FairyGUI.UIContentScaler+ScaleMode" preserve="all"/>
+		<type fullname="FairyGUI.UIContentScaler+ScreenMatchMode" preserve="all"/>
+		<type fullname="FairyGUI.Utils.XMLList+Enumerator" preserve="all"/>
+		<type fullname="FairyGUI.Utils.ZipReader+ZipEntry" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.DCET.Core.Runtime">
+	    <type fullname="Microsoft.IO.RecyclableMemoryStreamManager" preserve="all"/>
+		<type fullname="Microsoft.IO.RecyclableMemoryStream" preserve="all"/>
+		<type fullname="DCETRuntime.CircularBuffer" preserve="all"/>
+		<type fullname="DCETRuntime.ComponentView" preserve="all"/>
+		<type fullname="DCETRuntime.Define" preserve="all"/>
+		<type fullname="DCETRuntime.GameLoop" preserve="all"/>
+		<type fullname="DCETRuntime.IStaticMethod" preserve="all"/>
+		<type fullname="DCETRuntime.MonoStaticMethod" preserve="all"/>
+		<type fullname="DCETRuntime.OneThreadSynchronizationContext" preserve="all"/>
+		<type fullname="DCETRuntime.AssetDatabaseHelper" preserve="all"/>
+		<type fullname="DCETRuntime.FileHelper" preserve="all"/>
+		<type fullname="DCETRuntime.GameObjectHelper" preserve="all"/>
+		<type fullname="DCETRuntime.LocalTimeHelper" preserve="all"/>
+		<type fullname="DCETRuntime.MD5Helper" preserve="all"/>
+		<type fullname="DCETRuntime.MongoHelper" preserve="all"/>
+		<type fullname="DCETRuntime.PathHelper" preserve="all"/>
+		<type fullname="DCETRuntime.ProcessHelper" preserve="all"/>
+		<type fullname="DCETRuntime.ResourcesHelper" preserve="all"/>
+		<type fullname="DCETRuntime.StreamHelper" preserve="all"/>
+		<type fullname="DCETRuntime.StringHelper" preserve="all"/>
+		<type fullname="DCETRuntime.ZipHelper" preserve="all"/>
+		<type fullname="DCETRuntime.AssetBundleLoaderAsync" preserve="all"/>
+		<type fullname="DCETRuntime.AssetBundles" preserve="all"/>
+		<type fullname="DCETRuntime.AssetLoaderAsync" preserve="all"/>
+		<type fullname="DCETRuntime.CameraDepthTexture" preserve="all"/>
+		<type fullname="DCETRuntime.GizmosDebug" preserve="all"/>
+		<type fullname="DCETRuntime.Log" preserve="all"/>
+		<type fullname="DCETRuntime.MonoBehaviourBridge" preserve="all"/>
+		<type fullname="DCETRuntime.PrefabLightmapData" preserve="all"/>
+		<type fullname="DCETRuntime.ReferenceCollectorData" preserve="all"/>
+		<type fullname="DCETRuntime.ReferenceCollectorDataComparer" preserve="all"/>
+		<type fullname="DCETRuntime.ReferenceCollector" preserve="all"/>
+		<type fullname="DCETRuntime.ReferenceLoader" preserve="all"/>
+		<type fullname="DCETRuntime.AcceptAllCertificate" preserve="all"/>
+		<type fullname="DCETRuntime.UnityWebRequestAsync" preserve="all"/>
+		<type fullname="Microsoft.IO.RecyclableMemoryStreamManager+Events" preserve="all"/>
+		<type fullname="DCETRuntime.PrefabLightmapData+MeshRendererLightmapData" preserve="all"/>
+		<type fullname="DCETRuntime.PrefabLightmapData+TerrainLightmapData" preserve="all"/>
+		<type fullname="Microsoft.IO.RecyclableMemoryStreamManager+Events+MemoryStreamBufferType" preserve="all"/>
+		<type fullname="Microsoft.IO.RecyclableMemoryStreamManager+Events+MemoryStreamDiscardReason" preserve="all"/>
+		
+	</assembly>
+
+</linker>

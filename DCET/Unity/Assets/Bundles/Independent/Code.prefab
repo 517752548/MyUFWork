@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &184536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425028}
+  - component: {fileID: 114000012985339954}
+  m_Layer: 0
+  m_Name: Code
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114000012985339954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711d794ae9b5c814a86f88df4507fd29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+  - key: Unity.DCET.BehaviorTree.Hotfix.dll
+    gameObject: {fileID: 4900000, guid: 0f20f984ec15d0d48a971362fff3d6b4, type: 3}
+  - key: Unity.DCET.BehaviorTree.Hotfix.pdb
+    gameObject: {fileID: 4900000, guid: 93e257c8697c6cc4baee1cd868ef3f75, type: 3}
+  - key: Unity.DCET.Config.Hotfix.dll
+    gameObject: {fileID: 4900000, guid: 969863ff6a1a0b5409c924ea5fdcd845, type: 3}
+  - key: Unity.DCET.Config.Hotfix.pdb
+    gameObject: {fileID: 4900000, guid: 25fcb69dc22218d4d85c8f7a287e6ae6, type: 3}
+  - key: Unity.DCET.Core.Hotfix.dll
+    gameObject: {fileID: 4900000, guid: 195f5c10a4b5f554eaab1e36252cc060, type: 3}
+  - key: Unity.DCET.Core.Hotfix.pdb
+    gameObject: {fileID: 4900000, guid: a44cf63b7108e9a4eaa13b3ef192de26, type: 3}
+  - key: Unity.DCET.FairyGUI.Hotfix.dll
+    gameObject: {fileID: 4900000, guid: 31a75d4b1e7ca8b4495f3d758b65d7ca, type: 3}
+  - key: Unity.DCET.FairyGUI.Hotfix.pdb
+    gameObject: {fileID: 4900000, guid: bdc7b1836f6ed8940a301936171068c0, type: 3}
+  - key: Unity.DCET.Hotfix.dll
+    gameObject: {fileID: 4900000, guid: b431ffd16b9da244185c03fc2b0e91b4, type: 3}
+  - key: Unity.DCET.Hotfix.pdb
+    gameObject: {fileID: 4900000, guid: 100ae3d9df7e003489ce0d65cb69d038, type: 3}
+  - key: Unity.DCET.Message.Hotfix.dll
+    gameObject: {fileID: 4900000, guid: b8e41c9b61d5aa643bf2649824ced47a, type: 3}
+  - key: Unity.DCET.Message.Hotfix.pdb
+    gameObject: {fileID: 4900000, guid: 6fa09da1eafebb946bef8b56eb0446c1, type: 3}

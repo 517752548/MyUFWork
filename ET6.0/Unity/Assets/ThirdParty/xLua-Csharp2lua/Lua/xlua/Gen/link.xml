@@ -1,0 +1,111 @@
+﻿
+
+<linker>
+
+	<assembly fullname="mscorlib">
+	    <type fullname="System.Object" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[System.Int32]" preserve="all"/>
+		<type fullname="System.Collections.Generic.List`1[System.String]" preserve="all"/>
+		<type fullname="System.Type" preserve="all"/>
+		<type fullname="System.SerializableAttribute" preserve="all"/>
+		<type fullname="System.IO.Path" preserve="all"/>
+		<type fullname="System.IO.IOException" preserve="all"/>
+		<type fullname="System.Text.Encoding" preserve="all"/>
+		<type fullname="System.IO.Stream" preserve="all"/>
+		<type fullname="System.IO.MemoryStream" preserve="all"/>
+		<type fullname="System.Convert" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.CoreModule">
+	    <type fullname="UnityEngine.Object" preserve="all"/>
+		<type fullname="UnityEngine.Vector2" preserve="all"/>
+		<type fullname="UnityEngine.Vector3" preserve="all"/>
+		<type fullname="UnityEngine.Vector4" preserve="all"/>
+		<type fullname="UnityEngine.Quaternion" preserve="all"/>
+		<type fullname="UnityEngine.Color" preserve="all"/>
+		<type fullname="UnityEngine.Ray" preserve="all"/>
+		<type fullname="UnityEngine.Bounds" preserve="all"/>
+		<type fullname="UnityEngine.Ray2D" preserve="all"/>
+		<type fullname="UnityEngine.Time" preserve="all"/>
+		<type fullname="UnityEngine.GameObject" preserve="all"/>
+		<type fullname="UnityEngine.Component" preserve="all"/>
+		<type fullname="UnityEngine.Behaviour" preserve="all"/>
+		<type fullname="UnityEngine.Transform" preserve="all"/>
+		<type fullname="UnityEngine.Resources" preserve="all"/>
+		<type fullname="UnityEngine.TextAsset" preserve="all"/>
+		<type fullname="UnityEngine.Keyframe" preserve="all"/>
+		<type fullname="UnityEngine.AnimationCurve" preserve="all"/>
+		<type fullname="UnityEngine.MonoBehaviour" preserve="all"/>
+		<type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all"/>
+		<type fullname="UnityEngine.Renderer" preserve="all"/>
+		<type fullname="UnityEngine.Light" preserve="all"/>
+		<type fullname="UnityEngine.Mathf" preserve="all"/>
+		<type fullname="UnityEngine.Debug" preserve="all"/>
+		<type fullname="UnityEngine.Camera" preserve="all"/>
+		<type fullname="UnityEngine.SceneManagement.SceneManager" preserve="all"/>
+		<type fullname="UnityEngine.AsyncOperation" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.AnimationModule">
+	    <type fullname="UnityEngine.AnimationClip" preserve="all"/>
+		<type fullname="UnityEngine.Animator" preserve="all"/>
+		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="all"/>
+		<type fullname="UnityEngine.AnimatorControllerParameter" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.ParticleSystemModule">
+	    <type fullname="UnityEngine.ParticleSystem" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.PhysicsModule">
+	    <type fullname="UnityEngine.RaycastHit" preserve="all"/>
+		<type fullname="UnityEngine.Physics" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.InputLegacyModule">
+	    <type fullname="UnityEngine.Input" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="System">
+	    <type fullname="System.Net.Sockets.Socket" preserve="all"/>
+		<type fullname="System.Net.IPEndPoint" preserve="all"/>
+		<type fullname="System.Net.EndPoint" preserve="all"/>
+		<type fullname="System.Net.IPAddress" preserve="all"/>
+		<type fullname="System.Net.Sockets.AddressFamily" preserve="all"/>
+		<type fullname="System.Net.Sockets.SocketType" preserve="all"/>
+		<type fullname="System.Net.Sockets.ProtocolType" preserve="all"/>
+		<type fullname="System.Net.Sockets.SocketAsyncEventArgs" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.AssetBundleModule">
+	    <type fullname="UnityEngine.AssetBundleManifest" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.ThirdParty">
+	    <type fullname="ProtoBuf.ProtoMemberAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoContractAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreExtraElementsAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreIfDefaultAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonDefaultValueAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonElementAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIdAttribute" preserve="all"/>
+		<type fullname="MongoDB.Bson.Serialization.Attributes.BsonIgnoreIfNullAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoConverterAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoEnumAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoIgnoreAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoIncludeAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoPartialIgnoreAttribute" preserve="all"/>
+		<type fullname="ProtoBuf.ProtoPartialMemberAttribute" preserve="all"/>
+		
+	</assembly>
+
+</linker>

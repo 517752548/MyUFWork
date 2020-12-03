@@ -1,0 +1,1180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <_TargetFrameworkDirectories>non_empty_path_generated_by_unity.rider.package</_TargetFrameworkDirectories>
+    <_FullFrameworkReferenceAssemblyPaths>non_empty_path_generated_by_unity.rider.package</_FullFrameworkReferenceAssemblyPaths>
+    <DisableHandlePackageFileConflicts>true</DisableHandlePackageFileConflicts>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{F6F5CA04-A394-F32F-3C46-EF1E70A5E171}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Unity.DCET.Lua.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_15;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;NET452;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>E:\Unity\2019.4.15f1c1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>E:\Unity\2019.4.15f1c1\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\Helper\LuaHelper.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\List.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\LuaDLL.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\LuaProfiler.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\NativeHelper.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\ObjectPool.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\Parse\Common.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\Parse\LLex.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\Parse\Parse.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\Parse\Util.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Driver\Sample.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\LuaHookSetup.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\NetWork\NetWorkClient.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Setting\LuaDeepProfilerAssetSetting.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\LuaProfiler\Setting\LuaDeepProfilerSetting.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\BuildInInit.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\AstarPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeBehaviorTreeControllerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeBehaviorTreeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeExternalBehaviorTreeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksConditionalEvaluatorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksEntryTaskWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksHotfixActionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksHotfixCompositeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksHotfixConditionalWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksHotfixDecoratorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksInterruptWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksInverterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksParallelCompleteWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksParallelSelectorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksParallelWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksPrioritySelectorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksRandomSelectorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksRandomSequenceWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksRepeaterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksReturnFailureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksReturnSuccessWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksSelectorEvaluatorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksSelectorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksSequenceWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksTaskGuardWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksUntilFailureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksUntilSuccessWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\BehaviorDesignerRuntimeTasksUtilitySelectorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeAcceptAllCertificateWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeAssetBundleLoaderAsyncWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeAssetBundlesWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeAssetDatabaseHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeAssetLoaderAsyncWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeBundleDownloaderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeCameraDepthTextureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeCircularBufferWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeComponentViewWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeDefineWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeFUIPackageWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeFileHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeFileVersionInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeGameLoopWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeGameObjectHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeGizmosDebugWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeGlobalConfigComponentWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeGlobalProtoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeIStaticMethodWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeKcpWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeLocalTimeHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeLogWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeMD5HelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeMongoHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeMonoBehaviourBridgeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeMonoStaticMethodWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeOneThreadSynchronizationContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimePathHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimePrefabLightmapDataMeshRendererLightmapDataWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimePrefabLightmapDataTerrainLightmapDataWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimePrefabLightmapDataWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeProcessHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeReferenceCollectorDataComparerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeReferenceCollectorDataWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeReferenceCollectorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeReferenceLoaderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeResourcesHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeStreamHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeStringHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeUnityWebRequestAsyncWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeVersionConfigWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DCETRuntimeZipHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\DelegatesGensBridge.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\EnumWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIAsyncCreationHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIBaseFontWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIBitmapFontBMGlyphWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIBitmapFontWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIBlendModeUtilsBlendFactorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIBlendModeUtilsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIBlurFilterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUICaptureCameraWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIChangePageActionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIColliderHitTestWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIColorFilterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUICompositeMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIContainerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIControllerActionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIControllerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUICopyPastePatchWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIDisplayObjectInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIDisplayObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIDisplayOptionsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIDragDropManagerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIDynamicFontWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEMRenderSupportWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEMRenderTargetWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEllipseMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEmojiWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEventContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEventDispatcherWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIEventListenerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIFillMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIFontManagerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGButtonWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGComboBoxWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGComponentWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGGraphWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGGroupWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGImageWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGLabelWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGListWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGLoaderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGMovieClipWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGObjectPoolWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGPathPointWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGProgressBarWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGRichTextFieldWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGRootWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGScrollBarWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGSliderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGTextFieldWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGTextInputWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGTweenWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGTweenerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearAnimationWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearBaseWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearColorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearDisplayWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearIconWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearLookWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearSizeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearTextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearTweenConfigWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGearXYWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGlyphInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIGoWrapperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIHitTestContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIAnimationGearWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIColorGearWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIEventDispatcherWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIFilterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIHitTestWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIKeyboardWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIMeshFactoryWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIITextColorGearWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIITweenListenerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIIUISourceWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIImageWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIInputEventWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIInputTextFieldWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUILineMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUILongPressGestureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIMarginWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIMaterialManagerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIMeshColliderHitTestWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIMovieClipFrameWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIMovieClipWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUINAudioClipWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUINGraphicsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUINMaterialWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUINTextureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPackageItemWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPageOptionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPinchGestureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPixelHitTestDataWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPixelHitTestWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPlayTransitionActionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPolygonMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIPopupMenuWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRTLSupportWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRectHitTestWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRectMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRegularPolygonMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRelationsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRichTextFieldWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRotationGestureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIRoundedRectMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIScrollPaneWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUISelectionShapeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIShaderConfigPropertyIDsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIShaderConfigWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIShapeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIStageCameraWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIStageEngineWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIStageWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIStatsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUISwipeGestureWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITextFieldCharPositionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITextFieldLineInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITextFieldWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITextFormatWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITimersWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITouchScreenKeyboardWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITransitionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITranslationHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITreeNodeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITreeViewWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITweenValueWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUITypingEffectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIConfigConfigValueWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIConfigWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIContentScalerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIObjectFactoryWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIPackageWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIPainterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUIPanelWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUpdateContextClipInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUpdateContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsByteBufferWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlButtonWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlElementWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlImageWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlInputWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlLinkWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlPageContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlParseOptionsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlParserWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsHtmlSelectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsIHtmlObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsIHtmlPageContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsToolSetWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsUBBParserWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsXMLIteratorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsXMLListEnumeratorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsXMLListWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsXMLUtilsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsXMLWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsZipReaderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIUtilsZipReaderZipEntryWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIVertexBufferWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\FairyGUIWindowWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MicrosoftIORecyclableMemoryStreamManagerEventsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MicrosoftIORecyclableMemoryStreamManagerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MicrosoftIORecyclableMemoryStreamWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonDefaultValueAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonElementAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonIdAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonIgnoreAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonIgnoreExtraElementsAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonIgnoreIfDefaultAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\MongoDBBsonSerializationAttributesBsonIgnoreIfNullAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFABPathEndingConditionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFABPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFAStarConfigWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFAstarDeserializerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFAstarMathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFAstarSerializerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFBBTreeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFBinaryHeapWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFChecksumWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFConnectionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFConstantPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFDefaultITraversalProviderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFEndingConditionDistanceWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFEndingConditionProximityWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFEuclideanEmbeddingWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFleePathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFloodPathConstraintWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFloodPathTracerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFloodPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFunnelFunnelPortalsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFunnelPathPartWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFFunnelWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFGraphHitInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFGraphMetaWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFGraphNodeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFGraphSerializationContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFGraphTransformWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFGuidWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFIAstarPooledObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFIGraphInternalsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFIMovementPlaneWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFINavmeshHolderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFINavmeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFIRaycastableGraphWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFITransformWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFITransformedGraphWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFITraversalProviderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFInt2Wrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFInt3Wrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFIntRectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFJsonMemberAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFJsonOptInAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFListExtensionsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFMemoryWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFMeshNodeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFMultiTargetPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFNNConstraintWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFNNInfoInternalWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFNNInfoWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFNavGraphWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFNavmeshBaseWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFNavmeshTileWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathEndingConditionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathFindHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathHandlerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathNNConstraintWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathNodeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathPoolWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathProcessorGraphUpdateLockWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathProcessorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathReturnQueueWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFPolygonWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFRandomPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFRecastGraphWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFSerializeSettingsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFTinyJsonDeserializerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFTinyJsonSerializerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFTriangleMeshNodeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFVectorMathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFWindowsStoreCompatibilityWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PFXPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PackUnpack.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAIBaseWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAIDestinationSetterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAILerpWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAIPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAdvancedSmoothConstantTurnWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAdvancedSmoothMaxTurnWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAdvancedSmoothTurnConstructorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAdvancedSmoothTurnWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAdvancedSmoothWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAlternativePathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAstarColorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAstarDataWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAstarDebuggerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAstarProfilerProfilePointWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAstarProfilerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingAstarWorkItemWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingBlockManagerTraversalProviderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingBlockManagerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingEnumFlagAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingExamplesMecanimBridgeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingExamplesMineBotAnimationWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingExamplesTurnBasedAIWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingFunnelModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphEditorBaseWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphUpdateObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphUpdateSceneWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphUpdateShapeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphUpdateUtilitiesWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingGraphUtilitiesWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingIAstarAIWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingIPathModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingIVersionedMonoBehaviourInternalWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingIWorkItemContextWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingMathHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingMonoModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingNodeLinkWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingObjImporterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingPathModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingPathUtilitiesWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingPatrolWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingProfileWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingProgressWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVOIAgentWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVOLineWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVOObstacleVertexWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVORVOControllerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVORVONavmeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVORVOObstacleWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVORVOQuadtreeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVORVOSimulatorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVORVOSquareObstacleWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVOSampledAgentWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRVOSimulatorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRadiusModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRaycastModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRecastBBTreeBoxWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRecastBBTreeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRecastMeshObjWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRecastTileUpdateHandlerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRecastTileUpdateWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingRelevantGraphSurfaceWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingSeekerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingSimpleSmoothModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingSingleNodeBlockerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingStartEndModifierWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingTargetMoverWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUniqueComponentAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUnityHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUnityReferenceHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilDrawWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilGraphGizmoHelperWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilMovementUtilitiesWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilPathInterpolatorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilRetainedGizmosBuilderWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilRetainedGizmosHasherWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingUtilRetainedGizmosWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVersionedMonoBehaviourWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsCompactVoxelCellWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsCompactVoxelSpanWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsLinkedVoxelSpanWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsRasterizationMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsUtilityWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelAreaWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelCellWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelContourSetWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelContourWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelMeshWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelSpanWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\PathfindingVoxelsVoxelizeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoContractAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoConverterAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoEnumAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoIgnoreAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoIncludeAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoMemberAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoPartialIgnoreAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\ProtoBufProtoPartialMemberAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsGenericList1BehaviorDesignerRuntimeTasksHotfixActionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsGenericList1BehaviorDesignerRuntimeTasksHotfixCompositeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsGenericList1BehaviorDesignerRuntimeTasksHotfixConditionalWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsGenericList1BehaviorDesignerRuntimeTasksHotfixDecoratorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsGenericList1SystemInt32Wrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsGenericList1SystemStringWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemCollectionsIEnumeratorBridge.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemConvertWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemIOIOExceptionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemIOMemoryStreamWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemIOPathWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemIOStreamWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemNetEndPointWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemNetIPAddressWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemNetIPEndPointWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemNetSocketsSocketAsyncEventArgsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemNetSocketsSocketWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemSerializableAttributeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemTextEncodingWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\SystemTypeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineAnimationClipWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineAnimationCurveWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineAnimatorControllerParameterWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineAnimatorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineAssetBundleManifestWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineAsyncOperationWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineBehaviourWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineBoundsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineCameraWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineColorWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineComponentWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineDebugWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineGameObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineInputWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineKeyframeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineLightWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineMathfWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineMonoBehaviourWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineObjectWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineParticleSystemWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEnginePhysicsWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineQuaternionWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineRay2DWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineRayWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineRaycastHitWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineRendererWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineResourcesWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineRuntimeAnimatorControllerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineSceneManagementSceneManagerWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineSkinnedMeshRendererWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineTextAssetWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineTimeWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineTransformWrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineVector2Wrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineVector3Wrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\UnityEngineVector4Wrap.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\WrapPusher.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\XLuaGenAutoRegister.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\CodeEmit.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\CopyByValue.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\DelegateBridge.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\GenAttributes.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\GenConfig.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\InternalGlobals.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\LuaBase.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\LuaDLL.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\LuaEnv.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\LuaException.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\LuaFunction.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\LuaTable.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\MethodWarpsCache.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\ObjectCasters.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\ObjectPool.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\ObjectTranslator.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\ObjectTranslatorPool.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\RawObject.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\SignatureLoader.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\StaticLuaCallbacks.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\TemplateEngine\TemplateEngine.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\TypeExtensions.cs" />
+     <Compile Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Src\Utils.cs" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\Unity.DCET.Lua.Runtime.asmdef" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Resources\xlua\util.lua.txt" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Gen\link.xml" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Resources\perf\profiler.lua.txt" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Resources\protoc.lua.txt" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Resources\perf\memory.lua.txt" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\Resources\tdr\tdr.lua.txt" />
+     <None Include="Assets\ThirdParty\xLua-Csharp2lua\Lua\Runtime\XLua\CHANGELOG.txt" />
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AndroidJNIModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DSPGraphModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputLegacyModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.LocalizationModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ProfilerModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StreamingModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubsystemsModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextCoreModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityTestProtocolModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VFXModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.ClipperLib">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/AstarPathfindingProject/Clipper/Pathfinding.ClipperLib.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/AstarPathfindingProject/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Poly2Tri">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/Editor/npoi/NPOI.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OOXML">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/Editor/npoi/NPOI.OOXML.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OpenXml4Net">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXml4Net.dll</HintPath>
+ </Reference>
+ <Reference Include="NPOI.OpenXmlFormats">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
+ </Reference>
+ <Reference Include="Miku.Cecil">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/ThirdParty/xLua-Csharp2lua/Lua/Editor/LuaProfiler/CECIL/Miku.Cecil.dll</HintPath>
+ </Reference>
+ <Reference Include="MikuBinary">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/ThirdParty/xLua-Csharp2lua/Lua/Plugins/MikuBinary.dll</HintPath>
+ </Reference>
+ <Reference Include="MikuHook">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Assets/ThirdParty/xLua-Csharp2lua/Lua/Plugins/MikuHook.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>D:/OtherGitProjects/UFramework/ET6.0/Unity/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics.Vectors">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CSharp">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Win32.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="netstandard">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+ </Reference>
+ <Reference Include="System.AppContext">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.Concurrent">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.NonGeneric">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.Specialized">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.Annotations">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.EventBasedAsync">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.TypeConverter">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Console">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data.Common">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Contracts">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Debug">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.FileVersionInfo">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Process">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.StackTrace">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.TextWriterTraceListener">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tools">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.TraceSource">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Dynamic.Runtime">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Calendars">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Extensions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.ZipFile">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.DriveInfo">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Watcher">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.IsolatedStorage">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.MemoryMappedFiles">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Pipes">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.UnmanagedMemoryStream">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Expressions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Parallel">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Queryable">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http.Rtc">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.NameResolution">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.NetworkInformation">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Ping">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Requests">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Security">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Sockets">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebHeaderCollection">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebSockets.Client">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebSockets">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ObjectModel">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Emit">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Emit.ILGeneration">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Emit.Lightweight">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Extensions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.Reader">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.ResourceManager">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.Writer">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.CompilerServices.VisualC">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Extensions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Handles">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Numerics">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Formatters">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Json">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Xml">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Claims">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Algorithms">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Csp">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Encoding">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.X509Certificates">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Principal">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.SecureString">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Duplex">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Http">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.NetTcp">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Primitives">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Security">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding.Extensions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.RegularExpressions">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Overlapped">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks.Parallel">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Thread">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.ThreadPool">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Timer">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ValueTuple">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.ReaderWriter">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XDocument">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XmlDocument">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XmlSerializer">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath.XDocument">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript.Lang">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="Boo.Lang">
+ <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
