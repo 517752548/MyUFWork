@@ -153,7 +153,6 @@
      <Compile Include="Assets\Model\ILBinding\ETModel_ActionHelper_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_AnimatorComponent_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_AppTypeHelper_Binding.cs" />
-     <Compile Include="Assets\Model\ILBinding\ETModel_AssetBundleHelper_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_AsyncETVoidMethodBuilder_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_ByteHelper_Binding.cs" />
      <Compile Include="Assets\Model\ILBinding\ETModel_C2G_EnterMap_Binding.cs" />
@@ -289,11 +288,11 @@
      <Compile Include="Assets\Model\Init.cs" />
      <Compile Include="Assets\Model\Module\Actor\IActorMessage.cs" />
      <Compile Include="Assets\Model\Module\ActorLocation\IActorLocationMessage.cs" />
+     <Compile Include="Assets\Model\Module\AssetsBundle\AddressableLoaderAsync.cs" />
      <Compile Include="Assets\Model\Module\AssetsBundle\AssetsBundleLoaderAsync.cs" />
      <Compile Include="Assets\Model\Module\AssetsBundle\AssetsLoaderAsync.cs" />
      <Compile Include="Assets\Model\Module\AssetsBundle\BundleDownloaderComponent.cs" />
      <Compile Include="Assets\Model\Module\AssetsBundle\ResourcesComponent.cs" />
-     <Compile Include="Assets\Model\Module\AssetsBundle\VersionConfig.cs" />
      <Compile Include="Assets\Model\Module\Config\ACategory.cs" />
      <Compile Include="Assets\Model\Module\Config\AConfigComponent.cs" />
      <Compile Include="Assets\Model\Module\Config\ConfigAttribute.cs" />
@@ -487,6 +486,7 @@
      <Compile Include="Assets\Model\Module\Pathfinding\Recast\ThreadControlQueue.cs" />
      <Compile Include="Assets\Model\Module\Pathfinding\Recast\TriangleMeshNode.cs" />
      <Compile Include="Assets\Model\Module\Pathfinding\Recast\WindowsStoreCompatibility.cs" />
+     <Compile Include="Assets\Model\Module\ResLoad\LoadRes.cs" />
      <Compile Include="Assets\Model\Module\UI\CanvasConfig.cs" />
      <Compile Include="Assets\Model\Module\UI\LayerNames.cs" />
      <Compile Include="Assets\Model\Module\UI\UI.cs" />
@@ -501,6 +501,7 @@
      <Compile Include="Assets\Model\Other\MonoStaticMethod.cs" />
      <Compile Include="Assets\Model\Other\MotionType.cs" />
      <Compile Include="Assets\Model\Other\ReferenceCollector.cs" />
+     <Compile Include="Assets\Model\Other\URLConst.cs" />
      <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\Readme_upgrading.txt" />
@@ -510,6 +511,12 @@
      <None Include="Assets\Model\Module\Pathfinding\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
  <Reference Include="ILRuntime">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ResourceManager">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -730,11 +737,11 @@
  <Reference Include="ILRuntim.Mono.Cecil">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntim.Mono.Cecil.dll</HintPath>
  </Reference>
- <Reference Include="ILRuntime.Mono.Cecil.Pdb">
- <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
  <Reference Include="ILRuntime.Mono.Cecil.Mdb">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="ILRuntime.Mono.Cecil.Pdb">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -2,7 +2,9 @@
     "name": "Unity.Model",
     "references": [
         "Unity.ThirdParty",
-        "ILRuntime"
+        "ILRuntime",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

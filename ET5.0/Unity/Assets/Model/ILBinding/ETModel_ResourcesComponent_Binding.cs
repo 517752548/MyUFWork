@@ -53,7 +53,7 @@ namespace ILRuntime.Runtime.Generated
             ETModel.ResourcesComponent instance_of_this_method = (ETModel.ResourcesComponent)typeof(ETModel.ResourcesComponent).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
-            instance_of_this_method.LoadBundle(@assetBundleName);
+            //instance_of_this_method.LoadBundle(@assetBundleName);
 
             return __ret;
         }
@@ -95,9 +95,9 @@ namespace ILRuntime.Runtime.Generated
             ETModel.ResourcesComponent instance_of_this_method = (ETModel.ResourcesComponent)typeof(ETModel.ResourcesComponent).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack));
             __intp.Free(ptr_of_this_method);
 
-            var result_of_this_method = instance_of_this_method.GetAsset(@bundleName, @prefab);
+            //var result_of_this_method = null;//instance_of_this_method.GetAsset(@bundleName, @prefab);
 
-            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+            return null;
         }
 
         static StackObject* LoadBundleAsync_3(ILIntepreter __intp, StackObject* __esp, IList<object> __mStack, CLRMethod __method, bool isNewObj)

@@ -61,7 +61,6 @@
      <Compile Include="Assets\Hotfix\Base\Event\EventIdType.cs" />
      <Compile Include="Assets\Hotfix\Base\Event\IEvent.cs" />
      <Compile Include="Assets\Hotfix\Base\Helper\ArrayHelper.cs" />
-     <Compile Include="Assets\Hotfix\Base\Helper\AssetBundleHelper.cs" />
      <Compile Include="Assets\Hotfix\Base\Helper\Dumper.cs" />
      <Compile Include="Assets\Hotfix\Base\Helper\ExceptionHelper.cs" />
      <Compile Include="Assets\Hotfix\Base\Helper\JsonHelper.cs" />
@@ -123,6 +122,7 @@
      <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
      <Compile Include="Assets\Hotfix\Module\UI\UIComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\UI\UIType.cs" />
+     <Compile Include="Assets\Hotfix\ResConst.cs" />
      <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -352,11 +352,11 @@
  <Reference Include="ILRuntim.Mono.Cecil">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntim.Mono.Cecil.dll</HintPath>
  </Reference>
- <Reference Include="ILRuntime.Mono.Cecil.Pdb">
- <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
  <Reference Include="ILRuntime.Mono.Cecil.Mdb">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="ILRuntime.Mono.Cecil.Pdb">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

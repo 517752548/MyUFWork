@@ -11,8 +11,8 @@ namespace ETHotfix
 	        try
 	        {
 				ResourcesComponent resourcesComponent = ETModel.Game.Scene.GetComponent<ResourcesComponent>();
-				resourcesComponent.LoadBundle(UIType.UILogin.StringToAB());
-				GameObject bundleGameObject = (GameObject)resourcesComponent.GetAsset(UIType.UILogin.StringToAB(), UIType.UILogin);
+				//resourcesComponent.LoadBundle(UIType.UILogin);
+				GameObject bundleGameObject = (GameObject)resourcesComponent.GetAsset(UIType.UILogin);
 				GameObject gameObject = UnityEngine.Object.Instantiate(bundleGameObject);
 
 		        UI ui = ComponentFactory.Create<UI, string, GameObject>(UIType.UILogin, gameObject, false);

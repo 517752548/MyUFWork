@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PackTogether
+  m_EditorClassIdentifier: 
+  m_GroupName: PackTogether
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a88d9fb9f421dc84fb9cef7a5414320e
+  m_SerializeEntries:
+  - m_GUID: ae44b218243cfc347af99a6875e9e11c
+    m_Address: Hotfix.dll.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Code
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: dd08ff64f788e7a4ba0f918632ff8d0f
+    m_Address: Hotfix.pdb.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Code
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 0f3540faabf2b7e4c83e81cb7ba6a096
+    m_Address: BuffConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 78f3a209a7b81ec46a196b52eea7e541
+    m_Address: GlobalProto.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c245c7dda13b3ad43b2278925e922899
+    m_Address: UnitConfig.txt
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cfaf4529ce2243c4c85126e9d008897b
+    m_Address: UnitPlayer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - prefab
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d8d87e53d93e234448658c9a801a9967
+    m_Address: UILobby.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ui
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 9f6d9adc6f537764fa0fea29671e77bf
+    m_Address: UILogin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ui
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 436d1b73b3e630d40836c84c011235f0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f147e1265f85f024189b7979e9b84b45, type: 2}
+    - {fileID: 11400000, guid: 2497c1c95a279414fafcb6822bcb2e52, type: 2}

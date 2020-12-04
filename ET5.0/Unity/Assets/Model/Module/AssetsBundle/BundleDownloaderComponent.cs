@@ -21,7 +21,6 @@ namespace ETModel
 	/// </summary>
 	public class BundleDownloaderComponent : Component
 	{
-		private VersionConfig remoteVersionConfig;
 		
 		public Queue<string> bundles;
 
@@ -47,7 +46,6 @@ namespace ETModel
 
 				base.Dispose();
 
-				this.remoteVersionConfig = null;
 				this.TotalSize = 0;
 				this.bundles = null;
 				this.downloadedBundles = null;
@@ -68,7 +66,7 @@ namespace ETModel
 					versionUrl = GlobalConfigComponent.Instance.GlobalProto.GetUrl() + "StreamingAssets/" + "Version.txt";
 					//Log.Debug(versionUrl);
 					await webRequestAsync.DownloadAsync(versionUrl);
-					remoteVersionConfig = JsonHelper.FromJson<VersionConfig>(webRequestAsync.Request.downloadHandler.text);
+					//remoteVersionConfig = JsonHelper.FromJson<VersionConfig>(webRequestAsync.Request.downloadHandler.text);
 					//Log.Debug(JsonHelper.ToJson(this.VersionConfig));
 				}
 
@@ -79,12 +77,12 @@ namespace ETModel
 			}
 
 			// 获取streaming目录的Version.txt
-			VersionConfig streamingVersionConfig;
+			//VersionConfig streamingVersionConfig;
 			string versionPath = Path.Combine(PathHelper.AppResPath4Web, "Version.txt");
 			using (UnityWebRequestAsync request = ComponentFactory.Create<UnityWebRequestAsync>())
 			{
 				await request.DownloadAsync(versionPath);
-				streamingVersionConfig = JsonHelper.FromJson<VersionConfig>(request.Request.downloadHandler.text);
+				//streamingVersionConfig = JsonHelper.FromJson<VersionConfig>(request.Request.downloadHandler.text);
 			}
 			
 			// 删掉远程不存在的文件
@@ -94,10 +92,10 @@ namespace ETModel
 				FileInfo[] fileInfos = directoryInfo.GetFiles();
 				foreach (FileInfo fileInfo in fileInfos)
 				{
-					if (remoteVersionConfig.FileInfoDict.ContainsKey(fileInfo.Name))
-					{
-						continue;
-					}
+					// if (remoteVersionConfig.FileInfoDict.ContainsKey(fileInfo.Name))
+					// {
+					// 	continue;
+					// }
 
 					if (fileInfo.Name == "Version.txt")
 					{
@@ -113,17 +111,17 @@ namespace ETModel
 			}
 
 			// 对比MD5
-			foreach (FileVersionInfo fileVersionInfo in remoteVersionConfig.FileInfoDict.Values)
-			{
-				// 对比md5
-				string localFileMD5 = BundleHelper.GetBundleMD5(streamingVersionConfig, fileVersionInfo.File);
-				if (fileVersionInfo.MD5 == localFileMD5)
-				{
-					continue;
-				}
-				this.bundles.Enqueue(fileVersionInfo.File);
-				this.TotalSize += fileVersionInfo.Size;
-			}
+			// foreach (FileVersionInfo fileVersionInfo in remoteVersionConfig.FileInfoDict.Values)
+			// {
+			// 	// 对比md5
+			// 	string localFileMD5 = BundleHelper.GetBundleMD5(streamingVersionConfig, fileVersionInfo.File);
+			// 	if (fileVersionInfo.MD5 == localFileMD5)
+			// 	{
+			// 		continue;
+			// 	}
+			// 	this.bundles.Enqueue(fileVersionInfo.File);
+			// 	this.TotalSize += fileVersionInfo.Size;
+			// }
 		}
 
 		public int Progress
@@ -138,7 +136,7 @@ namespace ETModel
 				long alreadyDownloadBytes = 0;
 				foreach (string downloadedBundle in this.downloadedBundles)
 				{
-					long size = this.remoteVersionConfig.FileInfoDict[downloadedBundle].Size;
+					long size = 0;//this.remoteVersionConfig.FileInfoDict[downloadedBundle].Size;
 					alreadyDownloadBytes += size;
 				}
 				if (this.webRequest != null)

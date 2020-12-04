@@ -31,7 +31,7 @@ namespace ETHotfix
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 
 				// 加载热更配置
-				ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
+				//ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
 				Game.Scene.AddComponent<ConfigComponent>();
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 

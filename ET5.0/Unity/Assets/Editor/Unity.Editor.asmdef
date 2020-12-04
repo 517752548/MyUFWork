@@ -3,7 +3,11 @@
     "references": [
         "Unity.Model",
         "Unity.ThirdParty",
-        "ILRuntime"
+        "ILRuntime",
+        "Unity.Addressables.Editor",
+        "Unity.ScriptableBuildPipeline",
+        "Unity.ScriptableBuildPipeline.Editor",
+        "Unity.Addressables"
     ],
     "includePlatforms": [
         "Editor"

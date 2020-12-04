@@ -58,6 +58,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\AddressableTools\AddressablesBundleBuildScript.cs" />
+     <Compile Include="Assets\Editor\AddressableTools\AddressablesConfig.cs" />
+     <Compile Include="Assets\Editor\AddressableTools\AddressablesRules.cs" />
+     <Compile Include="Assets\Editor\AddressableTools\BuildAddressablesData.cs" />
+     <Compile Include="Assets\Editor\AddressableTools\FrameworkMenuTool.cs" />
      <Compile Include="Assets\Editor\AstarPathfindingProject\AIBaseEditor.cs" />
      <Compile Include="Assets\Editor\AstarPathfindingProject\AILerpEditor.cs" />
      <Compile Include="Assets\Editor\AstarPathfindingProject\AstarPathEditor.cs" />
@@ -121,6 +126,18 @@
      <None Include="Assets\Editor\AstarPathfindingProject\EditorAssets\Materials\Navmesh.shader" />
  <Reference Include="ILRuntime">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ScriptableBuildPipeline">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Addressables">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -350,11 +367,11 @@
  <Reference Include="ILRuntim.Mono.Cecil">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntim.Mono.Cecil.dll</HintPath>
  </Reference>
- <Reference Include="ILRuntime.Mono.Cecil.Pdb">
- <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
  <Reference Include="ILRuntime.Mono.Cecil.Mdb">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="ILRuntime.Mono.Cecil.Pdb">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

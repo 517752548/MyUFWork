@@ -41,8 +41,7 @@ namespace ETModel
 
 		public void LoadHotfixAssembly()
 		{
-			Game.Scene.GetComponent<ResourcesComponent>().LoadBundle($"code.unity3d");
-			GameObject code = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("code.unity3d", "Code");
+			GameObject code = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("Code");
 			
 			byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
 			byte[] pdbBytes = code.Get<TextAsset>("Hotfix.pdb").bytes;
