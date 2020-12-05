@@ -32,6 +32,16 @@ namespace ETModel
             this.resourceCache.Clear();
         }
 
+        public T GetAsset<T>(string assetBundleName) where T : UnityEngine.Object
+        {
+            if (cacheBundles.ContainsKey(assetBundleName))
+            {
+                return (T)cacheBundles[assetBundleName];
+            }
+
+            return null;
+        }
+        
         public UnityEngine.Object GetAsset(string assetBundleName)
         {
             if (cacheBundles.ContainsKey(assetBundleName))

@@ -29,21 +29,30 @@ namespace ETHotfix
 				Game.Scene.AddComponent<UIComponent>();
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
-
+				//await ProloadHelper.PreloadRes();
+				HotFixInit().Coroutine();
 				// 加载热更配置
 				//ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
-				Game.Scene.AddComponent<ConfigComponent>();
-				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
+				
+				//ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 
-				UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
-				Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
+				//UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
+				//Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
 
-				Game.EventSystem.Run(EventIdType.InitSceneStart);
+				
 			}
 			catch (Exception e)
 			{
 				Log.Error(e);
 			}
+		}
+
+		public static async ETTask HotFixInit()
+		{
+			await PreloadHelper.PreloadRes();
+			Game.Scene.AddComponent<ConfigComponent>();
+			Game.EventSystem.Run(EventIdType.InitSceneStart);
+			
 		}
 
 		public static void Update()

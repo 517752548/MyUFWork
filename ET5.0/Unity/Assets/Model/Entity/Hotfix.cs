@@ -41,10 +41,10 @@ namespace ETModel
 
 		public void LoadHotfixAssembly()
 		{
-			GameObject code = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("Code");
-			
-			byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
-			byte[] pdbBytes = code.Get<TextAsset>("Hotfix.pdb").bytes;
+			TextAsset Hotfix_dll = Game.Scene.GetComponent<ResourcesComponent>().GetAsset<TextAsset>("Hotfix.dll.bytes");
+			TextAsset Hotfix_pdb = Game.Scene.GetComponent<ResourcesComponent>().GetAsset<TextAsset>("Hotfix.pdb.bytes");
+			byte[] assBytes = Hotfix_dll.bytes;
+			byte[] pdbBytes = Hotfix_pdb.bytes;
 			
 #if ILRuntime
 			Log.Debug($"当前使用的是ILRuntime模式");
