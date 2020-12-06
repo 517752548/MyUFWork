@@ -123,6 +123,10 @@
      <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
      <Compile Include="Assets\Hotfix\Module\UI\UIComponent.cs" />
      <Compile Include="Assets\Hotfix\Module\UI\UIType.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIBase.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIBaseComponent.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIHelper.cs" />
+     <Compile Include="Assets\Hotfix\Module\UIManager\UIManagerComponent.cs" />
      <Compile Include="Assets\Hotfix\ResConst.cs" />
      <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
  <Reference Include="UnityEditor.UI">

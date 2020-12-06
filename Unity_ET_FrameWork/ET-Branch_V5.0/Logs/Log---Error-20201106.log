@@ -1,0 +1,26 @@
+2020-11-06 23:35:38.2821   System.IO.FileNotFoundException: Could not find file 'G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Bin\Hotfix.dll'.
+File name: 'G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Bin\Hotfix.dll'
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.IO.File.ReadAllBytes(String path)
+   at ETModel.DllHelper.GetHotfixAssembly() in G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\Model\Base\Helper\DllHelper.cs:line 10
+   at App.Program.Main(String[] args) in G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\App\Program.cs:line 20 
+ Main at offset 252 in file:line:column G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\App\Program.cs:20:5
+Error at offset 115 in file:line:column G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 58 in file:line:column G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
+2020-11-06 23:43:29.1203   System.IO.FileNotFoundException: Could not find file 'G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Bin\Hotfix.dll'.
+File name: 'G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Bin\Hotfix.dll'
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.IO.File.ReadAllBytes(String path)
+   at ETModel.DllHelper.GetHotfixAssembly() in G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\Model\Base\Helper\DllHelper.cs:line 10
+   at App.Program.Main(String[] args) in G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\App\Program.cs:line 20 
+ Main at offset 252 in file:line:column G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\App\Program.cs:20:5
+Error at offset 103 in file:line:column G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 52 in file:line:column G:\MyUnityFrameWork\MyUF\Unity_ET_FrameWork\ET-Branch_V5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
