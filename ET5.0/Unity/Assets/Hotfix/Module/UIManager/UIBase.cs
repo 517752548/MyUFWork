@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace ETHotfix
 {
+	[ObjectSystem]
 	public class UIBaseAwakeSystem : AwakeSystem<UIBase, string, GameObject>
 	{
 		public override void Awake(UIBase self, string name, GameObject gameObject)

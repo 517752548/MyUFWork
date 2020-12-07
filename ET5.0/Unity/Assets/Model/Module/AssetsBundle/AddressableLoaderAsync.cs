@@ -40,15 +40,21 @@ namespace ETModel
 			return tcs.Task;
 		}
 		
-		public ETTask GetDownLoadSize()
+		public ETTask<long> GetDownLoadSize()
 		{
-			ETTaskCompletionSource tcs = new ETTaskCompletionSource();
-			AsyncOperationHandle initasync = Addressables.GetDownloadSizeAsync("A");
+			ETTaskCompletionSource<long> tcs = new ETTaskCompletionSource<long>();
+			AsyncOperationHandle<long> initasync = Addressables.GetDownloadSizeAsync("A");
 			initasync.Completed += op =>
 			{
-				tcs.SetResult();
+				tcs.SetResult(op.Result);
 			};
 			return tcs.Task;
+		}
+		
+		public AsyncOperationHandle DownLoadRes()
+		{
+			AsyncOperationHandle initasync = Addressables.DownloadDependenciesAsync("A");
+			return initasync;
 		}
 	}
 }

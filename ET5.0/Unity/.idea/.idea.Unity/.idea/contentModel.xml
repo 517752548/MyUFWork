@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Unity.755885715.00" t="ExcludeRecursive" />
-    <e p="G:\MyUnityFrameWork\MyUF\ET5.0\Unity" t="IncludeRecursive">
+    <e p="C:\Users\lvjibin\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lvjibin\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Unity.-886977509.00" t="ExcludeRecursive" />
+    <e p="D:\OtherGitProjects\UFramework\ET5.0\Unity" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Editor" t="Include">
           <e p="AddressableTools" t="Include">
@@ -170,6 +170,7 @@
                 <e p="UnitConfig.cs" t="Include" />
               </e>
               <e p="G2C_TestHotfixHandler.cs" t="Include" />
+              <e p="GameLogicStart.cs" t="Include" />
               <e p="Helper" t="Include">
                 <e p="LoginHelper.cs" t="Include" />
                 <e p="MapHelper.cs" t="Include" />
@@ -179,25 +180,8 @@
               <e p="OperaComponent.cs" t="Include" />
               <e p="TestHotfixSubscribMonoEvent_LogString.cs" t="Include" />
               <e p="UI" t="Include">
-                <e p="UILobby" t="Include">
-                  <e p="Component" t="Include">
-                    <e p="UILobbyComponent.cs" t="Include" />
-                  </e>
-                  <e p="System" t="Include">
-                    <e p="EnterMapFinish_RemoveLobbyUI.cs" t="Include" />
-                    <e p="LoginFinish_CreateLobbyUI.cs" t="Include" />
-                    <e p="UILobbyFactory.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="UILogin" t="Include">
-                  <e p="Component" t="Include">
-                    <e p="UILoginComponent.cs" t="Include" />
-                  </e>
-                  <e p="System" t="Include">
-                    <e p="InitSceneStart_CreateLoginUI.cs" t="Include" />
-                    <e p="LoginFinish_RemoveLoginUI.cs" t="Include" />
-                    <e p="UILoginFactory.cs" t="Include" />
-                  </e>
+                <e p="Login" t="Include">
+                  <e p="UILoginComponent.cs" t="Include" />
                 </e>
               </e>
             </e>
@@ -213,12 +197,6 @@
               <e p="OpcodeTypeComponent.cs" t="Include" />
               <e p="Session.cs" t="Include" />
               <e p="SessionComponent.cs" t="Include" />
-            </e>
-            <e p="UI" t="Include">
-              <e p="IUIFactory.cs" t="Include" />
-              <e p="UI.cs" t="Include" />
-              <e p="UIComponent.cs" t="Include" />
-              <e p="UIType.cs" t="Include" />
             </e>
             <e p="UIManager" t="Include">
               <e p="UIBase.cs" t="Include" />
