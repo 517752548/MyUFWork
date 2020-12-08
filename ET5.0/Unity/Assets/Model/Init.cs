@@ -26,10 +26,10 @@ namespace ETModel
 				Game.Scene.AddComponent<ResourcesComponent>();
 				Game.Scene.AddComponent<PlayerComponent>();
 				Game.Scene.AddComponent<UnitComponent>();
-				Game.Scene.AddComponent<UIComponent>();
+				//Game.Scene.AddComponent<UIComponent>();
 
 				// 下载ab包
-				await BundleHelper.DownloadBundle();
+				//await BundleHelper.DownloadBundle();
 				await ProloadHelper.PreloadRes();
 				Game.Hotfix.LoadHotfixAssembly();
 
