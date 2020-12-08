@@ -10,10 +10,10 @@ namespace ETHotfix
     [Event(EventIdType.InitSceneStart)]
     public class GameLogicStart : AEvent
     {
-        public override void Run()
-        {
-            Game.Scene.GetComponent<UIManagerComponent>().OpenUIAsync<UILoginComponent>(ResConst.prefab_UILogin).Coroutine();
-        }
+         public override void Run()
+         {
+             Game.Scene.GetComponent<UIManagerComponent>().OpenUIAsync<UILoginComponent>(ResConst.prefab_UILogin).Coroutine();
+         }
     } 
 }
 

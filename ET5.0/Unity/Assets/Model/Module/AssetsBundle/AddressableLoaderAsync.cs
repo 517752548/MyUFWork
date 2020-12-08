@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -43,10 +44,10 @@ namespace ETModel
 		public ETTask<long> GetDownLoadSize()
 		{
 			ETTaskCompletionSource<long> tcs = new ETTaskCompletionSource<long>();
-			AsyncOperationHandle<long> initasync = Addressables.GetDownloadSizeAsync("A");
-			initasync.Completed += op =>
+			AsyncOperationHandle<long> update = Addressables.GetDownloadSizeAsync("A");
+			update.Completed += download =>
 			{
-				tcs.SetResult(op.Result);
+				tcs.SetResult(download.Result);
 			};
 			return tcs.Task;
 		}

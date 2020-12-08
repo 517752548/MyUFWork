@@ -47,7 +47,7 @@ namespace ETHotfix
 			}
 		}
 
-		public static async ETTask HotFixInit()
+		public static async ETVoid HotFixInit()
 		{
 			await PreloadHelper.PreloadRes();
 			Game.Scene.AddComponent<ConfigComponent>();

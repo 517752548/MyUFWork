@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace ETHotfix
 {
+	[ObjectSystem]
 	public class UIManagerAwakeSystem: AwakeSystem<UIManagerComponent>
 	{
 		public override void Awake(UIManagerComponent self)
@@ -34,12 +35,13 @@ namespace ETHotfix
 		
 		private Dictionary<UILayerNew,List<UIBase>> ui_base = new Dictionary<UILayerNew, List<UIBase>>();
 
-		public async ETTask<T> OpenUIAsync<T>(string UIName,UILayerNew layer = UILayerNew.Normal,UIOpenType openType = UIOpenType.Stack,params object[] objs) where T : UIBaseComponent, new()
+		public async ETTask OpenUIAsync<T>(string UIName,UILayerNew layer = UILayerNew.Normal,UIOpenType openType = UIOpenType.Stack,params object[] objs) where T : UIBaseComponent, new()
 		{
-			GameObject obj =(GameObject) await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadAssetAsync<GameObject>(UIName);
+			await ETModel.Game.Scene.GetComponent<ResourcesComponent>().CacheBundleAsync(UIName);
+			GameObject obj = (GameObject)ETModel.Game.Scene.GetComponent<ResourcesComponent>().GetAsset(UIName);
 			UIBase c_ui = UIHelper.Create<T>(UIName, obj,objs);
 			UIHelper.HandlerUI(c_ui,layer,openType,this.ui_base);
-			return c_ui.GetComponent<T>();
+			c_ui.GetComponent<T>();
 		}
 
 		public void CloseUI(UIBase UIName)

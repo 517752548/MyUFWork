@@ -6,12 +6,11 @@ using UnityEngine;
 
 namespace ETHotfix
 {
-    public class PreloadHelper
+    public static class PreloadHelper
     {
         public static async ETTask PreloadRes()
         {
             List<Type> types = Game.EventSystem.GetTypes();
-
             foreach (Type type in types)
             {
                 object[] attrs = type.GetCustomAttributes(typeof (ConfigAttribute), false);
@@ -26,9 +25,8 @@ namespace ETHotfix
                 {
                     continue;
                 }
-
                 string configName = type.ToString().Replace("ETHotfix.", "").Replace("Category", "");
-                await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync($"{configName}.txt");
+                await ETModel.Game.Scene.GetComponent<ResourcesComponent>().CacheBundleAsync($"{configName}.txt");
             }
         }
     }

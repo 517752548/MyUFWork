@@ -41,8 +41,8 @@ namespace ETModel
 
 		public void LoadHotfixAssembly()
 		{
-			TextAsset Hotfix_dll = Game.Scene.GetComponent<ResourcesComponent>().GetAsset<TextAsset>("Hotfix.dll.bytes");
-			TextAsset Hotfix_pdb = Game.Scene.GetComponent<ResourcesComponent>().GetAsset<TextAsset>("Hotfix.pdb.bytes");
+			TextAsset Hotfix_dll = (TextAsset)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("Hotfix.dll.bytes");
+			TextAsset Hotfix_pdb = (TextAsset)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("Hotfix.pdb.bytes");
 			byte[] assBytes = Hotfix_dll.bytes;
 			byte[] pdbBytes = Hotfix_pdb.bytes;
 			

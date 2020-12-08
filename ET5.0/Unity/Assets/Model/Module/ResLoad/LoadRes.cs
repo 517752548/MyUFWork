@@ -18,11 +18,9 @@ namespace ETModel
 
         private async ETVoid DoLoadRes()
         {
-            Log.Info("res 初始化");
             await InitAddressable();
-            Log.Info("res 获取下载大小");
            long downloadSize = await GetDownLoadSize();
-           Log.Info("下载大小为0");
+           Log.Info("下载大小为:" + downloadSize);
            if (downloadSize > 0)
            {
                var handle = addressableLoader.DownLoadRes();
@@ -33,9 +31,10 @@ namespace ETModel
                    {
                        downloadFinish = true;
                    }
-                   await Task.Delay(200);
+                   await Task.Delay(20);
                    progressImage.fillAmount = handle.PercentComplete;
                }
+               Log.Info("下载完成");
 
            }
            else

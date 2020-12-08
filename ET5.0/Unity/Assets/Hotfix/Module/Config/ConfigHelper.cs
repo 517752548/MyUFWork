@@ -11,7 +11,7 @@ namespace ETHotfix
 			try
 			{
 				Log.Error(key);
-				TextAsset config = ETModel.Game.Scene.GetComponent<ResourcesComponent>().GetAsset<TextAsset>($"{key}.txt");
+				TextAsset config = (TextAsset)ETModel.Game.Scene.GetComponent<ResourcesComponent>().GetAsset($"{key}.txt");
 				return config.text;
 			}
 			catch (Exception e)
