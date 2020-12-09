@@ -39,7 +39,6 @@ namespace ETModel
             {
                 return cacheBundles[assetBundleName];
             }
-
             return null;
         }
 
@@ -59,6 +58,7 @@ namespace ETModel
             asset.Completed += op =>
             {
                 cacheBundles[assetBundleName] = op.Result;
+                Log.Info($"{assetBundleName}");
                 tcs.SetResult();
             };
             return tcs.Task;

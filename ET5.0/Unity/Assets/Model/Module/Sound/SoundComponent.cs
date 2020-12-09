@@ -145,7 +145,7 @@ namespace ETModel
         /// 无法暂停
         /// 异步加载音效
         /// </summary>
-        public async void PlayClip(string clipName, float volume = 1)
+        public async ETVoid PlayClip(string clipName, float volume = 1)
         {
             SoundData sd = await LoadSound(clipName);
             if (sd != null)
@@ -174,7 +174,7 @@ namespace ETModel
         /// <param name="volume">音量</param>
         /// <param name="isloop">是否循环播放</param>
         /// /// <param name="forceReplay">是否强制重头播放</param>
-        public async void PlayMusic(string clipName, ulong delay = 0, float volume = 1, bool isloop = false, bool forceReplay = false)
+        public async ETVoid PlayMusic(string clipName, ulong delay = 0, float volume = 1, bool isloop = false, bool forceReplay = false)
         {
             SoundData sd = await LoadSound(clipName);
             if (sd != null)
@@ -197,17 +197,16 @@ namespace ETModel
         }
 
         //加载声音
-        private async Task<SoundData> LoadSound(string soundName)
+        private async ETTask<SoundData> LoadSound(string soundName)
         {
             ResourcesComponent resourcesComponent = Game.Scene.GetComponent<ResourcesComponent>();
             if (!abSounds.ContainsKey(soundName) || abSounds[soundName] == null)
             {
                 await resourcesComponent.CacheBundleAsync(soundName);
-                var prefab = GameObject.Instantiate((GameObject) resourcesComponent.GetAsset(SoundPrefab));
+                var prefab = UnityEngine.Object.Instantiate((GameObject) resourcesComponent.GetAsset(SoundPrefab));
                 prefab.name = soundName;
                 abSounds.Add(soundName, prefab.GetComponent<SoundData>());
                 abSounds[soundName].GetAudio().clip = (AudioClip)resourcesComponent.GetAsset(soundName);
-                resourcesComponent.UnloadBundle(SoundPrefab);
             }
             return abSounds[soundName];
         }

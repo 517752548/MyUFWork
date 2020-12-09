@@ -16,7 +16,7 @@ namespace ETHotfix
 		}
 	}
 	
-	public class UnityWebRequestAsync : Component, System.IDisposable
+	public class UnityWebRequestAsync : Component
 	{
 
 		public UnityWebRequest Request;
@@ -27,6 +27,7 @@ namespace ETHotfix
 		
 		public override void Dispose()
 		{
+			Log.Info("销毁");
 			if (this.IsDisposed)
 			{
 				return;
@@ -67,19 +68,28 @@ namespace ETHotfix
 		{
 			if (this.isCancel)
 			{
-				this.tcs.SetException(new Exception($"request error: {this.Request.error}"));
+				return;
+			}
+			if (this.Request == null)
+			{
+				Log.Info("null");
+				this.isCancel = true;
+				this.tcs.SetResult();
+				return;
+			}
+			
+			if (!string.IsNullOrEmpty(this.Request.error))
+			{
+				Log.Info("error");
+				this.isCancel = true;
+				this.tcs.SetResult();
 				return;
 			}
 			if (!this.Request.isDone)
 			{
 				return;
 			}
-			if (!string.IsNullOrEmpty(this.Request.error))
-			{
-				this.tcs.SetException(new Exception($"request error: {this.Request.error}"));
-				return;
-			}
-
+			this.isCancel = true;
 			this.tcs.SetResult();
 		}
 
@@ -90,6 +100,10 @@ namespace ETHotfix
 			
 			this.Request = UnityWebRequest.Get(url);
 			this.Request.SendWebRequest();
+			if (this.Request == null)
+			{
+				Log.Info("null le");
+			}
 			return this.tcs.Task;
 		}
 		
