@@ -1,0 +1,102 @@
+2020-12-09 10:19:08.1382 AllServer 0001 System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444 
+ Main at offset 6836 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\App\Program.cs:154:7
+Update at offset 78 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:482:4
+Start at offset 354 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:444:7
+Error at offset 104 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 53 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
+2020-12-09 10:24:32.0864 AllServer 0001 System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444 
+ Main at offset 6836 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\App\Program.cs:154:7
+Update at offset 78 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:482:4
+Start at offset 354 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:444:7
+Error at offset 104 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 53 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
+2020-12-09 10:26:23.7839 AllServer 0001 System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444 
+ Main at offset 6836 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\App\Program.cs:154:7
+Update at offset 78 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:482:4
+Start at offset 354 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:444:7
+Error at offset 104 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 53 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
+2020-12-09 10:29:28.4505 AllServer 0001 System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444 
+ Main at offset 6836 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\App\Program.cs:154:7
+Update at offset 78 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:482:4
+Start at offset 354 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:444:7
+Error at offset 104 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 53 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
+2020-12-09 10:29:54.3066 AllServer 0001 System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444 
+ Main at offset 6836 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\App\Program.cs:154:7
+Update at offset 78 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:482:4
+Start at offset 354 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:444:7
+Error at offset 104 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 53 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+
+2020-12-09 10:39:53.8343 AllServer 0001 System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444 
+ Main at offset 6836 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\App\Program.cs:154:7
+Update at offset 78 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:482:4
+Start at offset 354 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:444:7
+Error at offset 104 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Log.cs:31:4
+Error at offset 53 in file:line:column D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Base\Logger\NLogAdapter.cs:31:4
+

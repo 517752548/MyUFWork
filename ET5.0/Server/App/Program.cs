@@ -85,15 +85,15 @@ namespace App
 						Game.Scene.AddComponent<PathfindingComponent>();
 						break;
 					case AppType.AllServer:
-						
+						Log.Info("allserver");
 						// 发送普通actor消息
 						Game.Scene.AddComponent<ActorMessageSenderComponent>();
 						
 						// 发送location actor消息
 						Game.Scene.AddComponent<ActorLocationSenderComponent>();
 
-						//Game.Scene.AddComponent<DBComponent>();
-						//Game.Scene.AddComponent<DBProxyComponent>();
+						Game.Scene.AddComponent<DBComponent>();
+						Game.Scene.AddComponent<DBProxyComponent>();
 
 						//协程锁组件
 						Game.Scene.AddComponent<CoroutineLockComponent>();
@@ -128,7 +128,7 @@ namespace App
 						Game.Scene.AddComponent<UnitComponent>();
 
 						Game.Scene.AddComponent<ConsoleComponent>();
-						// Game.Scene.AddComponent<HttpComponent>();
+						 Game.Scene.AddComponent<HttpComponent>();
 						break;
 					case AppType.Benchmark:
 						Game.Scene.AddComponent<NetOuterComponent>();

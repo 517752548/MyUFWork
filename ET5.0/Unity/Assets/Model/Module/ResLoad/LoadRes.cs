@@ -43,10 +43,12 @@ namespace ETModel
                while (framecount <= 100)
                {
                    framecount++;
-                   await Task.Delay(20);
+                   await Task.Delay(10);
                    progressImage.fillAmount = (float) framecount / 100;
                }
            }
+           await ProloadHelper.PreloadRes();
+           Game.Hotfix.LoadHotfixAssembly();
            //启动
            Game.Hotfix.GotoHotfix();
            GameObject.Find("Canvas").gameObject.SetActive(false);

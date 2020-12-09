@@ -754,6 +754,13 @@
             <e p="ResLoad" t="Include">
               <e p="LoadRes.cs" t="Include" />
             </e>
+            <e p="Sound" t="Include">
+              <e p="Editor" t="Include">
+                <e p="EditorCreateAudio.cs" t="Include" />
+              </e>
+              <e p="SoundComponent.cs" t="Include" />
+              <e p="SoundData.cs" t="Include" />
+            </e>
             <e p="UI" t="Include">
               <e p="CanvasConfig.cs" t="Include" />
               <e p="LayerNames.cs" t="Include" />
