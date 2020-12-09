@@ -75,7 +75,6 @@ namespace ETModel
 				this.tcs.SetException(new Exception($"request error: {this.Request.error}"));
 				return;
 			}
-			
 			if (!this.Request.isDone)
 			{
 				return;
@@ -93,7 +92,6 @@ namespace ETModel
 		{
 			this.tcs = new ETTaskCompletionSource();
 			
-			url = url.Replace(" ", "%20");
 			this.Request = UnityWebRequest.Get(url);
 			this.Request.certificateHandler = certificateHandler;
 			this.Request.SendWebRequest();

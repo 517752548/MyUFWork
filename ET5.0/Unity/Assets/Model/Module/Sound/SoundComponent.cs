@@ -203,7 +203,10 @@ namespace ETModel
             if (!abSounds.ContainsKey(soundName) || abSounds[soundName] == null)
             {
                 await resourcesComponent.CacheBundleAsync(soundName);
-                abSounds.Add(soundName, GameObject.Instantiate((GameObject)resourcesComponent.GetAsset(SoundPrefab)).GetComponent<SoundData>());
+                var prefab = GameObject.Instantiate((GameObject) resourcesComponent.GetAsset(SoundPrefab));
+                prefab.name = soundName;
+                abSounds.Add(soundName, prefab.GetComponent<SoundData>());
+                abSounds[soundName].GetAudio().clip = (AudioClip)resourcesComponent.GetAsset(soundName);
                 resourcesComponent.UnloadBundle(SoundPrefab);
             }
             return abSounds[soundName];

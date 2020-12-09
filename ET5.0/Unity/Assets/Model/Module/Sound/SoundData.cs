@@ -8,7 +8,7 @@ namespace ETModel
     public class SoundData : MonoBehaviour
     {
         //音频源控件
-        public new AudioSource audio;
+        public AudioSource audio;
 
         /// <summary>
         /// 是否强制重新播放

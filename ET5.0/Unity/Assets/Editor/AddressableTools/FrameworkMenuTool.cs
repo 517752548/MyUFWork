@@ -48,12 +48,7 @@ public class FrameworkMenuTool: EditorWindow
         {
             AddressablesBundleBuildScript.AddFileToAddressables();
         }
-
-        [MenuItem("Framework/Bundle/HotUpdateAddressables")]
-        public static void AddressablesFileSelectHotUpdate()
-        {
-            AddressablesBundleBuildScript.AddFileToAddressablesHotUpdate();
-        }
+        
         // [MenuItem("Framework/Bundle/UpdateWordLibrary")	// public static void WordLibrary() 	// 	AddressablesBundleBuildScript.UpdateWordLibrary()	// }
 
         [MenuItem("Framework/Bundle/DeleteServerData")]

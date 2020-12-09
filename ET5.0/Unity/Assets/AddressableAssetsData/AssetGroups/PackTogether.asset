@@ -15,8 +15,24 @@ MonoBehaviour:
   m_GroupName: PackTogether
   m_Data:
     m_SerializedData: []
-  m_GUID: a88d9fb9f421dc84fb9cef7a5414320e
+  m_GUID: 9f9b19d6e840c5e4d87db4c6fb34a3a5
   m_SerializeEntries:
+  - m_GUID: ae44b218243cfc347af99a6875e9e11c
+    m_Address: Hotfix.dll.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Code
+    - A
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: dd08ff64f788e7a4ba0f918632ff8d0f
+    m_Address: Hotfix.pdb.bytes
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Code
+    - A
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 0f3540faabf2b7e4c83e81cb7ba6a096
     m_Address: BuffConfig.txt
     m_ReadOnly: 0
@@ -41,67 +57,9 @@ MonoBehaviour:
     - A
     m_MainAsset: {fileID: 4900000, guid: c245c7dda13b3ad43b2278925e922899, type: 3}
     m_TargetAsset: {fileID: 4900000, guid: c245c7dda13b3ad43b2278925e922899, type: 3}
-  - m_GUID: d8d87e53d93e234448658c9a801a9967
-    m_Address: UILobby.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ui
-    - A
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 9f6d9adc6f537764fa0fea29671e77bf
-    m_Address: UILogin.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ui
-    - A
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 1ef0a68dad9ad1d42ad3088eb5904eac
-    m_Address: UIManager.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ui
-    - A
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: ae44b218243cfc347af99a6875e9e11c
-    m_Address: Hotfix.dll.bytes
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Code
-    - A
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: dd08ff64f788e7a4ba0f918632ff8d0f
-    m_Address: Hotfix.pdb.bytes
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Code
-    - A
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: cfaf4529ce2243c4c85126e9d008897b
-    m_Address: UnitPlayer.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - prefab
-    - A
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: f267342367b9a6e4fbe8cd5a23654599
-    m_Address: SoundPrefab.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - prefab
-    - A
-    m_MainAsset: {fileID: 4252880253805376859, guid: f267342367b9a6e4fbe8cd5a23654599,
-      type: 3}
-    m_TargetAsset: {fileID: 4252880253805376859, guid: f267342367b9a6e4fbe8cd5a23654599,
-      type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 436d1b73b3e630d40836c84c011235f0, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f147e1265f85f024189b7979e9b84b45, type: 2}
-    - {fileID: 11400000, guid: 2497c1c95a279414fafcb6822bcb2e52, type: 2}
+    - {fileID: 11400000, guid: 5965d20a15214ef47ba24b1eab3a91c6, type: 2}
+    - {fileID: 11400000, guid: 3e56cd8bedcde814cb2016b5a2224865, type: 2}
