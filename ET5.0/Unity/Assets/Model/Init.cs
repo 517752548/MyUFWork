@@ -9,6 +9,7 @@ namespace ETModel
 		private void Start()
 		{
 			this.StartAsync().Coroutine();
+			SRDebug.Init();
 		}
 		
 		private async ETVoid StartAsync()
