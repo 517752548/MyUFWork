@@ -349,6 +349,7 @@
             <e p="ETModel_ETTask_Binding.cs" t="Include" />
             <e p="ETModel_ETTask_Binding_Awaiter_Binding.cs" t="Include" />
             <e p="ETModel_ETTaskCompletionSource_1_Google_Protobuf_Adapt_IMessage_Binding_Adapt.cs" t="Include" />
+            <e p="ETModel_ETTaskCompletionSource_Binding.cs" t="Include" />
             <e p="ETModel_ETVoid_Binding.cs" t="Include" />
             <e p="ETModel_EventAttribute_Binding.cs" t="Include" />
             <e p="ETModel_EventProxy_Binding.cs" t="Include" />
@@ -382,6 +383,7 @@
             <e p="ETModel_Session_Binding.cs" t="Include" />
             <e p="ETModel_SessionCallbackComponent_Binding.cs" t="Include" />
             <e p="ETModel_SessionComponent_Binding.cs" t="Include" />
+            <e p="ETModel_SoundComponent_Binding.cs" t="Include" />
             <e p="ETModel_StringHelper_Binding.cs" t="Include" />
             <e p="ETModel_Unit_Binding.cs" t="Include" />
             <e p="ETModel_UnitComponent_Binding.cs" t="Include" />
@@ -402,6 +404,7 @@
             <e p="Google_Protobuf_MessageParser_1_Google_Protobuf_Adapt_IMessage_Binding_Adapto.cs" t="Include" />
             <e p="Google_Protobuf_ProtoPreconditions_Binding.cs" t="Include" />
             <e p="LitJson_JsonMapper_Binding.cs" t="Include" />
+            <e p="ReferenceCollector_Binding.cs" t="Include" />
             <e p="System_Action_1_Google_Protobuf_Adapt_IMessage_Binding_Adaptor_Binding.cs" t="Include" />
             <e p="System_Action_Binding.cs" t="Include" />
             <e p="System_Activator_Binding.cs" t="Include" />
@@ -416,6 +419,9 @@
             <e p="System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding_ValueCo.cs" t="Include" />
             <e p="System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding_ValueCo_t1.cs" t="Include" />
             <e p="System_Collections_Generic_Dictionary_2_String_List_1_ILTypeInstance_Binding.cs" t="Include" />
+            <e p="System_Collections_Generic_Dictionary_2_String_String_Binding.cs" t="Include" />
+            <e p="System_Collections_Generic_Dictionary_2_String_String_Binding_KeyCollection_B.cs" t="Include" />
+            <e p="System_Collections_Generic_Dictionary_2_String_String_Binding_KeyCollection_B_t1.cs" t="Include" />
             <e p="System_Collections_Generic_Dictionary_2_Type_ILTypeInstance_Binding.cs" t="Include" />
             <e p="System_Collections_Generic_Dictionary_2_Type_ILTypeInstance_Binding_Enumerato.cs" t="Include" />
             <e p="System_Collections_Generic_Dictionary_2_Type_ILTypeInstance_Binding_ValueColl.cs" t="Include" />
@@ -447,21 +453,33 @@
             <e p="System_Reflection_MemberInfo_Binding.cs" t="Include" />
             <e p="System_Reflection_MethodBase_Binding.cs" t="Include" />
             <e p="System_Reflection_PropertyInfo_Binding.cs" t="Include" />
+            <e p="System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Binding.cs" t="Include" />
             <e p="System_String_Binding.cs" t="Include" />
+            <e p="System_Text_Encoding_Binding.cs" t="Include" />
             <e p="System_Text_StringBuilder_Binding.cs" t="Include" />
             <e p="System_Threading_CancellationToken_Binding.cs" t="Include" />
             <e p="System_Type_Binding.cs" t="Include" />
             <e p="UnityEngine_Camera_Binding.cs" t="Include" />
             <e p="UnityEngine_Component_Binding.cs" t="Include" />
             <e p="UnityEngine_Debug_Binding.cs" t="Include" />
+            <e p="UnityEngine_Events_UnityEvent_Binding.cs" t="Include" />
             <e p="UnityEngine_GameObject_Binding.cs" t="Include" />
             <e p="UnityEngine_Input_Binding.cs" t="Include" />
             <e p="UnityEngine_LayerMask_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_DownloadHandler_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_DownloadHandlerBuffer_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_DownloadHandlerFile_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_UnityWebRequest_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_UnityWebRequestAssetBundle_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_UnityWebRequestTexture_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_UploadHandler_Binding.cs" t="Include" />
+            <e p="UnityEngine_Networking_UploadHandlerRaw_Binding.cs" t="Include" />
             <e p="UnityEngine_Object_Binding.cs" t="Include" />
             <e p="UnityEngine_Physics_Binding.cs" t="Include" />
             <e p="UnityEngine_RaycastHit_Binding.cs" t="Include" />
             <e p="UnityEngine_TextAsset_Binding.cs" t="Include" />
             <e p="UnityEngine_Transform_Binding.cs" t="Include" />
+            <e p="UnityEngine_UI_Button_Binding.cs" t="Include" />
             <e p="UnityEngine_Vector3_Binding.cs" t="Include" />
           </e>
           <e p="Init.cs" t="Include" />

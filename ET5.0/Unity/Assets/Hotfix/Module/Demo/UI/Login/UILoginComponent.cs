@@ -13,7 +13,7 @@ namespace ETHotfix
         public override void OnOpen()
         {
             base.OnOpen();
-            this.rc.Get<GameObject>("LoginBtn").GetComponent<Button>().onClick.AddListener(SendHttp);
+            this.rc.Get<GameObject>("LoginBtn").GetComponent<Button>().onClick.Add(SendHttp);
         }
         
         

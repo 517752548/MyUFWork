@@ -18,16 +18,7 @@ namespace ETHotfix
 	
 	public class UnityWebRequestAsync : Component, System.IDisposable
 	{
-		public class AcceptAllCertificate: CertificateHandler
-		{
-			protected override bool ValidateCertificate(byte[] certificateData)
-			{
-				return true;
-			}
-		}
-		
-		public static AcceptAllCertificate certificateHandler = new AcceptAllCertificate();
-		
+
 		public UnityWebRequest Request;
 
 		public bool isCancel;
@@ -98,7 +89,6 @@ namespace ETHotfix
 			this.tcs = new ETTaskCompletionSource();
 			
 			this.Request = UnityWebRequest.Get(url);
-			this.Request.certificateHandler = certificateHandler;
 			this.Request.SendWebRequest();
 			return this.tcs.Task;
 		}
@@ -109,7 +99,6 @@ namespace ETHotfix
 			this.tcs = new ETTaskCompletionSource();
 			
 			this.Request = UnityWebRequestTexture.GetTexture(url);
-			this.Request.certificateHandler = certificateHandler;
 			this.Request.SendWebRequest();
 			return this.tcs.Task;
 		}
@@ -120,7 +109,6 @@ namespace ETHotfix
 			this.tcs = new ETTaskCompletionSource();
 			this.Request = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET);
 			this.Request.downloadHandler = new DownloadHandlerFile(filePath);
-			this.Request.certificateHandler = certificateHandler;
 			this.Request.SendWebRequest();
 			return this.tcs.Task;
 		}
@@ -130,7 +118,6 @@ namespace ETHotfix
 		{
 			this.tcs = new ETTaskCompletionSource();
 			this.Request =  UnityWebRequestAssetBundle.GetAssetBundle(url);
-			this.Request.certificateHandler = certificateHandler;
 			this.Request.SendWebRequest();
 			return this.tcs.Task;
 		}
@@ -140,7 +127,6 @@ namespace ETHotfix
 		{
 			this.tcs = new ETTaskCompletionSource();
 			this.Request =  UnityWebRequest.Post(url, formData);
-			this.Request.certificateHandler = certificateHandler;
 			if (headers != null)
 			{
 				foreach (var key in headers.Keys)
@@ -157,7 +143,6 @@ namespace ETHotfix
 		{
 			this.tcs = new ETTaskCompletionSource();
 			this.Request =  CreatUnityWebRequest(url, content, "application/x-www-form-urlencoded");
-			this.Request.certificateHandler = certificateHandler;
 			if (headers != null)
 			{
 				foreach (var key in headers.Keys)
@@ -174,7 +159,6 @@ namespace ETHotfix
 		{
 			this.tcs = new ETTaskCompletionSource();
 			this.Request =  CreatUnityWebRequest(url, content, "application/json");
-			this.Request.certificateHandler = certificateHandler;
 			if (headers != null)
 			{
 				foreach (var key in headers.Keys)
@@ -191,7 +175,6 @@ namespace ETHotfix
 		{
 			this.tcs = new ETTaskCompletionSource();
 			this.Request =  CreatUnityWebRequest(url, content, "text/xml");
-			this.Request.certificateHandler = certificateHandler;
 			if (headers != null)
 			{
 				foreach (var key in headers.Keys)
