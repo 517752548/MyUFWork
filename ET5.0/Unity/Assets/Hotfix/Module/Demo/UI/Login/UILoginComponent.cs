@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using ETHotfix;
 using ETModel;
 using Hotfix;
@@ -18,6 +19,7 @@ namespace ETHotfix
 
         public async void SendHttp()
         {
+            await this.rc.Get<GameObject>("LoginBtn").transform.DOLocalMove(Vector3.one, 1).ToAwaiter();
             Log.Info("11");
             ETModel.Game.Scene.GetComponent<SoundComponent>().PlayClip(ResConst.wav_btn_home);
             ETModel.Game.Scene.GetComponent<SoundComponent>().PlayMusic(ResConst.mp3_common_hm);
@@ -28,8 +30,8 @@ namespace ETHotfix
             {
                 Log.Info("-->" + webRequestAsync.Request.downloadHandler.text);
             }
-
             webRequestAsync.Dispose();
+            
         }
     }
 }

@@ -24,7 +24,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Bundles/Code/Hotfix.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bundles/Code/Hotfix.dll.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Init.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Init.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bundles/Code/Hotfix.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Bundles/Code/Hotfix.pdb.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/Helper/LoginHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/Helper/LoginHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/UI/Login/UILoginComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/UI/Login/UILoginComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Unity.ThirdParty.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Unity.ThirdParty.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.Hotfix.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Hotfix.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Model.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity.ThirdParty.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.ThirdParty.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,12 +112,13 @@
         <option value="$PROJECT_DIR$/Assets/Model/ILBinding/System_Single_Binding.cs" />
         <option value="$PROJECT_DIR$/Assets/Model/ILBinding/UnityEngine_Vector2_Binding.cs" />
         <option value="$PROJECT_DIR$/Assets/Hotfix/Module/Http/UnityWebRequestAsync.cs" />
-        <option value="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/UI/Login/UILoginComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Model/Module/Sound/SoundComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Model/Module/AssetsBundle/ResourcesComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/StompyRobot/SRDebugger/Scripts/Profiler/SRPProfilerService.cs" />
         <option value="$PROJECT_DIR$/Assets/ThirdParty/StompyRobot/SRDebugger/Scripts/Profiler/SRPProfilerService.cs" />
         <option value="$PROJECT_DIR$/Assets/Model/Init.cs" />
+        <option value="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/UI/Login/UILoginComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Hotfix/Module/Demo/Helper/LoginHelper.cs" />
       </list>
     </option>
   </component>
@@ -164,7 +171,7 @@
       <workItem from="1607250705584" duration="1822000" />
       <workItem from="1607337754705" duration="20740000" />
       <workItem from="1607413791863" duration="11792000" />
-      <workItem from="1607482592956" duration="13973000" />
+      <workItem from="1607482592956" duration="18586000" />
     </task>
     <servers />
   </component>
@@ -282,14 +289,14 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="496" y="342" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1607151071406" />
-    <state x="2459" y="191" width="935" height="668" key="find.popup" timestamp="1607509607655">
+    <state x="2459" y="191" width="935" height="668" key="find.popup" timestamp="1607684061973">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2459" y="191" width="935" height="668" key="find.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1607509607655" />
-    <state x="2459" y="15" width="840" height="1034" key="search.everywhere.popup" timestamp="1607509382480">
+    <state x="2459" y="191" width="935" height="668" key="find.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1607684061973" />
+    <state x="2459" y="15" width="840" height="1034" key="search.everywhere.popup" timestamp="1607517191510">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2459" y="15" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1607509382480" />
+    <state x="2459" y="15" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1607517191510" />
     <state x="966" y="20" width="672" height="160" key="search.everywhere.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1607176788823" />
   </component>
   <component name="XDebuggerManager">
@@ -336,13 +343,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Hotfix/Module/Demo/UI/Login/UILoginComponent.cs</url>
-          <line>23</line>
+          <line>25</line>
           <properties documentPath="D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Hotfix\Module\Demo\UI\Login\UILoginComponent.cs" initialLine="23">
             <startOffsets>
-              <option value="684" />
+              <option value="808" />
             </startOffsets>
             <endOffsets>
-              <option value="771" />
+              <option value="895" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />

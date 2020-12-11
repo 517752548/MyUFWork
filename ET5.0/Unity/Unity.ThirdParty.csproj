@@ -58,6 +58,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenDeAudio.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenDeUnityExtended.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\Editor\DOTweenPreviewManager.cs" />
+     <Compile Include="Assets\ThirdParty\Demigiant\Exten\DotweenExtention.cs" />
      <Compile Include="Assets\ThirdParty\Google.Protobuf\AdaptHelper.cs" />
      <Compile Include="Assets\ThirdParty\Google.Protobuf\ByteArray.cs" />
      <Compile Include="Assets\ThirdParty\Google.Protobuf\ByteString.cs" />
@@ -582,11 +598,19 @@
      <Compile Include="Assets\ThirdParty\StompyRobot\SRF\Scripts\UI\StyleSheet.cs" />
      <Compile Include="Assets\ThirdParty\StompyRobot\SRF\Scripts\UI\Unselectable.cs" />
      <None Include="Assets\ThirdParty\StompyRobot\Readme.txt" />
+     <None Include="Assets\ThirdParty\Demigiant\readme_DOTweenPro.txt" />
+     <None Include="Assets\ThirdParty\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+     <None Include="Assets\ThirdParty\Demigiant\DOTweenPro\readme.txt" />
+     <None Include="Assets\ThirdParty\Demigiant\DemiLib\Core\DemiLib.xml" />
+     <None Include="Assets\ThirdParty\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\ThirdParty\StompyRobot\SRDebugger\README.txt" />
      <None Include="Assets\ThirdParty\Unity.ThirdParty.asmdef" />
      <None Include="Assets\ThirdParty\StompyRobot\SRDebugger\UI\Fonts\FONT LICENSE.txt" />
  <Reference Include="ILRuntime">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/ILRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -806,6 +830,24 @@
  </Reference>
  <Reference Include="ILRuntime.Mono.Cecil.Pdb">
  <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Library/PackageCache/com.ourpalm.ilruntime@1.6.5/Plugins/ILRuntime.Mono.Cecil.Pdb.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Assets/ThirdParty/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenProEditor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Assets/ThirdParty/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiLib">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Assets/ThirdParty/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Assets/ThirdParty/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiEditor">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Assets/ThirdParty/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>D:/OtherGitProjects/UFramework/ET5.0/Unity/Assets/ThirdParty/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>E:/Unity/2019.4.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
