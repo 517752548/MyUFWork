@@ -16,7 +16,6 @@ namespace ETHotfix
                 Session realmSession = ComponentFactory.Create<Session, ETModel.Session>(session);
                 R2C_Login r2CLogin = (R2C_Login) await realmSession.Call(new C2R_Login() { Account = account, Password = "111111" });
                 realmSession.Dispose();
-
                 // 创建一个ETModel层的Session,并且保存到ETModel.SessionComponent中
                 ETModel.Session gateSession = ETModel.Game.Scene.GetComponent<NetOuterComponent>().Create(r2CLogin.Address);
                 ETModel.Game.Scene.AddComponent<ETModel.SessionComponent>().Session = gateSession;

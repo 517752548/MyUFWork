@@ -1,0 +1,116 @@
+2020-12-15 12:08:01.8614 AllServer 0001 (HttpComponent.cs:149) add handler[ETHotfix.HttpTest.Login] path /Login
+2020-12-15 12:08:01.8614 AllServer 0001 (HttpComponent.cs:149) add handler[ETHotfix.HttpTest.Test] path /t
+2020-12-15 12:08:01.8614 AllServer 0001 (HttpComponent.cs:165) add handler[ETHotfix.HttpTest.Test1] path /Test1
+2020-12-15 12:08:01.8614 AllServer 0001 (HttpComponent.cs:149) add handler[ETHotfix.HttpTest.Test2] path /Test2
+2020-12-15 12:08:01.8614 AllServer 0001 (HttpComponent.cs:149) add handler[ETHotfix.HttpTest.GetRechargeRecord] path /GetRechargeRecord
+2020-12-15 12:08:12.7548 AllServer 0001 (Session.cs:150) { "_t" : "C2R_Login", "RpcId" : 1, "Account" : "testtest", "Password" : "111111" }
+2020-12-15 12:08:12.7548 AllServer 0001 (Session.cs:297) { "_t" : "R2G_GetLoginKey", "RpcId" : 1, "Account" : "testtest" }
+2020-12-15 12:08:12.7745 AllServer 0001 (Session.cs:150) { "_t" : "R2G_GetLoginKey", "RpcId" : 1, "Account" : "testtest" }
+2020-12-15 12:08:12.7745 AllServer 0001 (Session.cs:297) { "_t" : "G2R_GetLoginKey", "RpcId" : 1, "Error" : 0, "Message" : null, "Key" : NumberLong("-5942686813420999814") }
+2020-12-15 12:08:12.7853 AllServer 0001 (Session.cs:150) { "_t" : "G2R_GetLoginKey", "RpcId" : 1, "Error" : 0, "Message" : null, "Key" : NumberLong("-5942686813420999814") }
+2020-12-15 12:08:12.7853 AllServer 0001 (Session.cs:297) { "_t" : "R2C_Login", "RpcId" : 1, "Error" : 0, "Message" : "", "Address" : "127.0.0.1:10002", "Key" : NumberLong("-5942686813420999814") }
+2020-12-15 12:08:12.8320 AllServer 0001 (Session.cs:150) { "_t" : "C2G_LoginGate", "RpcId" : 2, "Key" : NumberLong("-5942686813420999814") }
+2020-12-15 12:08:12.8320 AllServer 0001 (Session.cs:297) { "_t" : "G2C_LoginGate", "RpcId" : 2, "Error" : 0, "Message" : "", "PlayerId" : NumberLong(20185089) }
+2020-12-15 12:08:12.8320 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success1" }
+2020-12-15 12:08:12.8607 AllServer 0001 (Session.cs:150) { "_t" : "C2G_PlayerInfo", "RpcId" : 3 }
+2020-12-15 12:08:12.8750 AllServer 0001 (Session.cs:297) { "_t" : "G2C_PlayerInfo", "RpcId" : 3, "Error" : 0, "Message" : "", "PlayerInfo" : { "RpcId" : 0 }, "PlayerInfos" : [{ "RpcId" : 1 }, { "RpcId" : 2 }, { "RpcId" : 3 }], "TestRepeatedString" : ["9", "10"], "TestRepeatedInt32" : [4, 5, 6], "TestRepeatedInt64" : [NumberLong(7), NumberLong(8)] }
+2020-12-15 12:08:13.3383 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success0" }
+2020-12-15 12:08:13.8407 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success1" }
+2020-12-15 12:08:14.3441 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success2" }
+2020-12-15 12:08:14.8485 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success3" }
+2020-12-15 12:08:15.3504 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success4" }
+2020-12-15 12:08:15.8529 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success5" }
+2020-12-15 12:08:16.3543 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success6" }
+2020-12-15 12:08:16.8563 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success7" }
+2020-12-15 12:08:17.3588 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success8" }
+2020-12-15 12:08:17.8623 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success9" }
+2020-12-15 12:08:18.3633 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success10" }
+2020-12-15 12:08:18.8660 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success11" }
+2020-12-15 12:08:19.3685 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success12" }
+2020-12-15 12:08:19.8704 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success13" }
+2020-12-15 12:08:20.3725 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success14" }
+2020-12-15 12:08:20.8740 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success15" }
+2020-12-15 12:08:21.3773 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success16" }
+2020-12-15 12:08:21.8802 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success17" }
+2020-12-15 12:08:22.3832 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success18" }
+2020-12-15 12:08:22.8849 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success19" }
+2020-12-15 12:08:23.3874 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success20" }
+2020-12-15 12:08:23.8891 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success21" }
+2020-12-15 12:08:24.3912 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success22" }
+2020-12-15 12:08:24.8943 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success23" }
+2020-12-15 12:08:25.3963 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success24" }
+2020-12-15 12:08:25.8982 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success25" }
+2020-12-15 12:08:26.3997 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success26" }
+2020-12-15 12:08:26.9021 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success27" }
+2020-12-15 12:08:27.4041 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success28" }
+2020-12-15 12:08:27.9050 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success29" }
+2020-12-15 12:08:28.4089 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success30" }
+2020-12-15 12:08:28.9109 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success31" }
+2020-12-15 12:08:29.4128 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success32" }
+2020-12-15 12:08:29.9147 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success33" }
+2020-12-15 12:08:30.4182 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success34" }
+2020-12-15 12:08:30.9207 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success35" }
+2020-12-15 12:08:31.4243 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success36" }
+2020-12-15 12:08:31.9257 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success37" }
+2020-12-15 12:08:32.4272 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success38" }
+2020-12-15 12:08:32.9293 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success39" }
+2020-12-15 12:08:33.4306 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success40" }
+2020-12-15 12:08:33.9351 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success41" }
+2020-12-15 12:08:34.4375 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success42" }
+2020-12-15 12:08:34.9414 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success43" }
+2020-12-15 12:08:35.4424 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success44" }
+2020-12-15 12:08:35.9445 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success45" }
+2020-12-15 12:08:36.4465 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success46" }
+2020-12-15 12:08:36.9489 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success47" }
+2020-12-15 12:08:37.4505 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success48" }
+2020-12-15 12:08:37.9530 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success49" }
+2020-12-15 12:08:38.4541 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success50" }
+2020-12-15 12:08:38.9561 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success51" }
+2020-12-15 12:08:39.4576 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success52" }
+2020-12-15 12:08:39.9598 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success53" }
+2020-12-15 12:08:40.4617 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success54" }
+2020-12-15 12:08:40.9637 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success55" }
+2020-12-15 12:08:41.4652 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success56" }
+2020-12-15 12:08:41.9673 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success57" }
+2020-12-15 12:08:42.4698 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success58" }
+2020-12-15 12:08:42.9727 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success59" }
+2020-12-15 12:08:43.4742 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success60" }
+2020-12-15 12:08:43.9762 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success61" }
+2020-12-15 12:08:44.4771 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success62" }
+2020-12-15 12:08:44.9781 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success63" }
+2020-12-15 12:08:45.4792 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success64" }
+2020-12-15 12:08:45.9800 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success65" }
+2020-12-15 12:08:46.4835 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success66" }
+2020-12-15 12:08:46.9864 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success67" }
+2020-12-15 12:08:47.4884 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success68" }
+2020-12-15 12:08:47.9894 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success69" }
+2020-12-15 12:08:48.4914 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success70" }
+2020-12-15 12:08:48.9943 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success71" }
+2020-12-15 12:08:49.4973 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success72" }
+2020-12-15 12:08:50.0007 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success73" }
+2020-12-15 12:08:50.5052 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success74" }
+2020-12-15 12:08:51.0081 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success75" }
+2020-12-15 12:08:51.5096 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success76" }
+2020-12-15 12:08:52.0135 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success77" }
+2020-12-15 12:08:52.5141 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success78" }
+2020-12-15 12:08:53.0150 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success79" }
+2020-12-15 12:08:53.5170 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success80" }
+2020-12-15 12:08:54.0209 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success81" }
+2020-12-15 12:08:54.5228 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success82" }
+2020-12-15 12:08:55.0253 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success83" }
+2020-12-15 12:08:55.5272 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success84" }
+2020-12-15 12:08:56.0296 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success85" }
+2020-12-15 12:08:56.5316 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success86" }
+2020-12-15 12:08:57.0343 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success87" }
+2020-12-15 12:08:57.5353 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success88" }
+2020-12-15 12:08:58.0402 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success89" }
+2020-12-15 12:08:58.5422 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success90" }
+2020-12-15 12:08:59.0445 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success91" }
+2020-12-15 12:08:59.5474 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success92" }
+2020-12-15 12:09:00.0504 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success93" }
+2020-12-15 12:09:00.5534 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success94" }
+2020-12-15 12:09:01.0558 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success95" }
+2020-12-15 12:09:01.5574 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success96" }
+2020-12-15 12:09:02.0599 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success97" }
+2020-12-15 12:09:02.5616 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success98" }
+2020-12-15 12:09:03.0644 AllServer 0001 (Session.cs:297) { "_t" : "G2C_TestHotfixMessage", "Info" : "recv hotfix message success99" }

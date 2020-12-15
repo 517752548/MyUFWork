@@ -19,6 +19,8 @@ namespace ETHotfix
 
         public async void SendHttp()
         {
+            LoginHelper.OnLoginAsync("testtest");
+            return;
             await this.rc.Get<GameObject>("LoginBtn").transform.DOLocalMove(Vector3.one, 1).ToAwaiter();
             Log.Info("11");
             ETModel.Game.Scene.GetComponent<SoundComponent>().PlayClip(ResConst.wav_btn_home);

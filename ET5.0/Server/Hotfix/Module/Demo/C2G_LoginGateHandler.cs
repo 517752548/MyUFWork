@@ -16,15 +16,16 @@ namespace ETHotfix
 				reply();
 				return;
 			}
+			Log.Info("session id:" + session.Id);
 			Player player = ComponentFactory.Create<Player, string>(account);
+			player.GateSession = session;
 			Game.Scene.GetComponent<PlayerComponent>().Add(player);
 			session.AddComponent<SessionPlayerComponent>().Player = player;
 			session.AddComponent<MailBoxComponent, string>(MailboxType.GateSession);
-
 			response.PlayerId = player.Id;
 			reply();
 
-			session.Send(new G2C_TestHotfixMessage() { Info = "recv hotfix message success" });
+			session.Send(new G2C_TestHotfixMessage() { Info = "recv hotfix message success1" });
 			await ETTask.CompletedTask;
 		}
 	}
