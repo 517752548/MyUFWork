@@ -1,0 +1,5 @@
+require 'module/common/global'
+require 'module/common/NotifyConsts'
+require 'module/common/CommonPanelMaskHybridUI'
+require 'module/common/CommonPanelMask'
+require 'module/common/PrefabFactory'

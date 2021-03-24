@@ -1,0 +1,5 @@
+require "module/loading/Include"
+require "module/login/Include"
+require "module/common/Include"
+require "module/float/Include"
+require "module/scene/Include"

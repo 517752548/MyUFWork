@@ -1,0 +1,89 @@
+JSON                     = require "cjson"
+Util                     = LuaFramework.Util
+AppConst                 = LuaFramework.AppConst
+LuaHelper                = LuaFramework.LuaHelper
+LuaManager               = LuaFramework.LuaManager
+
+ObjPoolManager           = LuaHelper.GetObjectPoolManager()
+--Unity中的类
+GameObject               = UnityEngine.GameObject
+LoadSceneMode            = UnityEngine.SceneManagement.LoadSceneMode
+SceneManager             = UnityEngine.SceneManagement.SceneManager
+Input                    = UnityEngine.Input
+PlayerPrefs              = UnityEngine.PlayerPrefs
+Camera                   = UnityEngine.Camera
+Physics                  = UnityEngine.Physics
+Debug                    = UnityEngine.Debug
+Space                    = UnityEngine.Space
+WrapMode                 = UnityEngine.WrapMode
+AnimationEvent           = UnityEngine.AnimationEvent
+TouchPhase               = UnityEngine.TouchPhase
+EventSystem              = UnityEngine.EventSystems.EventSystem
+KeyCode                  = UnityEngine.KeyCode
+AnimationCullingType     = UnityEngine.AnimationCullingType
+ParticleSystem           = UnityEngine.ParticleSystem
+Gizmos                   = UnityEngine.Gizmos
+LayerMask                = UnityEngine.LayerMask
+Sprite                   = UnityEngine.Sprite
+Rect                     = UnityEngine.Rect
+LayoutRebuilder          = UnityEngine.UI.LayoutRebuilder
+RectTransformUtility     = UnityEngine.RectTransformUtility
+LayoutUtility            = UnityEngine.UI.LayoutUtility
+ColorUtility             = UnityEngine.ColorUtility
+TextAnchor               = UnityEngine.TextAnchor
+RectOffset               = UnityEngine.RectOffset
+AudioSource              = UnityEngine.AudioSource
+AudioClip                = UnityEngine.AudioClip
+RenderTextureFormat      = UnityEngine.RenderTextureFormat
+RenderTexture            = UnityEngine.RenderTexture
+MovementType             = UnityEngine.UI.ScrollRect.MovementType
+RenderSettings           = UnityEngine.RenderSettings
+--TouchScreenKeyboard = UnityEngine.TouchScreenKeyboard
+--TouchScreenKeyboardType = UnityEngine.TouchScreenKeyboardType
+--NavMesh
+NavMesh                  = UnityEngine.AI.NavMesh
+NavMeshAgent             = UnityEngine.AI.NavMeshAgent
+NavMeshPath              = UnityEngine.AI.NavMeshPath
+NavMeshObstacle          = UnityEngine.AI.NavMeshObstacle
+--Timeline
+TimelineAsset            = UnityEngine.Timeline.TimelineAsset
+TimelineClip             = UnityEngine.Timeline.TimelineClip
+TimelinePlayable         = UnityEngine.Timeline.TimelinePlayable
+--Playable
+Playable                 = UnityEngine.Playables.Playable
+PlayableAsset            = UnityEngine.Playables.PlayableAsset
+PlayableBehaviour        = UnityEngine.Playables.PlayableBehaviour
+PlayableBinding          = UnityEngine.Playables.PlayableBinding
+PlayableDirector         = UnityEngine.Playables.PlayableDirector
+PlayableTrack            = UnityEngine.Playables.PlayableTrack
+DirectorUpdateMode       = UnityEngine.Playables.DirectorUpdateMode
+DirectorWrapMode         = UnityEngine.Playables.DirectorWrapMode
+AnimationCurve           = UnityEngine.AnimationCurve
+Keyframe                 = UnityEngine.Keyframe
+WWWForm                  = UnityEngine.WWWForm
+--DOTween
+DOTween                  = DG.Tweening.DOTween
+Ease                     = DG.Tweening.Ease
+RotateMode               = DG.Tweening.RotateMode
+LoopType                 = DG.Tweening.LoopType
+UpdateType               = DG.Tweening.UpdateType
+PathType                 = DG.Tweening.PathType
+PathMode                 = DG.Tweening.PathMode
+--自定义的类
+NetManager               = GNetManager.GetInstance()
+ResManager               = LuaHelper.GetResManager()
+FileManager              = Gear.GFileManager.GetInstance()
+FileBundleInfo           = Gear.GFileBundleInfo
+BundleStorageLocation    = Gear.BundleStorageLocation
+WebManager               = Gear.GWebManager.GetInstance()
+TexturePackerManager     = TexturePackerManager.GetInstance()
+AtlasManager             = AtlasManager.GetInstance()
+IsRunInEditor            = PlatformUtil.IsRunInEditor()
+IsWindowsPlayer          = PlatformUtil.IsWindowsPlayer()
+IsIPhonePlayer           = PlatformUtil.IsIPhonePlayer()
+IsAndroidPlayer          = PlatformUtil.IsAndroidPlayer()
+IsReleaseWindows         = PlatformUtil.IsReleaseWindows()
+IsReleaseAndroid         = PlatformUtil.IsReleaseAndroid()
+IsReleaseIOS             = PlatformUtil.IsReleaseIOS()
+--实例
+ins_ButtonNavigationNone = LuaHelper.GetButtonNavigationNone()

@@ -1,0 +1,6 @@
+require 'core/mvc/Facade'
+require 'core/mvc/Controller'
+require 'core/mvc/Service'
+require 'core/mvc/Model'
+require 'core/mvc/View'
+require 'core/mvc/Notification'
