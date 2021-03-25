@@ -10,8 +10,11 @@ function LoginPanel:OnLoaded()
 	UIUtil:FixFullScreenUITransform(self.bgImg)
 
 	------------------
-	self.btnEnter:OnClick(function()
-		self:EnterGameClick()
+	self.DanjiBtn:OnClick(function()
+		UIManager:OpenUI(UIPanelName.DanjiPanel)
+	end)
+	self.OnLineBtn:OnClick(function()
+		UIManager:OpenUI(UIPanelName.OnLinePanel)
 	end)
 end
 
@@ -20,7 +23,8 @@ end
 
 -- 点击进入游戏
 function LoginPanel:EnterGameClick()
-	LoginController:DoEnterGame()
+	UIManager:OpenUI(UIPanelName.OnLinePanel)
+	--LoginController:DoEnterGame()
 end
 
 function LoginPanel:OnHide()

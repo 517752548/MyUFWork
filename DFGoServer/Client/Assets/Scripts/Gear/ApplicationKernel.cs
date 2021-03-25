@@ -79,7 +79,7 @@ public class ApplicationKernel : MonoBehaviour
         
         TickRunner.GetInstance().Init(); //先启动Tick管理器,让加载管理器(GBaseLoader, GResManager)可以运行
         InitResManager();
-        SRDebug.Init();
+        //SRDebug.Init();
         CheckExtractResource();
     }
 

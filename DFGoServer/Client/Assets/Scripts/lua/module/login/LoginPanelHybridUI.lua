@@ -11,7 +11,9 @@ end
 function LoginPanelHybridUI:OnLoaded()
 	LoginPanelHybridUI.superclass.OnLoaded(self)
 	self.bg = UGUIObject.New(self.transform:Find('bg'))
-	self.btnEnter = Button.New(self.transform:Find('btnEnter'))
+	self.DanjiBtn = Button.New(self.transform:Find('DanjiBtn'))
+	self.Text = Text.New(self.transform:Find('Text'))
+	self.OnLineBtn = Button.New(self.transform:Find('OnLineBtn'))
 end
 
 function LoginPanelHybridUI:IsLoadAsync()
@@ -44,8 +46,12 @@ end
 
 function LoginPanelHybridUI:Destroy()
 	LoginPanelHybridUI.superclass.Destroy(self)
-	self.btnEnter:Destroy()
+	self.OnLineBtn:Destroy()
+	self.Text:Destroy()
+	self.DanjiBtn:Destroy()
 	self.bg:Destroy()
-	self.btnEnter = nil
+	self.OnLineBtn = nil
+	self.Text = nil
+	self.DanjiBtn = nil
 	self.bg = nil
 end

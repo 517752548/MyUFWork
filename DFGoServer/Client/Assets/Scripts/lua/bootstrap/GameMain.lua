@@ -10,7 +10,7 @@ function GameMain()
 	if IsRunInEditor then
 		--package.cpath = package.cpath .. ';C:/Users/Admin/AppData/Roaming/JetBrains/Rider2020.2/plugins/intellij-emmylua/classes/debugger/emmy/windows/x64/?.dll'
 		--local dbg = require('emmy_core')
-		--dbg.tcpListen('localhost', 9966)
+		--dbg.tcpListen('localhost', 9967)
 
 
 		require 'bootstrap/Config'
@@ -53,11 +53,7 @@ function OnEnterGame()
 		return
 	end
 	PreloadAssets()
-	if IsRunInEditor then
-		LoginController:InitLogin()
-	else
-		HomeMainController:EnterLoginScene()
-	end
+	LoginController:InitLogin()
 end
 
 ---@return nil @预加载一些常用的东西，避免出现同步和异步同时加载，unity引擎报出Same loaded xxxx的异常
