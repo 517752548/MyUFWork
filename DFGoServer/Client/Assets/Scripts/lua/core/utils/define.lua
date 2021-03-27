@@ -85,5 +85,6 @@ IsAndroidPlayer          = PlatformUtil.IsAndroidPlayer()
 IsReleaseWindows         = PlatformUtil.IsReleaseWindows()
 IsReleaseAndroid         = PlatformUtil.IsReleaseAndroid()
 IsReleaseIOS             = PlatformUtil.IsReleaseIOS()
+AndroidCall              = AndroidCall
 --实例
 ins_ButtonNavigationNone = LuaHelper.GetButtonNavigationNone()

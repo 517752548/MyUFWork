@@ -207,6 +207,8 @@ public static class CustomSettings
 		_GT(typeof(UILocalizationComponent)),
 		_GT(typeof(StorageUtil)),
 		_GT(typeof(CustomParticalLength)),
+		_GT(typeof(AndroidCall)),
+		_GT(typeof(UnityReceiveNativeMessage)),
 		//_GT(typeof(LuaDebugTool)),
 		//_GT(typeof(LuaValueInfo)),
 

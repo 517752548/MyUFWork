@@ -73,6 +73,7 @@ public class DelegateFactory
 		dict.Add(typeof(UnityEngine.Video.VideoPlayer.TimeEventHandler), factory.UnityEngine_Video_VideoPlayer_TimeEventHandler);
 		dict.Add(typeof(UnityEngine.Video.VideoPlayer.FrameReadyEventHandler), factory.UnityEngine_Video_VideoPlayer_FrameReadyEventHandler);
 		dict.Add(typeof(System.Action<TMPro.TMP_TextInfo>), factory.System_Action_TMPro_TMP_TextInfo);
+		dict.Add(typeof(UnityReceiveNativeMessage.OnNativeBack), factory.UnityReceiveNativeMessage_OnNativeBack);
 		dict.Add(typeof(DG.Tweening.Core.DOGetter<float>), factory.DG_Tweening_Core_DOGetter_float);
 		dict.Add(typeof(DG.Tweening.Core.DOSetter<float>), factory.DG_Tweening_Core_DOSetter_float);
 		dict.Add(typeof(DG.Tweening.Core.DOGetter<double>), factory.DG_Tweening_Core_DOGetter_double);
@@ -178,6 +179,7 @@ public class DelegateFactory
 		DelegateTraits<UnityEngine.Video.VideoPlayer.TimeEventHandler>.Init(factory.UnityEngine_Video_VideoPlayer_TimeEventHandler);
 		DelegateTraits<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>.Init(factory.UnityEngine_Video_VideoPlayer_FrameReadyEventHandler);
 		DelegateTraits<System.Action<TMPro.TMP_TextInfo>>.Init(factory.System_Action_TMPro_TMP_TextInfo);
+		DelegateTraits<UnityReceiveNativeMessage.OnNativeBack>.Init(factory.UnityReceiveNativeMessage_OnNativeBack);
 		DelegateTraits<DG.Tweening.Core.DOGetter<float>>.Init(factory.DG_Tweening_Core_DOGetter_float);
 		DelegateTraits<DG.Tweening.Core.DOSetter<float>>.Init(factory.DG_Tweening_Core_DOSetter_float);
 		DelegateTraits<DG.Tweening.Core.DOGetter<double>>.Init(factory.DG_Tweening_Core_DOGetter_double);
@@ -283,6 +285,7 @@ public class DelegateFactory
 		TypeTraits<UnityEngine.Video.VideoPlayer.TimeEventHandler>.Init(factory.Check_UnityEngine_Video_VideoPlayer_TimeEventHandler);
 		TypeTraits<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>.Init(factory.Check_UnityEngine_Video_VideoPlayer_FrameReadyEventHandler);
 		TypeTraits<System.Action<TMPro.TMP_TextInfo>>.Init(factory.Check_System_Action_TMPro_TMP_TextInfo);
+		TypeTraits<UnityReceiveNativeMessage.OnNativeBack>.Init(factory.Check_UnityReceiveNativeMessage_OnNativeBack);
 		TypeTraits<DG.Tweening.Core.DOGetter<float>>.Init(factory.Check_DG_Tweening_Core_DOGetter_float);
 		TypeTraits<DG.Tweening.Core.DOSetter<float>>.Init(factory.Check_DG_Tweening_Core_DOSetter_float);
 		TypeTraits<DG.Tweening.Core.DOGetter<double>>.Init(factory.Check_DG_Tweening_Core_DOGetter_double);
@@ -388,6 +391,7 @@ public class DelegateFactory
 		StackTraits<UnityEngine.Video.VideoPlayer.TimeEventHandler>.Push = factory.Push_UnityEngine_Video_VideoPlayer_TimeEventHandler;
 		StackTraits<UnityEngine.Video.VideoPlayer.FrameReadyEventHandler>.Push = factory.Push_UnityEngine_Video_VideoPlayer_FrameReadyEventHandler;
 		StackTraits<System.Action<TMPro.TMP_TextInfo>>.Push = factory.Push_System_Action_TMPro_TMP_TextInfo;
+		StackTraits<UnityReceiveNativeMessage.OnNativeBack>.Push = factory.Push_UnityReceiveNativeMessage_OnNativeBack;
 		StackTraits<DG.Tweening.Core.DOGetter<float>>.Push = factory.Push_DG_Tweening_Core_DOGetter_float;
 		StackTraits<DG.Tweening.Core.DOSetter<float>>.Push = factory.Push_DG_Tweening_Core_DOSetter_float;
 		StackTraits<DG.Tweening.Core.DOGetter<double>>.Push = factory.Push_DG_Tweening_Core_DOGetter_double;
@@ -3710,6 +3714,67 @@ public class DelegateFactory
 	}
 
 	void Push_System_Action_TMPro_TMP_TextInfo(IntPtr L, System.Action<TMPro.TMP_TextInfo> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class UnityReceiveNativeMessage_OnNativeBack_Event : LuaDelegate
+	{
+		public UnityReceiveNativeMessage_OnNativeBack_Event(LuaFunction func) : base(func) { }
+		public UnityReceiveNativeMessage_OnNativeBack_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(int param0, int param1, string param2)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(int param0, int param1, string param2)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public UnityReceiveNativeMessage.OnNativeBack UnityReceiveNativeMessage_OnNativeBack(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			UnityReceiveNativeMessage.OnNativeBack fn = delegate(int param0, int param1, string param2) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			UnityReceiveNativeMessage_OnNativeBack_Event target = new UnityReceiveNativeMessage_OnNativeBack_Event(func);
+			UnityReceiveNativeMessage.OnNativeBack d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			UnityReceiveNativeMessage_OnNativeBack_Event target = new UnityReceiveNativeMessage_OnNativeBack_Event(func, self);
+			UnityReceiveNativeMessage.OnNativeBack d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_UnityReceiveNativeMessage_OnNativeBack(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<UnityReceiveNativeMessage.OnNativeBack>(L, pos);
+	}
+
+	void Push_UnityReceiveNativeMessage_OnNativeBack(IntPtr L, UnityReceiveNativeMessage.OnNativeBack o)
 	{
 		ToLua.Push(L, o);
 	}

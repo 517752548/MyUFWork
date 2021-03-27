@@ -133,11 +133,11 @@ public class UIRoot : MonoBehaviour
 			if (PlatformUtil.IsAndroidPlayer()) //针对android刘海的判断，如果Screen.safeArea和屏幕的大小一样，说明可能没生效（不是Android P系统），进一步通过JNI获取Notch的大小，然后safeWidth or safeHeight减去这个即可
 			{
 				int notchHeight = 0;
-				AndroidJavaObject currActivity = JProxy.GetCurrentActivity();
-				if (currActivity != null)
-				{ 
-					notchHeight = currActivity.Call<int>("getNotchHeight");
-				}
+				// AndroidJavaObject currActivity = JProxy.GetCurrentActivity();
+				// if (currActivity != null)
+				// { 
+				// 	//notchHeight = currActivity.Call<int>("getNotchHeight");
+				// }
 				Debug.Log(string.Format("notchHeight {0}", notchHeight));
 				safeHeight -= ((float)notchHeight * 2);
 			}
