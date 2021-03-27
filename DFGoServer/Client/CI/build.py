@@ -12,14 +12,14 @@ import sftp
 import threading
 
 global UNITY_PATH_WINDOWS
-UNITY_PATH_WINDOWS = '\"C:/Program Files/Unity/Hub/Editor/2019.4.18f1c1/Editor/Unity.exe\"'
+UNITY_PATH_WINDOWS = '\"C:/Program Files/Unity/Hub/Editor/2019.4.17f1c1/Editor/Unity.exe\"'
 global UNITY_PATH_MAC
 UNITY_PATH_MAC = '/Applications/Unity/Unity.app/Contents/MacOS/Unity'
 global PROJECT_NAME
-PROJECT_NAME = 'LetUs'
+PROJECT_NAME = 'DFZX'
 global PROJECT_PATH
-PROJECT_PATH = os.path.abspath('../')
-PROJECT_PATH = PROJECT_PATH + "/BlockPuzzle_Android_Debug/Client"
+PROJECT_PATH = "D:\Projects\MyUFWork"
+PROJECT_PATH = PROJECT_PATH + "/DFGoServer/Client"
 
 global APK_PATH
 APK_PATH = "/Users/admin/workspace/BlockPuzzle_Android_Debug/Client/Release/Android"
@@ -36,7 +36,7 @@ global logFile
 logFile = logFolder + '/log-{0}.txt'.format(timestamp)
 
 global STREAMINGASSETS_PATH
-STREAMINGASSETS_PATH = '../Assets/StreamingAssets'
+STREAMINGASSETS_PATH = 'D:\Projects\MyUFWork\DFGoServer\Client\Assets\StreamingAssets'
 
 
 
@@ -116,7 +116,7 @@ def UnityBuildWindowsPlayer(isBuild, bundle, isUploadCDN):
     #
     streamingassetspath_local = STREAMINGASSETS_PATH + "/AssetBundles/Windows"
     if os.path.exists(streamingassetspath_local) and isUploadCDN:
-        UploadAssetBundlesToFTP("assetbundles/windows",
+        UploadAssetBundlesToFTP("dfzx/windows",
                                 streamingassetspath_local)
     else:
         print("CANNOT FIND LOCAL STREAMINGASSET FOLDER")
@@ -158,10 +158,10 @@ def UnityBuildAndroid(isBuild, bundle, isDebug, isUploadCDN, publisher):
     cmd = ""
     UnityBuildAssetBundles(bundle)
     #
-    streamingassetspath_local = STREAMINGASSETS_PATH + "/AssetBundles/Android"
+    streamingassetspath_local = STREAMINGASSETS_PATH + "/assetbundles/Android"
     print(streamingassetspath_local)
     if os.path.exists(streamingassetspath_local) and isUploadCDN:
-        UploadAssetBundlesToFTP("assetbundles/android",
+        UploadAssetBundlesToFTP("dfzx/android",
                                 streamingassetspath_local)
         # StartUploadToSFTPThread('62.234.167.66', 21, 'walker',
         #                         'BRPbD4zsskLHaMax', '/assetbundles/android', streamingassetspath_local)
@@ -193,7 +193,7 @@ def UnityBuildAndroid(isBuild, bundle, isDebug, isUploadCDN, publisher):
         # rename
                         
     if isUploadCDN:
-        UploadAssetBundlesToFTP("apk",
+        UploadAssetBundlesToFTP("dfzx/apk",
                                 APK_PATH)
     #buildfile = release_path + "/{0}.apk".format(PROJECT_NAME)
     #rename = "/{0}-{1}.apk".format(PROJECT_NAME, timestamp)
@@ -245,7 +245,7 @@ def UnityBuildIOS(isBuild, bundle, isDebug, isUploadCDN, publisher):
     #
     streamingassetspath_local = STREAMINGASSETS_PATH + "/AssetBundles/iOS"
     if os.path.exists(streamingassetspath_local) and isUploadCDN:
-        UploadAssetBundlesToFTP("assetbundles/ios", streamingassetspath_local)
+        UploadAssetBundlesToFTP("dfzx/ios", streamingassetspath_local)
     else:
         print("CANNOT FIND LOCAL STREAMINGASSET FOLDER")
 
