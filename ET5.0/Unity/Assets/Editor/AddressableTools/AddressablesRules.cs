@@ -94,6 +94,7 @@ using UnityEngine;
                             rule.searchOption = (SearchOption) Enum.Parse(typeof(SearchOption), searchOption);
                             rule.GroupName = GroupName;
                             rule.Lable = lable.Split('|');
+                            rule.Lable = rule.Lable.Append("A").ToArray();
                             rule.resType = restype;
                             rule.packageType = PackageType;
                             rule.canUpdate = bool.Parse(canupdate);

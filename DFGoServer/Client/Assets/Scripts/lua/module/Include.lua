@@ -1,0 +1,8 @@
+require "module/loading/Include"
+require "module/login/Include"
+require "module/common/Include"
+require "module/float/Include"
+require "module/scene/Include"
+require "module/home/Include"
+require "module/danji/Include"
+require "module/online/Include"

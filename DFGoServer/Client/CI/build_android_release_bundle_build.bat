@@ -1,0 +1,1 @@
+py -3 build.py android release --bundle build --build

@@ -46,7 +46,14 @@ public static class AddressablesBundleBuildScript
             if (g == null || g.entries.Count == 0)
             {
                 aaSettings.RemoveGroup(g);
+                g = null;
+                continue;
             }
+            //
+            // if (g != null)
+            // {
+            //     g.Name = $"{g.Name}_delete";
+            // }
         }
 
         foreach (string key in bundles.Keys)
@@ -93,6 +100,7 @@ public static class AddressablesBundleBuildScript
                 schema.BuildPath.SetVariableByName(group.Settings, AddressableAssetSettings.kRemoteBuildPath);
                 schema.LoadPath.SetVariableByName(group.Settings, AddressableAssetSettings.kRemoteLoadPath);
                 schema.BundleNaming = BundledAssetGroupSchema.BundleNamingStyle.AppendHash;
+                schema.UseAssetBundleCrc = true;
                 contentUpdateGroupSchema.StaticContent = false;
             }
             else
@@ -140,120 +148,25 @@ public static class AddressablesBundleBuildScript
                 }
             }
         }
-
-        UnityEditor.EditorUtility.ClearProgressBar();
-    }
-
-    public static void AddFileToAddressablesHotUpdate()
-    {
-        AddressablesRules rules = new AddressablesRules();
-        Dictionary<string, BuildAddressablesData> bundles = rules.GetBuilds();
-        AddressableAssetSettings aaSettings = AddressableAssetSettingsDefaultObject.GetSettings(false);
-        AddressableAssetGroup group = null;
-        //清理重名group
-        // foreach (string key in bundles.Keys)
+        // for (int i = aaSettings.groups.Count - 1; i >= 0; i--)
         // {
-        //     group = aaSettings.groups.Find(x => x.Name == bundles[key].GroupName);
-        //     if (group != null)
+        //     var g = aaSettings.groups[i];
+        //     if (g == null || g.entries.Count == 0)
         //     {
-        //         aaSettings.RemoveGroup(group);
-        //         group = null;
+        //         aaSettings.RemoveGroup(g);
+        //         g = null;
+        //         continue;
+        //     }
+        //
+        //     if (g != null)
+        //     {
+        //         if (g.Name.Contains("_delete"))
+        //         {
+        //             aaSettings.RemoveGroup(g);
+        //             g = null;
+        //         }
         //     }
         // }
-
-        foreach (string key in bundles.Keys)
-        {
-            group = aaSettings.groups.Find(x => x.Name == bundles[key].GroupName);
-            if (group == null)
-            {
-                if (bundles[key].ResType == "online")
-                {
-                    group = aaSettings.CreateGroup(bundles[key].GroupName, false, false, false, null);
-                    BundledAssetGroupSchema schema = group.AddSchema<BundledAssetGroupSchema>();
-                    schema.Compression = BundledAssetGroupSchema.BundleCompressionMode.LZ4;
-                    if (bundles[key].packageType == "PackSeparately")
-                    {
-                        schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackSeparately;
-                    }
-                    else if (bundles[key].packageType == "PackTogether")
-                    {
-                        schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackTogether;
-                    }
-                    else if (bundles[key].packageType == "PackTogetherByLabel")
-                    {
-                        schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackTogetherByLabel;
-                    }
-
-                    schema.BuildPath.SetVariableByName(group.Settings, AddressableAssetSettings.kRemoteBuildPath);
-                    schema.LoadPath.SetVariableByName(group.Settings, AddressableAssetSettings.kRemoteLoadPath);
-                    schema.UseAssetBundleCache = true;
-                    schema.UseAssetBundleCrc = true;
-                    schema.Timeout = 200;
-                    schema.RetryCount = 5;
-                    ContentUpdateGroupSchema contentUpdateGroupSchema = group.AddSchema<ContentUpdateGroupSchema>();
-                    contentUpdateGroupSchema.StaticContent = false;
-                    group = null;
-                }
-                else
-                {
-                    group = aaSettings.CreateGroup(bundles[key].GroupName, false, false, false, null);
-                    BundledAssetGroupSchema schema = group.AddSchema<BundledAssetGroupSchema>();
-                    schema.Compression = BundledAssetGroupSchema.BundleCompressionMode.LZ4;
-                    if (bundles[key].packageType == "PackSeparately")
-                    {
-                        schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackSeparately;
-                    }
-                    else if (bundles[key].packageType == "PackTogether")
-                    {
-                        schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackTogether;
-                    }
-                    else if (bundles[key].packageType == "PackTogetherByLabel")
-                    {
-                        schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackTogetherByLabel;
-                    }
-
-                    //全部标记静态资源
-                    ContentUpdateGroupSchema contentUpdateGroupSchema = group.AddSchema<ContentUpdateGroupSchema>();
-                    contentUpdateGroupSchema.StaticContent = true;
-                    // if (bundles[key].canUpdate)
-                    // {
-                    //      ContentUpdateGroupSchema contentUpdateGroupSchema =  group.AddSchema<ContentUpdateGroupSchema>();
-                    //      contentUpdateGroupSchema.StaticContent = true;
-                    // }
-
-                    schema.UseAssetBundleCache = true;
-                    schema.UseAssetBundleCrc = true;
-                    group = null;
-                }
-            }
-        }
-
-        foreach (string key in bundles.Keys)
-        {
-            int count = 0;
-            int MaxCount = bundles[key].entitys.Count;
-            group = aaSettings.groups.Find(x => x.Name == bundles[key].GroupName);
-            foreach (string entitysKey in bundles[key].entitys.Keys)
-            {
-                count++;
-                if (count % 3 == 0)
-                    if (UnityEditor.EditorUtility.DisplayCancelableProgressBar(string.Format("Collecting... [{0}/{1}]", count, MaxCount), entitysKey,
-                        count * 1f / MaxCount))
-                    {
-                        break;
-                    }
-
-                string guid = AssetDatabase.AssetPathToGUID(bundles[key].entitys[entitysKey].filestring);
-                AddressableAssetEntry entity = aaSettings.CreateOrMoveEntry(guid, group);
-                entity.SetAddress(entitysKey);
-                for (int i = 0; i < bundles[key].Lable.Length; i++)
-                {
-                    aaSettings.AddLabel(bundles[key].Lable[i]);
-                    entity.SetLabel(bundles[key].Lable[i], true);
-                }
-            }
-        }
-
         UnityEditor.EditorUtility.ClearProgressBar();
     }
 

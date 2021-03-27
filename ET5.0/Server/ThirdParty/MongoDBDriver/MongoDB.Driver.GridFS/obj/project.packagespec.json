@@ -1,11 +1,14 @@
 ﻿{
   "version": "0.0.0-local",
   "restore": {
-    "projectUniqueName": "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.GridFS\\MongoDB.Driver.GridFS.csproj",
+    "projectUniqueName": "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.GridFS\\MongoDB.Driver.GridFS.csproj",
     "projectName": "MongoDB.Driver.GridFS",
-    "projectPath": "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.GridFS\\MongoDB.Driver.GridFS.csproj",
-    "outputPath": "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.GridFS\\obj\\",
+    "projectPath": "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.GridFS\\MongoDB.Driver.GridFS.csproj",
+    "outputPath": "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.GridFS\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
@@ -15,14 +18,14 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
-            "projectPath": "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj"
+          "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Bson\\MongoDB.Bson.csproj"
           },
-          "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj": {
-            "projectPath": "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj"
+          "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver.Core\\MongoDB.Driver.Core.csproj"
           },
-          "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver\\MongoDB.Driver.csproj": {
-            "projectPath": "G:\\MyUnityFrameWork\\MyUF\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver\\MongoDB.Driver.csproj"
+          "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver\\MongoDB.Driver.csproj": {
+            "projectPath": "D:\\OtherGitProjects\\UFramework\\ET5.0\\Server\\ThirdParty\\MongoDBDriver\\MongoDB.Driver\\MongoDB.Driver.csproj"
           }
         }
       }
@@ -55,7 +58,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
     }
   }
 }

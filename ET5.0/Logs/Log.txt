@@ -1,0 +1,26 @@
+2020-12-09 10:24:31.8028 AllServer 0001 (Program.cs:36) server start........................ 1 AllServer
+2020-12-09 10:24:31.8626 AllServer 0001 (Program.cs:88) allserver
+2020-12-09 10:24:32.0864 AllServer 0001 (EventSystem.cs:444) System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444
+2020-12-09 10:26:23.5012 AllServer 0001 (Program.cs:36) server start........................ 1 AllServer
+2020-12-09 10:26:23.5579 AllServer 0001 (Program.cs:88) allserver
+2020-12-09 10:26:23.7839 AllServer 0001 (EventSystem.cs:444) System.Exception: http server error: 5
+ ---> System.Net.HttpListenerException (5): 拒绝访问。
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 121
+   --- End of inner exception stack trace ---
+   at ETModel.HttpComponent.Start() in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 127
+   at ETModel.HttpComponentComponentStartSystem.Start(HttpComponent self) in D:\OtherGitProjects\UFramework\ET5.0\Server\Model\Module\Http\HttpComponent.cs:line 33
+   at ETModel.StartSystem`1.Run(Object o) in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\IStartSystem.cs:line 15
+   at ETModel.EventSystem.Start() in D:\OtherGitProjects\UFramework\ET5.0\Unity\Assets\Model\Base\Object\EventSystem.cs:line 444

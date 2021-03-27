@@ -1,0 +1,42 @@
+[Licensing::Module] Successfully connected to LicensingClient on channel: LicenseClient-Admin
+Entitlement-based licensing initiated
+[LicensingClient] Licenses Updated successfully in LicensingClient
+
+LICENSE SYSTEM [202133 20:53:6] Next license update check is after 2021-03-04T04:30:05
+
+
+LICENSE SYSTEM [202133 20:53:6] Current license is already valid and activated. Skipping license activation process (Provided username/password will be ignored).
+Built from '2019.4/china_unity/release' branch; Version is '2019.4.17f1c1 (ab9d18516a31) revision 11246872'; Using compiler version '191627012'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'zh' Physical Memory: 32684 MB
+[Licensing::Module] Serial number assigned to: "SC-A2VY-K9B2-2ZKV-P5T2-XXXX"\nBatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+[Package Manager] Server::Start -- Port 51515 was selected
+Adding genesis user token 
+ COMMAND LINE ARGUMENTS:
+C:/Program Files/Unity/Hub/Editor/2019.4.17f1c1/Editor/Unity.exe
+-quit
+-batchmode
+-nographics
+-projectPath
+D:\Projects\LetUsGame\Client
+-executeMethod
+AssetBundlesMenuItems.BuildAPK_Debug
+-logFile
+D:\Projects\LetUsGame\Client\CI\logs/log-20210303-205252.txt
+Successfully changed project path to: D:\Projects\LetUsGame\Client
+D:/Projects/LetUsGame/Client
+It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: D:/Projects/LetUsGame/Client 
+(Filename: E:\unity\Editor/Src/Application/Application.cpp Line: 403)
+
+Fatal Error! It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: D:/Projects/LetUsGame/Client
+ 
+(Filename: E:\unity\Runtime/Utilities/Argv.cpp Line: 376)
+
+Exiting without the bug reporter. Application will terminate with return code 1

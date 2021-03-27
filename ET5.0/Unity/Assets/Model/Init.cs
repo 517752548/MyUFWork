@@ -9,6 +9,7 @@ namespace ETModel
 		private void Start()
 		{
 			this.StartAsync().Coroutine();
+			SRDebug.Init();
 		}
 		
 		private async ETVoid StartAsync()
@@ -26,12 +27,12 @@ namespace ETModel
 				Game.Scene.AddComponent<ResourcesComponent>();
 				Game.Scene.AddComponent<PlayerComponent>();
 				Game.Scene.AddComponent<UnitComponent>();
-				Game.Scene.AddComponent<UIComponent>();
+				Game.Scene.AddComponent<SoundComponent>();
+				//Game.Scene.AddComponent<UIComponent>();
 
 				// 下载ab包
-				await BundleHelper.DownloadBundle();
-				await ProloadHelper.PreloadRes();
-				Game.Hotfix.LoadHotfixAssembly();
+				//await BundleHelper.DownloadBundle();
+				
 
 				// 加载配置
 				//Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
@@ -40,9 +41,9 @@ namespace ETModel
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 
-				Game.Hotfix.GotoHotfix();
+				Game.EventSystem.Run(EventIdType.UpdateOnlineRes);
 
-				Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
+				//Game.EventSystem.Run(EventIdType.TestHotfixSubscribMonoEvent, "TestHotfixSubscribMonoEvent");
 			}
 			catch (Exception e)
 			{

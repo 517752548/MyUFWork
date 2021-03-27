@@ -1,0 +1,1 @@
+py -3 build.py android debug --bundle build --build

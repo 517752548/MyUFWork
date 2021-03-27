@@ -26,7 +26,7 @@ namespace ETHotfix
 				ETModel.Game.Hotfix.LateUpdate = () => { LateUpdate(); };
 				ETModel.Game.Hotfix.OnApplicationQuit = () => { OnApplicationQuit(); };
 				
-				Game.Scene.AddComponent<UIComponent>();
+				Game.Scene.AddComponent<UIManagerComponent>();
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 				//await ProloadHelper.PreloadRes();
@@ -47,12 +47,11 @@ namespace ETHotfix
 			}
 		}
 
-		public static async ETTask HotFixInit()
+		public static async ETVoid HotFixInit()
 		{
 			await PreloadHelper.PreloadRes();
 			Game.Scene.AddComponent<ConfigComponent>();
 			Game.EventSystem.Run(EventIdType.InitSceneStart);
-			
 		}
 
 		public static void Update()

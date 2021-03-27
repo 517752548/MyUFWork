@@ -31,16 +31,7 @@ namespace ETModel
 
             this.resourceCache.Clear();
         }
-
-        public T GetAsset<T>(string assetBundleName) where T : UnityEngine.Object
-        {
-            if (cacheBundles.ContainsKey(assetBundleName))
-            {
-                return (T)cacheBundles[assetBundleName];
-            }
-
-            return null;
-        }
+        
         
         public UnityEngine.Object GetAsset(string assetBundleName)
         {
@@ -48,7 +39,6 @@ namespace ETModel
             {
                 return cacheBundles[assetBundleName];
             }
-
             return null;
         }
 
@@ -61,26 +51,18 @@ namespace ETModel
             }
         }
 
-        /// <summary>
-        /// 异步加载assetbundle
-        /// </summary>
-        /// <param name="assetBundleName"></param>
-        /// <returns></returns>
-        public async ETTask LoadBundleAsync(string assetBundleName)
+        public ETTask CacheBundleAsync(string assetBundleName)
         {
-            UnityEngine.Object bundle = await LoadAssetAsync<UnityEngine.Object>(assetBundleName);
-            cacheBundles[assetBundleName] = bundle;
-        }
-
-        public ETTask<T> LoadAssetAsync<T>(string assetName)
-        {
-            ETTaskCompletionSource<T> tcs = new ETTaskCompletionSource<T>();
-            AsyncOperationHandle<T> asset = Addressables.LoadAssetAsync<T>(assetName);
+            ETTaskCompletionSource tcs = new ETTaskCompletionSource();
+            AsyncOperationHandle<UnityEngine.Object> asset = Addressables.LoadAssetAsync<UnityEngine.Object>(assetBundleName);
             asset.Completed += op =>
             {
-                tcs.SetResult(asset.Result);
+                cacheBundles[assetBundleName] = op.Result;
+                Log.Info($"{assetBundleName}");
+                tcs.SetResult();
             };
             return tcs.Task;
         }
+
     }
 }

@@ -56,7 +56,7 @@ namespace ETModel
 			StartConfig startConfig = StartConfigComponent.Instance.StartConfig;
 			this.appType = startConfig.AppType;
 			this.HttpConfig = startConfig.GetComponent<HttpConfig>();
-
+			Log.Info(HttpConfig.Url);
 			this.Load();
 		}
 
@@ -146,7 +146,7 @@ namespace ETModel
 					}
 
 					getHandlers.Add(httpHandlerAttribute.Path + path, method);
-					//Log.Debug($"add handler[{httpHandler}.{method.Name}] path {httpHandlerAttribute.Path + path}");
+					Log.Debug($"add handler[{httpHandler}.{method.Name}] path {httpHandlerAttribute.Path + path}");
 				}
 
 				object[] postAttrs = method.GetCustomAttributes(typeof(PostAttribute), false);
@@ -162,7 +162,7 @@ namespace ETModel
 					}
 
 					postHandlers.Add(httpHandlerAttribute.Path + path, method);
-					//Log.Debug($"add handler[{httpHandler}.{method.Name}] path {httpHandlerAttribute.Path + path}");
+					Log.Debug($"add handler[{httpHandler}.{method.Name}] path {httpHandlerAttribute.Path + path}");
 				}
 
 				if (getAttrs.Length == 0 && postAttrs.Length == 0)

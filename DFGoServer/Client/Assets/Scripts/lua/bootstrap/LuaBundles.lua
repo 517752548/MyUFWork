@@ -1,0 +1,22 @@
+--自动生成，不要手写，用于启动游戏的时候确定加载哪些lua的bundles
+_G.LuaBundles={
+	'lua_.idea.unity3d',
+	'lua_config.unity3d',
+	'lua_core.unity3d',
+	'lua_module.unity3d',
+	'lua_config_common.unity3d',
+	'lua_core_mvc.unity3d',
+	'lua_core_ui.unity3d',
+	'lua_core_utils.unity3d',
+	'lua_core_ui_components.unity3d',
+	'lua_core_ui_components_cascader.unity3d',
+	'lua_core_ui_components_dynamicHierarchy.unity3d',
+	'lua_module_common.unity3d',
+	'lua_module_danji.unity3d',
+	'lua_module_float.unity3d',
+	'lua_module_home.unity3d',
+	'lua_module_loading.unity3d',
+	'lua_module_login.unity3d',
+	'lua_module_online.unity3d',
+	'lua_module_scene.unity3d',
+}

@@ -1,0 +1,7 @@
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+-keep class bitter.jnibridge.* { *; }
+-keep class com.unity3d.player.* { *; }
+-keep class org.fmod.* { *; }
+-keepattributes SourceFile,LineNumberTable
+-ignorewarnings
