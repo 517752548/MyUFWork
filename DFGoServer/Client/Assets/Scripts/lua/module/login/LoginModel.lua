@@ -13,3 +13,16 @@ end
 function LoginModel:OnLogoutGame()
 	self.token = nil
 end
+
+--调用支付宝的逻辑
+function LoginModel:CallPay()
+	local androidcall = AndroidCall.New()
+	androidcall:SetClassName("com.alipay.AliPayActivity")
+	local unitycs = UnityReceiveNativeMessage.New("com.alipay.UnityListener")
+	unitycs:SetLuaListener(function(id,intvalue,strvalue)
+		logError(strvalue)
+	end)
+	androidcall:CallMethod_Para("SetListener",unitycs)
+	androidcall:SetActivity()
+	androidcall:CallMethod("payV2")
+end
