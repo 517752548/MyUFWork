@@ -3,9 +3,7 @@ using UnityEditor;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
-using System.Text;
 using Gear;
-using ICSharpCode.NRefactory.Ast;
 using TMPro;
 
 /*
