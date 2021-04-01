@@ -1,0 +1,1 @@
+_G.Main3PanelModel = Model.New()

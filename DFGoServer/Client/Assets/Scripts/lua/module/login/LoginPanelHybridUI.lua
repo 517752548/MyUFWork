@@ -5,7 +5,7 @@ UIPanelName.LoginPanel = "LoginPanel"
 
 function LoginPanelHybridUI:ctor()
 	self.prefabName = 'LoginPanel'
-	self.parentNodeName = _G.UILayerConsts.CENTER
+	self.parentNodeName = _G.UILayerConsts.HOME
 end
 
 function LoginPanelHybridUI:OnLoaded()
@@ -14,6 +14,7 @@ function LoginPanelHybridUI:OnLoaded()
 	self.DanjiBtn = Button.New(self.transform:Find('DanjiBtn'))
 	self.Text = Text.New(self.transform:Find('Text'))
 	self.OnLineBtn = Button.New(self.transform:Find('OnLineBtn'))
+	self.MainBtn = Button.New(self.transform:Find('MainBtn'))
 end
 
 function LoginPanelHybridUI:IsLoadAsync()
@@ -46,10 +47,12 @@ end
 
 function LoginPanelHybridUI:Destroy()
 	LoginPanelHybridUI.superclass.Destroy(self)
+	self.MainBtn:Destroy()
 	self.OnLineBtn:Destroy()
 	self.Text:Destroy()
 	self.DanjiBtn:Destroy()
 	self.bg:Destroy()
+	self.MainBtn = nil
 	self.OnLineBtn = nil
 	self.Text = nil
 	self.DanjiBtn = nil

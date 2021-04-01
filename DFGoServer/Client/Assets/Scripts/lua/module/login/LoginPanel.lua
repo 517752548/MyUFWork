@@ -17,6 +17,11 @@ function LoginPanel:OnLoaded()
 		
 		UIManager:OpenUI(UIPanelName.OnLinePanel)
 	end)
+
+    self.MainBtn:OnClick(function() 
+		self:Hide()
+        UIManager:OpenUI(UIPanelName.MainPanel)
+    end)
 end
 
 function LoginPanel:OnShow(args)
