@@ -52,6 +52,8 @@ public static class LuaBinder
 		CustomParticalLengthWrap.Register(L);
 		AndroidCallWrap.Register(L);
 		UnityReceiveNativeMessageWrap.Register(L);
+		TDGAWrap.Register(L);
+		AdmobADWrap.Register(L);
 		LuaProfilerWrap.Register(L);
 		LongClickButtonWrap.Register(L);
 		DoubleClickButtonWrap.Register(L);

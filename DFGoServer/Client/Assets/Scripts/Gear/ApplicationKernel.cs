@@ -81,6 +81,12 @@ public class ApplicationKernel : MonoBehaviour
         InitResManager();
         //SRDebug.Init();
         CheckExtractResource();
+        SDKInit();
+    }
+
+    void SDKInit()
+    {
+        TDGA.Init();
     }
 
     /// <summary>

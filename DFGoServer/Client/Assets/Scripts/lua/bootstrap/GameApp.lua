@@ -11,6 +11,7 @@ function GameApp:StartUp()
 	PfxManager:Init()
 	SoundManager:Init()
 	AtlasManager:Init()
+	Admob:Init()
 end
 
 --在这里注册各个模块的controller

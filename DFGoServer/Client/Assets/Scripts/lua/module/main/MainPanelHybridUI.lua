@@ -17,14 +17,10 @@ function MainPanelHybridUI:OnLoaded()
 	self.Content.Middle = UGUIObject.New(self.transform:Find('Content/Middle'))
 	self.Content.Bottom = UGUIObject.New(self.transform:Find('Content/Bottom'))
 	self.Content.Bottom.content = UGUIObject.New(self.transform:Find('Content/Bottom/content'))
-	self.Content.Bottom.content.btn1 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn1'))
-	self.Content.Bottom.content.btn1.btn1 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn1/btn1'))
-	self.Content.Bottom.content.btn2 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn2'))
-	self.Content.Bottom.content.btn2.btn2 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn2/btn2'))
-	self.Content.Bottom.content.btn3 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn3'))
-	self.Content.Bottom.content.btn3.btn3 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn3/btn3'))
-	self.Content.Bottom.content.btn4 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn4'))
-	self.Content.Bottom.content.btn4.btn4 = UGUIObject.New(self.transform:Find('Content/Bottom/content/btn4/btn4'))
+	self.Content.Bottom.content.btn1 = Button.New(self.transform:Find('Content/Bottom/content/btn1'))
+	self.Content.Bottom.content.btn2 = Button.New(self.transform:Find('Content/Bottom/content/btn2'))
+	self.Content.Bottom.content.btn3 = Button.New(self.transform:Find('Content/Bottom/content/btn3'))
+	self.Content.Bottom.content.btn4 = Button.New(self.transform:Find('Content/Bottom/content/btn4'))
 end
 
 function MainPanelHybridUI:IsLoadAsync()
@@ -57,13 +53,9 @@ end
 
 function MainPanelHybridUI:Destroy()
 	MainPanelHybridUI.superclass.Destroy(self)
-	self.Content.Bottom.content.btn4.btn4:Destroy()
 	self.Content.Bottom.content.btn4:Destroy()
-	self.Content.Bottom.content.btn3.btn3:Destroy()
 	self.Content.Bottom.content.btn3:Destroy()
-	self.Content.Bottom.content.btn2.btn2:Destroy()
 	self.Content.Bottom.content.btn2:Destroy()
-	self.Content.Bottom.content.btn1.btn1:Destroy()
 	self.Content.Bottom.content.btn1:Destroy()
 	self.Content.Bottom.content:Destroy()
 	self.Content.Bottom:Destroy()
@@ -72,13 +64,9 @@ function MainPanelHybridUI:Destroy()
 	self.Content.Top:Destroy()
 	self.Content:Destroy()
 	self.bg:Destroy()
-	self.Content.Bottom.content.btn4.btn4 = nil
 	self.Content.Bottom.content.btn4 = nil
-	self.Content.Bottom.content.btn3.btn3 = nil
 	self.Content.Bottom.content.btn3 = nil
-	self.Content.Bottom.content.btn2.btn2 = nil
 	self.Content.Bottom.content.btn2 = nil
-	self.Content.Bottom.content.btn1.btn1 = nil
 	self.Content.Bottom.content.btn1 = nil
 	self.Content.Bottom.content = nil
 	self.Content.Bottom = nil
