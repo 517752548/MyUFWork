@@ -82,7 +82,6 @@ public static class CustomSettings
         //_GT(typeof(TestExport)),
         //_GT(typeof(TestExport.Space)),
         //-------------------------------------------------------------------        
-                        
         _GT(typeof(LuaInjectionStation)),
 		_GT(typeof(InjectType)),
 		_GT(typeof(Debugger)).SetNameSpace(null),
@@ -212,6 +211,7 @@ public static class CustomSettings
 		_GT(typeof(UnityReceiveNativeMessage)),
 		_GT(typeof(TDGA)),
 		_GT(typeof(AdmobAD)),
+		_GT(typeof(Dict4Lua)),
 		//_GT(typeof(LuaDebugTool)),
 		//_GT(typeof(LuaValueInfo)),
 

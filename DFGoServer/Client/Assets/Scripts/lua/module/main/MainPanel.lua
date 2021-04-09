@@ -33,5 +33,12 @@ function MainPanel:ClickBottom(id)
             --self.Content.Bottom.content["btn" .. tostring(i)]["btn" .. tostring(i)]:SetVisible(false) 
         end
     end
-    TDGA.Report("ClickBottom",{ ["clickBottom"] = id })
+   local dict = Dict4Lua.New()
+    dict:Add("clickBottom",id)
+    TDGA.Report("ClickBottom",dict:Get())
+    TimerManager:AddTimer(function()
+        Admob:ShowReward(function(ok)
+            log("back")
+        end)
+    end,10,1)
 end 

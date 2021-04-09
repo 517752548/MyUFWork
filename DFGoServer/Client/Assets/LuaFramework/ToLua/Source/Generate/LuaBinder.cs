@@ -54,6 +54,7 @@ public static class LuaBinder
 		UnityReceiveNativeMessageWrap.Register(L);
 		TDGAWrap.Register(L);
 		AdmobADWrap.Register(L);
+		Dict4LuaWrap.Register(L);
 		LuaProfilerWrap.Register(L);
 		LongClickButtonWrap.Register(L);
 		DoubleClickButtonWrap.Register(L);
