@@ -42,6 +42,20 @@ func (m *MongoUtil) UpSert(old,new interface{}) error {
 	return err
 }
 
+func (m *MongoUtil) UpDataByUserID(UserId,value interface{}) error {
+	client := Model.Mongodb.MB
+	collection := client.DB(m.database).C(m.collection)
+	err := collection.Update(bson.D{{"UserId", UserId}}, value)
+	return err
+}
+
+func (m *MongoUtil) FindByInviterCode(invitercode string, value string, result *interface{}) error {
+	client := Model.Mongodb.MB
+	collection := client.DB(m.database).C(m.collection)
+	filter := bson.D{{"InviterName", value}}
+	return collection.Find(filter).One(result)
+}
+
 //查询集合里有多少数据
 func (m *MongoUtil) CollectionCount() (string, int) {
 	client := Model.Mongodb.MB

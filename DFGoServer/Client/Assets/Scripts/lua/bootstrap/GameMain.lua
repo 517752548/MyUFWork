@@ -1,8 +1,9 @@
 require 'core/Include'
 require 'config/Include'
 require 'bootstrap/GameApp'
-require 'module/Include'
+require 'stage/Include'
 require 'sdk/Include'
+require 'module/Include'
 
 _G.GameManager       = nil
 _G.applicationKernel = nil
