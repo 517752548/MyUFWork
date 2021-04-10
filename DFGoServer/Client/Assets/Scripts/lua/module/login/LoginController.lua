@@ -7,7 +7,7 @@ end
 
 -- 初始化登录界面
 function LoginController:InitLogin()
-	UIManager:OpenUI(UIPanelName.LoginPanel, true)
+	UIManager:OpenUI(UIPanelName.HomePanel, true)
 end
 
 -- 销毁登录界面
