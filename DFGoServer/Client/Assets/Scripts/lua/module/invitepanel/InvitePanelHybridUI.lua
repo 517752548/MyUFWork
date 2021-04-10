@@ -19,7 +19,7 @@ function InvitePanelHybridUI:OnLoaded()
 	self.Content.number = Text.New(self.transform:Find('Content/number'))
 	self.Content.inviteNum = UGUIObject.New(self.transform:Find('Content/inviteNum'))
 	self.Content.inviteNum.Text = Text.New(self.transform:Find('Content/inviteNum/Text'))
-	self.Content.closeBtn = UGUIObject.New(self.transform:Find('Content/closeBtn'))
+	self.Content.closeBtn = Button.New(self.transform:Find('Content/closeBtn'))
 end
 
 function InvitePanelHybridUI:IsLoadAsync()

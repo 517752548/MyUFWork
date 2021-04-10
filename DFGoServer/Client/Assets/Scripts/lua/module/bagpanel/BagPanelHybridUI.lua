@@ -13,7 +13,7 @@ function BagPanelHybridUI:OnLoaded()
 	self.Content = UGUIObject.New(self.transform:Find('Content'))
 	self.Content.tittleBG = UGUIObject.New(self.transform:Find('Content/tittleBG'))
 	self.Content.tittleBG.Text = Text.New(self.transform:Find('Content/tittleBG/Text'))
-	self.Content.closeBtn = UGUIObject.New(self.transform:Find('Content/closeBtn'))
+	self.Content.closeBtn = Button.New(self.transform:Find('Content/closeBtn'))
 	self.Content.ScrollView = ScrollFlowList.New(self.transform:Find('Content/ScrollView'))
 end
 

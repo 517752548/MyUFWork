@@ -16,7 +16,7 @@ function ADPanelHybridUI:OnLoaded()
 	self.Content.Des = Text.New(self.transform:Find('Content/Des'))
 	self.Content.AD = UGUIObject.New(self.transform:Find('Content/AD'))
 	self.Content.AD.Text = Text.New(self.transform:Find('Content/AD/Text'))
-	self.Content.closeBtn = UGUIObject.New(self.transform:Find('Content/closeBtn'))
+	self.Content.closeBtn = Button.New(self.transform:Find('Content/closeBtn'))
 end
 
 function ADPanelHybridUI:IsLoadAsync()

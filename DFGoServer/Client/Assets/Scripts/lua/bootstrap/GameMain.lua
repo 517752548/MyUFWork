@@ -10,9 +10,9 @@ _G.applicationKernel = nil
 _G.Publisher         = nil
 function GameMain()
 	if IsRunInEditor then
-		--package.cpath = package.cpath .. ';C:/Users/Admin/AppData/Roaming/JetBrains/Rider2020.2/plugins/intellij-emmylua/classes/debugger/emmy/windows/x64/?.dll'
-		--local dbg = require('emmy_core')
-		--dbg.tcpListen('localhost', 9967)
+		package.cpath = package.cpath .. ';C:/Users/Admin/AppData/Roaming/JetBrains/Rider2020.2/plugins/intellij-emmylua/classes/debugger/emmy/windows/x64/?.dll'
+		local dbg = require('emmy_core')
+		dbg.tcpListen('localhost', 9967)
 
 
 		require 'bootstrap/Config'
